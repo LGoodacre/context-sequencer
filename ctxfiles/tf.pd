@@ -1,0 +1,6 @@
+#N canvas 366 227 450 300 10;
+#X obj 189 71 inlet;
+#X obj 189 115 s \$1-rnum;
+#X obj 189 93 f \$2;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

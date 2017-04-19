@@ -1,0 +1,156 @@
+#N canvas 233 109 1040 687 10;
+#X obj 95 113 context :X 9 :a ' # 1 | # -2 | # 2 | # -4 | # -3 | #
+3 | # -2 | # 4 ' :d 2 :e 9 :x = 1 3 6 8 9 :Z 28 :ID 1;
+#X obj 173 202 context :X 9 :a ' # 2 | # 2 | # 2 | # 8 | # 7 | # 6
+| # 5 | # 4 ' :d 2 :e 9 :x = 4 5 6 7 8 9 :Z 28 :ID 2;
+#X obj 55 202 context :X 9 :a ' # 9 | # 8 | # 10 | # 7 | # 12 | # 8
+| # 5 | # 5 ' :d 1 :e 9 :x = 1 2 4 6 :Z 15 :ID 3;
+#X obj 796 69 docfiles/glock~ 1;
+#X obj 795 94 dac~;
+#X obj 796 21 scaler blues major db 6;
+#X obj 560 311 helpfiles/textbox docfiles/ex01q;
+#N canvas 65 105 1301 687 questions 0;
+#X obj 10 11 vradio 15 1 0 5 \$0-nop \$0-nopp empty 0 -8 0 10 -262144
+-1 -1 1;
+#X text 31 40 How do I make / delete connections?;
+#X text 31 11 What am I supposed to do here?;
+#X text 32 56 What do the inlets do?;
+#X text 32 71 What do the outlets do?;
+#X text 417 11 Where is the melody coming from?;
+#X text 417 26 What is the # symbol for?;
+#X text 416 70 Can I change the duration of the melody?;
+#X obj 110 352 outlet;
+#X text 32 25 How do I get it to play?;
+#X obj 465 310 inlet;
+#X msg 521 382 0;
+#X obj 482 446 pack f f;
+#X obj 395 11 vradio 15 1 0 5 \$0-nop \$0-nopp empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 395 274 + 5;
+#X obj 501 409 * 385;
+#X msg 482 470 coords 0 -1 1 1 385 100 \$1 \$2 0;
+#X obj 482 492 iemguts/sendcanvas;
+#X msg 482 382 2;
+#X obj 780 11 vradio 15 1 0 5 \$0-nop \$0-nopp empty 0 -8 0 10 -262144
+-1 -1 4;
+#X obj 780 274 + 10;
+#X text 802 26 How come different toggles are firing each time?;
+#X text 416 56 So is this what Context sounds like?;
+#X text 417 41 What is the last toggle in the pattern for?;
+#X text 802 11 What are the toggles on the right side for?;
+#X text 801 57 How are the messages being sent and received?;
+#X obj 465 354 t f b f b;
+#X text 801 41 Can I connect the toggles on the right to other Contexts?
+;
+#X obj 754 428 sel 0 1 2 3;
+#X connect 0 0 8 0;
+#X connect 10 0 26 0;
+#X connect 11 0 12 0;
+#X connect 12 0 16 0;
+#X connect 13 0 14 0;
+#X connect 14 0 8 0;
+#X connect 15 0 12 1;
+#X connect 16 0 17 0;
+#X connect 18 0 12 0;
+#X connect 19 0 20 0;
+#X connect 20 0 8 0;
+#X connect 26 0 28 0;
+#X connect 26 1 18 0;
+#X connect 26 2 15 0;
+#X connect 26 3 11 0;
+#X connect 28 0 0 0;
+#X connect 28 1 13 0;
+#X connect 28 2 19 0;
+#X coords 0 -1 1 1 385 100 2 0 0;
+#X restore 560 200 pd questions;
+#X obj 763 170 cnv 15 180 25 empty empty empty 20 12 0 20 -33289 -4034
+0;
+#X obj 560 171 hradio 25 1 0 8 empty next empty 0 -8 0 10 -262144 -1
+-1 0;
+#X obj 133 51 bng 20 250 50 0 empty empty START 23 9 0 10 -262144 -1
+-1;
+#N canvas 65 85 450 300 stop 0;
+#X obj 100 100 bng 20 250 50 0 empty empty STOP 23 9 0 10 -262144 -1
+-1;
+#X msg 100 132 \; context stop;
+#X connect 0 0 1 0;
+#X coords 0 -1 1 1 20 20 2 100 100;
+#X restore 192 51 pd stop;
+#X obj 558 125 cnv 15 387 42 empty empty empty 3 8 0 16 -1 -1 0;
+#X obj 559 126 cnv 15 385 40 empty empty NEXT 3 8 0 20 -4032 -1 0;
+#N canvas 481 174 873 582 progress 0;
+#X obj 100 100 bng 20 250 50 0 empty label Whoa this is cool! Can you give me some more?
+30 10 0 10 -262144 -1 -1;
+#X msg 100 56 space sym;
+#X obj 100 160 f;
+#X obj 100 182 + 1;
+#X msg 161 226 \; label label What about the bass?;
+#X msg 151 177 Whoa this is cool! Can you give me some more?
+;
+#X obj 38 443 iemguts/sendcanvas 1;
+#X msg 167 266 \; label label This thing can't play samples can it?
+;
+#X obj 79 219 s next;
+#X obj 161 204 sel 1 2 3;
+#X msg 38 317 obj 97 329 context :X 9 :Z 15 :a ' # 11 | # 12 | # 13
+| # 11 | # 12 | # 13 | # 11 | # 12 | ' :c 2 :d 1 :e 9 :f 1 :x 1 2 4
+5 7 8 :ID 4 \, obj 242 328 context :X 9 :Z 14 :a ' # 7 | # 6 | # 5
+| # 6 | # 7 | # 8 | # 7 | # 6 | ' :c 2 :d 1 :e 9 :f 1 :x 1 2 3 4 5
+6 :ID 5 \, obj 386 329 context :Z 17 :a ' # 4 | # 3 | # 2 | # 3 | '
+:c 2 :d 0.5 :e 5 :f 1 :x 1 2 3 :ID 6 \, obj 90 438 context :X 9 :Z
+15 :a ' # 2 | # 3 | # 1 | # -4 | # 0 | # 1 | # -1 | # -6 | ' :c 2 :d
+1 :e 9 :f 1 :x 1 3 5 7 :ID 7 \, loadbang;
+#X msg 204 446 obj 267 417 context :X 17 :Z 22 :a ' # -8 | ' :c 13
+:d 2 :e 1 :f 1 :x 2 3 5 7 9 12 14 15 :ID 8 \, obj 258 519 context :Z
+22 :a ' # 8 | ' :b ' # -5 | # 0 | # 2 | ' :c 13 :d 0.5 :e 1 :f 3 :h
+2 :R 63.36 :x 1 :y 1 2 3 :ID 9 \, obj 341 521 context :Z 22 :a ' #
+-9 | ' :b ' # -6 | # -4 | # 1 | ' :c 13 :d 0.5 :e 1 :f 3 :h 2 :R 63.36
+:x 1 :y 1 2 3 :ID 10 \, loadbang;
+#X obj 525 243 list split 2;
+#X obj 521 213 cyclone/zl iter 3;
+#X msg 518 164 300 100 20 420 100 21;
+#X obj 523 306 iemguts/canvasobjectposition 1;
+#X msg 536 86 \; c11 :d 1.5;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 2 1;
+#X connect 3 0 8 0;
+#X connect 3 0 9 0;
+#X connect 9 0 4 0;
+#X connect 9 0 10 0;
+#X connect 9 1 11 0;
+#X connect 9 1 7 0;
+#X connect 9 2 14 0;
+#X connect 9 2 16 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X connect 12 0 15 0;
+#X connect 12 1 15 1;
+#X connect 13 0 12 0;
+#X connect 14 0 13 0;
+#X coords 0 -1 1 1 20 20 2 100 100;
+#X restore 563 143 pd progress;
+#X text 616 126 (allow a few seconds after presing this button);
+#X obj 764 171 cnv 15 178 23 empty empty empty 20 12 0 20 -228856 -4034
+0;
+#X obj 765 172 cnv 15 176 21 empty empty QUESTIONS 20 10 0 20 -16662
+-4034 0;
+#X obj 758 -11 catch~ samples;
+#X obj 796 44 receive context-;
+#X obj 1454 320 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 11 :ol
+1 12 obj 0 28 content :lo helpfiles/wavs/open-conga.wav :x2 0.244792
+:y1 0.233333 :y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0
+4 0;
+#X obj 1583 320 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 11 :ol
+1 12 obj 0 28 content :lo helpfiles/wavs/lo-conga.wav :x2 0.244792
+:y1 0.233333 :y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0
+4 0;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 7 0 6 0;
+#X connect 9 0 7 0;
+#X connect 10 0 0 3;
+#X connect 18 0 4 0;
+#X connect 18 0 4 1;
+#X connect 19 0 3 0;
+#X coords 0 687 1 686 385 100 0;

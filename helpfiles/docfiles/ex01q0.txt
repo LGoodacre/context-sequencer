@@ -1,0 +1,39 @@
+On the left you can see some instances of Context. Connect them together to form a network. The network will form a simple composition, with each configuration of the network sounding different different. You can also open and close the toggles at the bottom of each Context to change it's pattern and melody.;
+
+To start any Context, simply double click on it. To stop it, click and hold.;
+
+To make or destroy connections, you must be in edit mode. To enter edit mode, use the Edit menu, or press Ctrl+e. Once you see the hand cursor, you can make connections by clicking on an outlet box from one Context and draggin it to the inlet of another. The inlets are always at the top and the outlets are always at the bottom. This can be a bit tricky at first, but it's easy once you get used to it.;
+
+The inlets (the tiny boxes at the top of each object) will start a Context, whenever a "bang" message is received. All inlets are the same, so it doesn't make any difference which inlet receives the message.;
+
+The outlets (tiny boxes at the bottom) are synched with the sequencer, so each outlet will send a "bang" when it's the right time, indicated by the cursor that moves across the screen. Each outlet corresponds to one toggle check-box (unfortunately, they don't quite line up). You can use the toggle to turn the outlet on or off.;
+
+Each toggle check-box has a corresponding send message. These are seen in the text box at the top of each Context. You can edit them by clicking and typing. Hold the mouse over a particular Context and use the arrow keys to scroll between the different messages.;
+
+The # symbol in each send message converts numbers into notes on a scale. It is communicating with the [scaler] object in the bottom right of this patch. You can change the mode, key and octave of the scale in the [scaler] arguments. In this case, "# 7" would mean "the 7th note on the 6th octave of the D flat blues major scale";
+
+The toggle in the bottom right corner of any Context fires at the very end of the time cycle. This is different from the last beat of the bar / pattern, which comes right before it. They are not assigned any notes here, but they can still be opened and used to trigger another Context. Doing this would help to make the composition's timing more coherent.;
+
+No! As a sequencing tool, Context doesn't sound like anything. Context sends messages to other PD patches to tell them to do things. Here the sound is a simple sine wave synth, generated within the patch called [glock~].;
+
+Yes! That's what the number boxes in the top left corner are for. They measure seconds, so you can change the timing accordingly.;
+
+This is called the "burst". These toggles all fire together at the end of the Context cycle. In the red Contexts, the burst is being used to generate chords, but it can also be used like a logic gate to make decisions.;
+
+The burst can fire one, some or all open toggles at the end of the cycle. (You can control how these toggles are chosen in the properties menu, but we won't go into detail here.);
+
+Unfortunately, there are no outlets for the burst toggles. You can still connect them into the network using "float connect" and "x-y mode". See the help documents for details about this.;
+
+The notes are being received by the object in the bottom right of this patch called "receive ex1-". This corresponds to the name on each Context canvas, "ex1". Different Contexts can have different names, but here they are the same so they are all going to the same receive object.;
+
+If you connect several Contexts together in a circle you will get a feedback loop. This is what keeps the network running indefinitely, and can lead to some really interesting results, but there is also the danger that things can spiral out of control. Each Context has a built in safety mechanism to protect against stack overflows, but you should still always be judicious when placing feedback loops, for aesthetic as well as safety reasons.;
+
+The arrays you see in the two yellow Contexts are embedded in a layer called the "overlay". If you right click on the Context and select "open" you will see the overlay patch. You can place any object in the overlay and it will be saved as normal in the parent patch.;
+
+The number box on the top left of the Context determines the speed and therefore the pitch of the samples. Negative numbers will make the sample play backwards.;
+
+Yes! Loading a sample doesn't change anything, so you can still use the toggles and outlets as usual.;
+
+Please feel free to save what you've done here and take it awa with you. Copy the containing folder "context-git" if you want to take it with you. There are backups, so don't worry if you overwrite something.;
+
+What you've seen is just the beginning! Context has a storage bank for storing different patterns, a parsing system for handling math in messages, and an advanced random generator for controlling the burst. It can pass a message from one Context to another to another and modify, and has the ability to modify its own settings to create self-evolving compositions. As for sampling,  you can load any number of arrays into one Context and move them around the overlay to line them up. This allows Context to function a bit like a DAW environment. In short, Context offers a complete alternative to a traditional DAW sequencer, and a new way of thinking about music composition.; 

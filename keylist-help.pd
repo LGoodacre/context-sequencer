@@ -1,0 +1,54 @@
+#N canvas 317 176 415 567 10;
+#X obj 33 22 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
+0;
+#X obj 27 16 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
+0;
+#X obj 28 17 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
+0;
+#X obj 29 18 cnv 15 140 53 empty empty keylist 16 25 0 27 -206035 -204800
+0;
+#X obj 26 153 cnv 15 358 392 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 27 154 cnv 15 356 390 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X obj 31 158 cnv 15 347 381 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 32 159 cnv 15 345 379 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 190 18 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 191 19 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 195 23 part of the Context library;
+#X text 192 54 copyright Liam Goodacre 2017;
+#X text 200 39 licensed under the GPL v3;
+#X obj 65 210 context :H 8 :X 12 :Y 5 :ol 1 7 obj 187 10 keylist x
+:x % 7 obj 187 41 keylist y :y % 7 obj 188 74 keylist d :d %;
+#X text 26 92 Keylist binds Context commands to keys. This lets you
+control Context using the keyboard in custom ways.;
+#X text 217 216 <--;
+#X text 242 218 There are three keylist obects in the Overlay here.
+Right click and 'open' to see them., f 19;
+#X text 48 310 This Context has keylist bindings for :x \, :y and :d
+(ie. the x and y toggles and the cycle time). Each one expects numerical
+input., f 51;
+#X text 53 360 TO USE KEYLIST:;
+#X text 56 379 1: Move the mouse cursor over Context \; 2: Press and
+hold the x \, y or d key \; 3: Press a number key \; 4: Release the
+letter key and watch the GUI;
+#X text 49 447 Note that Keylist sends its commands only when the key
+is released. This is to allow for double-digit number input. Try selecting
+:x 10 to see., f 48;
+#N canvas 675 263 450 300 creation 0;
+#X text 49 22 [keylist] has three four parts to its creation argument
+\, the first and third being mandatory.;
+#X text 70 77 1: a key from the keyboard \, ie. 'x'. Note that number
+keys and modifier keys (ie. Shift) won't work.;
+#X text 68 120 2: an optional flag ** \, which will make keylist send
+its command regardless of whether the mouse is hovering over Context
+or not.;
+#X text 66 170 3: Any Context command. See Manual section 8;
+#X text 65 197 4: A variable symbol $ or %. $ takes a value from the
+[keylist] inlet \, while % takes the keyboard input \, as we have seen.
+These variables can be used at any point in the command.;
+#X restore 40 514 pd creation arguments;

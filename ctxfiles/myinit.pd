@@ -1,0 +1,15 @@
+#N canvas 703 429 490 300 10;
+#X obj 108 177 spigot;
+#X obj 140 121 route bang;
+#X msg 147 153 1;
+#X obj 140 99 iemguts/canvasdollarzero \$1;
+#X obj 108 205 outlet;
+#X obj 108 53 inlet;
+#X obj 108 75 t a b;
+#X connect 0 0 4 0;
+#X connect 1 1 2 0;
+#X connect 2 0 0 1;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 0 0;
+#X connect 6 1 3 0;

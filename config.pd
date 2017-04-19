@@ -1,0 +1,5 @@
+#N canvas 379 186 450 300 10;
+#X obj 157 57 inlet;
+#X obj 91 188 outlet Vanilla;
+#X obj 240 187 outlet L2Ork;
+#X connect 0 0 1 0;

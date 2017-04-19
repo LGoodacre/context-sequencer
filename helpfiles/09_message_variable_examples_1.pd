@@ -1,0 +1,225 @@
+#N canvas 65 81 1301 687 10;
+#X obj 617 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
+0;
+#X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 609 201 cnv 15 522 369 empty empty 2: relative melody using !
+20 12 0 24 -260448 -1 0;
+#X obj 628 296 context :X 9 :a ' x ? 6 ' :d 0.5 :x = 4 :Z 13;
+#X obj 628 363 context :X 9 :a ' x (!x +1) ' :d 0.5 :x = 4 :Z 15;
+#X obj 628 429 context :X 9 :a ' x (!x +2) ' :d 0.5 :x = 4 :Z 15;
+#X obj 628 499 context :X 9 :a ' x (!x - 4) ' :d 0.5625 :x = 4 :Z 17
+;
+#X obj 1182 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 1172 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1173 201 cnv 15 522 369 empty empty 3: arpeggio using % 20
+12 0 24 -260448 -1 0;
+#X obj 1201 326 context :X 9 :a ' x (?6 + 3) | x (%x +1) | | | | |
+| x ! x ' :c 8 :d 1 :e 2 :x = 1 2 3 4 5 6 7 8 :Z 15;
+#X obj 1746 210 cnv 15 524 371 empty empty empty 20 12 0 24 -99865
+-66577 0;
+#X obj 1736 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1737 201 cnv 15 522 369 empty empty 4: dynamic decay using ¬
+20 12 0 24 -260448 -1 0;
+#X obj 1869 296 context :X 17 :a ' = & d (6 / (¬ * ¬) ' :b ' | |
+| d 1.6 ' :d 2 :i 2 1 4 3 0 -1 -3 -2 -1 0 2 3 4 3 4 5 7.5 :x = 1 2
+3 4 6 12 13 15 16 17 :Z 27 :ID 7;
+#X obj 54 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 44 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 45 201 cnv 15 522 369 empty empty 1: melody using = 20 12
+0 24 -260448 -1 0;
+#X obj 2310 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 2300 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 2301 201 cnv 15 522 369 empty empty 5: random melody using ? and @
+20 12 0 24 -260448 -1 0;
+#X obj 2874 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 2864 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 3438 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 3428 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 3429 201 cnv 15 522 369 empty empty 7: random melody using ? and 
+20 12 0 24 -260448 -1 0;
+#X text 825 238 a 'relative melody' is a melody which plays relative
+to the first note. For instance \, ' x \, x+1 \, x+2 \, x-4 ' \, where
+'x' is the first note., f 46;
+#X text 753 367 '! x' recalls the x value from the preceding message.
+'+ 1' adds 1 to it. Note the initial 'x' outside the brackets \, there
+for the same reason as above.;
+#X text 752 426 'x (! x + 2)' works exactly the same. Note \, however
+\, that it is recalling the x value from c2 \, not from c1. For this
+reason \, the outline of the melody here actually 'x \, x+1 \, x+3
+\, x-1'.;
+#X text 762 514 Subtracts 4;
+#X text 1534 207 Here \, the pattern database (:a) has two messages.
+The database limit is set to 2 \, so the second messages fires for
+toggles 2-8 (see manual section 8)., f 24;
+#X text 626 237 ! recalls a value received from an incoming Context
+, f 28;
+#X text 1324 333 The first message is ' x (?6+3) '. '?6+3' chooses
+a random number between 0 and 5 and then adds 3 The 'x' is just there
+as a handle for the % variable.;
+#X text 1186 248 % recalls a value from the preceding message sent
+(Note that this character is a grave accent \, not an inverted comma).
+, f 51;
+#X text 1322 401 The second message is ' x (% x + 1) ' The part inside
+the bracket recalls the last value sent and adds 1 to it. The outer
+'x' is again necessary as a handle for the next note.;
+#X text 752 299 'x ? 6' generates a random number between 0 and 5 'x'
+is there because some symbol is necessary if you want the next Context
+to recall the value (note that it is routed off at the top of this
+patch).;
+#X text 1202 477 Open and close pattern toggles to change the rhythm.
+;
+#X text 64 253 = reads a value from the toggle float array;
+#X text 200 304 This is the easiest way of having Context store and
+play melodies. Just one variable character is needed \, and the values
+can very easily be changed.;
+#X text 199 357 To change the value of the toggle floats \, double
+click them and scroll up/down. (You can also scroll left / right to
+move them.);
+#X text 83 439 Note the important difference here between toggle floats
+and float connections. The last toggle here (c6) is a connection \,
+not read by the = sign. See manual section 4;
+#X text 198 405 Turn toggles on and off by clicking them as usual.
+;
+#X text 78 498 Ususally \, double clicking and scrolling up will give
+you flaot connections \, and scrolling down will give you toggle floats.
+However \, it is possible to scroll to a negative toggle float \, so
+long as you go down (to a positive one) first.;
+#X text 1755 255 ¬ calculates the distance between this toggle and
+the next;
+#X text 1785 373 There are two parts to this message \, separated by
+&. The first part works exactly the same as example 1 to create the
+melody. The second part is used to set the decay of the [lock~] instrument
+(demarcated by 'd'). The calculation is made using the ¬ variable
+\, with the result that the longer the gap between notes \, the longer
+the decay.;
+#X text 1786 468 The calculation 6 / (¬ * ¬) is used to scale the
+raw ¬ value (which is simply the toggle count) to the decay function
+of theis particular instrument.;
+#X text 1787 524 To hear the effect \, open and close different toggles
+and hear how the lengths of the notes change.;
+#X obj 2334 309 context :X 13 :a ' ? (@ - 9) | @ ' :c -887738 :d 3
+:x = 1 2 3 4 5 7 9 12 13 :B 1 :Z 25 :ID 8;
+#X obj 2125 300 bng 15 250 50 0 decay empty reset_decay 17 7 0 10 -262144
+-1 -1;
+#X text 2331 267 @ returns a value according to Context's position
+on the canvas, f 64;
+#X text 2327 383 Here \, @ is being used to define the maximum value
+of the random number. At its starting position \, @ is 9 \, so @-9
+is 0 Enter edit mode and move Context side to side and the @ vale will
+change \, thus raising the maximum value for ?. The further you move
+Context \, the more extreme the random melody gets.;
+#X obj 2865 201 cnv 15 522 369 empty empty 6: random melody using ? and _
+20 12 0 24 -260448 -1 0;
+#X obj 2888 324 context :X 13 :a ' a ? _ (@ - 10) ' :c -45704 :d 2
+:x = 1 4 7 9 11 13 :Z 23 :ID 9;
+#X text 2887 260 ? generates a random number \, given a maximum value
+;
+#X text 2331 250 ? generates a random number \, given a maximum value
+;
+#X text 2887 276 _ returns the toggle number;
+#X text 2887 292 @ returns a value according to Context's position
+on the canvas, f 64;
+#X text 2889 399 Here \, the first argument for ? is set by _. _ returns
+the toggle number \, ie. the position of the toggle that is currently
+playing on the pattern array. This means that the longer the melody
+plays \, the higher the random maximum goes. So this melody starts
+at a certain note and then expands.;
+#X obj 3512 323 context :X 13 :a ' (?3 + 1) [ 2 5 7 ] ' :c -99452 :d
+2 :x = 1 2 3 4 5 7 9 12 13 :Z 23 :ID 10;
+#X text 3457 260 ? generates a random number \, given a maximum value
+;
+#X text 3457 277 [ ] selects an item from a list;
+#X text 3468 405 This configuration simply picks one value from the
+list (2 5 or 7) each time. Note that the brackets around the ? term
+are necessary so that the random number is evaluated first. 1 is added
+to it so that the options are '1 2 3' rather than '0 1 2'. 0 is a valid
+argument for [] \, but it wouldn't be useful here. 0 counts the number
+of terms (in this case \, 3).;
+#X obj 78 307 context :X 9 :a ' = | = ' :c 18 :d 1 :i 4 3 4 0 5 0 2
+0 6.5 :x = 1 2 3 5 7 9 :Z 15 :ID 6;
+#X obj 1313 8 cnv 15 363 182 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 1303 -2 cnv 15 363 182 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1304 -1 cnv 15 361 180 empty empty empty 20 12 0 14 -72625 -66577
+0;
+#X obj 762 54 cnv 15 496 132 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 755 47 cnv 15 496 132 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 756 48 cnv 15 494 130 empty empty empty 20 12 0 14 -122865 -66577
+0;
+#X obj 41 71 cnv 15 701 57 empty empty empty 21 18 2 32 -99865 -204800
+0;
+#X obj 35 65 cnv 15 701 57 empty empty empty 21 18 2 32 -1 -204800
+0;
+#X obj 36 66 cnv 15 699 55 empty empty empty 21 18 2 32 -204786 -204800
+0;
+#X obj 1413 146 dac~;
+#X obj 1470 124 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 1417 76 scaler blues c 5;
+#X obj 1417 98 docfiles/glock~ 1.5;
+#X obj 37 67 cnv 15 697 53 empty empty message variables: melody examples
+12 22 2 43 -83573 -204800 0;
+#X msg 1327 28 \; pd dsp 1;
+#X obj 1417 12 receive context-;
+#X text 764 56 The Context output language consists of a series of
+variables which are used to manipulate outgoing messages. They can
+be used to create random or variable notes \, modify Context settings
+\, and much more. This patch shows some basic techniques for getting
+the most out of the output language. For a complete account \, read
+mnual section 11, f 79;
+#X text 764 125 Note that all examples create whole numbers \, which
+are then fed through the [scaler] object to turn them into notes on
+a scale. There is also a viariable which accesses [scaler] remotely
+\, but it is not used here., f 79;
+#X obj 1438 55 cyclone/iter;
+#X obj 1417 122 *~ 1;
+#X obj 1320 147 print Context;
+#X obj 1548 76 f 1.6;
+#X obj 1548 54 receive decay;
+#X obj 1417 34 route x a d;
+#X text 140 151 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
+TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
+#X text 2896 478 The second argument of ? is used to define the number
+of random values it will generate. Here \, the second argument is set
+by @ \, as in example 5 So chaniging the position of Context will increase
+the number of notes in each hit.;
+#X obj -50 135 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj -49 136 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text -45 140 part of the Context library;
+#X text -48 171 copyright Liam Goodacre 2017;
+#X text -40 156 licensed under the GPL v3;
+#X text 581 139 Refer to Manual Section 12;
+#X connect 3 3 4 3;
+#X connect 4 3 5 3;
+#X connect 5 3 6 3;
+#X connect 73 0 82 1;
+#X connect 74 0 75 0;
+#X connect 75 0 82 0;
+#X connect 78 0 83 0;
+#X connect 78 0 86 0;
+#X connect 81 0 74 0;
+#X connect 82 0 72 0;
+#X connect 82 0 72 1;
+#X connect 84 0 75 1;
+#X connect 85 0 84 0;
+#X connect 86 0 74 0;
+#X connect 86 1 81 0;
+#X connect 86 2 75 1;
+#X connect 86 3 74 0;

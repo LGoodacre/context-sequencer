@@ -1,0 +1,168 @@
+#N canvas 65 81 1301 687 10;
+#X obj 618 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 609 201 cnv 15 522 369 empty empty 2: housing instruments
+20 12 0 24 -260448 -1 0;
+#X obj 582 64 cnv 15 496 102 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 575 57 cnv 15 496 102 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 576 58 cnv 15 494 100 empty empty empty 20 12 0 14 -122865 -66577
+0;
+#X obj 51 71 cnv 15 504 57 empty empty empty 21 18 2 32 -99865 -204800
+0;
+#X obj 45 65 cnv 15 504 57 empty empty empty 21 18 2 32 -1 -204800
+0;
+#X obj 46 66 cnv 15 502 55 empty empty empty 21 18 2 32 -204786 -204800
+0;
+#X obj 47 67 cnv 15 500 53 empty empty overlay hacking examples 12
+22 2 43 -83573 -204800 0;
+#X text 140 141 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
+TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
+#X obj 671 271 context :H 46 :X 9 :Y 9 :io o :a ' # = | | | | | | |
+| = ' :d 2 :i 3 0 2 0 4 0 3 0 1.5 :x = 1 2 3 5 7 9 :Z 16 :ol 1 7 obj
+114 -37 unpack f s f 4 obj 228 43 phasor~ 5 obj 228 65 -~ 0.5 5 obj
+228 87 *~ 2 22 obj 18 30 hsl 60 15 0 1000 0 0 empty empty decay 4 7
+0 10 -262144 -1 -1 0 1 22 obj 18 50 hsl 60 15 100 10000 1 0 empty empty
+filter 4 7 0 10 -262144 -1 -1 0 1 5 obj 228 110 lop~ 100 22 obj 18
+69 hsl 60 15 0.01 1 1 0 empty empty level 4 7 0 10 -262144 -1 -1 0
+1 5 obj 229 155 *~ 0.2 4 obj 226 133 *~ 5 obj 163 40 f 600 4 obj 164
+89 vline~ 7 obj 189 -2 t b b f 6 msg 155 66 0 \$1 10 5 msg 208 23 1
+1 20 text 195 -39 Output messages are sent here before going to the
+outlets. Only the third character is needed here. 14 text -197 -14
+Any GUI object placed here will appear on the Context canvas. 5 obj
+229 177 ctx outlet~ 13 text 192 197 [ctx outlet] works as an outlet
+for the main patch. 5 connect 1 1 3 0 5 connect 3 2 15 0 5 connect
+4 0 5 0 5 connect 5 0 6 0 5 connect 6 0 9 0 5 connect 7 0 13 1 5 connect
+8 0 9 1 5 connect 9 0 12 0 5 connect 10 0 11 1 5 connect 11 0 20 0
+5 connect 12 0 11 0 5 connect 13 0 16 0 5 connect 14 0 12 1 5 connect
+15 0 13 0 5 connect 15 1 17 0 5 connect 15 2 4 0 5 connect 16 0 14
+0 5 connect 17 0 14 0;
+#X obj 658 464 scaler blues c 4;
+#X text 584 76 The Context overlay is a sub-patch within Context which
+is accessible and savable from within the parent patch (see manual
+section 13). Most of Context's internal settings are routed through
+the overlay and can be "hacked". This patch demonstrates some possibilities
+for how to use the overlay., f 79;
+#X text 140 163 ** RIGHT CLICK AND SELECT 'OPEN' TO VIEW THE OVERLAY.
+;
+#X text 802 285 You can use the Context canvas area to house other
+synths and instruments. Look inside to see how it works (right click
+and 'open')., f 49;
+#X text 761 447 Note that the 3 message variable turns the toggle float
+(=) into a note on a scale \, via the [scaler] object. If the variable
+is used in the message \, [scaler] does not need to be connected to
+anything.;
+#X text 807 356 You should hold down Control before using these sliders.
+Otherwise \, Context will stop as you "click and hold" over the canvas.
+, f 48;
+#X obj 54 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 44 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 45 201 cnv 15 522 369 empty empty 1: housing context parameters
+20 12 0 24 -260448 -1 0;
+#X obj 75 290 context :H 31 :X 9 :Y 5 :a ' m ' :c -90870 :d 2 :o 0
+:x = 1 2 3 4 5 6 7 8 9 :Z 15 :ol 1 5 msg 115 -20 :O \$1 22 obj 58 23
+nbx 3 14 -1e+37 1e+37 0 0 empty empty shuffle -45 7 0 10 -262144 -1
+-1 0 256 11 text 155 -20 This is the command for the "shuffle" setting
+11 text 4 -42 You can send commands to the first inlet. 5 connect 3
+0 2 0 5 connect 4 0 3 0;
+#X obj 1107 8 cnv 15 363 182 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 1097 -2 cnv 15 363 182 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1098 -1 cnv 15 361 180 empty empty empty 20 12 0 14 -72625 -66577
+0;
+#X msg 1121 28 \; pd dsp 1;
+#X obj 1226 50 docfiles/snare;
+#X obj 1221 98 dac~;
+#X obj 1225 74 *~ 0.3;
+#X obj 1278 76 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 1226 2 receive context-;
+#X obj 1132 133 print Context;
+#X text 200 297 If you want to ave quick access to some parameter \,
+you can embed a GUI object for quick access. This is very easy to achieve--look
+inside to see.;
+#X text 120 382 Use the Control key again if you don't want Context
+to stop when the number is scrolling \, but make sure that it doesn't
+interfere with the y-axis height when you move down! (For this reason
+\, sliders are probably better suited for embedding).;
+#X obj 1182 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 1172 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1173 201 cnv 15 522 369 empty empty 3: repurposing the inlets
+20 12 0 24 -260448 -1 0;
+#X obj 1215 307 context :H 40 :X 17 :a ' m | | | | | | | | | | | |
+| m ' :c -8.75432e+06 :d -2 :x = 1 2 3 4 5 8 11 14 :Z 13 :ol 1 2 #del
+4 6 obj 136 81 t a f 5 obj 163 102 sel 1 5 msg 163 124 rev 0 5 msg
+205 124 rev 1 54 text 199 33 The first digit of the 'inlet-' channel
+is the inlet number. It is uaually stripped off by the 'list split'
+object � but it can be used in any way. Make sure you use a trigger
+to get the number first � or else the order of operations might be
+harmed. 5 connect 1 0 3 0 5 connect 3 0 0 0 5 connect 3 1 4 0 5 connect
+4 0 5 0 5 connect 4 1 6 0 5 connect 5 0 2 0 5 connect 6 0 2 0;
+#X obj 1200 280 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1227 280 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 1221 384 Usually \, all of Context's inlets are identical.
+However \, the inlet number is identified in the overlay and can be
+processed in any way. Here only two inlets are re-purposed \, but in
+principle you could give every inlet a distinct function.;
+#X obj 1746 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 1736 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1737 201 cnv 15 522 369 empty empty 4: hacking context with context
+20 12 0 24 -260448 -1 0;
+#X obj 1763 290 context :H 23 :X 9 :a ' f ' :c 14 :d 4 :x = 1 3 5 7
+9 :Z 14 :ol 1 5 obj 193 -10 t b 17 obj 193 12 context :M 1 :h 1 :x
+= 1 2 3 :z 0 :R 100 18 obj 152 84 context :X 6 :a ' m ' :d 0.59 :x
+= 2 3 4 5 6 obj 183 156 list prepend 1 18 obj 255 81 context :a ' m
+| | | m ' :d 1 :x = 3 4 6 obj 291 144 list prepend 3 12 text 225 -13
+c4 is triggered any time the parent receives input. 14 text 273 172
+[list prepend] is choosing an outlet number in the parent Context 5
+connect 1 1 3 0 5 connect 3 0 4 0 5 connect 4 0 5 3 5 connect 4 2 7
+1 5 connect 5 1 6 0 5 connect 5 2 6 0 5 connect 5 3 6 0 5 connect 5
+4 6 0 5 connect 6 0 2 1 5 connect 7 2 8 0 5 connect 7 3 8 0 5 connect
+8 0 2 1;
+#X obj 1226 24 route m f;
+#X obj 1316 50 docfiles/kick;
+#X text 1776 453 You can get some pretty strange results by hacking
+Context like this! In theory \, you can hack the inner Contexts as
+well with more Contexts. There is no theoretical limit to how far you
+can go \, although it is not likely to work well beyond the first layer.
+;
+#X text 1775 359 Here \, Context is functioning recursively. There
+are three Contexts inside the overlay of the main Context (c7) \, which
+respond to the messages it sends. Notice how the extra sequenced messages
+come out of c7's outlets \, since they are connected to the 'x-out'
+channel. The inner Contexts are tied to c7 for input and will respond
+accordingly if its pattern is changed.;
+#X obj 775 415 dac~;
+#X obj -50 135 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj -49 136 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text -45 140 part of the Context library;
+#X text -48 171 copyright Liam Goodacre 2017;
+#X text -40 156 licensed under the GPL v3;
+#X text 902 134 Refer to Manual Section 12;
+#X connect 11 9 49 0;
+#X connect 11 9 49 1;
+#X connect 26 0 28 0;
+#X connect 28 0 27 0;
+#X connect 28 0 27 1;
+#X connect 29 0 28 1;
+#X connect 30 0 31 0;
+#X connect 30 0 45 0;
+#X connect 38 0 37 0;
+#X connect 39 0 37 1;
+#X connect 45 0 26 0;
+#X connect 45 1 46 0;
+#X connect 46 0 28 0;

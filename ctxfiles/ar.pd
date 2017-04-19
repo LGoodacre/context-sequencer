@@ -1,0 +1,13 @@
+#N canvas 193 378 450 300 10;
+#X obj 127 30 inlet;
+#X obj 127 52 route -save -open -clear float bang;
+#X obj 127 81 s \$1-asav\$2;
+#X obj 168 106 s \$1-aop\$2;
+#X obj 209 81 s \$1-acle\$2;
+#X obj 251 106 s \$1-:\$2;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 1 3 5 0;
+#X connect 1 4 5 0;

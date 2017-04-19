@@ -1,0 +1,6 @@
+#N canvas 145 267 450 300 10;
+#X obj 177 67 inlet;
+#X obj 177 89 list prepend \$2;
+#X obj 177 111 s \$1-everything;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

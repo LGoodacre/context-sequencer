@@ -1,0 +1,22 @@
+#N canvas 598 114 450 300 10;
+#X obj 51 56 inlet;
+#X msg 87 116 1;
+#X msg 196 117 2;
+#X msg 305 115 0;
+#X obj 51 79 route random M Random Position position S none None off
+;
+#X obj 196 163 s \$1-:E;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 5 0;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 4 1 1 0;
+#X connect 4 2 1 0;
+#X connect 4 3 2 0;
+#X connect 4 4 2 0;
+#X connect 4 5 2 0;
+#X connect 4 6 3 0;
+#X connect 4 7 3 0;
+#X connect 4 8 3 0;
+#X connect 4 9 5 0;

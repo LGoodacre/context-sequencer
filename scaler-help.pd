@@ -1,0 +1,9 @@
+#N canvas 407 172 450 300 10;
+#X obj 115 26 cnv 15 193 42 empty empty empty 20 12 0 14 -164033 -66577
+0;
+#X obj 117 28 cnv 15 189 38 empty empty [scaler] 40 14 0 20 -169657
+-1 0;
+#X text 120 50 a part of the Context library;
+#X text 51 82 This object converts numbers into notes (frequencies)
+on a scale. It communicates with the # message variable in Context
+to define...;

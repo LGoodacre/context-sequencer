@@ -1,0 +1,28 @@
+#N canvas 108 300 518 300 10;
+#X obj 55 53 inlet;
+#X obj 131 142 f 1;
+#X obj 185 151 inlet;
+#X obj 185 234 outlet;
+#X obj 254 234 outlet;
+#X obj 158 176 demux;
+#X obj 131 120 t b a;
+#X obj 185 202 route symbol;
+#X text 167 57 > arguments \; 1st must be a symbol (this happens outside
+this patch \; 2nd can be symbol or float \; 3rd and 4th must be float
+\; deviation \, period or bang terminates.;
+#X obj 104 97 sel .;
+#X obj 55 75 route bang symbol;
+#X connect 0 0 10 0;
+#X connect 1 0 5 1;
+#X connect 2 0 5 1;
+#X connect 5 0 4 0;
+#X connect 5 1 7 0;
+#X connect 6 0 1 0;
+#X connect 6 1 5 0;
+#X connect 7 0 3 0;
+#X connect 7 1 4 0;
+#X connect 9 0 3 0;
+#X connect 9 1 6 0;
+#X connect 10 0 3 0;
+#X connect 10 1 9 0;
+#X connect 10 2 6 0;

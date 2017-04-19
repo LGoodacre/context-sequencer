@@ -1,0 +1,16 @@
+#N canvas 190 50 450 300 10;
+#X obj 144 36 inlet margin;
+#X obj 144 146 outlet;
+#X obj 189 166 outlet mod;
+#X obj 70 146 outlet bang;
+#X obj 144 78 t b f f;
+#X obj 188 138 /;
+#X obj 144 57 change;
+#X obj 218 73 receive \$1-\$2lay100;
+#X connect 0 0 6 0;
+#X connect 4 0 3 0;
+#X connect 4 1 1 0;
+#X connect 4 2 5 0;
+#X connect 5 0 2 0;
+#X connect 6 0 4 0;
+#X connect 7 0 5 1;

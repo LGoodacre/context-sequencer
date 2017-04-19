@@ -1,0 +1,202 @@
+#N canvas 65 81 1301 687 10;
+#X declare -path docfiles;
+#X obj -64 -110 cnv 15 1482 906 empty empty empty 20 12 0 14 -137887
+-66577 0;
+#X obj 1039 9 cnv 15 252 335 empty empty empty 19 18 0 20 -99865 -45076
+0;
+#X obj 20 8 cnv 15 1001 64 empty empty empty 13 28 0 50 -99865 -66577
+0;
+#X obj 866 427 cnv 15 430 167 empty empty empty 20 12 0 14 -33289 -33289
+0;
+#X obj 867 428 cnv 15 428 165 empty can EXAMPLE 20 12 0 14 -3632 -33289
+0;
+#X msg 999 431;
+#X obj 12 0 cnv 15 1001 64 empty empty empty 13 28 0 50 -86277 -66577
+0;
+#X obj 14 2 cnv 15 997 60 empty empty empty 13 28 0 50 -174799 -66577
+0;
+#X obj 15 3 cnv 15 995 58 empty empty LIST OF ALL CONTEXT COMMANDS
+24 30 0 54 -5519 -262111 0;
+#X msg 1410 931;
+#X obj 1031 1 cnv 15 252 335 empty empty empty 19 18 0 20 -1 -45076
+0;
+#X obj 1032 2 cnv 15 250 333 empty empty ABOUT THIS PATCH 19 18 0
+20 -212254 -45076 0;
+#X text 1057 34 The left hand boxes show all possible Context commands.
+This is an exhaustive accont of Context's functions. Click on each
+button for more information., f 30;
+#X text 1056 226 All examples are interactive.;
+#X text 1056 248 To access the same information as text \, see 'context_commands.csv'.
+, f 30;
+#X text 1056 303 See manual section 9 for command use, f 30;
+#X text 1044 35 *;
+#X text 1044 135 *;
+#X text 1044 172 *;
+#X text 1044 227 *;
+#X text 1057 172 The right hand boxes show categories. Click on them
+to highlight., f 30;
+#X text 1044 249 *;
+#X text 1044 304 *;
+#X text 1057 135 $ stand for an argument \, curly brackets mean optional.
+, f 30;
+#X msg 1035 457;
+#X obj 796 118 cnv 15 224 258 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 786 108 cnv 15 224 258 empty empty empty 20 12 0 14 -128992
+-66577 0;
+#N canvas 243 186 895 500 hold 0;
+#X obj 338 469 s \$0-helpno;
+#X obj 283 370 receive \$0-got;
+#X obj 283 394 change;
+#X obj 67 394 text define \$0-help;
+#X obj 104 297 loadbang;
+#X obj 35 344 t b b;
+#X obj 12 369 s \$0-lb;
+#X msg 67 369 read -c context_commands.csv;
+#X text 282 311 ARGS: \$0 no. x y font_size font_x font_y \, label
+;
+#X obj 63 447 receive \$0-set;
+#X obj 63 471 t s s;
+#X obj 63 498 sel sym;
+#X obj 6 272 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 109 525 s \$0-on;
+#X obj 283 658 list prepend 0;
+#X obj 303 586 list prepend 1;
+#X obj 283 681 s reset;
+#X obj 498 586 list prepend reset -all;
+#X obj 498 611 list trim;
+#X obj 498 635 s c1;
+#X obj 283 500 + 14;
+#X obj 303 538 + 13;
+#X obj 498 537 + 15;
+#X obj 283 634 text get \$0-help;
+#X obj 303 562 text get \$0-help;
+#X obj 498 561 text get \$0-help;
+#X obj 35 267 receive \$0-ilb;
+#X obj 35 291 spigot 1;
+#X obj 35 315 t b f;
+#X symbolatom 175 266 30 0 0 2 search #0-onin #0-on2, f 30;
+#X obj 209 34 cnv 15 1 1 empty empty CATEGORY -30 -15 0 30 -233017
+-66577 0;
+#X obj 525 217 loadbang;
+#X obj 525 265 s \$0-onin;
+#X msg 525 241 set  ;
+#X obj 624 318 receive \$0-on2;
+#X obj 647 367 list fromsymbol;
+#X obj 700 415 list length;
+#X obj 700 439 < 3;
+#X obj 624 471 spigot;
+#X obj 624 342 t s s s;
+#X obj 624 525 s \$0-on;
+#X obj 624 495 makefilename :%s;
+#X obj 647 391 route 58;
+#X obj 647 415 t b;
+#X obj 647 439 t f;
+#X obj 283 444 t f f f f f;
+#X obj 157 604 text get \$0-help;
+#X obj 157 580 + 16;
+#X obj 118 633 spigot;
+#X obj 118 657 print context-c1;
+#X obj 72 580 receive c1-;
+#X obj 283 420 * 16;
+#X obj 270 214 docfiles/helpset \$0 saving;
+#X obj 255 178 docfiles/helpset \$0 database;
+#X obj 270 142 docfiles/helpset \$0 general;
+#X obj 255 106 docfiles/helpset \$0 toggles;
+#X obj 220 70 docfiles/helpset \$0 operation;
+#X obj 240 34 docfiles/helpset \$0 overlay;
+#X obj 174 34 docfiles/helpset \$0 ALL;
+#X obj 174 70 docfiles/helpset \$0 ID;
+#X obj 174 106 docfiles/helpset \$0 time;
+#X obj 174 142 docfiles/helpset \$0 input;
+#X obj 174 178 docfiles/helpset \$0 bank;
+#X obj 174 214 docfiles/helpset \$0 burst;
+#X obj 531 157 declare -path docfiles;
+#X connect 1 0 2 0;
+#X connect 2 0 51 0;
+#X connect 4 0 27 0;
+#X connect 5 1 7 0;
+#X connect 7 0 3 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 1;
+#X connect 10 1 11 0;
+#X connect 11 1 13 0;
+#X connect 12 0 5 0;
+#X connect 14 0 16 0;
+#X connect 15 0 16 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 20 0 23 0;
+#X connect 21 0 24 0;
+#X connect 22 0 25 0;
+#X connect 23 0 14 0;
+#X connect 24 0 15 0;
+#X connect 25 0 17 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 5 0;
+#X connect 28 1 27 1;
+#X connect 31 0 33 0;
+#X connect 33 0 32 0;
+#X connect 34 0 39 0;
+#X connect 35 0 42 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 1;
+#X connect 38 0 41 0;
+#X connect 39 0 38 0;
+#X connect 39 1 35 0;
+#X connect 39 2 40 0;
+#X connect 41 0 40 0;
+#X connect 42 0 43 0;
+#X connect 42 1 36 0;
+#X connect 43 0 44 0;
+#X connect 44 0 38 1;
+#X connect 45 0 20 0;
+#X connect 45 1 21 0;
+#X connect 45 2 22 0;
+#X connect 45 3 0 0;
+#X connect 45 4 47 0;
+#X connect 46 0 48 1;
+#X connect 47 0 46 0;
+#X connect 48 0 49 0;
+#X connect 50 0 48 0;
+#X connect 51 0 45 0;
+#X coords 0 -1 1 1 224 258 2 171 31;
+#X restore 786 108 pd hold;
+#X obj 1022 492 context :H 6 :ID 1 :ol 1 5 obj 222 -37 receive reset
+6 obj 222 -15 t a f 6 obj 168 54 list split 1 5 msg 249 8 inlet \$1
+5 obj 249 32 iemguts/canvasconnections 1 7 obj 249 54 unpack s f f
+6 obj 318 77 t f b 5 obj 345 102 iemguts/canvasindex 1 4 obj 318 123
+pack 6 obj 318 145 t l l 4 obj 168 116 list 5 obj 345 191 iemguts/sendcanvas
+2 8 msg 345 169 connect \$2 0 \$1 0 5 obj 168 78 t b 8 msg 168 138
+disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
+0 4 0 5 connect 4 0 5 0 5 connect 4 1 6 0 5 connect 5 0 16 0 5 connect
+5 1 18 0 5 connect 6 0 7 0 5 connect 7 0 8 0 5 connect 8 2 9 0 5 connect
+9 0 11 0 5 connect 9 1 10 0 5 connect 10 0 11 1 5 connect 11 0 12 0
+5 connect 12 0 13 1 5 connect 12 1 15 0 5 connect 13 0 17 0 5 connect
+15 0 14 0 5 connect 16 0 13 0 5 connect 17 0 14 0 5 connect 18 0 2
+1;
+#X obj 3 97 docfiles/spacer \$0 635 119 4 4;
+#X obj 2 427 docfiles/helpget \$0 7 862 35 20 2 14 12 -123325 0;
+#X obj 2 596 docfiles/helpget2 \$0 10 862 20 15 2 9 1;
+#X obj 2 574 docfiles/helpget \$0 9 862 20 15 2 9 -123325 12 1;
+#X obj 2 552 docfiles/helpget \$0 8 862 20 15 2 9 -123325 12 1;
+#X obj 2 530 docfiles/helpget \$0 5 430 20 15 2 9 -123325 12 1;
+#X obj 2 497 docfiles/helpget \$0 1 322 31 25 1 13 -123325 12 1;
+#X obj 2 464 docfiles/helpget \$0 0 322 31 25 1 13 -123325 12 1;
+#X obj 434 596 docfiles/helpget2 \$0 11 862 20 15 -123325 12 1;
+#X obj 434 530 docfiles/helpget \$0 6 430 20 15 2 9 -123325 12 1;
+#X obj 326 508 docfiles/helpget \$0 4 538 20 15 2 9 -123325 12 1;
+#X obj 326 486 docfiles/helpget \$0 3 538 20 15 2 9 -123325 12 1;
+#X obj 326 464 docfiles/helpget \$0 2 538 20 15 2 9 -123325 12 1;
+#X obj 866 596 docfiles/helpget2 \$0 12 862 20 15 2 9 1;
+#X obj 1067 358 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1068 359 cnv 15 175 55 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#X text 1072 363 part of the Context library;
+#X text 1069 394 copyright Liam Goodacre 2017;
+#X text 1077 379 licensed under the GPL v3;
+#X connect 5 0 28 0;
+#X connect 24 0 28 1;

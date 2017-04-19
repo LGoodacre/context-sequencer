@@ -1,0 +1,13 @@
+#N canvas 55 202 523 300 10;
+#X obj 187 64 inlet;
+#X obj 186 161 outlet;
+#X obj 187 108 s \$1-;
+#X obj 186 135 receive \$1;
+#X obj 296 133 receive \$1-dddEEE&;
+#X obj 101 135 receive \$4-\$1;
+#X obj 296 155 s \$2-stbc;
+#X obj 254 74 share all&&stor 1 cr all&&stor;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 1 0;

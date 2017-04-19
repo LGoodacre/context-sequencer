@@ -1,0 +1,12 @@
+#N canvas 798 318 450 300 10;
+#X obj 173 47 inlet;
+#X obj 200 127 array set \$1-\$2arry;
+#X obj 314 99 array define \$1-\$2arry \$4;
+#X obj 173 150 s \$1-\$2doned;
+#X obj 173 100 t b a;
+#X obj 173 74 switch-\$3 \$1 \$5 \$6 \$2 \$7;
+#X connect 0 0 5 0;
+#X connect 4 0 3 0;
+#X connect 4 1 1 0;
+#X connect 5 0 4 0;
+#X connect 5 1 2 0;

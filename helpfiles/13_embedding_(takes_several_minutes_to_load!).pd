@@ -1,0 +1,163 @@
+#N canvas 55 247 1301 458 10;
+#X obj 27 12 cnv 15 394 49 empty empty empty 13 21 0 30 -99865 -261234
+0;
+#X obj 20 5 cnv 15 394 49 empty empty empty 13 21 0 30 -1 -261234 0
+;
+#X obj 21 6 cnv 15 392 47 empty empty empty 13 21 0 30 -261234 -261234
+0;
+#X obj 2010 133 cnv 15 702 255 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 2000 123 cnv 15 702 255 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 2001 124 cnv 15 700 253 empty empty 5: embedded context 12
+12 0 18 -223936 -1 0;
+#X obj 828 133 cnv 15 702 255 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 818 123 cnv 15 702 255 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 819 124 cnv 15 700 253 empty empty 3: embedded sample series
+12 12 0 18 -223936 -1 0;
+#X obj 386 133 cnv 15 402 255 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 376 123 cnv 15 402 255 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 377 124 cnv 15 400 253 empty empty 2: embedded sample and envelope
+12 12 0 18 -223936 -1 0;
+#X obj 9 133 cnv 15 338 255 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj -1 123 cnv 15 338 255 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 0 124 cnv 15 336 253 empty empty 1: embedded sample 12 12
+0 18 -223936 -1 0;
+#X obj 393 172 context :H 29 :X 9 :Y 11 :io oo :c 18 :d 9 :i 0 0 0
+0 0 0 0 0 1.5 :x = 9 :Z 8 :ol 1 14 obj 0 18 content :lo helpfiles/wavs/loop.wav
+:x2 9 :y1 1.35 :y2 4.425 :li 1 116 obj 0 60 content :H 10 :x2 9 :y1
+4.5 :y2 9 :s2 0 :li 1 0.41666 0.433327 0.433327 0.533325 0.524992 0.516659
+0.516659 0.499992 0.499992 0.491659 0.483326 0.46666 0.46666 0.449993
+0.433327 0.427771 0.422216 0.41666 0.399994 0.399994 0.383327 0.366661
+0.349995 0.333328 0.308329 0.299995 0.291662 0.283329 0.249996 0.266663
+0.266663 0.283329 0.308329 0.316662 0.333328 0.333328 0.349995 0.349995
+0.383327 0.449993 0.616657 0.699989 0.749989 0.783321 0.816654 0.833321
+0.849987 0.849987 0.833321 0.816654 0.766655 0.733322 0.699989 0.699989
+0.64999 0.599991 0.549992 0.516659 0.46666 0.449993 0.399994 0.316662
+0.266663 0.23333 0.216663 0.199997 0.0999985 0.0999985 0.116665 0.133331
+0.149998 0.166664 0.166664 0.183331 0.199997 0.216663 0.216663 0.216663
+0.249996 0.299995 0.333328 0.383327 0.433327 0.449993 0.516659 0.583324
+0.633324 0.666656 0.699989 0.733322 0.766655 0.783321 0.799988 0.816654
+0.833321 0.833321 0.833321 0.833321 0.833321 0.833321 5 obj 138 -33
+ctx outlet~ 5 obj 219 -32 ctx outlet~ 5 connect 3 0 5 0 5 connect 4
+0 6 0;
+#X obj 67 313 dac~;
+#X obj 19 213 context :H 12 :Y 6 :io o :c 14 :d 0.21 :ol 1 14 obj 0
+26 content :lo helpfiles/wavs/cup2.wav :x2 0.21 :y1 0.091 :y2 0.217
+:li 1 5 obj -23 -31 ctx outlet~ 5 connect 3 0 4 0;
+#X obj 486 328 *~;
+#X obj 486 350 dac~;
+#X obj 837 163 context :H 12 :X 25 :Y 15 :io o :d 4 :ol 1 18 obj 26
+23 content :lo helpfiles/wavs/cup2.wav :x1 0.361111 :x2 1.15278 :y1
+0.547619 :y2 1.07143 :c 4 :li 1 18 obj 62 79 content :lo helpfiles/wavs/ting.wav
+:x1 0.861111 :x2 1.76389 :y1 1.88095 :y2 2.40476 :c 9 :li 1 18 obj
+161 135 content :lo helpfiles/wavs/tom.wav :x1 2.23611 :x2 3.18056
+:y1 3.21429 :y2 3.7381 :c 11 :li 1 18 obj 124 108 content :lo helpfiles/wavs/velcro.wav
+:x1 1.72222 :x2 2.58333 :y1 2.57143 :y2 3.09524 :c 2 :li 1 5 obj 99
+-29 ctx outlet~ 4 obj 0 -20 mover 18 obj 150 32 content :lo helpfiles/wavs/flam.wav
+:x1 2.08333 :x2 2.875 :y1 0.761905 :y2 1.28571 :c 14 :li 1 18 obj 214
+74 content :lo helpfiles/wavs/bar.wav :x1 2.97222 :x2 3.63889 :y1 1.7619
+:y2 2.28571 :c 13 :li 1 5 connect 3 0 7 0 5 connect 4 0 7 0 5 connect
+5 0 7 0 5 connect 6 0 7 0 5 connect 9 0 7 0 5 connect 10 0 7 0;
+#X obj 1126 357 dac~;
+#X text 1163 172 This patch has the [mover] object in the overlay \,
+so the samples can be moved easily around the canvas \; To use [mover]
+;
+#X text 1162 220 1: Hold down the Shift key and move the mosue cursor
+over the Context \; 2: Go to the left edge of one of the Content samples
+\; 3: Once the line turns black \, click and drag the object \; 4:
+Do the same over the right edge to resize \; 5: To move objects vertically
+\, double press and hold the Shift key \; 6: Then do the same as before.
+The top edge moves while the bottom edge re-sizes.;
+#X obj 2014 167 context :H 12 :X 30 :Y 11 :c 26 :d 12 :ol 1 55 obj
+23 25 context :H 24 :X 7 :Y 6 :c 3 :d 1 :F 6.86646e-05 :G -72 :ol 1
+:x1 0.793103 :x2 3.68966 :y1 2.27273 :y2 2.27273 14 obj 0 33 content
+:lo helpfiles/wavs/tom-2.wav :x2 1 :y1 0.55 :y2 1 :li 1 5 obj -1 86
+throw~ audio 5 connect 3 0 4 0 30 obj 181 25 context :a ' d ' :c 3
+:d 1 :x = 1 3 :F 10.0002 :G -48 :es 1 :x1 6.24138 :x2 8.65518 :y1 2.27273
+:y2 2.27273;
+#X obj 2227 56 catch~ audio;
+#X obj 2227 78 dac~;
+#X obj 2305 56 receive c5-;
+#X obj 2305 76 route d;
+#X obj 2305 96 ../documentation/docfiles/snare;
+#X text 523 171 Two [content]s are used here--one for sample playback
+and the other for the level. Redraw the level curve at will using the
+mouse. Note how this Context is looped., f 35;
+#X text 522 255 Context won't start if you double click over a [content]
+\, so there isn't much room for double clicking here (you have to go
+for the small green part at the top., f 35;
+#X text 110 187 Here \, the embedded [content] object hosts a sammple.
+The [ctx outlet~] object is used inside the overlay for the signal
+connection. Double click on the green canvas area to play. Changing
+the cycle time will change the speed \, and choosing a negative time
+will put the sample in reverse., f 33;
+#X msg 2314 486;
+#X text 2387 136 Here you can see what happens when you embed one Context
+inside another: the inner one will cycle contiuously while the cursor
+is over it. Notice that the first and second Context behave slightly
+differently--c4 stops abruptly when the cursor passes its border \,
+whereas c5 comes to the end of its cycle. This is determined by the
+:es setting., f 50;
+#X text 2387 241 This patch also demonstrates how it is possible to
+embed an object inside an embedded object. C4 is itself embedded but
+also has a [content] inside it. Look out though--this is what makes
+the patch so slow to load. It would be more practical to host the sample
+in an external Context and then send messages from c4., f 50;
+#X text 2017 318 BUG: altering the time on c6 does work but it takes
+a VERY long time to recalculate (as in up to two minutes). If you want
+to try it \, you should type in a new number instead of scrolling.
+, f 60;
+#X obj 22 7 cnv 15 390 45 empty empty EMBEDDING EXAMPLES 25 21 0 30
+-193183 -261234 0;
+#X text 440 17 This patch shows some possibilities for how to use timeline
+embedded objects in Context.;
+#X text 34 69 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
+TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
+#X text 34 96 ** RIGHT CLICK AND SELECT 'OPEN' TO VIEW OVERLAY;
+#X obj 1570 133 cnv 15 402 255 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 1560 123 cnv 15 402 255 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1561 124 cnv 15 400 253 empty empty 4: embedded sample with marker
+12 12 0 18 -223936 -1 0;
+#X obj 1576 198 context :H 12 :X 14 :Y 9 :c 9 :d 9 :ol 1 14 obj 0 35
+content :lo helpfiles/wavs/loop.wav :x2 9 :y1 3.28125 :y2 9 :li 1 4
+obj 0 -20 mover 8 obj 52 0 marker :x1 3 :y1 1.6875 8 obj 92 0 marker
+:x1 5.30769 :y1 2.625 5 obj 0 117 throw~ audio 5 connect 3 0 7 0;
+#X msg 1576 170 start m 1 2;
+#X msg 1663 170 start m 2 1;
+#X text 1764 202 Here \, [marker] is used to indicate star and end
+points for the "start" command (notice the "m" operator). You can move
+the markers with [mover] the same way as the previous example., f
+29;
+#X obj 869 25 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 870 26 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 874 30 part of the Context library;
+#X text 871 61 copyright Liam Goodacre 2017;
+#X text 879 46 licensed under the GPL v3;
+#X text 439 56 Refer to Manual Section 14: EMBEDDING OBJECTS;
+#X connect 15 9 18 0;
+#X connect 15 10 18 1;
+#X connect 17 5 16 0;
+#X connect 17 5 16 1;
+#X connect 18 0 19 0;
+#X connect 18 0 19 1;
+#X connect 20 25 21 0;
+#X connect 20 25 21 1;
+#X connect 25 0 26 0;
+#X connect 25 0 26 1;
+#X connect 27 0 28 0;
+#X connect 28 0 29 0;
+#X connect 29 0 26 1;
+#X connect 29 0 26 0;
+#X connect 45 0 44 0;
+#X connect 46 0 44 7;

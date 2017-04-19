@@ -1,0 +1,13 @@
+#N canvas 65 256 544 300 10;
+#X obj 136 88 inlet;
+#X obj 136 178 s \$1-soth;
+#X obj 136 156 pack \$2 \$3;
+#X obj 136 110 t b b;
+#X obj 163 132 s \$1-\$2fps;
+#X text 233 133 2.1.1 notify [ctxfiles/pf] for match;
+#X text 209 182 2.1.2 forward code characters (order \, ID);
+#X text 143 37 pfb: brackets (no operation);
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 1 4 0;

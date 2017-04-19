@@ -1,0 +1,41 @@
+#N canvas 339 348 810 413 10;
+#X obj 22 89 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 12 79 cnv 15 706 271 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 13 80 cnv 15 704 269 empty empty empty 20 12 0 14 -126802 -66577
+0;
+#X obj 17 12 cnv 15 252 39 empty empty empty 22 16 2 24 -99865 -1 0
+;
+#X obj 13 8 cnv 15 252 39 empty empty empty 22 16 2 24 -1 -1 0;
+#X obj 14 9 cnv 15 250 37 empty empty memory banking 20 16 0 24 -4032
+-1 0;
+#X obj 80 139 context :X 12 :Y 7 :x = 1 :y = 1 :A 0 :ba ' :x = 1 :y
+= 1 :a :b :d 0 || :x = 1 2 :y = 1 2 :a :b :d 0 || :x = 1 2 3 :y = 1
+2 3 :a :b :d 0 || :x = 1 2 3 4 :y = 1 2 3 4 :a :b :d 0 || :x = 1 2
+3 4 5 :y = 1 2 3 4 5 :a :b :d 0 || :x = 1 2 3 4 5 6 :y = 1 2 3 4 5
+6 :a :b :d 0 ';
+#X text 47 91 Each Context has a particular state (ie. cycle time \,
+toggle configuration \, etc.) \, but is capable of storing and recalling
+other states in its memory bank., f 79;
+#X msg 45 284 \; c1 :A;
+#X text 234 138 TO USE THE MEMORY BANK \; \; 1: Hold the mouse over
+Context \, then double press and hold Shift \; 2: Click on the y-axis
+toggles. These are the different bank terms \; 3: Let go of Shift and
+edit Context as usual. Then repeat., f 67;
+#X text 109 263 The :A setting makes a big difference to the bank.
+If it is on \, the bank will track all new changes and store them to
+the given bank term. If it is off \, then changes will be ignored \,
+and the bank will only ever remember its initial setting.;
+#X text 490 256 By default \, only the :a :b :x :y :i :j and :d are
+tracked by the bank \, but this can be changed using [presets]. See
+Manual Section 12, f 34;
+#X text 243 226 Practice accessing and editing the toggles here.;
+#X obj 528 10 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 529 11 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 533 15 part of the Context library;
+#X text 530 46 copyright Liam Goodacre 2017;
+#X text 538 31 licensed under the GPL v3;
+#X text 18 57 Refer to Section 13: MEMORY BANK;

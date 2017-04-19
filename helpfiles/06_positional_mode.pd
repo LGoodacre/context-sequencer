@@ -1,0 +1,74 @@
+#N canvas 322 61 701 567 10;
+#X obj 70 116 cnv 15 130 428 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 60 106 cnv 15 130 428 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 61 107 cnv 15 128 426 empty empty empty 20 12 0 14 -170900 -66577
+0;
+#X obj 250 116 cnv 15 130 428 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 240 106 cnv 15 130 428 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 241 107 cnv 15 128 426 empty empty empty 20 12 0 14 -170900
+-66577 0;
+#X obj 215 43 cnv 15 199 38 empty empty empty 18 16 2 24 -99865 -1
+0;
+#X obj 211 39 cnv 15 199 38 empty empty empty 18 16 2 24 -1 -1 0;
+#X obj 522 32 mtof;
+#X obj 522 76 dac~;
+#X obj 522 9 receive pos-;
+#X obj 212 40 cnv 15 197 36 empty empty positional mode 10 16 0 20
+-4032 -1 0;
+#X obj 443 18 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 443 38 \; pd dsp \$1;
+#X msg 75 176 \; pos :k \$1;
+#X floatatom 75 152 5 0 0 0 - - -, f 5;
+#X text 72 220 Alter the timing of the whole loop here (see 'calculation'
+in the manual), f 15;
+#X obj 256 128 context :X 8 :a ' 72 ' :d 0.5 :n ' pos ' :x = 1 8 :K
+1 :Z 14;
+#X obj 256 242 context :X 8 :a ' 74 ' :c 3 :d 0.5 :n ' pos ' :x = 1
+8 :B 0.125 :C 5 :E 2 :K 1 :Z 13;
+#X obj 256 353 context :X 8 :a ' 77 ' :c 3 :d 0.5 :n ' pos ' :x = 1
+8 :B 0.125 :C 5 :E 2 :K 1 :Z 14;
+#X obj 256 465 context :X 8 :a ' 79 ' :d 0.5 :n ' pos ' :x = 1 8 :B
+0.125 :C 5 :E 2 :K 1 :Z 14;
+#X obj 522 54 docfiles/glock~ 1;
+#X floatatom 77 337 5 0 0 0 - - -, f 5;
+#X msg 77 356 \; pos :B \$1;
+#X text 71 392 Set the resolution here (ie. the gaps at which the timings
+jump). In this example \, only numbers less than 0.5 make sense.,
+f 16;
+#X obj 420 116 cnv 15 150 428 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 410 106 cnv 15 150 428 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 411 107 cnv 15 148 426 empty empty empty 20 12 0 14 -170900
+-66577 0;
+#X msg 431 486 \; context stop;
+#X text 418 343 Moving a context horizonally \, or lowering c4 \, adds
+time to the whole loop., f 22;
+#X text 418 113 The complete set forms a loop \, while positional mode
+is on in c2 c3 and c4. If you move the two white contexts up or down
+\, it will change the timing of the Contexts directly above and below.
+in 1/8 second intervals. But notice that the cycle time for the complete
+loop remains constant at 2 seconds \, even while the individual cycle
+times change., f 22;
+#X text 418 404 Note that you have to be in edit mode (ctrl+e) to move
+a Context)., f 22;
+#X obj 17 32 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 18 33 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 22 37 part of the Context library;
+#X text 19 68 copyright Liam Goodacre 2017;
+#X text 27 53 licensed under the GPL v3;
+#X text 209 82 Refer to Manual section 10: POSITIONAL MODE;
+#X connect 8 0 21 0;
+#X connect 10 0 8 0;
+#X connect 12 0 13 0;
+#X connect 15 0 14 0;
+#X connect 21 0 9 0;
+#X connect 21 0 9 1;
+#X connect 22 0 23 0;

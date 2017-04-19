@@ -1,0 +1,202 @@
+#N canvas 65 81 1301 687 10;
+#X obj 53 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
+0;
+#X obj 44 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 45 201 cnv 15 522 369 empty empty 1: altering parameter using ~
+20 12 0 24 -260448 -1 0;
+#X obj 1182 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 1172 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1173 201 cnv 15 522 369 empty empty 3: self modifying network using ^
+20 12 0 24 -260448 -1 0;
+#X obj 1746 210 cnv 15 524 371 empty empty empty 20 12 0 24 -99865
+-66577 0;
+#X obj 1736 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1737 201 cnv 15 522 369 empty empty 4: matching rhythm using >
+20 12 0 24 -260448 -1 0;
+#X obj 618 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 609 201 cnv 15 522 369 empty empty 2: self modifying pattern
+20 12 0 24 -260448 -1 0;
+#X obj 2310 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 2300 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X text 628 253 = reads a value from the toggle float array;
+#X obj 687 333 context :X 9 :Y 5 :a ' = ' :b ' . :x (?8+1) ' :d 3 :f
+2 :h 1 :i 1 2 1 2 1 2 1 2 1.5 :m 1 :x = 1 2 3 4 5 6 7 8 9 :y = 1 2
+:P 1 :Z 17 :ID 1 :ex ' clear ';
+#X obj 555 122 cnv 15 496 72 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 548 115 cnv 15 496 72 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 549 116 cnv 15 494 70 empty empty empty 20 12 0 14 -122865 -66577
+0;
+#X obj 12 51 cnv 15 953 57 empty empty empty 21 18 2 32 -99865 -204800
+0;
+#X obj 4 45 cnv 15 955 57 empty empty empty 21 18 2 32 -1 -204800 0
+;
+#X obj 5 46 cnv 15 953 55 empty empty empty 21 18 2 32 -204786 -204800
+0;
+#X obj 6 47 cnv 15 951 53 empty empty message variables: dynamic networking examples
+12 22 2 43 -83573 -204800 0;
+#X msg 994 64 \; pd dsp 1;
+#X text 140 151 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
+TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
+#X text 563 131 In these examples \, message variables are not being
+used to make notes \, but to modify the network in some way. This is
+called "dynamic networking"., f 79;
+#X obj 1263 98 docfiles/snare;
+#X obj 1258 165 dac~;
+#X obj 1262 141 *~ 0.3;
+#X obj 1315 143 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 1174 96 docfiles/kick;
+#X obj 1174 73 receive kick-;
+#X obj 1263 71 receive snare-;
+#X obj 1138 -4 receive context-;
+#X text 627 271 . sends command message to self;
+#X text 626 291 ? picks a random number \, given a maximum value;
+#X obj 1262 120 *~ 1;
+#X obj 87 313 context :H 55 :X 17 :Y 6 :a ' 1 1 & m ~ ' :c -5.65787e+07
+:d 2 :v 0 :i 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2.5 :x = 1 2 3 4 5 6 7
+11 14 16 17 :Z 25 :ol 1 2 #del 10 116 obj 0 24 content :H 10 :x2 2
+:y1 0.8 :y2 1.96667 :s2 0 :li 1 0.85714 0.828569 0.771426 0.742855
+0.685713 0.628571 0.628571 0.571428 0.542857 0.485715 0.457144 0.457144
+0.428573 0.400002 0.371431 0.371431 0.342859 0.314288 0.314288 0.285717
+0.285717 0.285717 0.285717 0.285717 0.342859 0.342859 0.371431 0.400002
+0.400002 0.428573 0.457144 0.485715 0.514286 0.542857 0.571428 0.6
+0.614285 0.628571 0.685713 0.714284 0.742855 0.771426 0.785712 0.799997
+0.828569 0.85714 0.885711 0.657142 0.657142 0.571428 0.342859 0.342859
+0.342859 0.342859 0.342859 0.342859 0.342859 0.342859 0.342859 0.342859
+0.342859 0.342859 0.342859 0.342859 0.342859 0.342859 0.342859 0.342859
+0.342859 0.342859 0.342859 0.342859 0.342859 0.342859 0.342859 0.342859
+0.342859 0.371431 0.371431 0.400002 0.400002 0.400002 0.400002 0.400002
+0.428573 0.428573 0.428573 0.457144 0.485715 0.514286 0.542857 0.571428
+0.6 0.6 0.628571 0.628571 0.685713 0.714284 0.742855 0.85714;
+#X obj 1177 48 route 1 2;
+#X obj 1138 18 route m;
+#X text 78 263 ~ (tilde) reads from a Content array;
+#X text 95 420 This message is split into two by the & character. The
+first part \, 1 \, simply triggers the drum. The second part \, m ~
+\, is used to control the volume. Redraw the curve for a different
+envelope.;
+#X text 94 490 If you have been following these example files sequentially
+\, then this will be your first encounter with [content]! See manual
+section 14 to learn more about it.;
+#X obj 1217 247 context :X 17 :b ' < ^ drums :x (?4 * 2 + 1) ' :c 1
+:d 1 :h 1 :x = 1 5 17 :y = 1 2 :P 1 :Z 31;
+#X obj 1192 393 context :X 9 :a ' 1 ' :c 1 :d 1 :n ' drums ' :x = 1
+2 5;
+#X obj 1266 320 context :X 9 :a ' 2 ' :c 1 :d 1 :n ' drums ' :x = 1
+2 4;
+#X text 1435 250 < sends the message to a send channel;
+#X text 1436 283 ? picks a random number \, given a maximum;
+#X text 1435 267 ^ fetches a Context ID number given a tag;
+#X text 1393 314 This network is operating in a structured form \,
+as in '07_burst_and_structure.pd'. But unlike the earlier example \,
+this one is dynamic. The top Context c3 sends a message to one of the
+bottom ones (c4 and c5) to change their toggle selections every other
+cycle., f 46;
+#X text 1316 407 Hold the mouse over c3 and press the down key to see
+its message. ' ^ drums ' returns an ID number from one of the Contexts
+tagged 'drums' \, and < indicates that the message should be sent to
+this locaion. (?4 * 2 + 1) picks a random number 1 \, 3 \, 5 or 7 \,
+whih is sent to the :x toggles of the chosen Context.;
+#X text 1317 499 Note that ' ^ drums ' will cycle through the tagged
+Contexts \, but it could choose them randomly if the :nr setting is
+set to 1;
+#X obj 1768 247 context :X 17 :Y 6 :a ' 1 | | | | | | | | | | | | 1
+' :b ' . :x ? 16 3 ' :c -99999 :d 3 :f 3 :h 1 :x = 1 4 7 11 13 17 :y
+= 1 2 :R 100 :Z 31 :ro 1;
+#X obj 1768 339 context :X 17 :a ' 2 ' :b ' . :x def > c6 x ' :c -99999
+:d 3 :f 2 :h 1 :x = 1 4 7 11 13 17 :y = 1 2 :R 100 :Z 30;
+#X text 1982 254 ? picks a random number \, given a maximum;
+#X text 1982 268 . sends command message to self;
+#X text 1981 284 > fetches currrent state of given command;
+#X text 633 409 Here \, the first burst toggle contains the message
+' . :x (?8+1) '. The period at the beginning directs the message into
+the Context's own input--this means that the :x command will alter
+the same Context. The ' (?8+1) ' message chooses a random number between
+1 and 8 The result is that a random x-axis toggle is opened or closed
+every time this message is sent. Since the two burst toggles alternate
+\, a toggle opens / closes every other cycle. Opening / closing more
+toggles on the burst changes this frequency. (Note that the y-axis
+database limit \, :f \, must be set to 2 for this to work \, otherwise
+the first message would send every time)., f 79;
+#X text 824 337 To view the burst message \, hold the mouse over Context
+and press the down key., f 29;
+#X text 1190 465 To view the burst message \, hold the mouse over Context
+and press the down key., f 15;
+#X text 1999 338 To view the burst message \, hold the mouse over Context
+and press the down key., f 29;
+#X text 1764 402 Each Context has its own dynamic message here. The
+first burst toggle on c6 has the message ' :x ? 16 3 ' \, which opens
+or closes three toggles on the x-axis each time it is hit. c7 has the
+message ' . :x def ? c6 x '. >> fetches the current values from a given
+Context state. In this case \, the arguments are 'c6 x' \, meaning
+that it will fetch the :x values from c6 \, it the toggle selection.
+' . :x def ' marks the message as a command. The period directs the
+message towards the Context's own input \, while ' "x def ' (the same
+as ' :x = ') makes the numbers define the x-axis toggles. The result
+is that c7 steals its pattern toggle settings from c6., f 77;
+#X text 1765 524 Opening and closing burst toggles on c6 determines
+how frequently it chooses a new settings. Doing the same on c7 determines
+how frequently it steals settings from c6., f 76;
+#X obj 2301 201 cnv 15 522 369 empty empty 4: matching rhythm using > and [ ]
+20 12 0 24 -260448 -1 0;
+#X obj 2318 247 context :X 17 :Y 6 :a ' 2 | | | | | | | | | | | | 1
+' :b ' . :x ? 16 3 ' :c -65432 :d 3 :f 3 :h 1 :x = 1 4 5 7 8 9 13 17
+:y = 1 2 :R 100 :Z 31 :ro 1;
+#X obj 2318 339 context :X 17 :a ' 1 ' :b ' . :x def ( ? ( 0 [ > c8
+x ] - 1) + 1 ) [ > c8 x ] ' :c -65432 :d 3 :f 2 :h 1 :x = 4 :y = 1
+:R 100 :Z 30;
+#X text 2542 254 ? picks a random number \, given a maximum;
+#X text 2542 268 . sends command message to self;
+#X text 2541 283 > fetches currrent state of given command;
+#X text 2549 338 To view the burst message \, hold the mouse over Context
+and press the down key., f 29;
+#X text 2541 297 0 [ ... ] counts the items in a list;
+#X text 2541 312 n [ ... ] selects an item from a list;
+#X text 2314 414 This pair works similarly to example 4 \, but instead
+of matching the whole pattern \, c9 matches only one value from c8's
+:x values. The formula to do this is quite complicated and involves
+both of the square bracket functions. It runs like this \; 1: steal
+:x values from c8 (' > c8 x ') \; 2: count values (' 0 [...] ') \;
+3: use this as the maximum for a random number and subtract one ('
+? ... - 1 ') \; 4: use this as an item number for the same value-grab
+(' n [ ... ] ')., f 81;
+#X text 2313 536 BUG: c9's message executes before c8's so it sometimes
+gets it wrong..., f 72;
+#X obj 1138 130 print Context;
+#X obj -60 127 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj -59 128 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text -55 132 part of the Context library;
+#X text -58 163 copyright Liam Goodacre 2017;
+#X text -50 148 licensed under the GPL v3;
+#X text 564 164 Refer to Manual Section 12;
+#X connect 26 0 36 0;
+#X connect 28 0 27 0;
+#X connect 28 0 27 1;
+#X connect 29 0 28 1;
+#X connect 30 0 36 0;
+#X connect 31 0 30 0;
+#X connect 32 0 26 0;
+#X connect 33 0 39 0;
+#X connect 33 0 74 0;
+#X connect 36 0 28 0;
+#X connect 38 0 30 0;
+#X connect 38 1 26 0;
+#X connect 39 0 36 1;
+#X connect 39 1 38 0;
+#X connect 43 0 44 2;
+#X connect 43 4 45 0;
+#X connect 52 16 53 16;
+#X connect 64 16 65 16;

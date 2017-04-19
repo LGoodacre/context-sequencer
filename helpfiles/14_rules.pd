@@ -1,0 +1,132 @@
+#N canvas 257 18 760 687 10;
+#X obj 617 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
+0;
+#X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 609 201 cnv 15 522 369 empty empty 2: connecting toggle arrays
+20 12 0 24 -260448 -1 0;
+#X obj 1182 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 1172 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1173 201 cnv 15 522 369 empty empty 3: connecting two contexts
+20 12 0 24 -260448 -1 0;
+#X obj 54 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 44 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 45 201 cnv 15 522 369 empty empty 1: filtering messages 20
+12 0 24 -260448 -1 0;
+#X obj 1746 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 1736 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1737 201 cnv 15 522 369 empty empty 4: protecting values 20
+12 0 24 -260448 -1 0;
+#X obj 2874 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 2864 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 3438 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 3428 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 3429 201 cnv 15 522 369 empty empty 7: random melody using ? and 
+20 12 0 24 -260448 -1 0;
+#X obj 2865 201 cnv 15 522 369 empty empty 6: random melody using ? and _
+20 12 0 24 -260448 -1 0;
+#X obj 1313 8 cnv 15 363 182 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 1303 -2 cnv 15 363 182 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 1304 -1 cnv 15 361 180 empty empty empty 20 12 0 14 -72625 -66577
+0;
+#X obj 762 54 cnv 15 496 132 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 755 47 cnv 15 496 132 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 756 48 cnv 15 494 130 empty empty empty 20 12 0 14 -122865 -66577
+0;
+#X obj 109 62 cnv 15 304 57 empty empty empty 21 18 2 32 -99865 -204800
+0;
+#X obj 103 55 cnv 15 304 57 empty empty empty 21 18 2 32 -1 -204800
+0;
+#X obj 104 56 cnv 15 302 55 empty empty empty 21 18 2 32 -204786 -204800
+0;
+#X obj 105 57 cnv 15 300 53 empty empty dynamic rules 12 22 2 43 -83573
+-204800 0;
+#X text 764 125 Each rule has two parts: a condition and a consequence.
+They are written by typing them into a text box. See manual section
+14 to learn about their syntax., f 79;
+#X text 764 60 Rules are used to intercept and manipulate incoming
+and outgoing messages. You can use them to protect certain elements
+of a dynamic network \, or to add new types of logical relationships
+between Contexts. Rules are most useful when applied to toggles \,
+but in principle can affect any command., f 79;
+#X floatatom 531 125 5 0 0 0 - - -, f 5;
+#X msg 531 144 \; c\$1 :I -open;
+#X obj 70 298 context :X 11 :a ' start ? 8 ' :d 1 :x = 1 2 3 4 5 6
+7 8 9 10 :S < c2 :Z 15;
+#X obj 70 389 context :d 1 :I 1 :ex ' 1 :s qn== 4 || c- ';
+#X text 93 231 In this example \, a rule in c2 is used to thin out
+incoming messages. It is filtering start messages for demonstration
+\, but the same technique could be used to filter any command.;
+#X text 163 385 Open the rule list for c2 to view. The condition line
+of the rule is ' 1 :s qn== 4 '. In plain English \, this asks \, "Is
+an incoming (1) message starting with :s not equal (qn==) 4? ".;
+#X text 163 444 The condition line is "c-". This is the indicator which
+says "exeute the consequence and ignore the incoming message". But
+there is no further consequence to execute \, so the result is that
+the rule swallows all incoming ' :S ' messages \, unless they are '
+:s 4 '.;
+#X text 96 142 ** TO OPEN THE RULE LIST OF ANY CONTEXT \; go to PROPERTIES
+--> OTHER --> RULES --> EDIT LIST or use this shortcut, f 74;
+#X text 222 291 Double click c1 to begin. This context generates the
+message '' :s x ' \, where x is a random number between 0 and 7 It
+sends these messages to c2 since the :a message prepend :S is set to
+' < c2 '., f 49;
+#X obj 645 272 context :X 7 :Y 7 :x = 3 4 5 6 :y = 3 4 5 6 :I 1 :ex
+' 0 :x || c* . :y def > x ';
+#X obj 1207 286 context :d 2 :x = 2 3 4 :I 1 :ex ' 0 :x || c* < c5
+:d 0 [ > x . ] ';
+#X obj 1207 369 context :d 4;
+#X text 1287 290 Here the :d value of c5 is dependent on how many x-axis
+toggles in c4 are open.;
+#X text 746 269 Here the y-axis toggles are linked to the x-axis toggles.
+Open and clone toggles along the bottom to see.;
+#X text 747 318 Open the rule lst for c3. The condition reads "0 :x".
+This means that any :x input will trigger the consequence. The consequence
+reads "c* . :y def > x". This means \, "continue with the original
+message (c*) \, then send the following message to self (.) : the y-axis
+toggles (:y) should be defined by (def) the value of (>) the x-axis
+toggles (x).;
+#X obj 1782 308 context :d 5 :x = 1 2 :I 1 :ex ' 0 :x q= 3 || c* .
+:x - 3 || 0 :d q== 4 || c- ';
+#X text 1807 258 This Context will not allow the third :x toggle to
+be opened \, nor will it allow a :d value of 4;
+#X text 1295 355 Open the rule list for c4. The condition reads " 0
+:x ". This means \, any :x input will trigger the consequence. The
+consequence reads \, " c* < c5 :d 0 [ > x . ] ". This means \, "continue
+with the original message (c*) \, then send the following message (<)
+t0 c5: the cycle time (:d) with an argument equal to the number of
+terms in ( 0 ] ) the :x ( > x . ) term.";
+#X text 1861 305 Open the rule list for c6. The first condition is
+"0 :x q= 3". This means \, "if the input starts with :x \, does it
+contain (q=) the value 3? The consequence reads " c* . :x - 3 ". This
+means \, "continue with the original message (c*) \, then send a message
+to self (.) which removes (-) the 3rd toggle from the :x axis.;
+#X text 1860 398 A second rule reads " 0 :d q== 4 ". This means \,
+"if the input starts with :d \, does it equal (q==) the value 4?".
+The consequence reads " c- ". This means \, "replace the original message
+with the following consequence (which is blank)." Notice that the float
+atom still shows the value 4 \, since the message is cancelled out
+downsteam. However \, the cycle time will never take 4;
+#X obj 478 45 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 479 46 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 483 50 part of the Context library;
+#X text 480 81 copyright Liam Goodacre 2017;
+#X text 488 66 licensed under the GPL v3;
+#X text 102 119 Refer to Manual Section 15: RULES;
+#X connect 30 0 31 0;

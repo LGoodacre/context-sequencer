@@ -1,0 +1,14 @@
+#N canvas 424 285 450 300 10;
+#X obj 136 62 inlet;
+#X obj 136 167 outlet n1;
+#X obj 207 167 outlet n2;
+#X obj 207 62 inlet;
+#X obj 136 90 demux;
+#X obj 163 123 -;
+#X obj 178 90 receive \$1-\$2-otherpos;
+#X connect 0 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 1 0;
+#X connect 4 1 5 0;
+#X connect 5 0 1 0;
+#X connect 6 0 5 1;

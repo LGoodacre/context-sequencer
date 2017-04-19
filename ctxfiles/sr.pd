@@ -1,0 +1,8 @@
+#N canvas 391 142 450 300 10;
+#X obj 187 64 inlet;
+#X obj 186 161 outlet;
+#X obj 187 108 s \$1-;
+#X obj 186 135 r \$1;
+#X obj 277 125 share \$1 1 cr \$1;
+#X connect 0 0 2 0;
+#X connect 3 0 1 0;

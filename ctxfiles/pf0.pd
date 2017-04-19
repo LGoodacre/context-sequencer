@@ -1,0 +1,25 @@
+#N canvas 99 326 802 347 10;
+#X obj 337 34 inlet;
+#X obj 337 124 s \$1-soth;
+#X obj 337 102 pack \$2 \$3;
+#X obj 337 56 t b b;
+#X obj 364 78 s \$1-\$2fps;
+#X obj 337 175 receive \$1-\$2-\$3robo;
+#X obj 337 222 \$4 \$1;
+#X obj 337 244 s \$1-obor;
+#X obj 379 222 s \$1-obop;
+#X obj 337 197 t b f;
+#X text 434 77 2.1.1 notify [ctxfiles/pf] for match;
+#X text 410 107 2.1.2 forward code characters (order \, ID);
+#X text 254 5 pf0: process but no arguments;
+#X text 446 212 8.1 inform where the processed character should go
+;
+#X text 57 223 8.2 fetch value for special character and send;
+#X connect 0 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 3 1 4 0;
+#X connect 5 0 9 0;
+#X connect 6 0 7 0;
+#X connect 9 0 6 0;
+#X connect 9 1 8 0;

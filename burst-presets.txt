@@ -1,0 +1,13 @@
+>> Edit this file to add your own presets for the burst. The first term in the list is the title which will be searched or. The rest are Context commands. a dash - indicates that this match will be forwarded to the following term (ie. 'Random' --> 'random').;
+
+random :h 1 :p 0 :l 0 :P 0 :R 100;
+Random - random;
+RANDOM - random;
+
+linear :h 1 :p 0 :l 0 :P 1 :R 0;
+Linear - linear;
+LINEAR - LINEAR;
+
+all :h 0 :p 0 :l 0 :P 0 :R 0;
+All - all;
+ALL - all;

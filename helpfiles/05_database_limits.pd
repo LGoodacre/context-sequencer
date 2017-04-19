@@ -1,0 +1,112 @@
+#N canvas 345 340 794 413 10;
+#X obj 22 89 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 12 79 cnv 15 706 271 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 13 80 cnv 15 704 269 empty empty empty 20 12 0 14 -262115 -66577
+0;
+#X obj 17 12 cnv 15 252 39 empty empty empty 22 16 2 24 -99865 -1 0
+;
+#X obj 13 8 cnv 15 252 39 empty empty empty 22 16 2 24 -1 -1 0;
+#X obj 14 9 cnv 15 250 37 empty empty database limits 20 16 0 24 -4032
+-1 0;
+#X text 91 216 Double click on context to start it;
+#X msg 279 148 :a -open;
+#X msg 365 148 :b -open;
+#X floatatom 279 95 5 0 0 0 - - -, f 5;
+#X floatatom 365 95 5 0 0 0 - - -, f 5;
+#X msg 365 114 :f \$1;
+#X text 108 149 View the message databses:;
+#N canvas 65 85 450 300 window 0;
+#X obj 66 30 inlet;
+#X symbolatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 66 52 list split 1;
+#X obj 100 76 l2s;
+#X connect 0 0 2 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 32 14 2 100 100;
+#X restore 276 283 pd window;
+#X text 106 371 Flip the axes (shift + double click on the float atom)
+and then try it again!, f 79;
+#X text 473 276 Note how the last toggle is not effected by the limit.
+, f 27;
+#N canvas 160 206 450 300 using 0;
+#X text 39 130 To edit \, click on the symbol atom \, type your new
+text \, and press return. Make sure you know which line you're viewing
+before you edit! It's usually a good idea to use the scroll keys first
+just to check.;
+#X text 39 40 The symbol atom (top-middle of the Context GUI) lets
+you view and edit one line of the database at a time. To scroll through
+the database \, hold the mouse over the Context canvas and use the
+arrow keys. The graphics will help you tell which term is selected.
+You won't be able to scroll past the database limit unless you hold
+down the Shift key.;
+#X restore 113 279 pd using the symbol atom;
+#N canvas 65 85 450 300 window 0;
+#X obj 66 30 inlet;
+#X symbolatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 66 52 list split 1;
+#X obj 100 76 l2s;
+#X connect 0 0 2 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 32 14 2 100 100;
+#X restore 316 283 pd window;
+#N canvas 65 85 450 300 window 0;
+#X obj 66 30 inlet;
+#X symbolatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 66 52 list split 1;
+#X obj 100 76 l2s;
+#X connect 0 0 2 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 32 14 2 100 100;
+#X restore 356 283 pd window;
+#N canvas 65 85 450 300 window 0;
+#X obj 66 30 inlet;
+#X symbolatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 66 52 list split 1;
+#X obj 100 76 l2s;
+#X connect 0 0 2 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 32 14 2 100 100;
+#X restore 396 283 pd window;
+#N canvas 65 85 450 300 window 0;
+#X obj 66 30 inlet;
+#X symbolatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 66 52 list split 1;
+#X obj 100 76 l2s;
+#X connect 0 0 2 0;
+#X connect 2 1 3 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 32 14 2 100 100;
+#X restore 438 283 pd window;
+#X obj 316 196 context :a ' a-1 | a-2 | a-3 | a-4 | a-5 ' :b ' b-1
+| b-2 | b-3 | b-4 ' :c 9 :d 2 :e 2 :f 3 :m 1 :x = 1 2 3 4 5 :y = 1
+2 3 :ex ' clear ' :pr 1;
+#X text 401 209 The colour of the toggles indicates the database limit
+, f 29;
+#X msg 279 114 :e \$1;
+#X text 23 99 Alter :e and :f here. Look at the toggle colour to see
+the database limits., f 42;
+#X obj 517 6 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 518 7 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 522 11 part of the Context library;
+#X text 519 42 copyright Liam Goodacre 2017;
+#X text 527 27 licensed under the GPL v3;
+#X text 18 57 Refer to Section 9: DATABASE LIMITS;
+#X connect 7 0 21 0;
+#X connect 8 0 21 1;
+#X connect 9 0 23 0;
+#X connect 10 0 11 0;
+#X connect 11 0 21 1;
+#X connect 21 0 13 0;
+#X connect 21 1 17 0;
+#X connect 21 2 18 0;
+#X connect 21 3 19 0;
+#X connect 21 4 20 0;
+#X connect 23 0 21 0;

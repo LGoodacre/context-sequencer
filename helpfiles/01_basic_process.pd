@@ -1,0 +1,48 @@
+#N canvas 148 265 893 420 10;
+#X obj 87 102 cnv 15 685 248 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 77 92 cnv 15 685 248 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 78 93 cnv 15 683 246 empty empty empty 20 12 0 14 -260452 -66577
+0;
+#X obj 265 303 dac~;
+#X obj 360 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 255 107 start;
+#X msg 278 128 stop;
+#X msg 135 212 \; pd dsp 1;
+#X text 387 176 this connection directs a 'bang' message back into
+context;
+#X obj 265 156 context :a ' 440 ' :d 1 :m 1 :x = 1 2 4 5 :S <o;
+#X obj 79 26 cnv 15 244 37 empty empty empty 22 15 2 18 -99865 -1 0
+;
+#X obj 75 22 cnv 15 244 37 empty empty empty 22 15 2 18 -1 -1 0;
+#X obj 76 23 cnv 15 242 35 empty empty context cycle 20 16 0 25 -4032
+-1 0;
+#X text 321 118 Press to start and stop;
+#X text 86 146 The cycle takes 1 second and sends the message '440'
+---->, f 29;
+#X text 292 245 these connections direct the message towards the PD
+object, f 63;
+#X text 344 32 This file illustrates the basic process of a Context
+cycle. When started \, the Context cursor passes across the screen
+and hits the toggles at the bottom in sequential order.;
+#X obj 265 281 docfiles/glock~ 0.3;
+#X text 75 69 Refer to Manual section 3: BASIC PROCESS;
+#X obj 695 372 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 696 373 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 700 377 part of the Context library;
+#X text 697 408 copyright Liam Goodacre 2017;
+#X text 705 393 licensed under the GPL v3;
+#X connect 4 0 9 4;
+#X connect 5 0 9 0;
+#X connect 6 0 9 1;
+#X connect 9 0 17 0;
+#X connect 9 1 17 0;
+#X connect 9 2 17 0;
+#X connect 9 3 17 0;
+#X connect 9 4 4 0;
+#X connect 17 0 3 0;
+#X connect 17 0 3 1;

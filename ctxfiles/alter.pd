@@ -1,0 +1,15 @@
+#N canvas 65 96 450 300 10;
+#X obj 165 146 -;
+#X obj 165 170 outlet;
+#X obj 119 48 inlet;
+#X obj 119 73 route float bang;
+#X obj 165 101 f \$1;
+#X obj 165 123 swap 1;
+#X connect 0 0 1 0;
+#X connect 0 0 4 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 1;
+#X connect 3 1 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 5 1 0 1;

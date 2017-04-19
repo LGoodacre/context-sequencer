@@ -1,0 +1,55 @@
+#N canvas 317 148 763 440 10;
+#X obj 375 95 cnv 15 272 231 empty empty empty 20 12 0 15 -99865 -1
+0;
+#X obj 365 85 cnv 15 272 231 empty empty empty 20 12 0 15 -1 -1 0;
+#X obj 366 86 cnv 15 270 229 empty empty 2: float connection 20 12
+0 15 -260956 -1 0;
+#X obj 83 95 cnv 15 233 231 empty empty empty 20 12 0 15 -99865 -1
+0;
+#X obj 73 85 cnv 15 233 231 empty empty empty 20 12 0 15 -1 -1 0;
+#X obj 74 86 cnv 15 231 229 empty empty 1: cable connection 20 12
+0 15 -260956 -1 0;
+#X obj 78 19 cnv 15 244 37 empty empty empty 29 15 2 25 -99865 -1 0
+;
+#X obj 74 15 cnv 15 244 37 empty empty empty 29 15 2 25 -1 -1 0;
+#X obj 75 16 cnv 15 242 35 empty empty forming a loop 15 15 0 25
+-4032 -1 0;
+#X msg 82 112 start;
+#X msg 389 131 start;
+#X obj 387 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
+0;
+#X obj 474 229 cnv 1 1 1 empty \$0-tester ↑ -11 8 1 53 -262144 -1
+0;
+#X text 100 254 These contexts use PD connections to form a loop.,
+f 28;
+#X text 391 265 These contexts use float-connect to form a loop. Notice
+how the toggle floats correspond to the ID numbers., f 38;
+#X text 357 374 Note that float-connected toggles can still be cable-connected!
+Try connecting the toggle labeled c4 or c3 to one of the green contexts
+to see.;
+#X obj 114 168 context :d 1 :m 1 :x = 5 :ex ' clear ';
+#X obj 206 169 context :d 1 :x = 5;
+#X obj 421 168 context :c 4 :d 1 :x = 5 :ID 3;
+#X obj 551 169 context :c 4 :d 1 :x = 5 :ID 4;
+#X msg 127 139 stop context;
+#X msg 434 131 stop context;
+#X text 357 338 To access float-connect \, double click on any toggle
+\, holding the mouse down \, and scroll up.;
+#X obj 518 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
+0;
+#X obj 605 230 cnv 1 1 1 empty \$0-tester ↑ -11 8 1 53 -262144 -1
+0;
+#X obj 56 360 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 57 361 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 61 365 part of the Context library;
+#X text 58 396 copyright Liam Goodacre 2017;
+#X text 66 381 licensed under the GPL v3;
+#X text 78 62 Refer to Manual Section 5: CONNECTIONS;
+#X connect 9 0 16 0;
+#X connect 10 0 18 0;
+#X connect 16 4 17 0;
+#X connect 17 4 16 4;
+#X connect 20 0 16 1;
+#X connect 21 0 18 1;
