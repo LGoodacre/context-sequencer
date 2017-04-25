@@ -1,4 +1,8 @@
 #N canvas 100 81 1301 687 10;
+#X obj 39 522 cnv 15 342 19 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 35 518 cnv 15 342 19 empty empty empty 20 12 0 14 -1 -66577
+0;
 #X obj 721 224 cnv 15 242 301 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #X obj 828 34 cnv 15 288 103 empty empty empty 20 12 0 16 -99865 -66577
@@ -107,26 +111,6 @@ prints help tips., f 51;
 reference the order of the Manual., f 51;
 #X text 38 464 4:;
 #X text 54 464 VIDEO TUTORIALS. (Forthcoming), f 51;
-#N canvas 398 147 674 401 ARE 0;
-#X text 63 80 1: To start Context \, double click on the empty green
-area in the middle \; 2: To stop Context \, click and hold \; 3: To
-resize Context \, hold Shift and click + drag just outside the right
-/ bottom botder \; 4: To enter the settings menu \, right click and
-select 'properties' \; 5: To return to the main view \, press the button
-on the top right \; 6: To change the timing \, use the float atom on
-the top left \; 7: To edit the message \, use the symbol atom at the
-top middle \; 8: The toggles along the bottom are called the PATTERN.
-They form a simple step sequencer \; 9: The toggles along the right
-are called the BURST. They fire all together at the end of the cycle
-\; 10: The outlets along the bottom are synched to the PATTERN \; 11:
-The inlets along the top are all the same. They can be used to start
-Context and receive other commands \; 12: To receive the messages that
-Context sends \, create an object [receove cx-] \, where 'cx' is the
-unique ID number of a Context shown near the top left corner. (Remember
-the dash after 'cx'). \; 13: To receives messages from all Contexts
-\, use [receive context-] (remember the dash \;, f 90;
-#X restore 38 520 HERE ARE THE MOST IMPORTANT THINGS TO KNOW ABOUT
-CONTEXT;
 #X obj 1000 479 context :H 12 :X 17 :Y 6 :d 8.54 :Z 9 :ol 1 18 obj
 0 27 content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843 :y2 8.68232
 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 marker :x1 1.33437
@@ -269,6 +253,28 @@ and patience to learn. There are four main resources currently available:
 #X text 216 172 part of the Context library;
 #X text 213 203 copyright Liam Goodacre 2017;
 #X text 221 188 licensed under the GPL v3;
-#X connect 63 3 64 0;
-#X connect 80 0 59 0;
-#X connect 81 0 59 1;
+#X obj 36 519 cnv 15 340 17 empty empty empty 20 12 0 14 -228856 -66577
+0;
+#N canvas 398 147 674 401 ARE 0;
+#X text 63 80 1: To start Context \, double click on the empty green
+area in the middle \; 2: To stop Context \, click and hold \; 3: To
+resize Context \, hold Shift and click + drag just outside the right
+/ bottom botder \; 4: To enter the settings menu \, right click and
+select 'properties' \; 5: To return to the main view \, press the button
+on the top right \; 6: To change the timing \, use the float atom on
+the top left \; 7: To edit the message \, use the symbol atom at the
+top middle \; 8: The toggles along the bottom are called the PATTERN.
+They form a simple step sequencer \; 9: The toggles along the right
+are called the BURST. They fire all together at the end of the cycle
+\; 10: The outlets along the bottom are synched to the PATTERN \; 11:
+The inlets along the top are all the same. They can be used to start
+Context and receive other commands \; 12: To receive the messages that
+Context sends \, create an object [receove cx-] \, where 'cx' is the
+unique ID number of a Context shown near the top left corner. (Remember
+the dash after 'cx'). \; 13: To receives messages from all Contexts
+\, use [receive context-] (remember the dash \;, f 90;
+#X restore 36 519 HERE ARE THE MOST IMPORTANT THINGS TO KNOW ABOUT
+CONTEXT;
+#X connect 64 3 65 0;
+#X connect 81 0 60 0;
+#X connect 82 0 60 1;
