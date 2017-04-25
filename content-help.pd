@@ -1,4 +1,4 @@
-#N canvas 389 115 497 630 10;
+#N canvas 386 119 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -24,19 +24,19 @@
 0;
 #X obj 305 386 dac~;
 #X obj 123 294 context :H 14 :X 17 :Y 6 :io o :d 1 :Z 4 :ol 1 5 obj
-1 92 ctx outlet~ 20 obj 42 13 content :lo /home/liam/Documents/PD/Context/3.0/helpfiles/wavs/ting.wav
-:x1 0.21875 :x2 0.47375 :y1 0.216667 :y2 0.25 :s1 0.3 :s2 -0.3
-:li 1 13 floatatom 468 -85 5 0 0 0 - - - ¿ f 5 5 msg 468 -44 :x1 \$1
-5 obj 468 -66 / 100 13 floatatom 522 -85 5 0 0 0 - - - ¿ f 5 5 obj
-522 -66 / 100 5 msg 522 -44 :x2 \$1 21 text 1 -41 This is the overlay
+1 92 ctx outlet~ 20 obj 26 14 content :lo helpfiles/wavs/ting.wav :x1
+0.135417 :x2 0.46 :y1 0.233333 :y2 0.76 :s1 0.3 :s2 -0.3 :li 1 13 floatatom
+468 -85 5 0 0 0 - - - ¿ f 5 5 obj 468 -66 / 100 13 floatatom 522 -85
+5 0 0 0 - - - ¿ f 5 5 obj 522 -66 / 100 21 text 1 -41 This is the overlay
 patch. It is used for embedding objects and hacking Context. (See Manual
 Section 13). 38 text 217 7 Content has a control inlet and a signal
 outlet~. You can send messages like the ones above to Content using
 the inlet. Playback is sent through the outlet~ which is synched to
 the cursor position. 18 text 217 76 Right click on Content and select
-'properties' to see what options it has to offer. 5 connect 4 0 3 0
-5 connect 5 0 7 0 5 connect 6 0 4 0 5 connect 7 0 6 0 5 connect 8 0
-9 0 5 connect 9 0 10 0 5 connect 10 0 4 0;
+'properties' to see what options it has to offer. 5 msg 468 -44 :x1
+\$1 5 msg 522 -44 :x2 \$1 5 connect 4 0 3 0 5 connect 5 0 6 0 5 connect
+6 0 12 0 5 connect 7 0 8 0 5 connect 8 0 13 0 5 connect 12 0 4 0 5
+connect 13 0 4 0;
 #X text 65 114 Content is used to store arrays and play them back during
 the Context cycle. It is embedded in the Overlay.;
 #X text 74 564 See Context Manual Section 16 for details on how to

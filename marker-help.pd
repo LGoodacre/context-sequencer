@@ -24,7 +24,7 @@
 0;
 #X obj 290 347 dac~;
 #X obj 99 254 context :H 14 :X 17 :Y 6 :io o :d 9 :Z 4 :ol 1 18 obj
-0 27 content :lo /home/liam/Documents/PD/Context/3.0/helpfiles/wavs/loop.wav
+0 27 content :lo helpfiles/wavs/loop.wav
 :x2 9 :y1 4.05 :y2 9.15 :c 14 :li 1 :ed 0 4 obj 0 -20 mover 5 obj 1
 92 ctx outlet~ 8 obj 29 0 marker :x1 1.3604 :y1 2.97 8 obj 94 0 marker
 :x1 4.40625 :y1 1.62 8 obj 141 0 marker :x1 6.60938 :y1 2.97 5 connect
