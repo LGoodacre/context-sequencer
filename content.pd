@@ -1,4 +1,4 @@
-#N canvas 259 233 621 299 10;
+#N canvas 408 232 621 299 10;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
 #X obj 1 4 cnv 3 47 21 empty \$0-block3 empty 2 3 0 8 -203904 -1 0
@@ -14,7 +14,7 @@
 #X obj 506 219 print fo;
 #X obj 506 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 474 350 568 392 workings 0;
+#N canvas 471 239 657 392 workings 1;
 #X msg 127 27 vis 1;
 #X obj 127 49 iemguts/sendcanvas;
 #X obj 127 5 r cntent;
@@ -611,6 +611,12 @@
 #X obj 93 190 ctxfiles/m-interface \$0 2 56 30 3 48 22;
 #X obj 347 16 receive \$0-clearme;
 #X msg 347 38 const 0;
+#X obj 484 118 receive \$0-myname;
+#X obj 415 165 list prepend;
+#X obj 484 140 list append :;
+#X obj 415 94 receive \$0-printyou;
+#X obj 415 209 print -n;
+#X obj 415 187 list trim;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 5 0 6 0;
@@ -624,10 +630,15 @@
 #X connect 19 2 19 1;
 #X connect 20 0 21 0;
 #X connect 21 0 6 0;
+#X connect 22 0 24 0;
+#X connect 23 0 27 0;
+#X connect 24 0 23 1;
+#X connect 25 0 23 0;
+#X connect 27 0 26 0;
 #X restore 406 71 pd workings;
 #X obj 406 126 outlet~;
 #X obj 261 27 inlet;
-#N canvas 546 113 793 440 message 0;
+#N canvas 537 125 793 440 message 0;
 #X obj 343 17 inlet;
 #X obj 407 63 ctxfiles/recompile \$0;
 #X obj 151 78 cyclone/zl iter 1;
@@ -699,9 +710,9 @@ ed 1 " edit #l \; :as " tfst \$0 ##f as 1 " \; print " tf \$0 ##f "
 \$0-:y2 " \; #f " s \$0-:cs " \; #f " s \$0-:s1s " \; #f " s \$0-:s2s
 " \; #f " s \$0-:ns " \; #f " s \$0-:lis " \; #f " s \$0-:bs " \; #f
 " s \$0-:p1 " \; #f " s \$0-:p2 " \; #f " s \$0-:p3 " \; #f " s \$0-:p4
-" \; #f " s \$0-:eds " \; #f " s \$0-:ass " \; #f " s \$0-print " \;
-#f " s \$0-savelist " \; #f " s \$0-setme " \; #f " s \$0-savem " \;
-#f " s \$0-clearme " \;;
+" \; #f " s \$0-:eds " \; #f " s \$0-:ass " \; #f " s \$0-printall
+" \; #f " s \$0-savelist " \; #f " s \$0-setme " \; #f " s \$0-savem
+" \; #f " s \$0-clearme " \;;
 #X connect 0 0 3 0;
 #X connect 1 0 33 0;
 #X connect 1 1 33 1;
@@ -716,7 +727,7 @@ ed 1 " edit #l \; :as " tfst \$0 ##f as 1 " \; print " tf \$0 ##f "
 #X restore 261 52 pd message;
 #X obj 406 100 r~ \$0-too;
 #X obj 108 39 iemguts/canvasargs;
-#N canvas 713 220 450 444 loadbang 1;
+#N canvas 710 224 450 444 loadbang 0;
 #X obj 179 165 s \$0-lb;
 #X obj 152 66 ctxfiles/myinit 3;
 #X obj 152 41 ctxfiles/dvi \$0 4;
@@ -768,7 +779,7 @@ GPL. See license.txt. Copyright Liam Goodacre 2017;
 #X connect 20 8 9 1;
 #X restore 491 10 pd loadbang;
 #X obj 108 61 s \$0-canvass;
-#N canvas 367 109 801 582 tabload 0;
+#N canvas 364 113 801 582 tabload 0;
 #X obj 401 433 soundfiler;
 #X obj 7 396 ctxfiles/sp 13;
 #X obj 401 501 s \$0-sizer;
@@ -883,7 +894,7 @@ GPL. See license.txt. Copyright Liam Goodacre 2017;
 #X connect 50 3 51 0;
 #X connect 51 0 52 0;
 #X restore 336 173 pd tabload;
-#N canvas 770 243 466 381 tablelable 0;
+#N canvas 767 247 466 381 tablelable 0;
 #X msg 239 308 rename \$1;
 #X obj 207 284 s \$0-name;
 #X obj 160 76 + 1;
