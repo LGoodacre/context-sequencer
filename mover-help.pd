@@ -1,4 +1,4 @@
-#N canvas 392 111 497 630 10;
+#N canvas 389 115 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -58,7 +58,7 @@ clicking on the boundary, f 74;
 argument (see [pd creation arguments];
 #X restore 81 522 pd fine tuning;
 #X text 87 178 Mover is loaded in the Overlay here \, but you won't
-see it until it is ctivted. To activate it \, hold the Shit key down
+see it until it is activated. To activate it \, hold the Shit key down
 and move the mouse over the Context. Mover will appear as a thin line
 that follows the cursor., f 52;
 #X connect 14 17 13 0;

@@ -31,7 +31,7 @@
 -p list ID :: \; ID numbers and tags are useful for getting information in and out of Context. \; ID NUMBER is a unique number for every Context. They are assigned automatically and it generally advisable to let them take care of themselves¸ but it is possible to define them manually as well. If two contexts share the same ID number¸ the network might start to behave strangely. \; TAGS are arbitrary names that you assign to a Context for creating groups. Type in a new tag to add one and an existing tag to remove it. One Context can have any number of tags and one tag can be shared between any number of Contexts. \; A Context will receive commands through all of its ID (number and tags). If its number is "2" and the tag includes "drums" then this Context will receive data sent to [send c2] and [send drums]. While playing¸ a Context will send its sequenced messages to the same channels¸ but with a dash ("-") on the end. So you could receive messages set from the same context with [receive c2-] and [receive drums-] \; WARNING: Creating and removing tags will generally cause audio glitches¸ so it is best not to play with them live.;
 -m RULES ▪ ON-OFF ▪ EDIT LIST ▪ SAVE ▪ CLEAR ** ☺ HELP;
 -m BANK ▪ AUTO UPDATE ▪ SAVE NOW ▪ EDIT LIST ▪ CLEAR ** ☺ HELP;
--m STATE ▪ AUTO SAVE ▪ AUTO PRINT ▪ PRINT STATE ▪ EDIT LIST ** ☺ HELP;
+-m STATE ▪ AUTO SAVE ▪ AUTO PRINT ▪ PRINT STATE ▪ EDIT LIST ▪ INPUT LABEL ☺ HELP;
 -m SETTINGS TO ▪ THIS CONTEXT ▪ ALL CONTEXTS ▪ OUTLETS ▪ CUSTOM ** ☺ HELP;
 -m MORE2 ► OVERLAY ▪ INTERRUPTION ▪ GUI OFF ▪ FLOAT SEND ▪ REVERSE TOGGLES ☺ HELP;
 -p list RULES : This lets you set up custom rules for how Context operates. \; BANK : These settings control the context-state bank saving. \; STATE : These settings let you view and control how the context state is saved. \; SETTINGS TO : This determines which context(s) the settings in this menu will send to.;
@@ -202,8 +202,8 @@
 -t AUTO PRINT pr 3 off output state;
 -c PRINT STATE print;
 -c SAVE LIST savelist;
-;
--p list AUTO SAVE decides whether the Context state saves into the patch on Ctrl+s. You might want to turn this off if you don't want Context to change. \; AUTO PRINT selects what (if any) data prints to the console. 1 means that all sequenced messages will print as they fire. 2 prints messages as well as all changes to the Context state. 0 (default) prints nothing. \; PRINT STATE prints the entire context state to the consol now. \; SAVE LIST lets you view and edit the context saving list.;
+-t INPUT LABEL il 2 off on;
+-p list AUTO SAVE decides whether the Context state saves into the patch on Ctrl+s. You might want to turn this off if you don't want Context to change. \; AUTO PRINT selects what (if any) data prints to the console. 1 means that all sequenced messages will print as they fire. 2 prints messages as well as all changes to the Context state. 0 (default) prints nothing. \; PRINT STATE prints the entire context state to the consol now. \; SAVE LIST lets you view and edit the context saving list. \; INPUT LABEL turns on a label which displays all valid incoming commands.;
 -c SETTINGS TO THIS :se 0;
 -c SETTINGS TO ALL :se 1;
 -c SETTINGS TO OUTLETS :se 2;
