@@ -1,4 +1,4 @@
->> Edit this file to add your own presets. The first term in the list is the title which will be searched for. The rest is the context save list. (The "print" command is helpful for retrieving the save list of a particular context).;
+>> Edit this file to add your own presets. The first term in the list is the title which will be searched for (make sure that it doesn't match a command term ie "cycle"). The rest is the context save list. (The "print" command is helpful for retrieving the save list of a particular context).;
 
 big :G 72 :F 120;
 
@@ -20,4 +20,6 @@ database :e 32 :f 32;
 
 tune :S # = :U # =;
 
-sample :H 14 :X 9 :Y 6 :io o :d 1 :Z 14 :ol 1 12 obj 0 24 content :x2 1 :y1 0.4 :y2 1 :li 1 5 obj -1 -29 ctxx outlet~ 5 connect 3 0 4 0
+sample :H 14 :X 9 :Y 6 :io o :d 1 :Z 14 :ol 1 12 obj 0 24 content :x2 1 :y1 0.4 :y2 1 :li 1 5 obj -1 -29 ctxx outlet~ 5 connect 3 0 4 0;
+
+rotate :y 1 :b ' . :u ';
