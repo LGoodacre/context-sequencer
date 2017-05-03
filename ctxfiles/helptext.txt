@@ -23,7 +23,7 @@
 ;
 ;
 -p list MESSAGES :: \; Each time a toggle fires¸ context sends a message. The messages are stored in two databases¸ one for the x-axis (:a) and one for the y-axis (:b). Each toggle corresponds to one term of the database¸ so there are as many toggles on the context as there are terms in the database. Note that the END toggle (bottom right) corresponds to the BURST database (default y)¸ not the PATTERN. \; This sub menu helps you edit the databases¸ and controls how the databases are read. \; VARIABLES are special characters which are placed into a database message and substituted for custom values. This sub-menu delivers help on all special characters. \; ? AUTO ADVANCE determines whether or not the ? special character chooses a new random number after each firing. You can advance the ? selection at any time using 'bump m'.;
-;
+-f ID id - -;
 -s TAGS n 0 1;
 -c CLEAR-TAGS :n -clear;
 -f COLOUR c - -;
