@@ -1,9 +1,7 @@
-#N canvas 65 81 1301 687 10;
+#N canvas 65 53 1301 715 10;
 #X declare -path docfiles;
 #X obj -64 -110 cnv 15 1482 906 empty empty empty 20 12 0 14 -137887
 -66577 0;
-#X obj 1039 9 cnv 15 252 335 empty empty empty 19 18 0 20 -99865 -45076
-0;
 #X obj 20 8 cnv 15 1001 64 empty empty empty 13 28 0 50 -99865 -66577
 0;
 #X obj 866 427 cnv 15 430 167 empty empty empty 20 12 0 14 -33289 -33289
@@ -18,32 +16,11 @@
 #X obj 15 3 cnv 15 995 58 empty empty LIST OF ALL CONTEXT COMMANDS
 24 30 0 54 -5519 -262111 0;
 #X msg 1410 931;
-#X obj 1031 1 cnv 15 252 335 empty empty empty 19 18 0 20 -1 -45076
-0;
-#X obj 1032 2 cnv 15 250 333 empty empty ABOUT THIS PATCH 19 18 0
-20 -212254 -45076 0;
-#X text 1057 34 The left hand boxes show all possible Context commands.
-This is an exhaustive accont of Context's functions. Click on each
-button for more information., f 30;
-#X text 1056 226 All examples are interactive.;
-#X text 1056 248 To access the same information as text \, see 'context_commands.csv'.
-, f 30;
-#X text 1056 303 See manual section 9 for command use, f 30;
-#X text 1044 35 *;
-#X text 1044 135 *;
-#X text 1044 172 *;
-#X text 1044 227 *;
-#X text 1057 172 The right hand boxes show categories. Click on them
-to highlight., f 30;
-#X text 1044 249 *;
-#X text 1044 304 *;
-#X text 1057 135 $ stand for an argument \, curly brackets mean optional.
-, f 30;
 #X msg 1035 457;
-#X obj 796 118 cnv 15 224 258 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 21 110 cnv 15 224 258 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 786 108 cnv 15 224 258 empty empty empty 20 12 0 14 -128992
--66577 0;
+#X obj 11 100 cnv 15 224 258 empty empty empty 20 12 0 14 -128992 -66577
+0;
 #N canvas 243 186 895 500 hold 0;
 #X obj 338 469 s \$0-helpno;
 #X obj 283 370 receive \$0-got;
@@ -163,7 +140,7 @@ to highlight., f 30;
 #X connect 50 0 48 0;
 #X connect 51 0 45 0;
 #X coords 0 -1 1 1 224 258 2 171 31;
-#X restore 786 108 pd hold;
+#X restore 11 100 pd hold;
 #X obj 1022 492 context :H 6 :ID 1 :ol 1 5 obj 222 -37 receive reset
 6 obj 222 -15 t a f 6 obj 168 54 list split 1 5 msg 249 8 inlet \$1
 5 obj 249 32 iemguts/canvasconnections 1 7 obj 249 54 unpack s f f
@@ -177,7 +154,7 @@ disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 5 connect 12 0 13 1 5 connect 12 1 15 0 5 connect 13 0 17 0 5 connect
 15 0 14 0 5 connect 16 0 13 0 5 connect 17 0 14 0 5 connect 18 0 2
 1;
-#X obj 3 97 docfiles/spacer \$0 635 119 4 4;
+#X obj 273 101 docfiles/spacer \$0 820 129 4 4;
 #X obj 2 427 docfiles/helpget \$0 7 862 35 20 2 14 12 -123325 0;
 #X obj 2 596 docfiles/helpget2 \$0 10 862 20 15 2 9 1;
 #X obj 2 574 docfiles/helpget \$0 9 862 20 15 2 9 -123325 12 1;
@@ -191,12 +168,45 @@ disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 #X obj 326 486 docfiles/helpget \$0 3 538 20 15 2 9 -123325 12 1;
 #X obj 326 464 docfiles/helpget \$0 2 538 20 15 2 9 -123325 12 1;
 #X obj 866 596 docfiles/helpget2 \$0 12 862 20 15 2 9 1;
-#X obj 1067 358 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+#X obj 1027 9 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 1068 359 cnv 15 175 55 empty empty empty 20 12 0 14 -262144
--66577 0;
-#X text 1072 363 part of the Context library;
-#X text 1069 394 copyright Liam Goodacre 2017;
-#X text 1077 379 licensed under the GPL v3;
-#X connect 5 0 28 0;
-#X connect 24 0 28 1;
+#X obj 1028 10 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 1032 14 part of the Context library;
+#X text 1029 45 copyright Liam Goodacre 2017;
+#X text 1037 30 licensed under the GPL v3;
+#X obj 79 386 cnv 15 106 23 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 75 382 cnv 15 106 23 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 76 383 cnv 15 104 21 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 77 384 cnv 15 102 19 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#N canvas 510 146 294 366 this 0;
+#X obj 21 15 cnv 15 252 335 empty empty empty 19 18 0 20 -99865 -45076
+0;
+#X obj 13 7 cnv 15 252 335 empty empty empty 19 18 0 20 -1 -45076 0
+;
+#X obj 14 8 cnv 15 250 333 empty empty ABOUT THIS PATCH 19 18 0 20
+-212254 -45076 0;
+#X text 39 40 The left hand boxes show all possible Context commands.
+This is an exhaustive accont of Context's functions. Click on each
+button for more information., f 30;
+#X text 38 232 All examples are interactive.;
+#X text 38 254 To access the same information as text \, see 'context_commands.csv'.
+, f 30;
+#X text 38 309 See manual section 9 for command use, f 30;
+#X text 26 41 *;
+#X text 26 141 *;
+#X text 26 178 *;
+#X text 26 233 *;
+#X text 39 178 The right hand boxes show categories. Click on them
+to highlight., f 30;
+#X text 26 255 *;
+#X text 26 310 *;
+#X text 39 141 $ stand for an argument \, curly brackets mean optional.
+, f 30;
+#X restore 78 385 about this patch;
+#X connect 4 0 13 0;
+#X connect 9 0 13 1;
