@@ -1,4 +1,4 @@
-#N canvas 595 85 655 687 10;
+#N canvas 589 93 655 687 10;
 #X obj 79 99 list split 1;
 #X obj 24 146 list split 1;
 #X obj 85 314 send;
@@ -88,6 +88,7 @@
 #X connect 32 1 31 1;
 #X connect 33 0 27 1;
 #X connect 34 0 44 1;
+#X connect 34 0 18 1;
 #X connect 35 0 43 0;
 #X connect 36 0 29 1;
 #X connect 37 0 38 0;
