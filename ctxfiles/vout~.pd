@@ -1,4 +1,4 @@
-#N canvas 619 193 450 300 10;
+#N canvas 613 201 450 300 10;
 #X obj 48 33 inlet~;
 #X obj 48 61 send~ \$1-i&)&;
 #X obj 235 55 receive \$1-delmed;
@@ -8,7 +8,7 @@
 #X obj 235 195 pack;
 #X obj 267 120 iemguts/canvasconnections;
 #X msg 267 98 inlet 0;
-#N canvas 272 295 543 300 connect 1;
+#N canvas 266 303 543 300 connect 1;
 #X obj 307 85 t f f;
 #X obj 307 132 pack;
 #X obj 337 110 - 1;
