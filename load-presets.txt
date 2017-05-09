@@ -20,6 +20,8 @@ database :e 32 :f 32;
 
 tune :S # = :U # =;
 
-sample :H 14 :X 9 :Y 6 :io o :d 1 :Z 14 :ol 1 12 obj 0 24 content :x2 1 :y1 0.4 :y2 1 :li 1 5 obj -1 -29 ctxx outlet~ 5 connect 3 0 4 0;
+sample :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
+12 obj 0 24 content :lo $ :x2 1 :y1
+0.4 :y2 1 6 obj 0 -30 ctx outlet~ 1 5 connect 3 0 4 0;
 
 rotate :y 1 :b ' . :u ';
