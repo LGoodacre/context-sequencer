@@ -1,7 +1,7 @@
-#N canvas 119 322 796 419 10;
+#N canvas 113 330 796 419 10;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 22 0 8 -128975
 -262144 0;
-#N canvas 284 273 992 687 guts 1;
+#N canvas 278 85 992 687 guts 1;
 #N canvas 571 81 795 687 names 0;
 #X msg 266 486 symbol  ;
 #X obj 359 509 t b a;
@@ -3927,7 +3927,7 @@ b b b b f f f f, f 82;
 #X connect 23 3 3 0;
 #X connect 24 1 22 0;
 #X restore 549 531 pd overlay write;
-#N canvas 373 119 501 604 creation 1;
+#N canvas 370 123 501 604 creation 0;
 #X obj 173 85 text search *(presets@#;
 #X obj 310 319 receive \$0-savestart;
 #X obj 173 110 text get *(presets@#;
@@ -4000,7 +4000,7 @@ b b b b f f f f, f 82;
 #X connect 29 0 26 1;
 #X connect 30 0 3 0;
 #X restore 551 128 pd creation preset;
-#N canvas 65 105 1301 687 data 0;
+#N canvas 65 81 1301 687 data 0;
 #X obj 573 75 demux;
 #X obj 450 75 demux;
 #X obj 147 65 demux;
@@ -4389,9 +4389,9 @@ ev \$0 :: " \; #f " s \$0-xym-init " \; #f " ev \$0 :a " \; #f " ev
 s \$0-:m " \; #f " s \$0-names " \; #f " s \$0-:o " \; #f " s \$0-:p
 " \; #f " s \$0-:q " \; #f " ev \$0 :r " \; #f " ev \$0 :s " \; #f
 " s \$0-:t " \; #f " ev \$0 :u " \; #f " s \$0-:v " \; #f " s \$0-:w
-" \; #f " os \$0 x 27 5 6 " \; #f " os \$0 y 28 3 5 " \; #f " s \$0-:z
-" \; #f " ar \$0 A " \; #f " s \$0-:B " \; #f " s \$0-:C " \; #f "
-s \$0-:D " \; #f " dmode \$0 " \; #f " s \$0-:F " \; #f " s \$0-:G
+" \; #f " os \$0 x 27 5 6 6 " \; #f " os \$0 y 28 3 5 4 " \; #f " s
+\$0-:z " \; #f " ar \$0 A " \; #f " s \$0-:B " \; #f " s \$0-:C " \;
+#f " s \$0-:D " \; #f " dmode \$0 " \; #f " s \$0-:F " \; #f " s \$0-:G
 " \; #f " ar \$0 I " \; #f " s \$0-:J " \; #f " kmode \$0 " \; #f "
 ev \$0 :L " \; #f " ev \$0 :N " \; #f " s \$0-:O " \; #f " s \$0-:P
 " \; #f " s \$0-:Q " \; #f " s \$0-:R " \; #f " s \$0-:S " \; #f "
