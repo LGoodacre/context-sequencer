@@ -10,11 +10,13 @@ SYSTEM REQUIREMENTS:
 Context runs on PD Vanilla V 0.47 or later. It needs the following externals, all available on Deken:
 
 zexy
-cyclone
+cyclone (v 0.0.extended) *
 moocow
 flatgui
 list-abs
 iemguts (v 0.2.1 or later)
+
+* Hopefully the new Cyclone releases will be compatible soon. 
 
 Once you have all the necessary externals, you need to declare zexy as a startup library (Edit --> Preferences --> Startup --> New) and declare the Context home folder as a path (Edit --> Preferences --> Path --> New).
 
