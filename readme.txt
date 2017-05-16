@@ -16,9 +16,11 @@ flatgui
 list-abs
 iemguts (v 0.2.1 or later)
 
+Once you have all the necessary externals, you need to declare zexy as a startup library (Edit --> Preferences --> Startup --> New) and declare the Context home folder as a path (Edit --> Preferences --> Path --> New).
+
 Context does not currently work on L2Ork or Purr Data.
 
-Context patches sometimes take a long time to load (some of them several minutes). Faster machines are recommended.
+Context patches sometimes take a long time to load (some of them several minutes). You can speed this up by turning off DSP before loading, then turning it back on. Faster machines are recommended.
 
 
 DOCUMENTATION:
