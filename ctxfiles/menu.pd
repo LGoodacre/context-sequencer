@@ -40,8 +40,8 @@
 #X msg 651 329 label_pos \$1 7;
 #X text 234 -6 arguments: \$0 \, send \, recieve \, label \, opt1 \,
 opt2...;
-#X obj 477 241 ./config;
-#X obj 332 286 ./config;
+#X obj 477 241 ../config;
+#X obj 332 286 ../config;
 #X msg 522 265 pos 101 100;
 #X obj 372 313 - 3;
 #X msg 477 291 pos 103 100;

@@ -1,4 +1,4 @@
-#N canvas 65 81 1301 687 10;
+#N canvas 65 85 1301 687 10;
 #X obj 39 522 cnv 15 342 19 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 35 518 cnv 15 342 19 empty empty empty 20 12 0 14 -1 -66577
@@ -112,10 +112,10 @@ reference the order of the Manual., f 51;
 #X text 38 464 4:;
 #X text 54 464 VIDEO TUTORIALS. (Forthcoming), f 51;
 #X obj 1000 479 context :H 14 :X 17 :Y 6 :d 8.54 :Z 9 :ol 1 :il 1 18
-obj 0 27 content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843 :y2
-8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 marker
-:x1 1.33437 :y1 2.8182 8 obj 90 0 marker :x1 4.0131 :y1 1.5372 8 obj
-140 0 marker :x1 6.26 :y1 2.8182 5 obj 0 -20 mover save 5 connect 3
+obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843 :y2
+8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
+:x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1 4.0131 :y1 1.5372 8 obj
+140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3
 0 4 0;
 #X obj 788 674 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
 2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 1 3 5 6 7 9 :y = 1 :O
@@ -128,8 +128,8 @@ obj 0 27 content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843 :y2
 #X obj 537 303 context :d 0.5 :i 4.5 4.5 4.5 4.5 0 :j 8.5 0 0 :x =
 1 2 4 :il 1;
 #X obj 1040 294 context :X 9 :a ' ¬ ' :b ' . :u (? 3 + 1) ' :d 1 :n
-' hat ' :x = 1 2 3 4 7 :y = 1 :O -15 :Z 13 :ba ' :x = 1 2 3 4 7 :y
-= 1 :a ¬ :b ' :il 1;
+' hat ' :x = 1 2 3 4 7 :y = 1 :O -15 :Z 13 :ba ' :x = 1 2 3 4 7 :i
+clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 #X obj 841 61 context :a ' 1 ' :d 2 :n ' kick ' :x = 1 2 3 4 :il 1
 ;
 #X obj 984 174 context :a ' 1 ' :b ' = ' :d 0.25 :f 2 :h 1 :j 1 9.5
@@ -168,7 +168,7 @@ obj 0 27 content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843 :y2
 #X connect 9 0 0 0;
 #X restore 340 178 pd snare~;
 #X obj 189 75 catch~ sample;
-#X obj 158 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 158 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 187 101 hsl 50 15 0 1 0 1 empty empty empty -2 -8 0 10 -191407
 -1 -1 4900 1;

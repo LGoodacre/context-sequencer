@@ -22,8 +22,8 @@
 #X text 195 23 part of the Context library;
 #X text 192 54 copyright Liam Goodacre 2017;
 #X text 200 39 licensed under the GPL v3;
-#X obj 65 210 context :H 8 :X 12 :Y 5 :ol 1 7 obj 187 10 keylist x
-:x % 7 obj 187 41 keylist y :y % 7 obj 188 74 keylist d :d %;
+#X obj 65 210 context :H 8 :X 12 :Y 5 :ol 1 7 obj 187 10 ../keylist x
+:x % 7 obj 187 41 ../keylist y :y % 7 obj 188 74 ../keylist d :d %;
 #X text 26 92 Keylist binds Context commands to keys. This lets you
 control Context using the keyboard in custom ways.;
 #X text 217 216 <--;

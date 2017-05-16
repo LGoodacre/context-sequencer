@@ -24,7 +24,7 @@
 0;
 #X obj 275 346 dac~;
 #X obj 93 254 context :H 14 :X 17 :Y 6 :io o :d 1 :Z 4 :ol 1 4 obj
-0 -20 mover 5 obj 1 92 ctx outlet~ 20 obj 55 14 content :lo helpfiles/wavs/ting.wav
+0 -20 ../mover 5 obj 1 92 ../ctx outlet~ 20 obj 55 14 ../content :lo helpfiles/wavs/ting.wav
 :x1 0.286458 :x2 0.859375 :y1 0.233333 :y2 0.766667 :s1 0.3 :s2 -0.3
 :li 1 5 connect 5 0 4 0;
 #X text 74 564 See Context Manual Section 16 for details on how to

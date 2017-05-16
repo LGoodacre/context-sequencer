@@ -1,7 +1,7 @@
 #N canvas 254 145 727 545 10;
 #X obj 159 213 list;
 #X obj 367 178 cyclone/iter;
-#X obj 340 262 ctxfiles/collect;
+#X obj 340 262 collect;
 #X obj 340 156 t b a;
 #X obj 340 89 t b b;
 #X obj 340 403 spigot 1;
@@ -9,7 +9,7 @@
 #X obj 340 469 route bang;
 #X msg 340 491;
 #X obj 100 116 t f f;
-#X obj 334 239 ctxfiles/sp01 1;
+#X obj 334 239 sp01 1;
 #X obj 367 200 sel \; %^;
 #X msg 496 107 1;
 #X obj 340 286 demux;

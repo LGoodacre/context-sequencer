@@ -24,7 +24,7 @@
 0;
 #X obj 305 386 dac~;
 #X obj 123 294 context :H 14 :X 17 :Y 6 :io o :d 1 :Z 4 :ol 1 5 obj
-1 92 ctx outlet~ 20 obj 26 14 content :lo helpfiles/wavs/ting.wav :x1
+1 92 ../ctx outlet~ 20 obj 26 14 ../content :lo helpfiles/wavs/ting.wav :x1
 0.135417 :x2 0.46 :y1 0.233333 :y2 0.76 :s1 0.3 :s2 -0.3 :li 1 13 floatatom
 468 -85 5 0 0 0 - - - ¿ f 5 5 obj 468 -66 / 100 13 floatatom 522 -85
 5 0 0 0 - - - ¿ f 5 5 obj 522 -66 / 100 21 text 1 -41 This is the overlay
