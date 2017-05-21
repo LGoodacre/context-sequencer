@@ -1,7 +1,9 @@
-#N canvas 110 334 796 419 10;
+#N canvas 101 346 796 419 10;
+#X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 22 0 8 -128975
 -262144 0;
-#N canvas 873 510 992 687 guts 0;
+#N canvas 371 85 992 687 guts 0;
+#X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 571 81 795 687 names 0;
 #X msg 266 486 symbol  ;
 #X obj 359 509 t b a;
@@ -3147,7 +3149,7 @@ b b b b f f f f, f 82;
 #X connect 39 0 1 1;
 #X connect 40 0 21 0;
 #X restore 69 139 pd creation;
-#N canvas 619 119 677 687 bank 1;
+#N canvas 616 81 677 687 bank 0;
 #X obj 379 387 text define \$0-bank;
 #X obj 388 614 text set \$0-bank;
 #X obj 120 291 text get \$0-bank;
@@ -5385,7 +5387,7 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 7 1 4 0;
 #X connect 7 2 8 0;
 #X restore 551 156 pd burst-presets;
-#N canvas 246 330 450 300 save 1;
+#N canvas 243 334 450 300 save 0;
 #X obj 169 146 text define -k \$0-save;
 #A set \; \; %^ :g 0 \; %^ :X 5 \; %^ :Y 4 \; \; \; %^ :M 0 \; %^ :a
 bang \; %^ :b bang \; %^ :c 11 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \;
@@ -5550,10 +5552,6 @@ from overlay instructions;
 #X text 47 239 ***;
 #X text 46 377 ***;
 #X text 46 433 ***;
-#X text 156 4 <--Many more subsystems live here in the [deletable]
-sub-patch. This is created when context is instantiated \, and deleted
-if the GUI is turned off. It can be found it ctxfiles/deletable.pd.
-;
 #N canvas 302 97 846 645 message-mod 0;
 #X obj 252 62 receive \$0-pattern-mod;
 #X obj 390 62 receive \$0-burst-mod;
@@ -5937,7 +5935,47 @@ t f f 1 " containsnot #l contains-not #l \; q= " cuu \$0 #f f 1 t f
 #X connect 99 3 72 0;
 #X connect 99 4 92 1;
 #X restore 552 391 pd rules;
-#X connect 23 0 24 0;
+#N canvas 512 121 647 556 title 1;
+#X text 51 81 To use Context \, you'll have to open up another patch
+and then create the object [context]. Make sure that you have the main
+Context folder declared before doing this \, or else PD won't know
+where to find it., f 82;
+#X text 51 38 I'm sorry to tell you that Context is an abstraction.
+This means that opening this patch isn't going to do you too much good
+(though by all means \, please stay and take a look around)., f 82
+;
+#X text 50 18 WELL HELLO THERE! Where you looking for me?;
+#X text 99 160 1: If you got here by opening up a Context that was
+created on another patch \, DO NOT PRESS THE SAVE BUTTON! This will
+break Context permanently and you'll have to download it again., f
+74;
+#X text 99 210 2: It is generally safe to save things if you've opened
+this file through the file menu \, but in Windows you may find that
+PD will inexplicably start crashing the next time you open it. If this
+happens \, open context.pd in a text editor \, search for "floatatom"
+\, and delete the characters ' \, 3 ' from the end of this item (don't
+miss the comma). It's probably best to delete the same items from the
+"symbolatom" on the next line as well \, although this one doesn't
+seem to cause so much of trouble. If this is your first visit \, kindly
+don't ask why., f 74;
+#X text 52 414 Incidentally \, you might find it hard to get in \,
+since right clickig and selecting 'open' selects the Overlay \, not
+the main Context patch. But I've left the key to the backdoor under
+the flower pot: Right click on Context and select 'properties'. Then
+\, right click at the very bottom of the menu and select 'open'.,
+f 82;
+#X text 52 500 We hope you enjoy your stay. Please leave your suggestions
+in the box: liam.goodacre@gmail.com, f 98;
+#X text 52 337 Most of our items are on dispay in the [pd guts] subpatch--
+but this isn't our entire collection by any means. Many more interesting
+things you will find in the file ctxfiles/deletable.pd \, and a few
+other objects which appear only when context is opened up. So it you
+want to be sure you've seen everything \, it's best to view it by opening
+up the abstraction (just remember not to press save!), f 82;
+#X text 51 130 If you do decide to stay and maybe help out \, here
+are the rules of the house:, f 82;
+#X restore 552 419 pd title;
+#X connect 24 0 25 0;
 #X restore 20 100 pd guts;
 #N canvas 492 85 622 686 e 0;
 #X obj 285 139 inlet main;
