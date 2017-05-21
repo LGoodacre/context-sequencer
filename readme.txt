@@ -5,7 +5,7 @@ RELEASE DATE: 19th April, 2017
 This is a beta version of Context v3.0.1 for testing purposes. There are many bugs in the software and many holes in the documentation. Your help in tracking down both of these will be much appreciated.
 
 
-SYSTEM REQUIREMENTS:
+SETUP:
 
 Context runs on PD Vanilla V 0.47 or later. It needs the following externals, all available on Deken:
 
@@ -18,7 +18,7 @@ iemguts (v 0.2.1 or later)
 
 * Hopefully the new Cyclone releases will be compatible soon. 
 
-Once you have all the necessary externals, you need to declare zexy as a startup library (Edit --> Preferences --> Startup --> New) and declare the Context home folder as a path (Edit --> Preferences --> Path --> New).
+Once you have all the necessary externals, declare the main Context folder as a path (Edit --> Preferences --> Path --> New). You should also consider adding the text "-font-face normal" into the startup flags (Edit --> preferences --> Startup --> Startput Path). This fixes a bug in 0.47 where the text is bolded, which throws the float and symbol atom off in the main GUI. Hopefully this won't be necessary in later releases.
 
 Context does not currently work on L2Ork or Purr Data.
 
@@ -34,5 +34,7 @@ There are four parts to the Documentation:
 3. Help prompts built into the Context menu. You can access these from within PD by right clicking on Context, selecting "properties" and clicking on the last item on every page (except the first one).
 4. *-help.pd files. Quite underdeveloped at this point.
 (5. Forthcoming: video tutorials).
+
+
 
 Comments, feedback, suggestions, corrections and monologues are all welcome. Email liam.goodacre@gmail.com
