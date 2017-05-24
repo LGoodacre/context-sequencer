@@ -1,4 +1,4 @@
-#N canvas 65 85 1301 687 10;
+#N canvas 65 89 1301 687 10;
 #X obj 39 522 cnv 15 342 19 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 35 518 cnv 15 342 19 empty empty empty 20 12 0 14 -1 -66577
@@ -112,11 +112,10 @@ reference the order of the Manual., f 51;
 #X text 38 464 4:;
 #X text 54 464 VIDEO TUTORIALS. (Forthcoming), f 51;
 #X obj 1000 479 context :H 14 :X 17 :Y 6 :d 8.54 :Z 9 :ol 1 :il 1 18
-obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843 :y2
-8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
-:x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1 4.0131 :y1 1.5372 8 obj
-140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3
-0 4 0;
+obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843
+:y2 8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
+:x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1 4.0131 :y1 1.5372 8
+obj 140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3 0 4 0;
 #X obj 788 674 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
 2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 1 3 5 6 7 9 :y = 1 :O
 -20 :Z 14 :ro 1 :il 1;
@@ -136,9 +135,8 @@ clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 0 :n ' kick ' :y = 1 2 :P 1 :il 1;
 #X obj 548 191 context :X 7 :a ' ¬ ' :d 0.75 :h 1 :j 9.5 9.5 0 :n
 ' snare ' :x = 1 2 3 5 :y = 1 2 3 :O -17 :R 100 :Z 8 :il 1;
-#N canvas 526 239 492 300 audio 0;
+#N canvas 523 243 492 300 audio 0;
 #X obj 287 21 receive gl-;
-#X floatatom 433 56 5 0 0 0 - - -, f 5;
 #X obj 321 241 helpfiles/docfiles/hihat;
 #X obj 321 216 receive hat-;
 #X obj 287 48 route g;
@@ -168,31 +166,34 @@ clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 #X connect 9 0 0 0;
 #X restore 340 178 pd snare~;
 #X obj 189 75 catch~ sample;
-#X obj 158 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 158 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 187 101 hsl 50 15 0 1 0 1 empty empty empty -2 -8 0 10 -191407
 -1 -1 4900 1;
 #X obj 204 238 *~;
 #X obj 204 260 dac~;
 #X msg 158 121 \; pd dsp \$1;
-#X obj 287 85 helpfiles/docfiles/glock~ 4;
-#X connect 0 0 4 0;
-#X connect 1 0 16 1;
-#X connect 2 0 13 0;
-#X connect 3 0 2 0;
-#X connect 4 0 16 0;
-#X connect 4 1 16 0;
-#X connect 5 0 13 0;
-#X connect 6 0 8 0;
-#X connect 7 0 13 0;
-#X connect 8 0 5 0;
-#X connect 9 0 13 0;
-#X connect 10 0 7 0;
-#X connect 11 0 15 0;
+#X obj 287 85 helpfiles/docfiles/glock~ 2;
+#X obj 418 33 loadbang;
+#X obj 418 55 f 2;
+#X connect 0 0 3 0;
+#X connect 1 0 12 0;
+#X connect 2 0 1 0;
+#X connect 3 0 15 0;
+#X connect 3 1 15 0;
+#X connect 4 0 12 0;
+#X connect 5 0 7 0;
+#X connect 6 0 12 0;
+#X connect 7 0 4 0;
+#X connect 8 0 12 0;
+#X connect 9 0 6 0;
+#X connect 10 0 14 0;
+#X connect 11 0 12 1;
+#X connect 12 0 13 0;
 #X connect 12 0 13 1;
-#X connect 13 0 14 0;
-#X connect 13 0 14 1;
-#X connect 16 0 13 0;
+#X connect 15 0 12 0;
+#X connect 16 0 17 0;
+#X connect 17 0 15 1;
 #X coords 0 -1 1 1 140 15 1 100 100;
 #X restore 783 4 pd audio;
 #X obj 961 632 context :Y 5 :h 1 :j 6.5 2.5 11.5 9.5 :y = 1 2 3 4 :z
