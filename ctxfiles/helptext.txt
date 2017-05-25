@@ -2,7 +2,7 @@
 -m TIMING ▪ DELAY MODE ► RANDOM OPTIONS ► POSITION OPTIONS ► CALCULATION ► MORE ☺ HELP;
 -m BURST ► QUANTITY ► SELECTION ▪ AUTO ADVANCE ► PRESETS ** ☺ HELP;
 -m MESSAGES ► X-AXIS ► Y-AXIS ► VARIABLES ** ** ☺ HELP;
--m ID ▲ ID NUMBER ▲ TAGS ▲ CLEAR TAGS ▲ COLOUR ** ☺ HELP;
+-m ID ▲ ID NUMBER ▲ TAGS ▲ CLEAR TAGS ▲ COLOUR ▲ RECEIVE ☺ HELP;
 -m OTHER ► RULES ► BANK ► STATE ► SEND SETTINGS TO ► MORE ☺ HELP;
 -h SHORTCUTS;
 -t MODE E 3 normal random positional;
@@ -27,8 +27,8 @@
 -s TAGS n 0 1;
 -c CLEAR-TAGS :n -clear;
 -f COLOUR c - -;
-;
--p list ID :: \; ID numbers and tags are useful for getting information in and out of Context. \; ID NUMBER is a unique number for every Context. They are assigned automatically and it generally advisable to let them take care of themselves¸ but it is possible to define them manually as well. If two contexts share the same ID number¸ the network might start to behave strangely. \; TAGS are arbitrary names that you assign to a Context for creating groups. Type in a new tag to add one and an existing tag to remove it. One Context can have any number of tags and one tag can be shared between any number of Contexts. \; A Context will receive commands through all of its ID (number and tags). If its number is "2" and the tag includes "drums" then this Context will receive data sent to [send c2] and [send drums]. While playing¸ a Context will send its sequenced messages to the same channels¸ but with a dash ("-") on the end. So you could receive messages set from the same context with [receive c2-] and [receive drums-] \; WARNING: Creating and removing tags will generally cause audio glitches¸ so it is best not to play with them live.;
+-s RECEIVE ln 0 0;
+-p list ID :: \; ID numbers and tags are useful for getting information in and out of Context. \; ID NUMBER is a unique number for every Context. They are assigned automatically and it generally advisable to let them take care of themselves¸ but it is possible to define them manually as well. If two contexts share the same ID number¸ the network might start to behave strangely. \; TAGS are arbitrary names that you assign to a Context for creating groups. Type in a new tag to add one and an existing tag to remove it. One Context can have any number of tags and one tag can be shared between any number of Contexts. \; A Context will receive commands through all of its ID (number and tags). If its number is "2" and the tag includes "drums" then this Context will receive data sent to [send c2] and [send drums]. While playing¸ a Context will send its sequenced messages to the same channels¸ but with a dash ("-") on the end. So you could receive messages set from the same context with [receive c2-] and [receive drums-] \; WARNING: Creating and removing tags will generally cause audio glitches¸ so it is best not to play with them live. \; RECEIVE sets a single receive channel ie. "c1-". This is useful for linking one Context to another without using tags (which cause audio glitches). An optional argument "-" before the symbol means that Context will automatically start when it receives input through this channel.;
 -m RULES ▪ ON-OFF ▪ EDIT LIST ▪ SAVE ▪ CLEAR ** ☺ HELP;
 -m BANK ▪ AUTO UPDATE ▪ SAVE NOW ▪ EDIT LIST ▪ CLEAR ** ☺ HELP;
 -m STATE ▪ AUTO SAVE ▪ AUTO PRINT ▪ PRINT STATE ▪ EDIT LIST ▪ INPUT LABEL ☺ HELP;
