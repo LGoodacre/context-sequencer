@@ -1,4 +1,4 @@
-#N canvas 471 81 895 687 10;
+#N canvas 403 107 895 687 10;
 #X obj 432 315 t f;
 #X obj 676 577 + 1;
 #X obj 87 74 receive \$1-\$2-messon;
@@ -79,6 +79,9 @@
 #X obj 166 589 demux;
 #X obj 264 589 demux;
 #X obj 380 168 receive \$1-\$2max;
+#X obj 19 591 receive \$1-imon;
+#X obj 19 610 ||;
+#X obj 49 567 t b f;
 #X connect 0 0 9 0;
 #X connect 1 0 9 1;
 #X connect 2 0 29 0;
@@ -162,8 +165,12 @@
 #X connect 73 8 19 0;
 #X connect 74 0 9 0;
 #X connect 75 0 62 0;
-#X connect 76 0 77 1;
-#X connect 76 0 78 1;
+#X connect 76 0 82 0;
 #X connect 77 0 32 0;
 #X connect 78 0 39 0;
 #X connect 79 0 61 2;
+#X connect 80 0 81 0;
+#X connect 81 0 77 1;
+#X connect 81 0 78 1;
+#X connect 82 0 81 0;
+#X connect 82 1 81 1;
