@@ -1,8 +1,8 @@
-#N canvas 65 330 796 419 10;
+#N canvas 65 334 796 419 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 22 0 8 -128975
 -262144 0;
-#N canvas 285 93 992 687 guts 0;
+#N canvas 282 97 992 687 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 571 81 795 687 names 0;
 #X msg 266 486 symbol  ;
@@ -1883,7 +1883,7 @@ on rev;
 #X connect 47 0 45 0;
 #X connect 48 0 47 3;
 #X restore 551 182 pd position;
-#N canvas 115 94 1301 687 messages 0;
+#N canvas 65 102 1301 687 messages 0;
 #X obj 18 484 list;
 #X obj 688 252 route bang;
 #X obj 688 413 msgfile;
@@ -1991,7 +1991,7 @@ on rev;
 #X obj 213 737 spigot;
 #X obj 246 715 receive \$0-printme;
 #X obj 213 759 s \$0-toprint;
-#N canvas 310 146 1301 687 calculator 0;
+#N canvas 65 97 1301 687 calculator 0;
 #X obj 918 40 inlet;
 #X obj 949 132 cyclone/zl rev;
 #X obj 949 154 cyclone/iter;
@@ -2219,6 +2219,8 @@ stack overflows in case the argument matching fails., f 52;
 -13330 -66577 0;
 #X obj 505 856 list;
 #X obj 675 186 route 3 4;
+#X obj 821 539 cnv 13 490 1 empty \$0-datagrid1 $_variable 18 -5 0
+10 -13330 -66577 0;
 #X obj 949 423 ctxfiles/br sel \; ( " pfb \$0 0 0 " \; ) " pfb \$0
 0 1 " \; @ " pf0 \$0 1 0 get@ " \; _ " pf0 \$0 1 1 get_ " \; = " pf0
 \$0 1 2 get= " \; ¬ " pf0 \$0 1 3 get¬ " \; $ " pf0 \$0 1 4 get$
@@ -2230,9 +2232,15 @@ bang 0 ` d 1 trim x + h " \; ! " pf1 \$0 2 3 get! 1 symbol symbol "
 float " \; [ " pf3 \$0 2 7 get[ -1 1 bang float ] x 1 trim u - e "
 \; ~ " pf1 \$0 2 8 get~ 1 symbol symbol " \; * " pf2 \$0 3 0 * -1 1
 " \; / " pf2 \$0 3 1 / -1 1 " \; + " pf2 \$0 4 0 + -1 1 " \; - " pf2
-\$0 4 1 - -1 1 " \; #n " s \$0-sothh ", f 61;
-#X obj 821 539 cnv 13 490 1 empty \$0-datagrid1 $_variable 18 -5 0
-10 -13330 -66577 0;
+\$0 4 1 - -1 1 " \;  " s \$0-ebreak " \; #n " s \$0-sothh ", f 61
+;
+#X obj 949 228 demux;
+#X obj 976 249 t a b;
+#X obj 1003 271 t f;
+#X obj 976 293 s \$0-sothh;
+#X obj 883 203 receive \$0-ebreak;
+#X text 828 250 bypass coder if ASCII 27;
+#X obj 883 225 f 1;
 #X connect 0 0 87 0;
 #X connect 1 0 2 0;
 #X connect 2 0 60 0;
@@ -2284,7 +2292,7 @@ float " \; [ " pf3 \$0 2 7 get[ -1 1 bang float ] x 1 trim u - e "
 #X connect 40 0 19 1;
 #X connect 41 0 19 1;
 #X connect 42 0 19 1;
-#X connect 60 0 143 0;
+#X connect 60 0 145 0;
 #X connect 60 1 61 0;
 #X connect 61 0 133 0;
 #X connect 62 0 61 1;
@@ -2353,8 +2361,15 @@ float " \; [ " pf3 \$0 2 7 get[ -1 1 bang float ] x 1 trim u - e "
 #X connect 141 0 15 0;
 #X connect 142 0 38 0;
 #X connect 142 1 37 0;
+#X connect 145 0 144 0;
+#X connect 145 1 146 0;
+#X connect 146 0 148 0;
+#X connect 146 1 147 0;
+#X connect 147 0 145 1;
+#X connect 149 0 151 0;
+#X connect 151 0 145 1;
 #X restore 241 290 pd calculator;
-#N canvas 470 86 693 670 space 0;
+#N canvas 458 102 693 670 space 0;
 #X obj 164 64 moocow/any2bytes;
 #X obj 164 42 list trim;
 #X obj 203 213 cyclone/iter;
@@ -2367,7 +2382,7 @@ float " \; [ " pf3 \$0 2 7 get[ -1 1 bang float ] x 1 trim u - e "
 #X obj 203 546 f;
 #X text 397 304 (this fixes the relay bug);
 #X text 289 217 1 covert to ASCII and iterate;
-#X text 485 258 2 identify special characters;
+#X text 502 255 2 identify special characters;
 #X text 428 379 3 force space before and after;
 #X text 289 624 4 collect and convert to list (double spaces are conveniently
 weeded out);
@@ -2384,8 +2399,6 @@ weeded out);
 #X obj 285 417 moses 58;
 #X text 300 570 exception 1: minus (ASCII 45) doesn't get spaced if
 it is preceded by a space \, to allow for negative numbers;
-#X text 304 511 eception 2: if an open bracket (ASCII 40) is preceded
-by a float \, add a * (ASCII 42);
 #X obj 285 461 pack 32 42 32 40 32;
 #X obj 261 485 pack 32 40 32;
 #X obj 285 439 t b;
@@ -2397,10 +2410,13 @@ by a float \, add a * (ASCII 42);
 #X obj 164 87 t b b l b;
 #X obj 232 516 f 32;
 #X obj 215 115 t f b f f;
-#X obj 242 257 relay 33 37 40 41 43 42 47 63 45 91 93;
-#X text 544 100 37 % \; ( 40 \; ) 41 \; + 43 \; * 42 \; / 47 \; ? 63
-\; - 45 \; [ 91 \; ] 93;
-#X connect 0 0 36 0;
+#X text 304 511 exception 2: if an open bracket (ASCII 40) is preceded
+by a float \, add a * (ASCII 42);
+#X text 547 59 $ 36 \; % 37 \; ( 40 \; ) 41 \; * 42 \; + 43 \; - 45
+\; / 47 \; ? 63 \; [ 91 \; ] 93;
+#X text 535 46 esc 27 \;;
+#X obj 242 257 relay 33 37 40 41 43 42 47 63 45 91 93 27;
+#X connect 0 0 35 0;
 #X connect 1 0 0 0;
 #X connect 2 0 19 0;
 #X connect 3 0 4 0;
@@ -2417,45 +2433,46 @@ by a float \, add a * (ASCII 42);
 #X connect 18 2 5 0;
 #X connect 19 0 9 1;
 #X connect 19 1 23 1;
-#X connect 19 2 39 0;
+#X connect 19 2 41 0;
 #X connect 20 0 22 0;
 #X connect 20 1 21 0;
 #X connect 21 0 7 1;
 #X connect 22 0 7 1;
 #X connect 23 0 24 0;
-#X connect 24 0 31 0;
+#X connect 24 0 30 0;
 #X connect 24 1 25 0;
-#X connect 25 0 30 0;
-#X connect 25 1 31 0;
+#X connect 25 0 29 0;
+#X connect 25 1 30 0;
+#X connect 27 0 7 1;
 #X connect 28 0 7 1;
-#X connect 29 0 7 1;
+#X connect 29 0 27 0;
 #X connect 30 0 28 0;
-#X connect 31 0 29 0;
-#X connect 32 0 33 0;
-#X connect 33 0 35 1;
+#X connect 31 0 32 0;
+#X connect 32 0 34 1;
+#X connect 34 0 33 0;
 #X connect 35 0 34 0;
-#X connect 36 0 35 0;
-#X connect 36 1 7 0;
-#X connect 36 2 2 0;
-#X connect 36 3 38 0;
-#X connect 37 0 9 1;
-#X connect 38 0 15 0;
-#X connect 38 1 37 0;
-#X connect 38 2 23 1;
-#X connect 38 3 35 1;
-#X connect 39 0 3 0;
-#X connect 39 0 32 0;
-#X connect 39 1 3 0;
-#X connect 39 2 3 0;
-#X connect 39 3 3 0;
-#X connect 39 4 3 0;
-#X connect 39 5 3 0;
-#X connect 39 6 3 0;
-#X connect 39 7 3 0;
-#X connect 39 8 3 0;
-#X connect 39 9 3 0;
-#X connect 39 10 3 0;
-#X connect 39 11 7 1;
+#X connect 35 1 7 0;
+#X connect 35 2 2 0;
+#X connect 35 3 37 0;
+#X connect 36 0 9 1;
+#X connect 37 0 15 0;
+#X connect 37 1 36 0;
+#X connect 37 2 23 1;
+#X connect 37 3 34 1;
+#X connect 41 0 3 0;
+#X connect 41 0 31 0;
+#X connect 41 1 3 0;
+#X connect 41 2 3 0;
+#X connect 41 3 3 0;
+#X connect 41 4 3 0;
+#X connect 41 5 3 0;
+#X connect 41 6 3 0;
+#X connect 41 7 3 0;
+#X connect 41 8 3 0;
+#X connect 41 9 3 0;
+#X connect 41 10 3 0;
+#X connect 41 11 3 0;
+#X connect 41 12 7 1;
 #X restore 241 265 pd space;
 #X obj 184 241 route bang;
 #X obj 784 302 f 1;
@@ -5944,7 +5961,7 @@ t f f 1 " containsnot #l contains-not #l \; q= " cuu \$0 #f f 1 t f
 #X connect 99 3 72 0;
 #X connect 99 4 92 1;
 #X restore 552 391 pd rules;
-#N canvas 513 159 647 556 title 1;
+#N canvas 489 191 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
