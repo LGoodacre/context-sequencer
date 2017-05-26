@@ -131,7 +131,7 @@
 -t ^ RANDOM nr 2 off on;
 -m VARIABLES ☺ ARITHMETIC ☺ NO ARGUMENTS ☺ WITH ARGUMENTS ☺ DIRECTORS ** ☺ HELP;
 ;
--p list ? ADVANCE determines whether the ? message variable chooses a new random value each time it is sent. When off¸ the 'bump m' command will select a new value. \; ^ RANDOM determines whether the ^ variable picks a random ID number or cycles through them in sequence.;
+-p list ? ADVANCE determines whether the ? message variable chooses a new random value each time it is sent. When off¸ the 'bump m' command will select a new value. \; ? OFFSET adds  given number to all ? message variables. \; ^ RANDOM determines whether the ^ variable picks a random ID number or cycles through them in sequence.;
 ;
 ;
 ;
@@ -781,7 +781,7 @@
 ;
 ;
 -p list + - * and / work as arithmetic characters to modify numbers¸ but only when they are surrounded by brackets. Brackets work as you would expect them to¸ so ( 3( 2 - (5-2) )) would evaluate to -1.;
--p list _ substitutes the number of the toggle \; = substitutes the toggle float \; ¬ substitutes the distance between this toggle and the next \; @ substitutes Context's position on the canvas;
+-p list _ substitutes the number of the toggle \; = substitutes the toggle float \; ¬ substitutes the distance between this toggle and the next \; @ substitutes Context's position on the canvas \; $ substitutes a custom variable as defined by the :$ input command.;
 -p list ^ substitutes a Context ID number¸ given a tag. ARGUMENT: one tag. \; > fetches terms from the Context state. ARGUMENTS: ID number (optional)¸ command without colon (mandatory)¸ line number (optional)¸ term number (optional). \; ! substitutes a value from the last Context that started this one. ARGUMENT: one symbol from the last message. \; % substitutes a vlue from the last toggle that fired on this Context. ARGUMENT: one symbol from the last message. \; ? substitutes a random number. ARGUMENTS: maximum¸ length of array (optional) \; [[hash]] substitutes a number for a note on a scale using the [scaler] object. \; [ ] manipulate a list. ARGUMENTS: one float goes before¸ anything goes inside. A positive first argument chooses an item from the list. A negative argument removes that item from the list. A zero counts the list. \; ` ` (grave accents) substitutes a custom operation¸ as defined in the Overlay patch. ARGUMENTS: anything¸ inside. \; ~ takes a snapshot of an embedded Content array. ARGUMENT: array name (optional).;
 -p list ( ) direct order of operations in a list \; < directs the message to a specified send channel. \; << directs the message to a specified send channel and cancels its normal send channel. \; <o sends the message to the Context outlets. \; & separates a message \; . directs a message towards this Context.;
 ;
