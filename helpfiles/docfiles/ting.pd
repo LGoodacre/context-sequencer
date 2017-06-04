@@ -1,13 +1,13 @@
-#N canvas 809 111 787 686 10;
+#N canvas 576 86 787 686 10;
 #X obj 174 256 osc~;
 #X obj 174 71 inlet freq;
 #X floatatom 126 59 5 0 0 0 - - -, f 5;
 #X obj 131 181 del 1000;
 #X obj 235 228 switch~;
-#X obj 124 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 124 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 124 30 metro 2000;
-#X obj 174 347 *~;
+#X obj 174 437 *~;
 #X obj 277 371 lop~;
 #X obj 225 317 t f b;
 #X obj 276 347 sig~;
@@ -30,13 +30,22 @@
 #X obj 197 170 f 0.74;
 #X obj 376 241 * 0.1;
 #X obj 318 236 f 4000;
-#X obj 175 392 outlet~;
+#X obj 175 462 outlet~;
 #X obj 85 273 osc~;
 #X obj 33 116 f;
 #X msg 30 150 0.05 0.25 \, 0 \$1 0.25;
 #X obj 87 248 * 8;
 #X obj 48 61 pow 6;
 #X obj 48 90 * 15;
+#X obj 174 407 *~;
+#X obj 190 359 * 2;
+#X obj 190 381 osc~;
+#X obj 289 550 -;
+#X obj 138 359 *~;
+#X obj 165 359 *~;
+#X obj 290 445 * 0.005;
+#X obj 290 467 clip 0 1;
+#X obj 289 525 swap 1;
 #X connect 0 0 13 0;
 #X connect 1 0 19 0;
 #X connect 2 0 19 0;
@@ -50,7 +59,8 @@
 #X connect 10 0 8 0;
 #X connect 11 0 23 1;
 #X connect 12 0 9 0;
-#X connect 13 0 7 0;
+#X connect 13 0 41 0;
+#X connect 13 0 42 0;
 #X connect 14 0 4 0;
 #X connect 14 0 10 0;
 #X connect 15 0 4 0;
@@ -68,6 +78,8 @@
 #X connect 19 4 29 0;
 #X connect 19 5 0 0;
 #X connect 19 5 34 0;
+#X connect 19 5 38 0;
+#X connect 19 5 43 0;
 #X connect 19 6 20 0;
 #X connect 20 0 16 0;
 #X connect 21 0 8 1;
@@ -87,4 +99,15 @@
 #X connect 34 0 31 0;
 #X connect 35 0 36 0;
 #X connect 36 0 32 1;
+#X connect 37 0 7 0;
+#X connect 38 0 39 0;
+#X connect 39 0 37 1;
+#X connect 40 0 42 1;
+#X connect 41 0 7 0;
+#X connect 42 0 37 0;
+#X connect 43 0 44 0;
+#X connect 44 0 41 1;
+#X connect 44 0 45 0;
+#X connect 45 0 40 0;
+#X connect 45 1 40 1;
 #X coords 0 686 1 685 5 5 0;
