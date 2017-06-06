@@ -25,3 +25,11 @@ sample :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
 0.4 :y2 1 6 obj 0 -30 ctx outlet~ 1 5 connect 3 0 4 0;
 
 rotate :y 1 :b ' . :u ';
+
+undo1 :H 4 :ol 1 4 obj 0 24 undo;
+
+undo2 :H 6 :Y 5 :ol 1 4 obj 0 24 undo 4 obj 0 36 undo;
+
+undo3 :H 6 :Y 6 :ol 1 4 obj 0 24 undo 4 obj 0 36 undo 4 obj 0 48 undo;
+
+undo4 :H 6 :Y 8 :ol 1 4 obj 0 24 undo 4 obj 0 36 undo 4 obj 0 48 undo 4 obj 0 60 undo;
