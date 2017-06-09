@@ -1,35 +1,58 @@
->> Edit this file to add your own presets. The first term in the list is the title which will be searched for (make sure that it doesn't match a command term ie "cycle"). The rest is the context save list. (The "print" command is helpful for retrieving the save list of a particular context).;
+# Edit this file to add your own presets. The first term in the list is the title which will be searched for (make sure that it doesn't match a command term ie "cycle"). The rest is the context save list. (The "print" command is helpful for retrieving the save list of a particular context).;
 
 big :G 72 :F 120;
+# create a Context with large boxes for improved clarity;
 
 long :X 17 :Z 28;
-
-full :x 1 2 3 4 5 :y 1 2 3;
+# create a Context with pattern size of 17;
 
 thru :H 6 :M 1 :z 0 3 #del 3 5 6 obj 18 -45 t b a 4 msg 18 -22 :s 5 obj 77 -42 list append 5 obj 46 -94 t f 5 connect 0 1 3 0 5 connect 1 1 6 0 5 connect 3 0 4 0 5 connect 3 1 5 1 5 connect 4 0 2 0 5 connect 5 0 2 1 5 connect 6 0 5 0;
-
-multiple :e 4 :f 4;
+# create a Context which relays whatever message it receives to its output;
 
 full :x = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 :y = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32;
+# create a Context with all its toggles open;
 
 xfull :x = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32;
+# create a Context with its x toggles open;
 
 yfull :y = 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32;
+# create a Context with its y toggles open;
 
 database :e 32 :f 32;
+# create a Context with a high message limit (:e and :f);
 
 tune :S # = :U # =;
+create a Context primed with '# =' as a message prepend. This makes it easy to use the toggle floats for notes.;
+
+sample-out :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
+12 obj 0 24 content :lo $ :x2 1 :y1
+0.4 :y2 1 6 obj 0 -30 ctx outlet~ 1 5 connect 3 0 4 0;
+# create a Context with an embedded Content array and an outlet~;
 
 sample :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
 12 obj 0 24 content :lo $ :x2 1 :y1
-0.4 :y2 1 6 obj 0 -30 ctx outlet~ 1 5 connect 3 0 4 0;
+0.4 :y2 1 5 obj 0 -30 throw~ samples 5 connect 3 0 4 0;
+# create a Context with an embedded Content array and a throw object [throw samples~];
+
+sample-move :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
+12 obj 0 24 content :lo $ :x2 1 :y1
+0.4 :y2 1 5 obj 0 -30 throw~ samples 4 obj 10 10 mover 5 connect 3 0 4 0;
+# create a Context with an embedded Content array and a [mover] object;
 
 rotate :y 1 :b ' . :u ';
+# create a Context which automatically advances to the next bank term each cycle;
 
 undo1 :H 4 :ol 1 4 obj 0 24 undo;
+# create a Context with an embedded [undo] object;
 
 undo2 :H 6 :Y 5 :ol 1 4 obj 0 24 undo 4 obj 0 36 undo;
+# create a Context with two embedded [undo] objects;
 
 undo3 :H 6 :Y 6 :ol 1 4 obj 0 24 undo 4 obj 0 36 undo 4 obj 0 48 undo;
+# create a Context with three embedded [undo] objects;
 
 undo4 :H 6 :Y 8 :ol 1 4 obj 0 24 undo 4 obj 0 36 undo 4 obj 0 48 undo 4 obj 0 60 undo;
+# create a Context with four embedded [undo] objects;
+
+selector :M 1 :L random :z 0;
+# create a Context which functions as a random selector;
