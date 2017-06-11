@@ -1,4 +1,4 @@
-#N canvas 431 165 450 589 10;
+#N canvas 425 173 478 589 10;
 #X obj 98 12 inlet;
 #X obj 147 533 outlet;
 #X obj 354 363 outlet;
@@ -34,7 +34,8 @@
 #X obj 282 372 - 2;
 #X obj 250 372 - 1;
 #X obj 262 245 swap \$3;
-#X obj 307 211 receive \$1-\$4size-2;
+#X obj 340 185 receive \$1-\$4size-2;
+#X obj 340 209 t b b f f f;
 #X connect 0 0 5 0;
 #X connect 3 0 31 0;
 #X connect 4 0 8 0;
@@ -81,6 +82,9 @@
 #X connect 33 0 12 1;
 #X connect 34 0 15 0;
 #X connect 34 1 15 1;
-#X connect 35 0 29 1;
-#X connect 35 0 30 1;
-#X connect 35 0 34 1;
+#X connect 35 0 36 0;
+#X connect 36 0 22 0;
+#X connect 36 1 4 0;
+#X connect 36 2 30 1;
+#X connect 36 3 34 1;
+#X connect 36 4 29 1;
