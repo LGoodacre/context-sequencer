@@ -1,4 +1,4 @@
-#N canvas 561 313 664 454 10;
+#N canvas 540 313 781 454 10;
 #X obj 266 334 - 1;
 #X obj 183 138 moses;
 #X obj 210 91 max;
@@ -22,7 +22,6 @@
 #X text 433 159 overlay file;
 #X obj 303 91 spigot 1;
 #X msg 303 136 read overlay-0.pd;
-#X obj 303 69 iemguts/initbang;
 #X obj 342 231 text define *(presets@#;
 #X msg 354 271 read helptext.txt;
 #X obj 354 294 text define @(prefs@(;
@@ -32,6 +31,10 @@
 #X msg 492 259 read ../burst-presets.txt;
 #X msg 342 209 read ../load-presets.txt;
 #X msg 492 209 read ../menu-shortcuts.txt;
+#X obj 303 69 iemguts/initbang;
+#X obj 473 106 array define -k 160aassaa 21;
+#A 0 160 160 160 160 160 160 160 160 160 160 160 160 160 160 160 160
+160 160 160 160 160;
 #X connect 0 0 11 1;
 #X connect 1 1 4 0;
 #X connect 2 0 3 0;
@@ -55,16 +58,16 @@
 #X connect 15 0 16 0;
 #X connect 17 0 10 0;
 #X connect 18 0 15 0;
-#X connect 21 0 28 0;
+#X connect 21 0 27 0;
 #X connect 22 0 19 0;
-#X connect 23 0 21 0;
-#X connect 25 0 26 0;
-#X connect 28 0 22 0;
-#X connect 28 1 31 0;
-#X connect 28 2 25 0;
-#X connect 28 3 32 0;
-#X connect 28 4 30 0;
-#X connect 28 5 21 1;
-#X connect 30 0 29 0;
-#X connect 31 0 24 0;
-#X connect 32 0 27 0;
+#X connect 24 0 25 0;
+#X connect 27 0 22 0;
+#X connect 27 1 30 0;
+#X connect 27 2 24 0;
+#X connect 27 3 31 0;
+#X connect 27 4 29 0;
+#X connect 27 5 21 1;
+#X connect 29 0 28 0;
+#X connect 30 0 23 0;
+#X connect 31 0 26 0;
+#X connect 32 0 21 0;
