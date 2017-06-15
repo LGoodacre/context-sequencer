@@ -1,4 +1,4 @@
-#N canvas 257 18 760 687 10;
+#N canvas 254 81 760 687 10;
 #X obj 617 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
 #X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -23,24 +23,6 @@
 0;
 #X obj 1737 201 cnv 15 522 369 empty empty 4: protecting values 20
 12 0 24 -260448 -1 0;
-#X obj 2874 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
--66577 0;
-#X obj 2864 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 3438 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865
--66577 0;
-#X obj 3428 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 3429 201 cnv 15 522 369 empty empty 7: random melody using ? and 
-20 12 0 24 -260448 -1 0;
-#X obj 2865 201 cnv 15 522 369 empty empty 6: random melody using ? and _
-20 12 0 24 -260448 -1 0;
-#X obj 1313 8 cnv 15 363 182 empty empty empty 20 12 0 14 -99865 -66577
-0;
-#X obj 1303 -2 cnv 15 363 182 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 1304 -1 cnv 15 361 180 empty empty empty 20 12 0 14 -72625 -66577
-0;
 #X obj 762 54 cnv 15 496 132 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 755 47 cnv 15 496 132 empty empty empty 20 12 0 14 -1 -66577
@@ -129,4 +111,4 @@ downsteam. However \, the cycle time will never take 4;
 #X text 480 81 copyright Liam Goodacre 2017;
 #X text 488 66 licensed under the GPL v3;
 #X text 102 119 Refer to Manual Section 15: RULES;
-#X connect 30 0 31 0;
+#X connect 21 0 22 0;
