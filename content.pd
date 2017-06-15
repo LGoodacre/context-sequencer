@@ -1,4 +1,4 @@
-#N canvas 408 232 621 299 10;
+#N canvas 405 236 621 299 10;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
 #X obj 1 4 cnv 3 47 21 empty \$0-block3 empty 2 3 0 8 -203904 -1 0
@@ -14,7 +14,7 @@
 #X obj 506 219 print fo;
 #X obj 506 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 471 239 657 392 workings 1;
+#N canvas 468 243 657 392 workings 0;
 #X msg 127 27 vis 1;
 #X obj 127 49 iemguts/sendcanvas;
 #X obj 127 5 r cntent;
@@ -638,9 +638,9 @@
 #X restore 406 71 pd workings;
 #X obj 406 126 outlet~;
 #X obj 261 27 inlet;
-#N canvas 537 125 793 440 message 0;
+#N canvas 537 262 793 440 message 0;
 #X obj 343 17 inlet;
-#X obj 407 63 ctxfiles/recompile \$0;
+#X obj 377 63 ctxfiles/recompile \$0;
 #X obj 151 78 cyclone/zl iter 1;
 #X obj 343 39 t b a;
 #X obj 43 128 cnv 13 500 1 empty \$0-datagrid load 18 -5 0 10 -13330
@@ -692,31 +692,29 @@
 -66577 0;
 #X obj 43 336 cnv 13 500 1 empty \$0-datagrid saveable 18 -5 0 10 -13330
 -66577 0;
-#X obj 151 102 ctxfiles/br route \; :lo " tfs \$0 ##f lo clear " load
-#l \; :x1 " tfsn \$0 ##f x1 0 " \; :x2 " tfsn \$0 ##f x2 0 " \; :y1
-" tfsn \$0 ##f y1 0 " \; :y2 " tfsn \$0 ##f y2 0 " \; :c " tfs \$0
-##f c 17 " color #l colour #l \; :s1 " tfs \$0 ##f s1 1 " \; :s2 "
-tfs \$0 ##f s2 -1 " \; :nm " tfs \$0 ##f nm 1 " normalize #l \; :li
-" tfs \$0 ##f li 0 " line #l \; :br " tfs \$0 ##f br 44100 " bitrate
-#l \; :p1 " tfs \$0 ##f p1 0 " \; :p2 " tfs \$0 ##f p2 0 " \; :p3 "
-tfs \$0 ##f p3 0 " \; :p4 " tfs \$0 ##f p4 0 " \; :ed " tfst \$0 ##f
-ed 1 " edit #l \; :as " tfst \$0 ##f as 1 " \; print " tf \$0 ##f "
-\; savelist " tf \$0 ##f " \; set " tf \$0 ##f " \; save " tf \$0 ##f
-" \; clear " tf \$0 ##f " \; #n " s \$0-othr ";
 #X obj 43 401 cnv 13 500 1 empty \$0-datagrid clear 18 -5 0 10 -13330
 -66577 0;
-#X obj 407 89 ctxfiles/br demux \; #f t \; #f " ll \$0 " \;
-#f " s \$0-:x1 " \; #f " s \$0-:x2 " \; #f " s \$0-:y1 " \; #f " s
-\$0-:y2 " \; #f " s \$0-:cs " \; #f " s \$0-:s1s " \; #f " s \$0-:s2s
-" \; #f " s \$0-:ns " \; #f " s \$0-:lis " \; #f " s \$0-:bs " \; #f
-" s \$0-:p1 " \; #f " s \$0-:p2 " \; #f " s \$0-:p3 " \; #f " s \$0-:p4
-" \; #f " s \$0-:eds " \; #f " s \$0-:ass " \; #f " s \$0-printall
-" \; #f " s \$0-savelist " \; #f " s \$0-setme " \; #f " s \$0-savem
-" \; #f " s \$0-clearme " \;;
+#X obj 151 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear load
+#l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
+#f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 color #l colour
+#l \; :s1 tfs \$0 #f s1 1 \; :s2 tfs \$0 #f s2 -1 \; :nm tfs \$0 #f
+nm 1 normalize #l \; :li tfs \$0 #f li 0 line #l \; :br tfs \$0 #f
+br 44100 bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs \$0 #f p2 0 \;
+:p3 tfs \$0 #f p3 0 \; :p4 tfs \$0 #f p4 0 \; :ed tfst \$0 #f ed 1
+edit #l \; :as tfst \$0 #f as 1 \; print tf \$0 #f \; savelist tf \$0
+#f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0 #f \; ## s \$0-othr
+;
+#X obj 377 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
+\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
+#f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
+#f s \$0-:bs \; #f s \$0-:p1 \; #f s \$0-:p2 \; #f s \$0-:p3 \; #f
+s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-printall \;
+#f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem \; #f s \$0-clearme
+\;;
 #X connect 0 0 3 0;
 #X connect 1 0 33 0;
 #X connect 1 1 33 1;
-#X connect 2 0 31 0;
+#X connect 2 0 32 0;
 #X connect 3 0 1 0;
 #X connect 3 1 2 0;
 #X connect 14 0 15 0;

@@ -1,9 +1,9 @@
-#N canvas 190 458 621 300 10;
+#N canvas 187 462 621 300 10;
 #X obj 170 177 iemguts/canvasselect;
 #X obj 170 203 print fo;
 #X obj 170 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 771 290 515 392 workings 1;
+#N canvas 768 294 515 392 workings 1;
 #N canvas 596 193 761 546 c-movement 0;
 #X obj 300 59 inlet height;
 #X obj 225 60 inlet;
@@ -304,7 +304,7 @@
 #X connect 39 0 40 0;
 #X connect 40 0 30 0;
 #X restore 360 147 pd message;
-#N canvas 387 360 793 377 messagein 0;
+#N canvas 384 364 793 377 messagein 1;
 #X obj 343 87 inlet;
 #X obj 407 133 ctxfiles/recompile \$0;
 #X obj 241 150 cyclone/zl iter 1;
@@ -314,30 +314,29 @@
 #X msg 548 108 vis_size \$1 1;
 #X obj 548 130 s \$0-datagrid;
 #X obj 383 87 receive \$0-anyin;
-#X obj 241 172 ctxfiles/br route \; :x1 " tfsn \$0 ##f x1 0 " \; :y1
-" tfsn \$0 ##f y1 0 " \; :a " tfspa \$0 ##f a bang " \; #n " s \$0-othr
-";
-#X obj 407 159 ctxfiles/br demux \; #f t \; #f " s \$0-:x1 " \; #f
-" s \$0-:y1 " \; #f " s \$0-aa " \;;
 #X obj 217 18 receive \$0-dvstart;
 #X obj 196 41 pack;
 #X obj 196 -7 receive \$0-mynum;
 #X msg 196 63 symbol \$2-\$1markr;
 #X obj 196 87 iemguts/oreceive \$0nop;
+#X obj 241 172 ctxfiles/br2 route 1 \; :x1 tfsn \$0 #f x1 0 \; :y1
+tfsn \$0 #f y1 0 \; :a tfspa \$0 #f a bang \; ## s \$0-othr;
+#X obj 407 159 ctxfiles/br2 demux 2 \; #f t \; #f s \$0-:x1 \; #f s
+\$0-:y1 \; #f s \$0-aa \;;
 #X connect 0 0 3 0;
-#X connect 1 0 9 0;
-#X connect 1 1 9 1;
-#X connect 2 0 8 0;
+#X connect 1 0 14 0;
+#X connect 1 1 14 1;
+#X connect 2 0 13 0;
 #X connect 3 0 1 0;
 #X connect 3 1 2 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
 #X connect 7 0 3 0;
-#X connect 10 0 11 1;
-#X connect 11 0 13 0;
-#X connect 12 0 11 0;
-#X connect 13 0 14 0;
-#X connect 14 0 3 0;
+#X connect 8 0 9 1;
+#X connect 9 0 11 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 12 0 3 0;
 #X restore 261 52 pd messagein;
 #X text 281 238 A part of the Context library \, licensed under the
 GPL. See license.txt. Copyright Liam Goodacre 2017;
