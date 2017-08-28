@@ -1,4 +1,4 @@
-/ctxfiles/tmp
+/ctxfiles/tmp/1*.pd
 gridcontrol.pd
 gridfiles
 tester.pd
