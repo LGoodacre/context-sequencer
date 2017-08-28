@@ -1,7 +1,8 @@
-#N canvas 417 254 450 300 10;
+#N canvas 400 260 450 300 10;
 #X msg 178 83 read scales.txt;
 #X obj 178 108 text define ##scales%%;
 #X obj 159 204 array define #sc 1;
 #X obj 178 58 receive 33scstart%^;
+#X obj 179 22 shared ctxfiles/#sc 1;
 #X connect 0 0 1 0;
 #X connect 3 0 0 0;

@@ -1,4 +1,4 @@
-#N canvas 842 177 450 300 10;
+#N canvas 833 189 450 300 10;
 #X obj 187 64 inlet;
 #X obj 186 161 outlet;
 #X obj 58 64 receive \$2-und-n;
@@ -11,7 +11,7 @@
 #X obj 186 135 receive \$1;
 #X obj 220 202 receive \$1-dddEEE&;
 #X obj 220 224 s \$2-stbc;
-#X obj 277 125 share \$3 1 cr \$1 \$2;
+#X obj 277 125 share2 ctxfiles/cr \$1 \$4;
 #X connect 0 0 8 0;
 #X connect 2 0 3 0;
 #X connect 4 0 6 0;
