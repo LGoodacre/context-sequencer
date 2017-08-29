@@ -1,0 +1,21 @@
+point1 [+ve #] : add # number of end points (grey);;
+point1 [-ve #] : remove # number of end points (grey);;
+point1 x1 y1 x2 y2 : define end points in given coordinates;;
+point2 : same arguments as point1 but with curve points;;
+bang : play array in 1000 ms;;
+time : change time for playback;;
+x : define length of canvas (default 128 pixels);;
+y : define height of canvas (default 79 pixles);;
+size : define size of array (default 128 points);;
+y1 : define array upper limit (default 1);;
+y2 : define array lower limit (default 0);;
+name [symbol] : name array (default $0-array);;
+color : define canvas color;;
+speed : define array refresh rate in ms;;
+duplicate : create a duplicate of the curve for drawing waveforms;;
+mirror-x : flip the duplicate along the x-axis;;
+mirror-y : flip the duplicate along the y-axis;;
+scale : increase the y sensitivity of curve points;;
+ec : turn error correction on (at the cost of efficiency);;
+help : display this help message;;
+savelist : display the current saved settings

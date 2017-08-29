@@ -1,0 +1,292 @@
+#N struct 5029-big2 float x float y array 5029-array2 ^&*-dsmall2;
+#N struct ^&*-dsmall2 float x float y;
+#N struct 5029-big1 float x float y array 5029-array1 ^&*-dsmall1;
+#N struct ^&*-dsmall1 float x float y;
+#N struct 5099-big2 float x float y array 5099-array2 ^&*-dsmall2;
+#N struct 5099-big1 float x float y array 5099-array1 ^&*-dsmall1;
+#N struct 5166-big2 float x float y array 5166-array2 ^&*-dsmall2;
+#N struct 5166-big1 float x float y array 5166-array1 ^&*-dsmall1;
+#N struct 5236-big2 float x float y array 5236-array2 ^&*-dsmall2;
+#N struct 5236-big1 float x float y array 5236-array1 ^&*-dsmall1;
+#N struct 5309-big1 float x float y array 5309-array1 ^&*-dsmall1;
+#N struct 5382-big2 float x float y array 5382-array2 ^&*-dsmall2;
+#N struct 5382-big1 float x float y array 5382-array1 ^&*-dsmall1;
+#N struct 5452-big2 float x float y array 5452-array2 ^&*-dsmall2;
+#N struct 5452-big1 float x float y array 5452-array1 ^&*-dsmall1;
+#N canvas 308 101 860 592 10;
+#X obj 241 343 sketch x 224 y 109 point1 0.308036 0.701835 0.71875
+0.701835 point2 0.09375 0.894495 0.486607 0.394495 0.888393 0.848624
+name mycurve;
+#X obj 175 23 cnv 15 202 72 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 170 18 cnv 15 202 72 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 171 19 cnv 15 200 70 empty empty sketch 23 26 1 55 -203565 -66577
+0;
+#X text 308 66 v1.0;
+#X msg 241 257 end 1;
+#X msg 311 257 end -1;
+#X floatatom 477 293 5 0 0 0 - - -, f 5;
+#X obj 477 314 tabread mycurve;
+#X obj 477 345 vsl 15 104 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 32 348 cnv 15 192 72 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 27 343 cnv 15 192 72 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 28 344 cnv 15 190 70 empty empty empty 20 12 0 14 -249809 -66577
+0;
+#X text 35 351 click and move the points around the canvas to see how
+the curve changes -->, f 25;
+#X obj 14 254 cnv 15 222 57 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 9 249 cnv 15 222 57 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 10 250 cnv 15 220 55 empty empty empty 20 12 0 14 -76543 -66577
+0;
+#X obj 523 258 cnv 15 202 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 518 253 cnv 15 202 52 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 519 254 cnv 15 200 50 empty empty empty 20 12 0 14 -76543 -66577
+0;
+#X text 526 256 read array contents easily using tabread objects <-----
+, f 27;
+#X obj 522 362 cnv 15 202 102 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 517 357 cnv 15 202 102 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 518 358 cnv 15 200 100 empty empty empty 20 12 0 14 -76543 -66577
+0;
+#X text 536 365 Sketch autosaves \, so whatever you draw will reappear
+the next time you open the patch. Just press Ctrl + S !, f 23;
+#X obj 154 88 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
+20 12 0 14 -262144 -66577 0;
+#X obj 159 -2 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
+20 12 0 14 -262144 -66577 0;
+#N canvas 0 50 450 300 annimate 0;
+#X obj 100 100 tgl 10 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 100 120 metro 100;
+#X obj 100 144 f;
+#X obj 100 168 + 1;
+#X obj 100 192 mod 3;
+#X obj 100 216 sel 0 1 2;
+#X msg 100 290 label .~~.~~.~~.~~.~~.~~.~~.~~;
+#X msg 120 265 label ~~.~~.~~.~~.~~.~~.~~.~~.;
+#X msg 140 241 label ~.~~.~~.~~.~~.~~.~~.~~.~;
+#X obj 115 341 s \$0-banner;
+#X obj 100 74 loadbang;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 2 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 7 0;
+#X connect 5 2 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X connect 8 0 9 0;
+#X connect 10 0 0 0;
+#X coords 0 -1 1 1 10 10 2 100 100;
+#X restore 383 5 pd annimate;
+#X obj 13 155 cnv 15 672 72 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 14 156 cnv 15 670 70 empty empty empty 20 12 0 14 -257985 -66577
+0;
+#X obj 15 157 cnv 15 668 68 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 16 158 cnv 15 666 66 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 158 103 cnv 15 15 15 empty empty an advanced interface for drawing arrays
+20 12 0 14 -262144 -66577 0;
+#X text 34 158 [sketch] is a tool which helps you draw precise functions
+into the PD array object. Sketch can draw straight lines \, Bezier
+curves and cusom formulas \, useful for creating envelopes and waveforms.
+Sketch can draw functions to a very high degree of complexity \, but
+because the values are stored in an array \, playback is relatively
+cheap., f 89;
+#X text 172 21 (  ) (  ), f 2;
+#X text 351 21  ) (  ) (, f 2;
+#X obj 52 449 cnv 15 57 23 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 53 450 cnv 15 55 21 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#N canvas 359 84 633 587 (subpatch) 0;
+#X obj 40 146 sketch point1 0.71875 0.965847 point2 0.132813 0.968473
+color -232806;
+#X text 189 147 Sketch has a variety of options controlling its behaviour.
+To access the options \, right click on any sketch object and select
+"properties". A menu window will appear with all the relevant options.
+To get rid of the window \, press the ^ button in the upper left \,
+or simply delete the object.;
+#X text 133 241 Sketch's options are:;
+#X text 34 523 *Under some conditions \, curves which are defined by
+a high number of Bezier points may distory. Error correction fixes
+this \, at the cost of using slightly more CPU.;
+#X text 39 266 point1 : ADD OR REMOVE END POINTS FROM THE CANVAS \;
+point2 : ADD OR REMOVE CURVE (BEZIER) POINTS FROM THE CANVAS \; x :
+set the x-axis (in pixels) \; y : set the y-axis (in pixels) \; time
+: define the time in ms for playback with "bang" messages) \; colour
+: define the colour of the canvas \; scale : scale the y sensitivity
+of Bezier points \; name : define the name of the array \; size : define
+the size of the array (in points) \; y1 : define the upper limit of
+the array \; y2 : define the lower limit of the array \; speed : define
+how fast the array refreshes when the points are moved \; duplicate
+: create a duplicate of the defined shape in the array \; mirror-x
+: flip the copy along the x-axis \; mirror-y : flip the copy along
+the y-axis \; ec : turn error correction on*, f 74;
+#X restore 54 452 options;
+#X obj 51 478 cnv 15 64 23 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 52 479 cnv 15 62 21 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 51 507 cnv 15 113 23 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 52 508 cnv 15 111 21 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#N canvas 222 89 811 514 (subpatch) 0;
+#X obj 221 161 sketch point1 0.078125 0.950607 0.265626 0.374555 point2
+0.757813 0.503089 name envelope color -232601 time 1500;
+#X obj 68 356 *~;
+#X obj 68 410 dac~;
+#X obj 173 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 28 235 5 0 0 0 - - -, f 5;
+#X obj 28 304 tabread4~ waveform;
+#X obj 28 256 phasor~ 440;
+#X obj 227 321 sketch point1 0.546875 0.975754 0.585938 0.293005 0.859375
+0.891045 point2 0.101563 0.946593 0.367188 0.518987 0.679688 0.988141
+name waveform color -232412 duplicate 1 mirror-x 1;
+#X obj 28 280 *~ 256;
+#X obj 221 89 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 1500 256;
+#X msg 221 108 time \$1;
+#X text 164 304 <----->;
+#X text 198 24 A bang message to the first inlet plays the array through
+the first outlet~ in a given amount of time. This is useful for creating
+envelopes. The default time duration is 1000ms \, but this can be changed
+using the "time" setting.;
+#X text 369 176 <--play with the points to change the envelope!, f
+31;
+#X text 499 386 <--play with the points to change the waveform!, f
+31;
+#X obj 96 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 96 90 metro 2000;
+#X obj 593 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 593 112 \; pd dsp \$1;
+#X text 298 246 This sketch has the "duplicate" and "mirror-x" settings
+on (see "settings") \, so you can draw both sides of the waveform at
+once. Here the array is being read by [tabread4~ waveform]., f 49
+;
+#X connect 0 0 1 1;
+#X connect 1 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 5 0 1 0;
+#X connect 6 0 8 0;
+#X connect 8 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
+#X connect 15 0 16 0;
+#X connect 16 0 0 0;
+#X connect 17 0 18 0;
+#X restore 53 481 playback;
+#N canvas 274 91 584 571 formulas 0;
+#X text 16 17 Sketch has some hidden inlet and outlets which are used
+for defining custom formulas along the array. There are as many inlet
+/ outlet pairs as there are "sections" of the curve. Sections are defined
+by the grey end points \, so a sketch with 3 end points will have 4
+sections and consequently 4 extra in/outlets \, regarless of how many
+brown curve points there are.;
+#X msg 157 281 0;
+#X obj 67 182 sketch point1 0.15625 0.954336 0.328125 0.812351 0.671875
+0.810708 color -86471;
+#X obj 37 305 s c1;
+#X obj 97 305 s c2;
+#X obj 37 281 pow 0.5;
+#X obj 157 305 s c3;
+#X obj 198 281 pow 2;
+#X obj 198 305 s c4;
+#X obj 85 143 r c1;
+#X obj 121 143 r c2;
+#X obj 157 143 r c3;
+#X obj 193 143 r c4;
+#X obj 97 281 pow 0.5;
+#X text 23 346 Custom formulas work like this: when the given section
+of the curve is redrawn \, the outlet will receive a line of numbers
+between 0 and 1 These numbers can be processed in any way and then
+sent back to the inlet \, where they will be transposed onto the original
+coordinates.;
+#X text 253 152 The in/outlets can be tricky to find \, since they
+are not visible on the canvas. You can connect the cables directly
+without using [send] and [receive] \, but you're on your own when it
+comes to hiding them behind the canvas., f 26;
+#X obj 31 522 sketch x 211 y 110 point1 0.414692 0.690909 0.990521
+1 point2 0.689573 0.254545 name first color -129125;
+#X text 21 446 You can have a lot of fun with custom formulas! Here
+are some examples using [expr].;
+#X obj 99 652 expr 0.2 * sin($f1*28) + $f1;
+#X obj 99 676 s cc1;
+#X obj 99 493 r cc1;
+#X obj 61 864 sketch x 228 y 147 point1 0.217105 0.323129 0.739035
+0.884354 point2 0.107456 0.285714 0.899123 0.636054 name second color
+-87535 duplicate 1 mirror-x 1 mirror-y 1;
+#X obj 208 1179 expr first [$f1*120];
+#X obj 167 690 t b f;
+#X obj 167 713 random 100;
+#X obj 167 737 expr ($f1 * 0.001 + $f2);
+#X text 314 649 <--- draw a sine wave with four peaks betweeen two
+points, f 24;
+#X text 24 734 draw some static-->;
+#X obj 167 761 s cc2;
+#X obj 167 493 r cc2;
+#X obj 208 835 r cc3;
+#X obj 208 1203 s cc3;
+#X text 63 1288 Note: the interaction between Bezier curves and custom
+formulas is unknown!, f 44;
+#X text 5 1177 copy all of the first array between two points --->
+, f 27;
+#X text 290 805 Here \, duplicate \, mirror-x and mirror-y settings
+are all on to help draw the waveform, f 30;
+#X connect 1 0 6 0;
+#X connect 2 1 5 0;
+#X connect 2 2 13 0;
+#X connect 2 3 1 0;
+#X connect 2 4 7 0;
+#X connect 5 0 3 0;
+#X connect 7 0 8 0;
+#X connect 9 0 2 1;
+#X connect 10 0 2 2;
+#X connect 11 0 2 3;
+#X connect 12 0 2 4;
+#X connect 13 0 4 0;
+#X connect 16 1 18 0;
+#X connect 16 2 23 0;
+#X connect 18 0 19 0;
+#X connect 20 0 16 1;
+#X connect 21 2 22 0;
+#X connect 22 0 31 0;
+#X connect 23 0 24 0;
+#X connect 23 1 25 1;
+#X connect 24 0 25 0;
+#X connect 25 0 28 0;
+#X connect 29 0 16 2;
+#X connect 30 0 21 2;
+#X restore 53 510 custom formulas;
+#X text 10 281 add or remove a sketch point ->;
+#X text 17 254 add or remove an end point ->;
+#X msg 241 284 curve 1;
+#X msg 311 284 curve -1;
+#X obj 546 13 ctxfiles/license;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 47 0 0 0;
+#X connect 48 0 0 0;

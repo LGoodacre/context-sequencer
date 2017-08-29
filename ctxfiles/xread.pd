@@ -1,0 +1,18 @@
+#N canvas 186 409 450 300 10;
+#X obj 171 20 inlet;
+#X obj 171 42 t f f;
+#X obj 171 116 t f f;
+#X obj 198 162 outlet;
+#X obj 171 183 outlet;
+#X obj 198 140 !=;
+#X text 234 118 6.1: compare new value to old;
+#X obj 198 66 tabread \$1-\$2-2-\$4;
+#X obj 171 94 tabread \$1-\$2-1-\$4;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 1 1 7 0;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 5 0 3 0;
+#X connect 7 0 5 1;
+#X connect 8 0 2 0;

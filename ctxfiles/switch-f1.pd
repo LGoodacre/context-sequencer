@@ -1,0 +1,5 @@
+#N canvas 0 50 450 300 12;
+#X obj 139 28 inlet;
+#X msg 139 69 \; \$2-\$3-\$1-point \$4 0 \; \$2-\$3-\$5-delme bang
+;
+#X connect 0 0 1 0;
