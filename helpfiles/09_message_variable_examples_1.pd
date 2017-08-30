@@ -1,4 +1,4 @@
-#N canvas 65 81 1301 687 10;
+#N canvas 65 53 1301 715 8;
 #X obj 617 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
 #X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -24,9 +24,9 @@
 0;
 #X obj 1737 201 cnv 15 522 369 empty empty 4: dynamic decay using ¬
 20 12 0 24 -260448 -1 0;
-#X obj 1869 296 context :X 17 :a ' = & d (6 / (¬ * ¬) ' :b ' | |
-| d 1.6 ' :d 2 :i 2 1 4 3 0 -1 -3 -2 -1 0 2 3 4 3 4 5 7.5 :x = 1 2
-3 4 6 12 13 15 16 17 :Z 27 :ID 7;
+#X obj 1869 296 context :X 17 :a ' d (6 / (¬ * ¬) & = ' :b ' | |
+| d 1.6 ' :d 2 :i 2 1 4 3 0 -1 -3 -2 -1 0 2 3 4 3 4 5 6.5 :x = 1 2
+3 4 6 12 13 15 16 17 :Z 27;
 #X obj 54 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 44 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -47,7 +47,7 @@
 -66577 0;
 #X obj 3428 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 3429 201 cnv 15 522 369 empty empty 7: random melody using ? and 
+#X obj 3429 201 cnv 15 522 369 empty empty 7: random melody using ? and []
 20 12 0 24 -260448 -1 0;
 #X text 825 238 a 'relative melody' is a melody which plays relative
 to the first note. For instance \, ' x \, x+1 \, x+2 \, x-4 ' \, where
@@ -87,15 +87,8 @@ can very easily be changed.;
 #X text 199 357 To change the value of the toggle floats \, double
 click them and scroll up/down. (You can also scroll left / right to
 move them.);
-#X text 83 439 Note the important difference here between toggle floats
-and float connections. The last toggle here (c6) is a connection \,
-not read by the = sign. See manual section 4;
 #X text 198 405 Turn toggles on and off by clicking them as usual.
 ;
-#X text 78 498 Ususally \, double clicking and scrolling up will give
-you flaot connections \, and scrolling down will give you toggle floats.
-However \, it is possible to scroll to a negative toggle float \, so
-long as you go down (to a positive one) first.;
 #X text 1755 255 ¬ calculates the distance between this toggle and
 the next;
 #X text 1785 373 There are two parts to this message \, separated by
@@ -110,7 +103,8 @@ of theis particular instrument.;
 #X text 1787 524 To hear the effect \, open and close different toggles
 and hear how the lengths of the notes change.;
 #X obj 2334 309 context :X 13 :a ' ? (@ - 9) | @ ' :c -887738 :d 3
-:x = 1 2 3 4 5 7 9 12 13 :B 1 :Z 25 :ID 8;
+:i 0 0 0 0 0 0 0 0 0 0 0 0 7.5 :x = 1 2 3 4 5 7 9 12 13 :B 1 :Z 25
+;
 #X obj 2125 300 bng 15 250 50 0 decay empty reset_decay 17 7 0 10 -262144
 -1 -1;
 #X text 2331 267 @ returns a value according to Context's position
@@ -123,7 +117,7 @@ Context \, the more extreme the random melody gets.;
 #X obj 2865 201 cnv 15 522 369 empty empty 6: random melody using ? and _
 20 12 0 24 -260448 -1 0;
 #X obj 2888 324 context :X 13 :a ' a ? _ (@ - 10) ' :c -45704 :d 2
-:x = 1 4 7 9 11 13 :Z 23 :ID 9;
+:i 0 0 0 0 0 0 0 0 0 0 0 0 8.5 :x = 1 4 7 9 11 13 :Z 23;
 #X text 2887 260 ? generates a random number \, given a maximum value
 ;
 #X text 2331 250 ? generates a random number \, given a maximum value
@@ -137,7 +131,7 @@ playing on the pattern array. This means that the longer the melody
 plays \, the higher the random maximum goes. So this melody starts
 at a certain note and then expands.;
 #X obj 3512 323 context :X 13 :a ' (?3 + 1) [ 2 5 7 ] ' :c -99452 :d
-2 :x = 1 2 3 4 5 7 9 12 13 :Z 23 :ID 10;
+2 :i 0 0 0 0 0 0 0 0 0 0 0 0 9.5 :x = 1 2 3 4 5 7 9 12 13 :Z 23;
 #X text 3457 260 ? generates a random number \, given a maximum value
 ;
 #X text 3457 277 [ ] selects an item from a list;
@@ -148,7 +142,7 @@ to it so that the options are '1 2 3' rather than '0 1 2'. 0 is a valid
 argument for [] \, but it wouldn't be useful here. 0 counts the number
 of terms (in this case \, 3).;
 #X obj 78 307 context :X 9 :a ' = | = ' :c 18 :d 1 :i 4 3 4 0 5 0 2
-0 6.5 :x = 1 2 3 5 7 9 :Z 15 :ID 6;
+0 10.5 :x = 1 2 3 5 7 9 :Z 15;
 #X obj 1313 8 cnv 15 363 182 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 1303 -2 cnv 15 363 182 empty empty empty 20 12 0 14 -1 -66577
@@ -167,15 +161,8 @@ of terms (in this case \, 3).;
 0;
 #X obj 36 66 cnv 15 699 55 empty empty empty 21 18 2 32 -204786 -204800
 0;
-#X obj 1413 146 dac~;
-#X obj 1470 124 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
-#X obj 1417 76 scaler blues c 5;
-#X obj 1417 98 docfiles/glock~ 1.5;
 #X obj 37 67 cnv 15 697 53 empty empty message variables: melody examples
 12 22 2 43 -83573 -204800 0;
-#X msg 1327 28 \; pd dsp 1;
-#X obj 1417 12 receive context-;
 #X text 764 56 The Context output language consists of a series of
 variables which are used to manipulate outgoing messages. They can
 be used to create random or variable notes \, modify Context settings
@@ -186,40 +173,48 @@ mnual section 11, f 79;
 are then fed through the [scaler] object to turn them into notes on
 a scale. There is also a viariable which accesses [scaler] remotely
 \, but it is not used here., f 79;
-#X obj 1438 55 cyclone/iter;
-#X obj 1417 122 *~ 1;
-#X obj 1320 147 print Context;
-#X obj 1548 76 f 1.6;
-#X obj 1548 54 receive decay;
-#X obj 1417 34 route x a d;
 #X text 140 151 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
 TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
 #X text 2896 478 The second argument of ? is used to define the number
 of random values it will generate. Here \, the second argument is set
 by @ \, as in example 5 So chaniging the position of Context will increase
 the number of notes in each hit.;
-#X obj -50 135 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj -49 136 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text -45 140 part of the Context library;
-#X text -48 171 copyright Liam Goodacre 2017;
-#X text -40 156 licensed under the GPL v3;
 #X text 581 139 Refer to Manual Section 12;
+#X obj 1413 146 dac~;
+#X obj 1470 124 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 1417 76 scaler blues c 5;
+#X obj 1417 98 docfiles/glock~ 1.5;
+#X msg 1327 28 \; pd dsp 1;
+#X obj 1417 12 receive context-;
+#X obj 1438 55 cyclone/iter;
+#X obj 1417 122 *~ 1;
+#X obj 1320 147 print Context;
+#X obj 1548 76 f 1.6;
+#X obj 1548 54 receive decay;
+#X obj 1417 34 route x a d;
+#X obj 38 1 ctxfiles/license;
+#X text 83 439 Note the important difference here between toggle floats
+and float connections. The last toggle here (c10) is a connection \,
+not read by the = sign. See manual section 4;
+#X text 78 498 Ususally \, double clicking and scrolling up will give
+you float connections \, and scrolling down will give you toggle floats.
+However \, it is possible to scroll to a negative toggle float \, so
+long as you go down (to a positive one) first.;
 #X connect 3 3 4 3;
 #X connect 4 3 5 3;
 #X connect 5 3 6 3;
-#X connect 73 0 82 1;
-#X connect 74 0 75 0;
-#X connect 75 0 82 0;
-#X connect 78 0 83 0;
-#X connect 78 0 86 0;
-#X connect 81 0 74 0;
-#X connect 82 0 72 0;
-#X connect 82 0 72 1;
-#X connect 84 0 75 1;
-#X connect 85 0 84 0;
-#X connect 86 0 74 0;
-#X connect 86 1 81 0;
-#X connect 86 2 75 1;
-#X connect 86 3 74 0;
+#X connect 77 0 83 1;
+#X connect 78 0 79 0;
+#X connect 79 0 83 0;
+#X connect 81 0 84 0;
+#X connect 81 0 87 0;
+#X connect 82 0 78 0;
+#X connect 83 0 76 0;
+#X connect 83 0 76 1;
+#X connect 85 0 79 1;
+#X connect 86 0 85 0;
+#X connect 87 0 78 0;
+#X connect 87 1 82 0;
+#X connect 87 2 79 1;
+#X connect 87 3 78 0;

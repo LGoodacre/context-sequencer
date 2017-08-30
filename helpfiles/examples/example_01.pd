@@ -1,12 +1,12 @@
-#N canvas 320 93 1040 687 10;
+#N canvas 317 97 1040 687 10;
 #X obj 335 58 context :X 9 :a ' # = ' :b ' < ^ note :x f ? :x ?8 |
 < ^ note :x f ? :i + (?5 - 3) ?8 ' :c 30 :d 2 :f 2 :i 1 -2 2 -4 -5
-3 -2 4 0 :n ' note ' :x = 1 2 3 4 5 6 8 9 :y = 1 2 :Z 28 :ID 1 :nr
-1 :ro 1 :il 1;
+3 -2 4 0 :n ' note ' :x = 1 2 3 4 5 6 8 9 :y = 1 2 :Z 28 :nr 1 :ro
+1 :il 1;
 #X obj 192 213 context :X 9 :a ' # = ' :c 2 :d 2 :i 2 2 2 10 7 6 5
-4 0 :n ' note ' :x = 3 :Z 28 :ID 2 :il 1;
+4 0 :n ' note ' :x = 3 :Z 28 :il 1;
 #X obj 438 191 context :X 9 :a ' # = ' :c 30 :d 1 :i 11 10 10 8 10
-8 5 5 0 :n ' note ' :x = 1 4 9 :Z 15 :ID 3 :il 1;
+8 5 5 0 :n ' note ' :x = 1 4 9 :Z 15 :il 1;
 #X obj 760 640 dac~;
 #X obj 373 26 bng 20 250 50 0 empty empty START 23 9 0 10 -262144 -1
 -1;
@@ -19,31 +19,29 @@
 #X restore 432 26 pd stop;
 #X obj 668 567 catch~ samples;
 #X obj 761 590 receive context-;
-#X obj 336 660 context :H 22 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :R 100 :Z
-12 :ID 11 :ol 1 :il 1 12 obj 0 27 content :lo helpfiles/wavs/open-conga.wav
+#X obj 336 660 context :H 20 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :R 100 :Z
+12 :ol 1 :il 1 12 obj 0 27 content :lo helpfiles/wavs/open-conga.wav
 :x2 0.27 :y1 0.243 :y2 0.468002 5 obj 28 82 throw~ samples 5 connect
 3 0 4 0;
-#X obj -4 538 context :H 29 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 17.5
-12.5 0 0 0 :R 100 :Z 12 :ID 12 :ol 1 :il 1 12 obj 0 27 content :lo
-helpfiles/wavs/lo-conga.wav :x2 0.241875 :y1 0.243 :y2 0.468002 4 obj
-0 -20 mover 5 obj 12 79 throw~ samples 5 connect 3 0 5 0;
+#X obj -4 538 context :H 27 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 17.5
+12.5 0 0 0 :R 100 :Z 12 :ol 1 :il 1 12 obj 0 27 content :lo helpfiles/wavs/lo-conga.wav
+:x2 0.241875 :y1 0.243 :y2 0.468002 4 obj 0 -20 mover 5 obj 12 79 throw~
+samples 5 connect 3 0 5 0;
 #X obj 178 518 context :X 9 :a ' # = ' :c 2 :d 1 :i 9 12 13 12 12 13
-11 12 0 :n ' note ' :x = 1 2 4 5 :Z 15 :ID 4 :ol 1 :il 1;
+11 12 0 :n ' note ' :x = 1 2 4 5 :Z 15 :ol 1 :il 1;
 #X obj 231 282 context :X 9 :a ' # = ' :c 2 :d 1 :i 9 6 5 6 7 8 7 6
-0 :n ' note ' :x = 2 3 7 8 :Z 14 :ID 5 :il 1;
+0 :n ' note ' :x = 2 3 7 8 :Z 14 :il 1;
 #X obj 268 356 context :a ' # = ' :c 2 :d 0.5 :i 4 3 2 3 0 :n ' note
-' :x = 2 5 :Z 17 :ID 6 :il 1;
+' :x = 2 5 :Z 17 :il 1;
 #X obj 178 591 context :X 9 :a ' # = ' :c 2 :d 1 :i 2 3 1 -4 0 1 -1
--7 0 :n ' note ' :x = 1 7 8 :Z 15 :ID 7 :il 1;
+-7 0 :n ' note ' :x = 1 7 8 :Z 15 :il 1;
 #X obj 376 269 context :X 17 :a ' # = ' :c 2 :d 2 :i -8 -8 -8 -8 -8
 -8 -8 -7 -8 -8 -8 -8 -8 -8 -8 -8 0 :n ' note ' :x = 2 7 9 14 15 :Z
-22 :ID 8 :il 1;
+22 :il 1;
 #X obj 216 449 context :a ' # = ' :c 2 :d 0.5 :f 3 :h 2 :i 8 0 0 0
-0 :j -5 0 2 :n ' note ' :x = 1 2 :y = 1 2 3 :R 63.36 :Z 22 :ID 9 :il
-1;
+0 :j -5 0 2 :n ' note ' :x = 1 2 :y = 1 2 3 :R 63.36 :Z 22 :il 1;
 #X obj 437 344 context :a ' # = ' :c 2 :d 0.5 :f 3 :h 2 :i -9 0 0 0
-0 :j -6 -4 1 :n ' note ' :x = 1 5 :y = 1 2 3 :R 63.36 :Z 22 :ID 10
-:il 1;
+0 :j -6 -4 1 :n ' note ' :x = 1 5 :y = 1 2 3 :R 63.36 :Z 22 :il 1;
 #X floatatom 920 593 5 0 0 0 - - -, f 5;
 #X obj 761 615 helpfiles/docfiles/glock~ 1;
 #X text 448 60 <--;
@@ -55,10 +53,10 @@ helpfiles/wavs/lo-conga.wav :x2 0.241875 :y1 0.243 :y2 0.468002 4 obj
 ;
 #X obj 652 270 context :a ' # = ' :c 2 :d 0.5 :i -1 1 0 0 0 :n ' note
 ' :x = 1 2 3 4;
-#X obj 458 660 context :H 29 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 12.5
-16.5 0 0 0 :R 100 :Z 12 :ID 17 :ol 1 :il 1 12 obj 0 27 content :lo
-helpfiles/wavs/tom-2.wav :x2 0.230625 :y1 0.243 :y2 0.468001 5 obj
-28 82 throw~ samples 5 connect 3 0 4 0;
+#X obj 458 660 context :H 27 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 12.5
+16.5 0 0 0 :R 100 :Z 12 :ol 1 :il 1 12 obj 0 27 content :lo helpfiles/wavs/tom-2.wav
+:x2 0.230625 :y1 0.243 :y2 0.468001 5 obj 28 82 throw~ samples 5 connect
+3 0 4 0;
 #X obj 55 43 cnv 15 199 38 empty empty empty 18 16 2 24 -99865 -1 0
 ;
 #X obj 51 39 cnv 15 199 38 empty empty empty 18 16 2 24 -1 -1 0;
@@ -87,13 +85,6 @@ The first one opens or closes a random toggle anywhere in the network
 \, the second one changes a random note. Both of these actions happen
 once per cycle. Close these toggles and the music will cease to evolve.
 , f 70;
-#X obj 11 337 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 12 338 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 16 342 part of the Context library;
-#X text 13 373 copyright Liam Goodacre 2017;
-#X text 21 358 licensed under the GPL v3;
 #X obj 761 557 scaler pentatonic egyptian b# 4;
 #X obj 99 419 context :M 1 :b ' < lev ( 0.01 * (?50 + 50)) ' :c 3 :d
 3 :h 1 :i 18.5 18.5 0 0 18.5 :k 0.5 :x = 1 2 3 :y = 1 :z 0 :E 1 :K
@@ -102,16 +93,17 @@ once per cycle. Close these toggles and the music will cease to evolve.
 :d 3 :h 1 :i 18.5 18.5 0 0 18.5 :k 0.5 :x = 1 2 3 :y = 1 :z 0 :E 1
 :K 3 :R 100;
 #X obj 683 544 receive lev;
-#X obj 578 660 context :H 31 :X 9 :Y 7 :c 14 :d 10 :h 1 :j 11.5 12.5
-16.5 0 0 0 :E 1 :R 100 :Z 12 :ID 17 :ol 1 :il 1 12 obj 0 32 content
-:lo helpfiles/wavs/velcro.wav :x2 4.27083 :y1 4.44444 :y2 8.61113 5
-obj 28 82 throw~ samples2 5 connect 3 0 4 0;
+#X obj 578 660 context :H 29 :X 9 :Y 7 :c 14 :d 10 :h 1 :j 11.5 12.5
+16.5 0 0 0 :E 1 :R 100 :Z 12 :ol 1 :il 1 12 obj 0 32 content :lo helpfiles/wavs/velcro.wav
+:x2 4.27083 :y1 4.44444 :y2 8.61113 5 obj 28 82 throw~ samples2 5 connect
+3 0 4 0;
 #X obj 668 589 *~ 1;
 #X obj 722 681 catch~ samples2;
 #X obj 722 703 hip~ 100;
+#X obj 8 326 ctxfiles/license;
 #X connect 0 2 1 3;
 #X connect 0 8 20 0;
-#X connect 1 3 42 1;
+#X connect 1 3 37 1;
 #X connect 1 4 15 2;
 #X connect 1 6 11 3;
 #X connect 2 3 16 3;
@@ -119,16 +111,16 @@ obj 28 82 throw~ samples2 5 connect 3 0 4 0;
 #X connect 2 7 23 0;
 #X connect 2 8 0 7;
 #X connect 4 0 0 3;
-#X connect 6 0 46 0;
+#X connect 6 0 41 0;
 #X connect 7 0 18 0;
 #X connect 10 3 13 3;
-#X connect 11 3 42 2;
+#X connect 11 3 37 2;
 #X connect 11 5 12 2;
-#X connect 14 0 43 2;
+#X connect 14 0 38 2;
 #X connect 14 6 16 1;
 #X connect 14 14 8 7;
 #X connect 15 0 10 3;
-#X connect 16 1 43 3;
+#X connect 16 1 38 3;
 #X connect 17 0 18 1;
 #X connect 18 0 3 0;
 #X connect 18 0 3 1;
@@ -138,19 +130,19 @@ obj 28 82 throw~ samples2 5 connect 3 0 4 0;
 #X connect 21 5 23 2;
 #X connect 21 8 0 7;
 #X connect 22 2 13 6;
-#X connect 22 5 43 4;
+#X connect 22 5 38 4;
 #X connect 22 8 14 14;
 #X connect 23 2 22 4;
-#X connect 42 0 9 8;
-#X connect 42 1 8 1;
-#X connect 42 2 45 1;
-#X connect 43 0 8 4;
-#X connect 43 1 24 1;
-#X connect 43 2 45 3;
-#X connect 44 0 46 1;
-#X connect 46 0 3 0;
-#X connect 46 0 3 1;
-#X connect 47 0 48 0;
-#X connect 48 0 3 0;
-#X connect 48 0 3 1;
+#X connect 37 0 9 8;
+#X connect 37 1 8 1;
+#X connect 37 2 40 1;
+#X connect 38 0 8 4;
+#X connect 38 1 24 1;
+#X connect 38 2 40 3;
+#X connect 39 0 41 1;
+#X connect 41 0 3 0;
+#X connect 41 0 3 1;
+#X connect 42 0 43 0;
+#X connect 43 0 3 0;
+#X connect 43 0 3 1;
 #X coords 0 687 1 686 385 100 0;

@@ -6092,8 +6092,7 @@ f 82;
 #X connect 42 0 22 0;
 #X connect 42 1 28 2;
 #X restore 101 112 pd e;
-#X text -329 39 A part of the Context library. licensed under the GPL.
-See license.txt. Copyright Liam Goodacre 2017;
+#X obj 100 39 ctxfiles/license;
 #X obj -539 -16 iemguts/initbang;
 #X obj -539 6 ctxfiles/myinit 2;
 #X obj -539 28 s \$0-myinit;

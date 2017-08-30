@@ -1,10 +1,10 @@
-#N canvas 233 109 1040 687 10;
+#N canvas 230 81 1040 687 10;
 #X obj 95 113 context :X 9 :a ' # 1 | # -2 | # 2 | # -4 | # -3 | #
-3 | # -2 | # 4 ' :d 2 :e 9 :x = 1 3 6 8 9 :Z 28 :ID 1;
+3 | # -2 | # 4 ' :d 2 :e 9 :x = 1 3 6 8 9 :Z 28;
 #X obj 173 202 context :X 9 :a ' # 2 | # 2 | # 2 | # 8 | # 7 | # 6
-| # 5 | # 4 ' :d 2 :e 9 :x = 4 5 6 7 8 9 :Z 28 :ID 2;
+| # 5 | # 4 ' :d 2 :e 9 :x = 4 5 6 7 8 9 :Z 28;
 #X obj 55 202 context :X 9 :a ' # 9 | # 8 | # 10 | # 7 | # 12 | # 8
-| # 5 | # 5 ' :d 1 :e 9 :x = 1 2 4 6 :Z 15 :ID 3;
+| # 5 | # 5 ' :d 1 :e 9 :x = 1 2 4 6 :Z 15;
 #X obj 796 69 docfiles/glock~ 1;
 #X obj 795 94 dac~;
 #X obj 796 21 scaler blues major db 6;
@@ -137,14 +137,14 @@
 -4034 0;
 #X obj 758 -11 catch~ samples;
 #X obj 796 44 receive context-;
-#X obj 1454 320 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 11 :ol
-1 12 obj 0 28 content :lo helpfiles/wavs/open-conga.wav :x2 0.244792
-:y1 0.233333 :y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0
-4 0;
-#X obj 1583 320 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 11 :ol
-1 12 obj 0 28 content :lo helpfiles/wavs/lo-conga.wav :x2 0.244792
-:y1 0.233333 :y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0
-4 0;
+#X obj 1454 320 context :H 14 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ol 1 12
+obj 0 28 content :lo helpfiles/wavs/open-conga.wav :x2 0.244792 :y1
+0.233333 :y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0 4 0
+;
+#X obj 1583 320 context :H 14 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ol 1 12
+obj 0 28 content :lo helpfiles/wavs/lo-conga.wav :x2 0.244792 :y1 0.233333
+:y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0 4 0;
+#X obj 444 34 ctxfiles/license;
 #X connect 3 0 4 0;
 #X connect 3 0 4 1;
 #X connect 7 0 6 0;

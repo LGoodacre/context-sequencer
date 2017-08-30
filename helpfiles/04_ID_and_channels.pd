@@ -1,4 +1,4 @@
-#N canvas 117 241 1147 400 10;
+#N canvas 114 245 1147 400 10;
 #X obj 36 75 cnv 15 609 294 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 26 65 cnv 15 609 294 empty empty empty 20 12 0 14 -1 -66577
@@ -65,25 +65,19 @@
 12 :ex ' clear ';
 #X obj 469 126 send context;
 #X obj 469 292 receive context-;
-#X msg 1036 237 \; context stop;
-#X text 697 160 If the symbol you typed matches an existing tag \,
-it will be removed. If not it will be added., f 57;
+#X msg 766 259 \; context stop;
+#X text 675 176 If the symbol you typed matches an existing tag \,
+it will be removed. If not it will be added., f 54;
 #X text 679 93 1: right click and select 'properties' \; 2: go to ID
 --> tags \; 3: click on the symbol \, type the tag and press return
 \; 4: double click the top-right button twice to exit the menu., f
-63;
-#X text 57 80 Press these buttons to start different context groups
-and watch the output at the bottom., f 91;
+54;
+#X text 57 77 Press these buttons to start different context groups
+and watch the output at the bottom., f 80;
 #X text 662 237 a message sent to 'context' will go to all open Contexts.
-ie:, f 61;
-#X obj 861 305 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 862 306 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 866 310 part of the Context library;
-#X text 863 341 copyright Liam Goodacre 2017;
-#X text 871 326 licensed under the GPL v3;
+ie:, f 52;
 #X text 29 48 Refer to Manual section 7: ID AND CHANNELS;
+#X obj 860 321 ctxfiles/license;
 #X connect 15 0 16 0;
 #X connect 18 0 17 0;
 #X connect 20 0 19 0;

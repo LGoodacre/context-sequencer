@@ -1,4 +1,4 @@
-#N canvas 55 247 1301 458 10;
+#N canvas 65 251 1301 458 10;
 #X obj 27 12 cnv 15 394 49 empty empty empty 13 21 0 30 -99865 -261234
 0;
 #X obj 20 5 cnv 15 394 49 empty empty empty 13 21 0 30 -1 -261234 0
@@ -66,15 +66,12 @@ ctx outlet~ 5 obj 219 -32 ctx outlet~ 5 connect 3 0 5 0 5 connect 4
 :y2 2.28571 :c 13 :li 1 5 connect 3 0 7 0 5 connect 4 0 7 0 5 connect
 5 0 7 0 5 connect 6 0 7 0 5 connect 9 0 7 0 5 connect 10 0 7 0;
 #X obj 1126 357 dac~;
-#X text 1163 172 This patch has the [mover] object in the overlay \,
-so the samples can be moved easily around the canvas \; To use [mover]
-;
-#X text 1162 220 1: Hold down the Shift key and move the mosue cursor
+#X text 1156 207 1: Hold down the Shift key and move the mosue cursor
 over the Context \; 2: Go to the left edge of one of the Content samples
 \; 3: Once the line turns black \, click and drag the object \; 4:
 Do the same over the right edge to resize \; 5: To move objects vertically
 \, double press and hold the Shift key \; 6: Then do the same as before.
-The top edge moves while the bottom edge re-sizes.;
+The top edge moves while the bottom edge re-sizes., f 51;
 #X obj 2014 167 context :H 12 :X 30 :Y 11 :c 26 :d 12 :ol 1 55 obj
 23 25 context :H 24 :X 7 :Y 6 :c 3 :d 1 :F 6.86646e-05 :G -72 :ol 1
 :x1 0.793103 :x2 3.68966 :y1 2.27273 :y2 2.27273 14 obj 0 33 content
@@ -86,14 +83,13 @@ throw~ audio 5 connect 3 0 4 0 30 obj 181 25 context :a ' d ' :c 3
 #X obj 2227 78 dac~;
 #X obj 2305 56 receive c5-;
 #X obj 2305 76 route d;
-#X obj 2305 96 ../documentation/docfiles/snare;
 #X text 523 171 Two [content]s are used here--one for sample playback
 and the other for the level. Redraw the level curve at will using the
 mouse. Note how this Context is looped., f 35;
 #X text 522 255 Context won't start if you double click over a [content]
 \, so there isn't much room for double clicking here (you have to go
 for the small green part at the top., f 35;
-#X text 110 187 Here \, the embedded [content] object hosts a sammple.
+#X text 100 177 Here \, the embedded [content] object hosts a sammple.
 The [ctx outlet~] object is used inside the overlay for the signal
 connection. Double click on the green canvas area to play. Changing
 the cycle time will change the speed \, and choosing a negative time
@@ -104,16 +100,16 @@ inside another: the inner one will cycle contiuously while the cursor
 is over it. Notice that the first and second Context behave slightly
 differently--c4 stops abruptly when the cursor passes its border \,
 whereas c5 comes to the end of its cycle. This is determined by the
-:es setting., f 50;
-#X text 2387 241 This patch also demonstrates how it is possible to
+:es setting., f 43;
+#X text 2389 264 This patch also demonstrates how it is possible to
 embed an object inside an embedded object. C4 is itself embedded but
 also has a [content] inside it. Look out though--this is what makes
 the patch so slow to load. It would be more practical to host the sample
-in an external Context and then send messages from c4., f 50;
+in an external Context and then send messages from c4., f 43;
 #X text 2017 318 BUG: altering the time on c6 does work but it takes
 a VERY long time to recalculate (as in up to two minutes). If you want
 to try it \, you should type in a new number instead of scrolling.
-, f 60;
+, f 49;
 #X obj 22 7 cnv 15 390 45 empty empty EMBEDDING EXAMPLES 25 21 0 30
 -193183 -261234 0;
 #X text 440 17 This patch shows some possibilities for how to use timeline
@@ -136,15 +132,13 @@ obj 0 -20 mover 8 obj 52 0 marker :x1 3 :y1 1.6875 8 obj 92 0 marker
 #X text 1764 202 Here \, [marker] is used to indicate star and end
 points for the "start" command (notice the "m" operator). You can move
 the markers with [mover] the same way as the previous example., f
-29;
-#X obj 869 25 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 870 26 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 874 30 part of the Context library;
-#X text 871 61 copyright Liam Goodacre 2017;
-#X text 879 46 licensed under the GPL v3;
+24;
 #X text 439 56 Refer to Manual Section 14: EMBEDDING OBJECTS;
+#X obj 880 34 ctxfiles/license;
+#X obj 2305 96 helpfiles/docfiles/snare;
+#X text 1165 153 This patch has the [mover] object in the overlay \,
+so the samples can be moved easily around the canvas. To use [mover]:
+, f 48;
 #X connect 15 9 18 0;
 #X connect 15 10 18 1;
 #X connect 17 5 16 0;
@@ -153,11 +147,11 @@ the markers with [mover] the same way as the previous example., f
 #X connect 18 0 19 1;
 #X connect 20 25 21 0;
 #X connect 20 25 21 1;
-#X connect 25 0 26 0;
-#X connect 25 0 26 1;
-#X connect 27 0 28 0;
-#X connect 28 0 29 0;
-#X connect 29 0 26 1;
-#X connect 29 0 26 0;
-#X connect 45 0 44 0;
-#X connect 46 0 44 7;
+#X connect 24 0 25 0;
+#X connect 24 0 25 1;
+#X connect 26 0 27 0;
+#X connect 27 0 48 0;
+#X connect 43 0 42 0;
+#X connect 44 0 42 7;
+#X connect 48 0 25 1;
+#X connect 48 0 25 0;

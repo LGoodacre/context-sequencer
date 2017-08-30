@@ -1,4 +1,4 @@
-#N canvas 55 14 1301 691 10;
+#N canvas 65 85 1301 687 8;
 #X obj 421 24 cnv 15 420 58 empty empty empty 20 21 2 37 -99865 -228856
 0;
 #X obj 416 18 cnv 15 420 58 empty empty empty 20 21 2 37 -1 -228856
@@ -101,13 +101,7 @@ so their bursts are along the x-axis.;
 and RANDOM) to control their behahiour.;
 #X text 19 112 *;
 #X text 19 148 *;
-#X obj -37 635 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj -36 636 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text -32 640 part of the Context library;
-#X text -35 671 copyright Liam Goodacre 2017;
-#X text -27 656 licensed under the GPL v3;
+#X obj -25 628 ctxfiles/license;
 #X connect 9 0 10 4;
 #X connect 9 1 11 2;
 #X connect 9 2 27 1;

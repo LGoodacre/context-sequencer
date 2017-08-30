@@ -1,4 +1,4 @@
-#N canvas 65 81 1301 687 10;
+#N canvas 65 89 1301 687 8;
 #X obj 53 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
 #X obj 44 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -30,7 +30,7 @@
 #X text 628 253 = reads a value from the toggle float array;
 #X obj 687 333 context :X 9 :Y 5 :a ' = ' :b ' . :x (?8+1) ' :d 3 :f
 2 :h 1 :i 1 2 1 2 1 2 1 2 1.5 :m 1 :x = 1 2 3 4 5 6 7 8 9 :y = 1 2
-:P 1 :Z 17 :ID 1 :ex ' clear ';
+:P 1 :Z 17 :ex ' clear ';
 #X obj 555 122 cnv 15 496 72 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 548 115 cnv 15 496 72 empty empty empty 20 12 0 14 -1 -66577
@@ -46,11 +46,8 @@
 #X obj 6 47 cnv 15 951 53 empty empty message variables: dynamic networking examples
 12 22 2 43 -83573 -204800 0;
 #X msg 994 64 \; pd dsp 1;
-#X text 140 151 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
+#X text 114 150 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
 TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
-#X text 563 131 In these examples \, message variables are not being
-used to make notes \, but to modify the network in some way. This is
-called "dynamic networking"., f 79;
 #X obj 1263 98 docfiles/snare;
 #X obj 1258 165 dac~;
 #X obj 1262 141 *~ 0.3;
@@ -90,7 +87,8 @@ envelope.;
 \, then this will be your first encounter with [content]! See manual
 section 14 to learn more about it.;
 #X obj 1217 247 context :X 17 :b ' < ^ drums :x (?4 * 2 + 1) ' :c 1
-:d 1 :h 1 :x = 1 5 17 :y = 1 2 :P 1 :Z 31;
+:d 1 :h 1 :i 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.5 :x = 1 5 17 :y = 1
+2 :P 1 :Z 31;
 #X obj 1192 393 context :X 9 :a ' 1 ' :c 1 :d 1 :n ' drums ' :x = 1
 2 5;
 #X obj 1266 320 context :X 9 :a ' 2 ' :c 1 :d 1 :n ' drums ' :x = 1
@@ -112,8 +110,8 @@ whih is sent to the :x toggles of the chosen Context.;
 Contexts \, but it could choose them randomly if the :nr setting is
 set to 1;
 #X obj 1768 247 context :X 17 :Y 6 :a ' 1 | | | | | | | | | | | | 1
-' :b ' . :x ? 16 3 ' :c -99999 :d 3 :f 3 :h 1 :x = 1 4 7 11 13 17 :y
-= 1 2 :R 100 :Z 31 :ro 1;
+' :b ' . :x ? 16 3 ' :c -99999 :d 3 :f 3 :h 1 :i 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 6.5 :x = 1 4 7 11 13 17 :y = 1 2 :R 100 :Z 31 :ro 1;
 #X obj 1768 339 context :X 17 :a ' 2 ' :b ' . :x def > c6 x ' :c -99999
 :d 3 :f 2 :h 1 :x = 1 4 7 11 13 17 :y = 1 2 :R 100 :Z 30;
 #X text 1982 254 ? picks a random number \, given a maximum;
@@ -151,8 +149,9 @@ how frequently it steals settings from c6., f 76;
 #X obj 2301 201 cnv 15 522 369 empty empty 4: matching rhythm using > and [ ]
 20 12 0 24 -260448 -1 0;
 #X obj 2318 247 context :X 17 :Y 6 :a ' 2 | | | | | | | | | | | | 1
-' :b ' . :x ? 16 3 ' :c -65432 :d 3 :f 3 :h 1 :x = 1 4 5 7 8 9 13 17
-:y = 1 2 :R 100 :Z 31 :ro 1;
+' :b ' . :x ? 16 3 ' :c -65432 :d 3 :f 3 :h 1 :i 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 8.5 :x = 1 4 5 7 8 9 13 17 :y = 1 2 :R 100 :Z 31 :ro
+1;
 #X obj 2318 339 context :X 17 :a ' 1 ' :b ' . :x def ( ? ( 0 [ > c8
 x ] - 1) + 1 ) [ > c8 x ] ' :c -65432 :d 3 :f 2 :h 1 :x = 4 :y = 1
 :R 100 :Z 30;
@@ -174,29 +173,25 @@ both of the square bracket functions. It runs like this \; 1: steal
 #X text 2313 536 BUG: c9's message executes before c8's so it sometimes
 gets it wrong..., f 72;
 #X obj 1138 130 print Context;
-#X obj -60 127 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj -59 128 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text -55 132 part of the Context library;
-#X text -58 163 copyright Liam Goodacre 2017;
-#X text -50 148 licensed under the GPL v3;
-#X text 564 164 Refer to Manual Section 12;
-#X connect 26 0 36 0;
-#X connect 28 0 27 0;
+#X obj -102 141 ctxfiles/license;
+#X text 563 129 In these examples \, message variables are not being
+used to make notes \, but to modify the network in some way. This is
+called "dynamic networking". Refer to Manual Section 12, f 66;
+#X connect 25 0 35 0;
+#X connect 27 0 26 0;
+#X connect 27 0 26 1;
 #X connect 28 0 27 1;
-#X connect 29 0 28 1;
-#X connect 30 0 36 0;
-#X connect 31 0 30 0;
-#X connect 32 0 26 0;
-#X connect 33 0 39 0;
-#X connect 33 0 74 0;
-#X connect 36 0 28 0;
-#X connect 38 0 30 0;
-#X connect 38 1 26 0;
-#X connect 39 0 36 1;
-#X connect 39 1 38 0;
-#X connect 43 0 44 2;
-#X connect 43 4 45 0;
-#X connect 52 16 53 16;
-#X connect 64 16 65 16;
+#X connect 29 0 35 0;
+#X connect 30 0 29 0;
+#X connect 31 0 25 0;
+#X connect 32 0 38 0;
+#X connect 32 0 73 0;
+#X connect 35 0 27 0;
+#X connect 37 0 29 0;
+#X connect 37 1 25 0;
+#X connect 38 0 35 1;
+#X connect 38 1 37 0;
+#X connect 42 0 43 2;
+#X connect 42 4 44 0;
+#X connect 51 16 52 16;
+#X connect 63 16 64 16;

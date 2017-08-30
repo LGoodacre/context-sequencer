@@ -1,4 +1,4 @@
-#N canvas 65 81 1301 687 10;
+#N canvas 65 53 1301 715 8;
 #X obj -77 -69 cnv 15 2203 1678 empty empty empty 20 12 0 14 -70489
 -66577 0;
 #X obj 9 6 cnv 15 1090 85 empty empty empty 20 12 0 14 -128992 -66577
@@ -29,7 +29,7 @@
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
-#X coords 0 -1 1 1 122 14 2 100 100;
+#X coords 0 -1 1 1 102 11 2 100 100;
 #X restore 701 136 pd define;
 #X obj 701 155 s burst-test;
 #X obj 72 136 hsl 97 15 0 15 0 0 empty empty HOW_MANY -2 -8 0 14 -262144
@@ -53,9 +53,9 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X coords 0 -1 1 1 32 14 2 100 100;
+#X coords 0 -1 1 1 27 11 2 100 100;
 #X restore 69 154 pd int;
-#N canvas 65 81 450 300 int 0;
+#N canvas 65 89 450 300 int 0;
 #X obj 100 56 inlet;
 #X obj 100 78 int;
 #X floatatom 100 100 5 0 0 0 - - -, f 5;
@@ -63,7 +63,7 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X coords 0 -1 1 1 32 14 2 100 100;
+#X coords 0 -1 1 1 27 11 2 100 100;
 #X restore 69 264 pd int;
 #N canvas 65 81 450 300 int 0;
 #X obj 100 56 inlet;
@@ -73,7 +73,7 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X coords 0 -1 1 1 32 14 2 100 100;
+#X coords 0 -1 1 1 27 11 2 100 100;
 #X restore 69 374 pd int;
 #N canvas 65 81 450 300 int 0;
 #X obj 100 56 inlet;
@@ -83,7 +83,7 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X coords 0 -1 1 1 32 14 2 100 100;
+#X coords 0 -1 1 1 27 11 2 100 100;
 #X restore 700 264 pd int;
 #N canvas 65 81 450 300 int 0;
 #X obj 100 56 inlet;
@@ -93,7 +93,7 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X coords 0 -1 1 1 32 14 2 100 100;
+#X coords 0 -1 1 1 27 11 2 100 100;
 #X restore 700 374 pd int;
 #X obj 15 136 cnv 15 43 38 empty empty empty 20 12 0 14 -66577 -66577
 0;
@@ -135,7 +135,7 @@
 the next cycle. It forces this number for the next cycle \, but it
 may wander from there if :p or :l are positive., f 76;
 #X text 179 178 0 \, th default setting \, means "all toggles".;
-#X text 180 223 :p creates an arithmetic progression for the toggle
+#X text 180 236 :p creates an arithmetic progression for the toggle
 quantity. If :p is set to 1 \, then one more toggle will fire each
 cycle. In this case \, :p 14 is equivalent to a progression of -1,
 f 76;
@@ -144,7 +144,7 @@ f 76;
 #X text 802 155 :o defines a precise series of toggles for the next
 cycle. Type in a list of numbers 1 to 15 here to see. :o overrides
 the :h setting., f 76;
-#X text 815 233 :p creates an arithmetic progression for the toggle
+#X text 814 240 :p creates an arithmetic progression for the toggle
 position. If :p is set to 1 \, then the burst selection toggle(s) will
 land one place higher next cycle. In this case \, :P 14 is equivalent
 to a progression of -1, f 75;
@@ -154,18 +154,18 @@ to a progression of -1, f 75;
 The higher the number \, the more uncertain the quantity according
 to Gaussian distribution \, with 0 being definite and 100 being even
 distribution., f 77;
-#X text 815 331 :R adds a degree of uncertainty to the toggle position.
+#X text 815 333 :R adds a degree of uncertainty to the toggle position.
 The higher the number \, the more uncertain the position according
 to Gaussian distribution \, with 0 being definite and 100 being even
 distribution., f 75;
 #X text 178 524 Note that :w does not affect progressions (:p) \, which
 will always wrap., f 76;
-#X text 815 449 :W determines whether random variations in the toggle
+#X text 813 464 :W determines whether random variations in the toggle
 positions can wrap. In this case \, if wrap is on \, a toggle could
 jump from position 1 to 15 \, or from 15 to 1 \, in one step \, whereas
 if they are off \, this would have to to be done in 14 steps., f 75
 ;
-#X text 178 452 :w determines whether random variations in the toggle
+#X text 178 466 :w determines whether random variations in the toggle
 quantity can wrap. In this case \, if wrap is on \, the toggle quantity
 could jump from 1 to 15 or from 15 to 1 in one step \, whereas if they
 are off \, this would have to to be done in 14 steps., f 76;
@@ -246,7 +246,7 @@ auto-advance is off), f 25;
 #X coords 0 -1 1 1 70 17 1 100 100;
 #X restore 68 71 pd audio;
 #X msg 970 588 \; burst-test :m \$1;
-#X text 380 11 The burst is the toggle array that fires at the end
+#X text 379 19 The burst is the toggle array that fires at the end
 of the Context cycle \, and the burst settings determine which toggles
 fire. There are 9 commands controlling this behaviour \, described
 below. Their function is best grasped by playing with them \, so it
@@ -266,7 +266,7 @@ will center around the same point., f 76;
 -66577 0;
 #X text 560 609 presets are editable in 'burst-presets.txt', f 11
 ;
-#X msg 1164 607 \; burst-test bump l;
+#X msg 1164 609 \; burst-test bump l;
 #X msg 1164 638 \; burst-test bump R;
 #X text 1100 599 reset urn for :l 101 and :R 101, f 9;
 #X text 178 417 At 101 \, :l selects an 'Urn random generator \, meaning
@@ -278,13 +278,9 @@ chosen \, the urn is reset., f 76;
 #X obj 9 563 context :X 16 :Y 3 :M 1 :c 13 :d 0.5 :i 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 1.5 :m 1 :n ' burst-test ' :x = 1 2 3 4 5 6 7 8 9 10
 11 12 13 14 15 16 :z 0 :F 352 :G 44 :Z 59 :v 0 :a # _;
-#X obj 1108 18 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+#X obj 1103 31 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 1109 19 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 1113 23 part of the Context library;
-#X text 1110 54 copyright Liam Goodacre 2017;
-#X text 1118 39 licensed under the GPL v3;
+#X obj 1103 31 ctxfiles/license;
 #X connect 6 0 12 0;
 #X connect 13 0 14 0;
 #X connect 15 0 22 0;

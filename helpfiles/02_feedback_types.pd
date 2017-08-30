@@ -1,4 +1,4 @@
-#N canvas 330 81 640 687 10;
+#N canvas 327 85 640 687 10;
 #X obj 61 350 cnv 15 293 283 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 327 101 cnv 15 217 210 empty empty empty 20 12 0 14 -99865 -66577
@@ -37,10 +37,10 @@
 #X obj 75 453 context :M 1 :d 1 :x = 5;
 #X msg 158 386 start;
 #X msg 205 386 stop context;
-#X text 37 253 This will continue until you tell it to stop., f 35
+#X text 37 253 This will continue until you tell it to stop., f 30
 ;
 #X text 323 234 This will loop 2/3 times. (See Section 10: BURST SETTINGS)
-to understand how this selection is being made.), f 33;
+to understand how this selection is being made.), f 29;
 #X text 95 564 These Contexts loop with each other to create a circle.
 , f 33;
 #X text 376 371 Besides the start messages \, you can start any Context
@@ -48,13 +48,7 @@ by double clicking on its canvas (the green bit in the middle). To
 stop it \, click and hold. Try this out on any of the Contexts here.
 , f 33;
 #X text 221 68 Refer to Manual Section 3: FEEDBACK;
-#X obj 404 570 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 405 571 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 409 575 part of the Context library;
-#X text 406 606 copyright Liam Goodacre 2017;
-#X text 414 591 licensed under the GPL v3;
+#X obj 390 511 ctxfiles/license;
 #X connect 12 4 13 0;
 #X connect 13 0 12 4;
 #X connect 14 0 15 0;
