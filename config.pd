@@ -1,12 +1,12 @@
-#N canvas 369 176 726 300 10;
+#N canvas 199 170 1054 300 10;
 #X obj 157 57 inlet DISTRO;
 #X obj 489 59 inlet OS;
-#X text 185 211 NOT WORKING YET!;
+#X text 205 211 NOT WORKING YET!;
 #X obj 91 188 outlet VANILLA;
-#X obj 186 188 outlet L2ORK;
+#X obj 206 188 outlet L2ORK;
 #X obj 411 188 outlet LINUX;
-#X obj 496 188 outlet WINDOWS;
-#X obj 594 188 outlet IOS;
-#X text 594 211 NOT WORKING YET! Select Windows., f 21;
+#X obj 506 188 outlet WINDOWS;
+#X obj 614 188 outlet IOS;
+#X text 614 211 NOT WORKING YET! Select Windows., f 21;
 #X connect 0 0 3 0;
 #X connect 1 0 5 0;
