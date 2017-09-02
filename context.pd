@@ -1,8 +1,8 @@
-#N canvas 65 327 796 419 10;
+#N canvas 65 335 796 419 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 323 97 992 687 guts 0;
+#N canvas 317 105 992 687 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 568 85 795 687 names 0;
 #X msg 266 486 symbol  ;
@@ -3321,7 +3321,7 @@ b b b b f f f f, f 82;
 #X connect 30 3 0 0;
 #X connect 30 4 29 1;
 #X restore 552 338 pd inlet~;
-#N canvas 167 177 751 393 loadbang 0;
+#N canvas 161 185 751 393 loadbang 0;
 #X obj 225 153 s \$0-argstart;
 #X obj 196 307 s \$0-savestart;
 #X obj 182 333 del 1005;
@@ -3356,7 +3356,7 @@ b b b b f f f f, f 82;
 #X obj 464 60 t b b b b;
 #X obj 531 84 s tload#e%r^;
 #X obj 435 223 t f f;
-#X obj 467 268 ctxfiles/share3;
+#X obj 467 268 ctxfiles/share3 ctxfiles/IDshare;
 #X connect 2 0 3 0;
 #X connect 4 0 27 0;
 #X connect 6 0 4 0;
@@ -3590,7 +3590,7 @@ b b b b f f f f, f 82;
 #X connect 12 0 9 0;
 #X connect 13 0 0 0;
 #X restore 551 102 pd seed;
-#N canvas 743 298 450 392 ID 1;
+#N canvas 740 302 450 392 ID 0;
 #X obj 152 169 + 1;
 #X obj 167 361 s \$0nnumber;
 #X obj 216 314 - 1;
@@ -5924,7 +5924,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 99 3 72 0;
 #X connect 99 4 92 1;
 #X restore 552 391 pd rules;
-#N canvas 294 199 647 556 title 1;
+#N canvas 288 207 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
@@ -6697,7 +6697,7 @@ list;
 #X coords 0 -1 1 1 145 138 0;
 #X restore 100 98 pd face;
 #X floatatom 101 101 3 0 0 0 - #0-dr #0-:d2, f 3;
-#X symbolatom 121 101 3 0 0 0 - #0-symr #0-syms, f 3;
+#X symbolatom 124 101 3 0 0 0 - #0-symr #0-syms, f 3;
 #N canvas 340 179 450 293 box 0;
 #X obj 188 35 iemguts/sendcanvas;
 #X obj 188 13 receive \$0-xboxes;

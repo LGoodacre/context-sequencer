@@ -1,4 +1,4 @@
-#N canvas 220 290 450 300 10;
+#N canvas 217 294 450 300 10;
 #N canvas 103 298 1260 359 params 0;
 #X obj 85 65 receive paraquery";
 #X obj 85 87 unpack;
@@ -225,7 +225,7 @@
 #X connect 54 1 55 0;
 #X connect 54 2 50 1;
 #X connect 55 0 56 0;
-#X restore 93 134 pd colours;
+#X restore 93 132 pd colours;
 #N canvas 65 81 880 466 burstline 0;
 #X obj 266 334 - 1;
 #X obj 183 138 moses;
@@ -299,22 +299,8 @@
 #X connect 30 0 23 0;
 #X connect 31 0 26 0;
 #X connect 32 0 21 0;
-#X restore 92 159 pd burstline;
+#X restore 93 155 pd burstline;
 #X obj 86 71 shared ctxfiles/shareables;
-#N canvas 65 81 450 300 ID 0;
-#X obj 130 151 array define IDnn%^ 1;
-#X obj 130 41 receive resID%^;
-#X obj 130 63 max;
-#X obj 130 85 t f f;
-#X msg 130 129 resize \$1;
-#X obj 130 107 change;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X connect 3 0 5 0;
-#X connect 3 1 2 1;
-#X connect 4 0 0 0;
-#X connect 5 0 4 0;
-#X restore 92 183 pd ID;
 #N canvas 500 305 377 300 license 0;
 #X obj 133 13 receive license;
 #X obj 165 80 text define license;
@@ -339,4 +325,4 @@
 #X connect 7 0 9 0;
 #X connect 8 0 9 0;
 #X connect 10 0 1 0;
-#X restore 91 208 pd license;
+#X restore 93 178 pd license;

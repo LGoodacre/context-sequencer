@@ -1,0 +1,14 @@
+#N canvas 421 311 450 300 10;
+#X obj 130 63 max;
+#X obj 130 85 t f f;
+#X msg 130 129 resize \$1;
+#X obj 130 107 change;
+#X obj 130 151 array define \$1-IDshare 1;
+#X obj 130 41 receive \$1-IDsharer;
+#X obj 115 241 shared ctxfiles/IDshare \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 0 1;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 5 0 0 0;

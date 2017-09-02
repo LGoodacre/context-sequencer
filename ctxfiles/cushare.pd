@@ -1,4 +1,4 @@
-#N canvas 699 81 450 388 12;
+#N canvas 696 85 450 388 12;
 #X obj 179 105 array define %&nou;
 #N canvas 178 316 430 142 ^&*-dsmall1 0;
 #X obj 35 62 filledcurve 65 1 1 0 -5 0 5 10 5 10 -5;
@@ -23,7 +23,7 @@
 #X msg 96 309 ho ho;
 #X obj 96 333 print ho;
 #X obj 287 300 list trim;
-#X obj 222 50 shared ctxfiles/cushare;
+#X obj 222 50 shared ctxfiles/cushare 0;
 #X connect 3 0 4 0;
 #X connect 5 0 3 0;
 #X connect 5 0 6 0;
