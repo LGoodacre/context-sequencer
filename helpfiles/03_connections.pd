@@ -1,4 +1,4 @@
-#N canvas 308 160 800 440 10;
+#N canvas 305 164 800 440 10;
 #X obj 375 95 cnv 15 272 231 empty empty empty 20 12 0 15 -99865 -1
 0;
 #X obj 365 85 cnv 15 272 231 empty empty empty 20 12 0 15 -1 -1 0;
@@ -33,14 +33,14 @@ to see.;
 #X obj 551 169 context :c 4 :d 1 :i 0 0 0 0 3.5 :x = 5;
 #X msg 127 139 stop context;
 #X msg 434 131 stop context;
-#X text 357 338 To access float-connect \, double click on any toggle
-\, holding the mouse down \, and scroll up.;
 #X obj 518 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
 0;
 #X obj 605 230 cnv 1 1 1 empty \$0-tester ↑ -11 8 1 53 -262144 -1
 0;
 #X text 78 62 Refer to Manual Section 5: CONNECTIONS;
 #X obj 70 351 ctxfiles/license;
+#X text 357 338 To access float-connect \, click on any toggle and
+scroll up while holding the mouse down.;
 #X connect 9 0 16 0;
 #X connect 10 0 18 0;
 #X connect 16 4 17 0;
