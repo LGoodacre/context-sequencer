@@ -1,141 +1,29 @@
-#N canvas 65 89 1301 687 10;
-#X obj 39 522 cnv 15 342 19 empty empty empty 20 12 0 14 -99865 -66577
-0;
-#X obj 35 518 cnv 15 342 19 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 721 224 cnv 15 242 301 empty empty empty 20 12 0 14 -33289 -66577
-0;
-#X obj 828 34 cnv 15 288 103 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 972 150 cnv 15 222 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 525 644 cnv 15 389 112 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 988 446 cnv 15 292 140 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 932 603 cnv 15 287 120 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 1011 264 cnv 15 189 163 empty empty empty 20 12 0 16 -99865
--66577 0;
-#X obj 412 529 cnv 15 302 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 410 403 cnv 15 240 102 empty empty empty 12 15 0 16 -99865 -66577
-0;
-#X obj 410 283 cnv 15 232 100 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 422 169 cnv 15 252 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 564 54 cnv 15 252 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 560 50 cnv 15 252 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 824 30 cnv 15 288 103 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 968 146 cnv 15 222 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 521 640 cnv 15 389 112 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 984 442 cnv 15 292 140 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 928 599 cnv 15 287 120 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 1007 260 cnv 15 189 163 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 408 525 cnv 15 302 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 406 399 cnv 15 240 102 empty empty empty 12 15 0 16 -1 -66577
-0;
-#X obj 406 279 cnv 15 232 100 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 418 165 cnv 15 252 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 419 166 cnv 15 250 100 empty empty A LOOPER 20 12 0 16 -260644
--66577 0;
-#X obj 407 280 cnv 15 230 98 empty empty A RELAY 20 12 0 16 -260644
--66577 0;
-#X obj 407 400 cnv 15 238 100 empty empty A RANDOM NOTE SELECTOR
-12 15 0 16 -260644 -66577 0;
-#X obj 409 526 cnv 15 300 100 empty empty A DATABASE 20 12 0 16 -260644
--66577 0;
-#X obj 1008 261 cnv 15 187 161 empty empty A MEMORY BANK 20 12 0
-16 -260644 -66577 0;
-#X obj 929 600 cnv 15 285 118 empty empty A RANDOM RELAY 20 12 0
-16 -260644 -66577 0;
-#X obj 985 443 cnv 15 290 138 empty empty A SAMPLE PLAYER 20 12 0
-16 -260644 -66577 0;
-#X obj 522 641 cnv 15 387 110 empty empty A LANGUAGE 20 12 0 16 -260644
--66577 0;
-#X obj 969 147 cnv 15 220 100 empty empty A SPACER 20 12 0 16 -260644
--66577 0;
-#X obj 825 31 cnv 15 286 101 empty empty A STEP SEQUENCER 20 12 0
-16 -260644 -66577 0;
-#X obj 561 51 cnv 15 250 100 empty empty A TIMER 20 12 0 16 -260644
--66577 0;
-#X obj 261 41 cnv 15 271 81 empty empty empty 6 28 0 60 -99865 -1 0
-;
-#X obj 256 35 cnv 15 271 81 empty empty empty 6 28 0 60 -33289 -1 0
-;
-#X obj 257 36 cnv 15 269 79 empty empty empty 6 28 0 60 -203904 -1
-0;
-#X obj 258 37 cnv 15 267 77 empty empty empty 6 28 0 60 -13381 -1 0
-;
-#X obj 259 38 cnv 15 265 75 empty empty empty 6 28 0 60 -33289 -1 0
-;
-#X obj 32 265 cnv 15 351 236 empty empty empty 20 12 0 14 -99865 -66577
-0;
-#X obj 26 259 cnv 15 351 236 empty empty empty 20 12 0 14 -33289 -66577
-0;
-#X obj 27 260 cnv 15 349 234 empty empty empty 20 12 0 14 -4032 -66577
-0;
-#X obj 28 261 cnv 15 347 232 empty empty empty 20 12 0 14 -257985 -66577
-0;
-#X obj 29 262 cnv 15 345 230 empty empty empty 20 12 0 14 -33289 -66577
-0;
-#X obj 30 263 cnv 15 343 228 empty empty CONTEXT DOCUMENTATION 10
-16 0 22 -262144 -1 0;
-#X obj 260 39 cnv 15 263 73 empty empty CONTEXT 6 28 0 60 -227039 -1
-0;
-#X obj 445 87 cnv 15 15 15 empty empty v 3.0.1 8 11 0 15 -227039 -1
-0;
-#X text 270 92 an advanved sequencer for PD;
-#X text 54 342 THE CONTEXT MANUAL. This covers all main eatures of
-Context and explains how to use them. The Context manual is found in
-the main Context folder., f 51;
-#X text 38 342 1:;
-#X text 38 387 2:;
-#X text 54 387 MENU HELP PROMPTS. Right click on Context and select
-'properties' to enter the menu. The button at the bottom of each page
-prints help tips., f 51;
-#X text 38 432 3:;
-#X text 54 432 EXAMPLE FILES. These are in the 'helpfiles' folder and
-reference the order of the Manual., f 51;
-#X text 38 464 4:;
-#X text 54 464 VIDEO TUTORIALS. (Forthcoming), f 51;
-#X obj 1000 479 context :H 14 :X 17 :Y 6 :d 8.54 :Z 9 :ol 1 :il 1 18
+#N canvas 65 53 1301 715 10;
+#X obj 1221 360 context :H 14 :X 17 :Y 6 :d 8.54 :Z 9 :ol 1 :il 1 18
 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843
 :y2 8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
 :x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1 4.0131 :y1 1.5372 8
 obj 140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3 0 4 0;
-#X obj 788 674 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
-2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 1 3 5 6 7 9 :y = 1 :O
+#X obj 925 284 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
+2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 1 3 4 7 8 9 :y = 1 :O
 -20 :Z 14 :ro 1 :il 1;
-#X obj 733 71 context :Y 5 :b ' | | | . :i -l scramble ' :d 2 :f 4
+#X obj 1029 79 context :Y 5 :b ' | | | . :i -l scramble ' :d 2 :f 4
 :h 1 :i 7.5 5.5 10.5 0 3.5 :x = 1 2 3 5 :y = 1 2 3 4 :P 1 :il 1;
-#X obj 537 428 context :X 7 :M 1 :a ' # _ | | | # = ' :d 0.02 :h 2
+#X obj 998 447 context :X 7 :M 1 :a ' # _ | | | # = ' :d 0.02 :h 2
 :l 11 :n ' gl ' :p -1 :x = 1 2 3 4 5 6 :z 0 :R 101 :Z 9 :ol 1 :il 1
 ;
-#X obj 537 303 context :d 0.5 :i 4.5 4.5 4.5 4.5 0 :j 8.5 0 0 :x =
+#X obj 973 359 context :d 0.5 :i 4.5 4.5 4.5 4.5 0 :j 8.5 0 0 :x =
 1 2 4 :il 1;
-#X obj 1040 294 context :X 9 :a ' ¬ ' :b ' . :u (? 3 + 1) ' :d 1 :n
+#X obj 1238 279 context :X 9 :a ' ¬ ' :b ' . :u (? 3 + 1) ' :d 1 :n
 ' hat ' :x = 1 2 3 4 7 :y = 1 :O -15 :Z 13 :ba ' :x = 1 2 3 4 7 :i
 clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
-#X obj 841 61 context :a ' 1 ' :d 2 :n ' kick ' :x = 1 2 3 4 :il 1
+#X obj 1169 80 context :a ' 1 ' :d 2 :n ' kick ' :x = 1 2 3 4 :il 1
 ;
-#X obj 984 174 context :a ' 1 ' :b ' = ' :d 0.25 :f 2 :h 1 :j 1 9.5
+#X obj 1210 176 context :a ' 1 ' :b ' = ' :d 0.25 :f 2 :h 1 :j 1 9.5
 0 :n ' kick ' :y = 1 2 :P 1 :il 1;
-#X obj 548 191 context :X 7 :a ' ¬ ' :d 0.75 :h 1 :j 9.5 9.5 0 :n
-' snare ' :x = 1 2 3 5 :y = 1 2 3 :O -17 :R 100 :Z 8 :il 1;
-#N canvas 523 243 492 300 audio 0;
+#X obj 961 186 context :X 7 :a ' ¬ ' :d 0.75 :h 1 :j 9.5 9.5 0 :n
+' snare ' :x = 1 2 4 6 :y = 1 2 3 :O -17 :R 100 :Z 8 :il 1;
+#N canvas 520 247 492 300 audio 0;
 #X obj 287 21 receive gl-;
 #X obj 321 241 helpfiles/docfiles/hihat;
 #X obj 321 216 receive hat-;
@@ -173,14 +61,14 @@ clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 #X obj 204 238 *~;
 #X obj 204 260 dac~;
 #X msg 158 121 \; pd dsp \$1;
-#X obj 287 85 helpfiles/docfiles/glock~ 2;
 #X obj 418 33 loadbang;
 #X obj 418 55 f 2;
+#X obj 287 85 helpfiles/docfiles/glock2~;
 #X connect 0 0 3 0;
 #X connect 1 0 12 0;
 #X connect 2 0 1 0;
-#X connect 3 0 15 0;
-#X connect 3 1 15 0;
+#X connect 3 0 17 0;
+#X connect 3 1 17 0;
 #X connect 4 0 12 0;
 #X connect 5 0 7 0;
 #X connect 6 0 12 0;
@@ -191,96 +79,132 @@ clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 #X connect 11 0 12 1;
 #X connect 12 0 13 0;
 #X connect 12 0 13 1;
-#X connect 15 0 12 0;
-#X connect 16 0 17 0;
-#X connect 17 0 15 1;
-#X coords 0 -1 1 1 140 15 1 100 100;
-#X restore 783 4 pd audio;
-#X obj 961 632 context :Y 5 :h 1 :j 6.5 2.5 11.5 9.5 :y = 1 2 3 4 :z
-0 :R 100 :il 1;
-#X text 579 78 Context can keep time of other objects. This one is
-controlling the whole network top down., f 23;
-#X text 910 65 Each Context stores a pattern on its x-axis toggles.
-This one is controlling the bass drum., f 31;
-#X text 1054 178 This gives an extra bass drum kick every second bar.
-, f 19;
-#X text 538 676 Context has an advanced control language poweing it.
-Here \, text variables are sending a message to the sampler to start
-it at a random place each beat., f 40;
-#X text 1215 496 Context can hold and play sample arrays., f 10;
-#X text 1035 638 The y-axis toggles can fire randomly. This one is
-being used to start other Contexts in the network., f 26;
-#X text 1026 362 This Context has three different patterns stored \,
-which are rotated randomly each cycle., f 25;
-#X text 434 551 Each toggle stores a different message \, which is
-sent when the toggle fires, f 20;
-#X text 411 433 A different number of notes are chosen here each time.
-, f 20;
-#X text 429 194 This Context loops itself with a probability of 2/3.
-, f 19;
-#X text 422 307 This Context relays notes to the one below., f 15
-;
-#X obj 568 530 context :X 9 :a ' | g # ( ? 3 + 12) | g # ( ? 3 + 12)
+#X connect 15 0 16 0;
+#X connect 16 0 17 1;
+#X connect 17 0 12 0;
+#X coords 0 -1 1 1 140 16 1 100 100;
+#X restore 322 101 pd audio;
+#X obj 1210 476 context :Y 5 :h 1 :j 6.5 2.5 11.5 9.5 :y = 1 2 3 4
+:z 0 :R 100 :il 1;
+#X obj 1076 531 context :X 9 :a ' | g # ( ? 3 + 12) | g # ( ? 3 + 12)
 | g % g ' :b ' < c9 :x ? 6 2 | < c5 :x ? 4 | < c7 :x ? 3 ' :d 1 :e
 4 :f 3 :h 1 :n ' gl ' :x = 2 3 5 7 :y = 1 2 3 :O -7 :R 100 :Z 11 :ro
 1 :il 1;
-#X msg 701 3 start;
-#X msg 746 3 stop;
-#X obj 635 9 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144 -1
+#X msg 997 31 start;
+#X msg 1042 31 stop;
+#X obj 931 37 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144 -1
 0;
-#X obj 716 219 cnv 15 242 301 empty empty empty 20 12 0 14 -99865 -66577
-0;
-#X obj 711 214 cnv 15 242 301 empty empty empty 20 12 0 14 -162280
--66577 0;
-#X obj 707 209 cnv 15 242 301 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 708 210 cnv 15 240 299 empty empty WHAT IS CONTEXT? 20 12
-0 22 -262130 -1 0;
-#X text 721 245 CONTEXT is a modular sequencer for PD. It hosts a step
-sequence \, a database and an embeddable timeline for linear playback.
-Many Contexts connect together to form a network \, which can behave
-linearly \, algorithmically or generatively., f 35;
-#X text 721 431 Context deals with messages. It has no audio component
-and sends messages to other patches to tell them what to do., f 35
+#X obj 322 78 scaler pentatonic egyptian b# 4;
+#X obj 322 17 ctxfiles/license;
+#X obj 38 22 cnv 15 271 81 empty empty empty 6 28 0 60 -99865 -1 0
 ;
-#X text 721 350 Another answer to the question is \, ANYTHING YOU WANT.
-You can find many creative uses for Context--the examples given in
-this patch are just the beginning., f 35;
-#X obj 728 535 scaler pentatonic egyptian b# 4;
-#X text 52 293 Context is a big piece of software which requies time
-and patience to learn. There are four main resources currently available:
-, f 51;
-#X obj -30 527 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144
--1 0;
-#X obj 211 167 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
+#X obj 33 16 cnv 15 271 81 empty empty empty 6 28 0 60 -33289 -1 0
+;
+#X obj 34 17 cnv 15 269 79 empty empty empty 6 28 0 60 -203904 -1 0
+;
+#X obj 35 18 cnv 15 267 77 empty empty empty 6 28 0 60 -13381 -1 0
+;
+#X obj 36 19 cnv 15 265 75 empty empty empty 6 28 0 60 -33289 -1 0
+;
+#X obj 37 20 cnv 15 263 73 empty empty CONTEXT 6 28 0 60 -227039 -1
 0;
-#X obj 212 168 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
+#X text 42 78 an advanved sequencer for PD v3.0.1;
+#X text 598 79 Rajiv is in charge of the whole thing. He's not playing
+any music today--instead \, he's telling other people when to play
+\, like a conductor in an orchestra. Every two seconds \, Rajiv counts
+to four \, telling Gunter to start on one \, Megan on two \, Lilly
+on three \, and then taking a rest. However \, every fourth time he
+finishes this sequence \, Rajiv scrambles the order \, just to change
+things up.;
+#X text 1241 75 Gunter is a pretty simple guy and likes to play drums.
+He waits for a signal from Rajiv \, and them just keeps the beat \,
+but also passes a message on to Felicia every time he finishes a cycle.
+, f 43;
+#X text 1285 167 When Felicia receives a signal from Gunter \, she
+either plays an extra kick drum \, or tells Fei to play her snare.
+, f 23;
+#X text 1438 360 Michelle has a casette recorder with a little recording
+of a tabla. She is pretty nifty with this machine \, and can start
+the playback from any point in the recording \, so long as there are
+markers in the right place. This is what she does whenever she gets
+the word from Chris., f 47;
+#X text 1281 474 Lilly isn't playing anything today--she's just passing
+on messages. She takes orders directly from Rajiv and then passes them
+on instantly to either Ebo \, Chris \, Jean Paul or Fei. Which one
+of these she decides who to pass the message on to is completely random.
+;
+#X text 656 531 Jean Paul plays the melody. He is stuck with the same
+four note pattern and only knows three notes on the scale \, but it's
+up to him which of these he he plays. However \, he always follows
+a rule: Whichever note he chose for the second note must also be played
+for the third and fourth.;
+#X text 678 604 Jean Paul also plays a role in telling the percussion
+section what to do. Every time he finishes his melody \, he does one
+of three things: he either tells Fei \, Megan or Gunter to change their
+pattern a little bit., f 77;
+#X text 581 448 Luke is a pretty freeform musician. Every time Megan
+says go \, he takes a stab at the piano. Which keys he hits (and how
+many) is pretty much random. For now though \, he's only hitting the
+bass notes.;
+#X text 632 359 Megan is just here to pass messages on from Rajiv to
+Luke. She gives Luke a predefined pattern every time she is told to
+\, but she also changes that pattern whenever Jean Paul asks., f 47
+;
+#X text 1360 274 Ebo knows how to play three different patterns on
+the hi-hats. Each time he finishes one \, he picks another one at random.
+But he's also good at varying the length of his hits \, making sure
+that the quick one are shorter., f 47;
+#X text 527 185 Fei plays the snare. She has a little pattern which
+\, which she changes every time Jean Paul asks. It lasts only 3/4 of
+the length of the standard bar length that the rest of the group has
+agreed upon \, and she often likes to repeat as soon as she has played
+a cycle every.;
+#X text 514 277 Chris generates a sequence of random numbers which
+he sends to Michelle \, so that she can play it on her tape recorder.
+Chris has a template for this sequence \, but each time he sends it
+to Michelle \, he alters it slightly. He is also careful to tell Michelle
+to stop at the end., f 57;
+#X obj 4 129 cnv 15 456 506 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X text 216 172 part of the Context library;
-#X text 213 203 copyright Liam Goodacre 2017;
-#X text 221 188 licensed under the GPL v3;
-#X obj 36 519 cnv 15 340 17 empty empty empty 20 12 0 14 -228856 -66577
+#X obj 5 130 cnv 15 454 504 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#N canvas 398 147 674 401 ARE 0;
-#X text 63 80 1: To start Context \, double click on the empty green
-area in the middle \; 2: To stop Context \, click and hold \; 3: To
-resize Context \, hold Shift and click + drag just outside the right
-/ bottom botder \; 4: To enter the settings menu \, right click and
-select 'properties' \; 5: To return to the main view \, press the button
-on the top right \; 6: To change the timing \, use the float atom on
-the top left \; 7: To edit the message \, use the symbol atom at the
-top middle \; 8: The toggles along the bottom are called the PATTERN.
-They form a simple step sequencer \; 9: The toggles along the right
-are called the BURST. They fire all together at the end of the cycle
-\; 10: The outlets along the bottom are synched to the PATTERN \; 11:
-The inlets along the top are all the same. They can be used to start
-Context and receive other commands \; 12: To receive the messages that
-Context sends \, create an object [receove cx-] \, where 'cx' is the
-unique ID number of a Context shown near the top left corner. (Remember
-the dash after 'cx'). \; 13: To receives messages from all Contexts
-\, use [receive context-] (remember the dash \;, f 90;
-#X restore 36 519 HERE ARE THE MOST IMPORTANT THINGS TO KNOW ABOUT
-CONTEXT;
-#X connect 64 3 65 0;
-#X connect 81 0 60 0;
-#X connect 82 0 60 1;
+#X obj 6 131 cnv 15 452 502 empty empty empty 20 12 0 14 -159808 -66577
+0;
+#X obj 7 132 cnv 15 450 500 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 8 133 cnv 15 448 498 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X text 19 146 Imagine that it's Sunday and you've invited some friends
+over to play some music. They're all competent musicians and can play
+anything you want them to \, or even improvise on their on. Since they're
+all friends \, they're also really good at communicating with each
+other and following instructions. For instance \, you might say to
+them \, "OK Steve \, whenever Betty hits her drum \, you play that
+melody that I just taught you" \, or "Betty \, I'd like you to speed
+up a little bit whenever Steve finishes his guitar riff".;
+#X text 18 269 Since it's your party \, they're all going to play whatever
+you want them to \, but you can also teach them to take the lead and
+make their own decisions. So you might say \, "Arun \, you're in charge
+of this section: I want you to keep time for all the others" \, or
+"Hamid: when I say go \, I want you to play one of those two tape recordings
+I just gave you.";
+#X text 17 354 Because your friends are smart \, they can follow all
+sorts of complicated instructions. For instance you might say \, "Betty:
+Every third time you hear a C sharp \, I want you to tell Arun to remove
+a random one of the notes from the piano section I first taught him.
+Arun: You don't have to listen to Betty every time she tells you to
+remove a note \, but when you eventually get down to only two notes
+\, then go back to the original melody." And Betty and Arun would do
+this for you!;
+#X text 17 573 On the right is an example of a Context network in action.
+Remember though \, if your house is big enough \, you could invite
+a lot more friends than this!;
+#X text 17 477 This is essentially what Context is: a group of friends
+communicating and playing music together \, with you \, the host \,
+telling them what to do. Unfortunately they don't speak English \,
+so you're going to have to learn their language and idiosyncrasies
+if you want to be able to direct them properly. But once you do this
+\, the possibilities are limitless.;
+#X connect 6 3 7 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 1;
