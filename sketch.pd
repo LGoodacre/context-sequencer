@@ -1,4 +1,4 @@
-#N canvas 352 267 605 427 10;
+#N canvas 340 283 605 425 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -298,7 +298,7 @@ mirror-x 0 \; mirror-y tfs \$0 #f mirror-y 0 \; scale tfs \$0 #f scale
 #X restore -304 -129 pd canvas;
 #X obj -402 -247 namecanvas \$0-maincanvas;
 #X obj -213 -136 declare -lib zexy -stdlib zexy;
-#N canvas 575 143 527 471 inlets 0;
+#N canvas 563 159 527 471 inlets 0;
 #X obj 165 110 -;
 #X obj 165 132 until;
 #X obj 165 154 f;
@@ -366,7 +366,7 @@ mirror-x 0 \; mirror-y tfs \$0 #f mirror-y 0 \; scale tfs \$0 #f scale
 #X connect 25 0 9 4;
 #X restore -385 -44 pd inlets;
 #X obj -361 -128 outlet~;
-#N canvas 195 250 585 365 init 1;
+#N canvas 158 402 585 365 init 0;
 #X obj 157 20 inlet;
 #X obj 200 118 outlet;
 #X obj 157 42 ctxfiles/myinit 3;
@@ -387,11 +387,12 @@ mirror-x 0 \; mirror-y tfs \$0 #f mirror-y 0 \; scale tfs \$0 #f scale
 #X obj 44 212 t b b b;
 #X obj 63 256 s \$0-lbb2;
 #X obj 83 234 s \$0-lbb1;
-#X obj 157 64 t b b b b b b b;
 #X obj 229 250 s \$0-vload;
 #X obj 170 131 del 1;
+#X obj 321 97 ctxfiles/share3 ctxfiles/cushare;
+#X obj 157 64 t b b b b b b b f;
 #X connect 0 0 2 0;
-#X connect 2 0 19 0;
+#X connect 2 0 22 0;
 #X connect 3 0 6 0;
 #X connect 4 0 15 0;
 #X connect 6 0 4 0;
@@ -402,14 +403,15 @@ mirror-x 0 \; mirror-y tfs \$0 #f mirror-y 0 \; scale tfs \$0 #f scale
 #X connect 16 0 14 0;
 #X connect 16 1 17 0;
 #X connect 16 2 18 0;
-#X connect 19 0 11 0;
-#X connect 19 1 21 0;
-#X connect 19 2 9 0;
-#X connect 19 3 1 0;
-#X connect 19 4 12 0;
-#X connect 19 5 20 0;
-#X connect 19 6 3 0;
-#X connect 21 0 13 0;
+#X connect 20 0 13 0;
+#X connect 22 0 11 0;
+#X connect 22 1 20 0;
+#X connect 22 2 9 0;
+#X connect 22 3 1 0;
+#X connect 22 4 12 0;
+#X connect 22 5 19 0;
+#X connect 22 6 3 0;
+#X connect 22 7 21 0;
 #X restore -241 -207 pd init;
 #N canvas 350 93 450 359 saving 0;
 #X obj 85 136 text define -k \$0-save;
@@ -516,7 +518,7 @@ mirror-x 0 \; mirror-y tfs \$0 #f mirror-y 0 \; scale tfs \$0 #f scale
 #X restore -184 -68 pd properties;
 #X obj -184 -89 iemguts/propertybang;
 #X obj -333 -82 ctxfiles/points \$0 2;
-#X obj -111 -234 ctxfiles/share ctxfiles/cushare;
+#X obj -257 4 ctxfiles/license;
 #X connect 3 0 22 0;
 #X connect 5 0 16 0;
 #X connect 7 0 8 0;
