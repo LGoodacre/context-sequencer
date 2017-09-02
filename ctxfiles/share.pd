@@ -1,4 +1,4 @@
-#N canvas 511 266 635 446 10;
+#N canvas 508 270 635 446 10;
 #X obj 342 99 symbol \$0-nope;
 #X obj 360 145 receive \$0-nope;
 #X obj 315 77 t b b;
@@ -16,7 +16,7 @@
 #X obj 315 9 loadbang;
 #X obj 315 315 list prepend obj 100 100;
 #X msg 354 259 \; pd menunew \$1-tmp ~/;
-#X obj 342 121 s \$1-\$2oij0%zB;
+#X obj 342 121 s \$1-\$2oij0zB;
 #X connect 0 0 16 0;
 #X connect 1 0 7 1;
 #X connect 2 0 7 0;
