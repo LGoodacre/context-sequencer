@@ -1,0 +1,153 @@
+#N canvas 376 200 901 542 10;
+#X obj -203 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -193 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -183 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -173 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -163 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -153 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -143 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -133 30 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -203 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -193 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -183 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -173 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -163 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -153 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -143 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -133 40 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -203 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -193 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -183 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -173 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -163 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -153 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -143 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -133 50 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -203 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -193 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -183 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -173 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -163 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -153 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -143 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -133 60 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -203 70 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -193 70 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -183 70 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -173 70 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj -163 70 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 454 223 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 466 221 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 427 160 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 444 195 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 368 224 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 381 221 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 469 182 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 390 221 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 367 180 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 387 180 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 370 161 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 367 156 context :X 9 :Y 6 :a ' message ' :d 1 :e 3 :f 2 :i 0
+0 0 0 0 0 0 1 1.5 :n ' ID-tag ' :x = 1 4 7 8 9 :y = 1 2 :Z 11;
+#X msg 230 22 cycle time;
+#X msg 432 9 ID number and tags;
+#X msg 157 61 cursor;
+#X msg 647 37 message window;
+#X msg 370 255 pattern toggles, f 7;
+#X msg 639 168 burst toggles;
+#X msg 57 315 message window indicator;
+#X msg 623 404 toggle float;
+#X msg 264 388 database limit;
+#X text 54 337 Whenever the mouse hovers over Context \, one toggle
+turns black. This reveals the position of the message window in the
+message database. See manual Section 9: GUI access to database., f
+28;
+#X text 259 410 The off-coloured toggles indicate the position of the
+database limit \, ie. the position past which the database will not
+be read. See manual Section 9: database limit., f 26;
+#X text 606 305 A c-number in a pattern or burst toggle represents
+a connection. It refers to the Context ID number. See manual Section
+5: float connections., f 28;
+#X msg 606 283 float connection;
+#X text 619 429 A normal number in any toggle represents a number value
+which can be read by the = variable in the output language. This is
+useful for creating melodies. See manual Section 12: variables without
+arguments., f 33;
+#X text 357 289 These toggles form a simple step-sequencer. See section
+6: pattern and burst., f 14;
+#X text 635 189 These toggles fire simultaneously at the end of the
+Context cycle. See section 6: pattern and burst., f 23;
+#X text 646 55 This symbol atom displays and edits a single line from
+the message database. See manual Section 9: GUI access to database.
+, f 23;
+#X text 434 27 These represent a Context's unique ID number and tags.
+See manual Section 7: ID and channels., f 19;
+#X text 263 40 The number box displays the   cycle time in      seconds.
+See        manual         Section 10:            timing.
+, f 19;
+#X text 96 87 The cursor   represents the    time position during
+playback. If the cursor is on the top of the Context canvas \, it means
+that the pattern and burst have been reversed. See Manual Section 6:
+flipping the axes., f 21;
+#X msg 470 407 Context canvas;
+#X text 469 430 Special objects can be embedded in this area. See manual
+Section 14: overlay., f 17;
+#X connect 37 0 56 0;
+#X connect 38 0 61 0;
+#X connect 40 0 69 0;
+#X connect 41 0 55 0;
+#X connect 42 0 57 0;
+#X connect 43 0 54 0;
+#X connect 44 0 53 0;
+#X connect 49 0 47 0;
+#X connect 50 0 46 0;
+#X connect 51 0 45 0;
+#X connect 52 0 39 0;

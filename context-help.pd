@@ -1,286 +1,141 @@
-#N canvas 65 89 1301 687 10;
-#X obj 39 522 cnv 15 342 19 empty empty empty 20 12 0 14 -99865 -66577
+#N canvas 324 134 555 568 10;
+#X obj -3 -1 cnv 15 550 600 empty empty empty 20 12 0 14 -150568 -66577
 0;
-#X obj 35 518 cnv 15 342 19 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 721 224 cnv 15 242 301 empty empty empty 20 12 0 14 -33289 -66577
-0;
-#X obj 828 34 cnv 15 288 103 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 972 150 cnv 15 222 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 525 644 cnv 15 389 112 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 988 446 cnv 15 292 140 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 932 603 cnv 15 287 120 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 1011 264 cnv 15 189 163 empty empty empty 20 12 0 16 -99865
--66577 0;
-#X obj 412 529 cnv 15 302 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 410 403 cnv 15 240 102 empty empty empty 12 15 0 16 -99865 -66577
-0;
-#X obj 410 283 cnv 15 232 100 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 422 169 cnv 15 252 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 564 54 cnv 15 252 102 empty empty empty 20 12 0 16 -99865 -66577
-0;
-#X obj 560 50 cnv 15 252 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 824 30 cnv 15 288 103 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 968 146 cnv 15 222 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 521 640 cnv 15 389 112 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 984 442 cnv 15 292 140 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 928 599 cnv 15 287 120 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 1007 260 cnv 15 189 163 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 408 525 cnv 15 302 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 406 399 cnv 15 240 102 empty empty empty 12 15 0 16 -1 -66577
-0;
-#X obj 406 279 cnv 15 232 100 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 418 165 cnv 15 252 102 empty empty empty 20 12 0 16 -1 -66577
-0;
-#X obj 419 166 cnv 15 250 100 empty empty A LOOPER 20 12 0 16 -260644
--66577 0;
-#X obj 407 280 cnv 15 230 98 empty empty A RELAY 20 12 0 16 -260644
--66577 0;
-#X obj 407 400 cnv 15 238 100 empty empty A RANDOM NOTE SELECTOR
-12 15 0 16 -260644 -66577 0;
-#X obj 409 526 cnv 15 300 100 empty empty A DATABASE 20 12 0 16 -260644
--66577 0;
-#X obj 1008 261 cnv 15 187 161 empty empty A MEMORY BANK 20 12 0
-16 -260644 -66577 0;
-#X obj 929 600 cnv 15 285 118 empty empty A RANDOM RELAY 20 12 0
-16 -260644 -66577 0;
-#X obj 985 443 cnv 15 290 138 empty empty A SAMPLE PLAYER 20 12 0
-16 -260644 -66577 0;
-#X obj 522 641 cnv 15 387 110 empty empty A LANGUAGE 20 12 0 16 -260644
--66577 0;
-#X obj 969 147 cnv 15 220 100 empty empty A SPACER 20 12 0 16 -260644
--66577 0;
-#X obj 825 31 cnv 15 286 101 empty empty A STEP SEQUENCER 20 12 0
-16 -260644 -66577 0;
-#X obj 561 51 cnv 15 250 100 empty empty A TIMER 20 12 0 16 -260644
--66577 0;
-#X obj 261 41 cnv 15 271 81 empty empty empty 6 28 0 60 -99865 -1 0
+#X obj 21 21 cnv 15 271 81 empty empty empty 6 28 0 60 -99865 -1 0
 ;
-#X obj 256 35 cnv 15 271 81 empty empty empty 6 28 0 60 -33289 -1 0
+#X obj 16 15 cnv 15 271 81 empty empty empty 6 28 0 60 -33289 -1 0
 ;
-#X obj 257 36 cnv 15 269 79 empty empty empty 6 28 0 60 -203904 -1
-0;
-#X obj 258 37 cnv 15 267 77 empty empty empty 6 28 0 60 -13381 -1 0
+#X obj 17 16 cnv 15 269 79 empty empty empty 6 28 0 60 -203904 -1 0
 ;
-#X obj 259 38 cnv 15 265 75 empty empty empty 6 28 0 60 -33289 -1 0
+#X obj 18 17 cnv 15 267 77 empty empty empty 6 28 0 60 -13381 -1 0
 ;
-#X obj 32 265 cnv 15 351 236 empty empty empty 20 12 0 14 -99865 -66577
-0;
-#X obj 26 259 cnv 15 351 236 empty empty empty 20 12 0 14 -33289 -66577
-0;
-#X obj 27 260 cnv 15 349 234 empty empty empty 20 12 0 14 -4032 -66577
-0;
-#X obj 28 261 cnv 15 347 232 empty empty empty 20 12 0 14 -257985 -66577
-0;
-#X obj 29 262 cnv 15 345 230 empty empty empty 20 12 0 14 -33289 -66577
-0;
-#X obj 30 263 cnv 15 343 228 empty empty CONTEXT DOCUMENTATION 10
-16 0 22 -262144 -1 0;
-#X obj 260 39 cnv 15 263 73 empty empty CONTEXT 6 28 0 60 -227039 -1
-0;
-#X obj 445 87 cnv 15 15 15 empty empty v 3.0.1 8 11 0 15 -227039 -1
-0;
-#X text 270 92 an advanved sequencer for PD;
-#X text 54 342 THE CONTEXT MANUAL. This covers all main eatures of
-Context and explains how to use them. The Context manual is found in
-the main Context folder., f 51;
-#X text 38 342 1:;
-#X text 38 387 2:;
-#X text 54 387 MENU HELP PROMPTS. Right click on Context and select
-'properties' to enter the menu. The button at the bottom of each page
-prints help tips., f 51;
-#X text 38 432 3:;
-#X text 54 432 EXAMPLE FILES. These are in the 'helpfiles' folder and
-reference the order of the Manual., f 51;
-#X text 38 464 4:;
-#X text 54 464 VIDEO TUTORIALS. (Forthcoming), f 51;
-#X obj 1000 479 context :H 14 :X 17 :Y 6 :d 8.54 :Z 9 :ol 1 :il 1 18
-obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843
-:y2 8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
-:x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1 4.0131 :y1 1.5372 8
-obj 140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3 0 4 0;
-#X obj 788 674 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
-2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 1 3 5 6 7 9 :y = 1 :O
--20 :Z 14 :ro 1 :il 1;
-#X obj 733 71 context :Y 5 :b ' | | | . :i -l scramble ' :d 2 :f 4
-:h 1 :i 7.5 5.5 10.5 0 3.5 :x = 1 2 3 5 :y = 1 2 3 4 :P 1 :il 1;
-#X obj 537 428 context :X 7 :M 1 :a ' # _ | | | # = ' :d 0.02 :h 2
-:l 11 :n ' gl ' :p -1 :x = 1 2 3 4 5 6 :z 0 :R 101 :Z 9 :ol 1 :il 1
+#X obj 19 18 cnv 15 265 75 empty empty empty 6 28 0 60 -33289 -1 0
 ;
-#X obj 537 303 context :d 0.5 :i 4.5 4.5 4.5 4.5 0 :j 8.5 0 0 :x =
-1 2 4 :il 1;
-#X obj 1040 294 context :X 9 :a ' ¬ ' :b ' . :u (? 3 + 1) ' :d 1 :n
-' hat ' :x = 1 2 3 4 7 :y = 1 :O -15 :Z 13 :ba ' :x = 1 2 3 4 7 :i
-clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
-#X obj 841 61 context :a ' 1 ' :d 2 :n ' kick ' :x = 1 2 3 4 :il 1
-;
-#X obj 984 174 context :a ' 1 ' :b ' = ' :d 0.25 :f 2 :h 1 :j 1 9.5
-0 :n ' kick ' :y = 1 2 :P 1 :il 1;
-#X obj 548 191 context :X 7 :a ' ¬ ' :d 0.75 :h 1 :j 9.5 9.5 0 :n
-' snare ' :x = 1 2 3 5 :y = 1 2 3 :O -17 :R 100 :Z 8 :il 1;
-#N canvas 523 243 492 300 audio 0;
-#X obj 287 21 receive gl-;
-#X obj 321 241 helpfiles/docfiles/hihat;
-#X obj 321 216 receive hat-;
-#X obj 287 48 route g;
-#X obj 333 148 helpfiles/docfiles/kick;
-#X obj 333 105 receive kick-;
-#X obj 264 120 hip~ 800;
-#X obj 333 127 route 1;
-#N canvas 360 158 450 300 snare~ 0;
-#X obj 145 108 vline~;
-#X obj 145 66 * 100;
-#X obj 87 75 noise~;
-#X obj 87 138 *~;
-#X obj 87 268 outlet~;
-#X obj 145 43 receive snare-;
-#X obj 86 238 hip~ 10000;
-#X obj 87 212 hip~ 10000;
-#X obj 87 190 bp~ 2000 2;
-#X msg 145 86 1 3 \, 0 \$1 20;
-#X connect 0 0 3 1;
-#X connect 1 0 9 0;
-#X connect 2 0 3 0;
-#X connect 3 0 8 0;
-#X connect 5 0 1 0;
+#X obj 20 19 cnv 15 263 73 empty empty CONTEXT 6 28 0 60 -227039 -1
+0;
+#X text 26 72 an advanved sequencer for PD v3.0.2;
+#N canvas 587 159 721 600 load 0;
+#N canvas 419 174 944 532 start 0;
+#X obj 321 23 loadbang;
+#X obj 361 121 sel 0;
+#X obj 375 145 f;
+#X obj 446 42 text define \$0-help;
+#X obj 321 45 t b b b b;
+#X obj 200 98 text size \$0-help;
+#X obj 289 17 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 361 77 symbol pddp/pddplink \, symbol pddplink;
+#X obj 232 143 * 0.5;
+#X obj 232 165 until;
+#X obj 232 187 f;
+#X obj 264 187 + 1;
+#X obj 232 231 * 2;
+#X obj 272 276 + 1;
+#X obj 272 299 text get \$0-help;
+#X obj 143 299 text get \$0-help;
+#X obj 291 42 t f;
+#X obj 143 525 list prepend;
+#X obj 232 209 t f f;
+#X obj 232 253 t f f f f;
+#X obj 143 547 list trim;
+#X obj 252 395 * 15;
+#X obj 292 395 * 15;
+#X obj 200 120 t f f;
+#X msg 32 446 coords 0 0 1 1 450 \$1 2 0 0;
+#X obj 183 148 * 15;
+#X obj 224 499 list prepend text 10;
+#X obj 292 417 + 20;
+#X obj 252 417 + 10;
+#X obj 592 432 list prepend -text;
+#X obj 518 505 list prepend;
+#X obj 609 461 list prepend obj 10;
+#X obj 518 483 list prepend pddp/pddplink;
+#X obj 518 461 list append;
+#X obj 465 415 list trim;
+#X obj 465 437 route --;
+#X obj 232 276 +;
+#X obj 298 169 t b f;
+#X obj 298 191 f 1;
+#X obj 298 133 sel 0;
+#X obj 143 328 list prepend 0;
+#X obj 143 350 route 0 1;
+#X obj 272 324 list prepend 0;
+#X obj 272 346 route 0 1;
+#X obj 252 439 list prepend 0;
+#X obj 252 461 route 0 1;
+#X obj 143 569 s \$0-can;
+#X obj 361 99 iemguts/classtest;
+#X obj 183 170 + 10;
+#X msg 446 20 read helpfiles/docfiles/TOC.txt;
+#X connect 0 0 4 0;
+#X connect 1 1 2 1;
+#X connect 2 0 39 0;
+#X connect 2 0 40 1;
+#X connect 2 0 42 1;
+#X connect 2 0 44 1;
+#X connect 4 0 5 0;
+#X connect 4 1 2 0;
+#X connect 4 2 7 0;
+#X connect 4 3 49 0;
+#X connect 5 0 23 0;
+#X connect 6 0 16 0;
 #X connect 6 0 4 0;
-#X connect 7 0 6 0;
-#X connect 8 0 7 0;
-#X connect 9 0 0 0;
-#X restore 340 178 pd snare~;
-#X obj 189 75 catch~ sample;
-#X obj 158 101 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 187 101 hsl 50 15 0 1 0 1 empty empty empty -2 -8 0 10 -191407
--1 -1 4900 1;
-#X obj 204 238 *~;
-#X obj 204 260 dac~;
-#X msg 158 121 \; pd dsp \$1;
-#X obj 287 85 helpfiles/docfiles/glock~ 2;
-#X obj 418 33 loadbang;
-#X obj 418 55 f 2;
-#X connect 0 0 3 0;
-#X connect 1 0 12 0;
-#X connect 2 0 1 0;
-#X connect 3 0 15 0;
-#X connect 3 1 15 0;
-#X connect 4 0 12 0;
-#X connect 5 0 7 0;
-#X connect 6 0 12 0;
-#X connect 7 0 4 0;
-#X connect 8 0 12 0;
-#X connect 9 0 6 0;
-#X connect 10 0 14 0;
-#X connect 11 0 12 1;
-#X connect 12 0 13 0;
-#X connect 12 0 13 1;
-#X connect 15 0 12 0;
-#X connect 16 0 17 0;
-#X connect 17 0 15 1;
-#X coords 0 -1 1 1 140 15 1 100 100;
-#X restore 783 4 pd audio;
-#X obj 961 632 context :Y 5 :h 1 :j 6.5 2.5 11.5 9.5 :y = 1 2 3 4 :z
-0 :R 100 :il 1;
-#X text 579 78 Context can keep time of other objects. This one is
-controlling the whole network top down., f 23;
-#X text 910 65 Each Context stores a pattern on its x-axis toggles.
-This one is controlling the bass drum., f 31;
-#X text 1054 178 This gives an extra bass drum kick every second bar.
-, f 19;
-#X text 538 676 Context has an advanced control language poweing it.
-Here \, text variables are sending a message to the sampler to start
-it at a random place each beat., f 40;
-#X text 1215 496 Context can hold and play sample arrays., f 10;
-#X text 1035 638 The y-axis toggles can fire randomly. This one is
-being used to start other Contexts in the network., f 26;
-#X text 1026 362 This Context has three different patterns stored \,
-which are rotated randomly each cycle., f 25;
-#X text 434 551 Each toggle stores a different message \, which is
-sent when the toggle fires, f 20;
-#X text 411 433 A different number of notes are chosen here each time.
-, f 20;
-#X text 429 194 This Context loops itself with a probability of 2/3.
-, f 19;
-#X text 422 307 This Context relays notes to the one below., f 15
-;
-#X obj 568 530 context :X 9 :a ' | g # ( ? 3 + 12) | g # ( ? 3 + 12)
-| g % g ' :b ' < c9 :x ? 6 2 | < c5 :x ? 4 | < c7 :x ? 3 ' :d 1 :e
-4 :f 3 :h 1 :n ' gl ' :x = 2 3 5 7 :y = 1 2 3 :O -7 :R 100 :Z 11 :ro
-1 :il 1;
-#X msg 701 3 start;
-#X msg 746 3 stop;
-#X obj 635 9 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144 -1
-0;
-#X obj 716 219 cnv 15 242 301 empty empty empty 20 12 0 14 -99865 -66577
-0;
-#X obj 711 214 cnv 15 242 301 empty empty empty 20 12 0 14 -162280
--66577 0;
-#X obj 707 209 cnv 15 242 301 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 708 210 cnv 15 240 299 empty empty WHAT IS CONTEXT? 20 12
-0 22 -262130 -1 0;
-#X text 721 245 CONTEXT is a modular sequencer for PD. It hosts a step
-sequence \, a database and an embeddable timeline for linear playback.
-Many Contexts connect together to form a network \, which can behave
-linearly \, algorithmically or generatively., f 35;
-#X text 721 431 Context deals with messages. It has no audio component
-and sends messages to other patches to tell them what to do., f 35
-;
-#X text 721 350 Another answer to the question is \, ANYTHING YOU WANT.
-You can find many creative uses for Context--the examples given in
-this patch are just the beginning., f 35;
-#X obj 728 535 scaler pentatonic egyptian b# 4;
-#X text 52 293 Context is a big piece of software which requies time
-and patience to learn. There are four main resources currently available:
-, f 51;
-#X obj -30 527 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144
--1 0;
-#X obj 211 167 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 212 168 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 216 172 part of the Context library;
-#X text 213 203 copyright Liam Goodacre 2017;
-#X text 221 188 licensed under the GPL v3;
-#X obj 36 519 cnv 15 340 17 empty empty empty 20 12 0 14 -228856 -66577
-0;
-#N canvas 398 147 674 401 ARE 0;
-#X text 63 80 1: To start Context \, double click on the empty green
-area in the middle \; 2: To stop Context \, click and hold \; 3: To
-resize Context \, hold Shift and click + drag just outside the right
-/ bottom botder \; 4: To enter the settings menu \, right click and
-select 'properties' \; 5: To return to the main view \, press the button
-on the top right \; 6: To change the timing \, use the float atom on
-the top left \; 7: To edit the message \, use the symbol atom at the
-top middle \; 8: The toggles along the bottom are called the PATTERN.
-They form a simple step sequencer \; 9: The toggles along the right
-are called the BURST. They fire all together at the end of the cycle
-\; 10: The outlets along the bottom are synched to the PATTERN \; 11:
-The inlets along the top are all the same. They can be used to start
-Context and receive other commands \; 12: To receive the messages that
-Context sends \, create an object [receove cx-] \, where 'cx' is the
-unique ID number of a Context shown near the top left corner. (Remember
-the dash after 'cx'). \; 13: To receives messages from all Contexts
-\, use [receive context-] (remember the dash \;, f 90;
-#X restore 36 519 HERE ARE THE MOST IMPORTANT THINGS TO KNOW ABOUT
-CONTEXT;
-#X connect 64 3 65 0;
-#X connect 81 0 60 0;
-#X connect 82 0 60 1;
+#X connect 7 0 47 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 18 0;
+#X connect 11 0 10 1;
+#X connect 12 0 19 0;
+#X connect 13 0 14 0;
+#X connect 14 0 42 0;
+#X connect 15 0 40 0;
+#X connect 16 0 10 1;
+#X connect 16 0 2 1;
+#X connect 17 0 20 0;
+#X connect 18 0 12 0;
+#X connect 18 1 11 0;
+#X connect 19 0 36 0;
+#X connect 19 1 21 0;
+#X connect 19 2 13 0;
+#X connect 19 3 22 0;
+#X connect 20 0 46 0;
+#X connect 21 0 28 0;
+#X connect 22 0 27 0;
+#X connect 23 0 25 0;
+#X connect 23 1 8 0;
+#X connect 24 0 46 0;
+#X connect 25 0 48 0;
+#X connect 26 0 17 1;
+#X connect 27 0 26 0;
+#X connect 28 0 44 0;
+#X connect 29 0 33 1;
+#X connect 30 0 20 0;
+#X connect 31 0 30 1;
+#X connect 32 0 30 0;
+#X connect 33 0 32 0;
+#X connect 34 0 35 0;
+#X connect 35 1 33 0;
+#X connect 36 0 15 0;
+#X connect 37 0 38 0;
+#X connect 37 1 13 1;
+#X connect 38 0 36 1;
+#X connect 39 0 37 0;
+#X connect 40 0 41 0;
+#X connect 41 0 17 0;
+#X connect 41 1 34 0;
+#X connect 42 0 43 0;
+#X connect 43 0 17 0;
+#X connect 43 1 29 0;
+#X connect 44 0 45 0;
+#X connect 45 0 26 0;
+#X connect 45 1 31 0;
+#X connect 47 0 1 0;
+#X connect 48 0 24 0;
+#X connect 49 0 3 0;
+#X restore 517 16 pd start;
+#X obj 581 16 namecanvas \$0-can;
+#X coords 0 600 1 599 450 10 0;
+#X restore 22 130 pd load;
+#X obj 299 15 ctxfiles/license;
+#X text 300 75 NOTE: this help patch works best with the pddp library
+installed., f 32;

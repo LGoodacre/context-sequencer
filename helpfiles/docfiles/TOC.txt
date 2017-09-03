@@ -1,0 +1,35 @@
+helpfiles/what_is_context.txt;
+1: what is Context?;
+
+context_manual.pdf;
+2: Context manual;
+
+helpfiles/tips.txt;
+3: quick tips;
+
+http://youtube.com;
+4: video tutorial series;
+
+helpfiles/context_commands_all.pd;
+5: list of Context commands (complete);
+
+helpfiles/context_commands_brief.pd;
+6: list of Context commands (brief);
+
+helpfiles/GUI_interpretation.pd;
+7: interpreting the GUI;
+
+helpfiles/GUI_use.pd;
+8: manipulating the GUI;
+
+helpfiles/examples;
+9: examples of Context networks;
+
+http://contextsequencer.wordpress.com;
+10: Context website;
+
+http://musicalmetacreation.org/buddydrive/file/goodacre;
+11: academic papers about Context;
+
+license.txt;
+12: License (GPL v3);

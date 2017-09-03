@@ -1,0 +1,28 @@
+HERE ARE THE MOST IMPORTANT THINGS YOU NEED TO KNOW IF YOU WANT TO START USING CONTEXT:
+
+
+1: To play Context, double click on the empty green area in the middle.
+
+2: To stop Context, click and hold.
+
+3: To resize Context, hold Shift and click + drag just outside the right / bottom border.
+
+4: To enter the settings menu, right click and select 'properties'.
+
+5: To return to the main view, press the button on the top right.
+
+6: To change the timing, use the float atom on the top left.
+
+7: To edit the message, use the symbol atom at the top middle.
+
+8: The toggles along the bottom are called the PATTERN. They form a simple step sequencer.
+
+9: The toggles along the right are called the BURST. They fire all together at the end of the cycle.
+
+10: The outlets along the bottom are synched to the PATTERN.
+
+11: The inlets along the top are all the same. They can be used to start Context and receive other commands.
+
+12: To receive the messages that Context sends, create an object [receive cx-], where 'x' is the unique ID number of a Context shown near the top left corner--for instance, [receive c3-] to receive Context number 3. Don't forget the dash.
+
+13: To receives messages from all Contexts, use [receive context-].

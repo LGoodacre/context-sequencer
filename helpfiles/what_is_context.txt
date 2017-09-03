@@ -1,0 +1,64 @@
+                   **********************
+                  ****WHAT IS CONTEXT?****
+                   **********************
+
+
+I have yet to come up with an answer to this question that is both satisfying and comprehensible. Below are a series of attempts to describe Context, some of which may be helpful and some which may not. I encourage users to pass by whatever is not useful and to make this software into their own.
+
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+First and foremost, Context is a SEQUENCER.
+
+This means that it decides "what happens when" for a piece of music, without having too much to do with the actual production of sound. Like most sequencers, Context adopts a linear paradigm, incorporating traditional step sequencers and timeline playback. Unlike most other sequencers, Context is MODULAR, meaning that it can be replicated and interconnected in many different ways to change its behavior.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+
+Context is EASY TO USE!
+
+Do not be intimidated by the size or complexity of this software or its documentation. The basics of Context can be learned in minutes, and the basics alone are enough to make music with. The program also has countless features to enhance usability, from advanced GUI manipulations to automatic state-saving.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+Context is a LANGUAGE.
+
+Context has its own set of commands (Domain Specific Language) controlling a wide set of parameters, and also a separate language (Term Rewrite System) for generating output messages. It might seem confusing to think of Context as a language, since it appears on the canvas as a graphical tool which the user can interact with. But fundamentally the GUI is not essential to the functioning of a Context network; under the hood, it is all commands.
+
+Like any language, Context has to be learned, and learning it will take time. But the basics are pretty simple and the advanced features offer infinite possibilities for musical expression and composition.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+Context is an ALTERNATIVE TO A DAW (digital audio workstation).
+
+Instead of presenting the user with a pre-designed software suite, Context offers the user the tools to build her own sequencing environment. A sequencing environment is a well developed Context network built around a single piece of music. Since Context is so versatile, networks can function in a wide variety of ways, incorporating structure, user interaction, non-linearity, randomness and generative elements however the user chooses. The idea is for the user to be able to build a customized sequencing environment around whatever requirements or preferences she might have. As such, Context is a new approach to music production, and indeed a new way of thinking about music.
+
+                   ~~~ ~~~ ~~~ ~~~ ~~~
+
+Context is a TOOL DESIGNED TO MAKE COMPOSITION IN PD MORE ACCESSIBLE.
+
+Miller Puckette has said that in designing PD, his intention was to create a mid-point between the user and code based programming--in other words, a stepping stone to make digital signal processing more accessible*. In a similar vein, Context is designed to make composition more accessible to PD users. The intention is to create a universal control system for other PD instruments and patching, so that the user can focus their time and effort on sound design without having to worry about sequencencing.
+
+                   ~~~ ~~~ ~~~ ~~~ ~~~
+
+
+Context is AN OBSESSION,
+
+and not always a healthy one. What was supposed to take weeks to develop instead took years, and the resulting patchwork of systems and hierarchies can be understood as much by its author's weaknesses as by his strengths. Many of my aims have been ill-advised, from the attempt of making a single tool which performs every possible task to the necessity of pushing PD beyond its natural limitations. Nevertheless, Context does things that no patch has done before, and if the resulting software is even slightly useful or inspiring to others, then the 10,000 hours that I have spent making it will seem justified.
+ 
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+Finally, Context is NOT FINISHED.
+
+It probably never will be. Email me if you find any mistakes.
+
+
+Liam Goodacre, 2017
+liam.goodacre@gmail.com
+
+
+
+
+* https://soundcloud.com/secondseasons/max-mathews-research-and-modern-technology-interview-with-miller-puckette
+

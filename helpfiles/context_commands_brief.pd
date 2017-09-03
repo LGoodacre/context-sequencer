@@ -1,4 +1,4 @@
-#N canvas 379 18 773 687 10;
+#N canvas 376 81 773 687 8;
 #X obj 54 4 cnv 15 626 139 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 42 159 cnv 15 692 540 empty empty empty 20 12 0 14 -66577 -66577
@@ -53,7 +53,7 @@
 53 0 30 -33289 -66577 0;
 #X obj 46 -4 cnv 15 392 135 empty empty CONTEXT COMMANDS: a brief summary
 20 12 0 18 -232990 -66577 0;
-#X obj 289 358 context :n ' ex ' :Z -1;
+#X obj 289 358 context :d 1 :n ' ex ' :Z -1;
 #X text 51 266 Try + - = operators for 'on only' \, 'off only' and
 'define' options., f 18;
 #X text 62 25 This patch outlines some of the most important Context
@@ -142,13 +142,7 @@ CHANNELS).;
 #X text 193 607 set y-axis;
 #X msg 71 478 \; ex :b -open;
 #X msg 256 185 \; ex :j c4 c5 c6;
-#X obj 703 45 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 704 46 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 708 50 part of the Context library;
-#X text 705 81 copyright Liam Goodacre 2017;
-#X text 713 66 licensed under the GPL v3;
+#X obj 689 86 ctxfiles/license;
 #X connect 42 0 70 0;
 #X connect 45 0 71 0;
 #X connect 48 0 72 0;

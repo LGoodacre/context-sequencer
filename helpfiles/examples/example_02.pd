@@ -108,7 +108,6 @@ clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 ;
 #X obj 37 20 cnv 15 263 73 empty empty CONTEXT 6 28 0 60 -227039 -1
 0;
-#X text 42 78 an advanved sequencer for PD v3.0.1;
 #X text 598 79 Rajiv is in charge of the whole thing. He's not playing
 any music today--instead \, he's telling other people when to play
 \, like a conductor in an orchestra. Every two seconds \, Rajiv counts
@@ -204,7 +203,8 @@ communicating and playing music together \, with you \, the host \,
 telling them what to do. Unfortunately they don't speak English \,
 so you're going to have to learn their language and idiosyncrasies
 if you want to be able to direct them properly. But once you do this
-\, the possibilities are limitless.;
+\, the possibilities are practically limitless.;
+#X text 42 78 an advanved sequencer for PD v3.0.2;
 #X connect 6 3 7 0;
 #X connect 12 0 2 0;
 #X connect 13 0 2 1;
