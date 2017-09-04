@@ -1,0 +1,17 @@
+#N canvas 503 220 483 300 10;
+#X text 40 20 Embeddable objects in Context:;
+#X text 40 150 Embeddable objects that can be used outside of Context:
+;
+#X text 39 204 Objects that are not related to Context:;
+#X obj 37 48 pddp/pddplink ../../content-help.pd -text [content] :
+embed arrays into the Context overlay;
+#X obj 37 68 pddp/pddplink ../../keylist-help.pd -text [keylist] :
+define custom keyboard input for Context;
+#X obj 37 88 pddp/pddplink ../../marker-help.pd -text [marker] : mark
+points on the timeline for sample playback;
+#X obj 37 108 pddp/pddplink ../../mover-help.pd -text [mover] : move
+embedded objects around the Overlay;
+#X obj 37 169 pddp/pddplink ../../scaler-help.pd -text [scaler] : calculate
+notes on a scale;
+#X obj 37 221 pddp/pddplink ../../sketch-help.pd -text [sketch] : draw
+custom shapes on an array;

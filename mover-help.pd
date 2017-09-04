@@ -1,19 +1,12 @@
-#N canvas 389 115 497 630 10;
-#X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
+#N canvas 386 119 497 630 10;
+#X obj 72 38 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
-#X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
+#X obj 66 32 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
 0;
-#X obj 67 43 cnv 15 162 55 empty empty empty 21 18 2 32 -204786 -204800
+#X obj 67 33 cnv 15 162 55 empty empty empty 21 18 2 32 -204786 -204800
 0;
-#X obj 68 44 cnv 15 160 53 empty empty mover 12 22 2 43 -83573 -204800
+#X obj 68 34 cnv 15 160 53 empty empty mover 12 22 2 43 -83573 -204800
 0;
-#X obj 241 46 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 242 47 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 246 51 part of the Context library;
-#X text 243 82 copyright Liam Goodacre 2017;
-#X text 251 67 licensed under the GPL v3;
 #X obj 65 159 cnv 15 358 392 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #X obj 66 160 cnv 15 356 390 empty empty empty 20 12 0 14 -162280 -66577
@@ -24,28 +17,29 @@
 0;
 #X obj 275 346 dac~;
 #X obj 93 254 context :H 14 :X 17 :Y 6 :io o :d 1 :Z 4 :ol 1 4 obj
-0 -20 ../mover 5 obj 1 92 ../ctx outlet~ 20 obj 55 14 ../content :lo helpfiles/wavs/ting.wav
-:x1 0.286458 :x2 0.859375 :y1 0.233333 :y2 0.766667 :s1 0.3 :s2 -0.3
-:li 1 5 connect 5 0 4 0;
+0 -20 ../mover 5 obj 1 92 ../ctx outlet~ 20 obj 55 14 ../content :lo
+helpfiles/wavs/ting.wav :x1 0.286458 :x2 0.859375 :y1 0.233333 :y2
+0.766667 :s1 0.3 :s2 -0.3 :li 1 5 connect 5 0 4 0;
 #X text 74 564 See Context Manual Section 16 for details on how to
-use Marker.;
-#X text 65 114 Mover is used to move samples around the Context canvas.
-It is loaded in the Overlay but functions in the parent patch.;
+use Marker., f 45;
+#X text 65 104 Mover is used to move samples around the Context canvas.
+It is loaded in the Overlay but functions in the parent patch., f
+50;
 #X text 87 378 To move the sample \, first position Mover over its
 left hand boundary and wait for it to turn black. Then click and drag
-the sample., f 52;
+the sample., f 45;
 #X text 87 427 To resize the sample \, do the same thing over the right
-hand margin., f 52;
+hand margin., f 44;
 #X text 93 463 To move / resize up or down \, double press and hold
 Shift then repeat. The top margin moves and the bottom resizes., f
-51;
+43;
 #N canvas 65 81 450 300 creation 0;
 #X text 78 31 Mover has two optional creation arguments;
 #X text 52 69 1: The 'save' flag makes Mover automatically save the
 overlay shortly after it is finished moving.;
 #X text 51 113 2: A float argument resets the slow movement value (see
 [pd fine tuning], f 55;
-#X restore 278 521 pd creation arguments;
+#X restore 248 521 pd creation arguments;
 #X text 321 270 Right click and select 'open' to view the overlay.
 , f 13;
 #N canvas 65 81 506 300 fine 0;
@@ -60,6 +54,7 @@ argument (see [pd creation arguments];
 #X text 87 178 Mover is loaded in the Overlay here \, but you won't
 see it until it is activated. To activate it \, hold the Shit key down
 and move the mouse over the Context. Mover will appear as a thin line
-that follows the cursor., f 52;
-#X connect 14 17 13 0;
-#X connect 14 17 13 1;
+that follows the cursor., f 45;
+#X obj 244 34 ctxfiles/license;
+#X connect 9 17 8 0;
+#X connect 9 17 8 1;

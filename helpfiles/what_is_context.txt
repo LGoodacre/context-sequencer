@@ -5,7 +5,6 @@
 
 I have yet to come up with an answer to this question that is both satisfying and comprehensible. Below are a series of attempts to describe Context, some of which may be helpful and some which may not. I encourage users to pass by whatever is not useful and to make this software into their own.
 
-
                     ~~~ ~~~ ~~~ ~~~ ~~~
 
 First and foremost, Context is a SEQUENCER.

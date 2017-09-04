@@ -7,8 +7,8 @@ context_manual.pdf;
 helpfiles/tips.txt;
 3: quick tips;
 
-http://youtube.com;
-4: video tutorial series;
+https://www.youtube.com/channel/UC_9u0n_ugUW7OjWrJRvhTjA?view_as=subscriber;
+4: video tutorial series (new uploads regularly);
 
 helpfiles/context_commands_all.pd;
 5: list of Context commands (complete);
@@ -19,17 +19,23 @@ helpfiles/context_commands_brief.pd;
 helpfiles/GUI_interpretation.pd;
 7: interpreting the GUI;
 
-helpfiles/GUI_use.pd;
+helpfiles/GUI_manipulation.pd;
 8: manipulating the GUI;
 
+helpfiles/warnings.txt;
+9: bugs and warnings;
+
 helpfiles/examples;
-9: examples of Context networks;
+10: examples of Context networks (see esp example_1.pd);
+
+helpfiles/docfiles/other_objects.pd;
+11: other objects in the Context library;
 
 http://contextsequencer.wordpress.com;
-10: Context website;
+12: Context website;
 
 http://musicalmetacreation.org/buddydrive/file/goodacre;
-11: academic papers about Context;
+13: academic papers about Context;
 
-license.txt;
-12: License (GPL v3);
+License.txt;
+13: license (GPL v3);

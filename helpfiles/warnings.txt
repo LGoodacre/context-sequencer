@@ -1,0 +1,28 @@
+                       **WARNINGS**
+
+Context has various known bugs which hamper its use to some extent or other. Below are a list of known bugs and limitations. If you discover any others, please report them to liam.goodacre@gmail.com with an example patch and detailed instructions on how to reproduce the bug.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+Since 0.47, PD has a canvas zooming feature in the Edit menu. Unfortunately, this will throw off Context's mouse position sensing features, rendering most of the GUI useless. If you want to increase the size, Context has its own zooming feature--see "resizing" in GUI_manipulation.txt.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+On the topic of resizing, you shouldn't try to resize Context with PD's native resizing tool in edit mode. Resize by pressing the Shift key and clicking and dragging just outside the border (again see GUI_manipulation.txt.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+On some instalations of PD, the symbol atom can appear missaligned with the number atom on the main canvas. This is a problem with font sizes in PD, which are inconsistent across different systems. It is relatively easy to move the symbol atom back into position, but hard to imagine a general solution...
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+
+Sometimes, the start/stop action (or some other canvas gesture) seems to stop working. To fix this, click once on a blank (white) area of the canvas, then try again.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+Loading Context patches can sometimes take a very long time (long as in up to 5 minutes). This is mostly the case with Overlay embedding, and especially [content] arrays. Making sure that DSP is off before opening these patches seems to cut the loading time in half. Other than that, the best advice is to use embedded Contexts sparingly.
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+When one Context is embedded inside another, changing the cycle time can take a very long time to calculate (long as in up to two minutes). Type the value into the number box instead of scrolling. Hopefully this will be fixed one day.

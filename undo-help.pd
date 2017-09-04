@@ -1,11 +1,11 @@
-#N canvas 320 172 415 567 10;
+#N canvas 317 176 420 567 10;
 #X obj 33 22 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 27 16 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
 0;
 #X obj 28 17 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
 0;
-#X obj 29 18 cnv 15 140 53 empty empty UNDO 16 25 0 43 -206035 -204800
+#X obj 29 18 cnv 15 140 53 empty empty UNDO 16 25 2 38 -206035 -204800
 0;
 #X obj 26 153 cnv 15 358 392 empty empty empty 20 12 0 14 -33289 -66577
 0;
@@ -18,23 +18,17 @@
 #X obj 53 186 context :H 28 :X 8 :Y 7 :a ' | | | gg ' :m 1 :x = 2 :F
 48 :Z 12 :ex ' clear ' :ol 1 4 obj 0 24 undo 4 obj 0 36 undo 4 obj
 0 48 undo 4 obj 0 60 undo;
-#X obj 190 18 cnv 15 177 57 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 191 19 cnv 15 175 55 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X text 195 23 part of the Context library;
-#X text 192 54 copyright Liam Goodacre 2017;
-#X text 200 39 licensed under the GPL v3;
 #X text 240 209 There are four undo objects here \, embedded in the
-overlay., f 21;
+overlay., f 19;
 #X text 211 210 <--;
 #X text 26 92 Undo tracks the changes that are made to Context and
 lets you undo them. Each Undo stores one chage \, but the more you
 create \, the more you can store. Undo must be created in the Overlay
-to function.;
+to function., f 51;
 #X text 47 317 Click on the toggles or change any other Context setting.
 Text will appear in the Context canvas--this is the Context state that
 you have just left. Click on the undo button to re-select that state.
-, f 52;
+, f 45;
 #X text 45 410 See Manual Section 17 on how to create Undo and Section
-8 for how to understand Context commands., f 52;
+8 for how to understand Context commands., f 45;
+#X obj 188 19 ctxfiles/license;

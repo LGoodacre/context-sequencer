@@ -1,9 +1,30 @@
-#N canvas 407 172 450 300 10;
-#X obj 115 26 cnv 15 193 42 empty empty empty 20 12 0 14 -164033 -66577
+#N canvas 404 176 564 469 10;
+#X obj 321 16 ctxfiles/license;
+#X obj 101 211 scaler minor c 7;
+#X text 70 104 This object converts numbers into notes (frequencies)
+on a scale. It uses the [mtof] for this \, but unlike [mtof] fits notes
+into a particular scale. For instance \, sending "10" to the object
+[scaler minor c 7] would give the 10th note of the c minor scale in
+the 7th octave: 2489.02 (htz).;
+#X floatatom 101 187 5 0 0 0 - - -, f 5;
+#X floatatom 101 238 10 0 0 0 - - -, f 10;
+#X obj 142 18 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
-#X obj 117 28 cnv 15 189 38 empty empty [scaler] 40 14 0 20 -169657
--1 0;
-#X text 120 50 a part of the Context library;
-#X text 51 82 This object converts numbers into notes (frequencies)
-on a scale. It communicates with the # message variable in Context
-to define...;
+#X obj 136 12 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
+0;
+#X obj 137 13 cnv 15 162 55 empty empty empty 21 18 2 32 -204786 -204800
+0;
+#X obj 138 14 cnv 15 160 53 empty empty scaler 24 22 2 43 -82884 -204800
+0;
+#X text 68 281 [scaler] takes three arguments: a mode \, a key and
+an octave. They can be written in any order \, and eligible modes and
+scales can be found in ctxfiles/scales.txt (this file is also editable
+if you want to add your own modes).;
+#X text 68 359 [scaler] is useful on its own \, but can also be integrated
+into Context's message variables. The # variable will read from any
+available [scaler] object in the parent patch \, allowing for modes
+and scales to be set globally in a Context network.;
+#X obj 264 197 context :a ' # = ' :d 1 :i 1 2 3 4 0 :x = 1 2 3 4 :pr
+1;
+#X connect 1 0 4 0;
+#X connect 3 0 1 0;
