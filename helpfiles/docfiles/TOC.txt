@@ -1,41 +1,48 @@
 helpfiles/what_is_context.txt;
-1: what is Context?;
+what is Context?;
+
+helpfiles/examples/example_02.pd;
+example Context network;
 
 context_manual.pdf;
-2: Context manual;
+Context manual;
 
 helpfiles/tips.txt;
-3: quick tips;
+quick tips;
 
 https://www.youtube.com/channel/UC_9u0n_ugUW7OjWrJRvhTjA?view_as=subscriber;
-4: video tutorial series (new uploads regularly);
+video tutorial series (new uploads regularly);
 
 helpfiles/context_commands_all.pd;
-5: list of Context commands (complete);
+list of Context commands (complete);
 
 helpfiles/context_commands_brief.pd;
-6: list of Context commands (brief);
+list of Context commands (brief);
 
 helpfiles/GUI_interpretation.pd;
-7: interpreting the GUI;
+interpreting the GUI;
 
 helpfiles/GUI_manipulation.pd;
-8: manipulating the GUI;
+manipulating the GUI;
 
 helpfiles/warnings.txt;
-9: bugs and warnings;
+bugs and warnings;
 
-helpfiles/examples;
-10: examples of Context networks (see esp example_1.pd);
+helpfiles/examples/example_01.pd;
+another example Context network;
+
 
 helpfiles/docfiles/other_objects.pd;
-11: other objects in the Context library;
+other objects in the Context library;
 
 http://contextsequencer.wordpress.com;
-12: Context website;
+Context website;
 
 http://musicalmetacreation.org/buddydrive/file/goodacre;
-13: academic papers about Context;
+academic papers about Context;
+
+helpfiles;
+more helpfiles (to accompany the manual);
 
 License.txt;
-13: license (GPL v3);
+license (GPL v3);
