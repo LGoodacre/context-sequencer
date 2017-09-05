@@ -14,10 +14,10 @@ https://www.youtube.com/channel/UC_9u0n_ugUW7OjWrJRvhTjA?view_as=subscriber;
 video tutorial series (new uploads regularly);
 
 helpfiles/context_commands_all.pd;
-list of Context commands (complete);
+Context commands (complete list);
 
 helpfiles/context_commands_brief.pd;
-list of Context commands (brief);
+Context commands (brief list);
 
 helpfiles/GUI_interpretation.pd;
 interpreting the GUI;

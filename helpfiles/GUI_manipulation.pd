@@ -1,4 +1,4 @@
-#N canvas 379 201 723 429 10;
+#N canvas 373 207 723 429 10;
 #N canvas 132 138 450 271 and 0;
 #X text 14 25 To start Context \, simply double click in the green
 area in middle of any Context.;
@@ -30,22 +30,22 @@ to the ":i swap" command. Note that to move a toggle on the y-axis
 \, you still need to drag left and right \, despite the temptation
 to drag up and down.;
 #X restore 65 187 toggle floats and float connects;
-#N canvas 65 89 450 274 messages 0;
-#X text 12 14 If the message atom contains a float or a list with floats
-in it \, you can scroll through float values as with a number atom.
-To do this \, you need to double click on the symbol atom and then
-drag up or down. If the list contains more than one number \, you can
-alter the second number by tripple clicking and scrolling \, the third
-by quadruple clicking \, etc.;
-#X text 11 118 BUG: the selectable are for message scrolling doesn't
-always perfectly allign with the symbol atom. Try clicking in the middle
-of the atom for best results.;
+#N canvas 65 97 450 274 messages 0;
 #X text 11 170 A second option for altering messages is to open the
 editor. To do this \, hold down Shift and then double click on the
 symbol atom. A text box will appear and you can edit the message with
 much greater ease than with the regular symbol atom. Unfortunately
 \, the text box external is buggy \, and some special symbols or actions
 seem to crash it.;
+#X text 12 14 If the message atom contains a float or a list with floats
+in it \, you can scroll through float values as with a number atom.
+To do this \, you need to double click on the symbol atom and then
+drag up or down. If the list contains more than one number \, you can
+alter the second number by triple clicking and scrolling \, the third
+by quadruple clicking \, etc.;
+#X text 11 118 BUG: the selectable are for message scrolling doesn't
+always perfectly align with the symbol atom. Try clicking in the middle
+of the atom for best results.;
 #X restore 65 209 altering messages;
 #N canvas 65 85 450 201 bank 0;
 #X text 12 148 See Manual Section 13 for more information about the
@@ -96,20 +96,13 @@ on it returns to the main GUI from any point in the menu system.;
 the Overlay patch. See Manual Section 14 for more information on the
 Overlay.;
 #X restore 65 297 opening the overlay;
-#N canvas 65 89 450 534 (subpatch) 0;
+#N canvas 65 93 450 534 (subpatch) 0;
 #X text 11 15 To resize Context \, you need to hold down the Shift
 key \, then click and drag just outside of the border of Context. This
 works for re-sizing vertically or horizontally. The selectable area
 for resizing is exactly one toggle-box width outside of the Context.
 Clicking inside on on the border might work \, but tends to interfere
 with the toggles.;
-#X text 11 101 There are two further options for reizing. Holding down
-the Control key instead of Shift re-fits the cycle time (:d) to the
-new length. This is useful if you want Context to play at the same
-speed with its new length. The second option is to resize the Context
-canvas without changing the number of toggles ("zooming") \, useful
-for improve visibility. To do this \, double click and drag instead
-of single click.;
 #X text 38 208 To summarize:;
 #X obj 257 278 cnv 15 110 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -136,6 +129,13 @@ the shift key and then click and drag at the right-hand edge of the
 symbol atom. The selectable area is harder to find \, but it should
 scroll in the same way. If you can't find it \, try using the :Z command
 instead.;
+#X text 11 101 There are two further options for resizing. Holding
+down the Control key instead of Shift re-fits the cycle time (:d) to
+the new length. This is useful if you want Context to play at the same
+speed with its new length. The second option is to resize the Context
+canvas without changing the number of toggles ("zooming") \, useful
+for improve visibility. To do this \, double click and drag instead
+of single click.;
 #X restore 65 165 resizing;
 #N canvas 65 93 450 267 message 0;
 #X text 15 19 To move the message box between different terms from

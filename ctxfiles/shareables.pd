@@ -1,5 +1,5 @@
-#N canvas 217 294 450 300 10;
-#N canvas 103 298 1260 359 params 0;
+#N canvas 214 298 450 300 10;
+#N canvas 100 302 1260 359 params 0;
 #X obj 85 65 receive paraquery";
 #X obj 85 87 unpack;
 #X obj 85 131 - 3;
@@ -8,11 +8,11 @@
 #X obj 278 170 spigot 1;
 #X obj 278 192 t b f;
 #X obj 250 145 t f b;
-#X msg 278 214 read params.txt;
+#X msg 278 234 read params.txt;
 #X obj 85 175 array get params£ 0 4;
 #X obj 138 205 - 5;
 #X obj 85 286 send;
-#X obj 250 264 makefilename %d-paramy;
+#X obj 250 284 makefilename %d-paramy;
 #X obj 555 41 receive ^&*allcurs;
 #X obj 555 63 change;
 #X obj 555 115 sel 1 2 3;
@@ -40,11 +40,13 @@
 #X obj 266 42 unpack;
 #X obj 299 64 t f b;
 #X obj 299 110 makefilename %d-fadeq;
-#X obj 278 236 array define params£ 42;
+#X obj 278 256 array define params£ 42;
 #X obj 557 225 symbol hcs/sys_gui;
 #X obj 555 141 symbol hcs/canvas_name;
 #X msg 138 230 138 5 \$1 101;
 #X text -199 231 change this value if text size changes again-->;
+#X obj 350 179 ../config;
+#X msg 377 211 read params-thin.txt;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 1 7 0;
@@ -53,7 +55,7 @@
 #X connect 4 0 2 0;
 #X connect 4 1 10 0;
 #X connect 5 0 6 0;
-#X connect 6 0 8 0;
+#X connect 6 0 42 2;
 #X connect 6 1 5 1;
 #X connect 7 0 12 0;
 #X connect 7 1 5 0;
@@ -93,6 +95,9 @@
 #X connect 36 0 11 1;
 #X connect 39 0 31 0;
 #X connect 40 0 11 0;
+#X connect 42 5 8 0;
+#X connect 42 6 43 0;
+#X connect 43 0 37 0;
 #X restore 93 109 pd params;
 #N canvas 65 81 602 687 colours 0;
 #X obj 126 48 unpack f f;

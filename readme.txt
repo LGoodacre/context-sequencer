@@ -25,6 +25,11 @@ Context does not currently work on L2Ork or Purr Data.
 Context patches sometimes take a long time to load (some of them several minutes). You can speed this up by turning off DSP before loading, then turning it back on. Faster machines are recommended.
 
 
+TEXT SIZE
+
+Different installations sometimes have different font sizes, which throws off the alignment of the float- and symbol-atoms on the Context GUI. You can (hopefully) fix this annoyance in the [config] file in the main folder. If the atoms are not perfectly conjoined, then open the config.pd file and change the connection from "bold" to "thin" or vice versa. I can't guarantee that this will accomodate every system though. If you're still having trouble, please report a bug.
+
+
 DOCUMENTATION:
 
 There are four parts to the Documentation:
