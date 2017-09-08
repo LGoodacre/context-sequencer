@@ -1,22 +1,34 @@
-#N struct 5029-big2 float x float y array 5029-array2 ^&*-dsmall2;
+#N struct 20760-big2 float x float y array 20760-array2 ^&*-dsmall2
+;
 #N struct ^&*-dsmall2 float x float y;
-#N struct 5029-big1 float x float y array 5029-array1 ^&*-dsmall1;
+#N struct 20760-big1 float x float y array 20760-array1 ^&*-dsmall1
+;
 #N struct ^&*-dsmall1 float x float y;
-#N struct 5099-big2 float x float y array 5099-array2 ^&*-dsmall2;
-#N struct 5099-big1 float x float y array 5099-array1 ^&*-dsmall1;
-#N struct 5166-big2 float x float y array 5166-array2 ^&*-dsmall2;
-#N struct 5166-big1 float x float y array 5166-array1 ^&*-dsmall1;
-#N struct 5236-big2 float x float y array 5236-array2 ^&*-dsmall2;
-#N struct 5236-big1 float x float y array 5236-array1 ^&*-dsmall1;
-#N struct 5309-big1 float x float y array 5309-array1 ^&*-dsmall1;
-#N struct 5382-big2 float x float y array 5382-array2 ^&*-dsmall2;
-#N struct 5382-big1 float x float y array 5382-array1 ^&*-dsmall1;
-#N struct 5452-big2 float x float y array 5452-array2 ^&*-dsmall2;
-#N struct 5452-big1 float x float y array 5452-array1 ^&*-dsmall1;
-#N canvas 308 101 860 592 10;
-#X obj 241 343 sketch x 224 y 109 point1 0.308036 0.701835 0.71875
-0.701835 point2 0.09375 0.894495 0.486607 0.394495 0.888393 0.848624
-name mycurve;
+#N struct 20832-big2 float x float y array 20832-array2 ^&*-dsmall2
+;
+#N struct 20832-big1 float x float y array 20832-array1 ^&*-dsmall1
+;
+#N struct 20901-big2 float x float y array 20901-array2 ^&*-dsmall2
+;
+#N struct 20901-big1 float x float y array 20901-array1 ^&*-dsmall1
+;
+#N struct 20973-big2 float x float y array 20973-array2 ^&*-dsmall2
+;
+#N struct 20973-big1 float x float y array 20973-array1 ^&*-dsmall1
+;
+#N struct 21048-big1 float x float y array 21048-array1 ^&*-dsmall1
+;
+#N struct 21123-big2 float x float y array 21123-array2 ^&*-dsmall2
+;
+#N struct 21123-big1 float x float y array 21123-array1 ^&*-dsmall1
+;
+#N struct 21195-big2 float x float y array 21195-array2 ^&*-dsmall2
+;
+#N struct 21195-big1 float x float y array 21195-array1 ^&*-dsmall1
+;
+#N canvas 305 105 860 592 10;
+#X obj 241 343 sketch point1 0.308036 0.701835 0.71875 0.701835 point2
+0.09375 0.894495 0.486607 0.394495 0.888393 0.848624;
 #X obj 175 23 cnv 15 202 72 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 170 18 cnv 15 202 72 empty empty empty 20 12 0 14 -1 -66577
@@ -60,9 +72,9 @@ the curve changes -->, f 25;
 0;
 #X text 536 365 Sketch autosaves \, so whatever you draw will reappear
 the next time you open the patch. Just press Ctrl + S !, f 23;
-#X obj 154 88 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
+#X obj 154 88 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
 20 12 0 14 -262144 -66577 0;
-#X obj 159 -2 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
+#X obj 159 -2 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
 20 12 0 14 -262144 -66577 0;
 #N canvas 0 50 450 300 annimate 0;
 #X obj 100 100 tgl 10 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
@@ -115,8 +127,8 @@ cheap., f 89;
 #X obj 53 450 cnv 15 55 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #N canvas 359 84 633 587 (subpatch) 0;
-#X obj 40 146 sketch point1 0.71875 0.965847 point2 0.132813 0.968473
-color -232806;
+#X obj 40 146 sketch point1 0.71875 0.969738 point2 0.132813 0.972065
+;
 #X text 189 147 Sketch has a variety of options controlling its behaviour.
 To access the options \, right click on any sketch object and select
 "properties". A menu window will appear with all the relevant options.
@@ -148,8 +160,8 @@ the y-axis \; ec : turn error correction on*, f 74;
 #X obj 52 508 cnv 15 111 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #N canvas 222 89 811 514 (subpatch) 0;
-#X obj 221 161 sketch point1 0.078125 0.950607 0.265626 0.374555 point2
-0.757813 0.503089 name envelope color -232601 time 1500;
+#X obj 221 161 sketch point1 0.078125 0.956234 0.265626 0.445808 point2
+0.757813 0.559699;
 #X obj 68 356 *~;
 #X obj 68 410 dac~;
 #X obj 173 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -157,9 +169,9 @@ the y-axis \; ec : turn error correction on*, f 74;
 #X floatatom 28 235 5 0 0 0 - - -, f 5;
 #X obj 28 304 tabread4~ waveform;
 #X obj 28 256 phasor~ 440;
-#X obj 227 321 sketch point1 0.546875 0.975754 0.585938 0.293005 0.859375
-0.891045 point2 0.101563 0.946593 0.367188 0.518987 0.679688 0.988141
-name waveform color -232412 duplicate 1 mirror-x 1;
+#X obj 227 321 sketch point1 0.546875 0.978516 0.585938 0.373549 0.859375
+0.903458 point2 0.101563 0.952677 0.367188 0.573786 0.679688 0.989492
+;
 #X obj 28 280 *~ 256;
 #X obj 221 89 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
 -262144 -1 -1 1500 256;
@@ -205,8 +217,8 @@ by the grey end points \, so a sketch with 3 end points will have 4
 sections and consequently 4 extra in/outlets \, regarless of how many
 brown curve points there are.;
 #X msg 157 281 0;
-#X obj 67 182 sketch point1 0.15625 0.954336 0.328125 0.812351 0.671875
-0.810708 color -86471;
+#X obj 67 182 sketch point1 0.15625 0.959538 0.328125 0.833729 0.671875
+0.832273;
 #X obj 37 305 s c1;
 #X obj 97 305 s c2;
 #X obj 37 281 pow 0.5;
@@ -227,16 +239,15 @@ coordinates.;
 are not visible on the canvas. You can connect the cables directly
 without using [send] and [receive] \, but you're on your own when it
 comes to hiding them behind the canvas., f 26;
-#X obj 31 522 sketch x 211 y 110 point1 0.414692 0.690909 0.990521
-1 point2 0.689573 0.254545 name first color -129125;
+#X obj 31 522 sketch point1 0.414692 0.690909 0.990521 1 point2 0.689573
+0.254545;
 #X text 21 446 You can have a lot of fun with custom formulas! Here
 are some examples using [expr].;
 #X obj 99 652 expr 0.2 * sin($f1*28) + $f1;
 #X obj 99 676 s cc1;
 #X obj 99 493 r cc1;
-#X obj 61 864 sketch x 228 y 147 point1 0.217105 0.323129 0.739035
-0.884354 point2 0.107456 0.285714 0.899123 0.636054 name second color
--87535 duplicate 1 mirror-x 1 mirror-y 1;
+#X obj 61 864 sketch point1 0.217105 0.323129 0.739035 0.884354 point2
+0.107456 0.285714 0.899123 0.636054;
 #X obj 208 1179 expr first [$f1*120];
 #X obj 167 690 t b f;
 #X obj 167 713 random 100;
@@ -284,6 +295,8 @@ are all on to help draw the waveform, f 30;
 #X msg 241 284 curve 1;
 #X msg 311 284 curve -1;
 #X obj 546 13 ctxfiles/license;
+#X text 310 504 Thanks to https://pomax.github.io/bezierinfo/ for teaching
+me how to create Bezier curves!;
 #X connect 5 0 0 0;
 #X connect 6 0 0 0;
 #X connect 7 0 8 0;
