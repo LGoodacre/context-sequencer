@@ -13,6 +13,9 @@ quick tips;
 https://www.youtube.com/channel/UC_9u0n_ugUW7OjWrJRvhTjA?view_as=subscriber;
 video tutorial series (new uploads regularly);
 
+https://www.facebook.com/groups/123031095094961/;
+facebook group;
+
 helpfiles/context_commands_all.pd;
 Context commands (complete list);
 

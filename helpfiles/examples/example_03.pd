@@ -1,0 +1,73 @@
+#N canvas 296 129 1301 687 10;
+#X obj 950 157 dac~;
+#X obj 950 123 helpfiles/docfiles/glock~ 1;
+#X obj 950 41 receive context-;
+#X obj 419 191 context :X 17 :a ' 1 | 5 | 6 | 9 | -1 | 3 | 6 | 8 |
+7 | -4 | 3 | 9 | 2 | 0 | 4 | 6 | 1 ' :b ' . :a + (?3 - 2) 1 ?16 | .
+:x ?16 | | . :d * -1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 1 5 9 13 15
+17 :y = 1 2 3 :E 1 :K 3 :R 100 :rd 1 :ro 1 :rt 1;
+#X obj 420 261 context :X 17 :a ' *. 1 ' :b ' | . :x ?16 | | . :d *
+-1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 1 2 3 4 5 6 7 8 9 10 11 12 13
+14 15 16 17 :y = 1 2 3 :E 1 :K 3 :R 100 :S ( :T + 10 ) :rd 1 :ro 1
+:rt 1;
+#X msg 273 32 \; context start;
+#X msg 273 68 \; context stop;
+#X obj 420 334 context :X 17 :a ' *. 1 ' :b ' | . :x ?16 | | . :d *
+-1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 1 3 5 7 9 11 12 13 15 17 :y
+= 1 2 3 :E 1 :K 3 :R 100 :S ( :T - 5) :rd 1 :ro 1 :rt 1;
+#X symbolatom 1101 70 10 0 0 0 - - -, f 10;
+#X msg 431 63 :a -open;
+#X text 504 63 <--To view the message database \, click here. Usually
+\, each Context reads out of its own database \, but in this case \,
+c2 and c3 both have the command " :a *. 1 " \, which means that they
+are both reading the database of c1. This means that all Contexts are
+essentially playing the same melody \, just different bits of it (and
+at different speeds).;
+#X text 397 536 Each Context is using the :rt and :rd settings to allow
+the melody to bounce between the two "walls" (see :rd and :rt entries
+in "context_commands_all.pd";
+#X text 396 587 Each Context is also usinng " :E 1 " to give it a new
+random timing each cycle \, and " :k 2 :K 3 " to ensure that those
+random numbers are useful musical intervals.;
+#X text 394 467 --The full stop means: "send the rest of this message
+to myself instead of [receive context-] \; -- " :d * -1 " means: "multiply
+the cycle time by -1 (ie. reverse it). \; -- " :s " means: "start!"
+, f 96;
+#X text 395 445 The last toggle of each Context has the message " .
+:d * -1 :s ", f 64;
+#X obj 950 65 route float;
+#X text 704 191 <---Every time this toggle fires \, it alters a number
+in the :a database. This is done by the message " . :a + (?3 - 2) 1
+?16 "., f 63;
+#X text 696 267 On each Context \, the burst toggles are set to random
+\, so move randomly between toggles 1 2 and 3 Whenever the second burst
+toggle is selected \, a toggle from the pattern opens or closes at
+random. This happens because the second toggle refers to the database
+term " . :x ?16 " \, which picks a random number between 1 and 16 and
+sends it as an :x message to itself.;
+#X obj 950 92 scaler blues minor c 4;
+#X text 868 642 inspired by: https://youtu.be/gMfBrZVw__g, f 42;
+#X text 68 178 OVERVIEW OF WHAT'S HAPPENING:;
+#X text 1082 9 change key or mode here (or program it in so that Context
+chooses a new key automatically!, f 25;
+#X text 25 202 1: Each Context is reading the notes stored in c1's
+database (but they're each reading different notes \, according to
+which pattern toggles are open)., f 43;
+#X text 23 271 2: c2 transposes those notes up \, while c3 transposes
+them down., f 43;
+#X text 23 312 3: Each Context bounces back when it reaches the end
+of its cycle \, and also picks a new cycle time (2 \, 4 or 8 seconds).
+, f 43;
+#X obj 178 42 cnv 15 10 10 empty empty → 20 12 0 100 -262144 -1 0
+;
+#X text 23 372 4: The notes in the database are randomly changing \,
+and the pattern toggles are also randomly changing. (Turn off burst
+toggles 1 2 and 3 on each Context if you don't like this feature!)
+, f 43;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 15 0;
+#X connect 8 0 18 1;
+#X connect 9 0 3 1;
+#X connect 15 0 18 0;
+#X connect 18 0 1 0;

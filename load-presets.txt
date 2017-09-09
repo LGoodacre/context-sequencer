@@ -56,3 +56,6 @@ undo4 :H 6 :Y 8 :ol 1 4 obj 0 24 undo 4 obj 0 36 undo 4 obj 0 48 undo 4 obj 0 60
 
 selector :M 1 :L random :z 0;
 # create a Context which functions as a random selector;
+
+bounce :d 1 :rd 1 :rt 1 :b ' | | | . :d * -1 :s ' :x 5;
+#create a context that will bounce back and forth at the end of each cycle;
