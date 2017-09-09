@@ -1,4 +1,4 @@
-#N canvas 0 50 1276 708 10;
+#N canvas 65 81 1276 687 10;
 #X msg 680 166 resize \$1;
 #X obj 462 492 sort;
 #X obj 483 541 cyclone/iter;
