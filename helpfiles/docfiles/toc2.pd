@@ -1,6 +1,0 @@
-#N canvas 417 312 657 303 10;
-#X obj 123 104 pddp/pddplink ../03_connections.pd -text here;
-#X obj 123 116 pddp/pddplink ../03_connections.pd -text is;
-#X obj 123 127 pddp/pddplink ../03_connections.pd -text my;
-#X obj 123 139 pddp/pddplink ../03_connections.pd -text my;
-#X coords 0 -1 1 1 85 60 2 100 100;
