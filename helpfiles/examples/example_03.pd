@@ -1,4 +1,4 @@
-#N canvas 296 129 1301 687 10;
+#N canvas 65 81 1301 687 10;
 #X obj 950 157 dac~;
 #X obj 950 123 helpfiles/docfiles/glock~ 1;
 #X obj 950 41 receive context-;
@@ -64,6 +64,7 @@ of its cycle \, and also picks a new cycle time (2 \, 4 or 8 seconds).
 and the pattern toggles are also randomly changing. (Turn off burst
 toggles 1 2 and 3 on each Context if you don't like this feature!)
 , f 43;
+#X obj 93 573 ctxfiles/license;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 15 0;
