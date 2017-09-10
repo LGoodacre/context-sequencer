@@ -1,0 +1,11 @@
+#N canvas 65 81 450 300 10;
+#X obj 144 38 inlet;
+#X obj 144 60 t a b;
+#X obj 176 85 v (dollarzero);
+#X obj 176 107 makefilename %i-\$1;
+#X obj 144 144 send;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 1 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 1;
