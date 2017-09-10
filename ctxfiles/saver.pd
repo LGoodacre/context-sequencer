@@ -1,4 +1,4 @@
-#N canvas 254 145 727 545 10;
+#N canvas 347 222 727 545 10;
 #X obj 159 213 list;
 #X obj 367 178 cyclone/iter;
 #X obj 340 262 collect;
@@ -46,6 +46,7 @@
 #X text 541 56 print all and print overlay intercept;
 #X obj 465 77 t f f;
 #X obj 397 492 list;
+#X obj 340 24 \$4 \$1;
 #X connect 0 0 20 0;
 #X connect 1 0 11 0;
 #X connect 2 0 13 0;
@@ -99,3 +100,4 @@
 #X connect 45 0 13 1;
 #X connect 45 1 42 1;
 #X connect 46 0 29 0;
+#X connect 47 0 4 0;

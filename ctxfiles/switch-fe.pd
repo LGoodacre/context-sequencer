@@ -1,0 +1,11 @@
+#N canvas 784 225 450 300 10;
+#X obj 184 181 outlet;
+#X obj 31 63 iemguts/savebangs 5;
+#X obj 161 103 t f b b;
+#X obj 207 133 f 1;
+#X obj 161 157 s \$1-eon;
+#X connect 1 1 2 0;
+#X connect 2 0 4 0;
+#X connect 2 1 0 0;
+#X connect 2 2 3 0;
+#X connect 3 0 4 0;

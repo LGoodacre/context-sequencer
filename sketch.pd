@@ -1,4 +1,4 @@
-#N canvas 230 322 605 425 10;
+#N canvas 218 338 605 425 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -15,7 +15,7 @@
 #X obj -60 -200 inlet;
 #X obj -60 -166 outlet;
 #X obj -241 -234 iemguts/initbang;
-#N canvas 474 123 883 527 commands 0;
+#N canvas 465 135 883 527 commands 0;
 #X obj 141 72 inlet;
 #X obj 141 96 t b a;
 #X obj -133 175 cyclone/zl iter 1;
@@ -66,6 +66,7 @@ duplicate tfs \$0 #f duplicate 0 \, :duplicate #l \; mirror-x tfs \$0
 :mirror-y #l \; scale tfs \$0 #f scale 1 \, :scale #l \; ec tfs \$0
 #f ec 0 \, :ec #l \; savelist tf \$0 #f \; help tf \$0 #f \; ## s \$0-othr
 , f 75;
+#X obj 185 72 receive \$0-reintegrate;
 #X connect 0 0 1 0;
 #X connect 1 0 24 0;
 #X connect 1 1 2 0;
@@ -100,6 +101,7 @@ duplicate tfs \$0 #f duplicate 0 \, :duplicate #l \; mirror-x tfs \$0
 #X connect 30 0 15 1;
 #X connect 30 0 7 0;
 #X connect 31 0 22 0;
+#X connect 33 0 1 0;
 #X restore -304 -153 pd commands;
 #X obj -361 -206 inlet;
 #X obj -361 -182 route bang;
@@ -416,7 +418,7 @@ duplicate tfs \$0 #f duplicate 0 \, :duplicate #l \; mirror-x tfs \$0
 #X connect 22 6 3 0;
 #X connect 22 7 21 0;
 #X restore -241 -207 pd init;
-#N canvas 344 101 450 359 saving 0;
+#N canvas 335 113 557 359 saving 0;
 #X obj 85 136 text define -k \$0-save;
 #A set \; %^ :x 128 \; %^ :y 79 \; %^ :size 128 \; %^ :y1 1 \; %^ :y2
 0 \; %^ :points bang \; %^ :bpoints bang \; %^ :name bang \; %^ :color
@@ -424,7 +426,7 @@ duplicate tfs \$0 #f duplicate 0 \, :duplicate #l \; mirror-x tfs \$0
 0 \; %^ :mirror-y 0 \; %^ :scale 1 \; %^ :ec 0 \;;
 #X obj 85 91 receive \$0-savelist;
 #X msg 85 113 click;
-#X obj 216 27 ctxfiles/saver \$0 switch-x 3;
+#X obj 216 27 ctxfiles/saver \$0 switch-ee 3 switch-fe;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
 #X restore -354 -22 pd saving;
