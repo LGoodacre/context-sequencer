@@ -1,4 +1,4 @@
-#N canvas 690 93 514 388 10;
+#N canvas 687 97 514 388 10;
 #X obj 179 105 array define %&nou;
 #N canvas 178 316 430 142 ^&*-dsmall1 0;
 #X obj 35 62 filledcurve 65 1 1 0 -5 0 5 10 5 10 -5;
@@ -21,7 +21,7 @@
 #X msg 220 301  ;
 #X obj 287 300 list trim;
 #X obj 222 50 shared ctxfiles/cushare 0;
-#N canvas 387 124 1024 557 commands 0;
+#N canvas 342 128 1024 557 commands 0;
 #X obj 416 105 t b a;
 #X obj 112 184 cyclone/zl iter 1;
 #X obj 671 165 ctxfiles/recompile \$0;
@@ -38,13 +38,15 @@ speed gtfs \$0 #f speed 10 \, :speed #l \; time gtfs \$0 #f time 1000
 \, :time #l \; duplicate gtfs \$0 #f duplicate 0 \, :duplicate #l \;
 mirror-x gtfs \$0 #f mirror-x 0 \, :mirror-x #l \; mirror-y gtfs \$0
 #f mirror-y 0 \, :mirror-y #l \; scale gtfs \$0 #f scale 1 \, :scale
-#l \; ec gtfs \$0 #f ec 0 \, :ec #l \; savelist tf \$0 #f \; help tf
-\$0 #f \; ## s \$0-othr, f 76;
+#l \; ec gtfs \$0 #f ec 0 \, :ec #l \; name2 gtfs \$0 #f name2 0 \,
+:name2 #l \; savelist tf \$0 #f \; help tf \$0 #f \; ## s \$0-othr
+, f 76;
 #X obj 671 194 ctxfiles/br2 demux 2 \; #f t \; #f gs :x \; #f gs :y
 \; #f gs :size \; #f gs :y1 \; #f gs :y2 \; #f gs :point1 \; #f gs
 :point2 \; #f gs :name \; #f gs :color \; #f gs :speed \; #f gs :time
 \; #f gs :duplicate \; #f gs :mirror-x \; #f gs :mirror-y \; #f gs
-:scale \; #f gs :ec \; #f gs savelist \; #f s £""-help;
+:scale \; #f gs :ec \; #f gs :name2 \; #f gs savelist \; #f s £""-help
+;
 #X connect 0 0 2 0;
 #X connect 0 1 1 0;
 #X connect 1 0 5 0;
