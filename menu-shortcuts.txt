@@ -1,9 +1,9 @@
 SHORTCUTS
-PATTERN-LENGTH
-BURST-LENGTH
-PATTERN-EDIT
-BURST-EDIT
-five
-six;
+X-LIMIT
+Y-LIMIT
+X-EDIT
+Y-EDIT
+BURST-PRESETS
+SAFETY;
 ;
->> Edit line numbers 2-7 of this file to change the contents of the "shortcuts" folder in the Context menu. Choose your most used menu items for ease of access. Titles should correspond to the second term of the lines in "ctxfiles/helptext.txt". Use hyphens for spaces (ie. "pattern-length" instead of "pattern length"). No semi-colons until line number 7!;
+>> Edit line numbers 2-7 of this file to change the contents of the "shortcuts" folder in the Context menu. Choose your most used menu items for ease of access. Titles should correspond to the second term of the lines in "ctxfiles/helptext.txt". Use hyphens for spaces (ie. "x-length" instead of " length"). Don't use semi-colons until line number 7!;

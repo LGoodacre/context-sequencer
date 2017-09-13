@@ -14,7 +14,7 @@
 -m QUANTITY ▲ DEFINE ▲ PROGRESSION ▲ RANDOM ▪ WRAP ▪ EDIT RANDOM ☺ HELP;
 -m SELECTION ▲ DEFINE ▲ PROGRESSION ▲ RANDOM ▪ WRAP  ▪ EDIT RANDOM ☺ HELP;
 -t ADVANCE m 2 off on;
--m PRESETS ▪ ALL ▪ LINEAR ▪ RANDOM ** ** ☺ HELP;
+-m BURST PRESETS ▪ ALL ▪ LINEAR ▪ RANDOM ** ** ☺ HELP;
 ;
 -p list BURST :: \; The burst toggles (by default the ones on the right) fire together at the end of the Context cycle. The QUANTITY settings define how many toggles fire and the SELECTION settings define which. \; AUTO ADVANCE decides whether a new set of burst toggles are chosen every time the context is started or not. Use the "bump" command to advance a new toggle selection regardless of whether auto-advance is on. \; PRESETS allow you to choose the most common burst settings.;
 -m X-AXIS MESSAGES ▲ LIMIT ▲ PREPEND ▲ APPEND ▪ EDIT ▪ CLEAR ☺ HELP;
