@@ -1,4 +1,4 @@
-#N canvas 170 335 1181 407 10;
+#N canvas 152 359 1181 407 10;
 #X obj 20 76 iemguts/savebangs 1;
 #X obj 13 362 iemguts/canvasname 1;
 #X obj 20 267 f;
@@ -15,7 +15,7 @@
 #X obj 150 249 receive \$7-lb;
 #X obj 35 242 receive \$7-build2;
 #X obj 313 216 receive \$7-inlet-in;
-#X obj 367 26 receive \$7-outletx-in;
+#X obj 367 -97 receive \$7-outletx-in;
 #X obj 465 136 receive \$7-outlety-in;
 #X obj 685 172 receive \$7-everything;
 #X obj 593 236 receive \$7-mousein;
@@ -35,7 +35,7 @@
 #X msg 20 311 symbol overlay-\$1.pd;
 #X obj 893 258 outlet;
 #X obj 893 216 receive \$7-nexts;
-#X obj 367 74 spigot;
+#X obj 367 -49 spigot;
 #X obj 548 48 loadbang;
 #X obj 548 70 v findon)()(;
 #X obj 533 26 receive findon)()(;
@@ -43,8 +43,14 @@
 #X obj 465 180 spigot;
 #X obj 367 96 s \$7-xffind;
 #X obj 465 202 s \$7-yffind;
-#X obj 367 48 t f a;
+#X obj 367 -75 t f a;
 #X obj 465 158 t f a;
+#X obj 413 -68 receive \$7-xsize-2;
+#X obj 367 -27 moses 5;
+#X obj 387 69 spigot;
+#X obj 413 -5 t f b;
+#X obj 426 21 v \$7-fdog;
+#X obj 426 43 ==;
 #X connect 0 0 4 0;
 #X connect 2 0 33 0;
 #X connect 3 0 22 0;
@@ -71,7 +77,7 @@
 #X connect 32 0 1 1;
 #X connect 33 0 1 1;
 #X connect 35 0 34 0;
-#X connect 36 0 42 0;
+#X connect 36 0 47 0;
 #X connect 37 0 38 0;
 #X connect 38 0 40 0;
 #X connect 39 0 40 0;
@@ -82,3 +88,11 @@
 #X connect 44 1 9 0;
 #X connect 45 0 41 0;
 #X connect 45 1 10 0;
+#X connect 46 0 47 1;
+#X connect 47 0 42 0;
+#X connect 47 1 49 0;
+#X connect 48 0 42 0;
+#X connect 49 0 48 0;
+#X connect 49 1 50 0;
+#X connect 50 0 51 0;
+#X connect 51 0 48 1;
