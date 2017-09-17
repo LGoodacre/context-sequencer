@@ -1,4 +1,4 @@
-#N canvas 152 359 1181 407 10;
+#N canvas 137 351 1181 407 10;
 #X obj 20 76 iemguts/savebangs 1;
 #X obj 13 362 iemguts/canvasname 1;
 #X obj 20 267 f;
@@ -51,6 +51,8 @@
 #X obj 413 -5 t f b;
 #X obj 426 21 v \$7-fdog;
 #X obj 426 43 ==;
+#X obj 703 88 iemguts/canvasdollarzero 1;
+#X obj 703 110 s \$7-ovzero;
 #X connect 0 0 4 0;
 #X connect 2 0 33 0;
 #X connect 3 0 22 0;
@@ -79,6 +81,7 @@
 #X connect 35 0 34 0;
 #X connect 36 0 47 0;
 #X connect 37 0 38 0;
+#X connect 37 0 52 0;
 #X connect 38 0 40 0;
 #X connect 39 0 40 0;
 #X connect 40 0 36 1;
@@ -96,3 +99,4 @@
 #X connect 49 1 50 0;
 #X connect 50 0 51 0;
 #X connect 51 0 48 1;
+#X connect 52 0 53 0;

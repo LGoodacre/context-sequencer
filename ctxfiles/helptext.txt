@@ -213,9 +213,9 @@
 -m OVERLAY ▪ SAVE OVERLAY ▪ VIEW OVERLAY ▪ CLEAR OVERLAY ▪ EMBEDDED ▪ EMBED STOP ☺ HELP;
 -t INTERRUPT tp 2 off on;
 -c GUI OFF :g -1;
--t FLOAT SEND J 2 local global;
+-t FLOAT SEND J 3 local global overlay;
 -m REVERSE ▪ OFFSET PATTERN ▪ REVERSE LAST ** ** ** ☺ HELP;
--p list OVERLAY determine some settings for the context overlay (embedding environment). \; INTERRUPTION settings determine what happens when context is interrupted in the middle of its cycle. When on‚ context will restart. When off‚ Context will continue to the end of its cycle uninterrupted. \; GUI OFF turns the GUI face off and deletes a sizeable portion of the patch inside. Context continues to function as normal‚ but in "power saving" mode. Use this in larger patches when you know you won't have to manually edit a context and want to save CPU load. \; FLOAT SEND determines whether the context's toggle floats send send locally or globally. When local‚ the context will connect only to other contexts in the same patch. When global‚ it will send to contexts in any open patch. \; CYCLE REVERSAL displays settings concerned with the behaviour of pattern toggles when the cycle time is reversed.; 
+-p list OVERLAY determine some settings for the context overlay (embedding environment). \; INTERRUPTION settings determine what happens when context is interrupted in the middle of its cycle. When on‚ context will restart. When off‚ Context will continue to the end of its cycle uninterrupted. \; GUI OFF turns the GUI face off and deletes a sizeable portion of the patch inside. Context continues to function as normal‚ but in "power saving" mode. Use this in larger patches when you know you won't have to manually edit a context and want to save CPU load. \; FLOAT SEND determines the domain of toggle float connections. Local means that toggle connects will only connect to other contexts in the same patch. Global means it will send to contexts in any open patch. Overlay means it will only send to Contexts embedded within this one.\; CYCLE REVERSAL displays settings concerned with the behaviour of pattern toggles when the cycle time is reversed.; 
 ;
 ;
 ;
