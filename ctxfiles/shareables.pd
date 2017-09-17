@@ -1,4 +1,4 @@
-#N canvas 65 460 450 300 10;
+#N canvas 323 272 450 300 10;
 #N canvas 100 302 1260 359 params 0;
 #X obj 85 65 receive paraquery";
 #X obj 85 87 unpack;
@@ -331,7 +331,7 @@
 #X connect 8 0 9 0;
 #X connect 10 0 1 0;
 #X restore 93 178 pd license;
-#N canvas 414 93 721 687 repack 1;
+#N canvas 393 93 721 687 repack 0;
 #X obj 343 37 receive repack%g&hk(;
 #X obj 193 451 text get \$0n;
 #X obj 193 319 moses;
@@ -396,7 +396,6 @@ contain special characters. To alter anyway hold Shift.;
 #X obj 225 407 t f f f;
 #X obj 236 429 - 1;
 #X msg 149 915 \; \$6-c\$3 :\$5 + \$1 1 \$7;
-#X obj 48 770 print ll;
 #X msg 186 863 \$6-c\$3 :\$4 + \$1 \$2 \; \$6-c\$3 :\$4 + \$1 \$2;
 #X connect 0 0 44 0;
 #X connect 1 0 6 0;
@@ -427,7 +426,7 @@ contain special characters. To alter anyway hold Shift.;
 #X connect 16 0 14 1;
 #X connect 16 1 14 0;
 #X connect 17 0 59 0;
-#X connect 17 1 61 0;
+#X connect 17 1 60 0;
 #X connect 17 2 53 0;
 #X connect 18 0 23 0;
 #X connect 18 0 48 0;
@@ -488,5 +487,23 @@ contain special characters. To alter anyway hold Shift.;
 #X connect 57 1 43 6;
 #X connect 58 0 1 0;
 #X connect 58 0 43 1;
-#X connect 61 0 60 0;
 #X restore 138 219 pd repack;
+#N canvas 590 376 671 300 finder 1;
+#X obj 46 34 receive tyhjr(jK@;
+#X obj 46 56 t b a;
+#X obj 78 91 cyclone/zl iter 1;
+#X obj 204 84 ctxfiles/recompile \$0;
+#X obj 204 106 ctxfiles/br2 demux 2 \; #f t \; #f gs :x \; #f gs :y
+\; #f gs :n \; #f gs :s \; #f gs :l \; #f gs :m \; #f gs :k \; #f gs
+:start;
+#X obj 46 119 ctxfiles/br2 route 1 \; :x gtfs \$0 #f :x 300 \; :y gtfs
+\$0 #f :y 200 \; :n gtfs \$0 #f :n 10 \; :s gtfs \$0 #f :s 50 \; :l
+gtfs \$0 #f :l bang \; :m gtfs \$0 #f :m 33 \; :k gtfs \$0 #f :k 33
+\; :start tf \$0 #f \; ## s \$0-othr;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 1 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X restore 194 120 pd finder commands;
