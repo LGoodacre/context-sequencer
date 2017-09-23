@@ -135,21 +135,9 @@
 the next cycle. It forces this number for the next cycle \, but it
 may wander from there if :p or :l are positive., f 76;
 #X text 179 178 0 \, th default setting \, means "all toggles".;
-#X text 180 236 :p creates an arithmetic progression for the toggle
-quantity. If :p is set to 1 \, then one more toggle will fire each
-cycle. In this case \, :p 14 is equivalent to a progression of -1,
-f 76;
-#X text 178 283 Note that a negative value for :p is a special case
-(see below), f 76;
 #X text 802 155 :o defines a precise series of toggles for the next
 cycle. Type in a list of numbers 1 to 15 here to see. :o overrides
 the :h setting., f 76;
-#X text 814 240 :p creates an arithmetic progression for the toggle
-position. If :p is set to 1 \, then the burst selection toggle(s) will
-land one place higher next cycle. In this case \, :P 14 is equivalent
-to a progression of -1, f 75;
-#X text 815 292 Note that a negative value for :P is a special case
-(see below), f 74;
 #X text 178 332 :l adds a degree of uncertainty to the toggle quantity.
 The higher the number \, the more uncertain the quantity according
 to Gaussian distribution \, with 0 being definite and 100 being even
@@ -171,10 +159,6 @@ could jump from 1 to 15 or from 15 to 1 in one step \, whereas if they
 are off \, this would have to to be done in 14 steps., f 76;
 #X text 813 524 Note that :WW does not affect progressions (:P) \,
 which will always wrap., f 75;
-#X text 178 374 The median of the bell curve resets with each new cycle
-\, giving a randomized toggle quantity a "drunken walk". If the :p
-value is negative then the median does not reset \, so the variations
-will center around the same point., f 76;
 #X obj 11 326 cnv 1 1265 1 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 10 447 cnv 1 1267 1 empty empty empty 20 12 0 14 -1 -66577 0
@@ -254,10 +238,6 @@ is recommended that you try each setting it turn to get a feel for
 what they do. Start the example Context and watch how the toggle selection
 changes with the different settings. For clarity \, try each setting
 with the others turned down., f 100;
-#X text 814 372 The median of the bell curve resets with each new cycle
-\, giving a randomized toggle position a "drunken walk". If the :P
-value is negative then the mean does not reset \, so the variations
-will center around the same point., f 76;
 #X obj 1095 563 cnv 1 1 106 empty empty empty 20 12 0 14 -1 -66577
 0;
 #X obj 1164 568 cnv 15 109 38 empty empty empty 20 12 0 14 -66577 -66577
@@ -281,6 +261,26 @@ chosen \, the urn is reset., f 76;
 #X obj 1103 31 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 1103 31 ctxfiles/license;
+#X text 180 236 :p creates an arithmetic progression for the toggle
+quantity. If :p is set to 1 \, then one more toggle will fire each
+cycle. Negative :p values mean that the progression will decrease instead
+of increase., f 76;
+#X text 814 240 :p creates an arithmetic progression for the toggle
+position. If :p is set to 1 \, then the burst selection toggle(s) will
+land one place higher next cycle. Negative :P values mean that the
+progression will decrease., f 75;
+#X text 815 292 Note that a noninteger values for :P are a special
+case (see :R below)., f 74;
+#X text 178 283 Note that a non-integer values for :p are a special
+case (see :l below)., f 76;
+#X text 178 374 The median of the bell curve resets with each new cycle
+\, giving a randomized toggle quantity a "drunken walk". If the :p
+value is a non-integer then the median does not reset \, so the variations
+will center around the same point., f 76;
+#X text 814 372 The median of the bell curve resets with each new cycle
+\, giving a randomized toggle position a "drunken walk". If the :P
+value is a non-integer then the mean does not reset \, so the variations
+will center around the same point., f 76;
 #X connect 6 0 12 0;
 #X connect 13 0 14 0;
 #X connect 15 0 22 0;
@@ -294,8 +294,8 @@ chosen \, the urn is reset., f 76;
 #X connect 24 0 9 0;
 #X connect 25 0 10 0;
 #X connect 26 0 11 0;
-#X connect 70 0 86 0;
-#X connect 73 0 74 0;
-#X connect 79 0 82 0;
-#X connect 80 0 82 0;
-#X connect 81 0 82 0;
+#X connect 65 0 81 0;
+#X connect 68 0 69 0;
+#X connect 74 0 77 0;
+#X connect 75 0 77 0;
+#X connect 76 0 77 0;
