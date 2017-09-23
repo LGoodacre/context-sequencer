@@ -19,7 +19,7 @@
 -p list BURST :: \; The burst toggles (by default the ones on the right) fire together at the end of the Context cycle. The QUANTITY settings define how many toggles fire and the SELECTION settings define which. \; AUTO ADVANCE decides whether a new set of burst toggles are chosen every time the context is started or not. Use the "bump" command to advance a new toggle selection regardless of whether auto-advance is on. \; PRESETS allow you to choose the most common burst settings.;
 -m X-AXIS MESSAGES ▲ LIMIT ▲ PREPEND ▲ APPEND ▪ EDIT ▪ CLEAR ☺ HELP;
 -m Y-AXIS MESSAGES ▲ LIMIT ▲ PREPEND ▲ APPEND ▪ EDIT ▪ CLEAR ☺ HELP;
--m VARIABLE OPTIONS ▪ ? ADVANCE ▲ ? OFFSET ▪ ^ RANDOM ► VARIABLES ** ☺ HELP;
+-m VARIABLE OPTIONS ▪ ? ADVANCE ▲ ? OFFSET ▪ ^ RANDOM ► DEFINITIONS ▪ < PREPEND ☺ HELP;
 ;
 ;
 -p list MESSAGES :: \; Each time a toggle fires‚ context sends a message. The messages are stored in two databases‚ one for the x-axis (:a) and one for the y-axis (:b). Each toggle corresponds to one term of the database‚ so there are as many toggles on the context as there are terms in the database. Note that the END toggle (bottom right) corresponds to the BURST database (default y)‚ not the PATTERN. \; This sub menu helps you edit the databases‚ and controls how the databases are read. \; VARIABLES are special characters which are placed into a database message and substituted for custom values. This sub-menu delivers help on all special characters. \; ? AUTO ADVANCE determines whether or not the ? special character chooses a new random number after each firing. You can advance the ? selection at any time using 'bump m'.;
@@ -129,9 +129,9 @@
 -t ? ADVANCE rm 2 off on;
 -f ? OFFSET ro -1064 1064;
 -t ^ RANDOM nr 2 off on;
--m VARIABLES ☺ ARITHMETIC ☺ NO ARGUMENTS ☺ WITH ARGUMENTS ☺ DIRECTORS ** ☺ HELP;
-;
--p list ? ADVANCE determines whether the ? message variable chooses a new random value each time it is sent. When off‚ the 'bump m' command will select a new value. \; ? OFFSET adds  given number to all ? message variables. \; ^ RANDOM determines whether the ^ variable picks a random ID number or cycles through them in sequence.;
+-m DEFINITIONS ☺ ARITHMETIC ☺ NO ARGUMENTS ☺ WITH ARGUMENTS ☺ DIRECTORS ** ☺ HELP;
+-t > PREPEND ms 2 off on;
+-p list ? ADVANCE determines whether the ? message variable chooses a new random value each time it is sent. When off‚ the 'bump m' command will select a new value. \; ? OFFSET adds  given number to all ? message variables. \; ^ RANDOM determines whether the ^ variable picks a random ID number or cycles through them in sequence. \; DEFINITIONS lists a series of help prompts for message variables. \; < PREPEND determines whether or not the dollar zero value is prepended to the message send prefix <.;
 ;
 ;
 ;

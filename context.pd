@@ -1,8 +1,8 @@
-#N canvas 169 333 796 419 10;
+#N canvas 160 345 796 419 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 291 101 992 687 guts 1;
+#N canvas 217 93 992 687 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 568 85 795 687 names 0;
 #X msg 266 486 symbol  ;
@@ -1930,7 +1930,7 @@ on rev;
 #X connect 47 0 45 0;
 #X connect 48 0 47 3;
 #X restore 551 182 pd position;
-#N canvas 65 81 1301 687 messages 0;
+#N canvas 65 97 1301 687 messages 0;
 #X obj 18 484 list;
 #X obj 688 252 route bang;
 #X obj 688 413 msgfile;
@@ -1944,10 +1944,10 @@ on rev;
 #X obj 707 510 route #6$^d%;
 #X obj 145 943 list split 1;
 #X obj 90 966 list split 1;
-#X obj 124 1036 send;
-#X msg 145 989 symbol \$1;
+#X obj 124 1116 send;
+#X msg 145 1069 symbol \$1;
 #X obj 186 693 list trim;
-#X obj 124 1013 list trim;
+#X obj 124 1093 list trim;
 #X obj 326 1073 s \$0-prep;
 #X obj 815 472 f;
 #X obj 842 472 + 1;
@@ -2555,7 +2555,7 @@ be collected), f 34;
 #X text 743 419 flust on burst;
 #X text 601 511 re-identify bangs;
 #X text 80 787 identify dirctors;
-#X text -3 993 send to given channel;
+#X text -41 990 send to given channel;
 #X text 321 863 send to regular channels;
 #X text 442 1037 identify where the message is going;
 #X obj 707 553 t b b;
@@ -2610,6 +2610,11 @@ be collected), f 34;
 #X obj 373 821 s \$0-undone2;
 #X obj 21 -79 array set \$0-settings 3;
 #X obj 761 89 array set \$0-settings 4;
+#X obj 177 966 receive \$0-mesp;
+#X obj 145 990 demux;
+#X obj 202 999 receive \$0-parent;
+#X msg 177 1043 symbol \$2-\$1;
+#X obj 177 1021 pack s f;
 #X connect 0 0 51 0;
 #X connect 1 0 8 0;
 #X connect 1 1 62 0;
@@ -2623,7 +2628,7 @@ be collected), f 34;
 #X connect 9 0 10 0;
 #X connect 10 0 144 0;
 #X connect 10 1 37 0;
-#X connect 11 0 14 0;
+#X connect 11 0 197 0;
 #X connect 12 1 16 0;
 #X connect 14 0 13 1;
 #X connect 15 0 101 0;
@@ -2814,6 +2819,12 @@ be collected), f 34;
 #X connect 190 1 192 1;
 #X connect 191 0 192 0;
 #X connect 192 0 193 0;
+#X connect 196 0 197 1;
+#X connect 197 0 14 0;
+#X connect 197 1 200 0;
+#X connect 198 0 200 1;
+#X connect 199 0 13 1;
+#X connect 200 0 199 0;
 #X restore 68 431 pd messages;
 #N canvas 363 84 1190 683 switches 0;
 #X obj 163 155 f;
@@ -4063,7 +4074,7 @@ b b b b f f f f, f 82;
 #X connect 30 0 3 0;
 #X connect 30 1 3 0;
 #X restore 551 128 pd creation preset;
-#N canvas 65 101 1301 687 data 0;
+#N canvas 65 81 1301 687 data 0;
 #X obj 550 75 demux;
 #X obj 427 75 demux;
 #X obj 147 65 demux;
@@ -4381,54 +4392,11 @@ b b b b f f f f, f 82;
 #X obj 427 209 ctxfiles/br2 demux 2 \; #f t \; #f s \$0-listbreak \;
 ## \; #f s \$0-graphstart \; #f s \$0-xxstart \; #f s \$0-yystart \;
 #f s \$0-:io \; #f s \$0-prelist;
-#X obj 578 222 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
-\; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
-s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
-\$0 \; #f s \$0-:e \; #f s \$0-:f \; #f s \$0-:h \; #f is \$0 i x 4
-6 12 \; #f is \$0 j y 3 5 13 \; #f s \$0-:k \; #f s \$0-:l \; #f s
-\$0-:m \; #f s \$0-names \; #f s \$0-:o \; #f s \$0-:p \; #f s \$0-:q
-\; #f ev \$0 :r \; #f ev \$0 :s \; #f s \$0-:t \; #f ev \$0 :u \; #f
-s \$0-:v \; #f s \$0-:w \; #f os \$0 x 27 5 6 6 \; #f os \$0 y 28 3
-5 4 \; #f s \$0-:z \; #f ar \$0 A \; #f s \$0-:B \; #f s \$0-:C \;
-#f s \$0-:D \; #f dmode \$0 \; #f s \$0-:F \; #f s \$0-:G \; #f ar
-\$0 I \; #f s \$0-:J \; #f kmode \$0 \; #f ev \$0 :L \; #f ev \$0 :N
-\; #f s \$0-:O \; #f s \$0-:P \; #f s \$0-:Q \; #f s \$0-:R \; #f s
-\$0-:S \; #f s \$0-:T \; #f s \$0-:U \; #f s \$0-:V \; #f s \$0-:W
-\; #f s \$0-:Z \; #f s \$0-:ID \; #f s \$0-:ex \; #f s \$0-:se \; #f
-s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
-\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:em \;
-#f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
-\; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f ev \$0 stop \;
-#f ev \$0 bump \; #f ev \$0 find \; #f ev \$0 savelist \; #f ev \$0
-fetch \; #f ev \$0 reset \; #f ev \$0 rev \; #f ev \$0 :NN \; #f ev
-\$0 marker \; #f ev \$0 content \; #f ev \$0 -menu \; #f ev \$0 -overlay
-\; #f ev \$0 :ss \; #f ev \$0 :$ \; #f ev \$0 -delete;
-#X obj 729 249 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
-\; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
-:a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
-\; :d delr \$0 \; :e s \$0-patternmode \; :f s \$0-burstmode \; :h
-s \$0-numa \; :i togg \$0 i si 4 float \; :j togg \$0 j xi 3 \; :k
-s \$0-coefficient \; :l s \$0-randa \; :m s \$0-aadv \; :n s \$0-j-name
-\; :o s \$0-witchlist \; :p s \$0-proga \; :q s \$0-nozero \; :r s
-\$0-record \; :s ss \$0 startme :s started \; :t s \$0-collect \; :u
-s \$0-undo \; :v s \$0-saveme \; :w s \$0-hwrap \; :x togg \$0 x s
-4 si 5 10 \; :y togg \$0 y s 3 x 3 6 \; :z s \$0safety \; :A s \$0-autoon
-\; :B s \$0-pres \; :C s \$0-pscale \; :D s \$0-rres \; :E s \$0-dellmode
-\; :F s \$0-xzoomp \; :G s \$0-yzoomp \; :I s \$0-exon \; :J s \$0-glocal
-\; :K s \$0-coefmode \; :L s \$0-plinp \; :N s \$0-Und \; :O s \$0-shuffle
-\; :P s \$0-progb \; :Q s \$0-randadv \; :R s \$0-randb \; :S s \$0-patternprepp
-\; :T s \$0-patternappp \; :U s \$0-burstprepp \; :V s \$0-burstappp
-\; :W s \$0-wwrap \; :Z s \$0-zsize-2-in \; :ID s \$0-cnumbers \; :ex
-s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
-\; :rd s \$0-road \; :ol s \$0-imemb \; :x1 s \$0-x1p \; :x2 s \$0-x2p
-\; :y1 s \$0-y1p \; :y2 s \$0-y2p \; :em s \$0-imembe \; :pr s \$0-printme
-\; :te s \$0-tempo \; :rm s \$0-?off \; :nr s \$0-^set \; :ro s \$0-?offs
-\; :il s \$0-lab \; :ln s \$0-link \; :rt s \$0-rev-togs \; stop ss
-\$0 stopme stop prestop \; bump s \$0-bump \; find s \$0-findme \;
-savelist s \$0-savelist \; fetch s \$0-mfetch \; reset s \$0-resett
-\; rev s \$0-revme \; ## \; marker s \$0-smarker \; content s \$0-ctntalk
-\; -menu s \$0-menuc \; -overlay s \$0-hacklist \; :ss s \$0-sos \;
-:$ s \$0-var$ \; -delete s \$0-deleteme;
+#X obj 993 89 array define -k \$0-settings 5;
+#A 0 5 4 0 1 1;
+#X msg 970 31 5 4 0 1 1;
+#X text 896 63 0: xsize-2 \; 1: ysize-2 \; 2: parent \; 3: x-limit
+\; 4: y-limit;
 #X obj 101 235 ctxfiles/br2 route 1 \; :H tf \$0 #f 0 \; ## \; :g tfst
 \$0 #f g 0 \, gui #l \, GUI #l \; :X tfs \$0 #f X 5 \; :Y tfs \$0 #f
 Y 4 \; :io tfs \$0 #f io bang \; :: tf \$0 #f \; :M tfst \$0 #f M 0
@@ -4457,21 +4425,65 @@ collect #l \; :u tf \$0 #f \, bank #l \; :v tfst \$0 #f v 1 \, saving
 tfsn \$0 #f y2 0 \; :em tfst \$0 #f em 0 \; :pr tfs \$0 #f pr 0 \,
 print #l \; :te tfs \$0 #f te 100 \, tempo #l \; :rm tfst \$0 #f rm
 1 \; :nr tfst \$0 #f nr 0 \; :ro tfs \$0 #f ro 0 \; :il tfs \$0 #f
-il 0 \; :ln tfs \$0 #f ln bang \; :rt tfst \$0 #f rt 0 \; stop tf \$0
-#f \; bump tf \$0 #f \; find tf \$0 #f \; savelist tf \$0 #f \; fetch
-tf \$0 #f \; reset tf \$0 #f \; rev tf \$0 #f \; :NN tf \$0 #f \; marker
-tf \$0 #f \; content tf \$0 #f \; -menu tf \$0 #f \; -overlay tf \$0
-#f \; :ss tf \$0 #f \; :$ tf \$0 #f \; -delete tf \$0 #f \; . t \;
-## s \$0-othr;
-#X obj 993 89 array define -k \$0-settings 5;
-#A 0 5 4 0 1 1;
-#X msg 970 31 5 4 0 1 1;
-#X text 896 63 0: xsize-2 \; 1: ysize-2 \; 2: parent \; 3: x-limit
-\; 4: y-limit;
+il 0 \; :ln tfs \$0 #f ln bang \; :rt tfst \$0 #f rt 0 \; :ms tfst
+\$0 #f ms 0 \; stop tf \$0 #f \; bump tf \$0 #f \; find tf \$0 #f \;
+savelist tf \$0 #f \; fetch tf \$0 #f \; reset tf \$0 #f \; rev tf
+\$0 #f \; :NN tf \$0 #f \; marker tf \$0 #f \; content tf \$0 #f \;
+-menu tf \$0 #f \; -overlay tf \$0 #f \; :ss tf \$0 #f \; :$ tf \$0
+#f \; -delete tf \$0 #f \; . t \; ## s \$0-othr;
+#X obj 578 222 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
+\; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
+s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
+\$0 \; #f s \$0-:e \; #f s \$0-:f \; #f s \$0-:h \; #f is \$0 i x 4
+6 12 \; #f is \$0 j y 3 5 13 \; #f s \$0-:k \; #f s \$0-:l \; #f s
+\$0-:m \; #f s \$0-names \; #f s \$0-:o \; #f s \$0-:p \; #f s \$0-:q
+\; #f ev \$0 :r \; #f ev \$0 :s \; #f s \$0-:t \; #f ev \$0 :u \; #f
+s \$0-:v \; #f s \$0-:w \; #f os \$0 x 27 5 6 6 \; #f os \$0 y 28 3
+5 4 \; #f s \$0-:z \; #f ar \$0 A \; #f s \$0-:B \; #f s \$0-:C \;
+#f s \$0-:D \; #f dmode \$0 \; #f s \$0-:F \; #f s \$0-:G \; #f ar
+\$0 I \; #f s \$0-:J \; #f kmode \$0 \; #f ev \$0 :L \; #f ev \$0 :N
+\; #f s \$0-:O \; #f s \$0-:P \; #f s \$0-:Q \; #f s \$0-:R \; #f s
+\$0-:S \; #f s \$0-:T \; #f s \$0-:U \; #f s \$0-:V \; #f s \$0-:W
+\; #f s \$0-:Z \; #f s \$0-:ID \; #f s \$0-:ex \; #f s \$0-:se \; #f
+s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
+\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:em \;
+#f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
+\; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f s \$0-:ms \;
+#f ev \$0 stop \; #f ev \$0 bump \; #f ev \$0 find \; #f ev \$0 savelist
+\; #f ev \$0 fetch \; #f ev \$0 reset \; #f ev \$0 rev \; #f ev \$0
+:NN \; #f ev \$0 marker \; #f ev \$0 content \; #f ev \$0 -menu \;
+#f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev \$0 :$ \; #f ev \$0 -delete
+;
+#X obj 729 249 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
+\; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
+:a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
+\; :d delr \$0 \; :e s \$0-patternmode \; :f s \$0-burstmode \; :h
+s \$0-numa \; :i togg \$0 i si 4 float \; :j togg \$0 j xi 3 \; :k
+s \$0-coefficient \; :l s \$0-randa \; :m s \$0-aadv \; :n s \$0-j-name
+\; :o s \$0-witchlist \; :p s \$0-proga \; :q s \$0-nozero \; :r s
+\$0-record \; :s ss \$0 startme :s started \; :t s \$0-collect \; :u
+s \$0-undo \; :v s \$0-saveme \; :w s \$0-hwrap \; :x togg \$0 x s
+4 si 5 10 \; :y togg \$0 y s 3 x 3 6 \; :z s \$0safety \; :A s \$0-autoon
+\; :B s \$0-pres \; :C s \$0-pscale \; :D s \$0-rres \; :E s \$0-dellmode
+\; :F s \$0-xzoomp \; :G s \$0-yzoomp \; :I s \$0-exon \; :J s \$0-glocal
+\; :K s \$0-coefmode \; :L s \$0-plinp \; :N s \$0-Und \; :O s \$0-shuffle
+\; :P s \$0-progb \; :Q s \$0-randadv \; :R s \$0-randb \; :S s \$0-patternprepp
+\; :T s \$0-patternappp \; :U s \$0-burstprepp \; :V s \$0-burstappp
+\; :W s \$0-wwrap \; :Z s \$0-zsize-2-in \; :ID s \$0-cnumbers \; :ex
+s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
+\; :rd s \$0-road \; :ol s \$0-imemb \; :x1 s \$0-x1p \; :x2 s \$0-x2p
+\; :y1 s \$0-y1p \; :y2 s \$0-y2p \; :em s \$0-imembe \; :pr s \$0-printme
+\; :te s \$0-tempo \; :rm s \$0-?off \; :nr s \$0-^set \; :ro s \$0-?offs
+\; :il s \$0-lab \; :ln s \$0-link \; :rt s \$0-rev-togs \; :ms s \$0-mesp
+\; stop ss \$0 stopme stop prestop \; bump s \$0-bump \; find s \$0-findme
+\; savelist s \$0-savelist \; fetch s \$0-mfetch \; reset s \$0-resett
+\; rev s \$0-revme \; ## \; marker s \$0-smarker \; content s \$0-ctntalk
+\; -menu s \$0-menuc \; -overlay s \$0-hacklist \; :ss s \$0-sos \;
+:$ s \$0-var$ \; -delete s \$0-deleteme;
 #X connect 0 0 117 1;
-#X connect 0 1 118 1;
+#X connect 0 1 122 1;
 #X connect 1 0 117 0;
-#X connect 1 1 118 0;
+#X connect 1 1 122 0;
 #X connect 2 0 6 0;
 #X connect 2 1 4 0;
 #X connect 3 0 1 0;
@@ -4481,14 +4493,14 @@ tf \$0 #f \; content tf \$0 #f \; -menu tf \$0 #f \; -overlay tf \$0
 #X connect 5 0 1 1;
 #X connect 5 0 2 1;
 #X connect 6 0 7 0;
-#X connect 7 0 120 0;
+#X connect 7 0 121 0;
 #X connect 8 0 9 0;
 #X connect 9 0 3 0;
 #X connect 9 1 103 0;
 #X connect 74 0 75 0;
 #X connect 75 0 76 0;
 #X connect 77 0 3 0;
-#X connect 93 0 119 0;
+#X connect 93 0 123 0;
 #X connect 93 1 94 0;
 #X connect 94 0 95 0;
 #X connect 96 0 97 0;
@@ -5445,7 +5457,7 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 7 1 4 0;
 #X connect 7 2 8 0;
 #X restore 551 156 pd burst-presets;
-#N canvas 240 338 450 300 save 0;
+#N canvas 237 342 450 300 save 0;
 #X obj 169 146 text define -k \$0-save;
 #A set \; \; %^ :g 0 \; %^ :X 5 \; %^ :Y 4 \; \; \; %^ :M 0 \; %^ :a
 bang \; %^ :b bang \; %^ :c 11 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \;
@@ -5459,7 +5471,7 @@ bang \; %^ :W 0 \; %^ :Z 7 \; %^ :ID 0 \; %^ :ex -clear \; %^ :se 0
 \; %^ :ba bang \; %^ :es 0 \; %^ :rd 0 \; %^ :ol 0 \; %^ :x1 0 \; %^
 :x2 0 \; %^ :y1 0 \; %^ :y2 0 \; %^ :em 0 \; %^ :pr 0 \; %^ :te 100
 \; %^ :rm 1 \; %^ :nr 0 \; %^ :ro 0 \; %^ :il 0 \; %^ :ln bang \; %^
-:rt 0 \;;
+:rt 0 \; %^ :ms 0 \;;
 #X msg 169 123 click;
 #X obj 169 99 receive \$0-savelist;
 #X obj 168 194 ctxfiles/saver \$0 eapp 4;
@@ -6002,7 +6014,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 99 3 72 0;
 #X connect 99 4 92 1;
 #X restore 552 391 pd rules;
-#N canvas 404 190 647 556 title 1;
+#N canvas 395 202 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
