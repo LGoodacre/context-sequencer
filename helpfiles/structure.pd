@@ -1,0 +1,68 @@
+#N canvas 319 110 480 647 10;
+#X obj 43 272 context :M 1 :a ' push ' :d 1 :h 1 :i 2.5 3.5 0 0 1.5
+:m 0 :x = 1 2 5 :z 0 :P 1 :ID 1 :ol 1 :pu 1;
+#X obj 43 342 context :H 32 :M 1 :c -97673 :d 2 :h 1 :i 4.5 5.5 0 0
+0 :m 0 :x = 1 2 :z 0 :P 1 :ID 2 :ol 1 :pu 1 2 #del 8 5 obj 240 -32
+route :d 6 obj 240 11 list prepend :o 6 obj 373 -13 list prepend :d
+5 obj 373 -37 t f 5 connect 1 4 3 0 5 connect 1 6 6 0 5 connect 3 0
+4 0 5 connect 3 1 2 4 5 connect 4 0 2 4 5 connect 5 0 2 0 5 connect
+6 0 5 0;
+#X obj 120 342 context :H 32 :M 1 :c -97673 :d 1 :h 1 :i 6.5 5.5 0
+0 0 :m 0 :x = 1 2 :z 0 :P 1 :ID 3 :ol 1 :pu 1 2 #del 8 5 obj 240 -32
+route :d 6 obj 240 11 list prepend :o 6 obj 373 -13 list prepend :d
+5 obj 373 -37 t f 5 connect 1 4 3 0 5 connect 1 6 6 0 5 connect 3 0
+4 0 5 connect 3 1 2 4 5 connect 4 0 2 4 5 connect 5 0 2 0 5 connect
+6 0 5 0;
+#X obj 42 409 context :H 34 :M 1 :c -97673 :d 1 :h 1 :i 10 11 12 13
+0 :m 0 :x = 1 2 3 4 :z 0 :P 1 :ID 4 :ol 1 :pu 1 2 #del 8 5 obj 240
+-32 route :d 6 obj 240 11 list prepend :o 6 obj 373 -13 list prepend
+:d 5 obj 373 -37 t f 5 connect 1 4 3 0 5 connect 1 6 6 0 5 connect
+3 0 4 0 5 connect 3 1 2 4 5 connect 4 0 2 4 5 connect 5 0 2 0 5 connect
+6 0 5 0;
+#X obj 118 410 context :H 34 :M 1 :c -97673 :d 1 :h 1 :i 14 15 16 17
+0 :m 0 :x = 1 2 3 4 :z 0 :P 1 :ID 5 :ol 1 :pu 1 2 #del 8 5 obj 240
+-32 route :d 6 obj 240 11 list prepend :o 6 obj 373 -13 list prepend
+:d 5 obj 373 -37 t f 5 connect 1 4 3 0 5 connect 1 6 6 0 5 connect
+3 0 4 0 5 connect 3 1 2 4 5 connect 4 0 2 4 5 connect 5 0 2 0 5 connect
+6 0 5 0;
+#X obj 196 410 context :H 34 :M 1 :c -97673 :d 1 :h 1 :i 18 19 20 21
+0 :m 0 :x = 1 2 3 4 :z 0 :P 1 :ID 6 :ol 1 :pu 1 2 #del 8 5 obj 240
+-32 route :d 6 obj 240 11 list prepend :o 6 obj 373 -13 list prepend
+:d 5 obj 373 -37 t f 5 connect 1 4 3 0 5 connect 1 6 6 0 5 connect
+3 0 4 0 5 connect 3 1 2 4 5 connect 4 0 2 4 5 connect 5 0 2 0 5 connect
+6 0 5 0;
+#X obj 43 18 cnv 15 182 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 38 13 cnv 15 182 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 39 14 cnv 15 180 50 empty empty structure 20 20 1 35 -215103
+-1 0;
+#X obj 240 15 ctxfiles/license;
+#X text 32 90 This file shows how to use the "push" command to create
+structured pattern. A "structured pattern" means a pattern of sequenced
+events which follow in a defined structure \, which can be altered
+by the user. This pattern can determine other events in a network \,
+giving a sense of structure to the music.;
+#X text 31 177 Structured patterns work in hierarchies according to
+toggle floats in the burst \, such that each Context dictates a pattern
+for the next level. Any number of layers can be created in the hierarchy
+\, and randomness can be incorporated at any point \, offering limitless
+degrees of complexity.;
+#X text 191 267 Follow the pattern of numbers along the bottom row
+and try to tie it in with the higher levels. As soon as one context
+has finished a complete cycle \, it will "bump" the Context above it
+to the next toggle. The pattern can be changed by scrolling the toggle
+floats., f 37;
+#X text 24 485 These blue Contexts are created by [context :: structure].
+The cycle is triggered by a "push" message coming from c1 at the top.
+(Each of the blue Contexts is set to :pu 1 \, which tells the Context
+to accept the "push" message. Since "push" works instantaneously \,
+their :d time value is irrelevant \, so the float atom on the GUI has
+been commandeered using an overlay hack to reflect the position of
+the burst toggle in its cycle. You can change the position by scrolling
+the float., f 59;
+#X text 268 386 BUG: for now \, the pattern doesn't initialize properly
+\, so you'll need to let it cycle a few times before it pays correctly.
+, f 26;
+#X text 23 612 NOTE: structured hierarchies only work with toggle float
+connections. Cable connections will not work.;
