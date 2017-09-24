@@ -1,4 +1,4 @@
-#N canvas 195 118 870 635 10;
+#N canvas 189 126 870 635 10;
 #X obj 196 181 pack f \$1;
 #X obj 553 355 spigot;
 #X obj 699 214 spigot;
@@ -170,6 +170,7 @@ scroll up for float if received in 100 ms of last scroll, f 15;
 #X obj 596 -61 spigot;
 #X msg 581 -31 set 1;
 #X obj 439 43 change;
+#X obj 108 -27 receive \$2-\$3-\$1-blink;
 #X connect 0 0 6 0;
 #X connect 1 0 5 0;
 #X connect 2 0 159 0;
@@ -382,3 +383,4 @@ scroll up for float if received in 100 ms of last scroll, f 15;
 #X connect 167 0 168 0;
 #X connect 168 0 169 0;
 #X connect 169 0 154 0;
+#X connect 170 0 11 0;

@@ -1,8 +1,8 @@
-#N canvas 151 329 796 419 10;
+#N canvas 65 341 796 419 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 208 105 992 687 guts 0;
+#N canvas 365 81 992 687 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 568 85 795 687 names 0;
 #X msg 266 486 symbol  ;
@@ -201,7 +201,7 @@
 #X connect 68 1 40 0;
 #X connect 68 2 52 0;
 #X restore 68 540 pd names;
-#N canvas 533 97 610 687 delaytime 0;
+#N canvas 530 101 610 687 delaytime 0;
 #X obj 171 412 s \$0-realdelay;
 #X obj 141 523 t b f;
 #X obj 132 546 /;
@@ -230,7 +230,6 @@
 #X obj 302 522 * 1000;
 #X obj 302 544 s \$0-del2000;
 #X obj 101 81 f;
-#X obj 132 640 clip 100 1000;
 #X obj 243 654 s \$0-delfrac2;
 #X obj 101 104 demux 0 1 2 3 4;
 #X obj 166 197 pow;
@@ -252,73 +251,74 @@
 #X obj 216 211 t b f;
 #X obj 243 236 * 0.01;
 #X text -36 -13 force reverse;
-#X connect 1 0 45 0;
+#X obj 132 640 clip 250 1000;
+#X connect 1 0 44 0;
 #X connect 1 1 2 1;
 #X connect 2 0 17 0;
 #X connect 4 0 20 0;
 #X connect 5 0 27 0;
-#X connect 6 0 44 0;
+#X connect 6 0 43 0;
 #X connect 7 0 27 0;
-#X connect 7 1 30 1;
-#X connect 8 0 45 0;
+#X connect 7 1 29 1;
+#X connect 8 0 44 0;
 #X connect 9 0 7 0;
-#X connect 10 0 35 0;
-#X connect 11 0 45 0;
-#X connect 12 0 32 0;
-#X connect 13 0 44 1;
+#X connect 10 0 34 0;
+#X connect 11 0 44 0;
+#X connect 12 0 31 0;
+#X connect 13 0 43 1;
 #X connect 14 0 15 0;
 #X connect 17 0 18 0;
 #X connect 17 1 16 0;
 #X connect 18 0 28 0;
-#X connect 18 0 29 0;
+#X connect 18 0 49 0;
 #X connect 19 0 1 0;
-#X connect 20 0 44 0;
+#X connect 20 0 43 0;
 #X connect 20 1 13 0;
 #X connect 21 0 22 0;
 #X connect 22 0 23 0;
 #X connect 23 0 24 0;
 #X connect 23 1 25 0;
 #X connect 25 0 26 0;
-#X connect 27 0 30 0;
-#X connect 28 0 3 0;
-#X connect 30 0 45 0;
-#X connect 30 1 11 0;
-#X connect 30 2 33 0;
-#X connect 30 3 34 0;
-#X connect 30 4 39 0;
-#X connect 31 0 45 0;
-#X connect 32 0 27 0;
-#X connect 32 1 33 1;
-#X connect 32 2 11 1;
-#X connect 32 3 34 1;
-#X connect 33 0 8 0;
-#X connect 33 1 8 1;
-#X connect 34 0 31 0;
-#X connect 34 1 31 1;
-#X connect 35 0 12 0;
-#X connect 35 1 38 0;
-#X connect 35 2 36 0;
-#X connect 36 0 40 0;
-#X connect 36 0 39 1;
-#X connect 39 0 41 0;
-#X connect 39 1 45 0;
-#X connect 40 0 37 0;
-#X connect 41 0 45 0;
-#X connect 42 0 2 0;
-#X connect 42 1 14 0;
-#X connect 42 2 0 0;
-#X connect 42 3 21 0;
-#X connect 42 4 43 0;
-#X connect 44 0 42 0;
-#X connect 45 0 44 0;
-#X connect 46 0 47 0;
-#X connect 47 0 45 0;
-#X connect 47 1 48 0;
-#X connect 48 0 45 1;
+#X connect 27 0 29 0;
+#X connect 29 0 44 0;
+#X connect 29 1 11 0;
+#X connect 29 2 32 0;
+#X connect 29 3 33 0;
+#X connect 29 4 38 0;
+#X connect 30 0 44 0;
+#X connect 31 0 27 0;
+#X connect 31 1 32 1;
+#X connect 31 2 11 1;
+#X connect 31 3 33 1;
+#X connect 32 0 8 0;
+#X connect 32 1 8 1;
+#X connect 33 0 30 0;
+#X connect 33 1 30 1;
+#X connect 34 0 12 0;
+#X connect 34 1 37 0;
+#X connect 34 2 35 0;
+#X connect 35 0 39 0;
+#X connect 35 0 38 1;
+#X connect 38 0 40 0;
+#X connect 38 1 44 0;
+#X connect 39 0 36 0;
+#X connect 40 0 44 0;
+#X connect 41 0 2 0;
+#X connect 41 1 14 0;
+#X connect 41 2 0 0;
+#X connect 41 3 21 0;
+#X connect 41 4 42 0;
+#X connect 43 0 41 0;
+#X connect 44 0 43 0;
+#X connect 45 0 46 0;
+#X connect 46 0 44 0;
+#X connect 46 1 47 0;
+#X connect 47 0 44 1;
+#X connect 49 0 3 0;
 #X restore 68 295 pd delaytime;
-#N canvas 348 85 816 687 process 0;
+#N canvas 404 93 816 687 process 1;
 #X obj 273 108 demux;
-#N canvas 458 135 546 633 delay 0;
+#N canvas 455 111 546 633 delay 0;
 #X obj 161 219 inlet start;
 #X obj 217 461 s \$0-end;
 #X obj 246 350 spigot;
@@ -416,7 +416,7 @@
 #X obj 446 579 demux;
 #X obj 553 547 demux;
 #X obj 273 203 demux;
-#N canvas 65 85 1301 687 Sequence 0;
+#N canvas 65 89 1301 687 Sequence 0;
 #X obj 367 610 outlet;
 #N canvas 309 106 516 622 count-to 0;
 #X obj 169 31 inlet;
@@ -924,7 +924,7 @@
 #X obj 324 601 s \$0-symlab;
 #X obj 446 549 t a a;
 #X obj 290 566 list split 2;
-#N canvas 233 89 1106 687 burst 0;
+#N canvas 239 81 1106 687 burst 0;
 #X obj 440 122 inlet;
 #X obj 543 52 t b f;
 #N canvas 686 89 551 687 setter 0;
@@ -1062,20 +1062,19 @@
 #X obj 543 10 receive \$0-numa;
 #X obj 606 30 receive \$0-burstl;
 #X obj 727 126 receive \$0-witchlist;
-#X obj 336 658 s \$0-bursting;
+#X obj 316 658 s \$0-bursting;
 #X obj 383 627 s \$0-neburst;
 #X obj 350 78 receive \$0-bu-bump;
 #X obj 714 466 receive \$0-progb;
 #X obj 399 574 sort;
 #X obj 606 190 receive \$0-proga;
 #X obj 440 150 spigot 1;
-#X obj 241 517 receive \$0-aadv;
+#X obj 231 517 receive \$0-aadv;
 #X obj 399 599 t b a a b a a;
-#X obj 421 658 list;
+#X obj 425 658 list;
 #X obj 400 681 list;
-#X obj 241 539 sel 0;
+#X obj 231 539 sel 0;
 #X obj 778 192 t f f;
-#X obj 727 148 t a b a a;
 #X obj 334 -96 receive \$0-bump;
 #X obj 232 94 cyclone/iter;
 #X obj 178 141 ctxfiles/collect;
@@ -1084,13 +1083,12 @@
 #X obj 653 344 ctxfiles/collect;
 #X obj 586 491 ctxfiles/collect;
 #X obj 342 517 ctxfiles/collect;
-#X obj 402 49 t b f;
 #X obj 435 298 cyclone/uzi;
 #X obj 435 246 t b b f f;
 #X text 495 420 spread selected numbers over a line so there are no
 repeats;
 #X text 582 395 determine which;
-#X text 150 682 roll back if auto-advance is switched off;
+#X text 118 702 roll back if auto-advance is switched off;
 #X obj 746 295 ctxfiles/af \$0-burst;
 #X obj 256 11 t b s;
 #X obj 498 340 - 1;
@@ -1310,22 +1308,27 @@ every larger item;
 #X obj 606 256 -;
 #X obj 638 236 int;
 #X obj 606 280 ==;
+#X obj 231 562 spigot;
+#X obj 402 49 t b f f;
+#X obj 376 150 spigot 1;
+#X obj 727 148 t a b a a b;
+#X obj 485 122 t f;
 #X connect 0 0 53 0;
 #X connect 1 0 7 0;
 #X connect 1 1 9 0;
 #X connect 2 0 25 0;
 #X connect 3 0 59 0;
 #X connect 4 0 5 0;
-#X connect 6 0 66 1;
+#X connect 6 0 65 1;
 #X connect 7 0 27 0;
 #X connect 8 0 10 0;
 #X connect 9 0 8 0;
-#X connect 10 0 81 1;
+#X connect 10 0 79 1;
 #X connect 11 0 9 0;
 #X connect 11 1 8 1;
 #X connect 13 0 37 0;
 #X connect 13 1 51 0;
-#X connect 14 1 63 1;
+#X connect 14 1 62 1;
 #X connect 16 0 18 0;
 #X connect 16 1 17 0;
 #X connect 17 0 22 0;
@@ -1334,32 +1337,32 @@ every larger item;
 #X connect 22 0 19 0;
 #X connect 22 1 21 0;
 #X connect 22 2 12 0;
-#X connect 24 0 68 1;
+#X connect 24 0 67 1;
 #X connect 25 0 28 0;
-#X connect 25 1 67 1;
-#X connect 26 0 90 0;
-#X connect 27 0 68 0;
-#X connect 27 1 67 0;
-#X connect 27 2 81 0;
+#X connect 25 1 66 1;
+#X connect 26 0 88 0;
+#X connect 27 0 67 0;
+#X connect 27 1 66 0;
+#X connect 27 2 79 0;
 #X connect 28 0 24 0;
 #X connect 31 0 26 0;
-#X connect 32 0 78 0;
-#X connect 33 0 81 1;
+#X connect 32 0 76 0;
+#X connect 33 0 79 1;
 #X connect 34 0 35 0;
 #X connect 35 0 38 0;
 #X connect 37 0 55 0;
 #X connect 39 0 31 0;
 #X connect 40 0 31 1;
 #X connect 41 0 31 2;
-#X connect 42 0 76 0;
-#X connect 43 0 69 0;
+#X connect 42 0 74 0;
+#X connect 43 0 99 0;
 #X connect 44 0 1 0;
 #X connect 45 0 11 0;
-#X connect 46 0 60 0;
+#X connect 46 0 101 0;
 #X connect 49 0 7 0;
-#X connect 50 0 92 0;
+#X connect 50 0 90 0;
 #X connect 51 0 55 0;
-#X connect 52 0 96 0;
+#X connect 52 0 94 0;
 #X connect 53 0 27 0;
 #X connect 54 0 53 1;
 #X connect 54 0 58 0;
@@ -1367,60 +1370,65 @@ every larger item;
 #X connect 55 1 48 0;
 #X connect 55 2 56 1;
 #X connect 55 3 56 0;
-#X connect 55 4 88 0;
+#X connect 55 4 86 0;
 #X connect 55 5 34 0;
 #X connect 56 0 57 1;
 #X connect 57 0 55 0;
-#X connect 58 0 57 0;
+#X connect 58 0 98 0;
 #X connect 58 1 27 0;
 #X connect 59 0 4 0;
 #X connect 59 1 9 0;
-#X connect 60 0 55 0;
-#X connect 60 1 66 0;
-#X connect 60 2 65 0;
-#X connect 60 3 3 0;
-#X connect 61 0 86 0;
-#X connect 62 0 14 0;
-#X connect 63 0 16 0;
-#X connect 65 0 75 0;
-#X connect 66 0 78 0;
-#X connect 67 0 32 0;
-#X connect 68 0 13 0;
-#X connect 69 0 7 0;
-#X connect 69 1 7 1;
-#X connect 70 0 91 0;
-#X connect 70 2 77 0;
-#X connect 71 0 70 0;
-#X connect 71 1 2 1;
-#X connect 71 2 70 1;
-#X connect 71 3 33 0;
-#X connect 75 0 6 0;
-#X connect 76 0 26 0;
-#X connect 76 1 26 2;
-#X connect 77 0 79 0;
-#X connect 79 0 91 1;
-#X connect 81 0 71 0;
-#X connect 86 0 80 0;
-#X connect 86 1 83 0;
-#X connect 86 2 84 0;
-#X connect 86 3 85 0;
-#X connect 86 4 87 0;
-#X connect 86 5 7 0;
-#X connect 89 0 36 0;
-#X connect 90 0 63 0;
-#X connect 90 1 62 0;
-#X connect 91 0 2 0;
-#X connect 92 0 93 0;
-#X connect 92 1 94 0;
-#X connect 93 0 95 0;
-#X connect 94 0 93 1;
-#X connect 95 0 32 1;
-#X connect 96 0 97 0;
-#X connect 96 1 98 0;
-#X connect 97 0 99 0;
-#X connect 98 0 97 1;
-#X connect 99 0 33 1;
-#X connect 99 0 82 0;
+#X connect 60 0 84 0;
+#X connect 61 0 14 0;
+#X connect 62 0 16 0;
+#X connect 64 0 73 0;
+#X connect 65 0 76 0;
+#X connect 66 0 32 0;
+#X connect 67 0 13 0;
+#X connect 68 0 89 0;
+#X connect 68 2 75 0;
+#X connect 69 0 68 0;
+#X connect 69 1 2 1;
+#X connect 69 2 68 1;
+#X connect 69 3 33 0;
+#X connect 73 0 6 0;
+#X connect 74 0 26 0;
+#X connect 74 1 26 2;
+#X connect 75 0 77 0;
+#X connect 77 0 89 1;
+#X connect 79 0 69 0;
+#X connect 84 0 78 0;
+#X connect 84 1 81 0;
+#X connect 84 2 82 0;
+#X connect 84 3 83 0;
+#X connect 84 4 85 0;
+#X connect 84 5 7 0;
+#X connect 87 0 36 0;
+#X connect 88 0 62 0;
+#X connect 88 1 61 0;
+#X connect 89 0 2 0;
+#X connect 90 0 91 0;
+#X connect 90 1 92 0;
+#X connect 91 0 93 0;
+#X connect 92 0 91 1;
+#X connect 93 0 32 1;
+#X connect 94 0 95 0;
+#X connect 94 1 96 0;
+#X connect 95 0 97 0;
+#X connect 96 0 95 1;
+#X connect 97 0 33 1;
+#X connect 97 0 80 0;
+#X connect 98 0 57 0;
+#X connect 99 0 100 0;
+#X connect 99 1 7 1;
+#X connect 99 2 98 1;
+#X connect 100 0 27 0;
+#X connect 101 0 55 0;
+#X connect 101 1 65 0;
+#X connect 101 2 64 0;
+#X connect 101 3 3 0;
+#X connect 101 4 102 0;
+#X connect 102 0 100 1;
 #X restore 292 282 pd burst;
 #X msg 330 179 1;
 #X obj 273 82 spigot 1;
@@ -1459,6 +1467,10 @@ on rev;
 #X obj 108 496 -;
 #X obj 108 518 sel 0;
 #X obj 150 518 v \$0-fdog;
+#X obj 344 479 receive \$0-nextm;
+#X obj 319 502 list;
+#X obj 284 537 print mm;
+#X obj 308 460 t b;
 #X connect 0 0 41 0;
 #X connect 0 1 47 0;
 #X connect 1 0 4 0;
@@ -1531,12 +1543,16 @@ on rev;
 #X connect 62 0 63 1;
 #X connect 63 0 64 0;
 #X connect 64 0 9 0;
+#X connect 64 1 73 0;
 #X connect 65 0 67 0;
 #X connect 65 1 66 0;
 #X connect 66 0 67 1;
 #X connect 67 0 68 0;
 #X connect 67 0 69 0;
 #X connect 68 0 19 0;
+#X connect 70 0 71 1;
+#X connect 71 0 72 0;
+#X connect 73 0 71 0;
 #X restore 68 376 pd process;
 #N canvas 374 286 872 368 toggles 0;
 #N canvas 623 371 450 300 ytogs 0;
@@ -1581,7 +1597,7 @@ on rev;
 #X connect 15 0 4 0;
 #X connect 16 0 5 0;
 #X restore 68 403 pd toggles;
-#N canvas 429 100 714 685 start 0;
+#N canvas 426 104 714 685 start 0;
 #X obj 215 -25 s \$0-start;
 #X obj 86 365 / 5;
 #X obj 86 388 *;
@@ -2615,6 +2631,7 @@ be collected), f 34;
 #X obj 202 999 receive \$0-parent;
 #X msg 177 1043 symbol \$2-\$1;
 #X obj 177 1021 pack s f;
+#X obj 310 823 print !s;
 #X connect 0 0 51 0;
 #X connect 1 0 8 0;
 #X connect 1 1 62 0;
@@ -2780,6 +2797,7 @@ be collected), f 34;
 #X connect 165 2 152 0;
 #X connect 165 3 190 0;
 #X connect 165 4 28 0;
+#X connect 165 4 201 0;
 #X connect 166 0 23 0;
 #X connect 166 1 164 0;
 #X connect 166 2 29 0;
@@ -2826,7 +2844,7 @@ be collected), f 34;
 #X connect 199 0 13 1;
 #X connect 200 0 199 0;
 #X restore 68 431 pd messages;
-#N canvas 363 84 1190 683 switches 0;
+#N canvas 173 92 1190 683 switches 0;
 #X obj 163 155 f;
 #X obj 199 155 f;
 #X obj 163 207 mux;
@@ -3106,7 +3124,7 @@ b b b b f f f f, f 82;
 #X connect 115 0 116 0;
 #X connect 117 0 20 0;
 #X restore 68 486 pd switches;
-#N canvas 117 101 842 687 creation 0;
+#N canvas 114 105 842 687 creation 0;
 #X obj 399 340 s \$0-hacklist;
 #X obj 356 316 list split 1000;
 #X msg 148 193 1;
@@ -3387,7 +3405,7 @@ b b b b f f f f, f 82;
 #X connect 30 3 0 0;
 #X connect 30 4 29 1;
 #X restore 552 338 pd inlet~;
-#N canvas 254 170 751 393 loadbang 0;
+#N canvas 248 178 751 393 loadbang 0;
 #X obj 225 153 s \$0-argstart;
 #X obj 196 307 s \$0-savestart;
 #X obj 182 333 del 1005;
@@ -3660,7 +3678,7 @@ b b b b f f f f, f 82;
 #X connect 12 0 9 0;
 #X connect 13 0 0 0;
 #X restore 551 102 pd seed;
-#N canvas 725 322 450 392 ID 0;
+#N canvas 713 338 450 392 ID 0;
 #X obj 152 169 + 1;
 #X obj 167 361 s \$0nnumber;
 #X obj 216 314 - 1;
@@ -3685,23 +3703,26 @@ b b b b f f f f, f 82;
 #X obj 272 232 makefilename %d-IDsharer;
 #X obj 95 297 v \$0nnumber;
 #X obj 265 356 s \$0-:ID;
-#X obj 152 260 t f f f f f f b f b;
 #X obj 259 96 spigot 1;
 #X obj 393 171 t f;
 #X obj 393 193 f 1;
-#X connect 0 0 24 0;
+#X obj 152 260 t f f f f f f b f b f;
+#X obj 347 302 pack;
+#X obj 347 324 s \$0-parentn;
+#X obj 372 280 receive \$0-parent;
+#X connect 0 0 27 0;
 #X connect 2 0 19 1;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 19 0;
 #X connect 5 1 2 0;
-#X connect 6 0 25 0;
+#X connect 6 0 24 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 17 0;
 #X connect 9 1 18 0;
 #X connect 10 0 8 1;
-#X connect 11 0 24 0;
+#X connect 11 0 27 0;
 #X connect 11 1 10 0;
 #X connect 11 2 14 0;
 #X connect 11 3 12 0;
@@ -3715,21 +3736,23 @@ b b b b f f f f, f 82;
 #X connect 16 0 19 2;
 #X connect 17 1 0 0;
 #X connect 21 0 20 1;
-#X connect 24 0 22 0;
-#X connect 24 1 1 0;
-#X connect 24 2 19 0;
-#X connect 24 3 2 0;
-#X connect 24 4 4 1;
-#X connect 24 5 13 0;
-#X connect 24 6 27 0;
-#X connect 24 7 23 0;
-#X connect 24 8 26 0;
-#X connect 25 0 11 0;
-#X connect 26 0 25 1;
-#X connect 27 0 25 1;
+#X connect 24 0 11 0;
+#X connect 25 0 24 1;
+#X connect 26 0 24 1;
+#X connect 27 0 22 0;
+#X connect 27 1 1 0;
+#X connect 27 2 19 0;
+#X connect 27 3 2 0;
+#X connect 27 4 4 1;
+#X connect 27 5 13 0;
+#X connect 27 6 26 0;
+#X connect 27 7 23 0;
+#X connect 27 8 25 0;
+#X connect 27 9 28 0;
+#X connect 28 0 29 0;
+#X connect 30 0 28 1;
 #X restore 68 514 pd ID;
-#N canvas 352 257 787 300 fetch 0;
-#X obj 41 25 receive \$0nnumber;
+#N canvas 343 269 787 300 fetch 0;
 #X obj 41 119 iemguts/oreceive \$0nnop;
 #X obj 41 141 t b s;
 #X obj 41 163 f \$0;
@@ -3748,32 +3771,29 @@ b b b b f f f f, f 82;
 #X obj 512 209 send;
 #X text 631 165 menu fetch;
 #X obj -143 119 iemguts/oreceive \$0nnop;
-#X obj 66 46 receive \$0-parent;
-#X obj 41 69 pack;
 #X msg 41 93 symbol \$2-\$1-dfetch;
 #X msg -143 96 symbol \$2-c\$1-dfetch;
-#X connect 0 0 20 0;
+#X obj 41 69 receive \$0-parentn;
+#X connect 0 0 1 0;
 #X connect 1 0 2 0;
+#X connect 1 1 3 1;
 #X connect 2 0 3 0;
-#X connect 2 1 4 1;
-#X connect 3 0 4 0;
+#X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 7 1 9 1;
-#X connect 8 0 11 0;
-#X connect 11 0 12 0;
-#X connect 12 0 9 0;
-#X connect 12 1 9 0;
-#X connect 13 0 16 0;
-#X connect 13 1 14 0;
-#X connect 14 0 16 1;
-#X connect 15 0 13 0;
-#X connect 18 0 2 0;
-#X connect 19 0 20 1;
-#X connect 20 0 21 0;
-#X connect 20 0 22 0;
-#X connect 21 0 1 0;
-#X connect 22 0 18 0;
+#X connect 6 1 8 1;
+#X connect 7 0 10 0;
+#X connect 10 0 11 0;
+#X connect 11 0 8 0;
+#X connect 11 1 8 0;
+#X connect 12 0 15 0;
+#X connect 12 1 13 0;
+#X connect 13 0 15 1;
+#X connect 14 0 12 0;
+#X connect 17 0 1 0;
+#X connect 18 0 0 0;
+#X connect 19 0 17 0;
+#X connect 20 0 18 0;
+#X connect 20 0 19 0;
 #X restore 552 259 pd fetch;
 #N canvas 307 89 793 687 overlay 0;
 #X obj 290 250 list;
@@ -3955,7 +3975,7 @@ b b b b f f f f, f 82;
 #X connect 78 0 75 1;
 #X connect 79 0 7 0;
 #X connect 79 2 7 0;
-#X restore 549 534 pd overlay read;
+#X restore 549 564 pd overlay read;
 #N canvas 763 165 454 596 overlay 0;
 #X msg 120 247 menu-open;
 #X obj 87 47 receive \$0-hacklist;
@@ -4009,7 +4029,7 @@ b b b b f f f f, f 82;
 #X connect 23 2 0 0;
 #X connect 23 3 3 0;
 #X connect 24 1 22 0;
-#X restore 549 561 pd overlay write;
+#X restore 549 591 pd overlay write;
 #N canvas 346 155 501 604 creation 0;
 #X obj 173 85 text search *(presets@#;
 #X obj 310 319 receive \$0-savestart;
@@ -4084,7 +4104,7 @@ b b b b f f f f, f 82;
 #X connect 30 0 26 0;
 #X connect 30 1 25 1;
 #X restore 551 128 pd creation preset;
-#N canvas 65 89 1301 687 data 0;
+#N canvas 65 81 1301 687 data 0;
 #X obj 550 75 demux;
 #X obj 427 75 demux;
 #X obj 147 65 demux;
@@ -4407,40 +4427,6 @@ b b b b f f f f, f 82;
 #X msg 970 31 5 4 0 1 1;
 #X text 896 63 0: xsize-2 \; 1: ysize-2 \; 2: parent \; 3: x-limit
 \; 4: y-limit;
-#X obj 101 235 ctxfiles/br2 route 1 \; :H tf \$0 #f 0 \; ## \; :g tfst
-\$0 #f g 0 \, gui #l \, GUI #l \; :X tfs \$0 #f X 5 \; :Y tfs \$0 #f
-Y 4 \; :io tfs \$0 #f io bang \; :: tf \$0 #f \; :M tfst \$0 #f M 0
-\; :a tfspa \$0 #f a bang \; :b tfspa \$0 #f b bang \; :c tfs \$0 #f
-c 11 \, colour #l \, color #l \; :d tfs \$0 #f d 0 \, delay #l \, time
-#l \, cycle #l \; :e tfs \$0 #f e 1 \; :f tfs \$0 #f f 1 \; :h tfs
-\$0 #f h 0 \, quantity #l \; :i tfsij \$0 #f i \; :j tfsij \$0 #f j
-\; :k tfs \$0 #f k 1 \; :l tfs \$0 #f l 0 \; :m tfst \$0 #f m \, advance
-#l \; :n tfs \$0 #f n clear \, tag #l \, name #l \; :o tfs \$0 #f o
-1 \, which #l \; :p tfs \$0 #f p 0 \; :q tfs \$0 #f q 0 \; :r tf \$0
-#f \, record #l \; :s tf \$0 #f \, start #l \; :t tfst \$0 #f t 1 \,
-collect #l \; :u tf \$0 #f \, bank #l \; :v tfst \$0 #f v 1 \, saving
-#l \; :w tfst \$0 #f w 0 \; :x tfsxy \$0 #f x \; :y tfsxy \$0 #f y
-\; :z tfst \$0 #f z 1 \, safety #l \; :A tfst \$0 #f A 1 \; :B tfs
-\$0 #f B 0.5 \; :C tfs \$0 #f C 20 \; :D tfs \$0 #f D 1 \; :E tfs \$0
-#f E 0 \, mode #l \; :F tfs \$0 #f F 0 \; :G tfs \$0 #f G 0 \; :I tfst
-\$0 #f I 0 \; :J tfst \$0 #f J 0 \; :K tfs \$0 #f K 0 \; :L tf \$0
-#f \; :N tf \$0 #f 0 \, hold #l \; :O tfs \$0 #f O 0 \, shuffle #l
-\; :P tfs \$0 #f P 0 \; :Q tfst \$0 #f Q 1 \; :R tfs \$0 #f R 0 \;
-:S tfs \$0 #f S bang \; :T tfs \$0 #f T bang \; :U tfs \$0 #f U bang
-\; :V tfs \$0 #f V bang \; :W tfst \$0 #f W 0 \; :Z tfs \$0 #f Z 7
-\; :ID tfs \$0 #f ID \, ID #l \, :id #l \; :ex tfspa \$0 #f ex bang
-1 \; :se tfs \$0 #f se 0 \; :ba tfspa \$0 #f ba bang 1 \; :es tfst
-\$0 #f es 0 \; :rd tfst \$0 #f rd 0 \; :ol tfs \$0 #f ol 0 \; :x1 tfsn
-\$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0 #f y1 0 \; :y2
-tfsn \$0 #f y2 0 \; :em tfst \$0 #f em 0 \; :pr tfs \$0 #f pr 0 \,
-print #l \; :te tfs \$0 #f te 100 \, tempo #l \; :rm tfst \$0 #f rm
-1 \; :nr tfst \$0 #f nr 0 \; :ro tfs \$0 #f ro 0 \; :il tfs \$0 #f
-il 0 \; :ln tfs \$0 #f ln bang \; :rt tfst \$0 #f rt 0 \; :ms tfst
-\$0 #f ms 0 \; stop tf \$0 #f \; bump tf \$0 #f \; find tf \$0 #f \;
-savelist tf \$0 #f \; fetch tf \$0 #f \; reset tf \$0 #f \; rev tf
-\$0 #f \; :NN tf \$0 #f \; marker tf \$0 #f \; content tf \$0 #f \;
--menu tf \$0 #f \; -overlay tf \$0 #f \; :ss tf \$0 #f \; :$ tf \$0
-#f \; -delete tf \$0 #f \; . t \; ## s \$0-othr;
 #X obj 578 222 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
 \; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
 s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
@@ -4459,11 +4445,11 @@ s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
 \; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:em \;
 #f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
 \; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f s \$0-:ms \;
-#f ev \$0 stop \; #f ev \$0 bump \; #f ev \$0 find \; #f ev \$0 savelist
-\; #f ev \$0 fetch \; #f ev \$0 reset \; #f ev \$0 rev \; #f ev \$0
-:NN \; #f ev \$0 marker \; #f ev \$0 content \; #f ev \$0 -menu \;
-#f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev \$0 :$ \; #f ev \$0 -delete
-;
+#f s \$0-:pu \; #f ev \$0 stop \; #f ev \$0 bump \; #f ev \$0 push
+\; #f ev \$0 find \; #f ev \$0 savelist \; #f ev \$0 fetch \; #f ev
+\$0 reset \; #f ev \$0 rev \; #f ev \$0 :NN \; #f ev \$0 marker \;
+#f ev \$0 content \; #f ev \$0 -menu \; #f ev \$0 -overlay \; #f ev
+\$0 :ss \; #f ev \$0 :$ \; #f ev \$0 -delete;
 #X obj 729 249 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
 \; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
 :a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
@@ -4485,15 +4471,51 @@ s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
 \; :y1 s \$0-y1p \; :y2 s \$0-y2p \; :em s \$0-imembe \; :pr s \$0-printme
 \; :te s \$0-tempo \; :rm s \$0-?off \; :nr s \$0-^set \; :ro s \$0-?offs
 \; :il s \$0-lab \; :ln s \$0-link \; :rt s \$0-rev-togs \; :ms s \$0-mesp
-\; stop ss \$0 stopme stop prestop \; bump s \$0-bump \; find s \$0-findme
-\; savelist s \$0-savelist \; fetch s \$0-mfetch \; reset s \$0-resett
-\; rev s \$0-revme \; ## \; marker s \$0-smarker \; content s \$0-ctntalk
-\; -menu s \$0-menuc \; -overlay s \$0-hacklist \; :ss s \$0-sos \;
-:$ s \$0-var$ \; -delete s \$0-deleteme;
+\; :pu s \$0-pusho \; stop ss \$0 stopme stop prestop \; bump s \$0-bump
+\; push s \$0-pushd \; find s \$0-findme \; savelist s \$0-savelist
+\; fetch s \$0-mfetch \; reset s \$0-resett \; rev s \$0-revme \; ##
+\; marker s \$0-smarker \; content s \$0-ctntalk \; -menu s \$0-menuc
+\; -overlay s \$0-hacklist \; :ss s \$0-sos \; :$ s \$0-var$ \; -delete
+s \$0-deleteme;
+#X obj 101 235 ctxfiles/br2 route 1 \; :H tf \$0 #f 0 \; ## \; :g tfst
+\$0 #f g 0 \, gui #l \, GUI #l \; :X tfs \$0 #f X 5 \; :Y tfs \$0 #f
+Y 4 \; :io tfs \$0 #f io bang \; :: tf \$0 #f \; :M tfst \$0 #f M 0
+\; :a tfspa \$0 #f a bang \; :b tfspa \$0 #f b bang \; :c tfs \$0 #f
+c 11 \, colour #l \, color #l \; :d tfs \$0 #f d 0 \, delay #l \, time
+#l \, cycle #l \; :e tfs \$0 #f e 1 \; :f tfs \$0 #f f 1 \; :h tfs
+\$0 #f h 0 \, quantity #l \; :i tfsij \$0 #f i \; :j tfsij \$0 #f j
+\; :k tfs \$0 #f k 1 \; :l tfs \$0 #f l 0 \; :m tfst \$0 #f m 1 \,
+advance #l \; :n tfs \$0 #f n clear \, tag #l \, name #l \; :o tfs
+\$0 #f o 1 \, which #l \; :p tfs \$0 #f p 0 \; :q tfs \$0 #f q 0 \;
+:r tf \$0 #f \, record #l \; :s tf \$0 #f \, start #l \; :t tfst \$0
+#f t 1 \, collect #l \; :u tf \$0 #f \, bank #l \; :v tfst \$0 #f v
+1 \, saving #l \; :w tfst \$0 #f w 0 \; :x tfsxy \$0 #f x \; :y tfsxy
+\$0 #f y \; :z tfst \$0 #f z 1 \, safety #l \; :A tfst \$0 #f A 1 \;
+:B tfs \$0 #f B 0.5 \; :C tfs \$0 #f C 20 \; :D tfs \$0 #f D 1 \; :E
+tfs \$0 #f E 0 \, mode #l \; :F tfs \$0 #f F 0 \; :G tfs \$0 #f G 0
+\; :I tfst \$0 #f I 0 \; :J tfst \$0 #f J 0 \; :K tfs \$0 #f K 0 \;
+:L tf \$0 #f \; :N tf \$0 #f 0 \, hold #l \; :O tfs \$0 #f O 0 \, shuffle
+#l \; :P tfs \$0 #f P 0 \; :Q tfst \$0 #f Q 1 \; :R tfs \$0 #f R 0
+\; :S tfs \$0 #f S bang \; :T tfs \$0 #f T bang \; :U tfs \$0 #f U
+bang \; :V tfs \$0 #f V bang \; :W tfst \$0 #f W 0 \; :Z tfs \$0 #f
+Z 7 \; :ID tfs \$0 #f ID \, ID #l \, :id #l \; :ex tfspa \$0 #f ex
+bang 1 \; :se tfs \$0 #f se 0 \; :ba tfspa \$0 #f ba bang 1 \; :es
+tfst \$0 #f es 0 \; :rd tfst \$0 #f rd 0 \; :ol tfs \$0 #f ol 0 \;
+:x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0 #f y1
+0 \; :y2 tfsn \$0 #f y2 0 \; :em tfst \$0 #f em 0 \; :pr tfs \$0 #f
+pr 0 \, print #l \; :te tfs \$0 #f te 100 \, tempo #l \; :rm tfst \$0
+#f rm 1 \; :nr tfst \$0 #f nr 0 \; :ro tfs \$0 #f ro 0 \; :il tfs \$0
+#f il 0 \; :ln tfs \$0 #f ln bang \; :rt tfst \$0 #f rt 0 \; :ms tfst
+\$0 #f ms 0 \; :pu tfst \$0 #f pu 0 \; stop tf \$0 #f \; bump tf \$0
+#f \; push tf \$0 #f \; find tf \$0 #f \; savelist tf \$0 #f \; fetch
+tf \$0 #f \; reset tf \$0 #f \; rev tf \$0 #f \; :NN tf \$0 #f \; marker
+tf \$0 #f \; content tf \$0 #f \; -menu tf \$0 #f \; -overlay tf \$0
+#f \; :ss tf \$0 #f \; :$ tf \$0 #f \; -delete tf \$0 #f \; . t \;
+## s \$0-othr;
 #X connect 0 0 117 1;
-#X connect 0 1 122 1;
+#X connect 0 1 121 1;
 #X connect 1 0 117 0;
-#X connect 1 1 122 0;
+#X connect 1 1 121 0;
 #X connect 2 0 6 0;
 #X connect 2 1 4 0;
 #X connect 3 0 1 0;
@@ -4503,14 +4525,14 @@ s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
 #X connect 5 0 1 1;
 #X connect 5 0 2 1;
 #X connect 6 0 7 0;
-#X connect 7 0 121 0;
+#X connect 7 0 123 0;
 #X connect 8 0 9 0;
 #X connect 9 0 3 0;
 #X connect 9 1 103 0;
 #X connect 74 0 75 0;
 #X connect 75 0 76 0;
 #X connect 77 0 3 0;
-#X connect 93 0 123 0;
+#X connect 93 0 122 0;
 #X connect 93 1 94 0;
 #X connect 94 0 95 0;
 #X connect 96 0 97 0;
@@ -5350,7 +5372,7 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 31 4 15 0;
 #X coords 0 -1 1 1 85 20 1 100 100;
 #X restore 63 79 pd im-embedded;
-#X restore 548 588 pd i'm-embeded;
+#X restore 548 618 pd i'm-embeded;
 #N canvas 589 249 645 389 you're-embeded 0;
 #X obj 179 36 receive \$0-ecreate;
 #X obj 224 205 s \$0-overlay;
@@ -5403,7 +5425,7 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 22 1 24 0;
 #X connect 25 0 2 0;
 #X connect 25 1 26 0;
-#X restore 548 616 pd you're-embeded;
+#X restore 548 646 pd you're-embeded;
 #N canvas 65 97 450 374 reset 0;
 #X obj 96 11 receive \$0-resett;
 #X obj 168 312 text define \$0-reset;
@@ -5467,7 +5489,7 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 7 1 4 0;
 #X connect 7 2 8 0;
 #X restore 551 156 pd burst-presets;
-#N canvas 237 342 450 300 save 0;
+#N canvas 234 346 450 300 save 0;
 #X obj 169 146 text define -k \$0-save;
 #A set \; \; %^ :g 0 \; %^ :X 5 \; %^ :Y 4 \; \; \; %^ :M 0 \; %^ :a
 bang \; %^ :b bang \; %^ :c 11 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \;
@@ -5481,7 +5503,7 @@ bang \; %^ :W 0 \; %^ :Z 7 \; %^ :ID 0 \; %^ :ex -clear \; %^ :se 0
 \; %^ :ba bang \; %^ :es 0 \; %^ :rd 0 \; %^ :ol 0 \; %^ :x1 0 \; %^
 :x2 0 \; %^ :y1 0 \; %^ :y2 0 \; %^ :em 0 \; %^ :pr 0 \; %^ :te 100
 \; %^ :rm 1 \; %^ :nr 0 \; %^ :ro 0 \; %^ :il 0 \; %^ :ln bang \; %^
-:rt 0 \; %^ :ms 0 \;;
+:rt 0 \; %^ :ms 0 \; %^ :pu 0 \;;
 #X msg 169 123 click;
 #X obj 169 99 receive \$0-savelist;
 #X obj 168 194 ctxfiles/saver \$0 eapp 4;
@@ -5492,14 +5514,14 @@ bang \; %^ :W 0 \; %^ :Z 7 \; %^ :ID 0 \; %^ :ex -clear \; %^ :se 0
 #X text 145 133 read creation arguments and separate input commands
 from overlay instructions;
 #X text 144 164 receive all command data and process safety;
-#N canvas 528 101 796 687 input 0;
+#N canvas 488 81 796 687 input 0;
 #X msg 122 285 1;
 #X obj 154 312 s \$0-undodec;
 #X obj 348 105 list trim;
-#X obj 387 575 s \$0-!store;
+#X obj 394 575 s \$0-!store;
 #X obj 136 338 t f;
-#X msg 348 575 :s;
-#X obj 348 603 s \$0-everything;
+#X msg 416 619 :s;
+#X obj 416 643 s \$0-everything;
 #X obj 136 360 s \$0-rnum;
 #X obj 348 81 receive \$0-inlet-out;
 #X msg 169 285 2;
@@ -5533,12 +5555,13 @@ from overlay instructions;
 #X obj 400 316 demux;
 #X obj 427 373 t a b b;
 #X obj 427 350 ctxfiles/sp01 1;
-#X obj 449 602 receive \$0-oops!;
-#X obj 348 549 t b b a;
-#X obj 367 631 spigot;
-#X obj 367 653 s \$0-restartt;
-#X text 424 632 recalculate message if it contains !;
+#X obj 410 677 receive \$0-oops!;
+#X obj 371 701 spigot;
+#X obj 371 723 s \$0-restartt;
+#X text 457 621 recalculate message if it contains !;
 #X obj 313 128 receive context;
+#X obj 348 553 t a b a;
+#X obj 348 595 relay push;
 #X connect 0 0 1 0;
 #X connect 2 0 25 0;
 #X connect 4 0 7 0;
@@ -5548,7 +5571,7 @@ from overlay instructions;
 #X connect 10 0 25 0;
 #X connect 11 0 22 0;
 #X connect 12 0 14 2;
-#X connect 13 0 41 0;
+#X connect 13 0 45 0;
 #X connect 13 1 12 0;
 #X connect 13 2 14 1;
 #X connect 14 0 13 0;
@@ -5580,7 +5603,7 @@ from overlay instructions;
 #X connect 32 1 33 0;
 #X connect 32 2 37 0;
 #X connect 32 4 31 0;
-#X connect 33 0 41 0;
+#X connect 33 0 45 0;
 #X connect 33 1 14 0;
 #X connect 34 0 22 0;
 #X connect 35 0 33 1;
@@ -5591,12 +5614,14 @@ from overlay instructions;
 #X connect 38 1 36 0;
 #X connect 38 2 39 1;
 #X connect 39 0 38 0;
-#X connect 40 0 42 1;
-#X connect 41 0 5 0;
-#X connect 41 1 42 0;
-#X connect 41 2 3 0;
-#X connect 42 0 43 0;
-#X connect 45 0 25 0;
+#X connect 40 0 41 1;
+#X connect 41 0 42 0;
+#X connect 44 0 25 0;
+#X connect 45 0 46 0;
+#X connect 45 1 41 0;
+#X connect 45 2 3 0;
+#X connect 46 0 6 0;
+#X connect 46 1 5 0;
 #X restore 69 164 pd input;
 #X text 144 189 send menu data to other location (if set);
 #X text 144 213 hold command data (if set);
@@ -5613,10 +5638,10 @@ from overlay instructions;
 #X text 143 487 distribute various dimension and mode values;
 #X text 137 514 calculate ID number;
 #X text 137 539 process and store tags;
-#X text 653 534 save overlay and compile list;
-#X text 655 561 interpret list and execute;
-#X text 649 588 store mover interface and line read;
-#X text 664 615 create line;
+#X text 653 564 save overlay and compile list;
+#X text 655 591 interpret list and execute;
+#X text 649 618 store mover interface and line read;
+#X text 664 645 create line;
 #X text 630 103 seed [random] objects;
 #X text 676 127 read presets.txt and interpret :: messages;
 #X text 667 156 fetch burst presets;
@@ -5628,7 +5653,7 @@ from overlay instructions;
 #X text 642 312 process record data;
 #X text 642 338 create inlets~ and outlets~;
 #X text 641 365 process reset command;
-#X text 547 506 OVERLAY;
+#X text 547 536 OVERLAY;
 #X text 551 74 MINOR SYSTEMS;
 #X text 47 239 ***;
 #X text 46 377 ***;
@@ -6024,7 +6049,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 99 3 72 0;
 #X connect 99 4 92 1;
 #X restore 552 391 pd rules;
-#N canvas 386 186 647 556 title 1;
+#N canvas 545 198 647 556 title 0;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
@@ -6097,12 +6122,154 @@ f 82;
 #X connect 12 1 11 0;
 #X restore 552 445 pd link;
 #X text 635 446 define link connection;
-#N canvas 65 81 450 300 delete 0;
+#N canvas 65 85 450 300 delete 0;
 #X obj 137 111 receive \$0-deleteme;
 #X obj 137 133 iemguts/canvasdelete 3;
 #X connect 0 0 1 0;
 #X restore 551 471 pd delete;
 #X obj 67 567 ctxfiles/share ctxfiles/shareables;
+#N canvas 274 89 1014 687 push 0;
+#X obj 74 3 receive \$0-pushd;
+#X obj 74 25 route up bang;
+#X obj 196 226 - 1;
+#X obj 196 270 t f f;
+#X obj 196 294 int;
+#X obj 196 316 t f f;
+#X obj 228 341 -;
+#X obj 196 367 spigot;
+#X obj 150 139 array get \$0-bu-n;
+#X obj 347 226 receive \$0-jisw;
+#X obj 196 412 swap;
+#X obj 221 389 receive \$0nnumber;
+#X obj 221 436 pack;
+#X obj 246 413 receive \$0-parent;
+#X obj 196 481 send;
+#X obj 185 46 receive \$0-pusho;
+#X obj 150 68 f;
+#X obj 150 90 sel 1;
+#X obj 415 37 receive \$0-parentn;
+#X msg 415 59 symbol \$2-\$1-pusher;
+#X obj 415 81 iemguts/oreceive \$0nu;
+#X msg 221 458 symbol \$2-\$1-pusher;
+#X text -242 77 1: when push command is received \, check if pusho
+is on;
+#X text -177 229 2: if so \, collect next burst connections and forward
+;
+#X text -22 439 3: send float to next context;
+#X obj 118 46 t b b;
+#X obj 518 286 f 1;
+#X obj 479 310 spigot;
+#X obj 435 175 pack;
+#X obj 535 253 t f;
+#X text 488 164 4: if float recived from 3 \, store \, send cancel
+message back \, then push again.;
+#X obj 196 206 sel 0;
+#X text 529 330 <-- this fires iff it is the last context in the chain
+;
+#X obj 479 332 t b b;
+#X obj 479 379 s \$0-started;
+#X obj 511 355 f 1;
+#X obj 472 412 receive \$0-end;
+#X obj 472 434 spigot;
+#X obj 472 604 send;
+#X obj 415 103 route float c bang;
+#X obj 593 545 s \$0-bu-bump;
+#X text 558 439 5: at end of cycle \, bump then send bang to previous
+context in chain;
+#X obj 196 248 array get \$0-jarry 0 1;
+#X obj 731 528 array get \$0-bu-n 0 1;
+#X obj 415 125 t b f f f;
+#X msg 495 581 symbol \$3-\$2-pusher;
+#X obj 495 559 pack f f f;
+#X obj 150 112 t b b;
+#X msg 435 197 \; \$2-\$1-pusher c;
+#X obj 699 576 array max \$0-yarry;
+#X obj 822 552 receive \$0-yxsw;
+#X obj 699 598 ==;
+#X text 752 491 6: if bang received \, check to see if the next burst
+toggle is at the end of the toggle array.;
+#X obj 699 620 sel 1;
+#X obj 472 456 t b f;
+#X text 741 622 7: if so \, send another push.;
+#X obj 558 492 t b b b f;
+#X obj 150 161 cyclone/iter;
+#X obj 150 184 t b l l;
+#X obj -55 303 receive \$0-xym;
+#X obj -87 324 demux;
+#X obj -112 400 send;
+#X text -68 395 (send blink messages to toggles);
+#X obj -87 346 makefilename \$0-y-%i-blink;
+#X obj -55 369 makefilename \$0-x-%i-blink;
+#X connect 0 0 1 0;
+#X connect 1 1 25 0;
+#X connect 2 0 42 0;
+#X connect 3 0 4 0;
+#X connect 3 1 6 1;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 5 1 6 0;
+#X connect 6 0 7 1;
+#X connect 7 0 10 0;
+#X connect 8 0 57 0;
+#X connect 9 0 42 2;
+#X connect 10 0 14 0;
+#X connect 10 1 12 0;
+#X connect 11 0 10 1;
+#X connect 12 0 21 0;
+#X connect 13 0 12 1;
+#X connect 13 0 28 1;
+#X connect 13 0 46 2;
+#X connect 15 0 16 1;
+#X connect 16 0 17 0;
+#X connect 17 0 47 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 39 0;
+#X connect 21 0 14 1;
+#X connect 25 0 27 0;
+#X connect 25 1 16 0;
+#X connect 26 0 27 1;
+#X connect 27 0 33 0;
+#X connect 28 0 48 0;
+#X connect 29 0 27 1;
+#X connect 31 1 2 0;
+#X connect 33 0 34 0;
+#X connect 33 1 35 0;
+#X connect 35 0 37 1;
+#X connect 36 0 37 0;
+#X connect 37 0 54 0;
+#X connect 39 0 44 0;
+#X connect 39 1 29 0;
+#X connect 39 2 56 0;
+#X connect 42 0 3 0;
+#X connect 43 0 51 1;
+#X connect 44 0 25 0;
+#X connect 44 1 28 0;
+#X connect 44 2 46 1;
+#X connect 45 0 38 1;
+#X connect 46 0 45 0;
+#X connect 47 0 8 0;
+#X connect 47 1 26 0;
+#X connect 49 0 51 0;
+#X connect 50 0 49 2;
+#X connect 51 0 53 0;
+#X connect 53 0 38 0;
+#X connect 54 0 56 0;
+#X connect 54 1 37 1;
+#X connect 56 0 40 0;
+#X connect 56 1 46 0;
+#X connect 56 2 49 0;
+#X connect 56 3 43 0;
+#X connect 57 0 58 0;
+#X connect 58 0 61 0;
+#X connect 58 1 60 0;
+#X connect 58 2 31 0;
+#X connect 59 0 60 1;
+#X connect 60 0 63 0;
+#X connect 60 1 64 0;
+#X connect 63 0 61 1;
+#X connect 64 0 61 1;
+#X restore 552 495 pd push;
 #X connect 24 0 25 0;
 #X restore 20 100 pd guts;
 #N canvas 471 85 622 686 e 0;
