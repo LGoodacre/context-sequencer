@@ -1,0 +1,18 @@
+#N canvas 419 188 511 567 10;
+#X obj 287 27 ctxfiles/license;
+#X obj 28 31 cnv 15 252 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 23 26 cnv 15 252 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 24 27 cnv 15 250 50 empty empty autocreate 35 23 2 40 -87525
+-262144 0;
+#X text 41 100 [autocreate] is a simple object which lets you dynamically
+create an object by clicking on the screen for rapid-fire patching.
+You have to hold down the shift and the control keys for this to work
+\, to protect against accidental triggering. Its arguments are the
+object (and arguments) you want to be created. [autocreate] is desgned
+for creating Context objects \, but could just as well be used to create
+anything.;
+#X obj 151 239 autocreate context :c :x 2;
+#X text 46 287 Hold down the shift and control keys and click anywhere
+on this canvas to see [autocreate] in action.;
