@@ -14,6 +14,7 @@ cyclone
 moocow
 flatgui
 list-abs
+hcs
 iemguts (v 0.2.1 or later)
 pddp (useful but not essential)
 
