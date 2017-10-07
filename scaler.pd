@@ -1,5 +1,5 @@
-#N canvas 168 115 511 632 10;
-#N canvas 674 85 683 687 guts 0;
+#N canvas 153 135 511 632 10;
+#N canvas 684 81 683 687 guts 1;
 #X obj 95 168 route symbol;
 #X obj 61 57 spigot 1;
 #X obj 95 146 cyclone/iter;
@@ -16,7 +16,7 @@
 #X obj 291 202 f \$0;
 #X obj 61 34 ctxfiles/myinit 3;
 #X obj 61 11 ctxfiles/dvi \$0 4;
-#X obj 27 113 inlet;
+#X obj -33 90 inlet;
 #X obj 76 385 ctxfiles/collect;
 #X obj 133 429 list;
 #X obj 199 237 s \$0-octave;
@@ -31,7 +31,7 @@
 #X obj 224 709 array set \$0-myscale;
 #X obj 209 661 array define \$0-myscale 1;
 #X obj 190 684 list split 1;
-#X obj 181 385 s \$0-keyy;
+#X obj 201 385 s \$0-keyy;
 #X obj 27 140 t b a;
 #X obj 76 407 route bang;
 #X obj 217 540 cyclone/iter;
@@ -43,6 +43,12 @@
 #X obj 276 635 s \$0-size;
 #X msg 289 300 obj 300 200 ctxfiles/share ctxfiles/#sc 1 \, loadbang
 ;
+#X obj -33 112 route + -;
+#X obj 355 431 +;
+#X obj 355 453 mod 12;
+#X obj 334 360 * -5;
+#X obj 367 360 * 5;
+#X obj -54 50 receive -scaler;
 #X connect 0 0 4 0;
 #X connect 0 1 11 0;
 #X connect 1 0 24 0;
@@ -57,11 +63,12 @@
 #X connect 8 1 20 0;
 #X connect 9 0 8 1;
 #X connect 10 1 31 0;
+#X connect 10 1 43 1;
 #X connect 11 0 19 0;
 #X connect 13 0 12 0;
 #X connect 14 0 1 0;
 #X connect 15 0 14 0;
-#X connect 16 0 32 0;
+#X connect 16 0 42 0;
 #X connect 17 0 33 0;
 #X connect 18 0 22 0;
 #X connect 20 0 21 0;
@@ -90,6 +97,15 @@
 #X connect 39 1 27 0;
 #X connect 39 2 40 0;
 #X connect 41 0 26 0;
+#X connect 42 0 45 0;
+#X connect 42 1 46 0;
+#X connect 42 2 32 0;
+#X connect 43 0 44 0;
+#X connect 44 0 31 0;
+#X connect 44 0 43 1;
+#X connect 45 0 43 0;
+#X connect 46 0 43 0;
+#X connect 47 0 42 0;
 #X restore 290 182 pd guts;
 #X obj 56 118 - 1;
 #X obj 56 315 mod 7;
@@ -127,8 +143,8 @@
 #X obj 188 130 receive \$0-octave;
 #X obj 56 427 tabread \$0-myscale;
 #X obj 212 386 receive \$0-keyy;
-#X text 280 521 A part of the Context library \, licensed under the
-GPL. See license.txt. Copyright Liam Goodacre 2017;
+#X obj 269 524 ctxfiles/license;
+#X obj 233 418 print key;
 #X connect 1 0 11 0;
 #X connect 2 0 35 0;
 #X connect 3 0 5 0;
@@ -171,3 +187,4 @@ GPL. See license.txt. Copyright Liam Goodacre 2017;
 #X connect 34 0 5 1;
 #X connect 35 0 6 0;
 #X connect 36 0 7 1;
+#X connect 36 0 38 0;

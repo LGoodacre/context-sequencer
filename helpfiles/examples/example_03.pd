@@ -4,17 +4,17 @@
 #X obj 950 41 receive context-;
 #X obj 419 191 context :X 17 :a ' 1 | 5 | 6 | 9 | -1 | 3 | 6 | 8 |
 7 | -4 | 3 | 9 | 2 | 0 | 4 | 6 | 1 ' :b ' . :a + (?3 - 2) 1 ?16 | .
-:x ?16 | | . :d * -1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 1 5 9 13 15
-17 :y = 1 2 3 :E 1 :K 3 :R 100 :rd 1 :ro 1 :rt 1;
+:x ?16 | | . :d * -1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 17 15 13 9
+5 1 :y = 3 2 1 :E 1 :K 3 :R 100 :ID 1 :rd 1 :ro 1 :rt 1;
 #X obj 420 261 context :X 17 :a ' *. 1 ' :b ' | . :x ?16 | | . :d *
--1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 1 2 3 4 5 6 7 8 9 10 11 12 13
-14 15 16 17 :y = 1 2 3 :E 1 :K 3 :R 100 :S ( :T + 10 ) :rd 1 :ro 1
-:rt 1;
+-1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 17 16 15 14 13 12 11 10 9 8
+7 6 5 4 3 2 1 :y = 3 2 1 :E 1 :K 3 :R 100 :S ( :T + 10 ) :ID 2 :rd
+1 :ro 1 :rt 1;
 #X msg 273 32 \; context start;
 #X msg 273 68 \; context stop;
 #X obj 420 334 context :X 17 :a ' *. 1 ' :b ' | . :x ?16 | | . :d *
--1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 1 3 5 7 9 11 12 13 15 17 :y
-= 1 2 3 :E 1 :K 3 :R 100 :S ( :T - 5) :rd 1 :ro 1 :rt 1;
+-1 :s ' :d 3 :e 17 :f 4 :h 1 :k 2 :x = 17 15 13 12 11 9 7 5 3 1 :y
+= 3 2 1 :E 1 :K 3 :R 100 :S ( :T - 5) :ID 3 :rd 1 :ro 1 :rt 1;
 #X symbolatom 1101 70 10 0 0 0 - - -, f 10;
 #X msg 431 63 :a -open;
 #X text 504 63 <--To view the message database \, click here. Usually
@@ -65,9 +65,14 @@ and the pattern toggles are also randomly changing. (Turn off burst
 toggles 1 2 and 3 on each Context if you don't like this feature!)
 , f 43;
 #X obj 93 573 ctxfiles/license;
+#X obj 812 366 context :M 1 :a ' << -scaler + 1 | << -scaler - 1 '
+:e 4 :h 1 :x = 4 3 2 1 :z 0 :R 100 :ID 4;
+#X text 889 377 This Context sends a message to [scaler] to change
+the key., f 34;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 15 0;
+#X connect 7 16 28 0;
 #X connect 8 0 18 1;
 #X connect 9 0 3 1;
 #X connect 15 0 18 0;

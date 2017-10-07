@@ -1,4 +1,4 @@
-#N canvas 404 176 564 469 10;
+#N canvas 401 180 564 469 10;
 #X obj 321 16 ctxfiles/license;
 #X obj 101 211 scaler minor c 7;
 #X text 70 104 This object converts numbers into notes (frequencies)
@@ -24,7 +24,25 @@ if you want to add your own modes).;
 into Context's message variables. The # variable will read from any
 available [scaler] object in the parent patch \, allowing for modes
 and scales to be set globally in a Context network.;
-#X obj 264 197 context :a ' # = ' :d 1 :i 1 2 3 4 0 :x = 1 2 3 4 :pr
-1;
+#X obj 366 194 context :a ' # = ' :d 1 :i 1 2 3 4 0 :x = 4 3 2 1 :ID
+1 :pr 1;
+#N canvas 724 401 450 300 right-inlet 0;
+#X obj 147 220 outlet;
+#X symbolatom 147 95 10 0 0 0 - - -, f 10;
+#X text 219 95 type a new key \, mode or octave here \, ie. "lydian"
+\, "c#" or "6", f 27;
+#X text 38 71 The right inlet can be used to change the mode \, key
+or octave.;
+#X msg 72 179 + 1;
+#X msg 109 179 - 1;
+#X text 153 172 You can also progress or regress along the circle of
+fifths using + and - signs., f 41;
+#X text 18 251 Note: You can also access the second inlet by sending
+ma message through [send -scaler].;
+#X connect 1 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X restore 210 182 pd right-inlet;
 #X connect 1 0 4 0;
 #X connect 3 0 1 0;
+#X connect 12 0 1 1;
