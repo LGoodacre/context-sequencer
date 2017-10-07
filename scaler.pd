@@ -1,5 +1,5 @@
-#N canvas 153 135 511 632 10;
-#N canvas 684 81 683 687 guts 1;
+#N canvas 150 111 511 632 10;
+#N canvas 681 85 683 687 guts 1;
 #X obj 95 168 route symbol;
 #X obj 61 57 spigot 1;
 #X obj 95 146 cyclone/iter;
@@ -144,7 +144,6 @@
 #X obj 56 427 tabread \$0-myscale;
 #X obj 212 386 receive \$0-keyy;
 #X obj 269 524 ctxfiles/license;
-#X obj 233 418 print key;
 #X connect 1 0 11 0;
 #X connect 2 0 35 0;
 #X connect 3 0 5 0;
@@ -187,4 +186,3 @@
 #X connect 34 0 5 1;
 #X connect 35 0 6 0;
 #X connect 36 0 7 1;
-#X connect 36 0 38 0;
