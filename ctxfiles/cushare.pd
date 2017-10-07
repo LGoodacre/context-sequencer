@@ -1,12 +1,13 @@
-#N canvas 687 97 514 388 10;
+#N canvas 654 141 514 388 10;
 #X obj 179 105 array define %&nou;
-#N canvas 178 316 430 142 ^&*-dsmall1 0;
-#X obj 35 62 filledcurve 65 1 1 0 -5 0 5 10 5 10 -5;
+#N canvas 148 356 430 142 ^&*-dsmall1 1;
 #X obj 32 27 struct ^&*-dsmall1 float x float y;
+#X text 336 48 0 -5 \; 0 5 \; 10 5 \; 10 -5;
+#X obj 35 62 filledcurve 65 1 1 -5 -5 -5 5 5 5 5 -5;
 #X restore 114 168 pd ^&*-dsmall1;
-#N canvas 178 316 430 142 ^&*-dsmall2 0;
-#X obj 35 62 filledcurve 20 1 1 0 -5 0 5 10 5 10 -5;
+#N canvas 423 496 430 142 ^&*-dsmall2 1;
 #X obj 32 26 struct ^&*-dsmall2 float x float y;
+#X obj 35 62 filledcurve 20 1 1 -5 -5 -5 5 5 5 5 -5;
 #X restore 218 168 pd ^&*-dsmall2;
 #X msg 44 108 read pascal.txt;
 #X obj 44 132 text define £"pascal);
@@ -54,6 +55,10 @@ mirror-x gtfs \$0 #f mirror-x 0 \, :mirror-x #l \; mirror-y gtfs \$0
 #X connect 2 1 6 1;
 #X connect 3 0 0 0;
 #X restore 388 148 pd commands;
+#X obj 401 249 receive bo;
+#X msg 401 271 vis 1;
+#X obj 401 293 iemguts/sendcanvas;
+#X obj 452 336 print bo;
 #X connect 3 0 4 0;
 #X connect 5 0 3 0;
 #X connect 5 0 6 0;
@@ -65,3 +70,6 @@ mirror-x gtfs \$0 #f mirror-x 0 \, :mirror-x #l \; mirror-y gtfs \$0
 #X connect 11 1 14 0;
 #X connect 13 0 12 0;
 #X connect 14 0 12 0;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 18 0 20 0;

@@ -1,4 +1,4 @@
-#N canvas 200 305 605 425 10;
+#N canvas 197 309 605 425 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -88,7 +88,7 @@
 #X obj -361 -182 route bang;
 #X obj -241 -180 iemguts/canvasargs;
 #X obj -228 -257 receive \$0-iemargr;
-#N canvas 205 272 1090 472 canvas 1;
+#N canvas 202 276 1090 472 canvas 0;
 #X text 53 47 coords xfrom yfrom xto yto xsize ysize type xmargin ymargin
 ;
 #X obj 270 57 receive \$0-size;
