@@ -1,0 +1,30 @@
+#N canvas 380 193 553 456 10;
+#X obj 142 18 ctxfiles/license;
+#X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 12 16 cnv 15 102 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 13 17 cnv 15 100 50 empty empty num 13 24 2 40 -46930 -262144
+0;
+#X floatatom 26 243 5 0 0 0 - - -, f 5;
+#X floatatom 361 315 5 0 0 0 - - -, f 5;
+#X floatatom 229 371 5 0 0 0 - - -, f 5;
+#X obj 229 414 s us-;
+#X obj 26 181 num value us 10 4 2;
+#X text 71 90 A number box for using in state-saving abstractions.
+;
+#X text 99 138 [num] takes 5 arguments \, the first three of which
+are the most important:, f 42;
+#X text 102 178 1: label \; 2: group name (\$1 if using with [psave])
+(see B) \; 3: initial value \; 4: size of box (in digits) \; 5: label
+position (0 = left \, 1 = right \, 2 = top \, 3 = bottom);
+#X obj 361 288 receive \$0-value;
+#X text 25 284 [num] has an outlet \, but also sends its output to
+[send \$0-label]:, f 47;
+#X text 30 345 You can send a value to [num[] using the group name
+and label:;
+#X msg 229 391 value- \$1;
+#X connect 6 0 15 0;
+#X connect 8 0 4 0;
+#X connect 12 0 5 0;
+#X connect 15 0 7 0;

@@ -1,0 +1,15 @@
+#N canvas 288 265 683 300 10;
+#X obj 124 104 tog on/off \$1;
+#X obj 103 104 slide volume v \$1 0 1;
+#X obj 125 133 num value \$1;
+#X obj 101 50 psave \$1;
+#X text 223 33 This abstraction contains just four objects: [slide]
+\, [tog] [value] and [psave]. Creating these objects is all it takes
+to achieve state-saving! Notice however that each object has \$1 somewhere
+in its creation argument \, and that each instantiation of this abstraction
+has a unique 'name' as a creation argument. See the individual help-files
+of each object to understand their creation arguments.;
+#X text 222 153 This abstraction doesn't do anything other than state-save
+\, but you can of course easily connect the objects to other things
+within the abstraction to do anything of your choice.;
+#X coords 0 -1 1 1 100 114 2 100 100;

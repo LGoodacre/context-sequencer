@@ -1,0 +1,21 @@
+#N canvas 300 135 487 321 10;
+#X obj 142 18 ctxfiles/license;
+#X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 12 16 cnv 15 102 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 13 17 cnv 15 100 50 empty empty tog 16 22 2 50 -46930 -262144
+0;
+#X floatatom 26 153 5 0 0 0 - - -, f 5;
+#X floatatom 137 277 5 0 0 0 - - -, f 5;
+#X obj 26 125 tog on us;
+#X text 71 90 A simple toggle for using in state-saving abstractions.
+;
+#X text 99 138 [tog] takes 2 arguments:, f 42;
+#X text 109 169 1: label \; 2: group name (\$1 if using with [psave])
+(see B) \;;
+#X text 11 225 [tog] has an outlet \, but also sends its output to
+[send \$0-label]:, f 66;
+#X obj 137 255 receive \$0-on;
+#X connect 6 0 4 0;
+#X connect 11 0 5 0;

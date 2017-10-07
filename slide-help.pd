@@ -1,0 +1,57 @@
+#N canvas 303 131 969 432 10;
+#X obj 142 18 ctxfiles/license;
+#X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 12 16 cnv 15 102 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 13 17 cnv 15 100 50 empty empty slide 10 24 2 40 -46930 -262144
+0;
+#X text 71 90 A slider for using in state-saving abstractions.;
+#X floatatom 26 243 5 0 0 0 - - -, f 5;
+#X obj 820 188 receive \$0-slide;
+#X floatatom 820 210 5 0 0 0 - - -, f 5;
+#X obj 26 89 slide slide s us;
+#X floatatom 695 248 5 0 0 0 - - -, f 5;
+#X msg 695 268 s \$1;
+#X obj 695 291 s us-;
+#X text 751 257 The above [slide] as group-name 'us' and letter assignment
+'s'., f 24;
+#X obj 483 24 cnv 15 72 32 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 478 19 cnv 15 72 32 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 479 20 cnv 15 70 30 empty empty notes 5 12 2 26 -63991 -262144
+0;
+#X obj 801 374 s us-;
+#X msg 801 335 s 50 1000;
+#X msg 885 335 s 100 200;
+#X text 99 138 [slide] takes 8 arguments \, the first five of which
+are the most important:, f 42;
+#X text 484 109 B: The unique letter assignment is used to distinguish
+each state-saving object in the abstraction.;
+#X text 483 155 C: Input is always 0 to 100 \, regardless of the scale.
+;
+#X text 484 184 D: [slide] has an outlet \, but also sends its output
+to [send \$0-label]:, f 47;
+#X text 486 242 E: The unique letter assignment is used to set a new
+value relative to the current position. This is useful for modulation.
+, f 27;
+#X text 484 330 F: Sending two values "x y" to [slide] sets it to "x"
+in "y" milliseconds \, in the given line-grain (creation argument 8).
+, f 43;
+#X text 115 178 1: label (maximum of 7 characters) \; 2: unique letter
+assignment (see B) \; 3: group name (\$1 if using with [psave]) (see
+B) \; 4: minimum value \; 5: maximum value \; 6: linear (0) or exponential
+(1) scale \; 7: override boundaries (1) \; 8: line-grain (default 100)
+;
+#X text 566 17 A: The group name is shared by all psave objects in
+the abstraction. It is used to receive messages \, using the same naming
+convention as Context \, ie. [send groupname-] with a dash on the end.
+The group name should be \$1 if you are using [slide] in conjunction
+with [psave]., f 51;
+#X connect 6 0 7 0;
+#X connect 8 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 17 0 16 0;
+#X connect 18 0 16 0;
