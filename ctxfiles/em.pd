@@ -1,4 +1,4 @@
-#N canvas 288 325 910 436 10;
+#N canvas 285 329 910 436 10;
 #X obj 55 26 inlet;
 #X obj 153 73 inlet;
 #X obj 82 98 demux 0 1 2 3;
@@ -121,7 +121,7 @@ obj 140 100 receive \$1-imon \, connect 6 0 1 0;
 #X connect 36 0 29 0;
 #X connect 36 1 37 0;
 #X connect 38 0 24 1;
-#X connect 39 0 30 0;
+#X connect 39 0 29 0;
 #X connect 40 0 39 0;
 #X connect 40 1 38 1;
 #X connect 41 0 42 0;
