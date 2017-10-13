@@ -1,8 +1,5 @@
-#N canvas 503 220 483 300 10;
-#X text 40 20 Embeddable objects in Context:;
-#X text 40 150 Embeddable objects that can be used outside of Context:
-;
-#X text 39 204 Objects that are not related to Context:;
+#N canvas 83 190 688 400 10;
+#X text 39 324 Objects that are not related to Context:;
 #X obj 37 48 pddp/pddplink ../../content-help.pd -text [content] :
 embed arrays into the Context overlay;
 #X obj 37 68 pddp/pddplink ../../keylist-help.pd -text [keylist] :
@@ -11,7 +8,21 @@ define custom keyboard input for Context;
 points on the timeline for sample playback;
 #X obj 37 108 pddp/pddplink ../../mover-help.pd -text [mover] : move
 embedded objects around the Overlay;
-#X obj 37 169 pddp/pddplink ../../scaler-help.pd -text [scaler] : calculate
+#X obj 37 269 pddp/pddplink ../../scaler-help.pd -text [scaler] : calculate
 notes on a scale;
-#X obj 37 221 pddp/pddplink ../../sketch-help.pd -text [sketch] : draw
+#X obj 37 341 pddp/pddplink ../../sketch-help.pd -text [sketch] : draw
 custom shapes on an array;
+#X text 40 250 Objects that are not dependent on Context:;
+#X obj 37 289 pddp/pddplink ../../autocreate-help.pd -text [autocreate]
+: create objects in rapidfire;
+#X obj 37 128 pddp/pddplink ../../ctx-help.pd -text [ctx] : create
+an in/outlet~ in Context;
+#X obj 37 148 pddp/pddplink ../../undo-help.pd -text [undo] : create
+an embedded undo stack;
+#X text 40 20 Objects that are embeddable in Context:;
+#X text 40 190 Objects that are dependent on Context:;
+#X obj 37 218 pddp/pddplink ../../finder-help.pd -text [finder] : find
+the origin of a context event;
+#X obj 37 361 pddp/pddplink ../../psave-help.pd -text [psave] : create
+state-saving abstractions (with [num] \, [slide] \, [slide2] and [tog].
+;

@@ -1,29 +1,31 @@
 #N canvas 65 53 1301 715 10;
-#X obj 1221 360 context :H 14 :X 17 :Y 6 :d 8.54 :Z 9 :ol 1 :il 1 18
-obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843
+#X obj 1221 360 context :H 16 :X 17 :Y 6 :d 8.54 :Z 9 :ID 1 :ol 1 :il
+1 18 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843
 :y2 8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
 :x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1 4.0131 :y1 1.5372 8
 obj 140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3 0 4 0;
 #X obj 925 284 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
-2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 1 3 4 7 8 9 :y = 1 :O
--20 :Z 14 :ro 1 :il 1;
+2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 9 8 7 4 3 1 :y = 1 :O
+-20 :Z 14 :ID 2 :ro 1 :il 1;
 #X obj 1029 79 context :Y 5 :b ' | | | . :i -l scramble ' :d 2 :f 4
-:h 1 :i 7.5 5.5 10.5 0 3.5 :x = 1 2 3 5 :y = 1 2 3 4 :P 1 :il 1;
+:h 1 :i 7.5 5.5 10.5 0 3.5 :x = 5 3 2 1 :y = 4 3 2 1 :P 1 :ID 3 :il
+1;
 #X obj 998 447 context :X 7 :M 1 :a ' # _ | | | # = ' :d 0.02 :h 2
-:l 11 :n ' gl ' :p -1 :x = 1 2 3 4 5 6 :z 0 :R 101 :Z 9 :ol 1 :il 1
-;
+:l 11 :n ' gl ' :p 0.1 :x = 6 5 4 3 2 1 :z 0 :R 101 :Z 9 :ID 4 :ol
+1 :il 1;
 #X obj 973 359 context :d 0.5 :i 4.5 4.5 4.5 4.5 0 :j 8.5 0 0 :x =
-1 2 4 :il 1;
+4 2 1 :ID 5 :il 1;
 #X obj 1238 279 context :X 9 :a ' ¬ ' :b ' . :u (? 3 + 1) ' :d 1 :n
-' hat ' :x = 1 2 3 4 7 :y = 1 :O -15 :Z 13 :ba ' :x = 1 2 3 4 7 :i
-clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
-#X obj 1169 80 context :a ' 1 ' :d 2 :n ' kick ' :x = 1 2 3 4 :il 1
+' hat ' :x = 7 4 3 2 1 :y = 1 :O -15 :Z 13 :ID 6 :ba ' :x = 1 2 3 4
+7 :i clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1
 ;
+#X obj 1169 80 context :a ' 1 ' :d 2 :n ' kick ' :x = 4 3 2 1 :ID 7
+:il 1;
 #X obj 1210 176 context :a ' 1 ' :b ' = ' :d 0.25 :f 2 :h 1 :j 1 9.5
-0 :n ' kick ' :y = 1 2 :P 1 :il 1;
+0 :n ' kick ' :y = 2 1 :P 1 :ID 8 :il 1;
 #X obj 961 186 context :X 7 :a ' ¬ ' :d 0.75 :h 1 :j 9.5 9.5 0 :n
-' snare ' :x = 1 2 4 6 :y = 1 2 3 :O -17 :R 100 :Z 8 :il 1;
-#N canvas 520 247 492 300 audio 0;
+' snare ' :x = 6 4 2 1 :y = 3 2 1 :O -17 :R 100 :Z 8 :ID 9 :il 1;
+#N canvas 517 251 492 300 audio 0;
 #X obj 287 21 receive gl-;
 #X obj 321 241 helpfiles/docfiles/hihat;
 #X obj 321 216 receive hat-;
@@ -62,13 +64,13 @@ clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 #X obj 204 260 dac~;
 #X msg 158 121 \; pd dsp \$1;
 #X obj 418 33 loadbang;
-#X obj 418 55 f 2;
 #X obj 287 85 helpfiles/docfiles/glock2~;
+#X obj 418 55 f 2.5;
 #X connect 0 0 3 0;
 #X connect 1 0 12 0;
 #X connect 2 0 1 0;
-#X connect 3 0 17 0;
-#X connect 3 1 17 0;
+#X connect 3 0 16 0;
+#X connect 3 1 16 0;
 #X connect 4 0 12 0;
 #X connect 5 0 7 0;
 #X connect 6 0 12 0;
@@ -79,17 +81,17 @@ clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1;
 #X connect 11 0 12 1;
 #X connect 12 0 13 0;
 #X connect 12 0 13 1;
-#X connect 15 0 16 0;
-#X connect 16 0 17 1;
-#X connect 17 0 12 0;
+#X connect 15 0 17 0;
+#X connect 16 0 12 0;
+#X connect 17 0 16 1;
 #X coords 0 -1 1 1 140 16 1 100 100;
 #X restore 322 101 pd audio;
-#X obj 1210 476 context :Y 5 :h 1 :j 6.5 2.5 11.5 9.5 :y = 1 2 3 4
-:z 0 :R 100 :il 1;
+#X obj 1210 476 context :Y 5 :h 1 :j 6.5 2.5 11.5 9.5 :y = 4 3 2 1
+:z 0 :R 100 :ID 10 :il 1;
 #X obj 1076 531 context :X 9 :a ' | g # ( ? 3 + 12) | g # ( ? 3 + 12)
 | g % g ' :b ' < c9 :x ? 6 2 | < c5 :x ? 4 | < c7 :x ? 3 ' :d 1 :e
-4 :f 3 :h 1 :n ' gl ' :x = 2 3 5 7 :y = 1 2 3 :O -7 :R 100 :Z 11 :ro
-1 :il 1;
+4 :f 3 :h 1 :n ' gl ' :x = 7 5 3 2 :y = 3 2 1 :O -7 :R 100 :Z 11 :ID
+11 :ro 1 :il 1;
 #X msg 997 31 start;
 #X msg 1042 31 stop;
 #X obj 931 37 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144 -1
@@ -149,10 +151,6 @@ bass notes.;
 Luke. She gives Luke a predefined pattern every time she is told to
 \, but she also changes that pattern whenever Jean Paul asks., f 47
 ;
-#X text 1360 274 Ebo knows how to play three different patterns on
-the hi-hats. Each time he finishes one \, he picks another one at random.
-But he's also good at varying the length of his hits \, making sure
-that the quick one are shorter., f 47;
 #X text 527 185 Fei plays the snare. She has a little pattern which
 \, which she changes every time Jean Paul asks. It lasts only 3/4 of
 the length of the standard bar length that the rest of the group has
@@ -205,6 +203,10 @@ so you're going to have to learn their language and idiosyncrasies
 if you want to be able to direct them properly. But once you do this
 \, the possibilities are practically limitless.;
 #X text 42 78 an advanved sequencer for PD v3.0.2;
+#X text 1360 274 Ebo knows how to play three different patterns on
+the hi-hats. Each time he finishes one \, he picks another one at random.
+But he's also good at varying the length of his hits \, making sure
+that the ones he plays closer together are shorter., f 50;
 #X connect 6 3 7 0;
 #X connect 12 0 2 0;
 #X connect 13 0 2 1;

@@ -41,7 +41,7 @@ other objects in the Context library;
 http://contextsequencer.wordpress.com;
 Context website;
 
-http://musicalmetacreation.org/buddydrive/file/goodacre;
+https://contextsequencer.wordpress.com/publications/;
 academic papers about Context;
 
 helpfiles;
