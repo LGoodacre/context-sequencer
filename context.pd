@@ -1,4 +1,4 @@
-#N canvas 65 338 796 419 10;
+#N canvas 65 342 796 419 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
@@ -419,7 +419,7 @@
 #X obj 273 203 demux;
 #N canvas 65 85 1301 687 Sequence 0;
 #X obj 367 610 outlet;
-#N canvas 294 126 516 622 count-to 0;
+#N canvas 291 130 516 622 count-to 0;
 #X obj 169 1 inlet;
 #X obj 169 27 unpack f f;
 #X obj 141 263 f;
@@ -503,7 +503,6 @@
 #X obj 287 309 s \$0-mdo;
 #X obj 215 417 t b b b b;
 #X obj 256 287 f 1;
-#X obj 329 344 print don;
 #X obj 282 149 t b f f;
 #X obj 255 264 demux;
 #X obj 104 107 t b a b;
@@ -525,9 +524,9 @@
 #X connect 12 0 2 1;
 #X connect 13 0 6 1;
 #X connect 13 0 7 1;
-#X connect 16 0 39 0;
+#X connect 16 0 38 0;
 #X connect 17 0 8 1;
-#X connect 18 0 41 0;
+#X connect 18 0 40 0;
 #X connect 19 0 27 0;
 #X connect 20 0 19 0;
 #X connect 22 0 23 1;
@@ -551,23 +550,22 @@
 #X connect 33 0 2 0;
 #X connect 33 1 34 0;
 #X connect 34 0 35 0;
-#X connect 34 0 38 0;
 #X connect 34 1 33 1;
 #X connect 34 2 27 0;
 #X connect 36 0 26 1;
 #X connect 36 1 25 1;
-#X connect 36 2 40 0;
+#X connect 36 2 39 0;
 #X connect 36 3 9 0;
 #X connect 37 0 33 1;
-#X connect 39 0 9 0;
-#X connect 39 1 9 1;
-#X connect 39 2 40 1;
-#X connect 40 0 37 0;
-#X connect 40 1 34 0;
-#X connect 41 0 9 0;
-#X connect 41 1 27 0;
-#X connect 41 2 42 0;
-#X connect 42 0 33 1;
+#X connect 38 0 9 0;
+#X connect 38 1 9 1;
+#X connect 38 2 39 1;
+#X connect 39 0 37 0;
+#X connect 39 1 34 0;
+#X connect 40 0 9 0;
+#X connect 40 1 27 0;
+#X connect 40 2 41 0;
+#X connect 41 0 33 1;
 #X restore 289 456 pd count-to;
 #X obj 391 250 demux;
 #X obj 391 226 pack 5 1;
@@ -6143,7 +6141,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 99 3 72 0;
 #X connect 99 4 92 1;
 #X restore 552 391 pd rules;
-#N canvas 302 186 647 556 title 1;
+#N canvas 299 190 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
