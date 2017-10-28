@@ -40,6 +40,11 @@ Miller Puckette has said that in designing PD, his intention was to create a mid
 
                    ~~~ ~~~ ~~~ ~~~ ~~~
 
+Context is A LIBRARY,
+
+but not in the conventional way. PD libraries are collections of objects (externals or abstractions) for people to use. Context is a library, but one with a very heavy emphasis on a single object, [context]. There are a dozen or so other objects which come in the library, most of which are only useful in conjunction with Context. The library also contains a few objects which might be useful even if you are not using [context] and some that have no relationship to it. See helpfiles/docfiles/other_objects.pd for more information here.
+
+                   ~~~ ~~~ ~~~ ~~~ ~~~
 
 Context is AN OBSESSION,
 
