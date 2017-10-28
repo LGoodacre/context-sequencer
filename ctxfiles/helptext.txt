@@ -212,7 +212,7 @@
 -p list SETTINGS TO :: \; This dialogue determines which context(s) the settings from this menu are sent to. \; THIS CONTEXT‚ the default setting‚ means that the settings you choose will only affect this context‚ as you would expect. \; ALL CONTEXTS means that the settings you choose will affect all open contexts‚ turning this context into a global menu. \; OUTLETS means that the settings are sent only to this context's outlets. \; CUSTOM allows you to choose custom sets. Type a context number (ie "c12") or a tag (ie. "drums") and this menu will affect those contexts only. \; Watch out--global settings can be confusing and you can end up making a lot of undesired changes if you are not careful. Holding the Control key will bypass this setting and ensure that all menu commands are sent to this context.;
 -m OVERLAY ▪ SAVE OVERLAY ▪ VIEW OVERLAY ▪ CLEAR OVERLAY ▪ EMBEDDED ▪ EMBED STOP ☺ HELP;
 -m REVERSE ▪ OFFSET PATTERN ▪ REVERSE LAST ** ** ** ☺ HELP;
--m MISC ▪ INTERRUPTION ▪ GUI OFF ▪ FLOAT SEND ▪ SWITCH ** ☺ HELP;
+-m MISC ▪ INTERRUPTION ▪ GUI OFF ▪ FLOAT SEND ▪ FLOAT SEND CUSTOM ▪ SWITCH ☺ HELP;
 ;
 ;
 -p list OVERLAY determine some settings for the context overlay (embedding environment). \; CYCLE REVERSAL displays settings concerned with the behaviour of pattern toggles when the cycle time is reversed.; 
@@ -1282,8 +1282,8 @@
 -t INTERRUPT t 2 off on;
 -c GUI OFF :g -1;
 -t FLOAT SEND J 3 local global overlay;
+-s FLOAT SEND-C J 1 0;
 -t SWITCH sw 2 off on;
-;
 -p list INTERRUPTION settings determine what happens when context is interrupted in the middle of its cycle. When on‚ context will restart. When off‚ Context will continue to the end of its cycle uninterrupted. \; GUI OFF turns the GUI face off and deletes a sizeable portion of the patch inside. Context continues to function as normal‚ but in "power saving" mode. Use this in larger patches when you know you won't have to manually edit a context and want to save CPU load. \; FLOAT SEND determines the domain of toggle float connections. Local means that toggle connects will only connect to other contexts in the same patch. Global means it will send to contexts in any open patch. Overlay means it will only send to Contexts embedded within this one. \; SWITCH sets the [switch~] object inside Context on for DSP processing. Usually [switch~] remains off while Context is idle‚ but you can turn it on using this setting if you want.;
 ;
 ;

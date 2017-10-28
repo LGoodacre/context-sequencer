@@ -1,0 +1,21 @@
+#N canvas 207 181 461 354 10;
+#X obj 19 19 cnv 15 202 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 14 14 cnv 15 202 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 15 15 cnv 15 200 50 empty empty patch 45 18 2 48 -150295 -1
+0;
+#X obj 229 16 ctxfiles/license;
+#X obj 152 92 patch this-patch;
+#X text 19 130 [patch] is a tiny little abstraction that is used to
+identify a patch so that Context communicate with it. [patch] takes
+one symbol as a creation argument \, which is its identifier. If a
+Context contains the same identifier in its :J setting (ie. " :J this-patch
+") \, then its float-connections will only communicate with a Context
+open in this patch. This is useful if you want to spread a network
+over several patches and still be able to communicate between them.
+;
+#X text 20 259 As a little bonus \, [patch] lets you bring the parent-patch
+to focus by sending a bang to its identifier. Ie. in another patch
+than this one \, sending a bang to [send this-patch] would bring this
+patch to the front.;
