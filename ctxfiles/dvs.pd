@@ -1,0 +1,8 @@
+#N canvas 319 181 450 300 10;
+#X obj 159 95 inlet;
+#X obj 184 121 receive \$1-dvstart;
+#X obj 184 143 makefilename %d-\$2;
+#X obj 159 168 send;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;

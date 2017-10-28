@@ -1,0 +1,8 @@
+#N canvas 319 181 450 300 10;
+#X obj 184 101 receive \$1-dvstart;
+#X obj 184 123 makefilename %d-\$2;
+#X obj 184 168 outlet;
+#X obj 184 146 iemguts/oreceive \$0-n;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
