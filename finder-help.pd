@@ -39,7 +39,7 @@ arguments. Valid commands are:;
 \; :s -- scroll speed (defualt 50) \; :m -- midpoint of canvas (default
 33) \; :k --define scale of vertical distribution (default 5) \; :start
 -- determine whether [sketch] is on by default, f 70;
-#X restore 384 276 pd commands;
+#X restore 384 276 commands;
 #X obj 218 164 finder :l me- :k 15 :y 100 :start;
 #X connect 7 0 5 1;
 #X connect 8 0 5 1;

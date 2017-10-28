@@ -45,5 +45,5 @@ or not.;
 #X text 65 197 4: A variable symbol $ or %. $ takes a value from the
 [keylist] inlet \, while % takes the keyboard input \, as we have seen.
 These variables can be used at any point in the command.;
-#X restore 40 514 pd creation arguments;
+#X restore 40 514 creation arguments;
 #X obj 196 20 ctxfiles/license;

@@ -42,7 +42,7 @@ ma message through [send -scaler].;
 #X connect 1 0 0 0;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
-#X restore 210 182 pd right-inlet;
+#X restore 210 182 right-inlet;
 #X connect 1 0 4 0;
 #X connect 3 0 1 0;
 #X connect 12 0 1 1;

@@ -38,8 +38,8 @@ Shift then repeat. The top margin moves and the bottom resizes., f
 #X text 52 69 1: The 'save' flag makes Mover automatically save the
 overlay shortly after it is finished moving.;
 #X text 51 113 2: A float argument resets the slow movement value (see
-[pd fine tuning], f 55;
-#X restore 248 521 pd creation arguments;
+[fine tuning], f 55;
+#X restore 248 521 creation arguments;
 #X text 321 270 Right click and select 'open' to view the overlay.
 , f 13;
 #N canvas 65 81 506 300 fine 0;
@@ -49,8 +49,8 @@ boundary \; 2: BOX BY BOX (toggle boxes). Do this by double clicking
 on the boundary \; 3: 100 MILLISECONDS AT A TIME: Do this by tripple
 clicking on the boundary, f 74;
 #X text 36 143 Note that you can reset the 100 ms value with a creation
-argument (see [pd creation arguments];
-#X restore 81 522 pd fine tuning;
+argument (see [creation arguments];
+#X restore 81 522 fine tuning;
 #X text 87 178 Mover is loaded in the Overlay here \, but you won't
 see it until it is activated. To activate it \, hold the Shit key down
 and move the mouse over the Context. Mover will appear as a thin line

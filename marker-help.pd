@@ -44,7 +44,7 @@ mover is loaded in the overlay already. To move the Markers:;
 #X text 52 77 1: Move the mouse over Context and hold down the Shift
 key \; 2: Mover will appear. Move the mouse to a point just left of
 the Marker labels \; 3: Click and drag the Marker.;
-#X restore 287 549 pd moving markers;
+#X restore 287 549 moving markers;
 #X text 323 262 There are three Markers here \, the tall grey lines.
 Right click and 'open' to view the Overlay., f 13;
 #X obj 246 27 ctxfiles/license;
