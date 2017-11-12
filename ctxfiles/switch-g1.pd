@@ -1,9 +1,9 @@
-#N canvas 614 228 575 425 10;
-#X msg 151 371 \; \$4-\$5-\$1-point \$2 \$3;
+#N canvas 384 193 575 549 10;
+#X msg 151 482 \; \$4-\$5-\$1-point \$2 \$3;
 #X obj 151 295 pack f f f \$1 \$2;
 #X obj 174 267 * 128;
 #X obj 151 317 t l b;
-#X obj 178 343 outlet;
+#X obj 183 343 outlet;
 #X obj 169 57 - 1;
 #X obj 281 169 &&;
 #X obj 151 177 spigot;
@@ -16,9 +16,13 @@
 #X obj 188 138 xread \$1 x 128 1;
 #X obj 106 6 inlet;
 #X obj 201 241 receive \$1-:x;
+#X obj 151 379 demux 0 1 2;
+#X msg 188 443 \; \$4-\$5-\$1-point x \$3;
+#X msg 225 405 \; \$4-\$5-\$1-point y \$2;
+#X obj 235 343 receive r%gJN3-x;
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;
-#X connect 3 0 0 0;
+#X connect 3 0 17 0;
 #X connect 3 1 4 0;
 #X connect 5 0 8 0;
 #X connect 6 0 7 1;
@@ -34,3 +38,7 @@
 #X connect 14 1 6 0;
 #X connect 15 0 11 0;
 #X connect 16 0 2 1;
+#X connect 17 0 0 0;
+#X connect 17 1 18 0;
+#X connect 17 2 19 0;
+#X connect 20 0 17 1;
