@@ -1,4 +1,4 @@
-#N canvas 210 177 461 436 10;
+#N canvas 207 181 461 436 10;
 #X obj 19 19 cnv 15 202 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 14 14 cnv 15 202 52 empty empty empty 20 12 0 14 -1 -66577 0
@@ -27,3 +27,8 @@ by pressing control + s.;
 #X text 20 378 Note that [psave] and its related objects are not really
 a part of Context. They're just some useful objects that are available
 in the same library.;
+#N canvas 569 246 450 126 saving 0;
+#X text 23 34 [psave] can be used to save the parameters of a [sketch]
+object inside an abstraction as well. To do this \, you need to put
+\$0 as a second argument \, ie. [psave \$1 \$0];
+#X restore 319 342 saving [sketch];

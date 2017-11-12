@@ -1,4 +1,4 @@
-#N canvas 288 265 683 300 10;
+#N canvas 285 269 683 300 10;
 #X obj 124 104 tog on/off \$1;
 #X obj 103 104 slide volume v \$1 0 1;
 #X obj 125 133 num value \$1;
@@ -12,4 +12,8 @@ of each object to understand their creation arguments.;
 #X text 222 153 This abstraction doesn't do anything other than state-save
 \, but you can of course easily connect the objects to other things
 within the abstraction to do anything of your choice.;
+#X text 96 240 The objects created here are: [slider volume v \$1 0
+1];
+#X text 306 257 [tog on/off \$1];
+#X text 306 274 [num value \$1];
 #X coords 0 -1 1 1 100 114 2 100 100;

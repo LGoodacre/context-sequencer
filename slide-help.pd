@@ -1,4 +1,4 @@
-#N canvas 303 131 969 432 10;
+#N canvas 300 135 969 469 10;
 #X obj 142 18 ctxfiles/license;
 #X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -49,6 +49,14 @@ the abstraction. It is used to receive messages \, using the same naming
 convention as Context \, ie. [send groupname-] with a dash on the end.
 The group name should be \$1 if you are using [slide] in conjunction
 with [psave]., f 51;
+#X text 25 311 So a typical [slide] object would look like this:;
+#X text 20 345 [slide volume v \$1 0 1];
+#X text 19 388 [slide filter f \$1 10 10000 1];
+#X text 195 344 <-- create a slider called 'volume' (v) that goes from
+0 to 1, f 34;
+#X text 241 388 <-- create a slider called 'filter' (f) that goes from
+10 to 10000 exponentially (since 6th creation argument is set to 1)
+, f 34;
 #X connect 6 0 7 0;
 #X connect 8 0 5 0;
 #X connect 9 0 10 0;

@@ -1,4 +1,4 @@
-#N canvas 320 239 1028 432 10;
+#N canvas 317 243 1028 432 10;
 #X obj 142 18 ctxfiles/license;
 #X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -54,6 +54,13 @@ to [send \$0-label-1] and [send \$0-label-2]:, f 50;
 #X text 484 330 F: Sending two values "x y" to [slide2] sets it to
 "x" in "y" milliseconds \, in the given line-grain (creation argument
 8)., f 43;
+#X text 195 324 <-- create a slider called 'volume' (v) that goes from
+0 to 1, f 34;
+#X text 241 368 <-- create a slider called 'filter' (f) that goes from
+10 to 10000 exponentially (since 6th creation argument is set to 1)
+, f 34;
+#X text 10 325 [slide2 volume v \$1 0 1];
+#X text 9 368 [slide2 filter f \$1 10 10000 1];
 #X connect 6 0 25 0;
 #X connect 20 0 4 0;
 #X connect 20 1 19 0;
