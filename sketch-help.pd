@@ -1,21 +1,21 @@
-#N struct 3999-big2 float x float y array 3999-array2 ^&*-dsmall2;
+#N struct 8116-big2 float x float y array 8116-array2 ^&*-dsmall2;
 #N struct ^&*-dsmall2 float x float y;
-#N struct 3999-big1 float x float y array 3999-array1 ^&*-dsmall1;
+#N struct 8116-big1 float x float y array 8116-array1 ^&*-dsmall1;
 #N struct ^&*-dsmall1 float x float y;
-#N struct 4046-big2 float x float y array 4046-array2 ^&*-dsmall2;
-#N struct 4046-big1 float x float y array 4046-array1 ^&*-dsmall1;
-#N struct 4090-big2 float x float y array 4090-array2 ^&*-dsmall2;
-#N struct 4090-big1 float x float y array 4090-array1 ^&*-dsmall1;
-#N struct 4137-big2 float x float y array 4137-array2 ^&*-dsmall2;
-#N struct 4137-big1 float x float y array 4137-array1 ^&*-dsmall1;
-#N struct 4187-big1 float x float y array 4187-array1 ^&*-dsmall1;
-#N struct 4237-big2 float x float y array 4237-array2 ^&*-dsmall2;
-#N struct 4237-big1 float x float y array 4237-array1 ^&*-dsmall1;
-#N struct 4284-big2 float x float y array 4284-array2 ^&*-dsmall2;
-#N struct 4284-big1 float x float y array 4284-array1 ^&*-dsmall1;
-#N struct 4332-big2 float x float y array 4332-array2 ^&*-dsmall2;
-#N struct 4332-big1 float x float y array 4332-array1 ^&*-dsmall1;
-#N canvas 284 133 860 592 10;
+#N struct 8163-big2 float x float y array 8163-array2 ^&*-dsmall2;
+#N struct 8163-big1 float x float y array 8163-array1 ^&*-dsmall1;
+#N struct 8207-big2 float x float y array 8207-array2 ^&*-dsmall2;
+#N struct 8207-big1 float x float y array 8207-array1 ^&*-dsmall1;
+#N struct 8254-big2 float x float y array 8254-array2 ^&*-dsmall2;
+#N struct 8254-big1 float x float y array 8254-array1 ^&*-dsmall1;
+#N struct 8304-big1 float x float y array 8304-array1 ^&*-dsmall1;
+#N struct 8354-big2 float x float y array 8354-array2 ^&*-dsmall2;
+#N struct 8354-big1 float x float y array 8354-array1 ^&*-dsmall1;
+#N struct 8401-big2 float x float y array 8401-array2 ^&*-dsmall2;
+#N struct 8401-big1 float x float y array 8401-array1 ^&*-dsmall1;
+#N struct 8449-big2 float x float y array 8449-array2 ^&*-dsmall2;
+#N struct 8449-big1 float x float y array 8449-array1 ^&*-dsmall1;
+#N canvas 278 141 860 592 10;
 #X obj 241 343 sketch :x 227 :y 109 point1 0.332285 0.634206 0.69163
 0.597509 point2 0.160793 0.811927 0.488987 0.372612 0.864695 0.812978
 :name mycurve;
@@ -25,7 +25,6 @@
 0;
 #X obj 171 19 cnv 15 200 70 empty empty sketch 23 26 1 55 -203565 -66577
 0;
-#X text 308 66 v1.0;
 #X msg 241 257 end 1;
 #X msg 311 257 end -1;
 #X floatatom 477 293 5 0 0 0 - - -, f 5;
@@ -62,9 +61,9 @@ the curve changes -->, f 25;
 0;
 #X text 536 365 Sketch autosaves \, so whatever you draw will reappear
 the next time you open the patch. Just press Ctrl + S !, f 23;
-#X obj 154 88 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
+#X obj 154 88 cnv 15 15 15 empty \$0-banner ~.~~.~~.~~.~~.~~.~~.~~.~
 20 12 0 14 -262144 -66577 0;
-#X obj 159 -2 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
+#X obj 159 -2 cnv 15 15 15 empty \$0-banner ~.~~.~~.~~.~~.~~.~~.~~.~
 20 12 0 14 -262144 -66577 0;
 #N canvas 0 50 450 300 annimate 0;
 #X obj 100 100 tgl 10 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
@@ -117,7 +116,7 @@ cheap., f 89;
 #X obj 53 450 cnv 15 55 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #N canvas 347 100 633 587 (subpatch) 0;
-#X obj 40 146 sketch point1 0.71875 0.987023 point2 0.132813 0.98802
+#X obj 40 146 sketch point1 0.71875 0.989811 point2 0.132813 0.990594
 ;
 #X text 189 147 Sketch has a variety of options controlling its behaviour.
 To access the options \, right click on any sketch object and select
@@ -150,8 +149,8 @@ the y-axis \; ec : turn error correction on*, f 74;
 #X obj 52 535 cnv 15 111 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #N canvas 307 183 762 514 (subpatch) 0;
-#X obj 221 161 sketch point1 0.078125 0.981231 0.265626 0.76234 point2
-0.757813 0.811181 :color -232491 :time 1500;
+#X obj 221 161 sketch point1 0.078125 0.985264 0.265626 0.813406 point2
+0.757813 0.851752 :color -232491 :time 1500;
 #X obj 68 356 *~;
 #X obj 68 410 dac~;
 #X obj 173 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -159,8 +158,8 @@ the y-axis \; ec : turn error correction on*, f 74;
 #X floatatom 28 235 5 0 0 0 - - -, f 5;
 #X obj 28 304 tabread4~ waveform;
 #X obj 28 256 phasor~ 440;
-#X obj 227 321 sketch point1 0.414062 0.951773 0.609375 0.876051 0.859375
-0.958599 point2 0.101563 0.979706 0.367188 0.817221 0.703125 0.974455
+#X obj 227 321 sketch point1 0.414062 0.962135 0.609375 0.902684 0.859375
+0.967495 point2 0.101563 0.984067 0.367188 0.856495 0.703125 0.979944
 :name waveform :color -232617 :duplicate 1 :mirror-x 1;
 #X obj 28 280 *~ 256;
 #X obj 221 89 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -207,8 +206,8 @@ by the grey end points \, so a sketch with 3 end points will have 4
 sections and consequently 4 extra in/outlets \, regarless of how many
 brown curve points there are.;
 #X msg 157 281 0;
-#X obj 67 182 sketch point1 0.21875 0.93583 0.390625 0.686805 0.71875
-0.693984;
+#X obj 67 182 sketch point1 0.21875 0.949619 0.390625 0.754101 0.71875
+0.759738;
 #X obj 37 305 s c1;
 #X obj 97 305 s c2;
 #X obj 37 281 pow 0.5;
@@ -292,8 +291,8 @@ me how to create Bezier curves!;
 ;
 #X obj 52 507 cnv 15 62 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#N canvas 400 280 450 318 (subpatch) 0;
-#X obj 149 93 sketch point1 0.3125 0.662096 point2 0.859375 0.663374
+#N canvas 397 284 450 453 (subpatch) 0;
+#X obj 149 93 sketch point1 0.3125 0.734701 point2 0.859375 0.735705
 :name shift;
 #X text 16 10 You can shift only the x-dimension of a point. To do
 this \, simply hold down the left/right arrow keys and move a point.
@@ -305,10 +304,19 @@ there can be some misalignment between the curve and the point. This
 can create problems when saving a patch: on loading \, the curve will
 jump to the actual position of the point \, which may differ from the
 point you left it at \, if you were using x/y shifting.;
+#X text 13 306 Two other key features (native to PD data structures):
+;
+#X text 13 332 --You can move multiple points at once using the Shift
+key. When the Shift key is pressed \, the mouse will drag the selected
+point and every point created after it.;
+#X text 11 376 --You can create or destroy points by holding down the
+Control key. However \, this is not as reliable as creating or destroying
+points using the properties menu.;
 #X restore 53 509 shifting;
+#X text 308 66 v1.1;
+#X connect 4 0 0 0;
 #X connect 5 0 0 0;
-#X connect 6 0 0 0;
+#X connect 6 0 7 0;
 #X connect 7 0 8 0;
-#X connect 8 0 9 0;
+#X connect 46 0 0 0;
 #X connect 47 0 0 0;
-#X connect 48 0 0 0;

@@ -1,4 +1,4 @@
-#N canvas 537 101 657 687 10;
+#N canvas 525 89 657 687 10;
 #X obj 105 384 cyclone/zl iter 2;
 #X obj 105 488 unpack;
 #X obj 105 542 * 128;
@@ -26,7 +26,7 @@
 #X obj 210 134 div 2;
 #X obj 225 297 s \$1-nsize\$2;
 #X obj 240 275 setsize \$1-big\$2 \$1-array\$2;
-#X obj 329 254 receive \$1-pointer\$2;
+#X obj 426 252 receive \$1-pointer\$2;
 #X text 209 57 2: parse command;
 #X obj 105 125 t f f;
 #X obj 132 154 +;
@@ -67,6 +67,7 @@
 #X obj 171 498 receive \$1-:y;
 #X obj 132 520 receive \$1-:x;
 #X obj 518 498 receive \$1-:x;
+#X obj 302 113 receive \$1-nrsize\$2;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;
 #X connect 1 1 8 0;
@@ -151,3 +152,4 @@
 #X connect 65 0 3 1;
 #X connect 66 0 2 1;
 #X connect 67 0 51 3;
+#X connect 68 0 56 0;
