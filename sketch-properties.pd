@@ -1,4 +1,4 @@
-#N canvas 107 107 1256 605 10;
+#N canvas 104 111 1256 605 10;
 #X obj 62 54 cnv 15 328 111 empty empty empty 20 12 0 14 -151156 -66577
 0;
 #X obj 140 96 bng 14 250 50 0 \$0-e+ \$0f + 5 7 0 10 -151156 -1 -1
@@ -124,6 +124,7 @@ col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 #X text 75 95 end point;
 #X text 61 111 curve point;
 #X obj 787 426 list;
+#X obj 899 118 iemguts/propertybang;
 #X connect 5 0 10 0;
 #X connect 6 0 5 0;
 #X connect 7 0 9 0;
@@ -192,4 +193,5 @@ col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 #X connect 102 0 20 0;
 #X connect 102 0 19 0;
 #X connect 105 0 76 0;
+#X connect 106 0 31 0;
 #X coords 0 -1 1 1 330 113 1 61 53;
