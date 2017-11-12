@@ -141,11 +141,11 @@
 #X connect 50 0 44 0;
 #X coords 0 -1 1 1 224 258 2 171 31;
 #X restore 11 100 pd hold;
-#X obj 1022 492 context :H 4 :ol 1 5 obj 222 -37 receive reset 6 obj
-222 -15 t a f 6 obj 168 54 list split 1 5 msg 249 8 inlet \$1 5 obj
-249 32 iemguts/canvasconnections 1 7 obj 249 54 unpack s f f 6 obj
-318 77 t f b 5 obj 345 102 iemguts/canvasindex 1 4 obj 318 123 pack
-6 obj 318 145 t l l 4 obj 168 116 list 5 obj 345 191 iemguts/sendcanvas
+#X obj 1022 492 context :H 6 :ID 1 :ol 1 5 obj 222 -37 receive reset
+6 obj 222 -15 t a f 6 obj 168 54 list split 1 5 msg 249 8 inlet \$1
+5 obj 249 32 iemguts/canvasconnections 1 7 obj 249 54 unpack s f f
+6 obj 318 77 t f b 5 obj 345 102 iemguts/canvasindex 1 4 obj 318 123
+pack 6 obj 318 145 t l l 4 obj 168 116 list 5 obj 345 191 iemguts/sendcanvas
 2 8 msg 345 169 connect \$2 0 \$1 0 5 obj 168 78 t b 8 msg 168 138
 disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 0 4 0 5 connect 4 0 5 0 5 connect 4 1 6 0 5 connect 5 0 16 0 5 connect
@@ -176,29 +176,29 @@ disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 0;
 #X obj 57 377 cnv 15 118 19 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#N canvas 510 146 294 366 this 0;
+#N canvas 507 150 294 366 this 0;
 #X obj 21 15 cnv 15 252 335 empty empty empty 19 18 0 20 -99865 -45076
 0;
 #X obj 13 7 cnv 15 252 335 empty empty empty 19 18 0 20 -1 -45076 0
 ;
 #X obj 14 8 cnv 15 250 333 empty empty ABOUT THIS PATCH 19 18 0 20
 -212254 -45076 0;
-#X text 39 40 The left hand boxes show all possible Context commands.
-This is an exhaustive accont of Context's functions. Click on each
-button for more information., f 30;
 #X text 38 232 All examples are interactive.;
 #X text 38 254 To access the same information as text \, see 'context_commands.csv'.
 , f 30;
 #X text 38 309 See manual section 9 for command use, f 30;
 #X text 26 41 *;
-#X text 26 141 *;
-#X text 26 178 *;
+#X text 26 138 *;
+#X text 26 192 *;
 #X text 26 233 *;
-#X text 39 178 The right hand boxes show categories. Click on them
-to highlight., f 30;
 #X text 26 255 *;
 #X text 26 310 *;
-#X text 39 141 $ stand for an argument \, curly brackets mean optional.
+#X text 39 40 The boxes on the right show all possible Context commands.
+This is an exhaustive accont of Context's functions. Click on each
+button for more information., f 30;
+#X text 39 136 The boxes on the leftshow categories. Click on them
+to highlight commands., f 30;
+#X text 36 190 $ stands for an argument \, curly brackets mean optional.
 , f 30;
 #X restore 58 378 about this patch;
 #X obj 1041 18 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
