@@ -1,6 +1,6 @@
-#N canvas 547 81 575 687 10;
+#N canvas 544 85 575 687 10;
 #X obj 132 43 inlet;
-#X obj 471 373 outlet;
+#X obj 423 540 outlet;
 #X text 51 12 read bpoint and point. IF point is less \, write \, if
 not \, return next bpoint.;
 #X obj 149 178 sort;
@@ -72,6 +72,7 @@ to correct io.pd abstraction., f 41;
 #X obj 290 471 sel 0;
 #X obj 290 493 s \$1-bpb;
 #X obj 224 390 receive \$1-:size;
+#X obj 423 518 receive \$1-rego;
 #X connect 0 0 46 0;
 #X connect 3 0 5 0;
 #X connect 3 1 4 0;
@@ -138,3 +139,4 @@ to correct io.pd abstraction., f 41;
 #X connect 61 0 49 1;
 #X connect 62 0 63 0;
 #X connect 64 0 43 1;
+#X connect 65 0 1 0;
