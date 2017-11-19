@@ -1,4 +1,4 @@
-#N canvas 90 90 1276 687 10;
+#N canvas 87 94 1276 687 10;
 #X obj 728 617 inlet;
 #X obj 728 593 outlet;
 #X obj 668 402 line;
@@ -415,3 +415,4 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 177 0 171 0;
 #X connect 177 1 178 0;
 #X connect 178 0 172 1;
+#X connect 179 0 181 0;
