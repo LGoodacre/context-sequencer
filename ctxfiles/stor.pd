@@ -1,4 +1,4 @@
-#N canvas 180 289 593 459 10;
+#N canvas 177 293 593 459 10;
 #X obj 309 3 inlet;
 #X obj 119 189 / \$3;
 #X obj 75 255 collect;
@@ -65,7 +65,7 @@ inside;
 #X connect 28 0 19 1;
 #X connect 29 0 27 0;
 #X connect 29 1 19 0;
-#X connect 30 0 2 1;
+#X connect 30 0 27 0;
 #X connect 30 1 33 0;
 #X connect 31 0 25 0;
 #X connect 32 0 14 0;
