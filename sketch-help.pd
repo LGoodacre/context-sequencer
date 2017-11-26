@@ -1,23 +1,38 @@
-#N struct 8116-big2 float x float y array 8116-array2 ^&*-dsmall2;
+#N struct 67630-big2 float x float y array 67630-array2 ^&*-dsmall2
+;
 #N struct ^&*-dsmall2 float x float y;
-#N struct 8116-big1 float x float y array 8116-array1 ^&*-dsmall1;
+#N struct 67630-big1 float x float y array 67630-array1 ^&*-dsmall1
+;
 #N struct ^&*-dsmall1 float x float y;
-#N struct 8163-big2 float x float y array 8163-array2 ^&*-dsmall2;
-#N struct 8163-big1 float x float y array 8163-array1 ^&*-dsmall1;
-#N struct 8207-big2 float x float y array 8207-array2 ^&*-dsmall2;
-#N struct 8207-big1 float x float y array 8207-array1 ^&*-dsmall1;
-#N struct 8254-big2 float x float y array 8254-array2 ^&*-dsmall2;
-#N struct 8254-big1 float x float y array 8254-array1 ^&*-dsmall1;
-#N struct 8304-big1 float x float y array 8304-array1 ^&*-dsmall1;
-#N struct 8354-big2 float x float y array 8354-array2 ^&*-dsmall2;
-#N struct 8354-big1 float x float y array 8354-array1 ^&*-dsmall1;
-#N struct 8401-big2 float x float y array 8401-array2 ^&*-dsmall2;
-#N struct 8401-big1 float x float y array 8401-array1 ^&*-dsmall1;
-#N struct 8449-big2 float x float y array 8449-array2 ^&*-dsmall2;
-#N struct 8449-big1 float x float y array 8449-array1 ^&*-dsmall1;
-#N canvas 278 141 860 592 10;
-#X obj 241 343 sketch :x 227 :y 109 point1 0.332285 0.634206 0.69163
-0.597509 point2 0.160793 0.811927 0.488987 0.372612 0.864695 0.812978
+#N struct 67677-big2 float x float y array 67677-array2 ^&*-dsmall2
+;
+#N struct 67677-big1 float x float y array 67677-array1 ^&*-dsmall1
+;
+#N struct 67721-big2 float x float y array 67721-array2 ^&*-dsmall2
+;
+#N struct 67721-big1 float x float y array 67721-array1 ^&*-dsmall1
+;
+#N struct 67768-big2 float x float y array 67768-array2 ^&*-dsmall2
+;
+#N struct 67768-big1 float x float y array 67768-array1 ^&*-dsmall1
+;
+#N struct 67818-big1 float x float y array 67818-array1 ^&*-dsmall1
+;
+#N struct 67868-big2 float x float y array 67868-array2 ^&*-dsmall2
+;
+#N struct 67868-big1 float x float y array 67868-array1 ^&*-dsmall1
+;
+#N struct 67915-big2 float x float y array 67915-array2 ^&*-dsmall2
+;
+#N struct 67915-big1 float x float y array 67915-array1 ^&*-dsmall1
+;
+#N struct 67963-big2 float x float y array 67963-array2 ^&*-dsmall2
+;
+#N struct 67963-big1 float x float y array 67963-array1 ^&*-dsmall1
+;
+#N canvas 275 145 860 592 10;
+#X obj 241 343 sketch :x 227 :y 109 point1 0.310259 0.588334 0.669604
+0.551637 point2 0.138767 0.766055 0.466961 0.32674 0.842669 0.767106
 :name mycurve;
 #X obj 175 23 cnv 15 202 72 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -115,8 +130,8 @@ cheap., f 89;
 ;
 #X obj 53 450 cnv 15 55 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#N canvas 347 100 633 587 (subpatch) 0;
-#X obj 40 146 sketch point1 0.71875 0.989811 point2 0.132813 0.990594
+#N canvas 344 104 633 587 (subpatch) 0;
+#X obj 40 146 sketch point1 0.679688 0.927681 point2 0.0937505 0.928374
 ;
 #X text 189 147 Sketch has a variety of options controlling its behaviour.
 To access the options \, right click on any sketch object and select
@@ -138,7 +153,9 @@ the array \; y2 : define the lower limit of the array \; speed : define
 how fast the array refreshes when the points are moved \; duplicate
 : create a duplicate of the defined shape in the array \; mirror-x
 : flip the copy along the x-axis \; mirror-y : flip the copy along
-the y-axis \; ec : turn error correction on*, f 74;
+the y-axis \; ec : turn error correction on* \; lock : prevent end
+points from moving past one another \; name2 : add \$0 to the array
+name, f 74;
 #X restore 54 452 options;
 #X obj 51 478 cnv 15 64 23 empty empty empty 20 12 0 14 -1 -66577 0
 ;
@@ -149,8 +166,8 @@ the y-axis \; ec : turn error correction on*, f 74;
 #X obj 52 535 cnv 15 111 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #N canvas 307 183 762 514 (subpatch) 0;
-#X obj 221 161 sketch point1 0.078125 0.985264 0.265626 0.813406 point2
-0.757813 0.851752 :color -232491 :time 1500;
+#X obj 221 161 sketch point1 0.0390625 0.923652 0.226564 0.771372 point2
+0.71875 0.80535 :color -232491 :time 1500;
 #X obj 68 356 *~;
 #X obj 68 410 dac~;
 #X obj 173 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -158,8 +175,8 @@ the y-axis \; ec : turn error correction on*, f 74;
 #X floatatom 28 235 5 0 0 0 - - -, f 5;
 #X obj 28 304 tabread4~ waveform;
 #X obj 28 256 phasor~ 440;
-#X obj 227 321 sketch point1 0.414062 0.962135 0.609375 0.902684 0.859375
-0.967495 point2 0.101563 0.984067 0.367188 0.856495 0.703125 0.979944
+#X obj 227 321 sketch point1 0.374999 0.903158 0.570312 0.850479 0.820312
+0.907907 point2 0.0625005 0.922591 0.328126 0.809553 0.664062 0.918938
 :name waveform :color -232617 :duplicate 1 :mirror-x 1;
 #X obj 28 280 *~ 256;
 #X obj 221 89 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
@@ -206,8 +223,8 @@ by the grey end points \, so a sketch with 3 end points will have 4
 sections and consequently 4 extra in/outlets \, regarless of how many
 brown curve points there are.;
 #X msg 157 281 0;
-#X obj 67 182 sketch point1 0.21875 0.949619 0.390625 0.754101 0.71875
-0.759738;
+#X obj 67 182 sketch point1 0.179688 0.892067 0.351562 0.718824 0.679688
+0.723819;
 #X obj 37 305 s c1;
 #X obj 97 305 s c2;
 #X obj 37 281 pow 0.5;
@@ -228,15 +245,15 @@ coordinates.;
 are not visible on the canvas. You can connect the cables directly
 without using [send] and [receive] \, but you're on your own when it
 comes to hiding them behind the canvas., f 26;
-#X obj 31 522 sketch :x 211 :y 118 point1 0.412704 0.847565 0.957346
-0.686441 point2 0.584196 0.24602 :name first :color -232379;
+#X obj 31 522 sketch :x 211 :y 118 point1 0.389007 0.805192 0.933649
+0.644068 point2 0.560499 0.203647 :name first :color -232379;
 #X text 21 446 You can have a lot of fun with custom formulas! Here
 are some examples using [expr].;
 #X obj 99 652 expr 0.2 * sin($f1*28) + $f1;
 #X obj 99 676 s cc1;
 #X obj 99 493 r cc1;
-#X obj 61 864 sketch :x 169 :y 103 point1 0.259109 0.299027 0.630748
-0.81208 point2 0.0754696 0.647995 0.887574 0.679591 :name second :color
+#X obj 61 864 sketch :x 169 :y 103 point1 0.229523 0.250483 0.601162
+0.763536 point2 0.0458838 0.599451 0.857988 0.631047 :name second :color
 -65491 :duplicate 1 :mirror-x 1 :mirror-y 1;
 #X obj 169 1179 expr first [$f1*120];
 #X obj 167 690 t b f;
@@ -280,7 +297,6 @@ are all on to help draw the waveform, f 30;
 #X connect 29 0 16 2;
 #X connect 30 0 21 2;
 #X restore 53 537 custom formulas;
-#X text 10 281 add or remove a sketch point ->;
 #X text 17 254 add or remove an end point ->;
 #X msg 241 284 curve 1;
 #X msg 311 284 curve -1;
@@ -292,7 +308,7 @@ me how to create Bezier curves!;
 #X obj 52 507 cnv 15 62 21 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #N canvas 397 284 450 453 (subpatch) 0;
-#X obj 149 93 sketch point1 0.3125 0.734701 point2 0.859375 0.735705
+#X obj 149 93 sketch point1 0.273438 0.701634 point2 0.820312 0.702523
 :name shift;
 #X text 16 10 You can shift only the x-dimension of a point. To do
 this \, simply hold down the left/right arrow keys and move a point.
@@ -314,9 +330,10 @@ Control key. However \, this is not as reliable as creating or destroying
 points using the properties menu.;
 #X restore 53 509 shifting;
 #X text 308 66 v1.1;
+#X text 10 281 add or remove a curve point ->;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
+#X connect 45 0 0 0;
 #X connect 46 0 0 0;
-#X connect 47 0 0 0;

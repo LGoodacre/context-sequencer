@@ -1,13 +1,13 @@
-#N canvas 104 111 1256 605 10;
+#N canvas 92 127 1256 605 10;
 #X obj 62 54 cnv 15 328 111 empty empty empty 20 12 0 14 -151156 -66577
 0;
-#X obj 140 96 bng 14 250 50 0 \$0-e+ \$0f + 5 7 0 10 -151156 -1 -1
+#X obj 140 96 bng 14 250 50 0 \$0-e+ \$0f + 5 7 0 10 -151146 -1 -1
 ;
-#X obj 156 96 bng 14 250 50 0 \$0-e- \$0f - 5 7 0 10 -151156 -1 -1
+#X obj 156 96 bng 14 250 50 0 \$0-e- \$0f - 5 7 0 10 -151146 -1 -1
 ;
-#X obj 140 112 bng 14 250 50 0 \$0-c+ \$0f + 5 7 0 10 -151156 -1 -1
+#X obj 140 112 bng 14 250 50 0 \$0-c+ \$0f + 5 7 0 10 -151146 -1 -1
 ;
-#X obj 156 112 bng 14 250 50 0 \$0-c- \$0f - 5 7 0 10 -151156 -1 -1
+#X obj 156 112 bng 14 250 50 0 \$0-c- \$0f - 5 7 0 10 -151146 -1 -1
 ;
 #X obj 215 229 v \$0-en;
 #X obj 215 206 receive \$0-e+;
@@ -65,7 +65,7 @@
 #X floatatom 131 149 8 0 0 0 colour #0-colr #0-cols, f 8;
 #X floatatom 199 144 5 0 0 1 speed #0-speedr #0-speeds, f 5;
 #X floatatom 352 56 5 0 0 0 PLAYBACK(ms) #0-timer #0-times, f 5;
-#X floatatom 171 78 2 0 0 0 scale-y #0-scaler #0-scales, f 2;
+#X floatatom 172 78 2 0 0 0 scale-y #0-scaler #0-scales, f 2;
 #X obj 281 96 tgl 14 0 \$0-duplicates \$0-duplicater duplicate 17 7
 0 10 -151156 -1 -1 0 1;
 #X obj 281 112 tgl 14 0 \$0-mirrorxs \$0-mirrorxr mirror-x 17 7 0 10
@@ -111,9 +111,6 @@
 #X msg 442 577 time \$1;
 #X obj 45 359 receive \$0-duplicates;
 #X msg 45 381 duplicate \$1;
-#X msg 730 279 1 x \, 2 y \, 3 size \, 4 yt \, 5 by \, 8 name \, 9
-col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
-\, 15 scale \, 16 error;
 #X obj 55 409 receive \$0-mirrorxs;
 #X msg 55 431 mirror-x \$1;
 #X obj 65 459 receive \$0-mirrorys;
@@ -121,10 +118,17 @@ col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 #X obj 85 509 receive \$0-error;
 #X msg 85 531 ec \$1;
 #X obj 747 209 f 1;
-#X text 75 95 end point;
-#X text 61 111 curve point;
 #X obj 787 426 list;
 #X obj 899 118 iemguts/propertybang;
+#X obj 78 99 tgl 14 0 \$0-locks \$0-lockr lock -8 20 0 10 -151156 -1
+-1 0 1;
+#X obj 96 560 receive \$0-locks;
+#X msg 96 582 lock \$1;
+#X text 101 95 point;
+#X text 101 111 curve;
+#X msg 730 279 1 x \, 2 y \, 3 size \, 4 yt \, 5 by \, 8 name \, 9
+col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
+\, 15 scale \, 16 error \, 18 lock;
 #X connect 5 0 10 0;
 #X connect 6 0 5 0;
 #X connect 7 0 9 0;
@@ -161,13 +165,13 @@ col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 #X connect 54 0 55 0;
 #X connect 71 0 49 0;
 #X connect 71 1 48 0;
-#X connect 71 2 95 0;
-#X connect 71 3 102 0;
+#X connect 71 2 109 0;
+#X connect 71 3 101 0;
 #X connect 72 0 73 0;
 #X connect 72 1 79 0;
 #X connect 73 0 74 0;
 #X connect 74 0 75 0;
-#X connect 75 1 105 0;
+#X connect 75 1 102 0;
 #X connect 76 0 77 0;
 #X connect 78 0 40 0;
 #X connect 79 0 77 1;
@@ -183,15 +187,17 @@ col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 #X connect 92 0 41 0;
 #X connect 93 0 94 0;
 #X connect 94 0 41 0;
-#X connect 95 0 72 0;
-#X connect 96 0 97 0;
-#X connect 97 0 41 0;
-#X connect 98 0 99 0;
-#X connect 99 0 41 0;
-#X connect 100 0 101 0;
-#X connect 101 0 41 0;
-#X connect 102 0 20 0;
-#X connect 102 0 19 0;
-#X connect 105 0 76 0;
-#X connect 106 0 31 0;
+#X connect 95 0 96 0;
+#X connect 96 0 41 0;
+#X connect 97 0 98 0;
+#X connect 98 0 41 0;
+#X connect 99 0 100 0;
+#X connect 100 0 41 0;
+#X connect 101 0 20 0;
+#X connect 101 0 19 0;
+#X connect 102 0 76 0;
+#X connect 103 0 31 0;
+#X connect 105 0 106 0;
+#X connect 106 0 41 0;
+#X connect 109 0 72 0;
 #X coords 0 -1 1 1 330 113 1 61 53;
