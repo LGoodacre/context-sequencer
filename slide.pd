@@ -1,4 +1,4 @@
-#N canvas 65 197 943 550 10;
+#N canvas 423 201 943 550 10;
 #X obj 100 -100 vsl 18 101 0 100 0 0 \$0-ls \$0-lr 0 1 100 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;
@@ -61,6 +61,9 @@
 #X obj 665 255 makefilename %s-\$1;
 #X obj 640 279 send;
 #X obj 541 165 t f f f;
+#X obj 27 99 iemguts/propertybang 1;
+#X msg 27 122 menu-open \, coords 0 -1 1 1 1 1 1 0 0 \, coords 0 -1
+1 1 1 1 0 0 0 \, vis 0;
 #X connect 2 0 29 0;
 #X connect 2 0 33 0;
 #X connect 2 0 43 0;
@@ -132,4 +135,6 @@
 #X connect 57 0 8 0;
 #X connect 57 1 16 0;
 #X connect 57 2 56 0;
+#X connect 58 0 59 0;
+#X connect 59 0 1 0;
 #X coords 0 -1 1 1 18 106 2 100 -102;
