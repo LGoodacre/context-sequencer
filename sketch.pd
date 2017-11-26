@@ -1,4 +1,4 @@
-#N canvas 194 313 605 425 10;
+#N canvas 188 321 605 425 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -423,12 +423,13 @@
 #X connect 23 0 24 0;
 #X connect 24 0 14 0;
 #X restore -241 -207 pd init;
-#N canvas 335 113 557 359 saving 0;
+#N canvas 329 121 557 359 saving 0;
 #X obj 85 136 text define -k \$0-save;
 #A set \; %^ :x 128 \; %^ :y 79 \; %^ :size 128 \; %^ :y1 1 \; %^ :y2
 0 \; %^ :points bang \; %^ :bpoints bang \; %^ :name bang \; %^ :color
 -232534 \; %^ :speed 10 \; %^ :time 1000 \; %^ :duplicate 0 \; %^ :mirror-x
-0 \; %^ :mirror-y 0 \; %^ :scale 1 \; %^ :ec 0 \;;
+0 \; %^ :mirror-y 0 \; %^ :scale 1 \; %^ :ec 0 \; %^ :name2 0 \; %^
+:lock 0 \;;
 #X obj 85 91 receive \$0-savelist;
 #X msg 85 113 click;
 #X obj 216 27 ctxfiles/saver \$0 switch-ee 3 switch-fe;
