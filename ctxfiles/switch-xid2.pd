@@ -1,4 +1,4 @@
-#N canvas 675 313 450 404 10;
+#N canvas 672 317 450 404 10;
 #X obj 148 20 inlet;
 #X obj 148 60 moses;
 #X obj 233 126 f 1;
@@ -12,7 +12,7 @@
 #X obj 134 234 collect;
 #X obj 148 104 t b;
 #X obj 148 126 t f;
-#X obj 205 20 receive \$2-:y;
+#X obj 205 20 receive \$2-:x;
 #X connect 0 0 1 0;
 #X connect 1 0 11 0;
 #X connect 1 1 7 0;
