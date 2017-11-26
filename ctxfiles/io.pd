@@ -1,4 +1,4 @@
-#N canvas 78 106 1276 687 10;
+#N canvas 75 81 1276 687 10;
 #X obj 728 617 inlet;
 #X obj 728 593 outlet;
 #X obj 668 402 line;
@@ -195,6 +195,7 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X text 746 181 stop repeats if line length is 0;
 #X obj 697 -138 t a b b;
 #X obj 711 -17 t f f;
+#X obj 332 125 change;
 #X connect 0 0 42 0;
 #X connect 2 0 111 0;
 #X connect 3 0 22 0;
@@ -292,7 +293,7 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 88 3 93 1;
 #X connect 89 0 13 0;
 #X connect 89 1 49 0;
-#X connect 90 0 91 0;
+#X connect 90 0 189 0;
 #X connect 90 1 85 0;
 #X connect 90 2 61 1;
 #X connect 90 3 70 0;
@@ -432,3 +433,4 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 187 2 29 0;
 #X connect 188 0 167 0;
 #X connect 188 1 20 0;
+#X connect 189 0 91 0;
