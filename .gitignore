@@ -1,6 +1,4 @@
 /ctxfiles/tmp/1*.pd
-gridcontrol.pd
-gridfiles
 tester.pd
 input.pd
 /presentation
@@ -8,3 +6,7 @@ input.pd
 context-dev.pd
 content-dev.pd
 /videos
+ttest.pd
+structure.pd
+structure2.pd
+sktest.pd

@@ -1,0 +1,11 @@
+#N canvas 387 338 450 300 10;
+#X obj 115 127 array define -k launchpadcolors## 30;
+#A 0 15 43 79 32 32 15 75 75 17 2 90 101 45 121 15 19 33 87 103 63
+101 101 80 46 51 69 64 47 71 71;
+#X obj 151 25 shared ctxfiles/launch-share;
+#X msg 102 223 vis 1;
+#X obj 102 245 iemguts/sendcanvas;
+#X obj 102 201 receive lshare;
+#X obj 88 66 array define dummy@%G 1;
+#X connect 2 0 3 0;
+#X connect 4 0 2 0;
