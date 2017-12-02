@@ -1,4 +1,4 @@
-#N canvas 623 210 743 480 10;
+#N canvas 280 231 743 480 10;
 #X obj 100 100 bng 15 250 50 0 empty empty empty -2 8 0 8 -262144 -1
 -1;
 #X obj 114 188 s \$3-press;
@@ -33,6 +33,18 @@
 #X obj 483 234 tabread launchpadcolors##;
 #X obj 451 212 moses;
 #X obj 532 364 receive \$3-lb;
+#X obj 232 229 receive \$3-\$1-\$2-dollarz;
+#X obj 232 251 makefilename %d-imon;
+#X obj 232 273 iemguts/oreceive \$0n;
+#X obj 232 317 spigot;
+#X obj 271 295 receive \$3-gridon;
+#X obj 232 339 t b f;
+#X obj 264 361 sel 0;
+#X obj 264 383 f 1;
+#X obj 296 405 f 3;
+#X text 59 367 flash when context is on;
+#X obj 282 317 sel 0;
+#X obj 296 383 t b;
 #X connect 0 0 6 0;
 #X connect 2 0 6 1;
 #X connect 3 0 21 0;
@@ -72,4 +84,18 @@
 #X connect 31 0 23 0;
 #X connect 31 1 30 0;
 #X connect 32 0 14 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 38 0;
+#X connect 37 0 36 1;
+#X connect 37 0 43 0;
+#X connect 38 0 17 0;
+#X connect 38 1 39 0;
+#X connect 39 0 40 0;
+#X connect 39 1 44 0;
+#X connect 40 0 18 2;
+#X connect 41 0 18 2;
+#X connect 43 0 40 1;
+#X connect 44 0 41 0;
 #X coords 0 -1 1 1 15 15 2 100 100;
