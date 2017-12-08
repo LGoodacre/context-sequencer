@@ -1,5 +1,5 @@
-#N canvas 469 326 450 427 10;
-#X symbolatom 100 100 17 0 0 0 - #1-#2-r -, f 17;
+#N canvas 463 334 450 427 10;
+#X symbolatom 100 101 17 0 0 0 - #1-#2-r -, f 17;
 #X obj 245 82 iemguts/canvasargs;
 #X obj 279 127 l2s;
 #X obj 279 149 s \$1-\$2-r;
@@ -41,4 +41,4 @@
 #X connect 16 0 17 0;
 #X connect 17 0 14 1;
 #X connect 19 0 1 0;
-#X coords 0 -1 1 1 122 14 2 100 100;
+#X coords 0 -1 1 1 122 15 2 100 100;

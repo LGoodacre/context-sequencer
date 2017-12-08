@@ -1,4 +1,4 @@
-#N canvas 262 85 743 687 10;
+#N canvas 244 81 743 687 10;
 #X obj 100 100 bng 15 250 50 0 empty empty empty -2 8 0 8 -262144 -1
 -1;
 #X obj 114 188 s \$3-press;
@@ -51,6 +51,8 @@
 #X obj 228 515 swap;
 #X obj 228 493 f 2;
 #X obj 483 234 mod 30;
+#X obj 371 64 receive \$3-\$2-vclear;
+#X obj 76 243 print pres;
 #X connect 0 0 6 0;
 #X connect 2 0 6 1;
 #X connect 3 0 21 0;
@@ -111,4 +113,5 @@
 #X connect 48 1 18 1;
 #X connect 49 0 48 0;
 #X connect 50 0 30 0;
+#X connect 51 0 22 0;
 #X coords 0 -1 1 1 15 15 2 100 100;
