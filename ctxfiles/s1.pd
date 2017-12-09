@@ -1,4 +1,4 @@
-#N canvas 463 334 450 427 10;
+#N canvas 451 322 450 427 10;
 #X symbolatom 100 101 17 0 0 0 - #1-#2-r -, f 17;
 #X obj 245 82 iemguts/canvasargs;
 #X obj 279 127 l2s;
@@ -6,7 +6,7 @@
 #X obj 245 104 list split 2;
 #X obj 67 150 receive \$1-vsel;
 #X obj 67 199 sel \$2;
-#X obj 67 274 s \$1-sy-out;
+#X obj 67 324 s \$1-sy-out;
 #X obj 67 252 symbol;
 #X obj 67 174 f;
 #X obj 227 305 list fromsymbol;
@@ -19,13 +19,19 @@
 #X obj 179 277 t f;
 #X obj 202 360 s \$1-gprint;
 #X obj 245 60 loadbang;
+#X obj -63 110 receive \$1-\$2-revv;
+#X obj 67 274 demux;
+#X obj -63 154 t f;
+#X obj -17 154 f 1;
+#X obj -63 132 t b b b;
+#X obj 74 299 s \$1-sy-steal;
 #X connect 0 0 11 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
 #X connect 4 1 2 0;
 #X connect 5 0 9 0;
 #X connect 6 0 13 0;
-#X connect 8 0 7 0;
+#X connect 8 0 21 0;
 #X connect 9 0 6 0;
 #X connect 10 0 12 1;
 #X connect 11 0 9 0;
@@ -41,4 +47,12 @@
 #X connect 16 0 17 0;
 #X connect 17 0 14 1;
 #X connect 19 0 1 0;
+#X connect 20 0 24 0;
+#X connect 21 0 7 0;
+#X connect 21 1 25 0;
+#X connect 22 0 21 1;
+#X connect 23 0 21 1;
+#X connect 24 0 22 0;
+#X connect 24 1 8 0;
+#X connect 24 2 23 0;
 #X coords 0 -1 1 1 122 15 2 100 100;
