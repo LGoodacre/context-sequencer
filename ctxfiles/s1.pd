@@ -1,4 +1,4 @@
-#N canvas 439 338 450 427 10;
+#N canvas 436 314 450 427 10;
 #X symbolatom 100 101 17 0 0 0 - #1-#2-r -, f 17;
 #X obj 245 82 iemguts/canvasargs;
 #X obj 279 127 l2s;
@@ -14,8 +14,8 @@
 #X obj 202 338 list;
 #X obj 175 306 spigot;
 #X obj 214 277 f 1;
-#X obj 179 255 del 400;
-#X obj 179 277 t f;
+#X obj 186 255 del 400;
+#X obj 186 277 t f;
 #X obj 202 360 s \$1-gprint;
 #X obj 245 60 loadbang;
 #X obj -63 110 receive \$1-\$2-revv;
@@ -24,10 +24,9 @@
 #X obj -17 154 f 1;
 #X obj -63 132 t b b b;
 #X obj 74 299 s \$1-sy-steal;
-#X obj 218 183 receive \$1-vselpre;
-#X obj 179 230 t b b;
-#X obj 67 225 t b b b;
-#X obj 179 207 spigot;
+#X obj 214 203 receive \$1-vselpre;
+#X obj 175 227 spigot;
+#X obj 67 225 t b b b b;
 #X connect 0 0 11 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -54,11 +53,10 @@
 #X connect 23 0 21 0;
 #X connect 23 1 8 0;
 #X connect 23 2 22 0;
-#X connect 25 0 28 1;
-#X connect 26 0 15 0;
-#X connect 26 1 13 0;
+#X connect 25 0 26 1;
+#X connect 26 0 13 0;
 #X connect 27 0 8 0;
 #X connect 27 1 14 0;
-#X connect 27 2 28 0;
-#X connect 28 0 26 0;
+#X connect 27 2 15 0;
+#X connect 27 3 26 0;
 #X coords 0 -1 1 1 122 15 2 100 100;
