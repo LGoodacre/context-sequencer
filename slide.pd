@@ -1,4 +1,4 @@
-#N canvas 65 116 943 594 10;
+#N canvas 65 124 943 594 10;
 #X obj 100 -100 vsl 18 101 0 100 0 0 \$0-ls \$0-lr 0 1 100 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;
@@ -70,6 +70,9 @@
 #X obj 724 350 v \$0-ls;
 #X obj 724 394 send;
 #X obj 724 372 pack f \$0;
+#X obj 165 170 receive \$0-fromgrid;
+#X obj 142 236 receive \$0-stopslide;
+#X msg 142 259 stop;
 #X connect 2 0 29 0;
 #X connect 2 0 33 0;
 #X connect 2 0 43 0;
@@ -150,4 +153,7 @@
 #X connect 62 1 64 1;
 #X connect 63 0 65 0;
 #X connect 65 0 64 0;
+#X connect 66 0 48 0;
+#X connect 67 0 68 0;
+#X connect 68 0 47 0;
 #X coords 0 -1 1 1 18 106 2 100 -102;
