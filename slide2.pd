@@ -1,4 +1,4 @@
-#N canvas 329 215 911 550 10;
+#N canvas 139 210 911 550 10;
 #X obj 100 -100 vsl 23 101 0 100 0 0 \$0-ls \$0-lr 0 1 90 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;
@@ -74,6 +74,12 @@
 #X obj 27 99 iemguts/propertybang 1;
 #X msg 27 122 menu-open \, coords 0 -1 1 1 1 1 1 0 0 \, coords 0 -1
 1 1 1 1 0 0 0 \, vis 0;
+#X obj 756 387 makefilename %s-getslides;
+#X obj 756 409 iemguts/oreceive \$0-n;
+#X obj 756 431 t b s;
+#X obj 756 453 v \$0-ls;
+#X obj 756 498 send;
+#X obj 756 475 pack f \$0;
 #X connect 2 0 30 0;
 #X connect 2 0 34 0;
 #X connect 2 0 50 0;
@@ -157,10 +163,17 @@
 #X connect 61 0 46 1;
 #X connect 62 0 65 0;
 #X connect 62 0 67 0;
+#X connect 62 0 70 0;
 #X connect 64 0 8 0;
 #X connect 64 1 46 0;
 #X connect 65 0 63 1;
 #X connect 67 0 66 1;
 #X connect 68 0 69 0;
 #X connect 69 0 1 0;
+#X connect 70 0 71 0;
+#X connect 71 0 72 0;
+#X connect 72 0 73 0;
+#X connect 72 1 74 1;
+#X connect 73 0 75 0;
+#X connect 75 0 74 0;
 #X coords 0 -1 1 1 23 120 2 100 -102;
