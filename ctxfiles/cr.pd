@@ -1,4 +1,4 @@
-#N canvas 504 193 450 443 10;
+#N canvas 501 197 450 443 10;
 #X obj 165 143 list append;
 #X obj 45 179 list-abs/list-filter;
 #X obj 206 179 !=;
@@ -31,7 +31,6 @@
 #X obj 45 61 t b f b;
 #X obj 236 179 f -1;
 #X obj 91 141 t f;
-#X obj 33 355 print cr;
 #X connect 0 0 3 0;
 #X connect 1 0 3 0;
 #X connect 1 1 2 0;
@@ -49,7 +48,6 @@
 #X connect 14 0 7 0;
 #X connect 16 0 27 0;
 #X connect 17 0 28 0;
-#X connect 17 0 31 0;
 #X connect 18 0 19 0;
 #X connect 18 1 13 0;
 #X connect 19 0 13 0;
