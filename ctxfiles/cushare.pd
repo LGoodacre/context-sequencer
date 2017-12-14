@@ -1,4 +1,4 @@
-#N canvas 630 173 514 388 10;
+#N canvas 823 117 514 388 10;
 #X obj 179 105 array define %&nou;
 #N canvas 133 376 430 142 ^&*-dsmall1 0;
 #X obj 32 27 struct ^&*-dsmall1 float x float y;
@@ -22,12 +22,11 @@
 #X msg 220 301  ;
 #X obj 287 300 list trim;
 #X obj 222 50 shared ctxfiles/cushare 0;
-#N canvas 339 132 1024 557 commands 0;
+#N canvas 515 189 1024 557 commands 1;
 #X obj 416 105 t b a;
 #X obj 112 184 cyclone/zl iter 1;
 #X obj 671 165 ctxfiles/recompile \$0;
 #X obj 416 81 receive *ujK9)erD;
-#X obj 556 94 v RfGbV5^g;
 #X obj 112 207 ctxfiles/br2 route 1 \; x gtfs \$0 #f x 128 \, :x #l
 \; y gtfs \$0 #f y 79 \, :y #l \; size gtfs \$0 #f size 128 \, :size
 #l \; y1 gtfs \$0 #f y1 \, :y1 #l \; y2 gtfs \$0 #f y2 \, :y2 #l \;
@@ -50,9 +49,9 @@ mirror-x gtfs \$0 #f mirror-x 0 \, :mirror-x #l \; mirror-y gtfs \$0
 \; #f s £""-help;
 #X connect 0 0 2 0;
 #X connect 0 1 1 0;
-#X connect 1 0 5 0;
-#X connect 2 0 6 0;
-#X connect 2 1 6 1;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 2 1 5 1;
 #X connect 3 0 0 0;
 #X restore 388 148 pd commands;
 #X obj 401 249 receive bo;
