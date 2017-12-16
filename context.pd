@@ -1,8 +1,8 @@
-#N canvas 65 334 796 419 10;
+#N canvas 65 322 796 419 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 272 105 992 687 guts 0;
+#N canvas 260 93 992 687 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 559 97 795 687 names 0;
 #X msg 266 486 symbol  ;
@@ -1652,7 +1652,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X connect 13 0 4 0;
 #X connect 14 0 5 0;
 #X restore 68 403 pd toggles;
-#N canvas 500 107 845 685 start 0;
+#N canvas 488 95 845 685 start 0;
 #X obj 215 -25 s \$0-start;
 #X obj 86 365 / 5;
 #X obj 86 388 *;
@@ -1682,13 +1682,13 @@ can be made compatable with looping float connects. If it causes trouble
 #X obj 130 762 s \$0-everything;
 #X obj 310 449 list prepend;
 #X obj 310 471 route 0;
-#X obj 443 553 route float;
+#X obj 459 553 route float;
 #X msg 329 85 1;
 #X obj 267 185 demux;
 #X obj 311 183 t f;
-#X obj 457 600 f;
-#X obj 457 578 demux;
-#X obj 484 600 t f;
+#X obj 476 620 f;
+#X obj 476 578 demux;
+#X obj 508 600 t f;
 #X obj 400 -71 t f;
 #X obj 400 -43 s \$0-sttype;
 #X obj 350 599 list append;
@@ -1727,7 +1727,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X text -2 434 calculate time;
 #X text 514 421 process times;
 #X obj 114 338 receive \$0-xy21;
-#X obj 495 577 receive \$0-xy2;
+#X obj 514 577 receive \$0-xy2;
 #X obj 439 13 cyclone/iter;
 #X obj 272 60 cyclone/iter;
 #X obj 257 116 abs;
@@ -1745,7 +1745,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X obj 439 -13 t a b a;
 #X obj 427 -70 f 1;
 #X obj 416 506 t b a;
-#X obj 443 530 cyclone/iter;
+#X obj 459 530 cyclone/iter;
 #X obj 93 -199 receive \$0-sos;
 #X obj 120 -177 receive \$0-imon;
 #X obj 93 -155 demux;
@@ -1766,7 +1766,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X obj 32 -18 list;
 #X obj 32 -70 t b f;
 #X obj 32 -45 del;
-#X obj 358 210 * 1000;
+#X obj 476 642 * 1000;
 #X connect 1 0 2 0;
 #X connect 2 0 7 0;
 #X connect 3 0 4 0;
@@ -1806,9 +1806,9 @@ can be made compatable with looping float connects. If it causes trouble
 #X connect 29 0 50 1;
 #X connect 30 0 69 0;
 #X connect 31 0 17 0;
-#X connect 31 1 113 0;
+#X connect 31 1 11 0;
 #X connect 32 0 18 1;
-#X connect 33 0 38 1;
+#X connect 33 0 113 0;
 #X connect 34 0 33 0;
 #X connect 34 1 35 0;
 #X connect 35 0 38 1;
@@ -1912,7 +1912,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X connect 111 0 112 0;
 #X connect 111 1 112 1;
 #X connect 112 0 110 0;
-#X connect 113 0 11 0;
+#X connect 113 0 38 1;
 #X restore 68 322 pd start;
 #N canvas 615 91 652 686 position 0;
 #X obj 315 197 - 1;
@@ -6275,7 +6275,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 99 3 72 0;
 #X connect 99 4 92 1;
 #X restore 552 391 pd rules;
-#N canvas 197 189 647 556 title 1;
+#N canvas 185 205 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
