@@ -1,4 +1,4 @@
-#N canvas 282 340 810 413 10;
+#N canvas 279 344 810 413 10;
 #X obj 22 89 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 12 79 cnv 15 706 271 empty empty empty 20 12 0 14 -1 -66577
@@ -14,7 +14,36 @@
 #X obj 121 283 context :X 9 :d 4 :i 0 0 0 0 0 0 0 0 1.5 :J 1 :ID 1
 ;
 #X msg 128 154 :r;
-#N canvas 65 93 471 300 first 0;
+#X text 47 91 With the :r command \, you can record data (not audio)
+into Context in real time. The data you can record is toggle allocations
+\, database terms \, and toggle floats. Without any arguments \, :r
+will start the record funciton automatically and then trigger the toggles
+while the Context plays. Press the :r button repeatedly below to see
+this in action., f 89;
+#X text 391 167 :r can also take various arguments to change the behaviour
+of the record function. See the various sub-patches (and click on the
+various messages to try them out)., f 40;
+#X obj 38 230 receive c1-;
+#X obj 38 252 print c1;
+#N canvas 555 187 505 300 recordable 0;
+#X text 9 25 Once the recording cycle has been started \, what messages
+are recorded? There are three options here:;
+#X text 55 76 -- a message starting with ":r" or "record" will open
+or close the selected toggle and nothing else. This is the most basic
+option., f 50;
+#X text 57 138 -- a message starting with "ij" or ":ij" will record
+a number to the toggle float array., f 50;
+#X text 57 188 -- any other message will be recorded to the message
+database., f 50;
+#X msg 15 78 :r;
+#X msg 15 140 ij 4;
+#X msg 15 193 test;
+#X obj 15 245 outlet;
+#X connect 4 0 7 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X restore 413 287 recordable messages;
+#N canvas 65 97 471 300 first 0;
 #X obj 129 260 outlet;
 #X msg 103 203 :r 0;
 #X msg 23 78 :r 1;
@@ -29,8 +58,8 @@ with the next input Context receives., f 36;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 4 0 0 0;
-#X restore 159 195 pd first argument;
-#N canvas 65 113 729 358 second 0;
+#X restore 159 195 first argument (trigger);
+#N canvas 65 117 729 358 second 0;
 #X obj 169 290 outlet;
 #X text 25 16 The second argument specifies where the recording source
 will come from. This can be "inlet" \, "c" \, or a custom symbol The
@@ -54,14 +83,8 @@ this up with ID tags., f 58;
 #X connect 2 0 0 0;
 #X connect 4 0 0 0;
 #X connect 6 0 0 0;
-#X restore 180 215 pd second argument;
-#X text 47 91 With the :r command \, you can record data (not audio)
-into Context in real time. The data you can record is toggle allocations
-\, database terms \, and toggle floats. Without any arguments \, :r
-will start the record funciton automatically and then trigger the toggles
-while the Context plays. Press the :r button repeatedly below to see
-this in action., f 89;
-#N canvas 389 147 560 300 third 0;
+#X restore 180 215 second argument (source);
+#N canvas 383 155 560 300 third 0;
 #X obj 129 260 outlet;
 #X msg 23 78 :r 1 inlets 100;
 #X msg 60 135 :r 1 inlets 300;
@@ -78,11 +101,8 @@ inlet up to 300ms after the first inlet is passed., f 54;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 7 0 0 0;
-#X restore 200 235 pd third argument;
-#X text 391 167 :r can also take various arguments to change the behaviour
-of the record function. See the various sub-patches (and click on the
-various messages to try them out)., f 40;
-#N canvas 652 144 560 361 fourth 0;
+#X restore 200 235 third argument (delay);
+#N canvas 643 156 560 361 fourth 0;
 #X obj 177 264 outlet;
 #X text 16 14 The fourth argument is a number 0 1 2 or 3 (default 0).
 This determines what information is sent to the output channels between
@@ -115,31 +135,11 @@ crash if it comes back to the recording inlets!;
 #X connect 12 0 0 0;
 #X connect 13 0 16 0;
 #X connect 16 0 0 0;
-#X restore 220 255 pd fourth argument;
-#X obj 38 230 receive c1-;
-#X obj 38 252 print c1;
-#N canvas 558 183 505 300 recordable 1;
-#X text 9 25 Once the recording cycle has been started \, what messages
-are recorded? There are three options here:;
-#X text 55 76 -- a message starting with ":r" or "record" will open
-or close the selected toggle and nothing else. This is the most basic
-option., f 50;
-#X text 57 138 -- a message starting with "ij" or ":ij" will record
-a number to the toggle float array., f 50;
-#X text 57 188 -- any other message will be recorded to the message
-database., f 50;
-#X msg 15 78 :r;
-#X msg 15 140 ij 4;
-#X msg 15 193 test;
-#X obj 15 245 outlet;
-#X connect 4 0 7 0;
-#X connect 5 0 7 0;
-#X connect 6 0 7 0;
-#X restore 413 287 pd recordable messages;
+#X restore 220 255 fourth argument (output);
 #X connect 8 0 7 2;
-#X connect 9 0 7 3;
-#X connect 10 0 7 3;
-#X connect 12 0 7 3;
+#X connect 11 0 12 0;
+#X connect 13 0 7 7;
 #X connect 14 0 7 3;
-#X connect 15 0 16 0;
-#X connect 17 0 7 7;
+#X connect 15 0 7 3;
+#X connect 16 0 7 3;
+#X connect 17 0 7 3;
