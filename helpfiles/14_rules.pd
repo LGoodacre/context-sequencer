@@ -1,4 +1,4 @@
-#N canvas 251 85 1109 687 10;
+#N canvas 193 81 1109 687 10;
 #X obj 617 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
 #X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -47,9 +47,9 @@ between Contexts. Rules are most useful when applied to toggles \,
 but in principle can affect any command., f 68;
 #X floatatom 629 123 5 0 0 0 - - -, f 5;
 #X msg 629 142 \; c\$1 :I -open;
-#X obj 70 298 context :X 11 :a ' start ? 8 ' :d 1 :x = 1 2 3 4 5 6
-7 8 9 10 :S < c2 :Z 15;
-#X obj 70 389 context :d 1 :I 1 :ex ' 1 :s qn== 4 || c- ';
+#X obj 70 298 context :X 11 :a ' start ? 8 ' :d 1 :x = 10 9 8 7 6 5
+4 3 2 1 :S < c2 :Z 15 :ID 1;
+#X obj 70 389 context :d 1 :I 1 :ID 2 :ex ' 1 :s qn== 4 || c- ';
 #X text 93 231 In this example \, a rule in c2 is used to thin out
 incoming messages. It is filtering start messages for demonstration
 \, but the same technique could be used to filter any command.;
@@ -68,11 +68,11 @@ the rule swallows all incoming ' :S ' messages \, unless they are '
 message '' :s x ' \, where x is a random number between 0 and 7 It
 sends these messages to c2 since the :a message prepend :S is set to
 ' < c2 '., f 48;
-#X obj 645 272 context :X 7 :Y 7 :x = 3 4 5 6 :y = 3 4 5 6 :I 1 :ex
-' 0 :x || c* . :y def > x ';
-#X obj 1207 286 context :d 2 :x = 2 3 4 :I 1 :ex ' 0 :x || c* < c5
-:d 0 [ > x . ] ';
-#X obj 1207 369 context :d 4;
+#X obj 645 272 context :X 7 :Y 7 :x = 6 5 4 3 :y = 6 5 4 3 :I 1 :ID
+3 :ex ' 0 :x || c* . :y def > x ';
+#X obj 1207 286 context :d 2 :x = 4 3 2 :I 1 :ID 4 :ex ' 0 :x || c*
+< c5 :d 0 [ > x . ';
+#X obj 1207 369 context :d 4 :ID 5;
 #X text 1287 290 Here the :d value of c5 is dependent on how many x-axis
 toggles in c4 are open.;
 #X text 746 269 Here the y-axis toggles are linked to the x-axis toggles.
@@ -83,16 +83,10 @@ reads "c* . :y def > x". This means \, "continue with the original
 message (c*) \, then send the following message to self (.) : the y-axis
 toggles (:y) should be defined by (def) the value of (>) the x-axis
 toggles (x)., f 52;
-#X obj 1782 308 context :d 5 :x = 1 2 :I 1 :ex ' 0 :x q= 3 || c* .
-:x - 3 || 0 :d q== 4 || c- ';
+#X obj 1782 308 context :d 5 :x = 2 1 :I 1 :ID 6 :ex ' 0 :x q= 3 ||
+c* . :x - 3 || 0 :d q== 4 || c- ';
 #X text 1807 258 This Context will not allow the third :x toggle to
 be opened \, nor will it allow a :d value of 4;
-#X text 1295 355 Open the rule list for c4. The condition reads " 0
-:x ". This means \, any :x input will trigger the consequence. The
-consequence reads \, " c* < c5 :d 0 [ > x . ] ". This means \, "continue
-with the original message (c*) \, then send the following message (<)
-t0 c5: the cycle time (:d) with an argument equal to the number of
-terms in ( 0 ] ) the :x ( > x . ) term.", f 55;
 #X text 1861 305 Open the rule list for c6. The first condition is
 "0 :x q= 3". This means \, "if the input starts with :x \, does it
 contain (q=) the value 3? The consequence reads " c* . :x - 3 ". This
@@ -107,4 +101,10 @@ atom still shows the value 4 \, since the message is cancelled out
 downsteam. However \, the cycle time will never take 4;
 #X text 102 119 Refer to Manual Section 15: RULES;
 #X obj 502 49 ctxfiles/license;
+#X text 1295 355 Open the rule list for c4. The condition reads " 0
+:x ". This means \, any :x input will trigger the consequence. The
+consequence reads \, " c* < c5 :d 0 [ > x . ] ". This means \, "continue
+with the original message (c*) \, then send the following message (<)
+to c5: the cycle time (:d) with an argument equal to the number of
+terms in ( 0 ] ) the :x ( > x . ) term.", f 55;
 #X connect 21 0 22 0;
