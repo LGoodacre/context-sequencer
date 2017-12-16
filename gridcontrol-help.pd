@@ -1,0 +1,427 @@
+#N canvas 264 115 949 560 10;
+#X obj 9 485 ctxfiles/license;
+#N canvas 334 229 824 371 grid 0;
+#X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 922 21 t b f f;
+#X obj 1062 54 * 18;
+#X obj 1010 86 t f f;
+#X obj 1042 108 * 18;
+#X obj 1017 132 zexy/pack f f f f $ 0;
+#X msg 878 199 obj \$2 \$4 cnv 15 15 15 \$5\$6-\$1-\$3-s \$5\$6-\$1-\$3-r
+empty 20 12 0 14 -262130 -66577 0;
+#X obj 878 247 iemguts/sendcanvas;
+#X obj 447 82 t b b b;
+#N canvas 554 231 742 300 random 0;
+#X obj 156 33 inlet;
+#X obj 176 102 random 8;
+#X obj 196 81 random 8;
+#X obj 156 55 t b b b b;
+#X obj 156 147 * -1;
+#X obj 156 192 t l l;
+#X obj 156 170 pack f f f \$0;
+#X obj 61 215 list 14 0 0 \$0;
+#X msg 61 266 \; \$4-\$3-\$2-r color 14;
+#X msg 188 216 \; \$4-\$3-\$2-r color \$1;
+#X obj 156 125 random 1e+08;
+#X connect 0 0 3 0;
+#X connect 1 0 6 1;
+#X connect 2 0 6 2;
+#X connect 3 0 10 0;
+#X connect 3 1 1 0;
+#X connect 3 2 2 0;
+#X connect 3 3 7 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 1;
+#X connect 5 1 9 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 10 0 4 0;
+#X restore 493 108 pd random;
+#X obj 922 63 cyclone/uzi 8 0;
+#X obj 834 -7 cyclone/uzi 8 0;
+#X obj 122 104 cnv 15 15 15 \$0-1-0-s \$0-1-0-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 104 cnv 15 15 15 \$0-2-0-s \$0-2-0-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 104 cnv 15 15 15 \$0-3-0-s \$0-3-0-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 104 cnv 15 15 15 \$0-4-0-s \$0-4-0-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 104 cnv 15 15 15 \$0-5-0-s \$0-5-0-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 104 cnv 15 15 15 \$0-6-0-s \$0-6-0-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 104 122 cnv 15 15 15 \$0-0-1-s \$0-0-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 122 122 cnv 15 15 15 \$0-1-1-s \$0-1-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 122 cnv 15 15 15 \$0-2-1-s \$0-2-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 122 cnv 15 15 15 \$0-3-1-s \$0-3-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 122 cnv 15 15 15 \$0-4-1-s \$0-4-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 122 cnv 15 15 15 \$0-5-1-s \$0-5-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 122 cnv 15 15 15 \$0-6-1-s \$0-6-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 122 cnv 15 15 15 \$0-7-1-s \$0-7-1-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 104 140 cnv 15 15 15 \$0-0-2-s \$0-0-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 122 140 cnv 15 15 15 \$0-1-2-s \$0-1-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 140 cnv 15 15 15 \$0-2-2-s \$0-2-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 140 cnv 15 15 15 \$0-3-2-s \$0-3-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 140 cnv 15 15 15 \$0-4-2-s \$0-4-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 140 cnv 15 15 15 \$0-5-2-s \$0-5-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 140 cnv 15 15 15 \$0-6-2-s \$0-6-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 140 cnv 15 15 15 \$0-7-2-s \$0-7-2-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 104 158 cnv 15 15 15 \$0-0-3-s \$0-0-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 122 158 cnv 15 15 15 \$0-1-3-s \$0-1-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 158 cnv 15 15 15 \$0-2-3-s \$0-2-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 158 cnv 15 15 15 \$0-3-3-s \$0-3-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 158 cnv 15 15 15 \$0-4-3-s \$0-4-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 158 cnv 15 15 15 \$0-5-3-s \$0-5-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 158 cnv 15 15 15 \$0-6-3-s \$0-6-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 158 cnv 15 15 15 \$0-7-3-s \$0-7-3-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 104 176 cnv 15 15 15 \$0-0-4-s \$0-0-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 122 176 cnv 15 15 15 \$0-1-4-s \$0-1-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 176 cnv 15 15 15 \$0-2-4-s \$0-2-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 176 cnv 15 15 15 \$0-3-4-s \$0-3-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 176 cnv 15 15 15 \$0-4-4-s \$0-4-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 176 cnv 15 15 15 \$0-5-4-s \$0-5-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 176 cnv 15 15 15 \$0-6-4-s \$0-6-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 176 cnv 15 15 15 \$0-7-4-s \$0-7-4-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 104 194 cnv 15 15 15 \$0-0-5-s \$0-0-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 122 194 cnv 15 15 15 \$0-1-5-s \$0-1-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 194 cnv 15 15 15 \$0-2-5-s \$0-2-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 194 cnv 15 15 15 \$0-3-5-s \$0-3-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 194 cnv 15 15 15 \$0-4-5-s \$0-4-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 194 cnv 15 15 15 \$0-5-5-s \$0-5-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 194 cnv 15 15 15 \$0-6-5-s \$0-6-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 194 cnv 15 15 15 \$0-7-5-s \$0-7-5-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 104 212 cnv 15 15 15 \$0-0-6-s \$0-0-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 122 212 cnv 15 15 15 \$0-1-6-s \$0-1-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 212 cnv 15 15 15 \$0-2-6-s \$0-2-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 212 cnv 15 15 15 \$0-3-6-s \$0-3-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 212 cnv 15 15 15 \$0-4-6-s \$0-4-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 212 cnv 15 15 15 \$0-5-6-s \$0-5-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 212 cnv 15 15 15 \$0-6-6-s \$0-6-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 212 cnv 15 15 15 \$0-7-6-s \$0-7-6-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 122 230 cnv 15 15 15 \$0-1-7-s \$0-1-7-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 140 230 cnv 15 15 15 \$0-2-7-s \$0-2-7-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 158 230 cnv 15 15 15 \$0-3-7-s \$0-3-7-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 176 230 cnv 15 15 15 \$0-4-7-s \$0-4-7-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 194 230 cnv 15 15 15 \$0-5-7-s \$0-5-7-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 212 230 cnv 15 15 15 \$0-6-7-s \$0-6-7-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 230 cnv 15 15 15 \$0-7-7-s \$0-7-7-r empty 20 12 0 14 -260818
+-66577 0;
+#X obj 230 104 tgl 15 1 \$0-on \$0-7-0-r empty 17 7 0 10 -260818 -1
+-1 1 1;
+#N canvas 289 169 742 300 random 0;
+#X obj 156 33 inlet;
+#X obj 176 102 random 8;
+#X obj 196 81 random 8;
+#X obj 156 55 t b b b b;
+#X obj 156 147 * -1;
+#X obj 156 192 t l l;
+#X obj 156 170 pack f f f \$0;
+#X obj 61 215 list 14 0 0 \$0;
+#X msg 61 266 \; \$4-\$3-\$2-r color 14;
+#X msg 188 216 \; \$4-\$3-\$2-r color \$1;
+#X obj 156 125 random 1e+08;
+#X connect 0 0 3 0;
+#X connect 1 0 6 1;
+#X connect 2 0 6 2;
+#X connect 3 0 10 0;
+#X connect 3 1 1 0;
+#X connect 3 2 2 0;
+#X connect 3 3 7 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 1;
+#X connect 5 1 9 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 10 0 4 0;
+#X restore 470 131 pd random;
+#N canvas 292 165 742 300 random 0;
+#X obj 156 33 inlet;
+#X obj 176 102 random 8;
+#X obj 196 81 random 8;
+#X obj 156 55 t b b b b;
+#X obj 156 147 * -1;
+#X obj 156 192 t l l;
+#X obj 156 170 pack f f f \$0;
+#X obj 61 215 list 14 0 0 \$0;
+#X msg 61 266 \; \$4-\$3-\$2-r color 14;
+#X msg 188 216 \; \$4-\$3-\$2-r color \$1;
+#X obj 156 125 random 1e+08;
+#X connect 0 0 3 0;
+#X connect 1 0 6 1;
+#X connect 2 0 6 2;
+#X connect 3 0 10 0;
+#X connect 3 1 1 0;
+#X connect 3 2 2 0;
+#X connect 3 3 7 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 1;
+#X connect 5 1 9 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 10 0 4 0;
+#X restore 447 161 pd random;
+#X obj 447 60 metro 170;
+#X obj 495 28 receive \$0-on;
+#X obj 104 104 cnv 15 15 15 \$0-0-0-s \$0-0-0-r grid 30 50 0 34 -260818
+-13330 0;
+#X obj 104 230 cnv 15 15 15 \$0-0-7-s \$0-0-7-r control -2 -40 0 35
+-260818 -66577 0;
+#X msg 517 302 \; \$4-\$3-\$2-r color 14;
+#X obj 313 158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 313 178 cyclone/uzi 8 0;
+#X obj 415 224 cyclone/uzi 8 0;
+#X obj 517 248 t b f;
+#X obj 517 278 pack 14 f f \$0;
+#X obj 415 202 t b f;
+#X text 343 154 reset;
+#X obj 572 65 sel 0;
+#X obj 430 14 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X connect 0 0 11 0;
+#X connect 1 0 10 0;
+#X connect 1 1 5 2;
+#X connect 1 2 2 0;
+#X connect 2 0 5 3;
+#X connect 3 0 5 0;
+#X connect 3 1 4 0;
+#X connect 4 0 5 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 8 0 75 0;
+#X connect 8 1 74 0;
+#X connect 8 2 9 0;
+#X connect 10 2 3 0;
+#X connect 11 2 1 0;
+#X connect 76 0 8 0;
+#X connect 77 0 76 0;
+#X connect 77 0 88 0;
+#X connect 81 0 82 0;
+#X connect 82 2 86 0;
+#X connect 83 2 84 0;
+#X connect 84 0 85 0;
+#X connect 84 1 85 1;
+#X connect 85 0 80 0;
+#X connect 86 0 83 0;
+#X connect 86 1 85 2;
+#X connect 88 0 82 0;
+#X connect 89 0 76 0;
+#X connect 89 0 88 0;
+#X coords 0 -1 1 1 149 149 2 100 100;
+#X restore 9 5 pd grid;
+#X obj 592 27 context :d 1 :x = 3 2 1 :ID 1;
+#X obj 667 27 context :c 12 :d 1 :x = 4 3 :ID 2;
+#X obj 740 27 context :c 5 :d 1 :x = 5 2 :y = 2 1 :ID 3;
+#X text 7 163 [gridcontrol] is an interface between Context and the
+Novation Launchpad Mk2. It lets you control a Context network using
+the Launchpad MIDI hardware \, greatly increasing the speed and efficiency
+of simple operations (not to mention the fun). [gridcontrol] is designed
+for live performance and improvisation \, but can also be useful for
+network composition. With [gridcontrol] \, you can:, f 36;
+#X text 403 31 Here are some Contexts which will be linked to [gridcontrol]
+, f 22;
+#X text 18 329 --start and stop Contexts \; --record into Context \;
+--edit toggle arrays \; --edit toggle float arrays \; --send custom
+commands.;
+#X text 5 406 [gridcontrol] is fully documented in the Context manual.
+This helpfile serves as a quick-reference and start guide., f 36;
+#X obj 495 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 681 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 602 372 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 567 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 552 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 583 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 538 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 721 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 65 85 450 160 on-off 0;
+#X text 16 16 [gridcontrol] links with all the Contexts in one patch.
+It doesn't make sense to have more than one instance of [gridcontrol]
+open in a single patch \, but having several Context patches open each
+with their own [gridcontrol] can be very useful. Only one instance
+of [gridcontrol] can be actively communicating with the Launchpad at
+on time. To select which one is active \, use the "on" button \, or
+press the up and down (or left and right) buttons on the Launchpad
+together.;
+#X obj 384 135 outlet;
+#X restore 739 224 pd on-off;
+#N canvas 369 143 450 241 mode-0 0;
+#X text 14 21 Mode 0 gives you a bird's-eye-view of all of the Contexts
+open in the patch. In mode 0 \, each Launchpad cell corresponds to
+one Context \, matching its position and colour. Clicking on a coloured
+cell starts that Context \, or performs some other function \, depending
+on the Function Selectors.;
+#X text 14 114 If the Function Selector is set to '-send 1' or '-send
+2' \, clicking on a cell in mode 0 will forward it to mode 1 or mode
+2;
+#X text 13 165 You can also use mode 0 to record data into a Context
+by tapping on the cell. The Function Selector must be set to :r for
+this to work.;
+#X obj 384 212 outlet;
+#X restore 515 198 pd mode-0;
+#X text 378 106 Note: It only makes sense to use [gridcontrol] if you
+have a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
+However \, the [gridcontrol] patch contains a fully functional mockup
+of the controller \, so this help-file will work even with no MIDI
+hardware., f 72;
+#N canvas 65 85 450 265 mode-1 0;
+#X text 15 13 Mode 1 lets you edit the toggles of a select group of
+Contexts. The group selected for editing is defined using the "-send
+1" Function in mode 0 In mode 1 \, each row of cells corresponds to
+the toggle array from a specific Context. You can turn them on and
+off by clicking on the cells \, and scroll using the Position Selectors
+if need be.;
+#X text 14 158 In Mode 1 \, the Function Selector is used to start
+the given Context. It can also be used to send other commands \, if
+you use the Function Selector in the [gridcontrol] abstraction \, rather
+than on the Launcpad itself. This is the only instance where the behaviour
+of the patch differs from the behaviour of the hardware.;
+#X text 15 104 By default \, mode 1 lets you edit the x-axis toggles.
+To switch to the y-axis \, double click the mode 1 selector button
+("User 1").;
+#X obj 378 238 outlet;
+#X restore 544 223 pd mode-1;
+#N canvas 65 85 450 210 mode-2 0;
+#X text 11 14 Mode 2 lets you edit the toggle floats of a single Context.
+The Context selected for editing is defined by the "-send 2" Function
+Command in mode 0 Alternatively \, the last Context clicked on in mode
+1 will be selected for editing in mode 2;
+#X text 11 82 In mode 2 \, the x-axis corresponds to a given toggle
+from the selected Context \, while the y-axis corresponds to its toggle
+float value. You can change the value of any toggle by clicking on
+an empty cell \, or turn a toggle off by clicking on a lit cell. By
+default. mode 2 lets you edit the x-axis toggles. You can flip to y-axis
+by double clicking on the mode 2 selector button.;
+#X obj 384 181 outlet;
+#X restore 574 247 pd mode-2;
+#N canvas 65 85 450 257 mode-3 0;
+#X obj 380 232 outlet;
+#X text 9 16 Mode 3 \, mixer mode \, doesn't relate to Context \, but
+to [slide] and [slide2]. It enables you to control the sliders in a
+custom mixer abstraction using the Launchpad. The abstraction must
+have the [pgrid] object placed in it \, along with [slide] and/or [slide2].
+An example patch is included in this file to help you. You can use
+[gridcontrol] to control multiple such patches by double clicking on
+the "Mixer" button.;
+#X text 12 135 In Mixer mode \, you will see as many vertical virtual
+faders as there are [slide]/[slide2] objects in the abstraction. Clicking
+on a new cell moves the given slider up or down in a certain time perdiod.
+The time perdiod is defined by the Function Selector \, and is longer
+the higher up you go (starting at one millisecond \, ending at ~30
+seconds). Clicking on the selected Function Selector again halts the
+motion.;
+#X restore 599 275 pd mode-3;
+#N canvas 65 81 450 161 position-selectors 0;
+#X obj 381 131 outlet;
+#X text 9 15 The position selectors are used to scroll if the grid
+is not large enough to represent the array. Their usage is generally
+very intuitive. If a Position Selector is not lit \, it means that
+it will have no effect.;
+#X text 9 78 You can also use the Position Selectors to jump between
+different instances of [gridcontrol] in different patches. To do this
+\, click on both the up and down (or left and right) buttons together.
+;
+#X restore 357 231 pd position-selectors;
+#N canvas 406 155 450 180 function-selectors 0;
+#X text 13 14 The function selectors work differently depending on
+the mode. In mode 0 \, they are used to set the message that will be
+sent to a Context by clicking on it. In mode 1 \, they are used to
+send a start (or other) message to Context. In mode 2 \, they have
+the same assignments as in mode 0 \, but send to the selected Context
+immediately when pressed. In mode 3 they determine the time duration
+for the slider movement.;
+#X text 14 117 Function selectors each have a default message \, which
+is visible in the [gridcontrol] patch. You can also edit the message
+by typing into the symbol atom.;
+#X obj 377 157 outlet;
+#X restore 774 336 pd function-selectors;
+#X obj 474 315 gridcontrol :f2 -send 1 :f3 -send 2 :f6 :r 1 c 0 1 :f7
+:r 1 c 0 2;
+#N canvas 65 81 450 105 quantize 0;
+#X text 16 6 With quantize turned on \, any :s or :ss command send
+by [gridcontrol] will snap to either the previous or the next beat.
+In order to achieve this \, [gridcontrol] must be given the beat. This
+is dome from its inlet in the top-left corner.;
+#X obj 387 63 outlet;
+#X restore 681 195 pd quantize;
+#N canvas 591 166 450 209 creation 0;
+#X text 22 17 [gridcontrol] has a few commands which can be sent to
+it through creation arguments. It also uses these commands to save
+custom Function Selector messages (this happens automatically).;
+#X text 43 86 :qu -- quantize on or off \; :gui 1 -- turn the grid
+section of the GUI off \; :gui -1 turn the GUI completely off (-1)
+\; :sa 0 -- turn the automatic saving off \; :f0 -- assign a message
+to the first function selector \; ... \; :f7 -- assign a message to
+the eighth function selector;
+#X restore 498 494 pd creation arguments;
+#X connect 17 0 16 0;
+#X connect 18 0 15 0;
+#X connect 20 0 13 0;
+#X connect 21 0 12 0;
+#X connect 22 0 14 0;
+#X connect 23 0 9 0;
+#X connect 24 0 11 0;
+#X connect 26 0 10 0;

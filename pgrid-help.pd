@@ -1,0 +1,26 @@
+#N canvas 204 185 461 382 10;
+#X obj 19 19 cnv 15 202 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 14 14 cnv 15 202 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 15 15 cnv 15 200 50 empty empty pgrid 38 18 2 48 -5399 -262144
+0;
+#X obj 229 16 ctxfiles/license;
+#X obj 93 232 pddp/pddplink helpfiles/state_saving_abstractions.pd
+;
+#X text 16 232 See also:;
+#X obj 93 245 pddp/pddplink slide-help.pd;
+#X obj 92 259 pddp/pddplink slide2-help.pd;
+#X obj 92 273 pddp/pddplink tog-help.pd;
+#X obj 92 286 pddp/pddplink num-help.pd;
+#X obj 26 89 pgrid \$1;
+#X text 47 90 <--this is [pgrid];
+#X text 20 318 Note that [psave] and its related objects are not really
+a part of Context. They're just some useful objects that are available
+in the same library.;
+#X text 16 120 [pgrid] is used to link [gridcontrol] with abstractions
+which use [slide] and [slide2]. It lets you control the sliders in
+an abstraction with the Novation Launchpad Mk2.;
+#X text 15 177 To use [pgrid] \, simply place it within the abstraction
+and press the button to activate it. See Manual Section 17: Gridcontrol
+for more information.;
