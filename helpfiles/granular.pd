@@ -1,0 +1,118 @@
+#N struct 9970-big2 float x float y array 9970-array2 ^&*-dsmall2;
+#N struct ^&*-dsmall2 float x float y;
+#N canvas 305 163 911 583 10;
+#X obj 594 414 sketch point2 0 0.786905 0.328126 0.462501 0.84375 0.786905
+:name hanning;
+#X obj 758 411 catch~ granular;
+#N canvas 67 87 450 250 (subpatch) 0;
+#X array sample 498674 float 2;
+#X coords 0 1 498674 -1 200 140 1;
+#X restore 595 235 graph;
+#X obj 595 198 soundfiler;
+#X floatatom 14 396 5 0 0 1 pitch - -, f 5;
+#X obj 14 415 s pitch;
+#X floatatom 14 289 5 0 0 1 offset - -, f 5;
+#X obj 14 308 sig~;
+#X obj 14 330 send~ offset;
+#X msg 595 174 read -resize helpfiles/wavs/loop.wav sample;
+#X obj 595 152 loadbang;
+#X obj 758 454 *~;
+#X obj 758 476 dac~;
+#X obj 776 434 hsl 100 15 0 1 0 1 empty empty volume 5 7 0 10 -262144
+-1 -1 4700 1;
+#X obj 284 280 context :H 25 :X -1 :c 19 :d 0.1 :i 0 0 0 0 0.5 :n '
+grain ' :x = 1 :ID 1 :ol 1 16 obj 0 14 content :lo hanning :x2 0.1
+:y1 0.0388889 :y2 0.0999999 :ed 0 :as 0 5 obj -1 254 throw~ granular
+5 obj 15 204 tabread4~ sample 4 obj 0 226 *~ 5 obj 15 47 receive~ \$1-myline
+5 obj 42 156 receive pitch 5 obj 15 180 *~ 50 4 obj 15 94 +~ 4 obj
+15 116 +~ 5 obj 42 94 route float 5 obj 30 70 receive~ offset 5 connect
+1 5 12 0 5 connect 3 0 6 0 5 connect 5 0 6 1 5 connect 6 0 4 0 5 connect
+7 0 10 0 5 connect 8 0 9 1 5 connect 9 0 5 0 5 connect 10 0 11 0 5
+connect 11 0 9 0 5 connect 12 0 11 1 5 connect 13 0 10 1;
+#X obj 285 341 context :H 25 :X -1 :c 19 :d 0.1 :i 0 0 0 0 0.5 :n '
+grain ' :x = 1 :ID 2 :ol 1 16 obj 0 14 content :lo hanning :x2 0.1
+:y1 0.0388889 :y2 0.0999999 :ed 0 :as 0 5 obj -1 254 throw~ granular
+5 obj 15 204 tabread4~ sample 4 obj 0 226 *~ 5 obj 15 47 receive~ \$1-myline
+5 obj 42 156 receive pitch 5 obj 15 180 *~ 50 4 obj 15 94 +~ 4 obj
+15 116 +~ 5 obj 42 94 route float 5 obj 30 70 receive~ offset 5 connect
+1 5 12 0 5 connect 3 0 6 0 5 connect 5 0 6 1 5 connect 6 0 4 0 5 connect
+7 0 10 0 5 connect 8 0 9 1 5 connect 9 0 5 0 5 connect 10 0 11 0 5
+connect 11 0 9 0 5 connect 12 0 11 1 5 connect 13 0 10 1;
+#X obj 285 403 context :H 25 :X -1 :c 19 :d 0.1 :i 0 0 0 0 0.5 :n '
+grain ' :x = 1 :ID 3 :ol 1 16 obj 0 14 content :lo hanning :x2 0.1
+:y1 0.0388889 :y2 0.0999999 :ed 0 :as 0 5 obj -1 254 throw~ granular
+5 obj 15 204 tabread4~ sample 4 obj 0 226 *~ 5 obj 15 47 receive~ \$1-myline
+5 obj 42 156 receive pitch 5 obj 15 180 *~ 50 4 obj 15 94 +~ 4 obj
+15 116 +~ 5 obj 42 94 route float 5 obj 30 70 receive~ offset 5 connect
+1 5 12 0 5 connect 3 0 6 0 5 connect 5 0 6 1 5 connect 6 0 4 0 5 connect
+7 0 10 0 5 connect 8 0 9 1 5 connect 9 0 5 0 5 connect 10 0 11 0 5
+connect 11 0 9 0 5 connect 12 0 11 1 5 connect 13 0 10 1;
+#X obj 285 464 context :H 25 :X -1 :c 19 :d 0.1 :i 0 0 0 0 0.5 :n '
+grain ' :x = 1 :ID 4 :ol 1 16 obj 0 14 content :lo hanning :x2 0.1
+:y1 0.0388889 :y2 0.0999999 :ed 0 :as 0 5 obj -1 254 throw~ granular
+5 obj 15 204 tabread4~ sample 4 obj 0 226 *~ 5 obj 15 47 receive~ \$1-myline
+5 obj 42 156 receive pitch 5 obj 15 180 *~ 50 4 obj 15 94 +~ 4 obj
+15 116 +~ 5 obj 42 94 route float 5 obj 30 70 receive~ offset 5 connect
+1 5 12 0 5 connect 3 0 6 0 5 connect 5 0 6 1 5 connect 6 0 4 0 5 connect
+7 0 10 0 5 connect 8 0 9 1 5 connect 9 0 5 0 5 connect 10 0 11 0 5
+connect 11 0 9 0 5 connect 12 0 11 1 5 connect 13 0 10 1;
+#X obj 285 162 context :M 1 :d 0.1 :h 1 :i 1.5 2.5 3.5 4.5 5.5 :x =
+5 4 3 2 1 :P 1 :ID 5;
+#X msg 14 234 \; grain :d \$1;
+#X floatatom 14 214 5 0 0 1 grain_length - -, f 5;
+#X floatatom 14 489 5 0 0 1 randomize - -, f 5;
+#X msg 14 508 \; grain :a ? \$1;
+#X msg 268 113 start;
+#X msg 298 136 stop;
+#X floatatom 14 139 5 0 0 1 frequency - -, f 5;
+#X text 364 156 This Context is functioning as a selector. It sends
+a bang to each of the subsequent Contexts in quick sequence. You could
+make it select randomly by changing the burst preset., f 30;
+#X text 364 296 Each of these Contexts represents one grain. The [content]
+waveform represents a hanning curve. (The hanning curve is not visible
+inside [content] because it is synched with the [sketch] object to
+the right \, in order to economize on memory). Inside each overlay
+\, the sample is read and multiplied by the hanning curve \, over the
+cycle time. Here each grain's behaviour is identical \, but they could
+easily be distinct from each other., f 30;
+#X text 140 141 This determines how quickly the grains are hit., f
+17;
+#X text 140 226 This determines the cycle length of each grain, f
+16;
+#X text 139 489 Float messages are added to the offset \, so this randomizes
+the position of each grain., f 16;
+#X text 139 285 This determines the position of the sample playback
+inside each overlay., f 16;
+#X text 139 389 This determines the speed of the sample playback inside
+each overlay., f 16;
+#X text 809 254 Each "grain" Context is reading from this sample (inside
+its Overlay), f 14;
+#X text 596 517 Alter the shape of the hanning curve here., f 26;
+#X text 320 539 Make more "grain" Contexts by creating [context ::
+grain]., f 32;
+#X obj 19 16 cnv 15 302 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 14 11 cnv 15 302 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 15 12 cnv 15 300 50 empty empty granular synthesis 23 20 1
+30 -260818 -66577 0;
+#X obj 680 16 ctxfiles/license;
+#X text 339 13 You can achieve granular synthesis in a Context network
+by assigning one grain to an individual Context. This patch demonstrates
+the general principle \, which can be extended in any number of ways
+to create complex granular systems., f 51;
+#X msg 14 158 \; c5 :d \$1;
+#X connect 1 0 11 0;
+#X connect 4 0 5 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 9 0 3 0;
+#X connect 10 0 9 0;
+#X connect 11 0 12 0;
+#X connect 11 0 12 1;
+#X connect 13 0 11 1;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 23 0 18 0;
+#X connect 24 0 18 1;
+#X connect 25 0 41 0;

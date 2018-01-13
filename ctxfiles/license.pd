@@ -1,7 +1,7 @@
-#N canvas 173 191 378 300 10;
+#N canvas 170 198 378 300 10;
 #X text 106 104 part of the Context library;
-#X text 104 134 copyright Liam Goodacre 2017;
 #X text 105 119 licensed under the GPL v3;
 #X obj 284 123 bng 8 250 50 0 license empty empty 17 7 0 10 -262144
 -1 -1;
+#X text 104 134 copyright Liam Goodacre 2017-18;
 #X coords 0 -1 1 1 210 55 2 100 100;

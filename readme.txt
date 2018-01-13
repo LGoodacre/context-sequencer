@@ -1,6 +1,6 @@
 CONTEXT V3.0.2
 
-RELEASE DATE: 5th September, 2017
+Copyright Liam Goodacre, 2017-2018
 
 This is a beta version of Context v3.0.2. There are still some bugs left and your help in tracking down both of these will be much appreciated.
 
@@ -17,6 +17,7 @@ list-abs
 hcs
 iemguts (v 0.2.1 or later)
 pddp (useful but not essential)
+iemmatrix (only needed for [gridcontrol])
 
 
 Once you have all the necessary externals, declare the main Context folder as a path (Edit --> Preferences --> Path --> New). You should also consider adding the text "-font-face normal" into the startup flags (Edit --> preferences --> Startup --> Startput Path). This fixes a bug in 0.47 where the text is bolded, which throws the float and symbol atom off in the main GUI. Hopefully this won't be necessary in later releases.
