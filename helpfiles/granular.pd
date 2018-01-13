@@ -1,8 +1,8 @@
-#N struct 9970-big2 float x float y array 9970-array2 ^&*-dsmall2;
+#N struct 4109-big2 float x float y array 4109-array2 ^&*-dsmall2;
 #N struct ^&*-dsmall2 float x float y;
-#N canvas 305 163 911 583 10;
-#X obj 594 414 sketch point2 0 0.786905 0.328126 0.462501 0.84375 0.786905
-:name hanning;
+#N canvas 302 170 911 583 10;
+#X obj 594 414 sketch point2 0 1 0.500001 0.348577 1 0.96412 :name
+hanning;
 #X obj 758 411 catch~ granular;
 #N canvas 67 87 450 250 (subpatch) 0;
 #X array sample 498674 float 2;
