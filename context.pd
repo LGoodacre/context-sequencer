@@ -2,7 +2,7 @@
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 206 120 992 681 guts 0;
+#N canvas 203 87 992 681 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 559 97 795 687 names 0;
 #X msg 266 486 symbol  ;
@@ -2034,7 +2034,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X connect 50 0 49 1;
 #X connect 50 0 51 0;
 #X restore 551 182 pd position;
-#N canvas 65 93 1301 687 messages 0;
+#N canvas 67 85 1299 683 messages 0;
 #X obj 18 484 list;
 #X obj 688 252 route bang;
 #X obj 688 413 msgfile;
@@ -2136,7 +2136,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X obj 218 737 spigot;
 #X obj 257 715 receive \$0-printme;
 #X obj 218 759 s \$0-toprint;
-#N canvas 202 116 1301 687 calculator 0;
+#N canvas 67 85 1299 683 calculator 0;
 #X obj 918 40 inlet;
 #X obj 949 132 cyclone/zl rev;
 #X obj 949 154 cyclone/iter;
@@ -2274,7 +2274,6 @@ the order of operations.;
 #X text 31 365 4.3 \, 5.2 delete braket term;
 #X text 416 382 6.3 search only for terms which have been found in
 2.1;
-#X text 358 320 6.2 search in the order specifieed in 2.1;
 #X text 450 444 6.4 search for category (order of operation) \, greater
 than open bracket pos \, less than close bracket pos, f 53;
 #X text 564 578 6.5 send into pf abstractions;
@@ -2284,8 +2283,6 @@ than open bracket pos \, less than close bracket pos, f 53;
 #X text 43 654 10 once no special character found \, search for next
 (;
 #X text 27 74 11 stop if no bracket found;
-#X text 646 -6 12 reset 6.4 pack and sweek again for special characters
-outside brackets (but not arithmetic), f 34;
 #X text 651 85 13.1 collect processed message;
 #X text 734 190 13.2 return unprocessed arithmetic;
 #X text 499 241 13.3 reverse and output;
@@ -2373,6 +2370,13 @@ stack overflows in case the argument matching fails., f 52;
 #X obj 883 203 receive \$0-ebreak;
 #X text 828 250 bypass coder if ASCII 27;
 #X obj 883 225 f 1;
+#X text 646 -6 12 reset 6.4 pack and sweep again for special characters
+outside brackets (but not arithmetic), f 34;
+#X text 358 320 6.2 search in the order specified in 2.1;
+#X obj 821 708 cnv 13 490 1 empty \$0-datagrid1 °_combine 18 -5 0
+10 -13330 -66577 0;
+#X obj 821 721 cnv 13 490 1 empty \$0-datagrid1 ignore 18 -5 0 10 -13330
+-66577 0;
 #X obj 950 423 ctxfiles/br2 sel 1 \; ( pfb \$0 0 0 \; ) pfb \$0 0 1
 \; @ pf0 \$0 1 0 getat \; _ pf0 \$0 1 1 getunder \; = pf0 \$0 1 2 getequals
 \; ¬ pf0 \$0 1 3 getnot \; $ pf0 \$0 1 4 gets \; ^ pf1 \$0 2 0 getup
@@ -2382,9 +2386,9 @@ u - e 0 \; ` pf3 \$0 2 2 getg -1 -1 bang 0 ` d 1 trim x + h \; ! pf1
 symbol \; ? pf3 \$0 2 5 getq 1 2 1 float symbol x 0 append u - e 1
 \; # pf1 \$0 2 6 gethash 1 float float \; [ pf3 \$0 2 7 getleftbr -1
 1 bang float ] x 1 trim u - e 0 \; ~ pf1 \$0 2 8 gettilde 1 symbol
-symbol \; * pf2 \$0 3 0 * -1 1 \; / pf2 \$0 3 1 / -1 1 \; + pf2 \$0
-4 0 + -1 1 \; - pf2 \$0 4 1 - -1 1 \;  s \$0-ebreak \; ## s \$0-sothh
-\;;
+symbol \; * pf2 \$0 3 0 * y \; / pf2 \$0 3 1 / y \; + pf2 \$0 4 0 +
+y \; - pf2 \$0 4 1 - y \; ° pf2 \$0 4 2 switch-de x \;  s \$0-ebreak
+\; ## s \$0-sothh \;;
 #X connect 0 0 87 0;
 #X connect 1 0 2 0;
 #X connect 2 0 60 0;
@@ -2400,13 +2404,13 @@ symbol \; * pf2 \$0 3 0 * -1 1 \; / pf2 \$0 3 1 / -1 1 \; + pf2 \$0
 #X connect 10 2 13 2;
 #X connect 11 0 12 0;
 #X connect 12 0 27 0;
-#X connect 13 0 127 0;
+#X connect 13 0 125 0;
 #X connect 14 1 21 0;
 #X connect 17 0 18 0;
 #X connect 18 0 29 0;
 #X connect 19 0 30 0;
 #X connect 20 0 89 0;
-#X connect 20 1 132 0;
+#X connect 20 1 130 0;
 #X connect 21 0 6 0;
 #X connect 21 1 24 1;
 #X connect 22 0 8 0;
@@ -2420,7 +2424,7 @@ symbol \; * pf2 \$0 3 0 * -1 1 \; / pf2 \$0 3 1 / -1 1 \; + pf2 \$0
 #X connect 27 1 22 0;
 #X connect 29 0 19 1;
 #X connect 29 1 19 1;
-#X connect 29 2 142 0;
+#X connect 29 2 140 0;
 #X connect 30 0 34 0;
 #X connect 31 0 90 0;
 #X connect 32 0 14 0;
@@ -2436,9 +2440,9 @@ symbol \; * pf2 \$0 3 0 * -1 1 \; / pf2 \$0 3 1 / -1 1 \; + pf2 \$0
 #X connect 40 0 19 1;
 #X connect 41 0 19 1;
 #X connect 42 0 19 1;
-#X connect 60 0 144 0;
+#X connect 60 0 142 0;
 #X connect 60 1 61 0;
-#X connect 61 0 133 0;
+#X connect 61 0 131 0;
 #X connect 62 0 61 1;
 #X connect 63 0 66 0;
 #X connect 64 0 65 0;
@@ -2455,13 +2459,13 @@ symbol \; * pf2 \$0 3 0 * -1 1 \; / pf2 \$0 3 1 / -1 1 \; + pf2 \$0
 #X connect 78 0 79 0;
 #X connect 79 0 77 1;
 #X connect 80 0 75 0;
-#X connect 81 0 141 0;
+#X connect 81 0 139 0;
 #X connect 82 0 15 1;
 #X connect 83 0 23 0;
 #X connect 84 0 85 0;
 #X connect 85 0 36 0;
 #X connect 86 0 35 0;
-#X connect 87 0 128 0;
+#X connect 87 0 126 0;
 #X connect 87 1 86 0;
 #X connect 87 2 1 0;
 #X connect 87 3 3 0;
@@ -2474,44 +2478,44 @@ symbol \; * pf2 \$0 3 0 * -1 1 \; / pf2 \$0 3 1 / -1 1 \; + pf2 \$0
 #X connect 90 4 72 0;
 #X connect 90 5 89 1;
 #X connect 91 0 89 1;
+#X connect 117 0 118 0;
+#X connect 118 0 121 0;
+#X connect 118 1 119 0;
 #X connect 119 0 120 0;
-#X connect 120 0 123 0;
-#X connect 120 1 121 0;
-#X connect 121 0 122 0;
-#X connect 122 0 123 1;
-#X connect 123 0 141 0;
-#X connect 123 1 124 0;
-#X connect 126 0 3 0;
-#X connect 127 0 20 0;
-#X connect 128 0 19 0;
-#X connect 128 1 17 0;
-#X connect 128 2 73 0;
-#X connect 128 3 72 0;
-#X connect 128 4 129 0;
-#X connect 128 5 135 0;
-#X connect 129 0 13 1;
-#X connect 130 0 13 2;
-#X connect 132 0 75 0;
-#X connect 132 1 77 0;
-#X connect 132 2 136 0;
-#X connect 132 3 138 1;
-#X connect 132 4 76 0;
-#X connect 133 0 65 2;
-#X connect 133 1 134 0;
-#X connect 133 2 62 0;
-#X connect 135 0 130 0;
-#X connect 136 0 137 0;
-#X connect 137 0 138 0;
-#X connect 141 0 15 0;
-#X connect 142 0 38 0;
-#X connect 142 1 37 0;
-#X connect 144 0 151 0;
-#X connect 144 1 145 0;
-#X connect 145 0 147 0;
-#X connect 145 1 146 0;
-#X connect 146 0 144 1;
-#X connect 148 0 150 0;
-#X connect 150 0 144 1;
+#X connect 120 0 121 1;
+#X connect 121 0 139 0;
+#X connect 121 1 122 0;
+#X connect 124 0 3 0;
+#X connect 125 0 20 0;
+#X connect 126 0 19 0;
+#X connect 126 1 17 0;
+#X connect 126 2 73 0;
+#X connect 126 3 72 0;
+#X connect 126 4 127 0;
+#X connect 126 5 133 0;
+#X connect 127 0 13 1;
+#X connect 128 0 13 2;
+#X connect 130 0 75 0;
+#X connect 130 1 77 0;
+#X connect 130 2 134 0;
+#X connect 130 3 136 1;
+#X connect 130 4 76 0;
+#X connect 131 0 65 2;
+#X connect 131 1 132 0;
+#X connect 131 2 62 0;
+#X connect 133 0 128 0;
+#X connect 134 0 135 0;
+#X connect 135 0 136 0;
+#X connect 139 0 15 0;
+#X connect 140 0 38 0;
+#X connect 140 1 37 0;
+#X connect 142 0 153 0;
+#X connect 142 1 143 0;
+#X connect 143 0 145 0;
+#X connect 143 1 144 0;
+#X connect 144 0 142 1;
+#X connect 146 0 148 0;
+#X connect 148 0 142 1;
 #X restore 241 290 pd calculator;
 #N canvas 458 102 693 670 space 0;
 #X obj 164 64 moocow/any2bytes;
@@ -6290,7 +6294,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 101 3 102 0;
 #X connect 102 0 74 1;
 #X restore 552 391 pd rules;
-#N canvas 116 212 647 556 title 1;
+#N canvas 107 212 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know

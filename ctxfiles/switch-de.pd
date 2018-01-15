@@ -1,0 +1,8 @@
+#N canvas 420 178 450 300 10;
+#X obj 180 108 inlet;
+#X obj 180 152 s2l;
+#X obj 180 174 outlet;
+#X msg 180 130 symbol \$1\$2;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
