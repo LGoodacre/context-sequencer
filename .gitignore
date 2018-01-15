@@ -1,4 +1,4 @@
-/ctxfiles/tmp/1*.pd
+/ctxfiles/tmp/*.pd
 tester.pd
 input.pd
 /presentation
