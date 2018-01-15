@@ -1,0 +1,32 @@
+#N canvas 431 130 464 604 10;
+#X obj 197 27 ctxfiles/license;
+#X obj 51 32 cnv 15 92 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 46 27 cnv 15 92 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 47 28 cnv 15 90 40 empty empty click 10 16 2 35 -10368 -262144
+0;
+#X text 41 100 [click] is a GUI tool for manipulating Contexts open
+in a patch. It speeds up routine operations by letting you send commands
+to a Context simply by clicking on it. To use [click] \,;
+#X text 41 273 The symbol '%' will be replaced by a number sequence
+\, starting with 0 \, as demonstrated below.;
+#X obj 33 306 cnv 15 400 140 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 35 308 cnv 15 396 136 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 77 359 context :ID 1;
+#X obj 149 359 context :ID 2;
+#X obj 222 359 context :ID 3;
+#X text 299 360 Hold down Shift and Control and click on one of these
+Contexts to try., f 19;
+#X obj 165 320 click :c 4 :d %;
+#X text 57 168 1: Create a [click] object with any Context command
+as a creation argument (ie. [click :d 2 :J drums] \; \; 2: Hold down
+the Shift and Control keys. [click] will now follow the cursor \; \;
+3: Click on any Context to update it.;
+#X text 50 461 WARNING \; \; 1: Clicking on the Context can still alter
+it in other ways \, such as opening/closing toggles and altering the
+cycle time. It's best to aim for the empty area in the middle. \; \;
+2: Make sure there are no [autocreate] objects open \, or you're in
+for a rude surprise!;
