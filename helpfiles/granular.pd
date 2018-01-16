@@ -1,7 +1,7 @@
-#N struct 64119-big2 float x float y array 64119-array2 ^&*-dsmall2
+#N struct 32056-big2 float x float y array 32056-array2 ^&*-dsmall2
 ;
 #N struct ^&*-dsmall2 float x float y;
-#N canvas 299 177 911 583 10;
+#N canvas 347 260 911 583 10;
 #X obj 594 414 sketch point2 0 1 0.500001 0.348577 1 0.96412 :name
 hanning;
 #X obj 758 411 catch~ granular;
@@ -105,13 +105,13 @@ to create complex granular systems., f 51;
 #X obj 595 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 595 152 openpanel;
-#X msg 657 152 sample;
 #X msg 595 174 read -resize \$1 sample;
+#X msg 657 152 symbol wavs/loop.wav;
 #X connect 1 0 10 0;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
-#X connect 9 0 43 0;
+#X connect 9 0 44 0;
 #X connect 10 0 11 0;
 #X connect 10 0 11 1;
 #X connect 12 0 10 1;
@@ -121,6 +121,6 @@ to create complex granular systems., f 51;
 #X connect 23 0 17 1;
 #X connect 24 0 40 0;
 #X connect 41 0 42 0;
-#X connect 42 0 44 0;
-#X connect 43 0 44 0;
-#X connect 44 0 3 0;
+#X connect 42 0 43 0;
+#X connect 43 0 3 0;
+#X connect 44 0 43 0;
