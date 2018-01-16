@@ -1,6 +1,7 @@
-#N struct 4109-big2 float x float y array 4109-array2 ^&*-dsmall2;
+#N struct 64119-big2 float x float y array 64119-array2 ^&*-dsmall2
+;
 #N struct ^&*-dsmall2 float x float y;
-#N canvas 302 170 911 583 10;
+#N canvas 299 177 911 583 10;
 #X obj 594 414 sketch point2 0 1 0.500001 0.348577 1 0.96412 :name
 hanning;
 #X obj 758 411 catch~ granular;
@@ -14,8 +15,7 @@ hanning;
 #X floatatom 14 289 5 0 0 1 offset - -, f 5;
 #X obj 14 308 sig~;
 #X obj 14 330 send~ offset;
-#X msg 595 174 read -resize helpfiles/wavs/loop.wav sample;
-#X obj 595 152 loadbang;
+#X obj 657 130 loadbang;
 #X obj 758 454 *~;
 #X obj 758 476 dac~;
 #X obj 776 434 hsl 100 15 0 1 0 1 empty empty volume 5 7 0 10 -262144
@@ -102,17 +102,25 @@ by assigning one grain to an individual Context. This patch demonstrates
 the general principle \, which can be extended in any number of ways
 to create complex granular systems., f 51;
 #X msg 14 158 \; c5 :d \$1;
-#X connect 1 0 11 0;
+#X obj 595 132 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 595 152 openpanel;
+#X msg 657 152 sample;
+#X msg 595 174 read -resize \$1 sample;
+#X connect 1 0 10 0;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
-#X connect 9 0 3 0;
-#X connect 10 0 9 0;
-#X connect 11 0 12 0;
-#X connect 11 0 12 1;
-#X connect 13 0 11 1;
-#X connect 20 0 19 0;
-#X connect 21 0 22 0;
-#X connect 23 0 18 0;
-#X connect 24 0 18 1;
-#X connect 25 0 41 0;
+#X connect 9 0 43 0;
+#X connect 10 0 11 0;
+#X connect 10 0 11 1;
+#X connect 12 0 10 1;
+#X connect 19 0 18 0;
+#X connect 20 0 21 0;
+#X connect 22 0 17 0;
+#X connect 23 0 17 1;
+#X connect 24 0 40 0;
+#X connect 41 0 42 0;
+#X connect 42 0 44 0;
+#X connect 43 0 44 0;
+#X connect 44 0 3 0;
