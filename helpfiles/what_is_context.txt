@@ -9,7 +9,7 @@ I have yet to come up with an answer to this question that is both satisfying an
 
 First and foremost, Context is a SEQUENCER.
 
-This means that it decides "what happens when" for a piece of music, without having too much to do with the actual production of sound. Like most sequencers, Context adopts a linear paradigm, incorporating traditional step sequencers and timeline playback. Unlike most other sequencers, Context is MODULAR, meaning that it can be replicated and interconnected in many different ways to change its behavior.
+This means that it decides "what happens when" for a piece of music, without having too much to do with the actual production of sound. Like most sequencers, Context adopts a linear paradigm, incorporating traditional step sequencing and timeline playback. Unlike most other sequencers, Context is MODULAR, meaning that it can be replicated and interconnected in many different ways to change its behavior.
 
                     ~~~ ~~~ ~~~ ~~~ ~~~
 
@@ -58,7 +58,7 @@ Finally, Context is NOT FINISHED.
 It probably never will be. Email me if you find any mistakes.
 
 
-Liam Goodacre, 2017
+Liam Goodacre, 2017-2018
 liam.goodacre@gmail.com
 
 
