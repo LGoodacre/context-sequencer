@@ -1,9 +1,9 @@
-#N canvas 117 419 621 300 10;
+#N canvas 115 426 621 300 10;
 #X obj 170 177 iemguts/canvasselect;
 #X obj 170 203 print fo;
 #X obj 170 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 726 350 515 392 workings 1;
+#N canvas 723 357 515 392 workings 0;
 #N canvas 572 198 761 546 c-movement 0;
 #X obj 300 59 inlet height;
 #X obj 225 60 inlet;
@@ -95,7 +95,7 @@
 #X connect 40 0 32 0;
 #X connect 41 0 12 0;
 #X restore 23 258 pd c-movement;
-#N canvas 599 292 634 339 order 0;
+#N canvas 594 292 634 339 order 0;
 #X obj 156 112 receive \$0-xstart;
 #X obj 141 136 f;
 #X obj 194 63 receive \$0-savestart;
@@ -103,19 +103,20 @@
 #X obj 141 158 t f b;
 #X obj 173 184 f \$0;
 #X obj 427 184 receive \$0-mx1;
-#X obj 412 209 f;
+#X obj 412 230 f;
 #X obj 433 94 receive \$0-dvstart;
 #X obj 412 117 pack;
 #X msg 412 139 symbol \$2-mstart\$1;
 #X obj 412 162 iemguts/oreceive;
-#X obj 438 209 makefilename %d-mstar;
-#X obj 412 231 send;
+#X obj 438 230 makefilename %d-mstar;
+#X obj 412 252 send;
 #X obj 51 63 receive \$0-ncreated;
 #X obj 11 89 receive \$0-nstart;
 #X obj 141 89 spigot 1;
 #X obj 141 40 ctxfiles/dvr \$0 order1;
 #X obj 141 226 ctxfiles/dvs \$0 mkord;
 #X obj 173 205 ctxfiles/dvs \$0 mkord0;
+#X obj 427 206 * 1000;
 #X connect 0 0 1 1;
 #X connect 1 0 4 0;
 #X connect 2 0 16 1;
@@ -123,7 +124,7 @@
 #X connect 4 0 18 0;
 #X connect 4 1 5 0;
 #X connect 5 0 19 0;
-#X connect 6 0 7 1;
+#X connect 6 0 20 0;
 #X connect 7 0 13 0;
 #X connect 8 0 9 1;
 #X connect 8 0 12 0;
@@ -135,6 +136,7 @@
 #X connect 15 0 1 0;
 #X connect 16 0 1 0;
 #X connect 17 0 16 0;
+#X connect 20 0 7 1;
 #X restore 215 51 pd order;
 #X obj 296 163 receive \$0-mynum;
 #X obj 23 167 iemguts/canvasposition 1;
