@@ -1,5 +1,5 @@
-#N canvas 270 136 511 632 10;
-#N canvas 651 87 683 681 guts 1;
+#N canvas 267 136 511 632 10;
+#N canvas 648 87 683 681 guts 0;
 #X obj 95 168 route symbol;
 #X obj 95 146 cyclone/iter;
 #X obj 95 124 iemguts/canvasargs 1;
@@ -29,7 +29,7 @@
 #X obj 209 661 array define \$0-myscale 1;
 #X obj 190 684 list split 1;
 #X obj 201 385 s \$0-keyy;
-#X obj 27 140 t b a;
+#X obj -15 173 t b a;
 #X obj 76 407 route bang;
 #X obj 217 540 cyclone/iter;
 #X obj 217 562 route float;
@@ -38,7 +38,7 @@
 #X obj 190 518 t b a;
 #X obj 190 611 t l f f;
 #X obj 276 635 s \$0-size;
-#X obj -93 124 route + -;
+#X obj -66 149 route + -;
 #X obj 355 431 +;
 #X obj 355 453 mod 12;
 #X obj 334 360 * -5;
@@ -54,13 +54,15 @@
 #X obj 88 -26 iemguts/canvasdollarzero 2;
 #X obj 145 20 t b s;
 #X text 185 12 <-- custom myinit to retrieve \$0 symbol;
-#X obj -110 -41 makefilename %s-scaler;
-#X obj -110 -19 iemguts/oreceive \$0n;
+#X obj -114 -40 makefilename %s-scaler;
+#X obj -114 -18 iemguts/oreceive \$0n;
 #X obj 61 -50 t a b;
 #X msg 289 300 obj 300 200 ctxfiles/share ctxfiles/hsc 1 \, loadbang
 ;
 #X obj 172 45 outlet;
 #X msg -69 33 0;
+#X obj -93 126 t b a;
+#X obj -93 224 s scalechange(((;
 #X connect 0 0 3 0;
 #X connect 0 1 10 0;
 #X connect 1 0 0 0;
@@ -78,7 +80,7 @@
 #X connect 10 0 16 0;
 #X connect 11 0 44 0;
 #X connect 12 0 56 0;
-#X connect 13 0 38 0;
+#X connect 13 0 60 0;
 #X connect 14 0 30 0;
 #X connect 15 0 19 0;
 #X connect 17 0 18 0;
@@ -117,7 +119,7 @@
 #X connect 42 0 39 0;
 #X connect 43 0 46 0;
 #X connect 45 0 19 0;
-#X connect 46 0 38 0;
+#X connect 46 0 60 0;
 #X connect 47 0 59 0;
 #X connect 48 0 21 0;
 #X connect 49 1 52 0;
@@ -132,6 +134,8 @@
 #X connect 56 1 51 0;
 #X connect 57 0 23 0;
 #X connect 59 0 46 1;
+#X connect 60 0 61 0;
+#X connect 60 1 38 0;
 #X restore 289 28 pd guts;
 #X obj 56 118 - 1;
 #X obj 56 315 mod 7;

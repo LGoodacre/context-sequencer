@@ -1,4 +1,4 @@
-#N canvas 171 128 488 495 10;
+#N canvas 168 135 488 495 10;
 #X obj 54 273 send;
 #X obj 263 179 makefilename %d-scales;
 #X obj 280 202 makefilename %d-scaler;
@@ -7,7 +7,7 @@
 #X obj 263 73 receive \$1-scalebang;
 #X obj 250 264 receive \$1-scaler;
 #X obj 27 229 pack f \$1;
-#X obj 27 205 inlet;
+#X obj 27 165 inlet;
 #X obj 250 330 outlet;
 #X obj 27 311 t b l l;
 #X obj 46 367 spigot 1;
@@ -24,6 +24,8 @@
 #X obj 250 286 t f b;
 #X obj 277 308 t f;
 #X obj 46 389 send allscales##;
+#X obj 27 187 t l b;
+#X obj 54 208 s \$1-gothash;
 #X connect 1 0 0 1;
 #X connect 2 0 3 0;
 #X connect 3 0 22 0;
@@ -31,7 +33,7 @@
 #X connect 5 0 14 0;
 #X connect 6 0 22 0;
 #X connect 7 0 12 0;
-#X connect 8 0 7 0;
+#X connect 8 0 25 0;
 #X connect 10 0 21 0;
 #X connect 10 1 11 0;
 #X connect 10 2 20 0;
@@ -51,3 +53,5 @@
 #X connect 22 0 9 0;
 #X connect 22 1 23 0;
 #X connect 23 0 11 1;
+#X connect 25 0 7 0;
+#X connect 25 1 26 0;
