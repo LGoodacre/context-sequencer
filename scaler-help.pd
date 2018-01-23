@@ -1,5 +1,5 @@
-#N canvas 401 180 564 469 10;
-#X obj 321 16 ctxfiles/license;
+#N canvas 398 187 494 533 10;
+#X obj 251 16 ctxfiles/license;
 #X obj 101 211 scaler minor c 7;
 #X text 70 104 This object converts numbers into notes (frequencies)
 on a scale. It uses the [mtof] for this \, but unlike [mtof] fits notes
@@ -8,25 +8,21 @@ into a particular scale. For instance \, sending "10" to the object
 the 7th octave: 2489.02 (htz).;
 #X floatatom 101 187 5 0 0 0 - - -, f 5;
 #X floatatom 101 238 10 0 0 0 - - -, f 10;
-#X obj 142 18 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
+#X obj 72 18 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
-#X obj 136 12 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
+#X obj 66 12 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
 0;
-#X obj 137 13 cnv 15 162 55 empty empty empty 21 18 2 32 -204786 -204800
+#X obj 67 13 cnv 15 162 55 empty empty empty 21 18 2 32 -204786 -204800
 0;
-#X obj 138 14 cnv 15 160 53 empty empty scaler 24 22 2 43 -82884 -204800
+#X obj 68 14 cnv 15 160 53 empty empty scaler 24 22 2 43 -82884 -204800
 0;
-#X text 68 281 [scaler] takes three arguments: a mode \, a key and
-an octave. They can be written in any order \, and eligible modes and
-scales can be found in ctxfiles/scales.txt (this file is also editable
-if you want to add your own modes).;
-#X text 68 359 [scaler] is useful on its own \, but can also be integrated
+#X text 68 399 [scaler] is useful on its own \, but can also be integrated
 into Context's message variables. The # variable will read from any
 available [scaler] object in the parent patch \, allowing for modes
 and scales to be set globally in a Context network.;
 #X obj 366 194 context :a ' # = ' :d 1 :i 1 2 3 4 0 :x = 4 3 2 1 :ID
 1 :pr 1;
-#N canvas 724 401 450 300 right-inlet 0;
+#N canvas 721 407 450 300 (subpatch) 0;
 #X obj 147 220 outlet;
 #X symbolatom 147 95 10 0 0 0 - - -, f 10;
 #X text 219 95 type a new key \, mode or octave here \, ie. "lydian"
@@ -43,6 +39,26 @@ ma message through [send -scaler].;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X restore 210 182 right-inlet;
+#X text 68 281 [scaler] takes three arguments: a mode \, a key and
+an octave. They can be written in any order \, and eligible modes and
+scales can be found in ctxfiles/scales.txt (this file is also editable
+if you want to add your own modes). If no mode is selected \, the default
+is a 12-tone chromatic scale.;
+#N canvas 340 269 450 300 scaler 0;
+#X text 60 18 When it encounters the # message variable \, Context
+searches for a remote [scaler] object. It searches for them according
+to the following priorities:;
+#X text 58 117 This means that you can set a global scale (3) \, a
+patch-local scale (2) or a Context local scale (1).;
+#X text 71 68 (1) First \, look in the Context's own Overlay patch
+\; (2) Second \, look in the parent patch \; (3) Third \, look in any
+other patch;
+#X text 58 158 Notice though that when it gets to (3) \, it is not
+certain which [scaler] it will find \, if more than one exist! Presumable
+it will the [scaler] which is most recently created.;
+#X restore 303 462 pd scaler locality;
+#X obj 81 366 pddp/pddplink ctxfiles/scales.txt -text view modes and
+scales;
 #X connect 1 0 4 0;
 #X connect 3 0 1 0;
-#X connect 12 0 1 1;
+#X connect 11 0 1 1;
