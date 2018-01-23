@@ -20,6 +20,7 @@ pentatonic minor 5 0 3 5 7 10;
 pentatonic egyptian 5 0 2 5 7 10;
 blues minor 5 0 3 5 8 10;
 blues major 5 0 2 5 7 9;
+chromatic 12 0 1 2 3 4 5 6 7 8 9 10 11;
 c 0;
 C 0;
 c# 1;
