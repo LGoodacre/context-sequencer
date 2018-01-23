@@ -1,5 +1,5 @@
-#N canvas 622 86 411 300 10;
-#X obj 170 48 loadbang;
+#N canvas 619 93 411 300 10;
+#X obj 143 25 loadbang;
 #X obj 170 92 makefilename %s-patchget;
 #X obj 170 114 iemguts/oreceive \$0n;
 #X obj 170 136 t b f;
@@ -10,7 +10,9 @@
 #X obj 20 158 iemguts/sendcanvas 1;
 #X obj 170 70 symbol \$1;
 #X obj 170 188 iemguts/canvasdollarzero 1;
-#X connect 0 0 9 0;
+#X obj 143 47 t b b;
+#X obj 54 72 s patchgot&Y*U;
+#X connect 0 0 11 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 10 0;
@@ -21,3 +23,5 @@
 #X connect 9 0 1 0;
 #X connect 9 0 6 0;
 #X connect 10 0 4 0;
+#X connect 11 0 12 0;
+#X connect 11 1 9 0;
