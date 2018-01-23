@@ -1,4 +1,4 @@
-#N canvas 195 272 523 478 10;
+#N canvas 189 286 523 478 10;
 #X obj 156 71 s \$1-;
 #X obj 257 136 receive \$1;
 #X obj 367 134 receive \$1-dddEEE&;
@@ -18,6 +18,8 @@
 #X obj -15 317 loadbang;
 #X obj -15 340 v \$3nnumber;
 #X obj 27 407 pack f f \$3 s;
+#X obj 204 102 receive \$2-context;
+#X obj 114 102 receive \$2\$1;
 #X connect 1 0 5 0;
 #X connect 2 0 3 0;
 #X connect 6 0 0 0;
@@ -34,3 +36,5 @@
 #X connect 16 0 17 0;
 #X connect 17 0 18 1;
 #X connect 18 0 12 0;
+#X connect 19 0 5 0;
+#X connect 20 0 5 0;
