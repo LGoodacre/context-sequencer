@@ -1,6 +1,6 @@
-#N canvas 264 115 949 560 10;
+#N canvas 224 195 949 560 10;
 #X obj 9 485 ctxfiles/license;
-#N canvas 334 229 824 371 grid 0;
+#N canvas 331 236 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 922 21 t b f f;
@@ -307,7 +307,7 @@ on time. To select which one is active \, use the "on" button \, or
 press the up and down (or left and right) buttons on the Launchpad
 together.;
 #X obj 384 135 outlet;
-#X restore 739 224 pd on-off;
+#X restore 739 224 on-off;
 #N canvas 369 143 450 241 mode-0 0;
 #X text 14 21 Mode 0 gives you a bird's-eye-view of all of the Contexts
 open in the patch. In mode 0 \, each Launchpad cell corresponds to
@@ -321,7 +321,7 @@ on the Function Selectors.;
 by tapping on the cell. The Function Selector must be set to :r for
 this to work.;
 #X obj 384 212 outlet;
-#X restore 515 198 pd mode-0;
+#X restore 515 198 mode-0;
 #X text 378 106 Note: It only makes sense to use [gridcontrol] if you
 have a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
 However \, the [gridcontrol] patch contains a fully functional mockup
@@ -343,7 +343,7 @@ of the patch differs from the behaviour of the hardware.;
 To switch to the y-axis \, double click the mode 1 selector button
 ("User 1").;
 #X obj 378 238 outlet;
-#X restore 544 223 pd mode-1;
+#X restore 544 223 mode-1;
 #N canvas 65 85 450 210 mode-2 0;
 #X text 11 14 Mode 2 lets you edit the toggle floats of a single Context.
 The Context selected for editing is defined by the "-send 2" Function
@@ -356,7 +356,7 @@ an empty cell \, or turn a toggle off by clicking on a lit cell. By
 default. mode 2 lets you edit the x-axis toggles. You can flip to y-axis
 by double clicking on the mode 2 selector button.;
 #X obj 384 181 outlet;
-#X restore 574 247 pd mode-2;
+#X restore 574 247 mode-2;
 #N canvas 65 85 450 257 mode-3 0;
 #X obj 380 232 outlet;
 #X text 9 16 Mode 3 \, mixer mode \, doesn't relate to Context \, but
@@ -373,7 +373,7 @@ The time perdiod is defined by the Function Selector \, and is longer
 the higher up you go (starting at one millisecond \, ending at ~30
 seconds). Clicking on the selected Function Selector again halts the
 motion.;
-#X restore 599 275 pd mode-3;
+#X restore 599 275 mode-3;
 #N canvas 65 81 450 161 position-selectors 0;
 #X obj 381 131 outlet;
 #X text 9 15 The position selectors are used to scroll if the grid
@@ -384,7 +384,7 @@ it will have no effect.;
 different instances of [gridcontrol] in different patches. To do this
 \, click on both the up and down (or left and right) buttons together.
 ;
-#X restore 357 231 pd position-selectors;
+#X restore 357 231 position-selectors;
 #N canvas 406 155 450 180 function-selectors 0;
 #X text 13 14 The function selectors work differently depending on
 the mode. In mode 0 \, they are used to set the message that will be
@@ -397,7 +397,7 @@ for the slider movement.;
 is visible in the [gridcontrol] patch. You can also edit the message
 by typing into the symbol atom.;
 #X obj 377 157 outlet;
-#X restore 774 336 pd function-selectors;
+#X restore 774 336 function-selectors;
 #X obj 474 315 gridcontrol :f2 -send 1 :f3 -send 2 :f6 :r 1 c 0 1 :f7
 :r 1 c 0 2;
 #N canvas 65 81 450 105 quantize 0;
@@ -406,17 +406,35 @@ by [gridcontrol] will snap to either the previous or the next beat.
 In order to achieve this \, [gridcontrol] must be given the beat. This
 is dome from its inlet in the top-left corner.;
 #X obj 387 63 outlet;
-#X restore 681 195 pd quantize;
-#N canvas 591 166 450 209 creation 0;
+#X restore 681 195 quantize;
+#N canvas 842 318 450 287 creation 0;
 #X text 22 17 [gridcontrol] has a few commands which can be sent to
 it through creation arguments. It also uses these commands to save
 custom Function Selector messages (this happens automatically).;
 #X text 43 86 :qu -- quantize on or off \; :gui 1 -- turn the grid
 section of the GUI off \; :gui -1 turn the GUI completely off (-1)
-\; :sa 0 -- turn the automatic saving off \; :f0 -- assign a message
-to the first function selector \; ... \; :f7 -- assign a message to
-the eighth function selector;
-#X restore 498 494 pd creation arguments;
+\; :sa 0 -- turn the automatic saving off \; :ac 0 --turn active window
+sensing off* \; :f0 -- assign a message to the first function selector
+\; ... \; :f7 -- assign a message to the eighth function selector;
+#X text 29 234 * for now \, in order to use this feature \, you need
+to create an object [cyclone/active] in the parent patch and connect
+it to the second inlet of [gridcontrol].;
+#X restore 498 494 creation arguments;
+#N canvas 411 141 450 269 shift 0;
+#X text 40 22 Each cell has an alternate function which can be activated
+with the keyboard's Shift key.;
+#X text 64 62 --The control row along the top and the right (ie. the
+directors \, function selectors and mode selectors) will select an
+entire row or column \; --If you press a normal cell while the Shift
+key is down \, it will enter a queue buffer. All cells which you press
+will be stored and sent simmultaneously when you release the Shift
+key., f 54;
+#X text 41 172 Notice that these funcions work irrespective of which
+mode you are in \, so the results will differ from mode to mode. In
+mode 0 \, the shift functions will help you start multiple Contexts
+at once. In mode 1 \, it will help you alter multiple toggles at once
+\, etc.;
+#X restore 633 494 shift keys;
 #X connect 17 0 16 0;
 #X connect 18 0 15 0;
 #X connect 20 0 13 0;
