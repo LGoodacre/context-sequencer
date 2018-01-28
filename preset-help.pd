@@ -1,0 +1,23 @@
+#N canvas 429 125 464 503 10;
+#X obj 197 27 ctxfiles/license;
+#X obj 33 306 cnv 15 400 140 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 35 308 cnv 15 396 136 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 30 34 cnv 15 150 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 25 29 cnv 15 150 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 26 30 cnv 15 148 40 empty empty preset 24 12 2 40 -98024 -45076
+0;
+#X text 41 100 [preset] is a tool for creating templates for Context
+in a single PD patch.;
+#X text 57 168 1: Create a [preset] object with any Context command
+as a creation argument (ie. [preset :X 9 :F 40 :c 5] \; \; 2: Any [context]
+object you create in this patch will now bear those creation arguments
+\; \; 3: If you create a Context with its own creation arguments \,
+the [preset] will be ignored.;
+#X obj 39 423 preset :X 9 :F 40 :c 5;
+#X text 43 313 Create a [context] object below and watch it take the
+new creation arguments., f 58;
+#X obj 33 461 pddp/pddplink click-help.pd -text see also: [click];

@@ -1,4 +1,4 @@
-#N canvas 431 130 464 604 10;
+#N canvas 695 125 464 604 10;
 #X obj 197 27 ctxfiles/license;
 #X obj 51 32 cnv 15 92 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -30,3 +30,5 @@ it in other ways \, such as opening/closing toggles and altering the
 cycle time. It's best to aim for the empty area in the middle. \; \;
 2: Make sure there are no [autocreate] objects open \, or you're in
 for a rude surprise!;
+#X obj 32 582 pddp/pddplink preset-help.pd -text see also: [preset]
+;
