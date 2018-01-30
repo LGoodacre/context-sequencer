@@ -1,4 +1,4 @@
-#N canvas 351 87 933 681 10;
+#N canvas 348 87 933 681 10;
 #X obj 171 30 inlet;
 #X obj 321 619 send;
 #X obj 348 515 sel dum;
@@ -102,6 +102,9 @@
 #X obj 135 452 t b b b;
 #X obj 135 474 t f;
 #X obj 174 474 f 1;
+#X obj 735 111 demux;
+#X obj 762 88 receive \$1-ses\$2;
+#X obj 762 133 t f;
 #X connect 0 0 69 0;
 #X connect 2 0 3 0;
 #X connect 2 0 95 1;
@@ -246,7 +249,7 @@
 #X connect 97 8 15 0;
 #X connect 97 9 92 0;
 #X connect 97 10 100 0;
-#X connect 97 11 19 0;
+#X connect 97 11 103 0;
 #X connect 98 0 86 0;
 #X connect 99 0 98 1;
 #X connect 99 1 87 0;
@@ -255,3 +258,7 @@
 #X connect 100 2 102 0;
 #X connect 101 0 98 2;
 #X connect 102 0 98 2;
+#X connect 103 0 19 0;
+#X connect 103 1 105 0;
+#X connect 104 0 103 1;
+#X connect 105 0 19 0;
