@@ -1,4 +1,4 @@
-#N canvas 67 85 1299 683 10;
+#N canvas 67 84 1299 684 10;
 #X obj 214 -16 inlet ID;
 #X obj 231 85 symbol \$0-sync;
 #X obj 231 131 send;
@@ -111,7 +111,7 @@
 #X obj 318 362 spigot;
 #X obj 318 386 f;
 #X obj 53 231 zexy/pack 0 x 0 \$1 0;
-#X msg 53 277 \; \$5-c\$3 :\$2 \$1 \; \$4-preID \$3;
+#X msg -10 350 \; \$5-c\$3 :\$2 \$1 \; \$4-preID \$3;
 #X obj 416 175 zexy/pack 0 X f \$1 x \$0 0;
 #X msg 518 244 \; \$7-c\$3 fetch \$6-maxf \$2 \; \$7-c\$3 fetch \$6-fcol
 c \; \$7-c\$3 fetch \$6-Mmm M;
@@ -170,6 +170,11 @@ them. If not \, ignore., f 13;
 #X obj 995 358 spigot 1;
 #X obj 732 477 spigot;
 #X obj 112 359 receive \$1-modestop;
+#X obj 53 275 demux;
+#X msg 80 300 \; \$5-c\$3 :\$2 - \$1 \; \$4-preID \$3;
+#X obj 97 253 receive \$1-dobang;
+#X text -25 296 second option in case of shift double clicking (clears
+toggles), f 17;
 #X connect 0 0 152 0;
 #X connect 1 0 2 0;
 #X connect 3 0 112 0;
@@ -310,7 +315,7 @@ them. If not \, ignore., f 13;
 #X connect 110 0 115 0;
 #X connect 112 0 31 0;
 #X connect 114 0 34 0;
-#X connect 115 0 111 0;
+#X connect 115 0 167 0;
 #X connect 116 0 117 0;
 #X connect 117 0 126 0;
 #X connect 118 0 116 1;
@@ -387,3 +392,6 @@ them. If not \, ignore., f 13;
 #X connect 165 0 71 0;
 #X connect 166 0 72 0;
 #X connect 166 0 124 0;
+#X connect 167 0 111 0;
+#X connect 167 1 168 0;
+#X connect 169 0 167 1;
