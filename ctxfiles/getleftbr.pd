@@ -1,4 +1,4 @@
-#N canvas 128 228 479 453 10;
+#N canvas 125 235 479 453 10;
 #X obj 85 16 inlet;
 #X obj 182 378 outlet;
 #X obj 148 182 list split 1;
@@ -24,8 +24,8 @@
 #X obj 85 60 t b b;
 #X obj 85 82 t f;
 #X obj 112 82 f 3;
-#X obj 357 305 receive \$1-get[-.;
 #X obj 342 363 +;
+#X obj 357 305 receive \$1-getleftbr-.;
 #X connect 0 0 18 0;
 #X connect 2 1 12 0;
 #X connect 3 0 1 0;
@@ -55,10 +55,10 @@
 #X connect 20 0 2 0;
 #X connect 20 1 9 0;
 #X connect 20 2 21 0;
-#X connect 21 0 26 0;
+#X connect 21 0 25 0;
 #X connect 22 0 23 0;
 #X connect 22 1 24 0;
 #X connect 23 0 1 0;
 #X connect 24 0 19 0;
-#X connect 25 0 26 1;
-#X connect 26 0 19 0;
+#X connect 25 0 19 0;
+#X connect 26 0 25 1;
