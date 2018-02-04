@@ -1,6 +1,6 @@
 -m PROPERTIES ► TIMING ► BURST ► MESSAGES ► ID ► OTHER ► SHORTCUTS;
 -m TIMING ▪ DELAY MODE ► RANDOM OPTIONS ► POSITION OPTIONS ► CALCULATION ► MORE ☺ HELP;
--m BURST ► QUANTITY ► SELECTION ▪ AUTO ADVANCE ► PRESETS ▪ STRUCTURE MODE ☺ HELP;
+-m BURST ► QUANTITY ► SELECTION ▪ AUTO ADVANCE ► PRESETS ► MORE ☺ HELP;
 -m MESSAGES ► X-AXIS ► Y-AXIS ► VARIABLES ** ** ☺ HELP;
 -m ID ▲ ID NUMBER ▲ TAGS ▲ CLEAR TAGS ▲ COLOUR ▲ RECEIVE ☺ HELP;
 -m OTHER ► RULES ► BANK ► STATE ► SEND SETTINGS TO ► MORE ☺ HELP;
@@ -15,8 +15,8 @@
 -m SELECTION ▲ DEFINE ▲ PROGRESSION ▲ RANDOM ▪ WRAP  ▪ EDIT RANDOM ☺ HELP;
 -t ADVANCE m 2 off on;
 -m BURST PRESETS ▪ ALL ▪ LINEAR ▪ RANDOM ** ** ☺ HELP;
--t STRUCTURE pu 2 off on;
--p list BURST :: \; The burst toggles (by default the ones on the right) fire together at the end of the Context cycle. The QUANTITY settings define how many toggles fire and the SELECTION settings define which. \; AUTO ADVANCE decides whether a new set of burst toggles are chosen every time the context is started or not. Use the "bump" command to advance a new toggle selection regardless of whether auto-advance is on. \; PRESETS allow you to choose the most common burst settings. \; STRUCTURE MODE allows Context to receive a "push" message for creating a structured hierarchy.;
+-m BURST MORE ▪ STRUCTURE MODE ▪ BURST MODE ** ** ** ☺ HELP;
+-p list BURST :: \; The burst toggles (by default the ones on the right) fire together at the end of the Context cycle. The QUANTITY settings define how many toggles fire and the SELECTION settings define which. \; AUTO ADVANCE decides whether a new set of burst toggles are chosen every time the context is started or not. Use the "bump" command to advance a new toggle selection regardless of whether auto-advance is on. \; PRESETS allow you to choose the most common burst settings. \; MORE lets you set STRUCTURE MODE and BURST MODE;
 -m X-AXIS MESSAGES ▲ LIMIT ▲ PREPEND ▲ APPEND ▪ EDIT ▪ CLEAR ☺ HELP;
 -m Y-AXIS MESSAGES ▲ LIMIT ▲ PREPEND ▲ APPEND ▪ EDIT ▪ CLEAR ☺ HELP;
 -m VARIABLE OPTIONS ▪ ? ADVANCE ▲ ? OFFSET ▪ ^ RANDOM ► DEFINITIONS ▪ < PREPEND ☺ HELP;
@@ -101,12 +101,12 @@
 ;
 ;
 -p list ALL means that all selected burst toggles will fire each cycle. \; LINEAR means that one toggle will fire each cycle--specifically the next one. \; RANDOM means that one random toggle will fire each cycle. \; Note that you can add more of your own presets to this list by editing 'burst-presets.txt'.;
+-t STRUCTURE pu 2 off on;
+-t BURST MODE bs 2 off on;
 ;
 ;
 ;
-;
-;
-;
+-p list STRUCTURE MODE allows Context to receive a "push" message for creating a structured hierarchy. \; BURST MODE allows you to set a different way for the Burst to function. When set to 1‚ the Burst will not fire at the end of the cycle‚ but instead will fire on every single Pattern toggle.;
 ;
 ;
 ;
