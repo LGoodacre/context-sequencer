@@ -193,7 +193,7 @@
 ;
 -p list RULES: You can set up conditional rules to control the Context state. An example of a conditional rule would be‚ "if the cycle time is more than 4‚ open the :x 1 toggle". Rules come in two lines and follow an important syntax: \; The first line describes the condition. It starts with a command (ie. ' :x ')‚ followed by the optional operator ' ] '‚ which queries the list length rather than the list (ie. ' 10 20 30 ' becomes '3'. The next term is a query (detailed below). \; The second line describes the consequence. It must start with a double-hyphen ' -- ' and can contain any command (ie. ' :y 3 '). \; Valid queries are: \; q<  : less than \; q> : greater than \; q<= : less than or equal to \; q>= : greater than or equal to \; q== : equals \; q= : contains (this is the default if no query is given). \; Both the condition and the consequence can include variables from the output language‚ ie. ' ? ' for random numbers. ;
 -t BANK AUTO UPDATE A 2 off on;
--c BANK SAVE :A bang;
+-c BANK SAVE :A -save;
 -c BANK OPEN :A -open;
 -c BANK CLEAR :A -clear;
 ;
