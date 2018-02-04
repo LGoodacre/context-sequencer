@@ -1,4 +1,4 @@
-#N canvas 317 223 727 545 10;
+#N canvas 314 223 727 545 10;
 #X obj 159 213 list;
 #X obj 367 178 cyclone/iter;
 #X obj 340 262 collect;
@@ -23,7 +23,7 @@
 #X obj 340 134 text tolist \$1-save;
 #X obj 367 330 s \$1-printyou;
 #X obj 373 357 receive \$1-savestart;
-#X obj 385 380 receive \$1-saveme;
+#X obj 499 289 receive \$1-saveme;
 #X obj 167 14 iemguts/savebangs \$3;
 #X obj 340 425 \$2 \$1;
 #X obj 100 139 s \$1-undo-next;
@@ -56,6 +56,8 @@
 #X obj 321 -53 t b b;
 #X obj 321 -31 del 1;
 #X obj 321 -9 t f;
+#X obj 499 311 sel 0;
+#X obj 499 333 t f b;
 #X connect 0 0 19 0;
 #X connect 1 0 10 0;
 #X connect 2 0 12 0;
@@ -80,7 +82,7 @@
 #X connect 18 0 29 0;
 #X connect 21 0 3 0;
 #X connect 23 0 5 1;
-#X connect 24 0 4 1;
+#X connect 24 0 57 0;
 #X connect 25 1 49 0;
 #X connect 26 0 41 0;
 #X connect 29 0 30 0;
@@ -121,3 +123,7 @@
 #X connect 54 1 48 0;
 #X connect 55 0 56 0;
 #X connect 56 0 49 1;
+#X connect 57 0 58 0;
+#X connect 57 1 4 1;
+#X connect 58 0 4 1;
+#X connect 58 1 53 0;
