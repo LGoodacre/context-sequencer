@@ -1,5 +1,5 @@
-#N canvas 267 136 511 632 10;
-#N canvas 648 87 683 681 guts 0;
+#N canvas 261 136 511 632 10;
+#N canvas 642 87 683 681 guts 0;
 #X obj 95 168 route symbol;
 #X obj 95 146 cyclone/iter;
 #X obj 95 124 iemguts/canvasargs 1;
@@ -45,7 +45,7 @@
 #X obj 367 360 * 5;
 #X obj -114 57 receive -scaler;
 #X obj 291 226 ctxfiles/dvs \$0 scalebang;
-#X obj 30 429 symbol chromatic;
+#X obj 21 499 symbol chromatic;
 #X obj -114 79 spigot 1;
 #X obj -69 11 receive \$0-scalebong;
 #X obj 61 52 spigot;
@@ -63,6 +63,8 @@
 #X msg -69 33 0;
 #X obj -93 126 t b a;
 #X obj -93 224 s scalechange(((;
+#X obj 35 403 t f;
+#X obj 21 474 spigot 1;
 #X connect 0 0 3 0;
 #X connect 0 1 10 0;
 #X connect 1 0 0 0;
@@ -87,6 +89,7 @@
 #X connect 18 0 9 0;
 #X connect 19 0 20 0;
 #X connect 20 0 33 0;
+#X connect 21 0 62 0;
 #X connect 21 1 14 0;
 #X connect 21 3 2 0;
 #X connect 21 4 22 0;
@@ -98,7 +101,7 @@
 #X connect 27 1 25 0;
 #X connect 29 0 14 0;
 #X connect 29 1 1 0;
-#X connect 30 0 45 0;
+#X connect 30 0 63 0;
 #X connect 30 1 15 0;
 #X connect 31 0 32 0;
 #X connect 32 0 34 1;
@@ -136,6 +139,8 @@
 #X connect 59 0 46 1;
 #X connect 60 0 61 0;
 #X connect 60 1 38 0;
+#X connect 62 0 63 1;
+#X connect 63 0 45 0;
 #X restore 289 28 pd guts;
 #X obj 56 118 - 1;
 #X obj 56 315 mod 7;
