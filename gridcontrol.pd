@@ -2216,7 +2216,7 @@ back to mx;
 #X msg 140 128 click;
 #X obj 140 150 text define -k \$0-save;
 #A set \; %^ :f0 :s \; %^ :f1 :ss \; :f2 -send 1 \; :f3 -send 2 \;
-:f4 :u 1 \; %^ :f5 find \; :f6 :r 1 c 0 1 \; :f7 :r 1 c 0 2 \; %^ :qu
+:f4 :u \; %^ :f5 find \; :f6 :r 1 c 0 1 \; :f7 :r 1 c 0 2 \; %^ :qu
 0 \; %^ :gui 0 \; %^ :sa 1 \; :ac 1 \; %^ :m1 0 0 0 0 0 0 0 0
 \;;
 #X obj 151 227 receive \$0-:sa;
@@ -2425,7 +2425,7 @@ back to mx;
 #X connect 49 0 44 0;
 #X restore 430 319 pd shift-function;
 #X obj 666 133 inlet;
-#X obj 238 178 ctxfiles/s1 \$0 4 :u 1;
+#X obj 238 178 ctxfiles/s1 \$0 4 :u;
 #X connect 1 0 2 0;
 #X connect 28 0 27 0;
 #X connect 29 0 28 0;
