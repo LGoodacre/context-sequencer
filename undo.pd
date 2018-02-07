@@ -1,4 +1,4 @@
-#N canvas 273 89 1051 687 10;
+#N canvas 67 85 1299 683 10;
 #X obj 100 100 bng 12 250 50 0 \$0-bang \$0-label empty 14 7 0 8 -262144
 -1 -1;
 #X obj 356 124 ctxfiles/dvi \$0 3;
@@ -73,6 +73,8 @@
 #X obj 313 693 ctxfiles/dvs \$0 undone2;
 #X obj 356 146 ctxfiles/dv \$0 undo-no;
 #X obj 318 397 ctxfiles/dv \$0 yszz;
+#X obj 165 378 f \$1;
+#X obj 165 400 sel 0;
 #X connect 1 0 71 0;
 #X connect 2 0 3 0;
 #X connect 4 0 7 0;
@@ -113,6 +115,7 @@
 #X connect 36 0 19 1;
 #X connect 36 0 25 1;
 #X connect 37 0 45 0;
+#X connect 37 0 73 0;
 #X connect 38 0 39 0;
 #X connect 38 1 40 1;
 #X connect 39 0 40 0;
@@ -155,4 +158,6 @@
 #X connect 68 0 58 0;
 #X connect 71 0 4 0;
 #X connect 72 0 10 0;
+#X connect 73 0 74 0;
+#X connect 74 1 39 1;
 #X coords 0 -1 1 1 48 12 2 100 100;
