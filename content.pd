@@ -1,4 +1,4 @@
-#N canvas 626 229 677 503 10;
+#N canvas 406 166 677 503 10;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
 #X obj 1 4 cnv 3 47 21 empty \$0-block3 empty 2 3 0 8 -203904 -1 0
@@ -12,7 +12,7 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 171 -313 inlet;
-#N canvas 453 321 793 440 message 0;
+#N canvas 447 328 793 440 message 0;
 #X obj 343 17 inlet;
 #X obj 414 63 ctxfiles/recompile \$0;
 #X obj 137 78 cyclone/zl iter 1;
@@ -68,13 +68,6 @@
 -66577 0;
 #X obj 43 401 cnv 13 500 1 empty \$0-datagrid clear 18 -5 0 10 -13330
 -66577 0;
-#X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
-\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
-#f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
-#f s \$0-:bs \; #f s \$0-:p1 \; #f s \$0-:p2 \; #f s \$0-:p3 \; #f
-s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-printall \;
-#f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem \; #f s \$0-clearme
-\;;
 #X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
 #l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
 #f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
@@ -84,11 +77,20 @@ tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
 \$0 #f p2 0 \; :p3 tfs \$0 #f p3 0 \; :p4 tfs \$0 #f p4 0 \; :ed tfst
 \$0 #f ed 1 \, edit #l \; :as tfst \$0 #f as 1 \; print tf \$0 #f \;
 savelist tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0
-#f \; ## s \$0-othr;
+#f \; size tf \$0 #f \; ## s \$0-othr;
+#X obj 43 414 cnv 13 500 1 empty \$0-datagrid resize 18 -5 0 10 -13330
+-66577 0;
+#X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
+\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
+#f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
+#f s \$0-:bs \; #f s \$0-:p1 \; #f s \$0-:p2 \; #f s \$0-:p3 \; #f
+s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-printall \;
+#f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem \; #f s \$0-clearme
+\; #f s \$0-sizer;
 #X connect 0 0 3 0;
-#X connect 1 0 32 0;
-#X connect 1 1 32 1;
-#X connect 2 0 33 0;
+#X connect 1 0 34 0;
+#X connect 1 1 34 1;
+#X connect 2 0 32 0;
 #X connect 3 0 1 0;
 #X connect 3 1 2 0;
 #X connect 14 0 15 0;
@@ -171,7 +173,7 @@ context) if not.;
 #X connect 32 1 31 0;
 #X restore 214 -335 pd loadbang;
 #X obj 1 -210 s \$0-canvass;
-#N canvas 232 150 801 582 tabload 0;
+#N canvas 229 157 801 582 tabload 0;
 #X obj 401 433 soundfiler;
 #X obj 7 396 ctxfiles/sp 13;
 #X obj 401 456 s \$0-sizer;
@@ -416,7 +418,7 @@ context) if not.;
 #X connect 16 0 2 1;
 #X connect 17 0 2 0;
 #X restore 214 -313 pd creation;
-#N canvas 350 305 797 457 face 0;
+#N canvas 344 311 797 457 face 0;
 #X obj 101 125 cnv 15 219 70 empty \$0-cbox ARRAY 100 10 0 11 -204800
 -258113 0;
 #X obj 353 347 t b;
