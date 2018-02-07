@@ -1,4 +1,4 @@
-#N canvas 314 183 420 567 10;
+#N canvas 305 201 420 567 10;
 #X obj 33 22 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 27 16 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
@@ -15,27 +15,48 @@
 0;
 #X obj 32 159 cnv 15 345 379 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 53 186 context :H 28 :X 8 :Y 7 :a ' | | | gg ' :x = 2 :F 48
+#X obj 53 216 context :H 28 :X 8 :Y 7 :a ' | | | gg ' :x = 2 :F 48
 :Z 12 :ID 1 :ex ' clear ' :ol 1 4 obj 0 24 undo 4 obj 0 36 undo 4 obj
 0 48 undo 4 obj 0 60 undo;
-#X text 240 209 There are four undo objects here \, embedded in the
+#X text 240 239 There are four undo objects here \, embedded in the
 overlay., f 19;
-#X text 211 210 <--;
+#X text 211 240 <--;
 #X text 26 92 Undo tracks the changes that are made to Context and
 lets you undo them. Each Undo stores one chage \, but the more you
 create \, the more you can store. Undo must be created in the Overlay
 to function., f 51;
-#X text 47 317 Click on the toggles or change any other Context setting.
+#X text 47 337 Click on the toggles or change any other Context setting.
 Text will appear in the Context canvas--this is the Context state that
 you have just left. Click on the undo button to re-select that state.
 , f 45;
-#X text 45 410 See Manual Section 17 on how to create Undo and Section
+#X text 45 430 See Manual Section 17 on how to create Undo and Section
 8 for how to understand Context commands., f 45;
 #X obj 188 19 ctxfiles/license;
-#N canvas 67 87 450 125 argument 0;
+#N canvas 67 87 450 125 (subpatch) 0;
 #X text 38 23 [undo] can take one argument \, which is the buffer time
 in miliseconds. This determines how long [undo] will wait to receive
 new settings before it sets itself. It is only necessary to give the
 top [undo] an argument. The default of 200 ms will be selected if no
 argument is set.;
-#X restore 292 507 pd argument;
+#X restore 312 507 argument;
+#N canvas 561 148 450 300 undo 0;
+#X msg 48 142 undo;
+#X text 83 142 cycle through the given [undo] states;
+#X msg 112 180 undo 1;
+#X msg 112 202 undo 2;
+#X text 167 184 jump to a particular;
+#X text 47 50 Once [undo] is embedded \, you can control it using regular
+Context commands. There are three relavant commands \; -- undo \; --
+undo [x] \; -- undo -on [x];
+#X msg 145 244 undo -on 0;
+#X msg 145 264 undo -on 1;
+#X text 221 248 prevent/allow [undo] from receiveing new states, f
+31;
+#X obj 48 281 outlet;
+#X connect 0 0 9 0;
+#X connect 2 0 9 0;
+#X connect 3 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X restore 92 174 context undo command;
+#X connect 16 0 8 2;

@@ -8,7 +8,7 @@
 #X obj 413 191 + 1;
 #X obj 393 168 receive \$0-dvstart;
 #X obj 356 191 pack;
-#X obj 356 213 route 0;
+#X obj 356 235 route 0;
 #X msg 395 259 symbol \$1-\$2-uchain;
 #X obj 332 441 t f f;
 #X obj 245 485 s \$0-label;
@@ -21,9 +21,9 @@
 #X obj 280 693 send;
 #X obj 245 357 spigot;
 #X obj 395 284 iemguts/oreceive \$0-nop;
-#X obj 78 306 iemguts/oreceive \$0-nop;
-#X obj 78 261 t f f;
-#X obj 78 283 makefilename %i-undo-next;
+#X obj 78 282 iemguts/oreceive \$0-nop;
+#X obj 78 237 t f f;
+#X obj 78 259 makefilename %i-undo-next;
 #X obj 171 329 makefilename %i-save;
 #X obj 78 328 spigot;
 #X text 536 171 determine parent \$0;
@@ -46,9 +46,9 @@
 #X obj 141 188 spigot 1;
 #X obj 194 166 t f;
 #X obj 127 166 del 1020;
-#X obj -22 232 iemguts/canvasposition;
+#X obj -22 208 iemguts/canvasposition;
 #X msg -73 232 0 \$2;
-#X text -77 216 move to left margin on creation;
+#X text -77 192 move to left margin on creation;
 #X obj 245 398 route %^;
 #X obj 245 378 list trim;
 #X obj 639 562 f 1;
@@ -75,6 +75,16 @@
 #X obj 318 397 ctxfiles/dv \$0 yszz;
 #X obj 165 378 f \$1;
 #X obj 165 400 sel 0;
+#X msg 642 336 symbol \$2-\$1-undome;
+#X obj 642 358 iemguts/oreceive \$0b;
+#X obj 642 380 s \$0-label;
+#X text 783 345 set receive channel for "undo" message from host context
+;
+#X obj 356 213 t l l l;
+#X obj 220 68 iemguts/oreceive \$0b;
+#X obj 78 304 spigot 1;
+#X text 180 29 turn on or off from host context;
+#X msg 220 46 symbol \$2-undooff;
 #X connect 1 0 71 0;
 #X connect 2 0 3 0;
 #X connect 4 0 7 0;
@@ -82,7 +92,7 @@
 #X connect 5 0 16 0;
 #X connect 6 0 7 1;
 #X connect 6 0 17 1;
-#X connect 7 0 8 0;
+#X connect 7 0 79 0;
 #X connect 8 0 22 0;
 #X connect 8 1 9 0;
 #X connect 9 0 20 0;
@@ -98,7 +108,7 @@
 #X connect 17 0 31 0;
 #X connect 19 0 50 0;
 #X connect 20 0 19 0;
-#X connect 21 0 25 0;
+#X connect 21 0 81 0;
 #X connect 22 0 23 0;
 #X connect 22 1 24 0;
 #X connect 23 0 21 0;
@@ -160,4 +170,12 @@
 #X connect 72 0 10 0;
 #X connect 73 0 74 0;
 #X connect 74 1 39 1;
+#X connect 75 0 76 0;
+#X connect 76 0 77 0;
+#X connect 79 0 8 0;
+#X connect 79 1 83 0;
+#X connect 79 2 75 0;
+#X connect 80 0 81 1;
+#X connect 81 0 25 0;
+#X connect 83 0 80 0;
 #X coords 0 -1 1 1 48 12 2 100 100;
