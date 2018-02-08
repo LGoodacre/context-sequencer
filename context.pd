@@ -2,7 +2,7 @@
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 256 87 992 681 guts 0;
+#N canvas 241 87 992 681 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 553 87 795 681 names 0;
 #X msg 266 486 symbol  ;
@@ -3985,7 +3985,7 @@ b b b b f f f f, f 82;
 #X connect 12 0 9 0;
 #X connect 13 0 0 0;
 #X restore 551 102 pd seed;
-#N canvas 381 143 741 590 ID 0;
+#N canvas 378 150 741 590 ID 0;
 #X obj 248 200 + 1;
 #X obj 263 442 s \$0nnumber;
 #X obj 304 325 - 1;
@@ -4812,6 +4812,10 @@ b b b b f f f f, f 82;
 -13330 -66577 0;
 #X obj -56 1314 cnv 13 950 1 empty \$0-datagrid bs_mode 18 -5 0 10
 -13330 -66577 0;
+#X obj -56 1548 cnv 13 950 1 empty \$0-datagrid route 18 -5 0 10 -13330
+-66577 0;
+#X obj -56 1561 cnv 13 950 1 empty \$0-datagrid undo 18 -5 0 10 -13330
+-66577 0;
 #X obj 101 221 ctxfiles/br2 route 1 \; :H tf \$0 #f 0 \; ## \; :g tfst
 \$0 #f g 0 \, gui #l \, GUI #l \; :X tfs \$0 #f X 5 \; :Y tfs \$0 #f
 Y 4 \; :io tfs \$0 #f io bang \; :: tf \$0 #f \; :M tfst \$0 #f M 0
@@ -4848,12 +4852,14 @@ tf \$0 #f \; push tf \$0 #f \; find tf \$0 #f \; savelist tf \$0 #f
 \; fetch tf \$0 #f \; reset tf \$0 #f \; rev tf \$0 #f \; :NN tf \$0
 #f \; marker tf \$0 #f \; content tf \$0 #f \; -menu tf \$0 #f \; -overlay
 tf \$0 #f \; :ss tf \$0 #f \; :$ tf \$0 #f \; -delete tf \$0 #f \;
-loop tf \$0 #f \; -route tf \$0 #f \; undo tf \$0 #f \; . t \; ## s
-\$0-othr;
-#X obj -56 1548 cnv 13 950 1 empty \$0-datagrid route 18 -5 0 10 -13330
+loop tf \$0 #f \; -route tf \$0 #f \; undo tf \$0 #f \; copy tf \$0
+#f \; . t \; ## s \$0-othr;
+#X obj -56 1574 cnv 13 950 1 empty \$0-datagrid copy 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1561 cnv 13 950 1 empty \$0-datagrid undo 18 -5 0 10 -13330
--66577 0;
+#X obj 1016 272 receive \$0-copyme;
+#X text 1119 298 send copy command to shareables;
+#X obj 1016 294 t a b b;
+#X obj 1055 318 v \$0-parent;
 #X obj 578 222 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
 \; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
 s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
@@ -4878,7 +4884,8 @@ s \$0-:sx \; #f s \$0-:sy \; #f s \$0-:bs \; #f ev \$0 stop \; #f ev
 \; #f ev \$0 fetch \; #f ev \$0 reset \; #f ev \$0 rev \; #f ev \$0
 :NN \; #f ev \$0 marker \; #f ev \$0 content \; #f ev \$0 -menu \;
 #f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev \$0 :$ \; #f ev \$0 -delete
-\; #f ev \$0 loop \; #f ev \$0 -route \; #f ev \$0 undo;
+\; #f ev \$0 loop \; #f ev \$0 -route \; #f ev \$0 undo \; #f ev \$0
+copy;
 #X obj 729 249 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
 \; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
 :a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
@@ -4907,11 +4914,16 @@ s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
 \; reset s \$0-resett \; rev s \$0-revme \; ## \; marker s \$0-smarker
 \; content s \$0-ctntalk \; -menu s \$0-menuc \; -overlay s \$0-hacklist
 \; :ss s \$0-sos \; :$ s \$0-var$ \; -delete s \$0-deleteme \; loop
-s \$0-loopme \; -route s \$0-routeme \; undo s \$0-undoo;
+s \$0-loopme \; -route s \$0-routeme \; undo s \$0-undoo \; copy s
+\$0-copyme;
+#X obj 1055 340 s rthYJuk&U;
+#X obj 1035 363 v \$0nnumber;
+#X obj 1035 385 s dc&gkO9ID;
+#X obj 1016 413 s GG7HJ8I@;
 #X connect 0 0 117 1;
-#X connect 0 1 135 1;
+#X connect 0 1 140 1;
 #X connect 1 0 117 0;
-#X connect 1 1 135 0;
+#X connect 1 1 140 0;
 #X connect 2 0 6 0;
 #X connect 2 1 4 0;
 #X connect 3 0 1 0;
@@ -4921,14 +4933,14 @@ s \$0-loopme \; -route s \$0-routeme \; undo s \$0-undoo;
 #X connect 5 0 1 1;
 #X connect 5 0 2 1;
 #X connect 6 0 7 0;
-#X connect 7 0 132 0;
+#X connect 7 0 134 0;
 #X connect 8 0 9 0;
 #X connect 9 0 3 0;
 #X connect 9 1 103 0;
 #X connect 74 0 75 0;
 #X connect 75 0 76 0;
 #X connect 77 0 3 0;
-#X connect 93 0 136 0;
+#X connect 93 0 141 0;
 #X connect 93 1 94 0;
 #X connect 94 0 95 0;
 #X connect 96 0 97 0;
@@ -4938,6 +4950,12 @@ s \$0-loopme \; -route s \$0-routeme \; undo s \$0-undoo;
 #X connect 104 1 2 0;
 #X connect 106 0 2 0;
 #X connect 107 0 93 0;
+#X connect 136 0 138 0;
+#X connect 138 0 145 0;
+#X connect 138 1 143 0;
+#X connect 138 2 139 0;
+#X connect 139 0 142 0;
+#X connect 143 0 144 0;
 #X restore 69 238 pd data;
 #N canvas 65 97 1301 687 canvas 0;
 #X msg 266 79 obj \$1 0 outlet;
@@ -6530,7 +6548,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 109 0 110 0;
 #X connect 110 0 103 0;
 #X restore 552 391 pd rules;
-#N canvas 258 212 647 556 title 1;
+#N canvas 243 212 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
