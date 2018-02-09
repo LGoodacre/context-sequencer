@@ -1,0 +1,201 @@
+#N canvas 384 247 489 373 10;
+#X obj 20 19 cnv 15 202 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 15 14 cnv 15 202 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 16 15 cnv 15 200 40 empty empty command input 13 15 1 25 -98160
+-45076 0;
+#X obj 241 15 ctxfiles/license;
+#X text 19 81 The Context state \, ie. a given Context's settings \,
+is defined by a series of commands. These commands are detailed in
+'context_commands_all.pd' file and Manual section 8: Context Commands.
+, f 73;
+#X obj 69 201 cnv 15 132 102 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 63 196 cnv 15 132 102 empty empty basic 35 -12 0 18 -1 -1 0
+;
+#X obj 67 200 cnv 15 124 94 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 68 201 cnv 15 122 92 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 283 201 cnv 15 132 124 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 277 196 cnv 15 132 124 empty empty advanced 20 -12 0 18 -1 -1
+0;
+#X obj 281 200 cnv 15 124 94 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 282 201 cnv 15 122 112 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#N canvas 294 237 370 306 messages 0;
+#X obj 251 104 context :n ' me ' :ID 1;
+#X text 27 38 You can always send a command to a Context by sending
+a message to its inlets., f 37;
+#X msg 278 48 :c 12;
+#X text 27 107 Likewise \, you can send a message remotely to it via
+its ID number or tags., f 27;
+#X msg 43 169 \; c1 :c 13;
+#X msg 133 169 \; me :c 11;
+#X text 41 240 ADVANTAGES: quick and easy \; DISADVANTAGES: bothersome
+for repetitive tasks;
+#X connect 2 0 0 2;
+#X restore 72 205 sending messages;
+#N canvas 410 229 450 373 arguments 0;
+#X text 50 16 Commands can be entered as creation arguments. Create
+the object [context :X 12 :x 1 3 5 9 :F 60] below and see what happens.
+;
+#X text 47 243 The Context state is saved to the .pd file via the creation
+arguent. Generally the user doesn't have to worry about this \, but
+it is still important to know.;
+#X text 63 314 ADVANTAGES: lets you create the Context you want \;
+DISADVANTAGES: can't be edited once created;
+#X restore 72 227 creation arguments;
+#N canvas 350 91 450 529 (subpatch) 0;
+#X obj 167 121 context :ID 2;
+#X text 59 473 ADVANTAGES: you don't have to know the right command
+\; DISADVANTAGES: sometimes slower;
+#X text 61 20 Context has its own menu system which allows you to set
+(almost) all commands without having to worry know the command language.
+To access the menu \, right click on any Context and select 'properties'.
+To return to the normal view \, select 'properties' again \, or double
+click the button in the top-right.;
+#X text 65 271 There are four types of selectable options in the menu:
+;
+#X text 78 296 1: sub-menus. Clicking on these will select a new menu
+\; 2: selectors. Clicking on this will rotate through a series of options
+(usually just 'on' or 'off'.3: number input. The number box will be
+highlighted and you can select a numerical argument. \; 4: symbol input.
+The symbol box will be highlighted and you can type in textual input.
+, f 53;
+#X text 63 415 In adition \, every menu page has a help button at the
+bottom which will print information about the settings displayed on
+the current screen. Use it!;
+#N canvas 67 87 450 109 shortcuts 0;
+#X text 52 28 The home menu-screen has a "shortcuts" sub-menu. You
+can personalize these shortcuts by editing the file 'menu-shortcuts.txt'
+;
+#X restore 331 238 shortcuts;
+#X restore 72 249 menu;
+#N canvas 67 94 450 300 atom 0;
+#X obj 119 146 context :X 15 :Z 23 :ID 3;
+#X text 48 27 You can send a command to a context by typing into the
+symbol atom and pressing return. By you MUST start the text will a
+period (.) \, otherwise the text will modify the message database.
+;
+#X text 62 111 Click on the symbol atom \, type ' . :c 20 ' and hit
+return.;
+#X text 189 125 |;
+#X text 189 132 v;
+#X text 53 235 ADVANTAGES: often the quickest way of making a quick
+change \; DISADVANTAGES: you can't always see what you're typing,
+f 62;
+#X restore 72 271 symbol atom;
+#N canvas 67 101 450 361 object 0;
+#X obj 132 116 context :ID 4;
+#X obj 211 116 context :ID 5;
+#X text 50 234 ADVANTAGES: fast \, easy and fun \; DISADVANTAGES: the
+[click] object sometimes gets left in the way \, and multiple [click]
+objects can have unexpected consequences.;
+#X text 44 27 The [click] object lets you input commands with the mouse.
+Simply create a [click] object with any commands you want \, anywhere
+in the patch. Then \, hold down Control and Shift \, and click in the
+middle area of the Context you want to send the messages to. Voila!
+;
+#X obj 68 196 click :x 2 :x 4;
+#X text 41 309 See 'click-help.pd' for more details.;
+#X restore 286 205 click object;
+#N canvas 777 251 450 300 object 0;
+#X obj 162 99 preset :F 30 :c 9;
+#X text 55 273 See [preset-help.pd] for more details.;
+#X text 51 23 The [preset] object allows you to create a template for
+a specific patch. Place the object [preset] with any commands as arguments
+anywhere in the patch \, and any [context] you create will have those
+arguments. (If you give [context its own creation arguments \, [preset]
+will be ignored).;
+#X text 55 128 Create an object [context] below to see the effect of
+[preset];
+#X text 67 234 ADVANTAGES: Very helpful when creating a lot of Contexts
+\; DISADVANTAGES: only works within a given patch.;
+#X restore 286 227 preset object;
+#N canvas 697 256 450 354 command 0;
+#X text 40 17 :: is a special command used to indicate custom presets.
+These presets are simply other series of commands. For instance \,
+[context :: long] is short for [context :x = 1 2 3 4 5 6 7 8 9 10 11
+12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32] \,
+and has the obvious advantage that it is much easier to write.;
+#X text 39 109 :: must be given as the first argument \, and it must
+be followed by an identifier. You can see all of the given identifiers
+in 'load-presets.txt' \, and you can edit this file as well to create
+your own presets.;
+#X text 39 176 :: is especially useful with overlay Contexts. For instance
+\, create the object [context :: sample] below.;
+#X text 93 308 ADVANTAGES: customizable \; DISADVANTAGES: difficult
+to edit;
+#X restore 286 249 preset command ::;
+#N canvas 560 87 583 674 command 0;
+#X text 46 10 'copy' is a special command that lets you copy settings
+from one Context to others. You can copy some or all commands \, makign
+this a very powerful feature., f 80;
+#X obj 175 320 context :c 3 :d 1 :i 1 2 0 0 0 :x = 2 1 :ID 6;
+#X obj 277 320 context :c 6 :d 2 :i 0 0 3 4 0 :x = 4 3 :ID 7;
+#X obj 169 433 context :c 12 :d 3 :j 1 2 0 :y = 2 1 :ID 8;
+#X obj 280 435 context :c 16 :d 4 :i 0 0 0 0 4 :j 0 0 3 :x = 5 :y =
+3 :ID 9;
+#X msg 136 280 copy to 8 9 x i;
+#X msg 165 398 copy 9 c;
+#X msg 293 399 copy y j;
+#X msg 290 280 copy from 8 ~ ID c;
+#X text 59 61 The syntax for the 'copy' command has three parts \,
+all of which are optional \; \; 1: a 'from' or 'to' director \, indicating
+whether you want to copy commands from or to the chosen Context. If
+no director is specified \, 'to' is assumed. \; \; 2: A list of ID
+numbers you wish to copy from/to. If copying 'from' \, only the first
+number in the list will be regarded. Otherwise \, the commands will
+be copied to multiple Contexts. The case where no ID numbers are specified
+is explained below. \; \; 3: A list of commands that you wish to copy
+\, ie. 'x y i j'. You can include or ommit the colon. If no commands
+are specified \, all commands will be copied. If the arguments start
+with a tilde (~) \, then all commands apart from those listed will
+be copied (this is especially useful for ommitting the ID number).
+, f 78;
+#X text 47 268 copy :x and :i from 6 to 8 and 9, f 11;
+#X text 421 268 copy everything apart from :ID and :c from 8 to 7,
+f 18;
+#X text 61 393 copy :c from 8 to 9, f 11;
+#X text 376 394 special case (described below), f 17;
+#X obj 449 642 click copy;
+#X text 49 533 If no ID numbers are specified \, then the 'copy' command
+enters a special mode where it waits for you to select which Contexts
+to copy to/from. You can do this by sending further 'copy' messages
+to other Contexts within 1.5 seconds of the original 'copy' messages.
+Only the arguments from original message will be applied \; all arguments
+to subsequent messages are ignored. This function is specially designed
+for [gridcontrol] and [click]. In this example patch \, you can use
+click to copy all commands by holding down Shift and Control and clicking
+on Contexts., f 77;
+#X text 79 664 ADVANTAGES: dynamic \, fast \; DISADVANTAGES: complex
+syntax;
+#X connect 5 0 1 0;
+#X connect 6 0 3 0;
+#X connect 7 0 4 1;
+#X connect 8 0 2 1;
+#X restore 286 271 copy command;
+#X text 19 128 There are various ways of sending commands to Context
+\, all of which are detailed in this helpfile., f 73;
+#N canvas 578 180 450 334 keylist 0;
+#X obj 388 246 keylist;
+#X text 28 281 ADVANTAGES: lets you input data quickly with the keyboard
+only \; DISADVANTAGES: easy to forget, f 66;
+#X text 36 14 [keylist] lets you bind commands to a key combination.
+The command is any command you want \, typed in as creation arguments.
+The key combination is any letter key pressed down \, together with
+numerical input. [keylist] has to be placed in the Overlay in order
+to work.;
+#X text 30 245 See the 'keylist-help.pd' for information on how to
+use [keylist].;
+#X obj 65 165 context :H 6 :ID 10 :ol 1 8 obj 143 -13 keylist x **
+:X %;
+#X text 33 95 This Context has the object [keylist x ** :X %] saved
+in its overlay \, binding the :X command to the 'x' key. To see what
+it doesn \, hold down the 'x' key \, then type in a number (before
+letting go of 'x').;
+#X restore 286 293 pd keylist object;
