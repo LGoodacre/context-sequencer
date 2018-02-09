@@ -1,4 +1,4 @@
-#N canvas 792 325 450 300 10;
+#N canvas 789 332 450 300 10;
 #X obj 115 127 array define -k launchpadcolors## 30;
 #A 0 15 43 79 32 32 15 75 75 17 2 90 101 45 121 15 19 33 87 103 63
 101 101 80 46 51 69 64 47 71 71;
@@ -26,7 +26,7 @@
 0 27 28 49 220 253 84 118 251 185 150 152 255 139 98 255 64 64 64 116
 116 116 222 252 252 162 4 1 52 1 0 0 210 1 0 65 1 184 177 0 60 48 0
 180 93 0 76 19 0;
-#N canvas 267 326 740 442 messages 1;
+#N canvas 264 325 740 442 messages 0;
 #X obj 134 73 receive YYh&&8(v;
 #X obj 201 117 t b a;
 #X obj 327 163 ctxfiles/recompile \$0;
@@ -40,7 +40,7 @@
 #X obj 85 200 ctxfiles/br2 route 1 \; :f0 gtfs \$0 #f f0 :s \; :f1
 gtfs \$0 #f f1 :ss \; :f2 gtfs \$0 #f f2 -send 1 \; :f3 gtfs \$0 #f
 f3 -send 2 \; :f4 gtfs \$0 #f f4 :u \; :f5 gtfs \$0 #f f5 find \;
-:f6 gtfs \$0 #f f6 :r 1 c 0 1 \; :f7 gtfs \$0 #f f7 :r 1 c 0 2
+:f6 gtfs \$0 #f f6 :r 1 c 0 1 \; :f7 gtfs \$0 #f f7 copy ~ ID
 \; :qu gtfs \$0 #f qu 0 \, :quantize #l \; :gui gtfs \$0 #f gui 0 \,
 :GUI #l \; :sa gtfs \$0 #f sa 1 \; :ac gtfs \$0 #f ac 0 \; :m1 gtfs
 \$0 #f m1 0 0 0 0 0 0 0 0 \; ## s \$0-othr;
