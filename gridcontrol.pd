@@ -1,14 +1,14 @@
 #N canvas 67 376 849 392 10;
 #X declare -stdlib iemmatrix -lib iemmatrix;
 #X declare -stdlib zexy -lib zexy;
-#N canvas 374 237 974 495 move 0;
-#X obj 115 100 bng 15 250 50 0 \$0v empty v 5 7 0 10 -262144 -1 -1
+#N canvas 371 244 974 495 move 0;
+#X obj 115 100 bng 15 250 50 0 \$0v empty ▼ 5 7 0 10 -262144 -1 -1
 ;
-#X obj 100 100 bng 15 250 50 0 \$0^ empty ^ 5 10 0 10 -262144 -1 -1
+#X obj 100 100 bng 15 250 50 0 \$0^ empty ▲ 5 6 0 10 -262144 -1 -1
 ;
-#X obj 145 100 bng 15 250 50 0 \$0> empty > 5 7 0 10 -262144 -1 -1
+#X obj 145 100 bng 15 250 50 0 \$0> empty ▶ 6 7 0 11 -262144 -1 -1
 ;
-#X obj 130 100 bng 15 250 50 0 \$0< empty < 5 7 0 10 -262144 -1 -1
+#X obj 130 100 bng 15 250 50 0 \$0< empty ◀ 4 7 0 11 -262144 -1 -1
 ;
 #X obj 59 183 f;
 #X obj 91 183 f 1;
