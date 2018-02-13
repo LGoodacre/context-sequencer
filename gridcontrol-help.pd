@@ -1,6 +1,6 @@
-#N canvas 221 202 949 560 10;
+#N canvas 218 208 949 560 10;
 #X obj 9 485 ctxfiles/license;
-#N canvas 328 243 824 371 grid 0;
+#N canvas 325 250 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 922 21 t b f f;
@@ -287,13 +287,11 @@ This helpfile serves as a quick-reference and start guide., f 36;
 -1;
 #X obj 602 372 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 567 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 580 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 552 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 565 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 583 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 538 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 551 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 721 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -308,72 +306,73 @@ press the up and down (or left and right) buttons on the Launchpad
 together.;
 #X obj 384 135 outlet;
 #X restore 739 224 on-off;
-#N canvas 369 143 450 241 (subpatch) 0;
-#X text 14 21 Mode 0 gives you a bird's-eye-view of all of the Contexts
-open in the patch. In mode 0 \, each Launchpad cell corresponds to
+#N canvas 366 150 450 241 (subpatch) 0;
+#X obj 384 212 outlet;
+#X text 14 21 Mode 1 gives you a bird's-eye-view of all of the Contexts
+open in the patch. In mode 1 \, each Launchpad cell corresponds to
 one Context \, matching its position and colour. Clicking on a coloured
 cell starts that Context \, or performs some other function \, depending
 on the Function Selectors.;
-#X text 14 114 If the Function Selector is set to '-send 1' or '-send
-2' \, clicking on a cell in mode 0 will forward it to mode 1 or mode
-2;
-#X text 13 165 You can also use mode 0 to record data into a Context
+#X text 14 114 If the Function Selector is set to '-send 2' or '-send
+3' \, clicking on a cell in mode 1 will forward it to mode 2 or mode
+3;
+#X text 13 165 You can also use mode 1 to record data into a Context
 by tapping on the cell. The Function Selector must be set to :r for
 this to work.;
-#X obj 384 212 outlet;
-#X restore 515 198 mode-0;
+#X restore 515 198 mode-1;
 #X text 378 106 Note: It only makes sense to use [gridcontrol] if you
 have a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
 However \, the [gridcontrol] patch contains a fully functional mockup
 of the controller \, so this help-file will work even with no MIDI
 hardware., f 72;
-#N canvas 65 85 450 265 (subpatch) 0;
-#X text 15 13 Mode 1 lets you edit the toggles of a select group of
+#N canvas 67 99 450 265 (subpatch) 0;
+#X obj 378 238 outlet;
+#X text 15 13 Mode 2 lets you edit the toggles of a select group of
 Contexts. The group selected for editing is defined using the "-send
-1" Function in mode 0 In mode 1 \, each row of cells corresponds to
+2" Function in mode 1 In mode 2 \, each row of cells corresponds to
 the toggle array from a specific Context. You can turn them on and
 off by clicking on the cells \, and scroll using the Position Selectors
 if need be.;
-#X text 14 158 In Mode 1 \, the Function Selector is used to start
+#X text 15 104 By default \, mode 2 lets you edit the x-axis toggles.
+To switch to the y-axis \, double click the mode 2 selector button
+("User 2").;
+#X text 14 158 In Mode 2 \, the Function Selector is used to start
 the given Context. It can also be used to send other commands \, if
 you use the Function Selector in the [gridcontrol] abstraction \, rather
 than on the Launcpad itself. This is the only instance where the behaviour
 of the patch differs from the behaviour of the hardware.;
-#X text 15 104 By default \, mode 1 lets you edit the x-axis toggles.
-To switch to the y-axis \, double click the mode 1 selector button
-("User 1").;
-#X obj 378 238 outlet;
-#X restore 544 223 mode-1;
-#N canvas 65 85 450 210 (subpatch) 0;
-#X text 11 14 Mode 2 lets you edit the toggle floats of a single Context.
-The Context selected for editing is defined by the "-send 2" Function
-Command in mode 0 Alternatively \, the last Context clicked on in mode
-1 will be selected for editing in mode 2;
-#X text 11 82 In mode 2 \, the x-axis corresponds to a given toggle
+#X restore 544 223 mode-2;
+#N canvas 67 92 450 210 (subpatch) 0;
+#X obj 384 181 outlet;
+#X text 11 14 Mode 3 lets you edit the toggle floats of a single Context.
+The Context selected for editing is defined by the "-send 3" Function
+Command in mode 1 . Alternatively \, the last Context clicked on in
+mode 2 will be selected for editing in mode 3;
+#X text 11 82 In mode 3 \, the x-axis corresponds to a given toggle
 from the selected Context \, while the y-axis corresponds to its toggle
 float value. You can change the value of any toggle by clicking on
 an empty cell \, or turn a toggle off by clicking on a lit cell. By
-default. mode 2 lets you edit the x-axis toggles. You can flip to y-axis
-by double clicking on the mode 2 selector button.;
-#X obj 384 181 outlet;
-#X restore 574 247 mode-2;
-#N canvas 65 85 450 257 (subpatch) 0;
-#X obj 380 232 outlet;
-#X text 9 16 Mode 3 \, mixer mode \, doesn't relate to Context \, but
+default. mode 3 lets you edit the x-axis toggles. You can flip to y-axis
+by double clicking on the mode 3 selector button ("Mixer").;
+#X restore 574 247 mode-3;
+#N canvas 67 99 425 296 (subpatch) 0;
+#X text 9 16 Mode 4 \, Mixer mode \, doesn't relate to Context \, but
 to [slide] and [slide2]. It enables you to control the sliders in a
 custom mixer abstraction using the Launchpad. The abstraction must
 have the [pgrid] object placed in it \, along with [slide] and/or [slide2].
 An example patch is included in this file to help you. You can use
 [gridcontrol] to control multiple such patches by double clicking on
 the "Mixer" button.;
-#X text 12 135 In Mixer mode \, you will see as many vertical virtual
-faders as there are [slide]/[slide2] objects in the abstraction. Clicking
-on a new cell moves the given slider up or down in a certain time perdiod.
-The time perdiod is defined by the Function Selector \, and is longer
-the higher up you go (starting at one millisecond \, ending at ~30
-seconds). Clicking on the selected Function Selector again halts the
-motion.;
-#X restore 599 275 mode-3;
+#X text 12 135 To enter Mover mode \, simply click on the [pgrid] "bang"
+open in the [slide]/[slide2] abstraction (an instance of [gridcontrol]
+must be present in the same patch in order for this to work). In Mixer
+mode \, you will see as many vertical virtual faders as there are [slide]/[slide2]
+objects in the abstraction. Clicking on a new cell moves the given
+slider up or down in a certain time perdiod. The time perdiod is defined
+by the Function Selector \, and is longer the higher up you go (starting
+at one millisecond \, ending at ~30 seconds). Clicking on the selected
+Function Selector again halts the motion.;
+#X restore 599 275 mode-4;
 #N canvas 65 81 450 161 (subpatch) 0;
 #X obj 381 131 outlet;
 #X text 9 15 The position selectors are used to scroll if the grid
@@ -385,21 +384,19 @@ different instances of [gridcontrol] in different patches. To do this
 \, click on both the up and down (or left and right) buttons together.
 ;
 #X restore 357 231 position-selectors;
-#N canvas 406 155 450 180 (subpatch) 0;
-#X text 13 14 The function selectors work differently depending on
-the mode. In mode 0 \, they are used to set the message that will be
-sent to a Context by clicking on it. In mode 1 \, they are used to
-send a start (or other) message to Context. In mode 2 \, they have
-the same assignments as in mode 0 \, but send to the selected Context
-immediately when pressed. In mode 3 they determine the time duration
-for the slider movement.;
+#N canvas 403 162 450 180 (subpatch) 0;
 #X text 14 117 Function selectors each have a default message \, which
 is visible in the [gridcontrol] patch. You can also edit the message
 by typing into the symbol atom.;
 #X obj 377 157 outlet;
+#X text 13 14 The function selectors work differently depending on
+the mode. In mode 1 \, they are used to set the message that will be
+sent to a Context by clicking on it. In mode 2 \, they are used to
+send a start (or other) message to Context. In mode 3 \, they have
+the same assignments as in mode 1 \, but send to the selected Context
+immediately when pressed. In mode 4 they determine the time duration
+for the slider movement.;
 #X restore 774 336 function-selectors;
-#X obj 474 315 gridcontrol :f2 -send 1 :f3 -send 2 :f6 :r 1 c 0 1 :f7
-:r 1 c 0 2;
 #N canvas 65 81 450 105 (subpatch) 0;
 #X text 16 6 With quantize turned on \, any :s or :ss command send
 by [gridcontrol] will snap to either the previous or the next beat.
@@ -407,7 +404,7 @@ In order to achieve this \, [gridcontrol] must be given the beat. This
 is dome from its inlet in the top-left corner.;
 #X obj 387 63 outlet;
 #X restore 681 195 quantize;
-#N canvas 839 325 450 287 arguments 0;
+#N canvas 836 332 450 287 arguments 0;
 #X text 22 17 [gridcontrol] has a few commands which can be sent to
 it through creation arguments. It also uses these commands to save
 custom Function Selector messages (this happens automatically).;
@@ -420,7 +417,7 @@ section of the GUI off \; :gui -1 turn the GUI completely off (-1)
 sensing on* \; :f0 -- assign a message to the first function selector
 \; ... \; :f7 -- assign a message to the eighth function selector;
 #X restore 498 494 creation arguments;
-#N canvas 411 141 450 269 keys 0;
+#N canvas 408 148 450 323 keys 0;
 #X text 40 22 Each cell has an alternate function which can be activated
 with the keyboard's Shift key.;
 #X text 64 62 --The control row along the top and the right (ie. the
@@ -431,15 +428,33 @@ will be stored and sent simmultaneously when you release the Shift
 key., f 54;
 #X text 41 172 Notice that these funcions work irrespective of which
 mode you are in \, so the results will differ from mode to mode. In
-mode 0 \, the shift functions will help you start multiple Contexts
-at once. In mode 1 \, it will help you alter multiple toggles at once
+mode 1 \, the shift functions will help you start multiple Contexts
+at once. In mode 2 \, it will help you alter multiple toggles at once
 \, etc.;
+#X text 40 244 In mode 3 \, holding down the "c" key lets you select
+toggle-float connections ("c-numbers") instead of regular toggle floats.
+;
 #X restore 633 494 shift keys;
-#X connect 17 0 16 0;
-#X connect 18 0 15 0;
-#X connect 20 0 13 0;
-#X connect 21 0 12 0;
-#X connect 22 0 14 0;
-#X connect 23 0 9 0;
-#X connect 24 0 11 0;
-#X connect 26 0 10 0;
+#X obj 537 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 474 315 gridcontrol :f2 -send 1 :f3 -send 2 :f6 :r 1 c 0 1 :f7
+:r 1 c 0 2 :ac 1 :m1 0 0 0 0 0 0 0 0 0 0;
+#N canvas 67 87 450 209 mode-0 0;
+#X obj 382 171 outlet;
+#X text 36 17 Mode 0 lets you jump to a difference instance of [gridcontrol]
+and a different patch. This is only useful if you have more than one
+instance of [gridcontrol] open at once. In mode 0 \, each cell corresponds
+to one instance of [gridcontrol]. The colour is that of the Context
+in the top-left hand corner of that [gridcontrol]'s patch. Clicking
+on that cell will jump to the given patch. Mode 0 is the same in every
+instance of [gridcontrol] that is open \, so it doesn't make any difference
+where you summon it from.;
+#X restore 475 173 mode-0;
+#X connect 16 0 15 0;
+#X connect 17 0 14 0;
+#X connect 19 0 13 0;
+#X connect 20 0 12 0;
+#X connect 22 0 9 0;
+#X connect 23 0 11 0;
+#X connect 24 0 10 0;
+#X connect 29 0 27 0;
