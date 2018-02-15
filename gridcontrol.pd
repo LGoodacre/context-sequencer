@@ -1,7 +1,7 @@
 #N canvas 67 376 849 392 10;
 #X declare -stdlib iemmatrix -lib iemmatrix;
 #X declare -stdlib zexy -lib zexy;
-#N canvas 309 173 974 495 move 0;
+#N canvas 300 194 974 495 move 0;
 #X obj 115 100 bng 15 250 50 0 \$0v empty ▼ 5 7 0 10 -262144 -1 -1
 ;
 #X obj 100 100 bng 15 250 50 0 \$0^ empty ▲ 5 6 0 10 -262144 -1 -1
@@ -187,7 +187,7 @@ control, f 34;
 #X obj 594 538 t f b f;
 #X obj 782 140 s \$0-righton;
 #X obj 43 20 sel 104 105 106 107;
-#X obj 160 63 - 108;
+#X obj 160 79 - 108;
 #X obj 147 339 s \$0-ushift-3;
 #X obj 367 340 s \$0-lshift-3;
 #X obj 916 575 tabread \$0-mode;
@@ -277,6 +277,8 @@ with the movement thresholds \, return the bang.;
 #X obj 28 359 s \$0-ushift-0;
 #X obj 454 9 t b b f f f f f b f f f f f f f f f f f;
 #X obj 549 131 s \$0-mafter;
+#X obj 170 44 moses 108;
+#X obj 221 66 moses 112;
 #X connect 0 0 128 0;
 #X connect 1 0 129 0;
 #X connect 2 0 130 0;
@@ -392,7 +394,7 @@ with the movement thresholds \, return the bang.;
 #X connect 105 1 0 0;
 #X connect 105 2 3 0;
 #X connect 105 3 2 0;
-#X connect 105 4 106 0;
+#X connect 105 4 194 0;
 #X connect 106 0 27 0;
 #X connect 109 0 110 0;
 #X connect 110 0 111 0;
@@ -526,6 +528,8 @@ with the movement thresholds \, return the bang.;
 #X connect 192 16 169 0;
 #X connect 192 17 116 0;
 #X connect 192 18 174 5;
+#X connect 194 1 195 0;
+#X connect 195 0 106 0;
 #X coords 0 -1 1 1 120 15 2 100 100;
 #X restore 100 100 pd move;
 #X obj 572 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
