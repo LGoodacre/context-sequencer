@@ -1,4 +1,4 @@
-#N canvas 552 266 450 298 10;
+#N canvas 546 280 450 298 10;
 #X obj 115 127 array define -k launchpadcolors## 30;
 #A 0 15 43 79 32 32 15 75 75 17 2 90 101 45 121 15 19 33 87 103 63
 101 101 80 46 51 69 64 47 71 71;
@@ -26,7 +26,7 @@
 0 27 28 49 220 253 84 118 251 185 150 152 255 139 98 255 64 64 64 116
 116 116 222 252 252 162 4 1 52 1 0 0 210 1 0 65 1 184 177 0 60 48 0
 180 93 0 76 19 0;
-#N canvas 273 230 740 538 messages 0;
+#N canvas 270 230 740 538 messages 0;
 #X obj 134 73 receive YYh&&8(v;
 #X obj 201 117 t b a;
 #X obj 311 164 ctxfiles/recompile \$0;
@@ -109,7 +109,7 @@ gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
 #X connect 14 1 1 1;
 #X connect 15 0 0 0;
 #X restore 308 237 pd select;
-#N canvas 372 230 663 300 mode--1 0;
+#N canvas 369 237 663 300 mode--1 0;
 #X obj 275 65 receive FFgBv^^&&;
 #X obj 383 133 + 1;
 #X obj 383 155 max;
@@ -146,5 +146,17 @@ gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
 #X connect 12 1 14 1;
 #X connect 12 2 1 0;
 #X restore 344 157 pd mode--1;
+#N canvas 67 87 450 300 scales 0;
+#X obj 231 44 receive RRfBB%6;
+#X msg 231 113 read scales.txt;
+#X obj 231 138 text define gridscales%%;
+#X obj 231 66 spigot 1;
+#X obj 231 88 t b f;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
+#X connect 4 1 3 1;
+#X restore 386 202 pd scales;
 #X connect 2 0 3 0;
 #X connect 4 0 2 0;
