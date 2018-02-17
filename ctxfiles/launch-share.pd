@@ -1,4 +1,4 @@
-#N canvas 765 388 450 300 10;
+#N canvas 552 266 450 298 10;
 #X obj 115 127 array define -k launchpadcolors## 30;
 #A 0 15 43 79 32 32 15 75 75 17 2 90 101 45 121 15 19 33 87 103 63
 101 101 80 46 51 69 64 47 71 71;
@@ -26,30 +26,47 @@
 0 27 28 49 220 253 84 118 251 185 150 152 255 139 98 255 64 64 64 116
 116 116 222 252 252 162 4 1 52 1 0 0 210 1 0 65 1 184 177 0 60 48 0
 180 93 0 76 19 0;
-#N canvas 261 326 740 442 messages 0;
+#N canvas 273 230 740 538 messages 0;
 #X obj 134 73 receive YYh&&8(v;
 #X obj 201 117 t b a;
-#X obj 327 163 ctxfiles/recompile \$0;
+#X obj 311 164 ctxfiles/recompile \$0;
 #X obj 85 178 cyclone/zl iter 1;
 #X msg 320 30 symbol  ;
 #X obj 134 95 route bang;
-#X obj 327 186 ctxfiles/br2 demux 2 \; #f t \; #f gs :f0 \; #f gs :f1
-\; #f gs :f2 \; #f gs :f3 \; #f gs :f4 \; #f gs :f5 \; #f gs :f6 \;
-#f gs :f7 \; #f gs :qup \; #f gs :gui \; #f gs :sa \; #f gs :ac \;
-#f gs :m1;
-#X obj 85 200 ctxfiles/br2 route 1 \; :f0 gtfs \$0 #f f0 :s \; :f1
-gtfs \$0 #f f1 :ss \; :f2 gtfs \$0 #f f2 -send 2 \; :f3 gtfs \$0 #f
-f3 -send 3 \; :f4 gtfs \$0 #f f4 :u \; :f5 gtfs \$0 #f f5 find \;
-:f6 gtfs \$0 #f f6 :r 1 c 0 1 \; :f7 gtfs \$0 #f f7 copy ~ ID
-\; :qu gtfs \$0 #f qu 0 \, :quantize #l \; :gui gtfs \$0 #f gui 0 \,
-:GUI #l \; :sa gtfs \$0 #f sa 1 \; :ac gtfs \$0 #f ac 0 \; :m1 gtfs
-\$0 #f m1 0 0 0 0 0 0 0 0 \; ## s \$0-othr;
+#X obj 85 199 ctxfiles/br2 route 1 \; :1f0 gtfs \$0 #f 1f0 :s \; :1f1
+gtfs \$0 #f 1f1 :ss \; :1f2 gtfs \$0 #f 1f2 -send 2 \; :1f3 gtfs \$0
+#f 1f3 -send 3 \; :1f4 gtfs \$0 #f 1f4 :u \; :1f5 gtfs \$0 #f 1f5
+find \; :1f6 gtfs \$0 #f 1f6 :r 1 c 0 1 \; :1f7 gtfs \$0 #f 1f7
+copy ~ ID \; :2f0 gtfs \$0 #f 2f0 :s \; :2f1 gtfs \$0 #f 2f1 :ss
+\; :2f2 gtfs \$0 #f 2f2 -send 2 \; :2f3 gtfs \$0 #f 2f3 -send 3 \;
+:2f4 gtfs \$0 #f 2f4 :u \; :2f5 gtfs \$0 #f 2f5 find \; :2f6 gtfs \$0
+#f 2f6 :r 1 c 0 1 \; :2f7 gtfs \$0 #f 2f7 copy ~ ID \; :3f0 gtfs
+\$0 #f 3f0 chromatic \; :3f1 gtfs \$0 #f 3f1 major \; :3f2 gtfs \$0
+#f 3f2 minor \; :3f3 gtfs \$0 #f 3f3 pentatonic major \; :3f4 gtfs
+\$0 #f 3f4 pentatonic minor \; :3f5 gtfs \$0 #f 3f5 blues major \;
+:3f6 gtfs \$0 #f 3f6 blues minor \; :3f7 gtfs \$0 #f 3f7 custom1 \;
+:4f0 gtfs \$0 #f 4f0 120000 \; :4f1 gtfs \$0 #f 4f1 60000 \; :4f2 gtfs
+\$0 #f 4f2 30000 \; :4f3 gtfs \$0 #f 4f3 10000 \; :4f4 gtfs \$0 #f
+4f4 3000 \; :4f5 gtfs \$0 #f 4f5 1000 \; :4f6 gtfs \$0 #f 4f6 500 \;
+:4f7 gtfs \$0 #f 4f7 1 \; :qu gtfs \$0 #f qu 0 \, :quantize #l \; :gui
+gtfs \$0 #f gui 0 \, :GUI #l \; :sa gtfs \$0 #f sa 1 \; :ac gtfs \$0
+#f ac 0 \; :m1 gtfs \$0 #f m1 0 0 0 0 0 0 0 0 \; ## s \$0-othr
+;
+#X obj 311 187 ctxfiles/br2 demux 2 \; #f t \; #f gs :1f0 \; #f gs
+:1f1 \; #f gs :1f2 \; #f gs :1f3 \; #f gs :1f4 \; #f gs :1f5 \; #f
+gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
+#f gs :2f3 \; #f gs :2f4 \; #f gs :2f5 \; #f gs :2f6 \; #f gs :2f7
+\; #f gs :3f0 \; #f gs :3f1 \; #f gs :3f2 \; #f gs :3f3 \; #f gs :3f4
+\; #f gs :3f5 \; #f gs :3f6 \; #f gs :3f7 \; #f gs :4f0 \; #f gs :4f1
+\; #f gs :4f2 \; #f gs :4f3 \; #f gs :4f4 \; #f gs :4f5 \; #f gs :4f6
+\; #f gs :4f7 \; #f gs :qup \; #f gs :gui \; #f gs :sa \; #f gs :ac
+\; #f gs :m1 \;;
 #X connect 0 0 5 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
-#X connect 2 0 6 0;
-#X connect 2 1 6 1;
-#X connect 3 0 7 0;
+#X connect 2 0 7 0;
+#X connect 2 1 7 1;
+#X connect 3 0 6 0;
 #X connect 5 1 1 0;
 #X restore 301 215 pd messages;
 #N canvas 259 204 475 399 select 0;
