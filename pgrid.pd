@@ -1,4 +1,4 @@
-#N canvas 669 98 682 670 10;
+#N canvas 663 98 682 670 10;
 #X obj 100 100 bng 15 250 50 0 \$0-bangs \$0-bangr 0 5 7 0 10 -262144
 -1 -1;
 #X obj 79 304 iemguts/canvasdollarzero 1;
@@ -37,8 +37,8 @@
 #X text 407 68 send an "on" message to the last used gridcontrol \,
 and send then try again with the mode4 message \, unless I recive a
 "d0" message from some gridcontrol.;
-#X msg 498 199 \; \$1-masteron&& 1;
 #X obj 471 155 t b b;
+#X msg 498 199 \; \$1-masteron&&2 1;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
 #X connect 3 0 7 0;
@@ -73,14 +73,14 @@ and send then try again with the mode4 message \, unless I recive a
 #X connect 24 0 22 0;
 #X connect 25 0 32 0;
 #X connect 26 0 29 0;
-#X connect 28 0 35 0;
+#X connect 28 0 36 0;
 #X connect 29 0 27 0;
 #X connect 30 0 31 1;
-#X connect 31 0 36 0;
+#X connect 31 0 35 0;
 #X connect 32 0 31 0;
 #X connect 32 1 26 0;
 #X connect 32 2 33 0;
 #X connect 33 0 31 1;
-#X connect 36 0 26 0;
-#X connect 36 1 28 0;
+#X connect 35 0 26 0;
+#X connect 35 1 28 0;
 #X coords 0 -1 1 1 15 15 2 100 100;
