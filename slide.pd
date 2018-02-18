@@ -1,4 +1,4 @@
-#N canvas 67 145 943 594 10;
+#N canvas 67 152 943 594 10;
 #X obj 100 -100 vsl 18 101 0 100 0 0 \$0-ls \$0-lr 0 1 100 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;
@@ -48,7 +48,7 @@
 #X obj 587 -143 f \$8;
 #X obj 587 -120 moses 1;
 #X obj 325 267 f;
-#X obj 325 300 line 0 100;
+#X obj 325 370 line 0 100;
 #X obj 291 236 t l b;
 #X text 123 -209 ARGS: label & send \, relative receive \, group name
 \, min \, max \, lin/exp \, clip override \, line-grain, f 78;
@@ -82,6 +82,9 @@
 #X obj 853 73 * 21.7;
 #X obj 826 27 demux;
 #X obj 826 109 s \$0-gridls;
+#X obj 352 314 log 10;
+#X obj 352 336 * 21.7;
+#X obj 325 290 demux;
 #X connect 2 0 29 0;
 #X connect 2 0 33 0;
 #X connect 2 0 43 0;
@@ -128,6 +131,7 @@
 #X connect 37 5 25 1;
 #X connect 37 5 71 1;
 #X connect 37 5 76 1;
+#X connect 37 5 80 1;
 #X connect 37 6 38 1;
 #X connect 38 0 39 0;
 #X connect 38 1 13 0;
@@ -136,7 +140,7 @@
 #X connect 42 0 18 0;
 #X connect 43 0 44 0;
 #X connect 44 1 46 2;
-#X connect 45 0 46 0;
+#X connect 45 0 80 0;
 #X connect 46 0 71 0;
 #X connect 47 0 46 0;
 #X connect 47 1 45 0;
@@ -179,4 +183,8 @@
 #X connect 75 0 77 0;
 #X connect 76 0 77 0;
 #X connect 76 1 74 0;
+#X connect 78 0 79 0;
+#X connect 79 0 46 0;
+#X connect 80 0 46 0;
+#X connect 80 1 78 0;
 #X coords 0 -1 1 1 18 106 2 100 -102;

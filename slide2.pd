@@ -1,4 +1,4 @@
-#N canvas 127 218 1090 550 10;
+#N canvas 124 218 1090 550 10;
 #X obj 100 -100 vsl 23 101 0 100 0 0 \$0-ls \$0-lr 0 1 90 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;
@@ -51,13 +51,13 @@
 #X obj 568 229 demux;
 #X obj 612 259 outlet;
 #X obj 100 4 num \$2 \$3 0 3 2;
-#X obj 778 215 line 0 100;
+#X obj 778 245 line 0 100;
 #X obj 587 -143 f \$8;
 #X obj 587 -120 moses 1;
 #X text 123 -209 ARGS: label & send \, relative receive \, group name
 \, min \, max \, lin/exp \, clip override \, line-grain, f 78;
-#X obj 777 154 t l b;
-#X obj 804 186 f;
+#X obj 777 134 t l b;
+#X obj 804 156 f;
 #X obj 736 -86 s \$3-start;
 #X obj 736 -166 route \$2;
 #X obj 736 -142 route float;
@@ -79,7 +79,7 @@
 #X obj 756 453 v \$0-ls;
 #X obj 756 498 send;
 #X obj 756 475 pack f \$0;
-#X obj 796 122 receive \$0-fromgrid;
+#X obj 796 112 receive \$0-fromgrid;
 #X obj 811 61 receive \$0-stopslide;
 #X msg 811 84 stop;
 #X obj 480 273 pow;
@@ -92,6 +92,9 @@
 #X obj 987 125 demux;
 #X obj 987 207 s \$0-gridls;
 #X obj 515 -16 t b f f f b f f;
+#X obj 831 201 log 10;
+#X obj 831 223 * 21.7;
+#X obj 804 177 demux;
 #X connect 2 0 30 0;
 #X connect 2 0 34 0;
 #X connect 2 0 50 0;
@@ -141,6 +144,7 @@
 #X connect 38 5 26 1;
 #X connect 38 5 81 1;
 #X connect 38 5 85 1;
+#X connect 38 5 90 1;
 #X connect 38 6 39 1;
 #X connect 39 0 40 0;
 #X connect 39 1 13 0;
@@ -159,7 +163,7 @@
 #X connect 51 1 49 2;
 #X connect 53 0 49 0;
 #X connect 53 1 54 0;
-#X connect 54 0 49 0;
+#X connect 54 0 90 0;
 #X connect 56 0 57 0;
 #X connect 57 0 22 0;
 #X connect 57 1 53 0;
@@ -205,4 +209,8 @@
 #X connect 87 4 23 0;
 #X connect 87 5 54 1;
 #X connect 87 6 85 0;
+#X connect 88 0 89 0;
+#X connect 89 0 49 0;
+#X connect 90 0 49 0;
+#X connect 90 1 88 0;
 #X coords 0 -1 1 1 23 120 2 100 -102;
