@@ -1,4 +1,4 @@
-#N canvas 475 188 621 354 10;
+#N canvas 463 216 567 354 10;
 #X obj 319 24 ctxfiles/license;
 #X obj 26 28 cnv 15 282 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -10,36 +10,51 @@
 #X obj 95 255 context :ID 2;
 #X obj 164 255 context :ID 3;
 #X obj 235 255 context :ID 4;
-#X obj 24 185 context :H 6 :ID 5 :ol 1 8 obj 316 55 crossreference
-1 2 3 4;
-#X text 90 224 <-- change toggles and toggle floats here to see the
-effect of [crossrefernce], f 80;
-#N canvas 67 87 450 300 arguments 0;
-#X text 33 28 [crossreference] takes ID numbers as arguments. Ie. if
-you want to connect this Context's toggles to Contexts 4 5 and 6 \,
-you would create an object [crossreference 4 5 6] in the overlay.;
-#X text 33 103 Additional arguments are \; \; y -- crossreference the
+#X obj 24 185 context :H 6 :ID 5 :ol 1 10 obj 316 55 crossreference
+1 \; 1 2 3 4;
+#N canvas 67 94 450 300 arguments 0;
+#X text 42 127 Additional arguments are \; \; y -- crossreference the
 y-axis instead of the x-axis \; \; -n -- prevent the referenced Context
 from sending messages \; \; any other symbol -- references a Context
 in another patch \, rather than this one (must match the argument of
 a [patch] object in another patch).;
-#X obj 53 240 pddp/pddplink patch-help.pd -text See: patch-help.pd
+#X obj 48 258 pddp/pddplink patch-help.pd -text See: patch-help.pd
 ;
-#X restore 404 280 pd arguments;
+#X text 33 18 The first argument for [crossreference] is the toggle
+position you wish it to respect in the connected Contexts. Thereafter
+\, arguments are ID numbers (optionally separated by a comma or semi-colon
+for clarity) . For instance \, if you wanted to connect this Context's
+toggles to the 3rd toggles of Contexts 7 8 and 9 \, you would create
+an object [crossreference 3 \, 7 8 9] in the overlay.;
+#X restore 404 280 arguments;
+#X text 36 323 See also: Manual Section 7 (ID) \, 14 (Overlay).;
+#N canvas 193 165 450 300 example 0;
+#X obj 38 32 context :H 6 :ID 6 :ol 1 9 obj 213 79 crossreference 1
+10 11 12 13;
+#X obj 38 89 context :H 6 :ID 7 :ol 1 9 obj 213 80 crossreference 2
+10 11 12 13;
+#X obj 38 146 context :H 6 :ID 8 :ol 1 9 obj 212 80 crossreference
+3 10 11 12 13;
+#X obj 38 203 context :H 6 :ID 9 :ol 1 9 obj 213 80 crossreference
+4 10 11 12 13;
+#X obj 104 32 context :H 6 :ID 10 :ol 1 9 obj 263 79 crossreference
+1 6 7 8 9;
+#X obj 104 89 context :H 6 :ID 11 :ol 1 9 obj 263 79 crossreference
+2 6 7 8 9;
+#X obj 104 146 context :H 6 :ID 12 :ol 1 9 obj 263 79 crossreference
+3 6 7 8 9;
+#X obj 104 203 context :H 6 :ID 13 :ol 1 9 obj 263 79 crossreference
+4 6 7 8 9;
+#X text 243 59 Here \, each Context has [crossreference] object. Accordingly
+\, the toggles in c6 are always equal to the first toggles in c10 \,
+c11 \, c12 and c13 respectively. The toggles in c7 are always equal
+to the second toggles in c10 \, c11 \, c12 \, c13 \, etc., f 28;
+#X restore 404 301 example;
 #X text 20 97 [crossreference] is an overlay abstraction used to connect
 a toggle array with the toggles from a series of other Contexts in
 the following way: the host Context's first toggle will be sent to
 the first toggle of one Context \, the second toggle will be connected
-to the second toggle from the next \, etc. The series is defined by
-ID numbers specified in the creation argument., f 80;
-#X text 36 323 See also: Manual Section 7 (ID) \, 14 (Overlay).;
-#N canvas 205 137 450 300 example 1;
-#X obj 158 32 context :ID 6 :ol 1;
-#X obj 158 89 context :ID 7;
-#X obj 158 146 context :ID 8;
-#X obj 158 203 context :ID 9;
-#X obj 224 32 context :ID 10;
-#X obj 224 89 context :ID 11;
-#X obj 224 146 context :ID 12;
-#X obj 224 203 context :ID 13;
-#X restore 397 310 pd example;
+to the first toggle from the next \, etc. The toggle position and the
+Context ID numbers specified in the creation argument., f 80;
+#X text 90 224 <-- change toggles and toggle floats to see the effect
+of [crossrefernce], f 73;
