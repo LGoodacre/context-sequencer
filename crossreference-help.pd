@@ -1,0 +1,45 @@
+#N canvas 475 188 621 354 10;
+#X obj 319 24 ctxfiles/license;
+#X obj 26 28 cnv 15 282 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 21 23 cnv 15 282 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 22 24 cnv 15 280 50 empty empty crossreference 24 20 1 35 -90093
+-66577 0;
+#X obj 26 255 context :ID 1;
+#X obj 95 255 context :ID 2;
+#X obj 164 255 context :ID 3;
+#X obj 235 255 context :ID 4;
+#X obj 24 185 context :H 6 :ID 5 :ol 1 8 obj 316 55 crossreference
+1 2 3 4;
+#X text 90 224 <-- change toggles and toggle floats here to see the
+effect of [crossrefernce], f 80;
+#N canvas 67 87 450 300 arguments 0;
+#X text 33 28 [crossreference] takes ID numbers as arguments. Ie. if
+you want to connect this Context's toggles to Contexts 4 5 and 6 \,
+you would create an object [crossreference 4 5 6] in the overlay.;
+#X text 33 103 Additional arguments are \; \; y -- crossreference the
+y-axis instead of the x-axis \; \; -n -- prevent the referenced Context
+from sending messages \; \; any other symbol -- references a Context
+in another patch \, rather than this one (must match the argument of
+a [patch] object in another patch).;
+#X obj 53 240 pddp/pddplink patch-help.pd -text See: patch-help.pd
+;
+#X restore 404 280 pd arguments;
+#X text 20 97 [crossreference] is an overlay abstraction used to connect
+a toggle array with the toggles from a series of other Contexts in
+the following way: the host Context's first toggle will be sent to
+the first toggle of one Context \, the second toggle will be connected
+to the second toggle from the next \, etc. The series is defined by
+ID numbers specified in the creation argument., f 80;
+#X text 36 323 See also: Manual Section 7 (ID) \, 14 (Overlay).;
+#N canvas 205 137 450 300 example 1;
+#X obj 158 32 context :ID 6 :ol 1;
+#X obj 158 89 context :ID 7;
+#X obj 158 146 context :ID 8;
+#X obj 158 203 context :ID 9;
+#X obj 224 32 context :ID 10;
+#X obj 224 89 context :ID 11;
+#X obj 224 146 context :ID 12;
+#X obj 224 203 context :ID 13;
+#X restore 397 310 pd example;
