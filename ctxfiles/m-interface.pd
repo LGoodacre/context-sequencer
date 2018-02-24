@@ -90,7 +90,7 @@
 #X obj 201 304 receive \$1-replu;
 #X obj 432 572 receive \$0-:br;
 #X obj 272 494 bth \$1 \$6 x2 x1;
-#X obj 68 63 dvr \$1 fakedelay;
+#X obj 68 63 dvr \$1 realdelay;
 #X obj 183 111 dvr \$1 savestart;
 #X obj 333 115 dv \$1 xszz;
 #X obj 352 139 dv \$1 yszz;
