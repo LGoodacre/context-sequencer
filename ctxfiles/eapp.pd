@@ -19,7 +19,7 @@
 #X obj 102 5 receive \$1-acleol;
 #X obj 102 27 t f;
 #X obj 213 127 f 1;
-#X obj 207 337 v \$1-realdelay;
+#X obj 207 337 v \$1-fakedelay;
 #X obj 207 386 /;
 #X obj 115 205 t a a b;
 #X obj 207 312 spigot;
