@@ -1,4 +1,4 @@
-#N canvas 81 468 450 300 10;
+#N canvas 72 468 450 300 10;
 #N canvas 65 388 1301 359 params 0;
 #X obj 85 65 receive paraquery";
 #X obj 85 87 unpack;
@@ -88,7 +88,7 @@
 #X connect 37 0 29 0;
 #X connect 38 0 29 0;
 #X restore 93 109 pd params;
-#N canvas 65 93 602 687 colours 0;
+#N canvas 67 87 602 681 colours 0;
 #X obj 126 48 unpack f f;
 #X obj 126 70 moses;
 #X obj 212 657 send;
@@ -509,7 +509,7 @@ gtfs \$0 #f :l bang \; :m gtfs \$0 #f :m 33 \; :k gtfs \$0 #f :k 33
 #X obj 288 22 receive share;
 #X msg 288 44 vis 1;
 #X obj 288 66 iemguts/sendcanvas;
-#N canvas 357 202 516 564 type-float 0;
+#N canvas 348 204 828 564 type-float 0;
 #X obj 223 31 receive typesel^Y&Y;
 #X obj 100 31 receive R^THBF*(;
 #X text 363 30 <-- send symbol;
@@ -547,6 +547,9 @@ gtfs \$0 #f :l bang \; :m gtfs \$0 #f :m 33 \; :k gtfs \$0 #f :k 33
 #X obj 295 232 t b b f f f;
 #X obj 223 75 del 1500;
 #X text 282 88 reset function after 1.5 second;
+#X obj 585 114 receive moveon&&u*p;
+#X obj 585 136 change;
+#X obj 585 158 s moveon&&u*;
 #X connect 0 0 31 0;
 #X connect 1 0 7 0;
 #X connect 3 0 4 0;
@@ -588,6 +591,8 @@ gtfs \$0 #f :l bang \; :m gtfs \$0 #f :m 33 \; :k gtfs \$0 #f :k 33
 #X connect 32 3 29 0;
 #X connect 32 4 23 1;
 #X connect 33 0 7 1;
+#X connect 35 0 36 0;
+#X connect 36 0 37 0;
 #X restore 112 276 pd type-float;
 #N canvas 343 98 965 670 copy 0;
 #X obj 289 53 receive GG7HJ8I@;

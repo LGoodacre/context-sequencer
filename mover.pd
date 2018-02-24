@@ -1,11 +1,11 @@
-#N canvas 553 274 511 321 10;
-#N canvas 488 85 671 687 move 0;
+#N canvas 547 288 511 321 10;
+#N canvas 482 87 671 681 move 0;
 #X obj 88 67 spigot;
 #X obj 272 709 iemguts/canvasindex 1;
 #X obj 95 735 iemguts/canvasobjectposition 2;
 #X obj 178 688 t a b;
 #X msg 89 417 0 -20;
-#N canvas 684 173 497 406 condition 0;
+#N canvas 678 187 497 406 condition 0;
 #X obj 176 127 unpack f f;
 #X obj 85 22 inlet;
 #X obj 195 204 >=;
@@ -42,6 +42,8 @@
 #X obj 20 179 ctxfiles/dvs \$0 preview;
 #X obj 278 298 ctxfiles/dvr \$0 ymode;
 #X obj 259 105 ctxfiles/dvr \$0 cursorsz;
+#X obj 85 297 s moveon&&u*p;
+#X obj 116 227 t f;
 #X connect 0 0 6 0;
 #X connect 0 1 7 0;
 #X connect 1 0 20 0;
@@ -64,6 +66,7 @@
 #X connect 14 0 15 0;
 #X connect 15 0 17 1;
 #X connect 15 0 18 1;
+#X connect 15 0 36 0;
 #X connect 16 0 10 1;
 #X connect 16 1 11 1;
 #X connect 17 0 23 0;
@@ -75,6 +78,7 @@
 #X connect 23 0 19 0;
 #X connect 24 0 25 0;
 #X connect 26 0 22 1;
+#X connect 26 0 37 0;
 #X connect 27 0 28 0;
 #X connect 27 1 0 0;
 #X connect 27 2 33 0;
@@ -85,6 +89,7 @@
 #X connect 34 0 23 1;
 #X connect 34 0 24 1;
 #X connect 35 0 16 0;
+#X connect 37 0 36 0;
 #X restore 178 285 pd condition;
 #X obj 178 330 pack f 1;
 #X msg 247 330 1 \$1;

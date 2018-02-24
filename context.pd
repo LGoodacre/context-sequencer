@@ -2,7 +2,7 @@
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 248 339 992 681 guts 0;
+#N canvas 246 87 992 681 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 526 87 795 681 names 0;
 #X msg 266 486 symbol  ;
@@ -3044,7 +3044,7 @@ any problems, f 67;
 #X connect 222 2 221 2;
 #X connect 224 0 100 0;
 #X restore 68 431 pd messages;
-#N canvas 170 96 1190 683 switches 0;
+#N canvas 67 85 1299 683 switches 0;
 #X obj 163 155 f;
 #X obj 199 155 f;
 #X obj 163 207 mux;
@@ -3168,6 +3168,11 @@ b b b b f f f f, f 82;
 #X obj 1033 285 change -2;
 #X obj 31 9 array set \$0-settings 0;
 #X obj 211 -11 array set \$0-settings 1;
+#X obj 823 128 s \$0-noresize;
+#X obj 823 106 receive \$0-lson;
+#X obj 823 84 receive \$0-entryon;
+#X obj 823 62 receive \$0-rson;
+#X obj 921 61 receive moveon&&u*;
 #X connect 0 0 2 0;
 #X connect 0 0 3 1;
 #X connect 1 0 2 1;
@@ -3323,6 +3328,10 @@ b b b b f f f f, f 82;
 #X connect 114 0 105 0;
 #X connect 115 0 116 0;
 #X connect 117 0 20 0;
+#X connect 121 0 120 0;
+#X connect 122 0 120 0;
+#X connect 123 0 120 0;
+#X connect 124 0 120 0;
 #X restore 68 486 pd switches;
 #N canvas 404 87 842 681 creation 0;
 #X obj 399 340 s \$0-hacklist;
@@ -6441,7 +6450,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 109 0 110 0;
 #X connect 110 0 103 0;
 #X restore 552 391 pd rules;
-#N canvas 195 212 647 556 title 1;
+#N canvas 192 212 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
