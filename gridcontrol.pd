@@ -2785,7 +2785,7 @@ pentatonic major \; %^ :3f4 pentatonic minor \; %^ :3f5 blues major
 #X obj 666 133 inlet;
 #X obj 238 178 ctxfiles/s1 \$0 4 :u;
 #X obj 238 223 ctxfiles/s1 \$0 7 copy ~ ID;
-#N canvas 552 107 450 661 mode-n1 1;
+#N canvas 549 107 450 661 mode-n1 0;
 #X obj 223 20 receive \$0-mode-1;
 #X obj 250 66 s \$0-clear;
 #X obj 250 133 - 64;
