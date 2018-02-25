@@ -2277,7 +2277,7 @@ the minumum of all contexts on the array. Send it to [launchshare].
 #X restore 430 170 pd mode-0;
 #X obj 223 118 vradio 15 1 0 8 \$0-vsels \$0-vselr empty 0 -8 0 10
 -262144 -1 -1 2;
-#X obj 238 118 ctxfiles/s1 \$0 0 :s;
+#X obj 238 118 ctxfiles/s1 \$0 0;
 #X text -121 101 lots more in this subpatch -->;
 #X obj 344 102 tgl 14 0 \$0-preons \$0-preonr on -17 7 0 10 -261154
 -1 -1 0 1;
@@ -2362,7 +2362,7 @@ you to sense on a parent patch., f 24;
 #X connect 35 0 27 0;
 #X connect 36 0 15 0;
 #X restore 666 155 pd on-off;
-#N canvas 470 162 847 606 mode-3 1;
+#N canvas 467 162 847 606 mode-3 0;
 #X obj 185 13 receive \$0-mixon;
 #X obj 185 35 * 4;
 #X obj 108 137 receive \$0-lshift-3;
@@ -2553,7 +2553,7 @@ back to mx;
 #X connect 5 1 6 0;
 #X connect 6 0 0 0;
 #X restore 430 339 pd gui;
-#N canvas 708 392 450 300 saving 0;
+#N canvas 702 406 450 300 saving 0;
 #X obj 141 69 ctxfiles/saver \$0 switch-x 3 t;
 #X obj 140 106 receive \$0-savelist;
 #X msg 140 128 click;
@@ -2574,12 +2574,12 @@ pentatonic major \; %^ :3f4 pentatonic minor \; %^ :3f5 blues major
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
 #X restore 630 111 pd saving;
-#X obj 238 133 ctxfiles/s1 \$0 1 :ss;
-#X obj 238 148 ctxfiles/s1 \$0 2 -send 2;
-#X obj 238 163 ctxfiles/s1 \$0 3 -send 3;
-#X obj 238 193 ctxfiles/s1 \$0 5 find;
+#X obj 238 133 ctxfiles/s1 \$0 1;
+#X obj 238 148 ctxfiles/s1 \$0 2;
+#X obj 238 163 ctxfiles/s1 \$0 3;
+#X obj 238 193 ctxfiles/s1 \$0 5;
 #X obj 688 18 receive \$0-iemargr;
-#X obj 238 208 ctxfiles/s1 \$0 6 :r 1 c 0 1;
+#X obj 238 208 ctxfiles/s1 \$0 6;
 #X obj 560 45 inlet;
 #N canvas 797 479 450 415 quantize 0;
 #X obj 255 43 inlet;
@@ -2783,8 +2783,8 @@ pentatonic major \; %^ :3f4 pentatonic minor \; %^ :3f5 blues major
 #X connect 52 0 53 0;
 #X restore 430 319 pd shift-function;
 #X obj 666 133 inlet;
-#X obj 238 178 ctxfiles/s1 \$0 4 :u;
-#X obj 238 223 ctxfiles/s1 \$0 7 copy ~ ID;
+#X obj 238 178 ctxfiles/s1 \$0 4;
+#X obj 238 223 ctxfiles/s1 \$0 7;
 #N canvas 549 107 450 661 mode-n1 0;
 #X obj 223 20 receive \$0-mode-1;
 #X obj 250 66 s \$0-clear;
