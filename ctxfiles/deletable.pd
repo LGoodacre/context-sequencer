@@ -1,5 +1,5 @@
-#N canvas 198 87 599 681 10;
-#N canvas 250 251 974 495 receivecanvas 0;
+#N canvas 195 87 599 681 10;
+#N canvas 247 258 974 495 receivecanvas 1;
 #X obj 385 247 s \$1-key;
 #X obj 333 116 list split 2;
 #X msg 214 79 1;
@@ -88,7 +88,7 @@
 62 0;
 #X obj 155 34 route motion mouse mouseup key done-popup setbounds editmode
 copy duplicate, f 76;
-#X obj 333 162 route Shift_L Shift_R Control_L Control_R Meta_L Meta_R
+#X obj 333 160 route Shift_L Shift_R Control_L Control_R Meta_L Meta_R
 Left Right Up Down Alt_L Alt_R, f 89;
 #X connect 1 0 4 0;
 #X connect 2 0 33 0;
@@ -197,6 +197,7 @@ Left Right Up Down Alt_L Alt_R, f 89;
 #X connect 86 3 36 0;
 #X connect 86 4 36 0;
 #X connect 86 5 36 0;
+#X connect 86 6 44 0;
 #X connect 86 7 45 0;
 #X connect 86 8 46 0;
 #X connect 86 9 47 0;
