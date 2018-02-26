@@ -1,4 +1,4 @@
-#N canvas 65 53 1301 715 10;
+#N canvas 67 85 1299 683 10;
 #X declare -path docfiles;
 #X obj -64 -110 cnv 15 1482 1006 empty empty empty 20 12 0 14 -137887
 -66577 0;
@@ -176,14 +176,13 @@ disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 0;
 #X obj 57 377 cnv 15 118 19 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#N canvas 507 150 294 366 this 0;
-#X obj 21 15 cnv 15 252 335 empty empty empty 19 18 0 20 -99865 -45076
+#N canvas 504 157 299 431 this 0;
+#X obj 21 15 cnv 15 252 392 empty empty empty 19 18 0 20 -99865 -45076
 0;
-#X obj 13 7 cnv 15 252 335 empty empty empty 19 18 0 20 -1 -45076 0
+#X obj 13 7 cnv 15 252 392 empty empty empty 19 18 0 20 -1 -45076 0
 ;
-#X obj 14 8 cnv 15 250 333 empty empty ABOUT THIS PATCH 19 18 0 20
+#X obj 14 8 cnv 15 250 390 empty empty ABOUT THIS PATCH 19 18 0 20
 -212254 -45076 0;
-#X text 38 232 All examples are interactive.;
 #X text 38 254 To access the same information as text \, see 'context_commands.csv'.
 , f 30;
 #X text 38 309 See manual section 9 for command use, f 30;
@@ -196,10 +195,14 @@ disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 #X text 39 40 The boxes on the right show all possible Context commands.
 This is an exhaustive accont of Context's functions. Click on each
 button for more information., f 30;
-#X text 39 136 The boxes on the leftshow categories. Click on them
-to highlight commands., f 30;
 #X text 36 190 $ stands for an argument \, curly brackets mean optional.
 , f 30;
+#X text 39 136 The boxes on the left show categories. Click on them
+to highlight commands., f 30;
+#X text 38 232 Most examples are interactive.;
+#X text 26 349 *;
+#X text 38 348 In "arguments" \, curly brackets mean that the argument
+is optional., f 30;
 #X restore 58 378 about this patch;
 #X obj 1041 18 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
 0;
