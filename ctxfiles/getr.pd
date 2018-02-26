@@ -1,4 +1,4 @@
-#N canvas 631 87 729 681 10;
+#N canvas 628 87 729 681 10;
 #X obj 264 788 cyclone/zl nth;
 #X obj 199 459 list split 1;
 #X obj 296 635 l2s;
@@ -53,11 +53,11 @@
 #X obj 257 -106 t a s b a;
 #X obj 421 -49 list length;
 #X obj 421 33 outlet;
-#X obj 519 183 pack;
 #X msg 519 207 symbol \$2-\$1-dfetch;
 #X obj 544 160 receive \$1-parent;
 #X obj 421 11 +;
 #X obj 436 -14 receive \$1-getr-.;
+#X obj 519 183 pack s f;
 #X connect 0 0 9 0;
 #X connect 1 1 6 0;
 #X connect 2 0 3 0;
@@ -86,7 +86,7 @@
 #X connect 22 0 21 0;
 #X connect 23 0 20 0;
 #X connect 23 1 22 0;
-#X connect 23 2 53 0;
+#X connect 23 2 57 0;
 #X connect 24 0 39 0;
 #X connect 25 0 24 1;
 #X connect 27 0 24 0;
@@ -123,9 +123,9 @@
 #X connect 50 1 10 0;
 #X connect 50 2 14 0;
 #X connect 50 3 51 0;
-#X connect 51 0 56 0;
-#X connect 53 0 54 0;
-#X connect 54 0 21 1;
-#X connect 55 0 53 1;
-#X connect 56 0 52 0;
-#X connect 57 0 56 1;
+#X connect 51 0 55 0;
+#X connect 53 0 21 1;
+#X connect 54 0 57 1;
+#X connect 55 0 52 0;
+#X connect 56 0 55 1;
+#X connect 57 0 53 0;
