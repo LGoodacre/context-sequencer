@@ -1,0 +1,73 @@
+#N canvas 265 138 971 500 10;
+#X obj 238 474 dac~;
+#X obj 47 351 context :H 16 :X 17 :Y 6 :io o :d 9 :Z 4 :ID 1 :ol 1
+20 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 9 :y1 4.05 :y2
+9.15 :c 14 :li 1 :ed 0 :as 0 8 obj 29 0 ../marker :x1 1.3604 :y1 2.97
+5 obj -1 114 ctx outlet~ 5 connect 3 0 5 0;
+#X obj 742 356 ctxfiles/license;
+#X msg 47 148 stop;
+#X msg 47 170 :ss;
+#X text 83 127 start;
+#X msg 47 126 :s;
+#X text 89 148 stop;
+#X text 74 170 start if stopped and stop if started;
+#X msg 47 192 :s p 2;
+#X text 94 192 start at position 2 (ie. the second toggle);
+#X msg 47 214 :s p 2 4;
+#X text 104 214 start at position 2 and stop at position 4;
+#X msg 47 236 :s s 1500;
+#X text 114 236 start at position = 1.5 seconds;
+#X msg 47 258 :s s 3000 1500;
+#X text 144 258 start at 3 seconds and stop at 1.5 seconds;
+#X msg 47 280 :s m 1;
+#X text 94 280 start at marker 1 (see marker-help.pd);
+#X msg 47 302 :s d 1000;
+#X text 114 302 start after a delay of 1 second;
+#X obj 66 30 cnv 15 202 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 61 25 cnv 15 202 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 62 26 cnv 15 200 40 empty empty STARTING 20 17 2 30 -131072
+-1 0;
+#X text 287 21 Starting and stopping Context is easy. To start \, double
+click on the blank canvas area in the middle. To stop \, click and
+hold. Besides this \, there are a variety of commands for advanced
+control over Context's cycle., f 46;
+#X obj 616 30 cnv 15 202 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 611 25 cnv 15 202 42 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 612 26 cnv 15 200 40 empty empty STOPPING 22 17 2 30 -131072
+-1 0;
+#X obj 549 268 context :d 1 :i 0 0 0 0 2.5 :n ' mytag ' :x = 5 :ID
+2;
+#X obj 617 268 context :d 1 :i 0 0 0 0 3.5 :n ' mytag ' :x = 5 :ID
+3;
+#X msg 549 132 stop *;
+#X text 598 133 stop context at the end of its cycle (if it is looping)
+;
+#X msg 549 152 stop 3;
+#X text 598 152 stop context c3;
+#X obj 687 268 context :d 1 :i 0 0 0 0 4.5 :n ' mytag ' :x = 5 :ID
+4;
+#X msg 549 173 stop mytag;
+#X msg 549 194 stop context;
+#X text 634 194 stop all contexts;
+#X text 618 173 stop contexts with "mytag" tag;
+#X msg 589 222 \; mytag stop - 2;
+#X text 681 235 stop all contexts in "mytag" apart from c2;
+#X connect 1 17 0 0;
+#X connect 1 17 0 1;
+#X connect 3 0 1 0;
+#X connect 4 0 1 0;
+#X connect 6 0 1 0;
+#X connect 9 0 1 0;
+#X connect 11 0 1 0;
+#X connect 13 0 1 0;
+#X connect 15 0 1 0;
+#X connect 17 0 1 0;
+#X connect 19 0 1 0;
+#X connect 30 0 28 0;
+#X connect 32 0 28 0;
+#X connect 35 0 28 0;
+#X connect 36 0 28 0;
