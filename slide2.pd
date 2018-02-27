@@ -1,4 +1,4 @@
-#N canvas 141 87 1090 614 10;
+#N canvas 138 94 1090 614 10;
 #X obj 100 -100 vsl 23 101 0 100 0 0 \$0-ls \$0-lr 0 1 90 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;
@@ -77,8 +77,8 @@
 #X obj 756 409 iemguts/oreceive \$0-n;
 #X obj 756 431 t b s;
 #X obj 756 453 v \$0-ls;
-#X obj 756 567 send;
-#X obj 756 544 pack f \$0;
+#X obj 756 587 send;
+#X obj 756 564 pack f \$0;
 #X obj 796 112 receive \$0-fromgrid;
 #X obj 811 61 receive \$0-stopslide;
 #X msg 811 84 stop;
@@ -95,9 +95,10 @@
 #X obj 831 201 log 10;
 #X obj 831 223 * 21.7;
 #X obj 804 177 demux;
-#X obj 783 499 log 10;
-#X obj 783 521 * 21.7;
+#X obj 783 519 log 10;
+#X obj 783 541 * 21.7;
 #X obj 756 475 demux;
+#X obj 783 497 max 1;
 #X connect 2 0 30 0;
 #X connect 2 0 34 0;
 #X connect 2 0 50 0;
@@ -220,5 +221,6 @@
 #X connect 91 0 92 0;
 #X connect 92 0 74 0;
 #X connect 93 0 74 0;
-#X connect 93 1 91 0;
+#X connect 93 1 94 0;
+#X connect 94 0 91 0;
 #X coords 0 -1 1 1 23 120 2 100 -102;
