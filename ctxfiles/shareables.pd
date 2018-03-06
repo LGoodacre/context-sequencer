@@ -1,5 +1,5 @@
 #N canvas 67 468 450 300 10;
-#N canvas 65 388 1301 359 params 0;
+#N canvas 67 378 1299 359 params 0;
 #X obj 85 65 receive paraquery";
 #X obj 85 87 unpack;
 #X obj 85 131 - 3;
@@ -30,23 +30,18 @@
 #X obj 639 81 list;
 #X obj 680 82 list;
 #X obj 593 321 hcs/sys_gui;
-#X msg 1099 108 set ::cursor_runmode_nothing "left_side" \, \$1 configure
+#X msg 790 53 set ::cursor_runmode_nothing "left_side" \, \$1 configure
 -cursor $cursor_runmode_nothing;
-#X msg 1119 178 set ::cursor_runmode_nothing "top_side" \, \$1 configure
+#X msg 810 123 set ::cursor_runmode_nothing "top_side" \, \$1 configure
 -cursor $cursor_runmode_nothing;
-#X msg 1139 218 set ::cursor_runmode_nothing "arrow" \, \$1 configure
+#X msg 830 163 set ::cursor_runmode_nothing "arrow" \, \$1 configure
 -cursor $cursor_runmode_nothing;
-#X msg 1159 258 set ::cursor_runmode_nothing "dot" \, \$1 configure
+#X msg 850 203 set ::cursor_runmode_nothing "dot" \, \$1 configure
 -cursor $cursor_runmode_nothing;
-#X obj 108 21 hcs/cursor;
-#X msg 599 108 set ::cursor_runmode_nothing "left_side" \, \$1 configure
--cursor $cursor_runmode_nothing;
-#X msg 619 178 set ::cursor_runmode_nothing "top_side" \, \$1 configure
--cursor $cursor_runmode_nothing;
-#X msg 639 218 set ::cursor_runmode_nothing "arrow" \, \$1 configure
--cursor $cursor_runmode_nothing;
-#X msg 659 258 set ::cursor_runmode_nothing "dot" \, \$1 configure
--cursor $cursor_runmode_nothing;
+#X msg 599 108 \$1 configure -cursor left_side;
+#X msg 639 218 \$1 configure -cursor arrow;
+#X msg 680 266 \$1 configure -cursor dot;
+#X msg 619 178 \$1 configure -cursor top_side;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 1 7 0;
@@ -63,6 +58,7 @@
 #X connect 9 0 11 0;
 #X connect 10 0 20 0;
 #X connect 12 0 11 1;
+#X connect 13 0 24 0;
 #X connect 14 0 11 0;
 #X connect 15 0 16 0;
 #X connect 16 0 14 0;
@@ -79,14 +75,14 @@
 #X connect 24 2 27 0;
 #X connect 24 3 25 0;
 #X connect 24 4 28 0;
-#X connect 25 0 35 0;
-#X connect 26 0 36 0;
-#X connect 27 0 37 0;
-#X connect 28 0 38 0;
+#X connect 25 0 34 0;
+#X connect 26 0 37 0;
+#X connect 27 0 35 0;
+#X connect 28 0 36 0;
+#X connect 34 0 29 0;
 #X connect 35 0 29 0;
 #X connect 36 0 29 0;
 #X connect 37 0 29 0;
-#X connect 38 0 29 0;
 #X restore 93 109 pd params;
 #N canvas 67 87 602 681 colours 0;
 #X obj 126 48 unpack f f;
