@@ -16,8 +16,8 @@
 #X obj 266 403 list append \$1;
 #X msg 266 425 \; \$3-\$1 \$2;
 #X obj 311 211 route symbol;
-#X obj 281 286 ctxfiles/ex01;
-#X obj 296 309 ctxfiles/ex01;
+#X obj 281 286 ctxfiles/collect;
+#X obj 296 309 ctxfiles/collect;
 #X obj 251 45 t b b b b b b;
 #X obj 128 144 list prepend;
 #X obj 311 158 cyclone/iter;

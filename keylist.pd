@@ -25,7 +25,7 @@
 #X obj 384 172 moocow/any2bytes;
 #X obj 384 196 cyclone/iter;
 #X obj 384 218 sel 36 37;
-#X obj 360 307 ctxfiles/ex01;
+#X obj 360 307 ctxfiles/collect;
 #X msg 384 264 36 50;
 #X msg 409 242 36 49;
 #X obj 360 146 t b a;
