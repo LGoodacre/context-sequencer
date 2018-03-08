@@ -4,7 +4,7 @@
 #X obj 326 113 array define s\$1 1;
 #X obj 266 359 array get s\$1;
 #X obj 296 333 array set s\$1;
-#X obj 266 381 list-abs/list-enumerate;
+#X obj 266 381 else/order;
 #X obj 155 98 tabwrite s\$1;
 #X obj 128 75 t b l;
 #X obj 128 122 array get s\$1;

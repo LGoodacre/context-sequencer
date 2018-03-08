@@ -6931,7 +6931,7 @@ back \, then push again.;
 #X text 733 24 sense double clicks;
 #N canvas 703 230 450 300 relabel 0;
 #X obj 130 48 inlet;
-#X obj 164 144 list-abs/list-enumerate;
+#X obj 164 144 else/order;
 #X obj 164 167 list append \$0;
 #X msg 164 189 \; \$3-\$1-rehelp \$2;
 #X obj 130 73 t a b;
