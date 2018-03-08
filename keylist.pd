@@ -22,7 +22,7 @@
 #X obj 111 299 route 1;
 #X obj 281 19 loadbang;
 #X obj 281 41 iemguts/canvasargs;
-#X obj 384 172 moocow/any2bytes;
+#X obj 384 172 else/fromany;
 #X obj 384 196 cyclone/iter;
 #X obj 384 218 sel 36 37;
 #X obj 360 307 ctxfiles/collect;
@@ -31,7 +31,7 @@
 #X obj 360 146 t b a;
 #X obj 360 359 list prepend set;
 #X obj 360 381 list trim;
-#X obj 360 332 moocow/bytes2any;
+#X obj 360 332 else/toany;
 #X obj 281 66 list split 1;
 #X obj 66 251 route \$1 Shift_L Shift_R;
 #X msg 320 556;

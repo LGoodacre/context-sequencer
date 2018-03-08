@@ -29,7 +29,7 @@
 #X obj 129 142 - 1;
 #X obj 129 164 t f f;
 #X obj 135 403 text get \$0-mysym;
-#X obj 135 425 moocow/any2bytes;
+#X obj 135 425 else/fromany;
 #X obj 354 104 receive \$1-firstmode;
 #X obj 321 104 s2l;
 #X connect 1 0 24 0;

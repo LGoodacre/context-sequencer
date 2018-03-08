@@ -11,7 +11,7 @@ Context runs on PD Vanilla V 0.47 or later. It needs the following externals, al
 
 zexy
 cyclone
-moocow
+else (1.0-beta8 or later)
 flatgui
 list-abs
 hcs
