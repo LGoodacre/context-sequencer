@@ -1,4 +1,4 @@
-#N canvas 172 206 1054 300 10;
+#N canvas 67 206 1273 300 10;
 #X obj 157 57 inlet DISTRO;
 #X obj 489 59 inlet OS;
 #X obj 91 188 outlet VANILLA;
@@ -11,6 +11,10 @@
 #X obj 792 53 inlet FONT SIZE;
 #X obj 792 183 outlet BOLD;
 #X obj 880 183 outlet REGULAR;
+#X obj 1024 53 inlet PD VERSION;
+#X obj 1024 183 outlet 0-47;
+#X obj 1104 183 outlet 0-48;
 #X connect 0 0 2 0;
 #X connect 1 0 4 0;
 #X connect 9 0 10 0;
+#X connect 12 0 13 0;
