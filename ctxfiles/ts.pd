@@ -1,4 +1,4 @@
-#N canvas 377 215 721 440 10;
+#N canvas 330 215 721 440 10;
 #X obj 219 140 f;
 #X obj 199 293 send;
 #X obj 239 93 outlet;
@@ -19,7 +19,7 @@
 #X obj 383 123 sel 1;
 #X obj 410 148 t b;
 #X obj 383 171 v \$1-\$2size-2;
-#X obj 63 148 receive \$1-scroll;
+#X obj 63 106 receive \$1-scroll;
 #X obj 179 68 t f f b f;
 #X obj 63 179 spigot;
 #X obj 88 209 makefilename \$1-%d-togscrol\$2;
@@ -32,6 +32,8 @@
 #X obj 219 170 t f f f f f b b b f;
 #X text 650 295 for toggle key-in;
 #X obj 540 260 list append \$1 \$4;
+#X obj 90 130 receive moveon&&u*;
+#X obj 63 155 demux;
 #X connect 0 0 30 0;
 #X connect 3 0 0 1;
 #X connect 4 0 21 0;
@@ -49,7 +51,7 @@
 #X connect 17 1 18 0;
 #X connect 18 0 16 0;
 #X connect 19 0 14 2;
-#X connect 20 0 22 0;
+#X connect 20 0 34 0;
 #X connect 21 0 22 1;
 #X connect 21 1 1 0;
 #X connect 21 2 0 0;
@@ -69,3 +71,5 @@
 #X connect 30 7 28 0;
 #X connect 30 8 32 0;
 #X connect 32 0 27 0;
+#X connect 33 0 34 1;
+#X connect 34 0 22 0;
