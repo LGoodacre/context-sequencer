@@ -1,4 +1,4 @@
-#N canvas 348 87 933 681 10;
+#N canvas 254 87 933 681 10;
 #X obj 171 30 inlet;
 #X obj 321 619 send;
 #X obj 348 515 sel dum;
@@ -87,7 +87,7 @@
 #X obj 36 515 cyclone/uzi \$4;
 #X obj 123 590 send;
 #X obj 144 561 makefilename \$1-togsoff\$2%d;
-#X obj 635 554 s \$1-togsoff\$2;
+#X obj 635 584 s \$1-togsoff\$2;
 #X obj 616 529 t a b b;
 #X obj 474 290 -;
 #X obj 149 239 t f b f f;
@@ -105,6 +105,8 @@
 #X obj 735 111 demux;
 #X obj 762 88 receive \$1-ses\$2;
 #X obj 762 133 t f;
+#X obj 635 555 t f;
+#X obj 36 538 t f;
 #X connect 0 0 69 0;
 #X connect 2 0 3 0;
 #X connect 2 0 95 1;
@@ -221,11 +223,11 @@
 #X connect 83 0 41 1;
 #X connect 83 0 85 1;
 #X connect 84 0 83 0;
-#X connect 85 0 98 0;
+#X connect 85 0 107 0;
 #X connect 85 2 99 0;
 #X connect 87 0 86 1;
 #X connect 89 0 13 0;
-#X connect 89 1 88 0;
+#X connect 89 1 106 0;
 #X connect 89 2 64 0;
 #X connect 90 0 57 0;
 #X connect 91 1 84 0;
@@ -262,3 +264,5 @@
 #X connect 103 1 105 0;
 #X connect 104 0 103 1;
 #X connect 105 0 19 0;
+#X connect 106 0 88 0;
+#X connect 107 0 98 0;
