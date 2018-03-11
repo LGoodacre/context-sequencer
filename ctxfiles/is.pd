@@ -172,7 +172,7 @@ accordingly;
 #X obj 260 65 route clear swap s - + > >> < << scramble all;
 #X obj 403 210 t b a;
 #X obj 403 254 list;
-#X obj 403 232 cyclone/uzi \$5 1;
+#X obj 403 232 cyclone/uzi \$5 0;
 #X obj 862 425 else/fromany;
 #X obj 862 471 else/toany;
 #X connect 0 0 102 0;
