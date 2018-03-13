@@ -46,7 +46,7 @@
 #X obj 1046 480 ||;
 #X obj 820 70 sel 0;
 #X obj 807 -18 receive \$1-lob;
-#X obj 695 34 receive \$1-size;
+#X obj 695 34 receive \$1-:size;
 #X obj 695 709 receive \$1-y1y2;
 #X obj 668 730 * 1;
 #X obj 668 752 +;
