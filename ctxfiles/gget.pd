@@ -63,7 +63,7 @@ data \, but stop after 2 seconds;
 #X obj 279 395 t b p;
 #X obj 279 417 f 1;
 #X obj 780 248 spigot;
-#X obj 855 189 receive \$1-savestart;
+#X obj 855 191 receive \$1-savestart;
 #X obj 527 229 t b f;
 #X obj 473 424 stor \$1 x 128 \$2 y -5;
 #X obj 572 447 stor \$1 y 79 \$2 x 5;

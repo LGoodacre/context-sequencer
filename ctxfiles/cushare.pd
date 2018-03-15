@@ -1,4 +1,4 @@
-#N canvas 823 117 514 388 10;
+#N canvas 776 117 514 388 10;
 #X obj 179 105 array define %&nou;
 #N canvas 133 376 430 142 ^&*-dsmall1 0;
 #X obj 32 27 struct ^&*-dsmall1 float x float y;
@@ -22,7 +22,7 @@
 #X msg 220 301  ;
 #X obj 287 300 list trim;
 #X obj 222 50 shared ctxfiles/cushare 0;
-#N canvas 515 189 1024 557 commands 1;
+#N canvas 342 189 1024 557 commands 0;
 #X obj 416 105 t b a;
 #X obj 112 184 cyclone/zl iter 1;
 #X obj 671 165 ctxfiles/recompile \$0;
@@ -40,13 +40,14 @@ mirror-x gtfs \$0 #f mirror-x 0 \, :mirror-x #l \; mirror-y gtfs \$0
 #f mirror-y 0 \, :mirror-y #l \; scale gtfs \$0 #f scale 1 \, :scale
 #l \; ec gtfs \$0 #f ec 0 \, :ec #l \; name2 gtfs \$0 #f name2 0 \,
 :name2 #l \; lock gtfs \$0 #f lock 0 \, :lock #l \; savelist tf \$0
-#f \; help tf \$0 #f \; ## s \$0-othr, f 76;
+#f \; help tf \$0 #f \; loadproperties tf \$0 #f \; ## s \$0-othr,
+f 76;
 #X obj 671 194 ctxfiles/br2 demux 2 \; #f t \; #f gs :x \; #f gs :y
 \; #f gs :size \; #f gs :y1 \; #f gs :y2 \; #f gs :point1 \; #f gs
 :point2 \; #f gs :name \; #f gs :color \; #f gs :speed \; #f gs :time
 \; #f gs :duplicate \; #f gs :mirror-x \; #f gs :mirror-y \; #f gs
 :scale \; #f gs :ec \; #f gs :name2 \; #f gs :lock \; #f gs savelist
-\; #f s £""-help;
+\; #f s £""-help \; #f gs propload;
 #X connect 0 0 2 0;
 #X connect 0 1 1 0;
 #X connect 1 0 4 0;

@@ -1,4 +1,4 @@
-#N canvas 67 321 605 425 10;
+#N canvas 67 297 605 425 10;
 #X declare -lib zexy -stdlib zexy;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -15,7 +15,7 @@
 #X obj -60 -200 inlet;
 #X obj -60 -166 outlet;
 #X obj -241 -234 iemguts/initbang;
-#N canvas 280 237 883 527 commands 0;
+#N canvas 260 221 883 527 commands 1;
 #X obj 141 72 inlet;
 #X obj -133 175 cyclone/zl iter 1;
 #X obj 68 48 iemguts/oreceive \$0-array-;
@@ -499,7 +499,7 @@
 #X restore -212 -109 pd \$0-big1;
 #X obj -60 -183 ctxfiles/io \$0 -1 0 128;
 #X obj -38 -109 ctxfiles/gget \$0 1 6;
-#N canvas 418 168 614 344 properties 1;
+#N canvas 408 160 614 344 properties 0;
 #X obj 132 16 inlet;
 #X obj 150 171 iemguts/canvasposition 1;
 #X obj 150 193 unpack;

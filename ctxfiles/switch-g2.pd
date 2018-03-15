@@ -1,4 +1,4 @@
-#N canvas 356 87 575 681 10;
+#N canvas 346 87 575 681 10;
 #X obj 132 43 inlet;
 #X obj 423 540 outlet;
 #X text 51 12 read bpoint and point. IF point is less \, write \, if
@@ -129,7 +129,6 @@ to correct io.pd abstraction., f 41;
 #X connect 53 0 52 0;
 #X connect 55 0 56 0;
 #X connect 56 0 57 0;
-#X connect 58 0 65 1;
 #X connect 59 0 60 0;
 #X connect 59 1 45 1;
 #X connect 59 2 25 0;
@@ -137,5 +136,6 @@ to correct io.pd abstraction., f 41;
 #X connect 59 4 17 1;
 #X connect 60 0 49 1;
 #X connect 61 0 62 0;
+#X connect 63 0 43 1;
 #X connect 64 0 1 0;
 #X connect 65 0 28 1;
