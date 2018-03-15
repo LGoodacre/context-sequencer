@@ -499,7 +499,7 @@
 #X restore -212 -109 pd \$0-big1;
 #X obj -60 -183 ctxfiles/io \$0 -1 0 128;
 #X obj -38 -109 ctxfiles/gget \$0 1 6;
-#N canvas 512 168 450 344 properties 0;
+#N canvas 418 168 614 344 properties 1;
 #X obj 132 16 inlet;
 #X obj 150 171 iemguts/canvasposition 1;
 #X obj 150 193 unpack;
@@ -514,6 +514,11 @@
 #X obj 171 16 receive \$0-gone;
 #X obj 183 216 - 130;
 #X msg 150 267 obj \$1 \$2 sketch-properties \$3;
+#X obj 396 83 receive \$0-propload;
+#X obj 396 106 t b f;
+#X obj 396 129 f \$0;
+#X obj 396 152 send;
+#X obj 427 129 makefilename %d-loadstart;
 #X connect 0 0 8 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -529,6 +534,11 @@
 #X connect 11 0 8 1;
 #X connect 12 0 3 1;
 #X connect 13 0 4 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 1 18 0;
+#X connect 16 0 17 0;
+#X connect 18 0 17 1;
 #X restore -184 -68 pd properties;
 #X obj -184 -89 iemguts/propertybang;
 #X obj -257 4 ctxfiles/license;

@@ -1,4 +1,4 @@
-#N canvas 92 127 1256 605 10;
+#N canvas 67 85 1299 683 10;
 #X obj 62 54 cnv 15 328 111 empty empty empty 20 12 0 14 -151156 -66577
 0;
 #X obj 140 96 bng 14 250 50 0 \$0-e+ \$0f + 5 7 0 10 -151146 -1 -1
@@ -129,6 +129,11 @@
 #X msg 730 279 1 x \, 2 y \, 3 size \, 4 yt \, 5 by \, 8 name \, 9
 col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 \, 15 scale \, 16 error \, 18 lock;
+#X obj 386 616 loadbang;
+#X obj 386 639 list append loadproperties \$0;
+#X obj 1051 141 receive \$0-loadstart;
+#X obj 1051 164 t b f;
+#X obj 1078 187 makefilename %d-save;
 #X connect 5 0 10 0;
 #X connect 6 0 5 0;
 #X connect 7 0 9 0;
@@ -200,4 +205,10 @@ col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 #X connect 105 0 106 0;
 #X connect 106 0 41 0;
 #X connect 109 0 72 0;
+#X connect 110 0 111 0;
+#X connect 111 0 46 0;
+#X connect 112 0 113 0;
+#X connect 113 0 109 0;
+#X connect 113 1 114 0;
+#X connect 114 0 73 3;
 #X coords 0 -1 1 1 330 113 1 61 53;
