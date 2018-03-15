@@ -1,4 +1,4 @@
-#N canvas 289 229 974 495 10;
+#N canvas 279 221 974 495 10;
 #X obj 728 617 inlet;
 #X obj 728 593 outlet;
 #X obj 668 402 line;
@@ -196,7 +196,6 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X obj 689 31 receive \$1-:size;
 #X obj 668 53 f \$4;
 #X obj 786 943 + \$4;
-#X obj 522 401 print as;
 #X obj 592 -33 * 1;
 #X obj 940 295 / 1;
 #X obj 695 526 bezier \$1 \$3 y;
@@ -207,7 +206,7 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 5 0 2 0;
 #X connect 9 0 4 0;
 #X connect 9 1 4 1;
-#X connect 10 0 191 0;
+#X connect 10 0 190 0;
 #X connect 10 1 143 0;
 #X connect 11 0 186 0;
 #X connect 11 1 144 0;
@@ -243,8 +242,8 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 41 0 24 1;
 #X connect 42 1 185 1;
 #X connect 42 1 186 1;
+#X connect 42 1 190 1;
 #X connect 42 1 191 1;
-#X connect 42 1 192 1;
 #X connect 42 1 87 3;
 #X connect 43 0 88 0;
 #X connect 44 0 45 1;
@@ -269,7 +268,7 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 63 0 64 0;
 #X connect 64 0 154 0;
 #X connect 65 0 24 0;
-#X connect 65 1 193 0;
+#X connect 65 1 192 0;
 #X connect 66 0 65 1;
 #X connect 66 0 74 1;
 #X connect 66 0 84 1;
@@ -282,9 +281,9 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 77 0 14 0;
 #X connect 77 1 14 1;
 #X connect 77 2 12 1;
-#X connect 77 3 193 1;
+#X connect 77 3 192 1;
 #X connect 78 0 14 0;
-#X connect 78 1 193 2;
+#X connect 78 1 192 2;
 #X connect 80 0 56 0;
 #X connect 81 0 79 0;
 #X connect 82 0 3 0;
@@ -292,7 +291,7 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 83 0 188 0;
 #X connect 83 1 3 1;
 #X connect 83 2 182 1;
-#X connect 83 3 192 0;
+#X connect 83 3 191 0;
 #X connect 84 0 13 0;
 #X connect 84 1 45 0;
 #X connect 85 0 181 0;
@@ -380,9 +379,9 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 142 2 11 0;
 #X connect 143 0 77 0;
 #X connect 144 0 78 0;
-#X connect 145 0 191 0;
+#X connect 145 0 190 0;
 #X connect 145 1 143 0;
-#X connect 146 0 191 0;
+#X connect 146 0 190 0;
 #X connect 146 1 143 0;
 #X connect 147 0 188 0;
 #X connect 147 1 144 0;
@@ -440,6 +439,6 @@ array cease to be point1'2. If so \, trigger gget 2 recalculation.
 #X connect 187 0 188 1;
 #X connect 188 0 82 0;
 #X connect 189 0 117 1;
-#X connect 191 0 83 0;
-#X connect 192 0 87 1;
-#X connect 193 0 24 0;
+#X connect 190 0 83 0;
+#X connect 191 0 87 1;
+#X connect 192 0 24 0;

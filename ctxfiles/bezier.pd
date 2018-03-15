@@ -1,4 +1,4 @@
-#N canvas 370 164 737 473 10;
+#N canvas 360 156 737 473 10;
 #X obj 185 76 f;
 #X obj 185 124 text get £"pascal);
 #X obj 185 146 cyclone/iter;
@@ -25,10 +25,6 @@
 * z\$1_b\$3_\$2[$f2];
 #X text 318 360 removed * c\$1sby\$3 from end;
 #X obj 168 328 cyclone/accum;
-#X obj 546 262 array get z\$1_b\$3_\$2;
-#X obj 551 234 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 546 285 print to;
 #X obj 516 159 f;
 #X obj 622 20 inlet;
 #X obj 433 58 * 1;
@@ -43,13 +39,13 @@
 #X connect 6 0 21 0;
 #X connect 14 0 4 1;
 #X connect 14 1 24 2;
-#X connect 15 0 30 0;
-#X connect 16 0 28 0;
+#X connect 15 0 27 0;
+#X connect 16 0 25 0;
 #X connect 19 0 20 0;
 #X connect 20 0 0 1;
 #X connect 20 1 22 3;
-#X connect 20 2 30 0;
-#X connect 20 3 28 0;
+#X connect 20 2 27 0;
+#X connect 20 3 25 0;
 #X connect 20 4 18 1;
 #X connect 21 0 24 0;
 #X connect 21 1 0 0;
@@ -57,8 +53,6 @@
 #X connect 21 3 14 0;
 #X connect 22 0 24 1;
 #X connect 24 0 11 0;
-#X connect 25 0 27 0;
-#X connect 26 0 25 0;
-#X connect 28 0 18 0;
-#X connect 29 0 30 1;
-#X connect 30 0 17 0;
+#X connect 25 0 18 0;
+#X connect 26 0 27 1;
+#X connect 27 0 17 0;
