@@ -15,7 +15,7 @@
 #X obj -60 -200 inlet;
 #X obj -60 -166 outlet;
 #X obj -241 -234 iemguts/initbang;
-#N canvas 240 205 883 527 commands 1;
+#N canvas 339 241 883 527 commands 0;
 #X obj 141 72 inlet;
 #X obj -133 175 cyclone/zl iter 1;
 #X obj 68 48 iemguts/oreceive \$0-array-;
@@ -55,10 +55,17 @@
 #X obj 636 261 t b f;
 #X obj 620 419 t b f;
 #X obj 480 2 receive \$0-:x;
+#X obj 369 285 makefilename %s-getdim;
+#X obj 369 308 iemguts/oreceive \$0n;
+#X obj 369 375 send;
+#X obj 369 330 t b s;
+#X obj 369 352 f \$0;
+#X text 408 336 interface with [grab];
 #X connect 0 0 30 0;
 #X connect 2 0 30 0;
 #X connect 3 0 2 0;
 #X connect 4 0 3 0;
+#X connect 4 0 39 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
 #X connect 6 1 8 0;
@@ -94,6 +101,11 @@
 #X connect 37 0 6 0;
 #X connect 37 1 21 0;
 #X connect 38 0 6 0;
+#X connect 39 0 40 0;
+#X connect 40 0 42 0;
+#X connect 42 0 43 0;
+#X connect 42 1 41 1;
+#X connect 43 0 41 0;
 #X restore -304 -153 pd commands;
 #X obj -361 -206 inlet;
 #X obj -361 -182 route bang;
@@ -388,7 +400,7 @@
 #X connect 26 0 11 0;
 #X restore -385 -44 pd inlets;
 #X obj -361 -128 outlet~;
-#N canvas 152 382 585 365 init 0;
+#N canvas 67 381 585 365 init 0;
 #X obj 157 20 inlet;
 #X obj 200 118 outlet;
 #X obj 157 42 ctxfiles/myinit 3;
@@ -439,7 +451,7 @@
 #X connect 23 0 24 0;
 #X connect 24 0 14 0;
 #X restore -241 -207 pd init;
-#N canvas 329 121 557 359 saving 0;
+#N canvas 282 121 557 359 saving 0;
 #X obj 85 136 text define -k \$0-save;
 #A set \; %^ :x 128 \; %^ :y 79 \; %^ :size 128 \; %^ :y1 1 \; %^ :y2
 0 \; %^ :points bang \; %^ :bpoints bang \; %^ :name bang \; %^ :color
