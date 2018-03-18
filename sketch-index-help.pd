@@ -1,0 +1,3 @@
+#N canvas 399 261 450 300 10;
+#X obj 161 124 pddp/pddplink sketch-grip-help.pd -text see [sketch-grip]
+;

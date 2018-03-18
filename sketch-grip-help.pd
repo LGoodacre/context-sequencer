@@ -1,0 +1,256 @@
+#N struct 8430-big2 float x float y array 8430-array2 ^&*-dsmall2;
+#N struct ^&*-dsmall2 float x float y symbol onoff;
+#N struct 8430-big1 float x float y array 8430-array1 ^&*-dsmall1;
+#N struct ^&*-dsmall1 float x float y symbol onoff;
+#N struct 8482-big2 float x float y array 8482-array2 ^&*-dsmall2;
+#N struct 8482-big1 float x float y array 8482-array1 ^&*-dsmall1;
+#N canvas 364 93 765 616 10;
+#X obj 23 16 cnv 15 192 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 18 11 cnv 15 192 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 19 12 cnv 15 190 40 empty empty sketch-grip 20 14 2 32 -2244
+-262144 0;
+#X obj 473 8 ctxfiles/license;
+#X text 19 90 [sketch-grip] is a special slider that "grips" and lets
+you move individual points on a [sketch] array. There are three main
+reasons you might want to do this:;
+#X text 396 89 1: For more precision \; 2: for integrating with [gridcontrol]
+\; 3: for automation (see [automation example);
+#N canvas 67 88 659 490 automation 0;
+#X obj 437 231 phasor~;
+#X obj 437 254 *~ 255;
+#X obj 389 354 *~;
+#X obj 389 376 dac~;
+#X obj 421 354 hsl 128 15 0 1 0 0 empty empty volume 4 7 0 10 -262144
+-1 -1 0 1;
+#N canvas 543 199 450 491 circle 0;
+#X obj 167 100 tgl 18 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 167 190 f;
+#X obj 167 213 t f f f;
+#X obj 167 323 sin;
+#X obj 167 346 * 20;
+#X obj 167 369 + 40;
+#X msg 167 392 \; help- p1-x \$1;
+#X obj 200 306 * 20;
+#X obj 200 329 + 40;
+#X obj 200 283 cos;
+#X msg 200 352 \; help- p1-y \$1;
+#X obj 167 167 metro 50;
+#X obj 206 237 + 0.01;
+#X connect 0 0 11 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 9 0;
+#X connect 2 2 12 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 9 0 7 0;
+#X connect 11 0 1 0;
+#X connect 12 0 1 1;
+#X coords 0 -1 1 1 85 18 1 100 100;
+#X restore 527 118 pd circle;
+#N canvas 604 174 450 519 random 0;
+#X obj 167 100 tgl 18 1 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 194 147 stop;
+#X obj 167 123 sel 1;
+#X obj 131 183 t b b b;
+#X obj 35 316 random 100;
+#X obj 35 339 pack;
+#X obj 150 316 random 100;
+#X obj 150 339 pack;
+#X obj 170 262 t f f f;
+#X obj 170 209 random 5000;
+#X obj 209 286 del;
+#X msg 35 363 \; help- p2-x \$1 \$2;
+#X msg 150 363 \; help- p2-y \$1 \$2;
+#X obj 170 232 + 800;
+#X connect 0 0 2 0;
+#X connect 1 0 10 0;
+#X connect 2 0 3 0;
+#X connect 2 1 1 0;
+#X connect 3 0 4 0;
+#X connect 3 1 6 0;
+#X connect 3 2 9 0;
+#X connect 4 0 5 0;
+#X connect 5 0 11 0;
+#X connect 6 0 7 0;
+#X connect 7 0 12 0;
+#X connect 8 0 5 1;
+#X connect 8 1 7 1;
+#X connect 8 2 10 0;
+#X connect 9 0 13 0;
+#X connect 10 0 3 0;
+#X connect 13 0 8 0;
+#X coords 0 -1 1 1 85 18 1 100 100;
+#X restore 527 140 pd random;
+#X obj 410 187 nbx 5 14 -1e+37 1e+37 0 1 empty empty pitch 0 -8 0 10
+-262144 -1 -1 85 256;
+#X obj 410 206 t f f;
+#X obj 388 278 phasor~;
+#X obj 388 301 *~ 255;
+#X obj 388 254 * 1.5;
+#X obj 437 278 tabread4~ wave;
+#X obj 389 325 tabread4~ wave;
+#X obj 60 148 sketch-index wave p1 0 2;
+#X obj 40 128 sketch-index wave p2 0 0;
+#X obj 82 182 sketch point1 0.451174 0.521572 point2 0.204918 0.14924
+0.859375 0.753165 :name wave :color -1.47304e+07 :duplicate 1 :mirror-x
+1 :mirror-y 1;
+#X obj 82 128 sketch-grip wave x p2 help;
+#X obj 82 148 sketch-grip wave x p1 help;
+#X obj 58 184 sketch-grip wave y p1 help;
+#X obj 36 184 sketch-grip wave y p2 help;
+#X text 349 129 turn on automation here -->;
+#X text 555 353 <--volume here;
+#X text 47 11 This example uses two pairs of [sketch-grip] to control
+the points on a [sketch] array. The [sketch] has its "duplicate" \,
+"mirror-x" and "mirror-y" settings turned on \, so the waveform is
+completed symetrically. Positions are sent to the [sketch-grip] objects
+from the two subpatches on the right.;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 2 0 3 1;
+#X connect 4 0 2 1;
+#X connect 7 0 8 0;
+#X connect 8 0 11 0;
+#X connect 8 1 0 0;
+#X connect 9 0 10 0;
+#X connect 10 0 13 0;
+#X connect 11 0 9 0;
+#X connect 12 0 2 0;
+#X connect 13 0 2 0;
+#X restore 563 571 automation example;
+#X obj 8 154 cnv 15 679 217 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 9 155 cnv 15 677 215 empty empty empty 20 12 0 14 -241291 -66577
+0;
+#X obj 11 157 cnv 15 673 211 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 12 158 cnv 15 671 209 empty empty empty 20 12 0 14 -261689 -66577
+0;
+#X obj 221 211 sketch point1 0.163934 0.671233 0.6875 0.436709 point2
+0.286885 0.386076 :name env;
+#X obj 202 211 sketch-grip env y gr;
+#X obj 221 294 sketch-grip env x gr;
+#X text 354 235 <-- this is;
+#X obj 426 235 pddp/pddplink sketch-help.pd -text sketch;
+#X text 355 291 <-- this is also [sketch-grip];
+#X text 45 234 this is [sketch-grip] -->;
+#X obj 203 293 sketch-index env gr 0 1;
+#X text 45 311 It tells you which point is selected., f 21;
+#X text 468 235 which is used to draw a function.;
+#X obj 16 447 cnv 15 390 155 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 11 442 cnv 15 390 155 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 12 443 cnv 15 388 153 empty empty empty 20 12 0 14 -261689 -66577
+0;
+#X text 30 458 [sketch-grip] is quite easy to use. By moving the slider
+\, you will move the x- or y-axis of whichever point is selected.;
+#X text 29 509 To select another point \, hold down the Control or
+Command key and then move the slider. Instead of moving the point \,
+the slider will "grip" to the nearest point.;
+#X obj 18 402 cnv 15 82 32 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 13 397 cnv 15 82 32 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 14 398 cnv 15 80 30 empty empty use 18 10 2 32 -208320 -66577
+0;
+#X obj 568 402 cnv 15 122 32 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 563 397 cnv 15 122 32 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 564 398 cnv 15 120 30 empty empty setup 24 10 2 32 -208320 -66577
+0;
+#N canvas 67 87 455 558 creation 0;
+#X text 46 37 [sketch-grip] has 5 arguments \, but the last 2 are optional.
+;
+#X text 104 66 1: ARRAY NAME. This must correspond with the name of
+the [sketch] array \, which is visible just above the object. Note
+that the default name isn't a very good option \, which it resets every
+time the patch is loaded (\$0). So it is best to name the [sketch]
+array using the "name" command or the properties menu (see sketch-help.pd).
+, f 49;
+#X text 104 167 2: x or y. This indicates whether you want a vertical
+or a horizontal [sketch-grip] object. You must enter the character
+"x" or the character "y" as the second argument., f 49;
+#X text 104 227 3: label. This is a custom symbol which is used to
+identify the slider. It is best to keep the label short in case the
+text falls outside the display area. If you are using a pair of [sketch-grip]
+objects to control the x- and y-axis \, then give them the same label
+so that they can communicate with each other., f 49;
+#X text 104 372 5: time grain for line input (see "input"). Defaults
+to 100 if left blank., f 49;
+#X text 47 416 So for example \, the [sketch-grip] objects created
+in the main window of this help patch are:;
+#X text 103 454 [sketch-grip env x gr];
+#X text 103 475 [sketch-grip env y gr];
+#X text 66 511 Note: If you right click on [sketch-grip] and select
+"properties" \, you can edit the creation argument.;
+#X text 104 326 4: group-name (only required if you are using [sketch-grip]
+in an abstraction and you want it to operate like [slide]. (see "input").
+, f 49;
+#X restore 563 504 creation arguments;
+#X text 525 447 [sketch-grip] works automatically \, but it needs to
+be initialized with the correct creation arguments., f 36;
+#N canvas 627 337 450 300 sketch-index 0;
+#X text 48 21 [sketch-index] is the little number box visible in the
+bottom-left of the example in the main window of the help patch. It
+is used for two things:;
+#X text 77 78 1: setting which point [sketch-grip] grips \; 2: state-saving
+its selection.;
+#X text 49 130 [sketch-index] takes the following three arguments:
+;
+#X text 77 162 1: array name \, the same as with [sketch-grip] \; 2:
+label \, corresponding to those of [sketch-grip] \; 3: \$1 (if using
+as a part of a;
+#X obj 262 188 pddp/pddplink psave-help.pd -text psave abstraction.
+;
+#X restore 563 527 sketch-index object;
+#N canvas 464 197 680 477 input 0;
+#X obj 649 439 sketch-index env gp 0 1;
+#X text 84 30 There are four ways of getting data into [sketch-grip]:
+;
+#X text 108 55 1: Manually using the mouse.;
+#X text 108 80 2: Using the inlet.;
+#X floatatom 71 79 5 0 0 0 - - -, f 5;
+#X floatatom 489 105 5 0 0 0 - - -, f 5;
+#X obj 38 219 sketch-grip env x gp help-patch;
+#X text 109 104 3: By sending a message. This requires the fourth creation
+argument as an identifier (see "creation arguments"). You need to send
+message message "label-x my message" to channel [s group-name-]. See
+example to the right.;
+#X msg 489 127 \; help-patch- gp-x \$1;
+#X text 174 217 <-- this object is [sketch-grip env x gp help-patch].
+;
+#X obj 417 183 pddp/pddplink pgrid-help.pd -text See [pgrid].;
+#X text 108 170 4: using [gridcontrol]. [sketch-grip] will integrate
+with [pgrid] to operate like a regular slider in mode-4.;
+#X text 80 280 There are two types of data you can send to [sketch-grip]:
+;
+#X text 107 321 1: Single floats (0-100). As above \, the slider will
+jump to the new position.;
+#X text 108 362 2: Double float lists (position \, time). This will
+move the slider to the new position over the given time (in milieconds).
+The time grain can be set with [sketch-grip]'s 6th creation argument
+(see "creation arguments").;
+#X floatatom 478 322 5 0 0 0 - - -, f 5;
+#X obj 478 344 pack f 1000;
+#X floatatom 541 322 5 0 0 0 - - -, f 5;
+#X msg 478 371 \; help-patch- gp-x \$1 \$2;
+#X connect 4 0 6 0;
+#X connect 5 0 8 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 16 1;
+#X restore 563 549 input and output;
+#X text 36 294 this is [sketch-index] -->;
+#X text 30 561 Note that you can also select a point using [sketch-index].
+;
