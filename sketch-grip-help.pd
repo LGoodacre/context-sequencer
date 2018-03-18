@@ -1,10 +1,14 @@
-#N struct 8430-big2 float x float y array 8430-array2 ^&*-dsmall2;
+#N struct 13327-big2 float x float y array 13327-array2 ^&*-dsmall2
+;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 8430-big1 float x float y array 8430-array1 ^&*-dsmall1;
+#N struct 13327-big1 float x float y array 13327-array1 ^&*-dsmall1
+;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 8482-big2 float x float y array 8482-array2 ^&*-dsmall2;
-#N struct 8482-big1 float x float y array 8482-array1 ^&*-dsmall1;
-#N canvas 364 93 765 616 10;
+#N struct 13379-big2 float x float y array 13379-array2 ^&*-dsmall2
+;
+#N struct 13379-big1 float x float y array 13379-array1 ^&*-dsmall1
+;
+#N canvas 317 93 765 616 10;
 #X obj 23 16 cnv 15 192 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 18 11 cnv 15 192 42 empty empty empty 20 12 0 14 -1 -66577 0
@@ -17,7 +21,7 @@ you move individual points on a [sketch] array. There are three main
 reasons you might want to do this:;
 #X text 396 89 1: For more precision \; 2: for integrating with [gridcontrol]
 \; 3: for automation (see [automation example);
-#N canvas 67 88 659 490 automation 0;
+#N canvas 67 88 659 490 example 0;
 #X obj 437 231 phasor~;
 #X obj 437 254 *~ 255;
 #X obj 389 354 *~;
@@ -169,7 +173,7 @@ the slider will "grip" to the nearest point.;
 0;
 #X obj 564 398 cnv 15 120 30 empty empty setup 24 10 2 32 -208320 -66577
 0;
-#N canvas 67 87 455 558 creation 0;
+#N canvas 67 87 455 558 arguments 0;
 #X text 46 37 [sketch-grip] has 5 arguments \, but the last 2 are optional.
 ;
 #X text 104 66 1: ARRAY NAME. This must correspond with the name of
@@ -200,7 +204,7 @@ in an abstraction and you want it to operate like [slide]. (see "input").
 #X restore 563 504 creation arguments;
 #X text 525 447 [sketch-grip] works automatically \, but it needs to
 be initialized with the correct creation arguments., f 36;
-#N canvas 627 337 450 300 sketch-index 0;
+#N canvas 627 337 450 300 object 0;
 #X text 48 21 [sketch-index] is the little number box visible in the
 bottom-left of the example in the main window of the help patch. It
 is used for two things:;
@@ -214,7 +218,7 @@ as a part of a;
 #X obj 262 188 pddp/pddplink psave-help.pd -text psave abstraction.
 ;
 #X restore 563 527 sketch-index object;
-#N canvas 464 197 680 477 input 0;
+#N canvas 417 197 680 524 and 0;
 #X obj 649 439 sketch-index env gp 0 1;
 #X text 84 30 There are four ways of getting data into [sketch-grip]:
 ;
@@ -245,8 +249,13 @@ The time grain can be set with [sketch-grip]'s 6th creation argument
 #X obj 478 344 pack f 1000;
 #X floatatom 541 322 5 0 0 0 - - -, f 5;
 #X msg 478 371 \; help-patch- gp-x \$1 \$2;
+#X text 76 452 [sketch-gri] has one outlet which outputs a value between
+0 and 1 You can use this to track the placement of a sketch point.
+;
+#X floatatom 56 496 5 0 0 0 - - -, f 5;
 #X connect 4 0 6 0;
 #X connect 5 0 8 0;
+#X connect 6 0 20 0;
 #X connect 15 0 16 0;
 #X connect 16 0 18 0;
 #X connect 17 0 16 1;
