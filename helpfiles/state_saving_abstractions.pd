@@ -1,4 +1,4 @@
-#N canvas 402 277 875 455 10;
+#N canvas 355 277 875 455 10;
 #X obj 19 21 cnv 15 402 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 14 16 cnv 15 402 52 empty empty empty 20 12 0 14 -1 -66577 0
@@ -6,16 +6,10 @@
 #X obj 15 17 cnv 15 400 50 empty empty a guide to creating state-saving abstractions
 10 22 1 19 -121638 -1 0;
 #X obj 648 13 ctxfiles/license;
-#X text 17 89 This is a guide to creating state-saving abstractions
-using the objects [psave] \, [slide] \, [slide2] \, [num] and [tog].
-A state-saving abstraction is an abstraction which saves user-defined
-parameters in the abstraction itself \, to be re-loaded when the patch
-is opened. This is traditionally a hard problem in PD \, but is rendered
-very easy with the help of these objects.;
 #X text 38 207 STEPS TO CREATING STATE-SAVING ABSTRACTIONS:;
-#X text 461 67 SEE ALSO:;
-#X obj 442 85 pddp/pddplink ../psave-help.pd;
-#X obj 442 99 pddp/pddplink ../slide-help.pd;
+#X text 461 62 SEE ALSO:;
+#X obj 442 80 pddp/pddplink ../psave-help.pd;
+#X obj 442 94 pddp/pddplink ../slide-help.pd;
 #X text 16 235 1: Use [slide] \, [tog] and [num] inside your abstraction
 instead of regular sliders \, numbers and toggle boxes. You'll need
 to enter their creation arguments correctly \, as listed in their individual
@@ -25,14 +19,14 @@ helpfiles (remembering crucially to use "\$1" as the "group name").
 ;
 #X text 14 343 3: When you instantiate the abstraction \, give it a
 unique name. You abstraction should now state-save automatically!;
-#X obj 442 113 pddp/pddplink ../slide2-help.pd;
-#X obj 442 127 pddp/pddplink ../tog-help.pd;
-#X obj 442 140 pddp/pddplink ../num-help.pd;
-#X text 565 85 needed for automatic state-saving;
-#X text 566 99 used as a slider with bounded limits;
-#X text 566 113 used as a slider to control 2 variables;
-#X text 566 126 used as a toggle;
-#X text 566 140 used as an unbounded number box;
+#X obj 442 108 pddp/pddplink ../slide2-help.pd;
+#X obj 442 122 pddp/pddplink ../tog-help.pd;
+#X obj 442 135 pddp/pddplink ../num-help.pd;
+#X text 585 80 needed for automatic state-saving;
+#X text 586 94 used as a slider with bounded limits;
+#X text 586 108 used as a slider to control 2 variables;
+#X text 586 121 used as a toggle;
+#X text 586 135 used as an unbounded number box;
 #X obj 458 234 cnv 15 382 202 empty empty empty 20 12 0 14 -1 -66577
 0;
 #X obj 459 235 cnv 15 380 200 empty empty empty 20 12 0 14 -99865 -66577
@@ -54,3 +48,11 @@ how it works., f 39;
 #X obj 597 285 helpfiles/docfiles/example-abstraction two 1 49 16;
 #X obj 713 285 helpfiles/docfiles/example-abstraction three 0 61 -31
 ;
+#X obj 442 148 pddp/pddplink ../sketch-grip-help.pd;
+#X text 586 148 used as a slider for [sketch];
+#X text 17 89 This is a guide to creating state-saving abstractions
+using the objects [psave] \, [slide] \, [slide2] \, [num] \, [tog]
+and [sketch-grip]. A state-saving abstraction is an abstraction which
+saves user-defined parameters in the abstraction itself \, to be re-loaded
+when the patch is opened. This is traditionally a hard problem in PD
+\, but is rendered very easy with the help of these objects.;
