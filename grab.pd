@@ -1,5 +1,5 @@
 #N canvas 67 242 450 482 10;
-#N canvas 67 91 636 677 create 0;
+#N canvas 67 91 724 677 create 0;
 #X obj 194 73 symbol \$1-getdim;
 #X obj 174 123 send;
 #X obj 174 147 receive \$0-gotdim;
@@ -49,18 +49,21 @@
 #X obj 150 457 t f f f;
 #X obj 350 513 s \$0-sizee;
 #X obj 201 285 t f f f;
-#X text 272 37 CREATION ARGS: array name \, x/y \, label \, \$1 (psave)
-\, init;
 #X obj 150 503 zexy/pack 0 \$0 0 0 \$3;
 #X obj 155 6 loadbang;
 #X msg 177 551 obj 0 0 vsl 15 \$1 0 1 0 0 \$2-send \$2-receive empty
 0 -9 0 10 -1 -1 -1 0 1 \, text 3 4 \$5-y \, f 1 \, coords 0 -1 1 1
 15 \$3 2 0 -2 \; \$2-receive color \$4;
-#X msg 150 606 obj 0 0 hsl \$1 15 0 1 0 0 \$2-send \$2-receive empty
+#X msg 150 613 obj 0 0 hsl \$1 15 0 1 0 0 \$2-send \$2-receive empty
 0 -9 0 10 -1 -1 -1 0 1 \, text 4 -1 \$5-x \, coords 0 -1 1 1 \$3 15
 2 -3 0 \; \$2-receive color \$4;
 #X obj 155 50 t b b b b;
 #X obj 77 53 s \$0-lb;
+#X text 272 37 CREATION ARGS: array name \, x/y \, label \, \$1 (psave)
+\, grain;
+#X msg 426 501 menu-open \, coords 0 -1 1 1 1 1 1 0 0 \, coords 0 -1
+1 1 1 1 0 0 0 \, vis 0;
+#X obj 426 478 receive \$0-prop;
 #X connect 0 0 1 1;
 #X connect 2 0 34 0;
 #X connect 3 0 1 0;
@@ -77,13 +80,13 @@
 #X connect 12 1 30 0;
 #X connect 13 0 14 0;
 #X connect 14 0 46 0;
-#X connect 15 0 51 0;
-#X connect 15 1 50 0;
+#X connect 15 0 50 0;
+#X connect 15 1 49 0;
 #X connect 16 0 24 0;
 #X connect 16 1 23 0;
-#X connect 17 0 52 0;
+#X connect 17 0 51 0;
 #X connect 19 0 13 0;
-#X connect 20 0 48 0;
+#X connect 20 0 47 0;
 #X connect 21 0 22 0;
 #X connect 22 0 25 0;
 #X connect 23 0 18 0;
@@ -94,7 +97,7 @@
 #X connect 26 0 18 0;
 #X connect 27 0 18 0;
 #X connect 30 0 43 1;
-#X connect 30 0 48 3;
+#X connect 30 0 47 3;
 #X connect 30 1 44 0;
 #X connect 31 0 30 1;
 #X connect 32 0 9 0;
@@ -118,21 +121,23 @@
 #X connect 42 0 39 1;
 #X connect 43 0 39 0;
 #X connect 44 0 20 0;
-#X connect 44 1 48 2;
+#X connect 44 1 47 2;
 #X connect 44 2 45 0;
 #X connect 46 0 21 0;
 #X connect 46 1 22 2;
 #X connect 46 2 45 0;
-#X connect 48 0 15 0;
-#X connect 49 0 17 0;
+#X connect 47 0 15 0;
+#X connect 48 0 17 0;
+#X connect 49 0 18 0;
 #X connect 50 0 18 0;
-#X connect 51 0 18 0;
-#X connect 52 0 53 0;
-#X connect 52 1 5 0;
-#X connect 52 2 3 0;
-#X connect 52 3 0 0;
+#X connect 51 0 52 0;
+#X connect 51 1 5 0;
+#X connect 51 2 3 0;
+#X connect 51 3 0 0;
+#X connect 54 0 18 0;
+#X connect 55 0 54 0;
 #X restore 283 13 pd create;
-#N canvas 321 87 871 680 move 1;
+#N canvas 274 87 871 680 move 0;
 #X obj 53 32 keyname;
 #X obj 53 54 pack f s;
 #X obj 53 77 cyclone/zl rev;
@@ -350,5 +355,35 @@ old;
 #X restore 283 58 pd set;
 #X obj 24 -101 inlet;
 #X obj 24 -78 s \$0-receive;
+#N canvas 204 188 450 300 input 1;
+#X obj 185 25 receive \$4-;
+#X obj 185 71 route float;
+#X obj 185 184 s \$0-receive;
+#X obj 185 48 route \$3-\$2;
+#X obj 248 94 t l b;
+#X obj 275 168 line 0 100;
+#X obj 275 120 v \$0-send;
+#X obj 185 159 * 0.01;
+#X obj 331 34 loadbang;
+#X obj 331 57 f \$5;
+#X obj 331 80 moses 1;
+#X obj 275 143 * 100;
+#X connect 0 0 3 0;
+#X connect 1 0 7 0;
+#X connect 1 1 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 11 0;
+#X connect 7 0 2 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 1 5 2;
+#X connect 11 0 5 0;
+#X restore 283 81 pd input;
+#X obj 347 13 iemguts/propertybang 1;
+#X obj 347 36 s \$0-prop;
 #X connect 3 0 4 0;
+#X connect 6 0 7 0;
 #X coords 0 482 1 481 85 60 0;
