@@ -526,7 +526,7 @@
 #X obj -384 110 ctxfiles/gget \$0 2 7;
 #X obj -384 0 ctxfiles/points \$0 1;
 #X obj -384 22 ctxfiles/points \$0 2;
-#X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties
+#X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties 130
 ;
 #X connect 3 0 21 0;
 #X connect 5 0 16 0;

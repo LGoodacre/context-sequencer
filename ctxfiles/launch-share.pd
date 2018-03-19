@@ -1,4 +1,4 @@
-#N canvas 416 186 450 298 10;
+#N canvas 548 170 450 298 10;
 #X obj 115 127 array define -k launchpadcolors## 30;
 #A 0 15 43 79 32 32 15 75 75 17 2 90 101 45 121 15 19 33 87 103 63
 101 101 80 46 51 69 64 47 71 71;
@@ -26,7 +26,7 @@
 0 27 28 49 220 253 84 118 251 185 150 152 255 139 98 255 64 64 64 116
 116 116 222 252 252 162 4 1 52 1 0 0 210 1 0 65 1 184 177 0 60 48 0
 180 93 0 76 19 0;
-#N canvas 270 230 740 538 messages 0;
+#N canvas 291 186 740 538 messages 0;
 #X obj 134 73 receive YYh&&8(v;
 #X obj 201 117 t b a;
 #X obj 311 164 ctxfiles/recompile \$0;
@@ -50,8 +50,8 @@ copy ~ ID \; :2f0 gtfs \$0 #f 2f0 :s \; :2f1 gtfs \$0 #f 2f1 :ss
 4f4 3000 \; :4f5 gtfs \$0 #f 4f5 1000 \; :4f6 gtfs \$0 #f 4f6 500 \;
 :4f7 gtfs \$0 #f 4f7 1 \; :qu gtfs \$0 #f qu 0 \, :quantize #l \; :gui
 gtfs \$0 #f gui 0 \, :GUI #l \; :sa gtfs \$0 #f sa 1 \; :ac gtfs \$0
-#f ac 0 \; :m1 gtfs \$0 #f m1 0 0 0 0 0 0 0 0 \; ## s \$0-othr
-;
+#f ac 0 \; :m1 gtfs \$0 #f m1 0 0 0 0 0 0 0 0 \; loadproperties
+tf \$0 #f \; ## s \$0-othr;
 #X obj 311 187 ctxfiles/br2 demux 2 \; #f t \; #f gs :1f0 \; #f gs
 :1f1 \; #f gs :1f2 \; #f gs :1f3 \; #f gs :1f4 \; #f gs :1f5 \; #f
 gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
@@ -59,8 +59,8 @@ gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
 \; #f gs :3f0 \; #f gs :3f1 \; #f gs :3f2 \; #f gs :3f3 \; #f gs :3f4
 \; #f gs :3f5 \; #f gs :3f6 \; #f gs :3f7 \; #f gs :4f0 \; #f gs :4f1
 \; #f gs :4f2 \; #f gs :4f3 \; #f gs :4f4 \; #f gs :4f5 \; #f gs :4f6
-\; #f gs :4f7 \; #f gs :qup \; #f gs :gui \; #f gs :sa \; #f gs :ac
-\; #f gs :m1 \;;
+\; #f gs :4f7 \; #f gs :qu \; #f gs :gui \; #f gs :sa \; #f gs :ac
+\; #f gs :m1 \; #f gs propload;
 #X connect 0 0 5 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
