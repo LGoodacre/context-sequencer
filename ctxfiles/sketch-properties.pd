@@ -1,0 +1,214 @@
+#N canvas 67 85 1299 683 10;
+#X obj 62 54 cnv 15 328 111 empty empty empty 20 12 0 14 -151156 -66577
+0;
+#X obj 140 96 bng 14 250 50 0 \$0-e+ \$0f + 5 7 0 10 -151146 -1 -1
+;
+#X obj 156 96 bng 14 250 50 0 \$0-e- \$0f - 5 7 0 10 -151146 -1 -1
+;
+#X obj 140 112 bng 14 250 50 0 \$0-c+ \$0f + 5 7 0 10 -151146 -1 -1
+;
+#X obj 156 112 bng 14 250 50 0 \$0-c- \$0f - 5 7 0 10 -151146 -1 -1
+;
+#X obj 215 229 v \$0-en;
+#X obj 215 206 receive \$0-e+;
+#X obj 303 229 v \$0-en;
+#X obj 304 206 receive \$0-e-;
+#X obj 303 251 * -1;
+#X msg 248 299 point1 \$1;
+#X obj 483 251 * -1;
+#X obj 396 206 receive \$0-c+;
+#X obj 483 206 receive \$0-c-;
+#X obj 395 229 v \$0-cn;
+#X obj 483 229 v \$0-cn;
+#X msg 395 299 point2 \$1;
+#X floatatom 172 96 2 0 99 0 - #0-enr #0-en, f 2;
+#X floatatom 172 112 2 0 99 0 - #0-cnr #0-cn, f 2;
+#X obj 864 203 s \$0-enr;
+#X obj 836 222 s \$0-cnr;
+#X floatatom 131 133 3 0 999 0 x #0-xr #0-xs, f 3;
+#X floatatom 166 133 3 0 999 0 y #0-yr #0-ys, f 3;
+#X floatatom 199 96 5 0 99999 1 points #0-sizer #0-sizes, f 5;
+#X floatatom 199 112 3 0 0 1 y-top #0-ytr #0-yts, f 3;
+#X floatatom 199 128 3 0 0 1 y-bottom #0-ybr #0-ybs, f 3;
+#X symbolatom 150 56 16 0 0 0 command #0-cin #0-cout, f 16;
+#X obj 64 56 bng 15 250 50 0 \$1-done \$0-f ^ 5 9 0 10 -151156 -1 -1
+;
+#X obj 81 56 bng 15 250 50 0 \$0-help \$0-f ? 5 9 0 10 -151156 -1 -1
+;
+#X obj 148 299 receive \$0-help;
+#X msg 148 321 help;
+#X obj 889 170 iemguts/canvasdelete 1;
+#X obj 368 331 receive \$0-xs;
+#X msg 368 353 x \$1;
+#X obj 458 331 receive \$0-ys;
+#X msg 458 353 y \$1;
+#X obj 468 287 receive \$0-yts;
+#X msg 468 309 y1 \$1;
+#X obj 568 287 receive \$0-ybs;
+#X msg 568 309 y2 \$1;
+#X msg 224 353 size \$1;
+#X obj 248 391 l2s;
+#X obj 248 413 s \$0-cin;
+#X obj 248 435 receive \$0-cout;
+#X obj 248 457 s2l;
+#X obj 248 479 list trim;
+#X obj 248 501 outlet;
+#X obj 696 140 receive \$1-pbang;
+#X obj 713 184 iemguts/canvasindex;
+#X obj 696 209 pack;
+#X msg 696 231 connect \$2 0 \$1 0;
+#X obj 696 253 iemguts/sendcanvas 1;
+#X obj 889 148 receive \$1-done;
+#X obj 427 22 iemguts/closebang;
+#X obj 427 44 t f;
+#X obj 427 66 s \$1-gone;
+#X floatatom 131 149 8 0 0 0 colour #0-colr #0-cols, f 8;
+#X floatatom 199 144 5 0 0 1 speed #0-speedr #0-speeds, f 5;
+#X floatatom 352 56 5 0 0 0 PLAYBACK(ms) #0-timer #0-times, f 5;
+#X floatatom 172 78 2 0 0 0 scale-y #0-scaler #0-scales, f 2;
+#X obj 281 96 tgl 14 0 \$0-duplicates \$0-duplicater duplicate 17 7
+0 10 -151156 -1 -1 0 1;
+#X obj 281 112 tgl 14 0 \$0-mirrorxs \$0-mirrorxr mirror-x 17 7 0 10
+-151156 -1 -1 0 1;
+#X obj 281 128 tgl 14 0 \$0-mirrorys \$0-mirroryr mirror-y 17 7 0 10
+-151156 -1 -1 0 1;
+#X obj 281 144 tgl 14 0 \$0-errors \$0-errorr error correct 17 7 0
+10 -151156 -1 -1 0 1;
+#X symbolatom 281 78 13 0 0 0 name #0-namer #0-names, f 13;
+#X obj 192 75 cnv 1 1 90 empty empty empty 20 12 0 14 -204881 -66577
+0;
+#X obj 61 74 cnv 1 329 1 empty empty empty 20 12 0 14 -204881 -66577
+0;
+#X obj 64 77 cnv 15 53 17 empty empty empty 2 7 0 14 -1 -66577 0;
+#X obj 196 77 cnv 15 48 17 empty empty empty 2 7 0 14 -1 -66577 0;
+#X obj 197 78 cnv 15 46 15 empty empty ARRAY 2 7 0 14 -147052 -66577
+0;
+#X obj 65 78 cnv 15 51 15 empty empty POINTS 2 7 0 14 -147052 -66577
+0;
+#X obj 696 162 t f b b b;
+#X obj 730 331 unpack f s;
+#X obj 730 353 text get \$1-save;
+#X obj 730 375 cyclone/zl rev;
+#X obj 730 397 route bang;
+#X msg 787 450 set \$1;
+#X obj 787 472 send;
+#X obj 224 331 receive \$0-sizes;
+#X obj 808 397 makefilename \$0-%sr;
+#X obj 64 133 cnv 15 53 17 empty empty empty 2 7 0 14 -1 -66577 0;
+#X obj 65 134 cnv 15 51 15 empty empty CANVAS 2 7 0 14 -147052 -66577
+0;
+#X obj 62 129 cnv 1 130 1 empty empty empty 20 12 0 14 -204881 -66577
+0;
+#X obj 536 363 receive \$0-speeds;
+#X msg 536 385 speed \$1;
+#X obj 517 406 receive \$0-names;
+#X msg 517 428 name \$1;
+#X obj 514 452 receive \$0-scales;
+#X msg 514 474 scale \$1;
+#X obj 480 504 receive \$0-cols;
+#X msg 480 526 colour \$1;
+#X obj 442 555 receive \$0-times;
+#X msg 442 577 time \$1;
+#X obj 45 359 receive \$0-duplicates;
+#X msg 45 381 duplicate \$1;
+#X obj 55 409 receive \$0-mirrorxs;
+#X msg 55 431 mirror-x \$1;
+#X obj 65 459 receive \$0-mirrorys;
+#X msg 65 481 mirror-y \$1;
+#X obj 85 509 receive \$0-error;
+#X msg 85 531 ec \$1;
+#X obj 747 209 f 1;
+#X obj 787 426 list;
+#X obj 899 118 iemguts/propertybang;
+#X obj 64 96 tgl 18 0 \$0-locks \$0-lockr lock 1 8 0 7 -151156 -1 -1
+0 1;
+#X obj 96 560 receive \$0-locks;
+#X msg 96 582 lock \$1;
+#X msg 730 279 1 x \, 2 y \, 3 size \, 4 yt \, 5 by \, 8 name \, 9
+col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
+\, 15 scale \, 16 error \, 18 lock;
+#X obj 386 616 loadbang;
+#X obj 386 639 list append loadproperties \$0;
+#X obj 1051 141 receive \$0-loadstart;
+#X obj 1051 164 t b f;
+#X obj 1078 187 makefilename %d-save;
+#X text 82 94 end point;
+#X text 70 110 curve point;
+#X connect 5 0 10 0;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 41 0;
+#X connect 11 0 16 0;
+#X connect 12 0 14 0;
+#X connect 13 0 15 0;
+#X connect 14 0 16 0;
+#X connect 15 0 11 0;
+#X connect 16 0 41 0;
+#X connect 29 0 30 0;
+#X connect 30 0 41 0;
+#X connect 32 0 33 0;
+#X connect 33 0 41 0;
+#X connect 34 0 35 0;
+#X connect 35 0 41 0;
+#X connect 36 0 37 0;
+#X connect 37 0 41 0;
+#X connect 38 0 39 0;
+#X connect 39 0 41 0;
+#X connect 40 0 41 0;
+#X connect 41 0 42 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 0;
+#X connect 45 0 46 0;
+#X connect 47 0 71 0;
+#X connect 48 0 49 1;
+#X connect 49 0 50 0;
+#X connect 50 0 51 0;
+#X connect 52 0 31 0;
+#X connect 53 0 54 0;
+#X connect 54 0 55 0;
+#X connect 71 0 49 0;
+#X connect 71 1 48 0;
+#X connect 71 2 107 0;
+#X connect 71 3 101 0;
+#X connect 72 0 73 0;
+#X connect 72 1 79 0;
+#X connect 73 0 74 0;
+#X connect 74 0 75 0;
+#X connect 75 1 102 0;
+#X connect 76 0 77 0;
+#X connect 78 0 40 0;
+#X connect 79 0 77 1;
+#X connect 83 0 84 0;
+#X connect 84 0 41 0;
+#X connect 85 0 86 0;
+#X connect 86 0 41 0;
+#X connect 87 0 88 0;
+#X connect 88 0 41 0;
+#X connect 89 0 90 0;
+#X connect 90 0 41 0;
+#X connect 91 0 92 0;
+#X connect 92 0 41 0;
+#X connect 93 0 94 0;
+#X connect 94 0 41 0;
+#X connect 95 0 96 0;
+#X connect 96 0 41 0;
+#X connect 97 0 98 0;
+#X connect 98 0 41 0;
+#X connect 99 0 100 0;
+#X connect 100 0 41 0;
+#X connect 101 0 20 0;
+#X connect 101 0 19 0;
+#X connect 102 0 76 0;
+#X connect 103 0 31 0;
+#X connect 105 0 106 0;
+#X connect 106 0 41 0;
+#X connect 107 0 72 0;
+#X connect 108 0 109 0;
+#X connect 109 0 46 0;
+#X connect 110 0 111 0;
+#X connect 111 0 107 0;
+#X connect 111 1 112 0;
+#X connect 112 0 73 3;
+#X coords 0 -1 1 1 330 113 1 61 53;
