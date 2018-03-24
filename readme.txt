@@ -1,6 +1,6 @@
 CONTEXT V3.0.2
 
-Copyright Liam Goodacre, 2017-2018
+Copyright Liam Goodacre, 2015-2018
 
 This is a beta version of Context v3.0.2. There are still some bugs left and your help in tracking down both of these will be much appreciated.
 
@@ -42,6 +42,10 @@ There are four parts to the Documentation:
 4. video tutorials at https://www.youtube.com/channel/UC_9u0n_ugUW7OjWrJRvhTjA (ongoing)
 
 The context-help.pd file serves as a Table of Contents for all Context documentation.
+
+CREDITS:
+
+Many people have contributed techical and moral support for Context. I would especially like to thank Miller Puckette, Alexander Torres Porres, Dan Wilcox and IOhannes Zmoelnig, Matt Barber and Derek Kwan for responding to many requests and bug fixes in PD and its external libraries, without which Context would not work. And I would also like to thank Joe Deken and Ann Josey for their continued belief in me and in this project. Context certainly wouldn't be what it is without them. 
 
 
 
