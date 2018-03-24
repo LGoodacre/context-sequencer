@@ -1,4 +1,4 @@
-#N canvas 67 87 743 681 10;
+#N canvas 342 182 743 681 10;
 #X obj 100 100 bng 15 250 50 0 empty empty empty -2 8 0 8 -262144 -1
 -1;
 #X obj 114 188 s \$3-press;
@@ -71,6 +71,7 @@
 #X obj 548 254 t f f f;
 #X obj 490 308 f;
 #X obj 530 223 t b b;
+#X obj 554 74 spigot;
 #X connect 0 0 5 0;
 #X connect 2 0 5 1;
 #X connect 3 0 17 0;
@@ -108,6 +109,7 @@
 #X connect 29 0 32 0;
 #X connect 30 0 16 2;
 #X connect 31 0 36 0;
+#X connect 31 0 71 1;
 #X connect 32 0 15 0;
 #X connect 32 1 33 0;
 #X connect 33 0 34 0;
@@ -135,7 +137,7 @@
 #X connect 52 1 30 1;
 #X connect 53 0 54 0;
 #X connect 54 0 55 0;
-#X connect 54 0 25 0;
+#X connect 54 0 71 0;
 #X connect 55 0 56 0;
 #X connect 57 0 0 0;
 #X connect 57 1 58 3;
@@ -159,4 +161,5 @@
 #X connect 69 0 64 0;
 #X connect 70 0 69 0;
 #X connect 70 1 20 0;
+#X connect 71 0 25 0;
 #X coords 0 -1 1 1 15 15 2 100 100;

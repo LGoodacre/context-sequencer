@@ -2,7 +2,7 @@
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 79 87 992 681 guts 0;
+#N canvas 67 87 992 681 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 568 87 795 681 names 0;
 #X msg 266 486 symbol  ;
@@ -4784,7 +4784,7 @@ s \$0-loopme \; -route s \$0-routeme \; undo s \$0-undoo \; copy s
 \$0 #f g 0 \, gui #l \, GUI #l \; :X tfs \$0 #f X 5 \; :Y tfs \$0 #f
 Y 4 \; :io tfs \$0 #f io bang \; :: tf \$0 #f \; :M tfst \$0 #f M 0
 \; :a tfspa \$0 #f a bang \; :b tfspa \$0 #f b bang \; :c tfs \$0 #f
-c 11 \, colour #l \, color #l \; :d tfs \$0 #f d 0 \, delay #l \, time
+c 0 \, colour #l \, color #l \; :d tfs \$0 #f d 0 \, delay #l \, time
 #l \, cycle #l \; :e tfs \$0 #f e 1 \; :f tfs \$0 #f f 1 \; :h tfs
 \$0 #f h 0 \, quantity #l \; :i tfsij \$0 #f i \; :j tfsij \$0 #f j
 \; :k tfs \$0 #f k 1 \; :l tfs \$0 #f l 0 \; :m tfst \$0 #f m 1 \,
@@ -5851,22 +5851,22 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 7 1 4 0;
 #X connect 7 2 8 0;
 #X restore 551 156 pd burst-presets;
-#N canvas 378 397 625 300 save 0;
+#N canvas 331 397 625 300 save 0;
 #X obj 169 146 text define -k \$0-save;
 #A set \; \; %^ :g 0 \; %^ :X 5 \; %^ :Y 4 \; \; \; %^ :M 0 \; %^ :a
-bang \; %^ :b bang \; %^ :c 11 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \;
-%^ :h 0 \; %^ :i clear \; %^ :j clear \; %^ :k 1 \; %^ :l 0 \; %^ :m
-1 \; %^ :n clear \; %^ :o 1 \; %^ :p 0 \; %^ :q 1 \; \; \; %^ :t 1
-\; \; %^ :v 1 \; %^ :w 0 \; %^ :x = \; %^ :y = \; %^ :z 1 \; %^ :A
-1 \; %^ :B 0.5 \; %^ :C 20 \; %^ :D 1 \; %^ :E 0 \; %^ :F 0 \; %^ :G
-0 \; %^ :I 0 \; %^ :J 0 \; %^ :K 0 \; \; \; %^ :O 0 \; %^ :P 0 \; %^
-:Q 1 \; %^ :R 0 \; %^ :S bang \; %^ :T bang \; %^ :U bang \; %^ :V
-bang \; %^ :W 0 \; %^ :Z 7 \; %^ :ID 0 \; %^ :ex -clear \; %^ :se 0
-\; %^ :ba bang \; %^ :es 0 \; %^ :rd 0 \; %^ :ol 0 \; %^ :x1 0 \; %^
-:x2 0 \; %^ :y1 0 \; %^ :y2 0 \; %^ :em 0 \; %^ :pr 0 \; %^ :te 100
-\; %^ :rm 1 \; %^ :nr 0 \; %^ :ro 0 \; %^ :il 0 \; %^ :ln bang \; %^
-:rt 0 \; %^ :ms 0 \; %^ :pu 0 \; %^ :sw 0 \; %^ :on 1 \; %^ :gc 1 \;
-%^ :sx 0 \; %^ :sy 0 \; %^ :bs 0 \;;
+bang \; %^ :b bang \; %^ :c 0 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \; %^
+:h 0 \; %^ :i clear \; %^ :j clear \; %^ :k 1 \; %^ :l 0 \; %^ :m 1
+\; %^ :n clear \; %^ :o 1 \; %^ :p 0 \; %^ :q 1 \; \; \; %^ :t 1 \;
+\; %^ :v 1 \; %^ :w 0 \; %^ :x = \; %^ :y = \; %^ :z 1 \; %^ :A 1 \;
+%^ :B 0.5 \; %^ :C 20 \; %^ :D 1 \; %^ :E 0 \; %^ :F 0 \; %^ :G 0 \;
+%^ :I 0 \; %^ :J 0 \; %^ :K 0 \; \; \; %^ :O 0 \; %^ :P 0 \; %^ :Q
+1 \; %^ :R 0 \; %^ :S bang \; %^ :T bang \; %^ :U bang \; %^ :V bang
+\; %^ :W 0 \; %^ :Z 7 \; %^ :ID 0 \; %^ :ex -clear \; %^ :se 0 \; %^
+:ba bang \; %^ :es 0 \; %^ :rd 0 \; %^ :ol 0 \; %^ :x1 0 \; %^ :x2
+0 \; %^ :y1 0 \; %^ :y2 0 \; %^ :em 0 \; %^ :pr 0 \; %^ :te 100 \;
+%^ :rm 1 \; %^ :nr 0 \; %^ :ro 0 \; %^ :il 0 \; %^ :ln bang \; %^ :rt
+0 \; %^ :ms 0 \; %^ :pu 0 \; %^ :sw 0 \; %^ :on 1 \; %^ :gc 1 \; %^
+:sx 0 \; %^ :sy 0 \; %^ :bs 0 \;;
 #X msg 169 123 click;
 #X obj 169 99 receive \$0-savelist;
 #X obj 168 194 ctxfiles/saver \$0 eapp 4;
