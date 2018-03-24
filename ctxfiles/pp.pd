@@ -1,4 +1,4 @@
-#N canvas 177 87 743 681 10;
+#N canvas 83 87 743 681 10;
 #X obj 100 100 bng 15 250 50 0 empty empty empty -2 8 0 8 -262144 -1
 -1;
 #X obj 114 188 s \$3-press;
@@ -12,7 +12,7 @@
 #X msg 248 176 color 0;
 #X obj 283 100 receive \$3-col-\$2;
 #X obj 14 34 receive \$3-\$4-\$2-inn;
-#X obj 353 161 unpack s f;
+#X obj 353 131 unpack s f;
 #X obj 532 406 f \$4;
 #X obj 532 428 * 10;
 #X obj 532 450 + \$2;
@@ -64,6 +64,9 @@
 #X obj 493 207 * 6;
 #X obj 493 230 + 5;
 #X obj 483 257 tabread colours£;
+#X obj 410 152 sel 0 0.5;
+#X obj 410 175 t f;
+#X obj 435 175 t f;
 #X connect 0 0 5 0;
 #X connect 2 0 5 1;
 #X connect 3 0 18 0;
@@ -76,7 +79,7 @@
 #X connect 9 0 0 0;
 #X connect 10 0 19 0;
 #X connect 11 0 59 0;
-#X connect 12 1 27 0;
+#X connect 12 1 64 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 1;
@@ -96,7 +99,7 @@
 #X connect 22 0 16 0;
 #X connect 23 0 25 0;
 #X connect 24 0 22 0;
-#X connect 27 0 20 0;
+#X connect 27 0 46 0;
 #X connect 27 1 46 0;
 #X connect 28 0 13 0;
 #X connect 29 0 30 0;
@@ -140,4 +143,9 @@
 #X connect 61 0 62 0;
 #X connect 62 0 63 0;
 #X connect 63 0 16 0;
+#X connect 64 0 65 0;
+#X connect 64 1 66 0;
+#X connect 64 2 27 0;
+#X connect 65 0 16 0;
+#X connect 66 0 27 0;
 #X coords 0 -1 1 1 15 15 2 100 100;
