@@ -1,4 +1,4 @@
-#N canvas 146 95 1054 687 10;
+#N canvas 67 85 1299 683 10;
 #X obj 412 342 s \$0-labr;
 #X obj 103 100 hsl 127 17 0 127 0 0 \$0-labs \$0-labr \$2 0 9 0 10
 -262134 -262134 -1 0 1;
@@ -47,7 +47,6 @@
 #X obj 721 491 t f;
 #X obj 685 540 - 1;
 #X obj 694 594 swap 42;
-#X msg 412 320 color \$2 \$2 \$3;
 #X obj 412 297 receive \$1-primary-col;
 #X text 426 277 WAS \$4;
 #X obj 586 154 receive \$1-lb;
@@ -56,7 +55,8 @@
 #X obj 207 245 s \$1-sett1;
 #X obj 156 223 t b b b b;
 #X obj 658 242 array get 160aassaa;
-#X connect 2 0 54 0;
+#X msg 412 320 color \$4 \$4 \$5;
+#X connect 2 0 53 0;
 #X connect 3 0 8 0;
 #X connect 4 0 2 2;
 #X connect 6 0 5 0;
@@ -82,7 +82,7 @@
 #X connect 22 0 26 0;
 #X connect 23 0 25 0;
 #X connect 23 1 20 0;
-#X connect 23 2 55 0;
+#X connect 23 2 54 0;
 #X connect 24 0 38 1;
 #X connect 24 1 36 0;
 #X connect 25 0 24 1;
@@ -90,7 +90,7 @@
 #X connect 27 0 30 0;
 #X connect 27 1 28 0;
 #X connect 28 0 38 1;
-#X connect 29 0 52 0;
+#X connect 29 0 51 0;
 #X connect 29 1 45 0;
 #X connect 29 2 28 1;
 #X connect 30 0 31 0;
@@ -118,14 +118,14 @@
 #X connect 45 0 41 0;
 #X connect 46 0 42 0;
 #X connect 46 1 42 1;
-#X connect 47 0 0 0;
-#X connect 48 0 47 0;
-#X connect 50 0 23 0;
-#X connect 51 0 12 0;
-#X connect 52 0 37 0;
-#X connect 54 0 6 0;
-#X connect 54 1 2 1;
-#X connect 54 2 13 0;
-#X connect 54 3 53 0;
-#X connect 55 0 15 1;
+#X connect 47 0 55 0;
+#X connect 49 0 23 0;
+#X connect 50 0 12 0;
+#X connect 51 0 37 0;
+#X connect 53 0 6 0;
+#X connect 53 1 2 1;
+#X connect 53 2 13 0;
+#X connect 53 3 52 0;
+#X connect 54 0 15 1;
+#X connect 55 0 0 0;
 #X coords 0 -1 1 1 132 17 2 100 100;
