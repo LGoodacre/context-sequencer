@@ -1,4 +1,4 @@
-#N canvas 336 87 722 681 10;
+#N canvas 289 87 722 681 10;
 #X obj 292 448 div 12;
 #X obj 255 87 moses;
 #X obj 282 110 moses;
@@ -43,7 +43,7 @@
 #X obj 387 -12 receive \$1-\$3zoomdiv;
 #X obj 319 -41 receive \$1-\$2pix;
 #X obj 336 448 f 1;
-#X obj 377 542 inlet;
+#X obj 377 542 receive \$1-\$2rebgrid;
 #X connect 0 0 24 0;
 #X connect 1 0 14 0;
 #X connect 1 1 2 0;
