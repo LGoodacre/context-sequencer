@@ -213,7 +213,7 @@
 -m OVERLAY ▪ SAVE OVERLAY ▪ VIEW OVERLAY ▪ CLEAR OVERLAY ▪ EMBEDDED ▪ EMBED STOP ☺ HELP;
 -m REVERSE ▪ OFFSET PATTERN ▪ REVERSE LAST ** ** ** ☺ HELP;
 -m MISC ▪ INTERRUPTION ▪ GUI OFF ▪ FLOAT SEND ▪ FLOAT SEND CUSTOM ▪ SWITCH ☺ HELP;
--m TOGGLES ▪ FORCE X ▪ FORCE Y ** ** ** ☺ HELP;
+-m TOGGLES ▪ FORCE X ▪ FORCE Y ▪ LEGACY ** ** ☺ HELP;
 ;
 -p list OVERLAY determine some settings for the context overlay (embedding environment). \; CYCLE REVERSAL displays settings concerned with the behaviour of pattern toggles when the cycle time is reversed. \; TOGGLES lets you set that only one toggle on the x- or y- axis will ever be open.; 
 ;
@@ -1287,10 +1287,10 @@
 -p list INTERRUPTION settings determine what happens when context is interrupted in the middle of its cycle. When on‚ context will restart. When off‚ Context will continue to the end of its cycle uninterrupted. \; GUI OFF turns the GUI face off and deletes a sizeable portion of the patch inside. Context continues to function as normal‚ but in "power saving" mode. Use this in larger patches when you know you won't have to manually edit a context and want to save CPU load. \; FLOAT SEND determines the domain of toggle float connections. Local means that toggle connects will only connect to other contexts in the same patch. Global means it will send to contexts in any open patch. Overlay means it will only send to Contexts embedded within this one. \; SWITCH sets the [switch~] object inside Context on for DSP processing. Usually [switch~] remains off while Context is idle‚ but you can turn it on using this setting if you want.;
 -t FORCE X sx 2 off on;
 -t FORCE Y sy 2 off on;
+-t LEGACY le 2 off on;
 ;
 ;
-;
--p list FORCE TOGGLES: If on‚ these settings force there to be only one toggle on in the x- or y- axis.;
+-p list FORCE TOGGLES: If on‚ these settings force there to be only one toggle on in the x- or y- axis. \; LEGACY reproduces a (now fixed) error whereby the = variable fails to read the first toggle when the Context cycle is interrupted. It is reproduced here because it sometimes has unexpected musical effect.;
 ;
 ;
 ;
