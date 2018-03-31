@@ -4720,62 +4720,6 @@ b b b b f f f f, f 82;
 #X text 1119 298 send copy command to shareables;
 #X obj 1016 294 t a b b;
 #X obj 1055 318 v \$0-parent;
-#X obj 578 222 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
-\; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
-s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
-\$0 \; #f s \$0-:e \; #f s \$0-:f \; #f s \$0-:h \; #f is \$0 i x 4
-6 12 \; #f is \$0 j y 3 5 13 \; #f s \$0-:k \; #f s \$0-:l \; #f s
-\$0-:m \; #f s \$0-names \; #f s \$0-:o \; #f s \$0-:p \; #f s \$0-:q
-\; #f ev \$0 :r \; #f ev \$0 :s \; #f s \$0-:t \; #f ev \$0 :u \; #f
-s \$0-:v \; #f s \$0-:w \; #f os \$0 x 27 5 6 6 \; #f os \$0 y 28 3
-5 4 \; #f s \$0-:z \; #f ar \$0 A \; #f s \$0-:B \; #f s \$0-:C \;
-#f s \$0-:D \; #f dmode \$0 \; #f s \$0-:F \; #f s \$0-:G \; #f ar
-\$0 I \; #f s \$0-:J \; #f kmode \$0 \; #f ev \$0 :L \; #f ev \$0 :N
-\; #f s \$0-:O \; #f s \$0-:P \; #f s \$0-:Q \; #f s \$0-:R \; #f s
-\$0-:S \; #f s \$0-:T \; #f s \$0-:U \; #f s \$0-:V \; #f s \$0-:W
-\; #f s \$0-:Z \; #f s \$0-:ID \; #f s \$0-:ex \; #f s \$0-:se \; #f
-s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
-\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:em \;
-#f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
-\; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f s \$0-:ms \;
-#f s \$0-:pu \; #f s \$0-:sw \; #f s \$0-:on \; #f s \$0-:gc \; #f
-s \$0-:sx \; #f s \$0-:sy \; #f s \$0-:bs \; #f ev \$0 stop \; #f ev
-\$0 bump \; #f ev \$0 push \; #f ev \$0 find \; #f ev \$0 savelist
-\; #f ev \$0 fetch \; #f ev \$0 reset \; #f ev \$0 rev \; #f ev \$0
-:NN \; #f ev \$0 marker \; #f ev \$0 content \; #f ev \$0 -menu \;
-#f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev \$0 :$ \; #f ev \$0 -delete
-\; #f ev \$0 loop \; #f ev \$0 -route \; #f ev \$0 undo \; #f ev \$0
-copy;
-#X obj 729 249 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
-\; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
-:a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
-\; :d delr \$0 \; :e s \$0-patternmode \; :f s \$0-burstmode \; :h
-s \$0-numa \; :i togg \$0 i si 4 float \; :j togg \$0 j xi 3 \; :k
-s \$0-coefficient \; :l s \$0-randa \; :m s \$0-aadv \; :n s \$0-j-name
-\; :o s \$0-witchlist \; :p s \$0-proga \; :q s \$0-nozero \; :r s
-\$0-record \; :s ss \$0 startme :s started \; :t s \$0-collect \; :u
-s \$0-undo \; :v s \$0-saveme \; :w s \$0-hwrap \; :x togg \$0 x s
-4 si 5 10 \; :y togg \$0 y s 3 x 3 6 \; :z s \$0safety \; :A s \$0-autoon
-\; :B s \$0-pres \; :C s \$0-pscale \; :D s \$0-rres \; :E s \$0-dellmode
-\; :F s \$0-xzoomp \; :G s \$0-yzoomp \; :I s \$0-exon \; :J s \$0-glocal
-\; :K s \$0-coefmode \; :L s \$0-plinp \; :N s \$0-Und \; :O s \$0-shuffle
-\; :P s \$0-progb \; :Q s \$0-randadv \; :R s \$0-randb \; :S s \$0-patternprepp
-\; :T s \$0-patternappp \; :U s \$0-burstprepp \; :V s \$0-burstappp
-\; :W s \$0-wwrap \; :Z s \$0-zsize-2-in \; :ID s \$0-cnumbers \; :ex
-s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
-\; :rd s \$0-road \; :ol s \$0-imemb \; :x1 s \$0-x1p \; :x2 s \$0-x2p
-\; :y1 s \$0-y1p \; :y2 s \$0-y2p \; :em s \$0-imembe \; :pr s \$0-printme
-\; :te s \$0-tempo \; :rm s \$0-?off \; :nr s \$0-^set \; :ro s \$0-?offs
-\; :il s \$0-lab \; :ln s \$0-link \; :rt s \$0-rev-togs \; :ms s \$0-mesp
-\; :pu s \$0-pusho \; :sw s \$0-swittch \; :on s \$0-meson \; :gc s
-\$0-gcontrol \; :sx s \$0-sesx \; :sy s \$0-sesy \; :bs s \$0-bsmode
-\; stop ss \$0 stopme stop prestop \; bump s \$0-bump \; push s \$0-pushd
-\; find s \$0-findme \; savelist s \$0-savelist \; fetch s \$0-mfetch
-\; reset s \$0-resett \; rev s \$0-revme \; ## \; marker s \$0-smarker
-\; content s \$0-ctntalk \; -menu s \$0-menuc \; -overlay s \$0-hacklist
-\; :ss s \$0-sos \; :$ s \$0-var$ \; -delete s \$0-deleteme \; loop
-s \$0-loopme \; -route s \$0-routeme \; undo s \$0-undoo \; copy s
-\$0-copyme;
 #X obj 1055 340 s rthYJuk&U;
 #X obj 1035 363 v \$0nnumber;
 #X obj 1035 385 s dc&gkO9ID;
@@ -4816,12 +4760,70 @@ ms 0 \; :pu tfst \$0 #f pu 0 \; :sw tfst \$0 #f sw 0 \; :on tfst \$0
 tf \$0 #f \; reset tf \$0 #f \; rev tf \$0 #f \; :NN tf \$0 #f \; marker
 tf \$0 #f \; content tf \$0 #f \; -menu tf \$0 #f \; -overlay tf \$0
 #f \; :ss tf \$0 #f \; :$ tf \$0 #f \; -delete tf \$0 #f \; loop tf
-\$0 #f \; -route tf \$0 #f \; undo tf \$0 #f \; copy tf \$0 #f \; .
-t \; ## s \$0-othr;
+\$0 #f \; -route tf \$0 #f \; undo tf \$0 #f \; copy tf \$0 #f \; euclid
+tf \$0 #f \; . t \; ## s \$0-othr;
+#X obj 578 222 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
+\; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
+s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
+\$0 \; #f s \$0-:e \; #f s \$0-:f \; #f s \$0-:h \; #f is \$0 i x 4
+6 12 \; #f is \$0 j y 3 5 13 \; #f s \$0-:k \; #f s \$0-:l \; #f s
+\$0-:m \; #f s \$0-names \; #f s \$0-:o \; #f s \$0-:p \; #f s \$0-:q
+\; #f ev \$0 :r \; #f ev \$0 :s \; #f s \$0-:t \; #f ev \$0 :u \; #f
+s \$0-:v \; #f s \$0-:w \; #f os \$0 x 27 5 6 6 \; #f os \$0 y 28 3
+5 4 \; #f s \$0-:z \; #f ar \$0 A \; #f s \$0-:B \; #f s \$0-:C \;
+#f s \$0-:D \; #f dmode \$0 \; #f s \$0-:F \; #f s \$0-:G \; #f ar
+\$0 I \; #f s \$0-:J \; #f kmode \$0 \; #f ev \$0 :L \; #f ev \$0 :N
+\; #f s \$0-:O \; #f s \$0-:P \; #f s \$0-:Q \; #f s \$0-:R \; #f s
+\$0-:S \; #f s \$0-:T \; #f s \$0-:U \; #f s \$0-:V \; #f s \$0-:W
+\; #f s \$0-:Z \; #f s \$0-:ID \; #f s \$0-:ex \; #f s \$0-:se \; #f
+s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
+\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:em \;
+#f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
+\; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f s \$0-:ms \;
+#f s \$0-:pu \; #f s \$0-:sw \; #f s \$0-:on \; #f s \$0-:gc \; #f
+s \$0-:sx \; #f s \$0-:sy \; #f s \$0-:bs \; #f ev \$0 stop \; #f ev
+\$0 bump \; #f ev \$0 push \; #f ev \$0 find \; #f ev \$0 savelist
+\; #f ev \$0 fetch \; #f ev \$0 reset \; #f ev \$0 rev \; #f ev \$0
+:NN \; #f ev \$0 marker \; #f ev \$0 content \; #f ev \$0 -menu \;
+#f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev \$0 :$ \; #f ev \$0 -delete
+\; #f ev \$0 loop \; #f ev \$0 -route \; #f ev \$0 undo \; #f ev \$0
+copy \; #f ev \$0 euclid \;;
+#X obj -56 1587 cnv 13 950 1 empty \$0-datagrid euclid 18 -5 0 10 -13330
+-66577 0;
+#X obj 729 249 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
+\; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
+:a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
+\; :d delr \$0 \; :e s \$0-patternmode \; :f s \$0-burstmode \; :h
+s \$0-numa \; :i togg \$0 i si 4 float \; :j togg \$0 j xi 3 \; :k
+s \$0-coefficient \; :l s \$0-randa \; :m s \$0-aadv \; :n s \$0-j-name
+\; :o s \$0-witchlist \; :p s \$0-proga \; :q s \$0-nozero \; :r s
+\$0-record \; :s ss \$0 startme :s started \; :t s \$0-collect \; :u
+s \$0-undo \; :v s \$0-saveme \; :w s \$0-hwrap \; :x togg \$0 x s
+4 si 5 10 \; :y togg \$0 y s 3 x 3 6 \; :z s \$0safety \; :A s \$0-autoon
+\; :B s \$0-pres \; :C s \$0-pscale \; :D s \$0-rres \; :E s \$0-dellmode
+\; :F s \$0-xzoomp \; :G s \$0-yzoomp \; :I s \$0-exon \; :J s \$0-glocal
+\; :K s \$0-coefmode \; :L s \$0-plinp \; :N s \$0-Und \; :O s \$0-shuffle
+\; :P s \$0-progb \; :Q s \$0-randadv \; :R s \$0-randb \; :S s \$0-patternprepp
+\; :T s \$0-patternappp \; :U s \$0-burstprepp \; :V s \$0-burstappp
+\; :W s \$0-wwrap \; :Z s \$0-zsize-2-in \; :ID s \$0-cnumbers \; :ex
+s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
+\; :rd s \$0-road \; :ol s \$0-imemb \; :x1 s \$0-x1p \; :x2 s \$0-x2p
+\; :y1 s \$0-y1p \; :y2 s \$0-y2p \; :em s \$0-imembe \; :pr s \$0-printme
+\; :te s \$0-tempo \; :rm s \$0-?off \; :nr s \$0-^set \; :ro s \$0-?offs
+\; :il s \$0-lab \; :ln s \$0-link \; :rt s \$0-rev-togs \; :ms s \$0-mesp
+\; :pu s \$0-pusho \; :sw s \$0-swittch \; :on s \$0-meson \; :gc s
+\$0-gcontrol \; :sx s \$0-sesx \; :sy s \$0-sesy \; :bs s \$0-bsmode
+\; stop ss \$0 stopme stop prestop \; bump s \$0-bump \; push s \$0-pushd
+\; find s \$0-findme \; savelist s \$0-savelist \; fetch s \$0-mfetch
+\; reset s \$0-resett \; rev s \$0-revme \; ## \; marker s \$0-smarker
+\; content s \$0-ctntalk \; -menu s \$0-menuc \; -overlay s \$0-hacklist
+\; :ss s \$0-sos \; :$ s \$0-var$ \; -delete s \$0-deleteme \; loop
+s \$0-loopme \; -route s \$0-routeme \; undo s \$0-undoo \; copy s
+\$0-copyme \; euclid s \$0-euclids;
 #X connect 0 0 117 1;
-#X connect 0 1 139 1;
+#X connect 0 1 144 1;
 #X connect 1 0 117 0;
-#X connect 1 1 139 0;
+#X connect 1 1 144 0;
 #X connect 2 0 6 0;
 #X connect 2 1 4 0;
 #X connect 3 0 1 0;
@@ -4831,14 +4833,14 @@ t \; ## s \$0-othr;
 #X connect 5 0 1 1;
 #X connect 5 0 2 1;
 #X connect 6 0 7 0;
-#X connect 7 0 145 0;
+#X connect 7 0 143 0;
 #X connect 8 0 9 0;
 #X connect 9 0 3 0;
 #X connect 9 1 103 0;
 #X connect 74 0 75 0;
 #X connect 75 0 76 0;
 #X connect 77 0 3 0;
-#X connect 93 0 140 0;
+#X connect 93 0 146 0;
 #X connect 93 1 94 0;
 #X connect 94 0 95 0;
 #X connect 96 0 97 0;
@@ -4849,11 +4851,11 @@ t \; ## s \$0-othr;
 #X connect 106 0 2 0;
 #X connect 107 0 93 0;
 #X connect 135 0 137 0;
-#X connect 137 0 144 0;
-#X connect 137 1 142 0;
+#X connect 137 0 142 0;
+#X connect 137 1 140 0;
 #X connect 137 2 138 0;
-#X connect 138 0 141 0;
-#X connect 142 0 143 0;
+#X connect 138 0 139 0;
+#X connect 140 0 141 0;
 #X restore 69 238 pd data;
 #N canvas 67 85 1299 683 canvas 0;
 #X msg -143 363 delete \$1;
@@ -5893,7 +5895,7 @@ as well.;
 #X text 145 133 read creation arguments and separate input commands
 from overlay instructions;
 #X text 144 164 receive all command data and process safety;
-#N canvas 479 87 796 681 input 0;
+#N canvas 432 87 796 681 input 0;
 #X msg 122 285 1;
 #X obj 154 312 s \$0-undodec;
 #X obj 348 105 list trim;
@@ -6032,7 +6034,7 @@ from overlay instructions;
 #X text 642 312 process record data;
 #X text 642 338 create inlets~ and outlets~;
 #X text 641 365 process reset command;
-#X text 547 536 OVERLAY;
+#X text 547 544 OVERLAY;
 #X text 551 74 MINOR SYSTEMS;
 #X text 47 239 ***;
 #X text 46 377 ***;
@@ -6781,6 +6783,81 @@ back \, then push again.;
 #X restore 68 513 pd ID;
 #X obj 864 478 iemguts/closebang;
 #X obj 864 500 s \$0-Cbang;
+#N canvas 67 189 450 536 euclid 0;
+#X obj 152 32 receive \$0-euclids;
+#X obj 284 116 v \$0-xy21;
+#X obj 152 55 route x y;
+#X obj 109 116 v \$0-xsize-2;
+#X obj 194 116 v \$0-ysize-2;
+#X obj 153 247 *;
+#X obj 153 297 mod;
+#X obj 60 347 ctxfiles/collect;
+#X obj 60 393 t b l b;
+#X obj 99 418 s \$0-roff;
+#X obj 32 418 s \$0-roff2;
+#X obj 79 443 s \$0-notsafe;
+#X obj 60 370 list prepend;
+#X obj 318 224 v \$0-xym;
+#X obj 318 247 sel 0 1;
+#X obj 318 312 symbol :x;
+#X obj 337 284 symbol :y;
+#X obj 168 223 /;
+#X obj 153 272 int;
+#X obj 153 323 + 1;
+#X obj 66 223 cyclone/uzi 0 0;
+#X obj 187 178 min;
+#X obj 168 148 t f f f;
+#X obj 187 201 t f f;
+#X obj 66 197 f;
+#X obj 92 90 t b b f b;
+#X obj 177 90 t b b f b;
+#X obj 267 90 t b b f b;
+#X obj 318 340 list append -l =;
+#X connect 0 0 2 0;
+#X connect 1 0 22 0;
+#X connect 2 0 25 0;
+#X connect 2 1 26 0;
+#X connect 2 2 27 0;
+#X connect 3 0 22 0;
+#X connect 4 0 22 0;
+#X connect 5 0 18 0;
+#X connect 6 0 19 0;
+#X connect 7 0 12 0;
+#X connect 8 0 10 0;
+#X connect 8 1 11 0;
+#X connect 8 2 9 0;
+#X connect 12 0 8 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 15 0 28 0;
+#X connect 16 0 28 0;
+#X connect 17 0 5 1;
+#X connect 18 0 6 0;
+#X connect 19 0 7 1;
+#X connect 20 1 7 0;
+#X connect 20 2 5 0;
+#X connect 21 0 23 0;
+#X connect 22 0 17 0;
+#X connect 22 1 21 0;
+#X connect 22 2 6 1;
+#X connect 23 0 17 1;
+#X connect 23 1 24 1;
+#X connect 24 0 20 0;
+#X connect 25 0 24 0;
+#X connect 25 1 3 0;
+#X connect 25 2 21 1;
+#X connect 25 3 15 0;
+#X connect 26 0 24 0;
+#X connect 26 1 4 0;
+#X connect 26 2 21 1;
+#X connect 26 3 16 0;
+#X connect 27 0 24 0;
+#X connect 27 1 1 0;
+#X connect 27 2 21 1;
+#X connect 27 3 13 0;
+#X connect 28 0 12 1;
+#X restore 551 519 pd euclid;
 #X connect 23 0 24 0;
 #X connect 83 0 84 0;
 #X restore 20 100 pd guts;
