@@ -15,7 +15,7 @@
 #X obj -60 -200 inlet;
 #X obj -60 -166 outlet;
 #X obj -314 -165 iemguts/initbang;
-#N canvas 292 241 883 527 commands 0;
+#N canvas 198 241 883 527 commands 0;
 #X obj 141 72 inlet;
 #X obj -133 175 cyclone/zl iter 1;
 #X obj 68 48 iemguts/oreceive \$0-array-;
@@ -61,11 +61,14 @@
 #X obj 369 352 f \$0;
 #X text 408 336 interface with [grab];
 #X obj 369 308 iemguts/oreceive \$0-getdim;
+#X obj 111 204 makefilename sketch-%s;
+#X obj 111 227 s \$0-sendname;
 #X connect 0 0 30 0;
 #X connect 2 0 30 0;
 #X connect 3 0 2 0;
 #X connect 4 0 3 0;
 #X connect 4 0 39 0;
+#X connect 4 0 45 0;
 #X connect 5 0 6 0;
 #X connect 6 0 7 0;
 #X connect 6 1 8 0;
@@ -106,6 +109,7 @@
 #X connect 41 1 40 1;
 #X connect 42 0 40 0;
 #X connect 44 0 41 0;
+#X connect 45 0 46 0;
 #X restore -327 -88 pd commands;
 #X obj -384 -135 inlet;
 #X obj -384 -111 route bang;
@@ -523,11 +527,11 @@
 #X obj -384 88 ctxfiles/gget \$0 1 6;
 #X obj -384 154 iemguts/propertybang;
 #X obj -257 4 ctxfiles/license;
-#X obj -384 110 ctxfiles/gget \$0 2 7;
 #X obj -384 0 ctxfiles/points \$0 1;
 #X obj -384 22 ctxfiles/points \$0 2;
-#X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties 130
-;
+#X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties
+130;
+#X obj -384 110 ctxfiles/gget \$0 2 7;
 #X connect 3 0 21 0;
 #X connect 5 0 16 0;
 #X connect 7 0 8 0;
@@ -538,5 +542,5 @@
 #X connect 16 0 9 0;
 #X connect 18 0 15 0;
 #X connect 21 0 4 0;
-#X connect 23 0 28 0;
+#X connect 23 0 27 0;
 #X coords 0 0 128 79 128 79 2 0 0;
