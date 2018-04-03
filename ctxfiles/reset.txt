@@ -71,3 +71,4 @@
 :sy 0;
 :bs 0;
 :le 0;
+:ze bang;

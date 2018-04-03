@@ -2,7 +2,7 @@
 #X declare -lib zexy -stdlib zexy;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
 -262144 0;
-#N canvas 67 87 992 681 guts 0;
+#N canvas 122 87 992 681 guts 0;
 #X obj 561 6 declare -lib zexy -stdlib zexy;
 #N canvas 568 87 795 681 names 0;
 #X msg 266 486 symbol  ;
@@ -220,7 +220,7 @@
 #X connect 74 1 73 0;
 #X connect 74 2 75 0;
 #X restore 68 540 pd names;
-#N canvas 301 87 610 681 delaytime 0;
+#N canvas 160 87 610 681 delaytime 0;
 #X obj 171 412 s \$0-realdelay;
 #X obj 141 523 t b f;
 #X obj 132 546 /;
@@ -337,7 +337,7 @@
 #X connect 48 0 49 0;
 #X connect 50 0 48 1;
 #X restore 68 295 pd delaytime;
-#N canvas 84 128 974 495 process 0;
+#N canvas 67 128 974 495 process 0;
 #X obj 273 108 demux;
 #X obj 431 729 demux;
 #X obj 538 717 demux;
@@ -2086,7 +2086,7 @@ can be made compatable with looping float connects. If it causes trouble
 #X connect 51 0 49 1;
 #X connect 52 0 41 0;
 #X restore 551 182 pd position;
-#N canvas 122 144 974 494 messages 0;
+#N canvas 318 126 974 494 messages 0;
 #X obj 18 484 list;
 #X obj 688 252 route bang;
 #X obj 688 413 msgfile;
@@ -3345,7 +3345,7 @@ b b b b f f f f, f 82;
 #X connect 129 0 130 0;
 #X connect 129 1 131 0;
 #X restore 68 486 pd switches;
-#N canvas 404 87 842 681 creation 0;
+#N canvas 357 87 842 681 creation 0;
 #X obj 399 340 s \$0-hacklist;
 #X obj 356 316 list split 1000;
 #X obj 91 38 route bang;
@@ -4616,9 +4616,9 @@ b b b b f f f f, f 82;
 -13330 -66577 0;
 #X obj -56 976 cnv 13 950 1 empty \$0-datagrid exception-list 18 -5
 0 10 -13330 -66577 0;
-#X obj -56 1353 cnv 13 950 1 empty \$0-datagrid bump 18 -5 0 10 -13330
+#X obj -56 1366 cnv 13 950 1 empty \$0-datagrid bump 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1379 cnv 13 950 1 empty \$0-datagrid find 18 -5 0 10 -13330
+#X obj -56 1392 cnv 13 950 1 empty \$0-datagrid find 18 -5 0 10 -13330
 -66577 0;
 #X obj 1127 161 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 950;
@@ -4627,7 +4627,7 @@ b b b b f f f f, f 82;
 #X obj 427 25 receive \$0-f56;
 #X text 137 204 IDENTIFY TERMS \, SAVING (tf = no save \, tfs = save)
 ;
-#X obj -56 1392 cnv 13 950 1 empty \$0-datagrid save-list 18 -5 0 10
+#X obj -56 1405 cnv 13 950 1 empty \$0-datagrid save-list 18 -5 0 10
 -13330 -66577 0;
 #X obj -56 989 cnv 13 950 1 empty \$0-datagrid settings-to 18 -5 0
 10 -13330 -66577 0;
@@ -4635,13 +4635,13 @@ b b b b f f f f, f 82;
 10 -13330 -66577 0;
 #X obj -56 1015 cnv 13 950 1 empty \$0-datagrid embed-stop 18 -5 0
 10 -13330 -66577 0;
-#X obj -56 1405 cnv 13 950 1 empty \$0-datagrid fetch 18 -5 0 10 -13330
+#X obj -56 1418 cnv 13 950 1 empty \$0-datagrid fetch 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1418 cnv 13 950 1 empty \$0-datagrid reset 18 -5 0 10 -13330
+#X obj -56 1431 cnv 13 950 1 empty \$0-datagrid reset 18 -5 0 10 -13330
 -66577 0;
 #X obj -56 1028 cnv 13 950 1 empty \$0-datagrid reverse-delay 18 -5
 0 10 -13330 -66577 0;
-#X obj -56 1431 cnv 13 950 1 empty \$0-datagrid rev 18 -5 0 10 -13330
+#X obj -56 1444 cnv 13 950 1 empty \$0-datagrid rev 18 -5 0 10 -13330
 -66577 0;
 #X obj -56 1041 cnv 13 950 1 empty \$0-datagrid embedded 18 -5 0 10
 -13330 -66577 0;
@@ -4668,30 +4668,30 @@ b b b b f f f f, f 82;
 0 10 -13330 -66577 0;
 #X obj -56 1171 cnv 13 950 1 empty \$0-datagrid ?_offset 18 -5 0 10
 -13330 -66577 0;
-#X obj -56 1444 cnv 13 950 1 empty \$0-datagrid N-empty 18 -5 0 10
+#X obj -56 1457 cnv 13 950 1 empty \$0-datagrid N-empty 18 -5 0 10
 -13330 -66577 0;
 #X obj 102 18 list trim;
 #X obj 102 40 route ##;
 #X obj 102 86 s \$0-fsteal;
 #X obj 157 40 receive \$0-fstole;
 #X obj 687 84 receive \$0-rulesr;
-#X obj -56 1457 cnv 13 950 1 empty \$0-datagrid marker 18 -5 0 10 -13330
+#X obj -56 1470 cnv 13 950 1 empty \$0-datagrid marker 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1470 cnv 13 950 1 empty \$0-datagrid content 18 -5 0 10
+#X obj -56 1483 cnv 13 950 1 empty \$0-datagrid content 18 -5 0 10
 -13330 -66577 0;
-#X obj -56 1483 cnv 13 950 1 empty \$0-datagrid menu 18 -5 0 10 -13330
+#X obj -56 1496 cnv 13 950 1 empty \$0-datagrid menu 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1496 cnv 13 950 1 empty \$0-datagrid overlay_command 18
+#X obj -56 1509 cnv 13 950 1 empty \$0-datagrid overlay_command 18
 -5 0 10 -13330 -66577 0;
 #X obj -56 1184 cnv 13 950 1 empty \$0-datagrid label 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1509 cnv 13 950 1 empty \$0-datagrid start_or_stop 18 -5
+#X obj -56 1522 cnv 13 950 1 empty \$0-datagrid start_or_stop 18 -5
 0 10 -13330 -66577 0;
 #X obj -56 1197 cnv 13 950 1 empty \$0-datagrid link 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1522 cnv 13 950 1 empty \$0-datagrid $_var 18 -5 0 10 -13330
+#X obj -56 1535 cnv 13 950 1 empty \$0-datagrid $_var 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1535 cnv 13 950 1 empty \$0-datagrid delete 18 -5 0 10 -13330
+#X obj -56 1548 cnv 13 950 1 empty \$0-datagrid delete 18 -5 0 10 -13330
 -66577 0;
 #X obj 427 209 ctxfiles/br2 demux 2 \; #f t \; #f s \$0-listbreak \;
 ## \; #f s \$0-graphstart \; #f s \$0-xxstart \; #f s \$0-yystart \;
@@ -4709,25 +4709,25 @@ b b b b f f f f, f 82;
 10 -13330 -66577 0;
 #X obj -56 1249 cnv 13 950 1 empty \$0-datagrid switch 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1366 cnv 13 950 1 empty \$0-datagrid push 18 -5 0 10 -13330
+#X obj -56 1379 cnv 13 950 1 empty \$0-datagrid push 18 -5 0 10 -13330
 -66577 0;
 #X obj -56 1262 cnv 13 950 1 empty \$0-datagrid message_on 18 -5 0
 10 -13330 -66577 0;
 #X obj -56 1275 cnv 13 950 1 empty \$0-datagrid grid_control 18 -5
 0 10 -13330 -66577 0;
-#X obj -56 1548 cnv 13 950 1 empty \$0-datagrid loop 18 -5 0 10 -13330
+#X obj -56 1561 cnv 13 950 1 empty \$0-datagrid loop 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1340 cnv 13 950 1 empty \$0-datagrid stop 18 -5 0 10 -13330
+#X obj -56 1353 cnv 13 950 1 empty \$0-datagrid stop 18 -5 0 10 -13330
 -66577 0;
 #X obj -56 1301 cnv 13 950 1 empty \$0-datagrid single_y 18 -5 0 10
 -13330 -66577 0;
 #X obj -56 1314 cnv 13 950 1 empty \$0-datagrid bs_mode 18 -5 0 10
 -13330 -66577 0;
-#X obj -56 1561 cnv 13 950 1 empty \$0-datagrid route 18 -5 0 10 -13330
+#X obj -56 1574 cnv 13 950 1 empty \$0-datagrid route 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1574 cnv 13 950 1 empty \$0-datagrid undo 18 -5 0 10 -13330
+#X obj -56 1587 cnv 13 950 1 empty \$0-datagrid undo 18 -5 0 10 -13330
 -66577 0;
-#X obj -56 1587 cnv 13 950 1 empty \$0-datagrid copy 18 -5 0 10 -13330
+#X obj -56 1600 cnv 13 950 1 empty \$0-datagrid copy 18 -5 0 10 -13330
 -66577 0;
 #X obj 1016 272 receive \$0-copyme;
 #X text 1119 298 send copy command to shareables;
@@ -4737,38 +4737,10 @@ b b b b f f f f, f 82;
 #X obj 1035 363 v \$0nnumber;
 #X obj 1035 385 s dc&gkO9ID;
 #X obj 1016 413 s GG7HJ8I@;
-#X obj -56 1600 cnv 13 950 1 empty \$0-datagrid euclid 18 -5 0 10 -13330
+#X obj -56 1613 cnv 13 950 1 empty \$0-datagrid euclid 18 -5 0 10 -13330
 -66577 0;
-#X obj 729 249 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
-\; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
-:a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
-\; :d delr \$0 \; :e s \$0-patternmode \; :f s \$0-burstmode \; :h
-s \$0-numa \; :i togg \$0 i si 4 float \; :j togg \$0 j xi 3 \; :k
-s \$0-coefficient \; :l s \$0-randa \; :m s \$0-aadv \; :n s \$0-j-name
-\; :o s \$0-witchlist \; :p s \$0-proga \; :q s \$0-nozero \; :r s
-\$0-record \; :s ss \$0 startme :s started \; :t s \$0-collect \; :u
-s \$0-undo \; :v s \$0-saveme \; :w s \$0-hwrap \; :x togg \$0 x s
-4 si 5 10 \; :y togg \$0 y s 3 x 3 6 \; :z s \$0safety \; :A s \$0-autoon
-\; :B s \$0-pres \; :C s \$0-pscale \; :D s \$0-rres \; :E s \$0-dellmode
-\; :F s \$0-xzoomp \; :G s \$0-yzoomp \; :I s \$0-exon \; :J s \$0-glocal
-\; :K s \$0-coefmode \; :L s \$0-plinp \; :N s \$0-Und \; :O s \$0-shuffle
-\; :P s \$0-progb \; :Q s \$0-randadv \; :R s \$0-randb \; :S s \$0-patternprepp
-\; :T s \$0-patternappp \; :U s \$0-burstprepp \; :V s \$0-burstappp
-\; :W s \$0-wwrap \; :Z s \$0-zsize-2-in \; :ID s \$0-cnumbers \; :ex
-s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
-\; :rd s \$0-road \; :ol s \$0-imemb \; :x1 s \$0-x1p \; :x2 s \$0-x2p
-\; :y1 s \$0-y1p \; :y2 s \$0-y2p \; :em s \$0-imembe \; :pr s \$0-printme
-\; :te s \$0-tempo \; :rm s \$0-?off \; :nr s \$0-^set \; :ro s \$0-?offs
-\; :il s \$0-lab \; :ln s \$0-link \; :rt s \$0-rev-togs \; :ms s \$0-mesp
-\; :pu s \$0-pusho \; :sw s \$0-swittch \; :on s \$0-meson \; :gc s
-\$0-gcontrol \; :sx s \$0-sesx \; :sy s \$0-sesy \; :bs s \$0-bsmode
-\; :le s \$0-legacy \; stop ss \$0 stopme stop prestop \; bump s \$0-bump
-\; push s \$0-pushd \; find s \$0-findme \; savelist s \$0-savelist
-\; fetch s \$0-mfetch \; reset s \$0-resett \; rev s \$0-revme \; ##
-\; marker s \$0-smarker \; content s \$0-ctntalk \; -menu s \$0-menuc
-\; -overlay s \$0-hacklist \; :ss s \$0-sos \; :$ s \$0-var$ \; -delete
-s \$0-deleteme \; loop s \$0-loopme \; -route s \$0-routeme \; undo
-s \$0-undoo \; copy s \$0-copyme \; euclid s \$0-euclids;
+#X obj -56 1327 cnv 13 950 1 empty \$0-datagrid legacy 18 -5 0 10 -13330
+-66577 0;
 #X obj 101 221 ctxfiles/br2 route 1 \; :H tf \$0 #f 0 \; ## \; :g tfst
 \$0 #f g 0 \, gui #l \, GUI #l \; :X tfs \$0 #f X 5 \; :Y tfs \$0 #f
 Y 4 \; :io tfs \$0 #f io bang \; :: tf \$0 #f \; :M tfst \$0 #f M 0
@@ -4800,17 +4772,15 @@ es 0 \; :rd tfst \$0 #f rd 0 \; :ol tfs \$0 #f ol 0 \; :x1 tfsn \$0
 \; :ln tfs \$0 #f ln bang \; :rt tfst \$0 #f rt 0 \; :ms tfst \$0 #f
 ms 0 \; :pu tfst \$0 #f pu 0 \; :sw tfst \$0 #f sw 0 \; :on tfst \$0
 #f on 1 \; :gc tfst \$0 #f gc 1 \; :sx tfst \$0 #f sx 0 \; :sy tfst
-\$0 #f sy 0 \; :bs tfst \$0 #f bs 0 \; :le tfst \$0 #f le 0 \; stop
-tf \$0 #f \; bump tf \$0 #f \; push tf \$0 #f \; find tf \$0 #f \;
-savelist tf \$0 #f \; fetch tf \$0 #f \; reset tf \$0 #f \; rev tf
-\$0 #f \; :NN tf \$0 #f \; marker tf \$0 #f \; content tf \$0 #f \;
--menu tf \$0 #f \; -overlay tf \$0 #f \; :ss tf \$0 #f \; :$ tf \$0
-#f \; -delete tf \$0 #f \; loop tf \$0 #f \; -route tf \$0 #f \; undo
-tf \$0 #f \; copy tf \$0 #f \; euclid tf \$0 #f \; . t \; ## s \$0-othr
-;
-#X obj -56 1327 cnv 13 950 1 empty \$0-datagrid legacy 18 -5 0 10 -13330
--66577 0;
-#X obj 578 222 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
+\$0 #f sy 0 \; :bs tfst \$0 #f bs 0 \; :le tfst \$0 #f le 0 \; :ze
+tfs \$0 #f ze bang \; stop tf \$0 #f \; bump tf \$0 #f \; push tf \$0
+#f \; find tf \$0 #f \; savelist tf \$0 #f \; fetch tf \$0 #f \; reset
+tf \$0 #f \; rev tf \$0 #f \; :NN tf \$0 #f \; marker tf \$0 #f \;
+content tf \$0 #f \; -menu tf \$0 #f \; -overlay tf \$0 #f \; :ss tf
+\$0 #f \; :$ tf \$0 #f \; -delete tf \$0 #f \; loop tf \$0 #f \; -route
+tf \$0 #f \; undo tf \$0 #f \; copy tf \$0 #f \; euclid tf \$0 #f \;
+. t \; ## s \$0-othr;
+#X obj 578 221 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
 \; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
 s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
 \$0 \; #f s \$0-:e \; #f s \$0-:f \; #f s \$0-:h \; #f is \$0 i x 4
@@ -4829,17 +4799,50 @@ s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
 #f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
 \; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f s \$0-:ms \;
 #f s \$0-:pu \; #f s \$0-:sw \; #f s \$0-:on \; #f s \$0-:gc \; #f
-s \$0-:sx \; #f s \$0-:sy \; #f s \$0-:bs \; #f s \$0-:le \; #f ev
-\$0 stop \; #f ev \$0 bump \; #f ev \$0 push \; #f ev \$0 find \; #f
-ev \$0 savelist \; #f ev \$0 fetch \; #f ev \$0 reset \; #f ev \$0
-rev \; #f ev \$0 :NN \; #f ev \$0 marker \; #f ev \$0 content \; #f
-ev \$0 -menu \; #f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev \$0 :$
-\; #f ev \$0 -delete \; #f ev \$0 loop \; #f ev \$0 -route \; #f ev
-\$0 undo \; #f ev \$0 copy \; #f ev \$0 euclid \;;
+s \$0-:sx \; #f s \$0-:sy \; #f s \$0-:bs \; #f s \$0-:le \; #f s \$0-:ze
+\; #f ev \$0 stop \; #f ev \$0 bump \; #f ev \$0 push \; #f ev \$0
+find \; #f ev \$0 savelist \; #f ev \$0 fetch \; #f ev \$0 reset \;
+#f ev \$0 rev \; #f ev \$0 :NN \; #f ev \$0 marker \; #f ev \$0 content
+\; #f ev \$0 -menu \; #f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev
+\$0 :$ \; #f ev \$0 -delete \; #f ev \$0 loop \; #f ev \$0 -route \;
+#f ev \$0 undo \; #f ev \$0 copy \; #f ev \$0 euclid \;;
+#X obj 729 247 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
+\; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
+:a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
+\; :d delr \$0 \; :e s \$0-patternmode \; :f s \$0-burstmode \; :h
+s \$0-numa \; :i togg \$0 i si 4 float \; :j togg \$0 j xi 3 \; :k
+s \$0-coefficient \; :l s \$0-randa \; :m s \$0-aadv \; :n s \$0-j-name
+\; :o s \$0-witchlist \; :p s \$0-proga \; :q s \$0-nozero \; :r s
+\$0-record \; :s ss \$0 startme :s started \; :t s \$0-collect \; :u
+s \$0-undo \; :v s \$0-saveme \; :w s \$0-hwrap \; :x togg \$0 x s
+4 si 5 10 \; :y togg \$0 y s 3 x 3 6 \; :z s \$0safety \; :A s \$0-autoon
+\; :B s \$0-pres \; :C s \$0-pscale \; :D s \$0-rres \; :E s \$0-dellmode
+\; :F s \$0-xzoomp \; :G s \$0-yzoomp \; :I s \$0-exon \; :J s \$0-glocal
+\; :K s \$0-coefmode \; :L s \$0-plinp \; :N s \$0-Und \; :O s \$0-shuffle
+\; :P s \$0-progb \; :Q s \$0-randadv \; :R s \$0-randb \; :S s \$0-patternprepp
+\; :T s \$0-patternappp \; :U s \$0-burstprepp \; :V s \$0-burstappp
+\; :W s \$0-wwrap \; :Z s \$0-zsize-2-in \; :ID s \$0-cnumbers \; :ex
+s \$0-conlist \; :se s \$0-setto \; :ba s \$0-tobank \; :es s \$0-estop
+\; :rd s \$0-road \; :ol s \$0-imemb \; :x1 s \$0-x1p \; :x2 s \$0-x2p
+\; :y1 s \$0-y1p \; :y2 s \$0-y2p \; :em s \$0-imembe \; :pr s \$0-printme
+\; :te s \$0-tempo \; :rm s \$0-?off \; :nr s \$0-^set \; :ro s \$0-?offs
+\; :il s \$0-lab \; :ln s \$0-link \; :rt s \$0-rev-togs \; :ms s \$0-mesp
+\; :pu s \$0-pusho \; :sw s \$0-swittch \; :on s \$0-meson \; :gc s
+\$0-gcontrol \; :sx s \$0-sesx \; :sy s \$0-sesy \; :bs s \$0-bsmode
+\; :le s \$0-legacy \; :ze s \$0-zend \; stop ss \$0 stopme stop prestop
+\; bump s \$0-bump \; push s \$0-pushd \; find s \$0-findme \; savelist
+s \$0-savelist \; fetch s \$0-mfetch \; reset s \$0-resett \; rev s
+\$0-revme \; ## \; marker s \$0-smarker \; content s \$0-ctntalk \;
+-menu s \$0-menuc \; -overlay s \$0-hacklist \; :ss s \$0-sos \; :$
+s \$0-var$ \; -delete s \$0-deleteme \; loop s \$0-loopme \; -route
+s \$0-routeme \; undo s \$0-undoo \; copy s \$0-copyme \; euclid s
+\$0-euclids;
+#X obj -56 1340 cnv 13 950 1 empty \$0-datagrid safety_overflow 18
+-5 0 10 -13330 -66577 0;
 #X connect 0 0 117 1;
-#X connect 0 1 147 1;
+#X connect 0 1 146 1;
 #X connect 1 0 117 0;
-#X connect 1 1 147 0;
+#X connect 1 1 146 0;
 #X connect 2 0 6 0;
 #X connect 2 1 4 0;
 #X connect 3 0 1 0;
@@ -4856,7 +4859,7 @@ ev \$0 -menu \; #f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev \$0 :$
 #X connect 74 0 75 0;
 #X connect 75 0 76 0;
 #X connect 77 0 3 0;
-#X connect 93 0 144 0;
+#X connect 93 0 147 0;
 #X connect 93 1 94 0;
 #X connect 94 0 95 0;
 #X connect 96 0 97 0;
@@ -5869,7 +5872,7 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 7 1 4 0;
 #X connect 7 2 8 0;
 #X restore 551 156 pd burst-presets;
-#N canvas 284 397 625 300 save 0;
+#N canvas 237 397 625 300 save 0;
 #X obj 169 146 text define -k \$0-save;
 #A set \; \; %^ :g 0 \; %^ :X 5 \; %^ :Y 4 \; \; \; %^ :M 0 \; %^ :a
 bang \; %^ :b bang \; %^ :c 0 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \; %^
@@ -5884,7 +5887,7 @@ bang \; %^ :b bang \; %^ :c 0 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \; %^
 0 \; %^ :y1 0 \; %^ :y2 0 \; %^ :em 0 \; %^ :pr 0 \; %^ :te 100 \;
 %^ :rm 1 \; %^ :nr 0 \; %^ :ro 0 \; %^ :il 0 \; %^ :ln bang \; %^ :rt
 0 \; %^ :ms 0 \; %^ :pu 0 \; %^ :sw 0 \; %^ :on 1 \; %^ :gc 1 \; %^
-:sx 0 \; %^ :sy 0 \; %^ :bs 0 \; %^ :le 0 \;;
+:sx 0 \; %^ :sy 0 \; %^ :bs 0 \; %^ :le 0 \; $% :ze bang \;;
 #X msg 169 123 click;
 #X obj 169 99 receive \$0-savelist;
 #X obj 168 194 ctxfiles/saver \$0 eapp 4;
@@ -5911,7 +5914,7 @@ as well.;
 #X text 145 133 read creation arguments and separate input commands
 from overlay instructions;
 #X text 144 164 receive all command data and process safety;
-#N canvas 432 87 796 681 input 0;
+#N canvas 520 87 796 681 input 0;
 #X msg 122 285 1;
 #X obj 154 312 s \$0-undodec;
 #X obj 348 105 list trim;
@@ -5945,13 +5948,12 @@ from overlay instructions;
 #X obj 153 261 s \$0-tobr;
 #X obj 122 236 t b b a b a;
 #X obj 348 286 route ! %> bang !!;
-#X obj 348 450 demux;
+#X obj 348 455 demux;
 #X obj 467 152 receive \$0-stp*1;
-#X obj 375 427 receive \$0-stp*0;
-#X obj 446 396 del 25;
+#X obj 375 432 receive \$0-stp*0;
+#X obj 446 386 del 25;
 #X obj 400 316 demux;
-#X obj 427 373 t a b b;
-#X obj 427 350 ctxfiles/sp01 1;
+#X obj 427 363 t a b b;
 #X obj 410 677 receive \$0-oops!;
 #X obj 371 701 spigot;
 #X obj 371 723 s \$0-restartt;
@@ -5959,6 +5961,13 @@ from overlay instructions;
 #X obj 313 128 receive context;
 #X obj 348 553 t a b a;
 #X obj 348 595 relay push;
+#X obj 603 323 receive \$0-zend;
+#X obj 427 340 demux;
+#X obj 477 363 f 1;
+#X obj 446 409 t f;
+#X obj 582 348 list;
+#X obj 582 371 route bang;
+#X obj 639 395 s \$0-msteal1;
 #X connect 0 0 1 0;
 #X connect 2 0 25 0;
 #X connect 4 0 7 0;
@@ -5968,7 +5977,7 @@ from overlay instructions;
 #X connect 10 0 25 0;
 #X connect 11 0 22 0;
 #X connect 12 0 14 2;
-#X connect 13 0 45 0;
+#X connect 13 0 44 0;
 #X connect 13 1 12 0;
 #X connect 13 2 14 1;
 #X connect 14 0 13 0;
@@ -6000,25 +6009,31 @@ from overlay instructions;
 #X connect 32 1 33 0;
 #X connect 32 2 37 0;
 #X connect 32 4 31 0;
-#X connect 33 0 45 0;
+#X connect 33 0 44 0;
 #X connect 33 1 14 0;
 #X connect 34 0 22 0;
 #X connect 35 0 33 1;
-#X connect 36 0 39 2;
+#X connect 36 0 49 0;
 #X connect 37 0 5 0;
-#X connect 37 1 39 0;
+#X connect 37 1 47 0;
 #X connect 38 0 5 0;
 #X connect 38 1 36 0;
-#X connect 38 2 39 1;
-#X connect 39 0 38 0;
-#X connect 40 0 41 1;
-#X connect 41 0 42 0;
-#X connect 44 0 25 0;
-#X connect 45 0 46 0;
-#X connect 45 1 41 0;
-#X connect 45 2 3 0;
-#X connect 46 0 6 0;
-#X connect 46 1 5 0;
+#X connect 38 2 48 0;
+#X connect 39 0 40 1;
+#X connect 40 0 41 0;
+#X connect 43 0 25 0;
+#X connect 44 0 45 0;
+#X connect 44 1 40 0;
+#X connect 44 2 3 0;
+#X connect 45 0 6 0;
+#X connect 45 1 5 0;
+#X connect 46 0 50 1;
+#X connect 47 0 38 0;
+#X connect 47 1 50 0;
+#X connect 48 0 47 1;
+#X connect 49 0 47 1;
+#X connect 50 0 51 0;
+#X connect 51 1 52 0;
 #X restore 69 164 pd input;
 #X text 144 189 send menu data to other location (if set);
 #X text 144 213 hold command data (if set);
@@ -6467,7 +6482,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 109 0 110 0;
 #X connect 110 0 103 0;
 #X restore 552 391 pd rules;
-#N canvas 298 180 647 556 title 1;
+#N canvas 67 180 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
