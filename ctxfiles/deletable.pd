@@ -1022,7 +1022,7 @@ x \, c-posy, f 57;
 #X connect 12 0 7 1;
 #X connect 13 0 8 1;
 #X restore 46 563 pd timestretch;
-#N canvas 67 237 714 358 colors 0;
+#N canvas 67 229 714 358 colors 1;
 #X obj 29 7 receive \$1-colours;
 #X obj 64 165 s colourquery";
 #X text 39 308 1 main \, 2 high contrast \, 3 HC text \, 4 main text
@@ -1042,7 +1042,7 @@ main \, launchpad;
 #X msg 169 229 \; \$9-mbangr color \$6 \$4 \$4;
 #X msg 333 229 \; \$9-underline color \$3 \$3 \$2;
 #X msg 514 229 \; \$9-cposr color \$6 \$7 \$7;
-#X msg 20 229 \; \$9-menlab color \$4 0 0;
+#X msg 10 229 \; \$9-menlab color \$4 \$5 \$5;
 #X connect 0 0 6 0;
 #X connect 5 1 1 0;
 #X connect 6 0 8 0;
