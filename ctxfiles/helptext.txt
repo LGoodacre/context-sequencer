@@ -9,7 +9,7 @@
 -m RANDOM ▲ RESOLUTION ▲ MINIMUM ▪ AUTO ADVANCE ** ** ☺ HELP;
 -m POSITION ▲ RESOLUTION ▲ SCALE ** ** ** ☺ HELP;
 -m CALCULATION ▪ CALCULATION MODE ▲ FACTOR ▪ MAP LIST ▪ TEMPO ** ☺ HELP;
--m TIMING2 ▲ SHUFFLE ▪ SAFETY ▲ SAFETY TRIGGER ** ** ☺ HELP;
+-m TIMING2 ▲ SHUFFLE ▲ SAFETY LIMIT ▲ SAFETY TRIGGER ** ** ☺ HELP;
 -p list MODE :: \; Delay mode determines the length of the Context cycle‚ ie. how long it takes for the cursor to scroll across the canvas. \; RANDOM mode selects a random cycle time each time the Context is started. \; POSITIONAL mode allows the delay time to be set by the Context's position on the canvas. Move the Context and the delay time will change. The time value is a scalar set radially from an origin point. The origin point is either the last Context (if it also has positional mode on) or the origin point of the canvas. \; RANDOM AND POSITION OPTIONS offer some settings for the corresponding modes. \; CALCULATION lets you establish how the :d value correspond to the cycle time‚ ie. by defining a multiplier.;
 -m QUANTITY ▲ DEFINE ▲ PROGRESSION ▲ RANDOM ▪ WRAP ▪ EDIT RANDOM ☺ HELP;
 -m SELECTION ▲ DEFINE ▲ PROGRESSION ▲ RANDOM ▪ WRAP  ▪ EDIT RANDOM ☺ HELP;
@@ -66,11 +66,11 @@
 ;
 -p list CALCULATION :: \; By default‚ the :d value (ie. the number in the float attom in the top-left corner) defines the cycle time exactly‚ so :d 1 means 1 second‚ :d 2 meaning 2 seconds‚ etc. Calculation lets you establish rules to create custom timing sets. All rules are defined by the MODE (:K) and the factor (:k). \; * mode means :k * :d \; / mode means :k / :d \; ^ mode means :k ^ :d \; map mode lets you enter a custom list of values as :k‚ so that :d0 = :k0‚ :d1 = :k1‚ etc. Use MAP LIST to enter the list. \; TEMPO multiplies the given time by a percentage (default 100). This is effectively the same as :K 1‚ but allows for global tempo changes after :K 1 has already been set. ;
 -f SHUFFLE O -100 100;
--t SAFETY z 2 off on;
+-f SAFETY LIMIT z 0 10000;
 -s SAFETY TRIGGER ze 1 0;
 ;
 ;
--p list SHUFFLE adds a shuffle to the pattern output. The range is -100 to 100. Positive numbers bring every alternate beat forward while negative numbers push it back‚ with 0 meaning off. \; SAFETY: The safety setting helps to avoid stack overflows. When it is on‚ the minimum context cycle is 10 milliseconds and any message received by context will block further input for the same amount of time. This is effective at preventing feedback loops‚ but also hinders some functionality. Turn this feature off if you want to play fast‚ but do so at your own risk. \; SAFETY TRIGGER: An event can be triggered when the safety function cuts a feedback loop. This event is defined by the :ze command. :ze stores any message‚ which will be sent in case the safety function kicks in. Using the "." prefix‚ you can use :ze to have Context execute a command on itself. The most obvious case is " . :d 1 "‚  which resets the cycle time to 1 second.;
+-p list SHUFFLE adds a shuffle to the pattern output. The range is -100 to 100. Positive numbers bring every alternate beat forward while negative numbers push it back‚ with 0 meaning off. \; SAFETY LIMIT: The safety setting helps to avoid stack overflows. It specifies a time duration (default 10ms) below which Context cann't be restarted. Any message received by context will block further input for this amount of time. This is effective at preventing feedback loops‚ but also hinders some functionality. Turn this feature off if you want to play fast‚ but do so at your own risk. \; SAFETY TRIGGER: An event can be triggered when the safety function cuts a feedback loop. This event is defined by the :ze command. :ze stores any message‚ which will be sent in case the safety function kicks in. Using the "." prefix‚ you can use :ze to have Context execute a command on itself. The most obvious case is " . :d 1 "‚  which resets the cycle time to 1 second.;
 -g 79;
 ;
 ;

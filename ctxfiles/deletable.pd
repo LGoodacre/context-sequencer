@@ -1022,7 +1022,7 @@ x \, c-posy, f 57;
 #X connect 12 0 7 1;
 #X connect 13 0 8 1;
 #X restore 46 563 pd timestretch;
-#N canvas 67 229 714 358 colors 1;
+#N canvas 67 229 714 358 colors 0;
 #X obj 29 7 receive \$1-colours;
 #X obj 64 165 s colourquery";
 #X text 39 308 1 main \, 2 high contrast \, 3 HC text \, 4 main text
