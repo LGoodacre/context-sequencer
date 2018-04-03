@@ -5874,7 +5874,7 @@ connect 2 0 1 0 \, connect 1 2 1 1;
 #X connect 7 1 4 0;
 #X connect 7 2 8 0;
 #X restore 551 156 pd burst-presets;
-#N canvas 190 397 625 300 save 0;
+#N canvas 143 397 625 300 save 0;
 #X obj 169 146 text define -k \$0-save;
 #A set \; \; %^ :g 0 \; %^ :X 5 \; %^ :Y 4 \; \; \; %^ :M 0 \; %^ :a
 bang \; %^ :b bang \; %^ :c 0 \; %^ :d 0 \; %^ :e 1 \; %^ :f 1 \; %^
@@ -5889,7 +5889,7 @@ bang \; %^ :W 0 \; %^ :Z 7 \; %^ :ID 0 \; %^ :ex -clear \; %^ :se 0
 :x2 0 \; %^ :y1 0 \; %^ :y2 0 \; %^ :em 0 \; %^ :pr 0 \; %^ :te 100
 \; %^ :rm 1 \; %^ :nr 0 \; %^ :ro 0 \; %^ :il 0 \; %^ :ln bang \; %^
 :rt 0 \; %^ :ms 0 \; %^ :pu 0 \; %^ :sw 0 \; %^ :on 1 \; %^ :gc 1 \;
-%^ :sx 0 \; %^ :sy 0 \; %^ :bs 0 \; %^ :le 0 \; $% :ze bang \;;
+%^ :sx 0 \; %^ :sy 0 \; %^ :bs 0 \; %^ :le 0 \; %^ :ze bang \;;
 #X msg 169 123 click;
 #X obj 169 99 receive \$0-savelist;
 #X obj 168 194 ctxfiles/saver \$0 eapp 4;
@@ -6495,7 +6495,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 109 0 110 0;
 #X connect 110 0 103 0;
 #X restore 552 391 pd rules;
-#N canvas 346 212 647 556 title 1;
+#N canvas 299 212 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
