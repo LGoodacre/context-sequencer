@@ -1,4 +1,4 @@
-#N canvas 78 160 501 300 10;
+#N canvas 67 152 501 300 10;
 #X obj 333 161 cyclone/prepend matrix;
 #X obj 224 226 send;
 #X obj 62 83 list split 1;
@@ -17,9 +17,10 @@
 #X obj 224 150 list trim;
 #X obj 224 205 iemmatrix/matrix;
 #X obj 333 183 iemmatrix/mtx_check;
-#X obj 367 276 iemmatrix/mtx_print;
-#X obj 370 254 print ggo;
 #X obj 316 5 receive \$1-goffs;
+#X obj 422 3 inlet;
+#X obj 380 49 unpack f f f;
+#X obj 422 25 t b l;
 #X connect 0 0 17 0;
 #X connect 2 1 5 0;
 #X connect 3 0 2 0;
@@ -43,4 +44,10 @@
 #X connect 15 0 16 0;
 #X connect 16 0 1 0;
 #X connect 17 0 16 1;
-#X connect 20 0 11 0;
+#X connect 18 0 11 0;
+#X connect 19 0 21 0;
+#X connect 20 0 9 1;
+#X connect 20 1 9 2;
+#X connect 20 2 9 3;
+#X connect 21 0 9 0;
+#X connect 21 1 20 0;
