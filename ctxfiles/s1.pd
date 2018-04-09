@@ -1,5 +1,5 @@
-#N canvas 317 212 842 524 10;
-#X symbolatom 100 101 17 0 0 0 - #1-#2-r #1-#2-s, f 17;
+#N canvas 270 212 842 524 10;
+#X symbolatom 100 100 20 0 0 0 - #1-#2-r #1-#2-s, f 20;
 #X obj 135 357 spigot;
 #X obj 174 329 f 1;
 #X obj 146 329 t f;
@@ -60,4 +60,4 @@
 #X connect 29 0 4 0;
 #X connect 30 0 10 0;
 #X connect 31 0 9 0;
-#X coords 0 -1 1 1 122 15 2 100 100;
+#X coords 0 -1 1 1 122 17 2 100 100;
