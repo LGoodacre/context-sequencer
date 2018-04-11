@@ -1,4 +1,4 @@
-#N canvas 239 92 533 668 10;
+#N canvas 239 92 533 700 10;
 #N canvas 463 167 721 600 load 0;
 #N canvas 346 212 990 532 start 0;
 #X obj 361 121 sel 0;

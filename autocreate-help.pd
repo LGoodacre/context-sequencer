@@ -13,7 +13,7 @@ You have to hold down the shift and the control keys for this to work
 object (and arguments) you want to be created. [autocreate] is desgned
 for creating Context objects \, but could just as well be used to create
 anything.;
-#X obj 151 239 autocreate context :c :x 2;
+#X obj 151 239 autocreate context :c 6 :x 2;
 #X text 46 287 Hold down the shift and control keys and click anywhere
 on this canvas to see [autocreate] in action.;
 #X text 40 209 The symbol '%' will be replaced by a number sequence

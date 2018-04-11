@@ -1,3 +1,6 @@
+README.txt;
+readme / setup;
+
 helpfiles/what_is_context.txt;
 what is Context?;
 
