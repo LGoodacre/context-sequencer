@@ -1,0 +1,48 @@
+#N canvas 515 208 735 536 10;
+#X obj 147 17 context :H 8 :io i :ID 1 :ol 1 4 obj 390 152 bank 116
+obj 228 73 content :H 10 :x1 0.0475 :x2 0.0575 :y1 0.0202778 :y2 0.0263889
+:li 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 4 obj 360 64 crossreference 4 obj 282 217 keylist 8 obj 0 0 marker
+:x1 0.0977083 :y1 0.0402778 4 obj 374 195 mover 4 obj 0 46 undo 5 obj
+355 110 ctx inlet~;
+#N canvas 493 101 450 300 all 1;
+#X obj 401 203 autocreate;
+#X obj 402 227 click;
+#X obj 424 322 finder;
+#X obj 137 379 gridcontrol;
+#X obj 732 132 num;
+#X obj 402 273 patch;
+#X obj 489 171 pgrid;
+#X obj 402 250 preset;
+#X obj 622 33 psave;
+#X obj 621 67 scaler;
+#X obj 456 57 sketch;
+#X obj 417 110 sketch-index 0 0 0 0;
+#X obj 698 5 slide;
+#X obj 671 -9 slide2;
+#X obj 641 139 tog;
+#X text 46 75 Ignore this window--it's just here to see if all other
+objects in the Context library load correctly.;
+#X restore 666 33 pd all;
+#X obj 128 234 s2l;
+#X obj 176 236 cyclone/iter;
+#X obj 268 237 list-abs/list-drip;
+#X obj 398 236 else/toany;
+#X text 113 364 5: In the main Context folder \, please delete or rename
+the following folders: "cyclone" \, "else" \, "flatgui" \, "hcs" \,
+"iemguts" \, "iemmatrix" "list-abs" \, and "zexy". Then restart PD
+and load this same patch. Now repeat steps 1-3. \; \; \; 6: Assuming
+that your externals are already in order and that you were able to
+run Context before this test \, the help-files SHOULD appear. Please
+report if they don't!;
+#X text 111 84 1: When you open this patch \, are there any "couldn't
+create" messages in the console? If so \, tell me! \; \; \; 2: Does
+Context seem to be working correctly? Try resizing it and shifting
+toggle floats to see. \; \; \; 3: If the following objects have created
+correctly \, can you call the helpfiles? (right click --> help) \;
+\; \; \; \; 4: If you CAN'T call them \, then Context is working on
+its local Externals. This is good news! (I'll put the help files back
+at a later date. They're missing for now because this is the easiest
+way to tell whether the local externals are working).;
