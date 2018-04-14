@@ -129,7 +129,7 @@
 #X connect 14 0 13 0;
 #X coords 0 -1 1 1 20 20 2 100 100;
 #X restore 563 143 pd progress;
-#X text 616 126 (allow a few seconds after presing this button);
+#X text 616 126 (allow a few seconds after pressing this button);
 #X obj 764 171 cnv 15 178 23 empty empty empty 20 12 0 20 -228856 -4034
 0;
 #X obj 765 172 cnv 15 176 21 empty empty QUESTIONS 20 10 0 20 -16662
