@@ -1,5 +1,5 @@
 #N canvas 67 281 605 425 10;
-#X declare -lib zexy -stdlib zexy;
+#X declare -lib zexy -path zexy;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
 #N canvas 65 327 292 163 \$0-paint 0;

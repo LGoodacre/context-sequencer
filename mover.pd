@@ -1,4 +1,5 @@
-#N canvas 359 288 511 321 10;
+#N canvas 312 288 511 321 10;
+#X declare -lib zexy -path zexy;
 #N canvas 247 87 671 681 move 0;
 #X obj 88 67 spigot;
 #X obj 272 709 iemguts/canvasindex 1;
@@ -377,6 +378,7 @@
 #X obj 294 51 t b b b;
 #X obj 340 73 ctxfiles/dvs \$0 backsplash;
 #X obj 100 198 ctxfiles/license;
+#X obj 110 171 declare -lib zexy -path zexy;
 #X connect 2 0 4 0;
 #X connect 4 0 1 0;
 #X connect 4 1 0 0;

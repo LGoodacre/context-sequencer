@@ -1,4 +1,5 @@
-#N canvas 575 136 607 632 10;
+#N canvas 528 136 607 632 10;
+#X declare -lib zexy -path zexy;
 #X obj 105 38 route mouse key;
 #X obj 156 64 cyclone/zl rev;
 #X obj 156 86 list split 1;
@@ -30,6 +31,8 @@
 #X obj 157 489 list trim;
 #X obj 196 131 route Shift_L Shift_R Control_L Control_R Meta_L Meta_R
 ;
+#X obj 344 210 ctxfiles/license;
+#X obj 344 273 declare -lib zexy -path zexy;
 #X connect 0 0 4 0;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;

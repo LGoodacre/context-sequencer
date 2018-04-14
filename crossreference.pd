@@ -1,4 +1,5 @@
 #N canvas 67 85 1299 683 10;
+#X declare -lib zexy -path zexy;
 #X obj 759 -1 loadbang;
 #X obj 778 90 iemguts/canvasargs;
 #X obj 834 489 array define \$0-ids 1;
@@ -113,6 +114,8 @@ if no response;
 #X obj 335 151 makefilename %s-crijoff;
 #X obj 580 363 t l b;
 #X obj 373 363 t l b;
+#X obj 99 50 ctxfiles/license;
+#X obj 99 113 declare -lib zexy -path zexy;
 #X connect 0 0 83 0;
 #X connect 1 0 60 0;
 #X connect 3 0 8 0;

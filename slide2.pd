@@ -1,4 +1,5 @@
-#N canvas 91 94 1090 614 10;
+#N canvas 67 94 1090 614 10;
+#X declare -lib zexy -path zexy;
 #X obj 100 -100 vsl 23 101 0 100 0 0 \$0-ls \$0-lr 0 1 90 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;
@@ -99,6 +100,8 @@
 #X obj 783 541 * 21.7;
 #X obj 756 475 demux;
 #X obj 783 497 max 1;
+#X obj 355 387 ctxfiles/license;
+#X obj 355 450 declare -lib zexy -path zexy;
 #X connect 2 0 30 0;
 #X connect 2 0 34 0;
 #X connect 2 0 50 0;

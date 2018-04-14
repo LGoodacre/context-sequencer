@@ -1,4 +1,5 @@
-#N canvas 115 426 621 300 10;
+#N canvas 68 426 621 300 10;
+#X declare -lib zexy -path zexy;
 #X obj 170 177 iemguts/canvasselect;
 #X obj 170 203 print fo;
 #X obj 170 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -348,6 +349,7 @@ tfsn \$0 #f y1 0 \; :a tfspa \$0 #f a bang \; ## s \$0-othr;
 #X connect 12 0 3 0;
 #X restore 261 52 pd messagein;
 #X obj 345 220 ctxfiles/license;
+#X obj 344 193 declare -lib zexy -path zexy;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 4 0 15 0;

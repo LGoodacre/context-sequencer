@@ -1,4 +1,5 @@
 #N canvas 67 85 1299 683 10;
+#X declare -lib zexy -path zexy;
 #X obj 100 100 bng 12 250 50 0 \$0-bang \$0-label empty 14 7 0 8 -262144
 -1 -1;
 #X obj 356 124 ctxfiles/dvi \$0 3;
@@ -111,6 +112,7 @@
 #X obj 78 508 list trim;
 #X obj 78 325 sel 2 58;
 #X text -125 310 filter out :g (2) :ba (58);
+#X obj 505 103 declare -lib zexy -path zexy;
 #X connect 1 0 66 0;
 #X connect 2 0 3 0;
 #X connect 4 0 7 0;

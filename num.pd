@@ -1,4 +1,5 @@
-#N canvas 579 169 633 497 10;
+#N canvas 532 169 633 497 10;
+#X declare -lib zexy -path zexy;
 #X obj 246 61 loadbang;
 #X obj 297 105 + 1;
 #X obj 246 105 t f f f;
@@ -38,6 +39,8 @@
 #X msg 61 455 menu-open \, coords 0 -1 1 1 1 1 1 0 0 \, coords 0 -1
 1 1 1 1 0 0 0 \, vis 0;
 #X msg 256 404 coords 0 -1 1 1 \$1 17 2 100 100 \, dirty 0;
+#X obj 446 86 ctxfiles/license;
+#X obj 446 149 declare -lib zexy -path zexy;
 #X connect 0 0 9 0;
 #X connect 0 0 12 0;
 #X connect 0 0 17 0;

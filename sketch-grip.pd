@@ -1,5 +1,6 @@
 #N canvas 67 242 506 482 10;
-#N canvas 490 91 724 677 create 0;
+#X declare -lib zexy -path zexy;
+#N canvas 443 91 724 677 create 1;
 #X obj 194 73 symbol \$1-getdim;
 #X obj 174 123 send;
 #X obj 174 147 receive \$0-gotdim;
@@ -64,6 +65,8 @@
 #X obj 426 478 receive \$0-prop;
 #X obj 155 50 t b b b;
 #X obj 210 6 receive \$1-plb;
+#X obj 449 105 ctxfiles/license;
+#X obj 449 168 declare -lib zexy -path zexy;
 #X connect 0 0 1 1;
 #X connect 2 0 34 0;
 #X connect 3 0 1 0;
@@ -363,7 +366,7 @@ old;
 #X connect 21 0 13 0;
 #X restore 283 58 pd set;
 #X obj 356 59 inlet;
-#N canvas 67 188 726 300 input 1;
+#N canvas 451 352 726 300 input 0;
 #X obj 185 25 receive \$4-;
 #X obj 185 71 route float;
 #X obj 185 184 s \$0-receive;

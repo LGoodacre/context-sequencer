@@ -1,4 +1,5 @@
-#N canvas 424 184 450 491 10;
+#N canvas 377 184 450 491 10;
+#X declare -lib zexy -path zexy;
 #X obj 150 21 loadbang;
 #X obj 189 65 iemguts/canvasdollarzero 2;
 #X obj 169 111 iemguts/canvasargs;
@@ -21,6 +22,8 @@
 #X obj 229 331 t f;
 #X obj 150 432 send;
 #X obj 253 405 makefilename %s-bplist;
+#X obj -53 78 ctxfiles/license;
+#X obj -53 141 declare -lib zexy -path zexy;
 #X connect 0 0 8 0;
 #X connect 1 0 10 0;
 #X connect 1 0 21 0;

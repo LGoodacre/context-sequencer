@@ -1,4 +1,5 @@
-#N canvas 613 107 411 370 10;
+#N canvas 566 107 411 370 10;
+#X declare -lib zexy -path zexy;
 #X obj 143 25 loadbang;
 #X obj 221 115 makefilename %s-patchget;
 #X obj 221 137 iemguts/oreceive \$0n;
@@ -15,6 +16,8 @@
 #X obj 204 284 makefilename patch-%s-T6Ty;
 #X obj 170 92 t s s s s;
 #X obj 187 306 send;
+#X obj -30 220 ctxfiles/license;
+#X obj -30 283 declare -lib zexy -path zexy;
 #X connect 0 0 11 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;

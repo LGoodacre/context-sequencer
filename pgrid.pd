@@ -1,4 +1,5 @@
-#N canvas 657 98 682 670 10;
+#N canvas 610 98 682 670 10;
+#X declare -lib zexy -path zexy;
 #X obj 100 100 bng 15 250 50 0 \$0-bangs \$0-bangr 1 5 7 0 10 -262144
 -1 -1;
 #X obj 79 304 iemguts/canvasdollarzero 1;
@@ -45,6 +46,8 @@ and send then try again with the mode4 message \, unless I recive a
 #X obj 149 32 t f f f;
 #X obj 168 55 moses 10;
 #X msg 125 79 label_pos 3 8 \, label_font 0 9;
+#X obj 331 460 ctxfiles/license;
+#X obj 331 523 declare -lib zexy -path zexy;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
 #X connect 3 0 7 0;

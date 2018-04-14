@@ -1,4 +1,5 @@
-#N canvas 509 81 684 687 10;
+#N canvas 462 87 684 681 10;
+#X declare -lib zexy -path zexy;
 #X obj 395 482 inlet;
 #X obj 299 592 list;
 #X obj 320 508 list append 0;
@@ -47,6 +48,7 @@
 #X obj 434 -1 ctxfiles/license;
 #X obj 299 619 ctxfiles/dvs \$0 notsafe;
 #X obj 106 86 ctxfiles/dvr \$0 mouseone;
+#X obj 434 65 declare -lib zexy -path zexy;
 #X connect 0 0 2 1;
 #X connect 1 0 46 0;
 #X connect 2 0 35 0;

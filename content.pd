@@ -1,4 +1,5 @@
-#N canvas 121 173 677 503 10;
+#N canvas 74 173 677 503 10;
+#X declare -lib zexy -path zexy;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
 #X obj 1 4 cnv 3 47 21 empty \$0-block3 empty 2 3 0 8 -203904 -1 0
@@ -1153,9 +1154,9 @@ context) if not.;
 #X msg 129 114 click;
 #X obj 129 136 text define -k \$0-save;
 #A set \; %^ :lo bang \; %^ :x1 0 \; %^ :x2 0 \; %^ :y1 0 \; %^ :y2
-0 \; %^ :c 17 \; %^ :s1 1 \; %^ :s2 -1 \; %^ :nm 1 \; %^ :li 0 \; %^
-:br 44100 \; %^ :p1 0 \; %^ :p2 0 \; %^ :p3 0 \; %^ :p4 0 \; %^ :ed
-1 \; %^ :as 1 \;;
+0 \; %^ :c 17 \; %^ :s1 1 \; %^ :s2 -1 \; %^ :nm 1 \; :li 1 \; %^ :br
+44100 \; %^ :p1 0 \; %^ :p2 0 \; %^ :p3 0 \; %^ :p4 0 \; %^ :ed 1 \;
+%^ :as 1 \;;
 #X obj 128 70 ctxfiles/saver \$0 lapp 3;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
@@ -1174,6 +1175,7 @@ context) if not.;
 #X text 330 -92 save commands to creation arguments;
 #X text 329 -70 control canvas;
 #X text 330 -48 set colour;
+#X obj 15 -333 declare -lib zexy -path zexy;
 #X connect 4 0 5 0;
 #X connect 6 0 3 0;
 #X connect 7 0 9 0;

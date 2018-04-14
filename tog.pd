@@ -1,4 +1,5 @@
-#N canvas 181 257 549 322 10;
+#N canvas 134 257 549 322 10;
+#X declare -lib zexy -path zexy;
 #X obj 100 100 tgl 18 0 \$0-ts \$0-tr \$1 21 9 0 10 -262144 -1 -1 0
 1;
 #X obj 246 61 loadbang;
@@ -23,6 +24,8 @@
 #X msg 374 58 menu-open \, coords 0 -1 1 1 1 1 1 0 0 \, coords 0 -1
 1 1 1 1 0 0 0 \, vis 0;
 #X obj 374 93 iemguts/sendcanvas;
+#X obj 167 254 ctxfiles/license;
+#X obj 167 317 declare -lib zexy -path zexy;
 #X connect 1 0 11 0;
 #X connect 1 0 13 0;
 #X connect 1 0 17 0;

@@ -1,4 +1,5 @@
-#N canvas 293 290 450 300 10;
+#N canvas 246 290 450 300 10;
+#X declare -lib zexy -path zexy;
 #X obj 140 179 iemguts/canvasargs;
 #X obj 119 202 list;
 #X obj 167 90 iemguts/canvasdollarzero 1;
@@ -9,6 +10,8 @@
 #X obj 167 156 t b f;
 #X obj 119 224 send;
 #X obj 194 201 makefilename %i-gottemp;
+#X obj 261 3 ctxfiles/license;
+#X obj 261 66 declare -lib zexy -path zexy;
 #X connect 0 0 1 1;
 #X connect 1 0 8 0;
 #X connect 2 0 6 0;

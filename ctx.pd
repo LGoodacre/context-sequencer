@@ -1,5 +1,6 @@
-#N canvas 166 452 450 300 10;
-#N canvas 511 93 716 687 guts 0;
+#N canvas 119 452 450 300 10;
+#X declare -lib zexy -path zexy;
+#N canvas 464 87 716 681 guts 1;
 #X obj 184 313 sel inlet~ outlet~;
 #X obj 167 654 iemguts/sendcanvas 1;
 #X obj 136 33 ctxfiles/myinit 3;
@@ -64,6 +65,8 @@
 #X obj 206 212 ctxfiles/dvs \$0 i/onor;
 #X obj 17 155 ctxfiles/dvs \$0 cbeep;
 #X obj 547 483 ctxfiles/dvs \$0 undone2;
+#X obj 457 18 ctxfiles/license;
+#X obj 457 81 declare -lib zexy -path zexy;
 #X connect 0 0 23 0;
 #X connect 0 1 24 0;
 #X connect 0 2 4 0;

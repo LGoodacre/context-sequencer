@@ -1,4 +1,5 @@
-#N canvas 261 136 511 632 10;
+#N canvas 214 136 511 632 10;
+#X declare -lib zexy -path zexy;
 #N canvas 642 87 683 681 guts 0;
 #X obj 95 168 route symbol;
 #X obj 95 146 cyclone/iter;
@@ -180,6 +181,7 @@
 #X obj 289 50 makefilename %s-allscales;
 #X obj 289 72 iemguts/oreceive \$0n;
 #X obj 232 261 receive \$0-scalebong;
+#X obj 292 485 declare -lib zexy -path zexy;
 #X connect 0 0 36 0;
 #X connect 1 0 11 0;
 #X connect 2 0 32 0;
