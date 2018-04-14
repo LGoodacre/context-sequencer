@@ -43,9 +43,61 @@ There are four parts to the Documentation:
 
 The context-help.pd file serves as a Table of Contents for all Context documentation.
 
+
+EXTERNALS USED:
+
+cyclone/accum
+cyclone/append
+cyclone/fromsymbol
+cyclone/funnel
+cyclone/iter
+cyclone/lessthan~
+cyclone/onebang
+cyclone/prepend
+cyclone/prepend
+cyclone/substitute
+cyclone/tanh
+cyclone/togedge
+cyclone/uzi
+cyclone/zl
+else/break
+else/fromany
+else/order
+else/link
+else/routeall
+else/toany
+else/window
+flatgui/entry
+iemguts/canvasargs
+iemguts/canvasconnections
+iemguts/canvasdelete
+iemguts/canvasdollarzero
+iemguts/canvaserror
+iemguts/canvasindex
+iemguts/canvasname
+iemguts/canvasobjectposition
+iemguts/canvasposition
+iemguts/canvasselect
+iemguts/closebang
+iemguts/oreceive
+iemguts/propertybang
+iemguts/receivecanvas
+iemguts/savebangs
+iemguts/sendcanvas
+iemmatrix/matrix
+iemmatrix/mtx_check
+list-abs/list-drip
+list-abs/list-extend
+list-abs/list-filter
+list-abs/list-map
+list-abs/list-pad
+list-abs/list-replace
+
+
+
 CREDITS:
 
-Many people have contributed techical and moral support for Context. I would especially like to thank Miller Puckette, Alexander Torres Porres, Dan Wilcox and IOhannes Zmoelnig, Matt Barber and Derek Kwan for responding to many requests and bug fixes in PD and its external libraries, without which Context would not work. And I would also like to thank Joe Deken and Ann Josey for their continued belief in me and in this project. Context certainly wouldn't be what it is without them. 
+Many people have contributed techical and moral support for Context. I would especially like to thank Miller Puckette, Alexander Torres Porres, Dan Wilcox and IOhannes Zmoelnig, Matt Barber and Derek Kwan for responding to many requests and bug fixes in PD and its external libraries, without which Context would not work. Omar Misa has provided consistent feedback and has the title of being Context's first User. And I would also like to thank Joe Deken and Ann Josey for their continued belief in me and in this project. Context certainly wouldn't be what it is without them.
 
 
 
