@@ -68,6 +68,8 @@ else/routeall
 else/toany
 else/window
 flatgui/entry
+hcs/canvas_name
+hcs/sys_gui
 iemguts/canvasargs
 iemguts/canvasconnections
 iemguts/canvasdelete
@@ -78,6 +80,7 @@ iemguts/canvasname
 iemguts/canvasobjectposition
 iemguts/canvasposition
 iemguts/canvasselect
+iemguts/classtest
 iemguts/closebang
 iemguts/oreceive
 iemguts/propertybang
@@ -92,6 +95,17 @@ list-abs/list-filter
 list-abs/list-map
 list-abs/list-pad
 list-abs/list-replace
+zexy/demux
+zexy/l2s
+zexy/msgfile
+zexy/mux
+zexy/pack
+zexy/relay
+zexy/s2l
+zexy/sort
+zexy/time
+zexy/unpack
+zexy/urn
 
 
 
