@@ -1,0 +1,9 @@
+#N canvas 10 10 200 200 10;
+#N canvas 20 20 420 300 META 0;
+#X text 10 10 META this is a prototype of a libdir meta file;
+#X text 10 10 NAME iemmatrix;
+#X text 10 10 AUTHOR IOhannes m zmoelnig (zmoelnig AT iem DOT at), thomas musil (musil AT iem DOT at), franz zotter (zotter AT iem DOT at);
+#X text 10 10 DESCRIPTION objects for matrix operations and math;
+#X text 10 10 LICENSE GNU GPL;
+#X text 10 10 VERSION ;
+#X restore 10 10 pd META;
