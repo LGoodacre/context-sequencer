@@ -591,7 +591,7 @@ context) if not.;
 #X obj 412 132 iemguts/oreceive \$0noo;
 #X obj 672 283 swap 1;
 #X obj 13 201 *~;
-#X obj 31 175 <~;
+#X obj 31 175 cyclone/lessthan~;
 #X obj 13 140 max~;
 #X obj 138 234 spigot;
 #X obj 151 123 t b f f f;
