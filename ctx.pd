@@ -4,7 +4,7 @@
 #X obj 167 654 iemguts/sendcanvas 1;
 #X obj 136 33 ctxfiles/myinit 3;
 #X obj 136 377 demux 0 1 2;
-#X obj 289 335 print ctx invalid tern;
+#X obj 289 335 print ctx invalid term;
 #X obj 221 127 ctxfiles/dvi \$0 4;
 #X obj 206 187 symbol \$0-nget;
 #X obj 206 243 receive \$0-nget;
