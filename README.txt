@@ -1,35 +1,36 @@
-CONTEXT V3.0.2
+ ####################
+ #                  #
+ #  CONTEXT V3.0.2  #
+ #                  #
+ ####################      Copyright Liam Goodacre, 2015-2018
 
-Copyright Liam Goodacre, 2015-2018
 
 This is a beta version of Context v3.0.2. There are still some bugs left and your help in tracking down both of these will be much appreciated.
 
 
 SETUP:
 
-Context runs on PD Vanilla V 0.47 or later. It needs the following externals, all available on Deken:
+Context runs on PD Vanilla V 0.47 or later. Once you have downloaded Context, you must declare its location so that PD knows how to find it on your computer. To do this, go to Edit --> Preferences --> Path --> New and select the location of Context's home folder.
 
-zexy
-cyclone
-else (1.0-beta8 or later)
-flatgui
-list-abs
-hcs
-iemguts (v 0.2.1 or later)
-pddp (useful but not essential)
-iemmatrix (only needed for [gridcontrol])
+EXTERNALS:
+
+Externals are PD objects that are not available in PD Vanilla and must be installed seperately (Help --> Find Externals). Context relies heavily on externals (see LIST OF EXTERNAL LIBRARIES below). To make setup at easy as possible, Context distributes with all its external dependencies, according to the terms of their various licenses. This means that Context should work "out of the box" without the user having to manually download and declare external libraries.
+
+There are some reasons why you might not want to use the externals which are distributed with Context. For instance, you might find that your patches are reverting to an unwanted version of an external object, if you have a different version of a library that the one Context is using. If you want to avoid the externals that are distributed with Context, or if you find that they are not working, simply delete or rename the following folders from the main Context folder: "cyclone", "else", "flatgui", "hcs", "iemguts", "iemmatrix" "list-abs", and "zexy". (Do not delete "ctxfiles" or "helpfiles"!) Context will now look for its external objects in your usual search directories, so make sure that your libraries are in order inside your "PD Documents Directory" or in another search path.
 
 
-Once you have all the necessary externals, declare the main Context folder as a path (Edit --> Preferences --> Path --> New). You should also consider adding the text "-font-face normal" into the startup flags (Edit --> preferences --> Startup --> Startput Path). This fixes a bug in 0.47 where the text is bolded, which throws the float and symbol atom off in the main GUI. Hopefully this won't be necessary in later releases.
+You should also consider adding the text "-font-face normal" into the startup flags (Edit --> preferences --> Startup --> Startput Path). This fixes a bug in 0.47 where the text is bolded, which throws the float and symbol atom off in the main GUI. Hopefully this won't be necessary in later releases.
+
+
+MIASCELLANEOUS:
 
 Context does not currently work on L2Ork or Purr Data.
 
 Context patches sometimes take a long time to load (some of them several minutes). You can speed this up by turning off DSP before loading, then turning it back on. Faster machines are recommended.
 
-
-TEXT SIZE
-
 Different installations sometimes have different font sizes, which throws off the alignment of the float- and symbol-atoms on the Context GUI. You can (hopefully) fix this annoyance in the [config] file in the main folder. If the atoms are not perfectly conjoined, then open the config.pd file and change the connection from "bold" to "thin" or vice versa. I can't guarantee that this will accomodate every system though. If you're still having trouble, please report a bug.
+
+You should also consider adding the text "-font-face normal" into the startup flags (Edit --> preferences --> Startup --> Startput Path). This fixes a bug in 0.47 where the text is bolded, which throws the float and symbol atom off in the main GUI. Hopefully this won't be necessary in later releases.
 
 
 DOCUMENTATION:
@@ -44,7 +45,20 @@ There are four parts to the Documentation:
 The context-help.pd file serves as a Table of Contents for all Context documentation.
 
 
-EXTERNALS USED:
+LIST OF EXTERNAL LIBRARIES REQUIRED BY CONTEXT:
+
+zexy
+cyclone
+else (1.0-beta8 or later)
+flatgui
+list-abs
+hcs
+iemguts (v 0.2.1 or later)
+pddp (useful but not essential)
+iemmatrix
+
+
+LIST OF ALL EXTERNAL OBJECTS USED IN CONTEXT:
 
 cyclone/accum
 cyclone/append
