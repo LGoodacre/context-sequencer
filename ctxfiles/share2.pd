@@ -1,4 +1,4 @@
-#N canvas 496 286 635 446 10;
+#N canvas 449 286 635 446 10;
 #X obj 342 99 symbol \$0-nope;
 #X obj 360 145 receive \$0-nope;
 #X obj 315 77 t b b;
@@ -17,6 +17,7 @@
 #X obj 315 293 iemguts/canvasargs 1;
 #X obj 315 315 list prepend obj 100 100 ctxfiles/cr;
 #X obj 342 121 s \$1-\$2oij0zB;
+#X obj 216 9 receive Rf&Nm<>;
 #X connect 0 0 16 0;
 #X connect 1 0 6 1;
 #X connect 2 0 6 0;
@@ -35,3 +36,4 @@
 #X connect 12 0 8 0;
 #X connect 14 0 15 0;
 #X connect 15 0 3 0;
+#X connect 17 0 8 0;
