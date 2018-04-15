@@ -1,16 +1,16 @@
-#N canvas 258 81 1040 687 10;
-#X obj 95 113 context :X 9 :a ' # 1 | # -2 | # 2 | # -4 | # -3 | #
+#N canvas 67 85 1299 683 10;
+#X obj 95 109 context :X 9 :a ' # 1 | # -2 | # 2 | # -4 | # -3 | #
 3 | # -2 | # 4 ' :d 2 :e 9 :x = 9 8 6 3 1 :Z 28 :ID 1;
-#X obj 173 202 context :X 9 :a ' # 2 | # 2 | # 2 | # 8 | # 7 | # 6
+#X obj 173 198 context :X 9 :a ' # 2 | # 2 | # 2 | # 8 | # 7 | # 6
 | # 5 | # 4 ' :d 2 :e 9 :x = 9 8 7 6 5 4 :Z 28 :ID 2;
-#X obj 55 202 context :X 9 :a ' # 9 | # 8 | # 10 | # 7 | # 12 | # 8
+#X obj 55 198 context :X 9 :a ' # 9 | # 8 | # 10 | # 7 | # 12 | # 8
 | # 5 | # 5 ' :d 1 :e 9 :x = 6 4 2 1 :Z 15 :ID 3;
-#X obj 795 94 dac~;
-#X obj 796 21 scaler blues major db 6;
-#X obj 560 311 ctxfiles/textbox helpfiles/docfiles/ex01q;
+#X obj 795 90 dac~;
+#X obj 843 91 scaler blues major db 6;
+#X obj 560 307 ctxfiles/textbox helpfiles/docfiles/ex01q;
 #N canvas 65 89 1301 687 questions 0;
 #X obj 10 11 vradio 15 1 0 5 \$0-nop \$0-nopp empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 4;
 #X text 31 40 How do I make / delete connections?;
 #X text 31 11 What am I supposed to do here?;
 #X text 32 56 What do the inlets do?;
@@ -61,12 +61,12 @@
 #X connect 27 0 15 0;
 #X connect 28 0 12 1;
 #X coords 0 -1 1 1 445 100 2 0 0;
-#X restore 560 200 pd questions;
-#X obj 763 170 cnv 15 180 25 empty empty empty 20 12 0 20 -33289 -4034
+#X restore 560 196 pd questions;
+#X obj 643 166 cnv 15 180 25 empty empty empty 20 12 0 20 -33289 -4034
 0;
-#X obj 560 171 hradio 25 1 0 8 empty next empty 0 -8 0 10 -262144 -1
+#X obj 560 167 hradio 25 1 0 3 empty next empty 0 -8 0 10 -262144 -1
 -1 0;
-#X obj 133 51 bng 20 250 50 0 empty empty START 23 9 0 10 -262144 -1
+#X obj 133 47 bng 20 250 50 0 empty empty START 23 9 0 10 -262144 -1
 -1;
 #N canvas 65 85 450 300 stop 0;
 #X obj 100 100 bng 20 250 50 0 empty empty STOP 23 9 0 10 -262144 -1
@@ -74,12 +74,12 @@
 #X msg 100 132 \; context stop;
 #X connect 0 0 1 0;
 #X coords 0 -1 1 1 20 20 2 100 100;
-#X restore 192 51 pd stop;
-#X obj 558 125 cnv 15 387 42 empty empty empty 3 8 0 16 -1 -1 0;
-#X obj 559 126 cnv 15 385 40 empty empty NEXT 3 8 0 20 -4032 -1 0;
-#N canvas 481 174 873 582 progress 0;
+#X restore 192 47 pd stop;
+#X obj 558 121 cnv 15 387 42 empty empty empty 3 8 0 16 -1 -1 0;
+#X obj 559 122 cnv 15 385 40 empty empty NEXT 3 8 0 20 -4032 -1 0;
+#N canvas 451 150 873 582 progress 0;
 #X obj 100 100 bng 20 250 50 0 empty label Whoa this is cool! Can you give me some more?
-30 10 0 10 -262144 -1 -1;
+30 10 1 14 -262144 -1 -1;
 #X msg 100 56 space sym;
 #X obj 100 160 f;
 #X obj 100 182 + 1;
@@ -107,9 +107,9 @@
 :x 1 :y 1 2 3 :ID 10 \, loadbang;
 #X obj 525 243 list split 2;
 #X obj 521 213 cyclone/zl iter 3;
-#X msg 518 164 300 100 20 420 100 21;
 #X obj 523 306 iemguts/canvasobjectposition 1;
 #X msg 536 86 \; c11 :d 1.5;
+#X msg 518 164 300 100 19 420 100 20;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 2 1;
@@ -119,33 +119,33 @@
 #X connect 9 0 10 0;
 #X connect 9 1 11 0;
 #X connect 9 1 7 0;
-#X connect 9 2 14 0;
 #X connect 9 2 16 0;
+#X connect 9 2 15 0;
 #X connect 10 0 6 0;
 #X connect 11 0 6 0;
-#X connect 12 0 15 0;
-#X connect 12 1 15 1;
+#X connect 12 0 14 0;
+#X connect 12 1 14 1;
 #X connect 13 0 12 0;
-#X connect 14 0 13 0;
+#X connect 16 0 13 0;
 #X coords 0 -1 1 1 20 20 2 100 100;
-#X restore 563 143 pd progress;
-#X text 616 126 (allow a few seconds after pressing this button);
-#X obj 764 171 cnv 15 178 23 empty empty empty 20 12 0 20 -228856 -4034
+#X restore 563 139 pd progress;
+#X text 616 122 (allow a few seconds after pressing this button);
+#X obj 644 167 cnv 15 178 23 empty empty empty 20 12 0 20 -228856 -4034
 0;
-#X obj 765 172 cnv 15 176 21 empty empty QUESTIONS 20 10 0 20 -16662
+#X obj 645 168 cnv 15 176 21 empty empty QUESTIONS 20 10 0 20 -16662
 -4034 0;
-#X obj 758 -11 catch~ samples;
-#X obj 796 44 receive context-;
-#X obj 1454 320 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 4 :ol
+#X obj 767 14 catch~ samples;
+#X obj 796 40 receive context-;
+#X obj 1454 316 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 4 :ol
 1 12 obj 0 28 content :lo helpfiles/wavs/open-conga.wav :x2 0.244792
 :y1 0.233333 :y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0
 4 0;
-#X obj 1583 320 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 5 :ol
+#X obj 1583 316 context :H 16 :X 9 :Y 6 :c 14 :d 0.5 :Z 12 :ID 5 :ol
 1 12 obj 0 28 content :lo helpfiles/wavs/lo-conga.wav :x2 0.244792
 :y1 0.233333 :y2 0.441667 5 obj 28 82 throw~ samples 5 connect 3 0
 4 0;
-#X obj 444 34 ctxfiles/license;
-#X obj 796 69 helpfiles/docfiles/glock~ 1;
+#X obj 558 53 ctxfiles/license;
+#X obj 796 65 helpfiles/docfiles/glock~ 1;
 #X connect 6 0 5 0;
 #X connect 8 0 6 0;
 #X connect 9 0 0 3;
@@ -154,4 +154,4 @@
 #X connect 18 0 22 0;
 #X connect 22 0 3 0;
 #X connect 22 0 3 1;
-#X coords 0 687 1 686 385 100 0;
+#X coords 0 683 1 682 385 100 0;
