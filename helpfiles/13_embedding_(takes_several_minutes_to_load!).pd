@@ -81,7 +81,7 @@ throw~ audio 5 connect 3 0 4 0 30 obj 181 25 context :a ' d ' :c 3
 :y2 2.27273;
 #X obj 2227 56 catch~ audio;
 #X obj 2227 78 dac~;
-#X obj 2305 56 receive c5-;
+#X obj 2305 56 receive c2-;
 #X obj 2305 76 route d;
 #X text 523 171 Two [content]s are used here--one for sample playback
 and the other for the level. Redraw the level curve at will using the
@@ -98,15 +98,15 @@ will put the sample in reverse., f 33;
 #X text 2387 136 Here you can see what happens when you embed one Context
 inside another: the inner one will cycle contiuously while the cursor
 is over it. Notice that the first and second Context behave slightly
-differently--c4 stops abruptly when the cursor passes its border \,
-whereas c5 comes to the end of its cycle. This is determined by the
+differently--c1 stops abruptly when the cursor passes its border \,
+whereas c2 comes to the end of its cycle. This is determined by the
 :es setting., f 43;
 #X text 2389 264 This patch also demonstrates how it is possible to
-embed an object inside an embedded object. C4 is itself embedded but
+embed an object inside an embedded object. C1 is itself embedded but
 also has a [content] inside it. Look out though--this is what makes
 the patch so slow to load. It would be more practical to host the sample
-in an external Context and then send messages from c4., f 43;
-#X text 2017 318 BUG: altering the time on c6 does work but it takes
+in an external Context and then send messages from c1., f 43;
+#X text 2017 318 BUG: altering the time on c4 does work but it takes
 a VERY long time to recalculate (as in up to two minutes). If you want
 to try it \, you should type in a new number instead of scrolling.
 , f 49;
