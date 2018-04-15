@@ -4742,32 +4742,6 @@ b b b b f f f f, f 82;
 -66577 0;
 #X obj -56 1327 cnv 13 950 1 empty \$0-datagrid legacy 18 -5 0 10 -13330
 -66577 0;
-#X obj 578 221 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
-\; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
-s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
-\$0 \; #f s \$0-:e \; #f s \$0-:f \; #f s \$0-:h \; #f is \$0 i x 4
-6 12 \; #f is \$0 j y 3 5 13 \; #f s \$0-:k \; #f s \$0-:l \; #f s
-\$0-:m \; #f s \$0-names \; #f s \$0-:o \; #f s \$0-:p \; #f s \$0-:q
-\; #f ev \$0 :r \; #f ev \$0 :s \; #f s \$0-:t \; #f ev \$0 :u \; #f
-s \$0-:v \; #f s \$0-:w \; #f os \$0 x 27 5 6 6 \; #f os \$0 y 28 3
-5 4 \; #f s \$0-:z \; #f ar \$0 A \; #f s \$0-:B \; #f s \$0-:C \;
-#f s \$0-:D \; #f dmode \$0 \; #f s \$0-:F \; #f s \$0-:G \; #f ar
-\$0 I \; #f s \$0-:J \; #f kmode \$0 \; #f ev \$0 :L \; #f ev \$0 :N
-\; #f s \$0-:O \; #f s \$0-:P \; #f s \$0-:Q \; #f s \$0-:R \; #f s
-\$0-:S \; #f s \$0-:T \; #f s \$0-:U \; #f s \$0-:V \; #f s \$0-:W
-\; #f s \$0-:Z \; #f s \$0-:ID \; #f s \$0-:ex \; #f s \$0-:se \; #f
-s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
-\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:em \;
-#f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
-\; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f s \$0-:ms \;
-#f s \$0-:pu \; #f s \$0-:sw \; #f s \$0-:on \; #f s \$0-:gc \; #f
-s \$0-:sx \; #f s \$0-:sy \; #f s \$0-:bs \; #f s \$0-:le \; #f s \$0-:ze
-\; #f ev \$0 stop \; #f ev \$0 bump \; #f ev \$0 push \; #f ev \$0
-find \; #f ev \$0 savelist \; #f ev \$0 fetch \; #f ev \$0 reset \;
-#f ev \$0 rev \; #f ev \$0 :NN \; #f ev \$0 marker \; #f ev \$0 content
-\; #f ev \$0 -menu \; #f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev
-\$0 :$ \; #f ev \$0 -delete \; #f ev \$0 loop \; #f ev \$0 -route \;
-#f ev \$0 undo \; #f ev \$0 copy \; #f ev \$0 euclid \;;
 #X obj 729 247 ctxfiles/br2 route 1 \; :g s \$0-graphic \; :X s \$0-xsize-2-in
 \; :Y s \$0-ysize-2-in \; ## \; :: s \$0-prelist2 \; :M s \$0-xym \;
 :a am \$0 pattern x :a 7 \; :b am \$0 burst y :b 8 \; :c s \$0-colours
@@ -4840,10 +4814,36 @@ tf \$0 #f \; find tf \$0 #f \; savelist tf \$0 #f \; fetch tf \$0 #f
 :ss tf \$0 #f \; :$ tf \$0 #f \; -delete tf \$0 #f \; loop tf \$0 #f
 \; -route tf \$0 #f \; undo tf \$0 #f \; copy tf \$0 #f \; euclid tf
 \$0 #f \; . t \; ## s \$0-othr;
+#X obj 578 221 ctxfiles/br2 demux 2 \; #f t \; #f t \; #f s \$0-:g
+\; #f s \$0-:X \; #f s \$0-:Y \; #f s \$0-:io \; #f ev \$0 :: \; #f
+s \$0-:M \; #f ev \$0 :a \; #f ev \$0 :b \; #f s \$0-:c \; #f delo
+\$0 \; #f s \$0-:e \; #f s \$0-:f \; #f s \$0-:h \; #f is \$0 i x 4
+6 12 5 \; #f is \$0 j y 3 5 13 4 \; #f s \$0-:k \; #f s \$0-:l \; #f
+s \$0-:m \; #f s \$0-names \; #f s \$0-:o \; #f s \$0-:p \; #f s \$0-:q
+\; #f ev \$0 :r \; #f ev \$0 :s \; #f s \$0-:t \; #f ev \$0 :u \; #f
+s \$0-:v \; #f s \$0-:w \; #f os \$0 x 27 5 6 6 \; #f os \$0 y 28 3
+5 4 \; #f s \$0-:z \; #f ar \$0 A \; #f s \$0-:B \; #f s \$0-:C \;
+#f s \$0-:D \; #f dmode \$0 \; #f s \$0-:F \; #f s \$0-:G \; #f ar
+\$0 I \; #f s \$0-:J \; #f kmode \$0 \; #f ev \$0 :L \; #f ev \$0 :N
+\; #f s \$0-:O \; #f s \$0-:P \; #f s \$0-:Q \; #f s \$0-:R \; #f s
+\$0-:S \; #f s \$0-:T \; #f s \$0-:U \; #f s \$0-:V \; #f s \$0-:W
+\; #f s \$0-:Z \; #f s \$0-:ID \; #f s \$0-:ex \; #f s \$0-:se \; #f
+s \$0-:ba \; #f s \$0-:es \; #f s \$0-:rd \; #f ar \$0 ol \; #f s \$0-:x1
+\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:em \;
+#f pr \$0 \; #f s \$0-:te \; #f s \$0-:rm \; #f s \$0-:nr \; #f s \$0-:ro
+\; #f s \$0-:il \; #f s \$0-:ln \; #f s \$0-:rt \; #f s \$0-:ms \;
+#f s \$0-:pu \; #f s \$0-:sw \; #f s \$0-:on \; #f s \$0-:gc \; #f
+s \$0-:sx \; #f s \$0-:sy \; #f s \$0-:bs \; #f s \$0-:le \; #f s \$0-:ze
+\; #f ev \$0 stop \; #f ev \$0 bump \; #f ev \$0 push \; #f ev \$0
+find \; #f ev \$0 savelist \; #f ev \$0 fetch \; #f ev \$0 reset \;
+#f ev \$0 rev \; #f ev \$0 :NN \; #f ev \$0 marker \; #f ev \$0 content
+\; #f ev \$0 -menu \; #f ev \$0 -overlay \; #f ev \$0 :ss \; #f ev
+\$0 :$ \; #f ev \$0 -delete \; #f ev \$0 loop \; #f ev \$0 -route \;
+#f ev \$0 undo \; #f ev \$0 copy \; #f ev \$0 euclid \;;
 #X connect 0 0 117 1;
-#X connect 0 1 145 1;
+#X connect 0 1 148 1;
 #X connect 1 0 117 0;
-#X connect 1 1 145 0;
+#X connect 1 1 148 0;
 #X connect 2 0 6 0;
 #X connect 2 1 4 0;
 #X connect 3 0 1 0;
@@ -4853,14 +4853,14 @@ tf \$0 #f \; find tf \$0 #f \; savelist tf \$0 #f \; fetch tf \$0 #f
 #X connect 5 0 1 1;
 #X connect 5 0 2 1;
 #X connect 6 0 7 0;
-#X connect 7 0 148 0;
+#X connect 7 0 147 0;
 #X connect 8 0 9 0;
 #X connect 9 0 3 0;
 #X connect 9 1 103 0;
 #X connect 74 0 75 0;
 #X connect 75 0 76 0;
 #X connect 77 0 3 0;
-#X connect 93 0 146 0;
+#X connect 93 0 145 0;
 #X connect 93 1 94 0;
 #X connect 94 0 95 0;
 #X connect 96 0 97 0;
@@ -5547,7 +5547,7 @@ reset immediately;
 #X connect 37 0 38 0;
 #X connect 38 0 36 1;
 #X restore 69 189 pd sendto;
-#N canvas 67 87 595 681 hold 1;
+#N canvas 67 87 595 681 hold 0;
 #X obj 108 84 inlet;
 #X obj 344 52 receive \$0-Und;
 #X obj 361 180 unpack f s;
