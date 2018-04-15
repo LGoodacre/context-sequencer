@@ -1,6 +1,6 @@
-#N canvas 77 208 949 560 10;
+#N canvas 67 208 949 560 10;
 #X obj 9 485 ctxfiles/license;
-#N canvas 184 250 824 371 grid 0;
+#N canvas 137 250 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 922 21 t b f f;
@@ -438,7 +438,6 @@ toggle-float connections ("c-numbers") instead of regular toggle floats.
 #X restore 628 494 shift keys;
 #X obj 537 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 474 315 gridcontrol :sa 0;
 #N canvas 67 87 450 209 (subpatch) 0;
 #X obj 382 171 outlet;
 #X text 36 17 Mode 0 lets you jump to a difference instance of [gridcontrol]
@@ -456,10 +455,11 @@ it by right clicking and selecting "properties". There you will be
 able to select most of the same options as listed in "creation arguments"
 \, and define the mode-2 ID list.;
 #X restore 780 494 properties;
+#X obj 476 315 gridcontrol :2f0 undo;
 #X connect 15 0 14 0;
 #X connect 16 0 13 0;
 #X connect 18 0 12 0;
 #X connect 19 0 11 0;
 #X connect 21 0 9 0;
 #X connect 22 0 10 0;
-#X connect 28 0 26 0;
+#X connect 27 0 26 0;
