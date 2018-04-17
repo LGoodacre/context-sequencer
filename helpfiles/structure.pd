@@ -62,7 +62,7 @@ been commandeered using an overlay hack to reflect the position of
 the burst toggle in its cycle. You can change the position by scrolling
 the float., f 59;
 #X text 268 386 BUG: for now \, the pattern doesn't initialize properly
-\, so you'll need to let it cycle a few times before it pays correctly.
+\, so you'll need to let it cycle a few times before it plays correctly.
 , f 26;
 #X text 23 612 NOTE: structured hierarchies only work with toggle float
 connections. Cable connections will not work.;

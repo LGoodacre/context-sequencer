@@ -52,7 +52,7 @@ clicking on the boundary, f 74;
 argument (see [creation arguments];
 #X restore 81 522 fine tuning;
 #X text 87 178 Mover is loaded in the Overlay here \, but you won't
-see it until it is activated. To activate it \, hold the Shit key down
+see it until it is activated. To activate it \, hold the Shift key down
 and move the mouse over the Context. Mover will appear as a thin line
 that follows the cursor., f 45;
 #X obj 244 34 ctxfiles/license;
