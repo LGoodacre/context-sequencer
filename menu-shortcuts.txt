@@ -1,9 +1,17 @@
 SHORTCUTS
+
 X-LIMIT
+
 Y-LIMIT
+
 X-EDIT
+
 Y-EDIT
-BURST-PRESETS
+
+BURST-PRESET
+S
 SAFETY;
+
 ;
+
 >> Edit line numbers 2-7 of this file to change the contents of the "shortcuts" folder in the Context menu. Choose your most used menu items for ease of access. Titles should correspond to the second term of the lines in "ctxfiles/helptext.txt". Use hyphens for spaces (ie. "x-length" instead of " length"). Don't use semi-colons until line number 7!;
