@@ -1,4 +1,4 @@
-#N canvas 376 81 773 687 8;
+#N canvas 329 87 773 681 8;
 #X obj 54 4 cnv 15 626 139 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 42 159 cnv 15 692 540 empty empty empty 20 12 0 14 -66577 -66577
@@ -53,7 +53,7 @@
 53 0 30 -33289 -66577 0;
 #X obj 46 -4 cnv 15 392 135 empty empty CONTEXT COMMANDS: a brief summary
 20 12 0 18 -232990 -66577 0;
-#X obj 289 358 context :d 1 :n ' ex ' :Z -1;
+#X obj 289 358 context :d 1 :n ' ex ' :Z -1 :ID 1;
 #X text 51 266 Try + - = operators for 'on only' \, 'off only' and
 'define' options., f 18;
 #X text 62 25 This patch outlines some of the most important Context
@@ -79,9 +79,6 @@ Commands.;
 -1 0;
 #X floatatom 378 201 5 0 0 0 - - -, f 5;
 #X text 377 262 define cycle time, f 10;
-#X text 63 82 Note that in these examples \, all commands are sent
-to the Context using the ID send channel c1 (see Section 6: ID AND
-CHANNELS).;
 #X floatatom 520 183 5 0 2 0 - - -, f 5;
 #X text 516 243 define cycle time mode (normal \, random \, position)
 , f 12;
@@ -101,12 +98,8 @@ CHANNELS).;
 #X text 367 539 stop numbered Context, f 13;
 #X text 369 579 stop at end of cycle, f 11;
 #X text 378 618 stop all Contexts except those listed., f 12;
-#X obj 480 426 cnv 15 168 131 empty empty ID 12 13 0 14 -97454 -1 0
-;
-#X floatatom 491 451 5 0 0 0 - - -, f 5;
-#X floatatom 565 433 5 0 2 0 - - -, f 5;
-#X text 490 512 define colour, f 7;
-#X text 566 493 define ID number, f 9;
+#X obj 480 426 cnv 15 168 131 empty empty MISC 12 13 0 14 -97454 -1
+0;
 #X msg 61 190 \; ex :x 1 2 3 4 5;
 #X msg 61 225 \; ex :y 1 2 3;
 #X msg 190 185 \; ex :i 2 3;
@@ -122,16 +115,14 @@ CHANNELS).;
 #X msg 302 538 \; ex stop 1;
 #X msg 302 578 \; ex stop *;
 #X msg 301 620 \; ex stop - 1;
-#X msg 491 472 \; ex :c \$1;
-#X msg 565 455 \; ex :ID \$1;
 #X text 449 195 use the * + - / operators to modify the cycle time
 , f 9;
-#X obj 551 323 cnv 15 156 88 empty empty MISC 12 12 0 14 -97454 -1
-0;
-#X msg 560 347 \; ex :pr;
-#X msg 627 329 \; ex find ex;
-#X text 554 380 print the Context state, f 13;
-#X text 638 359 find a toggle or ID float, f 9;
+#X obj 551 323 cnv 15 156 88 empty empty ID 12 12 0 14 -97454 -1 0
+;
+#X msg 596 440 \; ex :pr;
+#X msg 576 484 \; ex find ex;
+#X text 538 437 print the Context state, f 9;
+#X text 512 480 find a toggle or ID float, f 9;
 #X obj 116 529 cnv 15 156 100 empty empty DIMENSION 12 12 0 14 -97454
 -1 0;
 #X floatatom 132 553 5 1 5 0 - - -, f 5;
@@ -143,10 +134,21 @@ CHANNELS).;
 #X msg 71 478 \; ex :b -open;
 #X msg 256 185 \; ex :j c4 c5 c6;
 #X obj 689 86 ctxfiles/license;
-#X connect 42 0 70 0;
-#X connect 45 0 71 0;
-#X connect 48 0 72 0;
-#X connect 61 0 80 0;
-#X connect 62 0 81 0;
-#X connect 89 0 90 0;
-#X connect 91 0 92 0;
+#X floatatom 585 333 5 0 0 0 - - -, f 5;
+#X floatatom 646 332 5 0 2 0 - - -, f 5;
+#X text 567 381 define colour, f 7;
+#X text 643 384 define ID number, f 9;
+#X msg 585 355 \; ex :c \$1;
+#X msg 646 354 \; ex :ID \$1;
+#X text 63 82 Note that in these examples \, all commands are sent
+to the Context using the ID send channel 'ex' (see Section 6: ID AND
+CHANNELS).;
+#X msg 560 524 \; ex --help start;
+#X text 484 520 print help message for any command, f 14;
+#X connect 42 0 65 0;
+#X connect 44 0 66 0;
+#X connect 47 0 67 0;
+#X connect 82 0 83 0;
+#X connect 84 0 85 0;
+#X connect 91 0 95 0;
+#X connect 92 0 96 0;
