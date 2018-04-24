@@ -1,4 +1,4 @@
-#N canvas 79 180 415 567 10;
+#N canvas 144 177 415 567 10;
 #X obj 33 22 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 27 16 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
@@ -40,20 +40,27 @@ key if you plan on using the '$' variable.;
 #X text 63 401 1: Press and hold the x key \; 3: Press a number key
 \; 4: Release the letter key and watch x-axis toggles \; 5: Repeat
 with the y and d keys;
-#N canvas 67 87 450 300 (subpatch) 0;
+#N canvas 301 157 439 456 (subpatch) 0;
 #X text 33 20 Keylist sends its commands only when the key is released.
 This is to allow for double-digit number input. You can see this in
 th example if you press the keys 'd 1 0'. You will get ':d 10' when
 you releast the 'd' key.;
+#X text 41 369 If you want to cancel the message after you have already
+started typing \, you can press the Escape key.;
 #X text 33 96 By default \, [keylist] will only work if you have the
 mouse hovering over Context. This is to allow more than one Context
 to share the same key bindings--you can then send commands to a specific
-Context by holding the mouse over it and typing. However \, this feature
-is turned off if this helpfile \, so that the example is more clear.
-To turn off mouse activation \, use the '**' creation flag (see [creation
-arguments].;
-#X text 31 216 If you want to cancel the message after you have already
-started typing \, you can press the Escape key.;
+Context by holding the mouse over it and typing. You can test this
+below--hold the mouse over one Context and type "x 2" \, then hold
+it over the other and try the same thing. Notice \, however \, that
+the this setting is switched off in the example in the main window
+of this help patch \, so whatever you type here will affect that Context
+too. (To turn off mouse activation \, use the '**' creation flag (see
+[creation arguments].);
+#X obj 75 277 context :H 8 :c 6 :ID 2 :ol 1 7 obj 142 15 keylist x
+:x %;
+#X obj 213 277 context :H 12 :c 6 :z 10 :Z 13 :ID 3 :ol 1 7 obj 142
+15 keylist x :x %;
 #X restore 164 514 notes;
 #X text 246 171 [keylist] is an Overlay abstraction. There are three
 [keylist] obects in the Overlay here. Right click and 'open' to see
