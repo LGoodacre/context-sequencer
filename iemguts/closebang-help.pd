@@ -1,0 +1,9 @@
+#N canvas 612 413 505 298 10;
+#X obj 28 38 closebang;
+#X text 108 39 emits a bang when an abstraction is deleted.;
+#X text 41 126 [closebang] notifies you when an abstraction is about
+to be deleted \, so you can:;
+#X text 52 162 - cleanup ressources;
+#X text 52 177 - keep track of instances (PUSH);
+#X text 52 193 - say goodbye;
+#X text 24 240 note: [closebang] requires Pd>=0.47;

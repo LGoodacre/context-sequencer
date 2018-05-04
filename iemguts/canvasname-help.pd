@@ -1,0 +1,53 @@
+#N canvas 53 49 609 519 10;
+#X msg 40 132 bang;
+#X symbolatom 29 73 10 0 0 0 - - -, f 10;
+#X obj 29 184 canvasname-abs;
+#X obj 21 14 canvasname;
+#X msg 29 265 bang;
+#X symbolatom 67 310 10 0 0 0 - - -, f 10;
+#X text 100 14 query and modify the name of a canvas;
+#X obj 29 217 print canvasname;
+#X text 109 69 change the name of the canvas initially named 'canvasname-abs'.
+When the patch is saved \, the new name for the canvas is saved with
+the patch. This is a good way to break patches!;
+#N canvas 616 405 145 217 subpatch 0;
+#X obj 28 25 inlet;
+#X obj 28 85 canvasname;
+#X obj 28 169 outlet;
+#X obj 95 122 outlet;
+#X symbolatom 91 46 10 0 0 0 - - -, f 10;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 4 0 1 1;
+#X restore 29 338 pd subpatch;
+#X text 74 261 This even works for subpatches \, though only the 'pd'
+part can be modifed. This way you can have subpatches whose names start
+with something different than 'pd'.;
+#X text 140 310 1 change the name;
+#X text 140 328 2 save a copy of this patch;
+#X text 140 347 3 reopen the copy to inspect the modification;
+#X text 30 415 NOTE:;
+#X text 76 132 <- get the current canvas name;
+#X text 30 432 To change the arguments of an abstraction \, use [canvasargs].
+;
+#X obj 29 364 print pd-subpatch;
+#X obj 159 217 print canvas-displayname;
+#X obj 159 364 print pd-displayname;
+#X text 173 173 the 2nd outlet gives the name as displayed in the window-title.
+;
+#X text 270 152 sets the displayed name (does not get saved);
+#X msg 175 152 symbol muff;
+#X text 30 455 NOTE:;
+#X text 30 472 Changing the displayed name (2nd inlet) will only update
+the window-title when the window is re-created. Also this is purely
+cosmetic (and won't get saved!);
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 7 0;
+#X connect 2 1 18 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 9 0 17 0;
+#X connect 9 1 19 0;
+#X connect 22 0 2 1;

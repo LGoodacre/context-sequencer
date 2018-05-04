@@ -1,0 +1,40 @@
+#N canvas 541 256 656 407 10;
+#X obj 24 47 initbang;
+#X text 100 41 emits a bang right after the abstraction got loaded
+(and *before* the parent patch continues to load);
+#X floatatom 64 206 5 0 0 0 - - -, f 5;
+#X obj 124 207 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
+#X obj 403 199 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
+-1 -1 0;
+#X obj 308 277 print B1;
+#X obj 308 299 print B2;
+#X obj 373 277 print B3;
+#X obj 373 299 print B4;
+#X floatatom 64 263 5 0 0 0 - - -, f 5;
+#X floatatom 124 263 5 0 0 0 - - -, f 5;
+#X text 59 327 note: [initbang] will *not* trigger in [subpatches]
+;
+#X text 76 88 this makes it possible to create abstractions with variable
+iolets (something that is not possible with [loadbang]).;
+#X obj 308 225 ib_demux 4 1;
+#X obj 64 241 ib_demux 2;
+#X floatatom 308 177 5 0 0 0 - - -, f 5;
+#X msg 308 199 foo bar \$1;
+#X text 40 134 [ib_demux] is an abstraction. the number of outlets is
+given as the 1st argument! (2nd argument is the initially selected
+outlet);
+#X text 59 348 note2: if you are running an older version of Pd \,
+the [ib_demux] objects might not have outlets due to [initbang] not
+working properly.;
+#X connect 2 0 14 0;
+#X connect 3 0 14 1;
+#X connect 4 0 13 1;
+#X connect 13 0 5 0;
+#X connect 13 1 6 0;
+#X connect 13 2 7 0;
+#X connect 13 3 8 0;
+#X connect 14 0 9 0;
+#X connect 14 1 10 0;
+#X connect 15 0 16 0;
+#X connect 16 0 13 0;
