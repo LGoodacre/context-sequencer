@@ -1,4 +1,5 @@
-#N canvas 384 247 489 373 10;
+#N canvas 364 231 489 373 10;
+#X declare -path ../;
 #X obj 20 19 cnv 15 202 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 15 14 cnv 15 202 42 empty empty empty 20 12 0 14 -1 -66577 0
@@ -69,7 +70,7 @@ The symbol box will be highlighted and you can type in textual input.
 #X text 63 415 In adition \, every menu page has a help button at the
 bottom which will print information about the settings displayed on
 the current screen. Use it!;
-#N canvas 67 87 450 109 shortcuts 0;
+#N canvas 67 87 450 109 (subpatch) 0;
 #X text 52 28 The home menu-screen has a "shortcuts" sub-menu. You
 can personalize these shortcuts by editing the file 'menu-shortcuts.txt'
 ;
@@ -199,3 +200,4 @@ in its overlay \, binding the :X command to the 'x' key. To see what
 it doesn \, hold down the 'x' key \, then type in a number (before
 letting go of 'x').;
 #X restore 286 293 pd keylist object;
+#X obj 241 -6 declare -path ../;

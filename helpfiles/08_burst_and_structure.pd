@@ -1,4 +1,5 @@
-#N canvas 65 85 1301 687 8;
+#N canvas 67 87 1299 681 8;
+#X declare -path ../;
 #X obj 421 24 cnv 15 420 58 empty empty empty 20 21 2 37 -99865 -228856
 0;
 #X obj 416 18 cnv 15 420 58 empty empty empty 20 21 2 37 -1 -228856
@@ -102,6 +103,7 @@ and RANDOM) to control their behahiour.;
 #X text 19 112 *;
 #X text 19 148 *;
 #X obj -25 628 ctxfiles/license;
+#X obj -25 609 declare -path ../;
 #X connect 9 0 10 4;
 #X connect 9 1 11 2;
 #X connect 9 2 27 1;

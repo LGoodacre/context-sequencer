@@ -1,11 +1,12 @@
-#N canvas 355 277 875 455 10;
+#N canvas 335 261 875 455 10;
+#X declare -path ../;
 #X obj 19 21 cnv 15 402 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 14 16 cnv 15 402 52 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 15 17 cnv 15 400 50 empty empty a guide to creating state-saving abstractions
 10 22 1 19 -121638 -1 0;
-#X obj 648 13 ctxfiles/license;
+#X obj 650 4 ctxfiles/license;
 #X text 38 207 STEPS TO CREATING STATE-SAVING ABSTRACTIONS:;
 #X text 461 62 SEE ALSO:;
 #X obj 442 80 pddp/pddplink ../psave-help.pd;
@@ -56,3 +57,4 @@ and [sketch-grip]. A state-saving abstraction is an abstraction which
 saves user-defined parameters in the abstraction itself \, to be re-loaded
 when the patch is opened. This is traditionally a hard problem in PD
 \, but is rendered very easy with the help of these objects.;
+#X obj 650 64 declare -path ../;

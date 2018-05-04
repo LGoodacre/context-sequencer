@@ -1,4 +1,5 @@
-#N canvas 373 207 723 429 10;
+#N canvas 363 199 723 429 10;
+#X declare -path ../;
 #N canvas 132 138 450 271 and 0;
 #X text 14 25 To start Context \, simply double click in the green
 area in middle of any Context.;
@@ -175,3 +176,4 @@ greatly speed up working with Context. Click on the boxes on the left
 to learn about the different ways to use the mouse and keyboard with
 Context \, and use the context unit on the right to practice.;
 #X obj 28 25 ctxfiles/license;
+#X obj 28 3 declare -path ../;

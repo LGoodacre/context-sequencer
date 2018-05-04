@@ -1,5 +1,6 @@
-#N canvas 67 85 1299 683 8;
+#N canvas 67 87 1299 681 8;
 #X declare -lib zexy -path zexy;
+#X declare -path ../;
 #X obj -77 -69 cnv 15 2203 1678 empty empty empty 20 12 0 14 -70489
 -66577 0;
 #X obj 9 6 cnv 15 1090 85 empty empty empty 20 12 0 14 -128992 -66577
@@ -283,6 +284,7 @@ will center around the same point., f 76;
 \, giving a randomized toggle position a "drunken walk". If the :P
 value is a non-integer then the mean does not reset \, so the variations
 will center around the same point., f 76;
+#X obj 1107 7 declare -path ../;
 #X connect 6 0 12 0;
 #X connect 13 0 14 0;
 #X connect 15 0 22 0;

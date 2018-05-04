@@ -1,7 +1,8 @@
-#N struct 32056-big2 float x float y array 32056-array2 ^&*-dsmall2
+#N struct 50369-big2 float x float y array 50369-array2 ^&*-dsmall2
 ;
-#N struct ^&*-dsmall2 float x float y;
-#N canvas 347 260 911 583 10;
+#N struct ^&*-dsmall2 float x float y symbol onoff;
+#N canvas 327 177 911 583 10;
+#X declare -path ../;
 #X obj 594 414 sketch point2 0 1 0.500001 0.348577 1 0.96412 :name
 hanning;
 #X obj 758 411 catch~ granular;
@@ -107,6 +108,7 @@ to create complex granular systems., f 51;
 #X obj 595 152 openpanel;
 #X msg 595 174 read -resize \$1 sample;
 #X msg 657 152 symbol wavs/loop.wav;
+#X obj 680 75 declare -path ../;
 #X connect 1 0 10 0;
 #X connect 4 0 5 0;
 #X connect 6 0 7 0;

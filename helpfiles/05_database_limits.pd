@@ -1,5 +1,6 @@
-#N canvas 332 336 794 413 10;
+#N canvas 302 312 794 413 10;
 #X declare -lib zexy -path zexy;
+#X declare -path ../;
 #X obj 22 89 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 12 79 cnv 15 706 271 empty empty empty 20 12 0 14 -1 -66577
@@ -32,7 +33,7 @@
 and then try it again!, f 79;
 #X text 499 277 Note how the last toggle is not effected by the limit.
 , f 27;
-#N canvas 160 206 450 300 using 0;
+#N canvas 160 206 450 300 the 0;
 #X text 39 130 To edit \, click on the symbol atom \, type your new
 text \, and press return. Make sure you know which line you're viewing
 before you edit! It's usually a good idea to use the scroll keys first
@@ -94,7 +95,8 @@ down the Shift key.;
 #X text 23 99 Alter :e and :f here. Look at the toggle colour to see
 the database limits., f 35;
 #X text 18 57 Refer to Section 9: DATABASE LIMITS;
-#X obj 460 11 ctxfiles/license;
+#X obj 461 2 ctxfiles/license;
+#X obj 461 59 declare -path ../;
 #X connect 7 0 21 0;
 #X connect 8 0 21 1;
 #X connect 9 0 23 0;

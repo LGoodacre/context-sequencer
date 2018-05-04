@@ -1,4 +1,5 @@
-#N canvas 327 85 640 687 10;
+#N canvas 307 89 640 679 10;
+#X declare -path ../;
 #X obj 61 350 cnv 15 293 283 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 327 101 cnv 15 217 210 empty empty empty 20 12 0 14 -99865 -66577
@@ -22,19 +23,19 @@
 #X obj 189 22 cnv 15 244 37 empty empty empty 20 15 2 18 -1 -1 0;
 #X obj 190 23 cnv 15 242 35 empty empty feedback types 10 17 0 27
 -4032 -1 0;
-#X obj 91 182 context :M 1 :d 1 :x = 5;
+#X obj 91 182 context :M 1 :d 1 :x = 5 :ID 1;
 #X obj 186 200 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 381 172 context :M 1 :d 1 :h 1 :x = 1 2 3 :R 100;
+#X obj 381 172 context :M 1 :d 1 :h 1 :x = 3 2 1 :R 100 :ID 2;
 #X obj 348 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 75 150 start;
 #X msg 118 150 stop;
 #X msg 355 140 start;
 #X msg 408 140 stop;
-#X obj 178 414 context :M 1 :d 1 :x = 1;
-#X obj 178 483 context :M 1 :d 1 :x = 1;
-#X obj 75 453 context :M 1 :d 1 :x = 5;
+#X obj 178 414 context :M 1 :d 1 :x = 1 :ID 3;
+#X obj 178 483 context :M 1 :d 1 :x = 1 :ID 4;
+#X obj 75 453 context :M 1 :d 1 :x = 5 :ID 5;
 #X msg 158 386 start;
 #X msg 205 386 stop context;
 #X text 37 253 This will continue until you tell it to stop., f 30
@@ -49,6 +50,7 @@ stop it \, click and hold. Try this out on any of the Contexts here.
 , f 33;
 #X text 221 68 Refer to Manual Section 3: FEEDBACK;
 #X obj 390 511 ctxfiles/license;
+#X obj 390 571 declare -path ../;
 #X connect 12 4 13 0;
 #X connect 13 0 12 4;
 #X connect 14 0 15 0;

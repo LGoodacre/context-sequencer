@@ -1,4 +1,5 @@
-#N canvas 193 81 1109 687 10;
+#N canvas 67 87 1299 681 10;
+#X declare -path ../;
 #X obj 617 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
 #X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -107,4 +108,5 @@ consequence reads \, " c* < c5 :d 0 [ > x . ] ". This means \, "continue
 with the original message (c*) \, then send the following message (<)
 to c5: the cycle time (:d) with an argument equal to the number of
 terms in ( 0 ] ) the :x ( > x . ) term.", f 55;
+#X obj 502 27 declare -path ../;
 #X connect 21 0 22 0;

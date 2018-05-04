@@ -1,4 +1,5 @@
-#N canvas 329 87 773 681 8;
+#N canvas 319 89 773 679 8;
+#X declare -path ../;
 #X obj 54 4 cnv 15 626 139 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 42 159 cnv 15 692 540 empty empty empty 20 12 0 14 -66577 -66577
@@ -145,6 +146,7 @@ to the Context using the ID send channel 'ex' (see Section 6: ID AND
 CHANNELS).;
 #X msg 560 524 \; ex --help start;
 #X text 484 520 print help message for any command, f 14;
+#X obj 689 67 declare -path ../;
 #X connect 42 0 65 0;
 #X connect 44 0 66 0;
 #X connect 47 0 67 0;

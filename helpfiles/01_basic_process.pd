@@ -1,4 +1,5 @@
-#N canvas 145 269 893 420 10;
+#N canvas 125 253 893 420 10;
+#X declare -path ../;
 #X obj 87 102 cnv 15 685 248 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 77 92 cnv 15 685 248 empty empty empty 20 12 0 14 -1 -66577
@@ -23,13 +24,14 @@ and hits the toggles at the bottom in sequential order.;
 #X obj 265 303 dac~;
 #X msg 255 107 start;
 #X msg 285 128 stop;
-#X obj 265 156 context :a ' 440 ' :d 1 :m 1 :x = 1 2 4 5 :S <o;
+#X obj 265 156 context :a ' 440 ' :d 1 :x = 5 4 2 1 :S <o :ID 1;
 #X text 321 118 Press to start and stop;
 #X text 98 135 The cycle takes 1 second and sends the message '440'
 ---->, f 23;
 #X text 292 245 these connections direct the message towards the PD
 object, f 63;
 #X obj 265 281 docfiles/glock~ 0.3;
+#X obj 777 332 declare -path ../;
 #X connect 3 0 15 4;
 #X connect 13 0 15 0;
 #X connect 14 0 15 1;

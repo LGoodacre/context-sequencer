@@ -1,4 +1,5 @@
-#N canvas 345 93 911 687 10;
+#N canvas 335 89 911 679 10;
+#X declare -path ../;
 #X obj -203 180 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -193 180 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -147,6 +148,7 @@ Section 14: overlay., f 17;
 #X obj 234 22 cnv 15 350 60 empty empty GUI interpretation 20 26 2
 38 -47022 -1 0;
 #X obj 613 28 ctxfiles/license;
+#X obj 613 6 declare -path ../;
 #X connect 37 0 56 0;
 #X connect 38 0 61 0;
 #X connect 40 0 69 0;

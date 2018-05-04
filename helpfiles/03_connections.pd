@@ -1,4 +1,5 @@
-#N canvas 305 164 800 440 10;
+#N canvas 285 148 800 440 10;
+#X declare -path ../;
 #X obj 375 95 cnv 15 272 231 empty empty empty 20 12 0 15 -99865 -1
 0;
 #X obj 365 85 cnv 15 272 231 empty empty empty 20 12 0 15 -1 -1 0;
@@ -27,10 +28,10 @@ how the toggle floats correspond to the ID numbers., f 38;
 #X text 357 374 Note that float-connected toggles can still be cable-connected!
 Try connecting the toggle labeled c4 or c3 to one of the green contexts
 to see.;
-#X obj 114 168 context :d 1 :m 1 :x = 5 :ex ' clear ';
-#X obj 206 169 context :d 1 :x = 5;
-#X obj 421 168 context :c 4 :d 1 :i 0 0 0 0 4.5 :x = 5;
-#X obj 551 169 context :c 4 :d 1 :i 0 0 0 0 3.5 :x = 5;
+#X obj 114 168 context :d 1 :x = 5 :ID 1 :ex ' clear ';
+#X obj 206 169 context :d 1 :x = 5 :ID 2;
+#X obj 421 168 context :c 4 :d 1 :i 0 0 0 0 4.5 :x = 5 :ID 3;
+#X obj 551 169 context :c 4 :d 1 :i 0 0 0 0 3.5 :x = 5 :ID 4;
 #X msg 127 139 stop context;
 #X msg 434 131 stop context;
 #X obj 518 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
@@ -41,6 +42,7 @@ to see.;
 #X obj 70 351 ctxfiles/license;
 #X text 357 338 To access float-connect \, click on any toggle and
 scroll up while holding the mouse down.;
+#X obj 70 411 declare -path ../;
 #X connect 9 0 16 0;
 #X connect 10 0 18 0;
 #X connect 16 4 17 0;

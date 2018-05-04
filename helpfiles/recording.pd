@@ -1,4 +1,5 @@
-#N canvas 279 344 810 413 10;
+#N canvas 259 328 810 413 10;
+#X declare -path ../;
 #X obj 22 89 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 12 79 cnv 15 706 271 empty empty empty 20 12 0 14 -1 -66577
@@ -25,7 +26,7 @@ of the record function. See the various sub-patches (and click on the
 various messages to try them out)., f 40;
 #X obj 38 230 receive c1-;
 #X obj 38 252 print c1;
-#N canvas 555 187 505 300 recordable 0;
+#N canvas 555 187 505 300 messages 0;
 #X text 9 25 Once the recording cycle has been started \, what messages
 are recorded? There are three options here:;
 #X text 55 76 -- a message starting with ":r" or "record" will open
@@ -43,7 +44,7 @@ database., f 50;
 #X connect 5 0 7 0;
 #X connect 6 0 7 0;
 #X restore 413 287 recordable messages;
-#N canvas 65 97 471 300 first 0;
+#N canvas 65 97 471 300 argument 0;
 #X obj 129 260 outlet;
 #X msg 103 203 :r 0;
 #X msg 23 78 :r 1;
@@ -59,7 +60,7 @@ with the next input Context receives., f 36;
 #X connect 2 0 0 0;
 #X connect 4 0 0 0;
 #X restore 159 195 first argument (trigger);
-#N canvas 65 117 729 358 second 0;
+#N canvas 65 117 729 358 argument 0;
 #X obj 169 290 outlet;
 #X text 25 16 The second argument specifies where the recording source
 will come from. This can be "inlet" \, "c" \, or a custom symbol The
@@ -84,7 +85,7 @@ this up with ID tags., f 58;
 #X connect 4 0 0 0;
 #X connect 6 0 0 0;
 #X restore 180 215 second argument (source);
-#N canvas 383 155 560 300 third 0;
+#N canvas 383 155 560 300 argument 0;
 #X obj 129 260 outlet;
 #X msg 23 78 :r 1 inlets 100;
 #X msg 60 135 :r 1 inlets 300;
@@ -102,7 +103,7 @@ inlet up to 300ms after the first inlet is passed., f 54;
 #X connect 2 0 0 0;
 #X connect 7 0 0 0;
 #X restore 200 235 third argument (delay);
-#N canvas 643 156 560 361 fourth 0;
+#N canvas 643 156 560 361 argument 0;
 #X obj 177 264 outlet;
 #X text 16 14 The fourth argument is a number 0 1 2 or 3 (default 0).
 This determines what information is sent to the output channels between
@@ -136,6 +137,7 @@ crash if it comes back to the recording inlets!;
 #X connect 13 0 16 0;
 #X connect 16 0 0 0;
 #X restore 220 255 fourth argument (output);
+#X obj 398 13 declare -path ../;
 #X connect 8 0 7 2;
 #X connect 11 0 12 0;
 #X connect 13 0 7 7;

@@ -1,4 +1,5 @@
-#N canvas 265 138 971 500 10;
+#N canvas 255 130 971 500 10;
+#X declare -path ../;
 #X obj 238 474 dac~;
 #X obj 47 351 context :H 16 :X 17 :Y 6 :io o :d 9 :Z 4 :ID 1 :ol 1
 20 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 9 :y1 4.05 :y2
@@ -56,6 +57,7 @@ control over Context's cycle., f 46;
 #X text 618 173 stop contexts with "mytag" tag;
 #X msg 589 222 \; mytag stop - 2;
 #X text 681 235 stop all contexts in "mytag" apart from c2;
+#X obj 742 417 declare -path ../;
 #X connect 1 17 0 0;
 #X connect 1 17 0 1;
 #X connect 3 0 1 0;

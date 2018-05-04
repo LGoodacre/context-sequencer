@@ -1,4 +1,5 @@
-#N canvas 65 251 1301 458 10;
+#N canvas 67 243 1299 458 10;
+#X declare -path ../;
 #X obj 27 12 cnv 15 394 49 empty empty empty 13 21 0 30 -99865 -261234
 0;
 #X obj 20 5 cnv 15 394 49 empty empty empty 13 21 0 30 -1 -261234 0
@@ -139,6 +140,7 @@ the markers with [mover] the same way as the previous example., f
 #X text 1165 153 This patch has the [mover] object in the overlay \,
 so the samples can be moved easily around the canvas. To use [mover]:
 , f 48;
+#X obj 880 12 declare -path ../;
 #X connect 15 9 18 0;
 #X connect 15 10 18 1;
 #X connect 17 5 16 0;

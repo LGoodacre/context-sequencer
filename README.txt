@@ -143,6 +143,8 @@ cyclone/zl
 
 else/break
 
+else/dir
+
 else/fromany
 
 else/order

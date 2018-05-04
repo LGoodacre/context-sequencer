@@ -1,4 +1,5 @@
-#N canvas 114 245 1147 400 10;
+#N canvas 94 229 1147 400 10;
+#X declare -path ../;
 #X obj 36 75 cnv 15 609 294 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 26 65 cnv 15 609 294 empty empty empty 20 12 0 14 -1 -66577
@@ -56,13 +57,14 @@
 -1 -1;
 #X obj 469 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 73 183 context :X 9 :d 2 :m 1 :n ' moose newt ' :x = 1 :Z 12
+#X obj 73 183 context :X 9 :d 2 :n ' moose newt ' :x = 1 :Z 12 :ID
+1 :ex ' clear ';
+#X obj 211 183 context :X 9 :d 2 :n ' newt sparrow ' :x = 3 :Z 11 :ID
+2;
+#X obj 348 183 context :X 9 :d 2 :n ' ant newt ' :x = 5 :Z 14 :ID 3
 :ex ' clear ';
-#X obj 211 183 context :X 9 :d 2 :n ' newt sparrow ' :x = 3 :Z 11;
-#X obj 348 183 context :X 9 :d 2 :m 1 :n ' ant newt ' :x = 5 :Z 14
-:ex ' clear ';
-#X obj 490 183 context :X 9 :d 2 :m 1 :n ' moose sparrow ' :x = 7 :Z
-12 :ex ' clear ';
+#X obj 490 183 context :X 9 :d 2 :n ' moose sparrow ' :x = 7 :Z 12
+:ID 4 :ex ' clear ';
 #X obj 469 126 send context;
 #X obj 469 292 receive context-;
 #X msg 766 259 \; context stop;
@@ -78,6 +80,7 @@ and watch the output at the bottom., f 80;
 ie:, f 52;
 #X text 29 48 Refer to Manual section 7: ID AND CHANNELS;
 #X obj 860 321 ctxfiles/license;
+#X obj 860 381 declare -path ../;
 #X connect 15 0 16 0;
 #X connect 18 0 17 0;
 #X connect 20 0 19 0;

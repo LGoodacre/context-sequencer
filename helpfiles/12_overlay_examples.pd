@@ -1,4 +1,5 @@
-#N canvas 65 89 1301 687 10;
+#N canvas 67 87 1299 681 10;
+#X declare -path ../;
 #X obj 618 210 cnv 15 524 371 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 608 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -146,6 +147,7 @@ is accessible and savable from within the parent patch (see manual
 section 13). Most of Context's internal settings are routed through
 the overlay and can be "hacked". This patch demonstrates some possibilities
 for how to use the overlay. Refer to Manual Section 12, f 68;
+#X obj -78 113 declare -path ../;
 #X connect 11 9 48 0;
 #X connect 11 9 48 1;
 #X connect 25 0 27 0;

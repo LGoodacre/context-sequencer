@@ -1,4 +1,5 @@
 #N canvas 67 311 450 355 10;
+#X declare -path ../;
 #N canvas 326 297 605 359 params 0;
 #X obj 85 65 receive paraquery";
 #X obj 85 87 unpack;
@@ -1093,5 +1094,6 @@ term, f 30;
 #X connect 98 0 49 0;
 #X connect 100 0 53 0;
 #X restore 93 316 pd help;
+#X obj 300 140 declare -path ../;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;

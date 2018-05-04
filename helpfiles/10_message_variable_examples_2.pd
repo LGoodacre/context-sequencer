@@ -1,4 +1,5 @@
-#N canvas 67 85 1299 683 8;
+#N canvas 67 87 1299 681 8;
+#X declare -path ../;
 #X obj 53 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
 #X obj 44 200 cnv 15 524 371 empty empty empty 20 12 0 14 -1 -66577
@@ -177,6 +178,7 @@ as a command. The period directs the message towards the Context's
 own input \, while ' "x def ' (the same as ' :x = ') makes the numbers
 define the x-axis toggles. The result is that c7 steals its pattern
 toggle settings from c6., f 77;
+#X obj -103 123 declare -path ../;
 #X connect 25 0 35 0;
 #X connect 27 0 26 0;
 #X connect 27 0 26 1;

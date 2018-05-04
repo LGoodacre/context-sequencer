@@ -1,4 +1,5 @@
-#N canvas 203 151 514 388 10;
+#N canvas 193 143 514 388 10;
+#X declare -path ../;
 #X obj 179 105 array define %&nou;
 #N canvas 707 242 430 174 ^&*-dsmall1 0;
 #X text 336 48 0 -5 \; 0 5 \; 10 5 \; 10 -5;
@@ -86,6 +87,7 @@ f 76;
 #X connect 9 0 1 0;
 #X restore 389 176 pd key;
 #X obj 401 249 receive cushare;
+#X obj 222 74 declare -path ../;
 #X connect 3 0 4 0;
 #X connect 5 0 3 0;
 #X connect 5 0 6 0;
