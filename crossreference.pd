@@ -115,7 +115,7 @@ if no response;
 #X obj 580 363 t l b;
 #X obj 373 363 t l b;
 #X obj 99 50 ctxfiles/license;
-#X obj 99 113 declare -lib zexy -path zexy;
+#X obj 99 113 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 83 0;
 #X connect 1 0 60 0;
 #X connect 3 0 8 0;

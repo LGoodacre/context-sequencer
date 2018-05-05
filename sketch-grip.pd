@@ -66,7 +66,7 @@
 #X obj 155 50 t b b b;
 #X obj 210 6 receive \$1-plb;
 #X obj 449 105 ctxfiles/license;
-#X obj 449 168 declare -lib zexy -path zexy;
+#X obj 449 168 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 1 1;
 #X connect 2 0 34 0;
 #X connect 3 0 1 0;

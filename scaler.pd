@@ -181,7 +181,7 @@
 #X obj 289 50 makefilename %s-allscales;
 #X obj 289 72 iemguts/oreceive \$0n;
 #X obj 232 261 receive \$0-scalebong;
-#X obj 292 485 declare -lib zexy -path zexy;
+#X obj 292 485 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 36 0;
 #X connect 1 0 11 0;
 #X connect 2 0 32 0;

@@ -332,7 +332,7 @@
 #X connect 89 0 3 0;
 #X restore -384 132 pd canvas;
 #X obj -233 -20 namecanvas \$0-maincanvas;
-#X obj -233 -43 declare -lib zexy -stdlib zexy;
+#X obj -233 -43 declare -lib zexy -stdlib zexy -path ./;
 #N canvas 466 163 708 471 inlets 0;
 #X obj 165 110 -;
 #X obj 165 132 until;

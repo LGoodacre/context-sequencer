@@ -6948,7 +6948,7 @@ back \, then push again.;
 #X connect 27 3 13 0;
 #X connect 28 0 12 1;
 #X restore 551 519 pd euclid;
-#X obj 561 6 declare -lib zexy -path zexy;
+#X obj 561 6 declare -lib zexy -path zexy -path ./;
 #X connect 22 0 23 0;
 #X connect 82 0 83 0;
 #X restore 20 100 pd guts;

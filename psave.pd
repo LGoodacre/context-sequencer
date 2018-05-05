@@ -52,7 +52,7 @@ Then send to first term and reset., f 31;
 #X obj 597 190 send;
 #X obj 624 146 makefilename %d-imrite;
 #X obj 435 10 ctxfiles/license;
-#X obj 435 73 declare -lib zexy -path zexy;
+#X obj 435 73 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 1 0;
 #X connect 1 0 19 0;
 #X connect 3 0 5 0;

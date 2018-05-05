@@ -3240,7 +3240,7 @@ colors;
 #X connect 44 3 35 0;
 #X connect 44 4 16 0;
 #X restore 430 259 pd color;
-#X obj 334 65 declare -lib zexy -path zexy;
+#X obj 334 65 declare -lib zexy -path zexy -path ./;
 #X connect 1 0 2 0;
 #X connect 27 0 26 0;
 #X connect 28 0 27 0;

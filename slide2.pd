@@ -101,7 +101,7 @@
 #X obj 756 475 demux;
 #X obj 783 497 max 1;
 #X obj 355 387 ctxfiles/license;
-#X obj 355 450 declare -lib zexy -path zexy;
+#X obj 355 450 declare -lib zexy -path zexy -path ./;
 #X connect 2 0 30 0;
 #X connect 2 0 34 0;
 #X connect 2 0 50 0;

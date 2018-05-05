@@ -66,7 +66,7 @@
 #X obj 17 155 ctxfiles/dvs \$0 cbeep;
 #X obj 547 483 ctxfiles/dvs \$0 undone2;
 #X obj 457 18 ctxfiles/license;
-#X obj 457 81 declare -lib zexy -path zexy;
+#X obj 457 81 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 23 0;
 #X connect 0 1 24 0;
 #X connect 0 2 4 0;

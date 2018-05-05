@@ -39,7 +39,7 @@
 #X obj 196 131 route Shift_L Shift_R Control_L Control_R Meta_L Meta_R
 ;
 #X obj 398 192 ctxfiles/license;
-#X obj 398 255 declare -lib zexy -path zexy;
+#X obj 398 255 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 1 0;
 #X connect 1 1 2 0;
 #X connect 2 0 36 0;

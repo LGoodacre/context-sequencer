@@ -45,7 +45,7 @@
 #X obj 434 -1 ctxfiles/license;
 #X obj 299 619 ctxfiles/dvs \$0 notsafe;
 #X obj 106 97 ctxfiles/dvr \$0 mouseone;
-#X obj 434 65 declare -lib zexy -path zexy;
+#X obj 434 65 declare -lib zexy -path zexy -path ./;
 #X obj 134 214 t b b b;
 #X obj 320 559 t a a;
 #X obj 76 214 t b b;

@@ -47,7 +47,7 @@ and send then try again with the mode4 message \, unless I recive a
 #X obj 168 55 moses 10;
 #X msg 125 79 label_pos 3 8 \, label_font 0 9;
 #X obj 331 460 ctxfiles/license;
-#X obj 331 523 declare -lib zexy -path zexy;
+#X obj 331 523 declare -lib zexy -path zexy -path ./;
 #X connect 1 0 2 0;
 #X connect 2 0 4 0;
 #X connect 3 0 7 0;

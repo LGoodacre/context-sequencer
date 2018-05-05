@@ -1175,7 +1175,7 @@ context) if not.;
 #X text 330 -92 save commands to creation arguments;
 #X text 329 -70 control canvas;
 #X text 330 -48 set colour;
-#X obj 15 -333 declare -lib zexy -path zexy;
+#X obj 15 -333 declare -lib zexy -path zexy -path ./;
 #X connect 4 0 5 0;
 #X connect 6 0 3 0;
 #X connect 7 0 9 0;

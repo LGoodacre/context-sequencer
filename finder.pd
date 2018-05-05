@@ -56,7 +56,7 @@ ymargin;
 #X obj -22 280 f 1;
 #X obj -22 236 receive \$0-:start;
 #X obj 665 49 ctxfiles/license;
-#X obj 665 112 declare -lib zexy -path zexy;
+#X obj 665 112 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 8 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;

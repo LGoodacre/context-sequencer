@@ -11,7 +11,7 @@
 #X obj 119 224 send;
 #X obj 194 201 makefilename %i-gottemp;
 #X obj 261 3 ctxfiles/license;
-#X obj 261 66 declare -lib zexy -path zexy;
+#X obj 261 66 declare -lib zexy -path zexy -path ./;
 #X connect 0 0 1 1;
 #X connect 1 0 8 0;
 #X connect 2 0 6 0;

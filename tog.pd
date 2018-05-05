@@ -25,7 +25,7 @@
 1 1 1 1 0 0 0 \, vis 0;
 #X obj 374 93 iemguts/sendcanvas;
 #X obj 167 254 ctxfiles/license;
-#X obj 167 317 declare -lib zexy -path zexy;
+#X obj 167 317 declare -lib zexy -path zexy -path ./;
 #X connect 1 0 11 0;
 #X connect 1 0 13 0;
 #X connect 1 0 17 0;
