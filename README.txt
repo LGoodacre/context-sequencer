@@ -20,7 +20,7 @@ SETUP:
 
 
 
-Context runs on PD Vanilla V 0.47 or later. Once you have downloaded Context, you must declare its location so that PD knows how to find it on your computer. To do this, go to Edit --> Preferences --> Path --> New and select the location of Context's home folder.
+Context runs on PD Vanilla V 0.48.1 or later. Once you have downloaded Context, you must declare its location so that PD knows how to find it on your computer. To do this, go to Edit --> Preferences --> Path --> New and select the location of Context's home folder.
 
 
 
@@ -243,7 +243,7 @@ CREDITS:
 
 
 
-Many people have contributed techical and moral support for Context. I would especially like to thank Miller Puckette, Alexander Torres Porres, Dan Wilcox and IOhannes Zmoelnig, Matt Barber and Derek Kwan for responding to many requests and bug fixes in PD and its external libraries, without which Context would not work. Omar Misa has provided consistent feedback and has the title of being Context's first User. And I would also like to thank Joe Deken and Ann Josey for their continued belief in me and in this project. Context certainly wouldn't be what it is without them.
+Many people have contributed techical and moral support for Context. I would especially like to thank Miller Puckette, Alexander Torres Porres, Dan Wilcox and IOhannes Zmoelnig, Matt Barber and Derek Kwan for responding to many requests and bug fixes in PD and its external libraries, without which Context would not work. Omar Misa has provided consistent feedback and has the title of being Context's first User, and Zack Lee has helped me work out the best scheme for externals. And I would also like to thank Joe Deken and Ann Josey for their continued belief in me and in this project. Context certainly wouldn't be what it is without them.
 
 
 
