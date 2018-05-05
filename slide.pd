@@ -1,5 +1,5 @@
 #N canvas 67 166 943 594 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #X obj 100 -100 vsl 18 101 0 100 0 0 \$0-ls \$0-lr 0 1 100 1 7 -262144
 -1 -1 0 1;
 #X obj 275 -67 iemguts/sendcanvas;

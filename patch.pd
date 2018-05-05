@@ -1,5 +1,5 @@
 #N canvas 566 107 411 370 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #X obj 143 25 loadbang;
 #X obj 221 115 makefilename %s-patchget;
 #X obj 221 137 iemguts/oreceive \$0n;

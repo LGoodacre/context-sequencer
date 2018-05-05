@@ -1,5 +1,5 @@
 #N canvas 67 242 506 482 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #N canvas 443 91 724 677 create 1;
 #X obj 194 73 symbol \$1-getdim;
 #X obj 174 123 send;

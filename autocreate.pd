@@ -1,5 +1,5 @@
 #N canvas 528 136 607 632 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #X obj 105 38 route mouse key;
 #X obj 156 64 cyclone/zl rev;
 #X obj 156 86 list split 1;

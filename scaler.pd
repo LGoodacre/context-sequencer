@@ -1,5 +1,5 @@
 #N canvas 214 136 511 632 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #N canvas 642 87 683 681 guts 0;
 #X obj 95 168 route symbol;
 #X obj 95 146 cyclone/iter;

@@ -1,5 +1,5 @@
 #N canvas 312 288 511 321 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #N canvas 247 87 671 681 move 0;
 #X obj 88 67 spigot;
 #X obj 272 709 iemguts/canvasindex 1;

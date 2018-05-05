@@ -1,5 +1,5 @@
 #N canvas 134 257 549 322 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #X obj 100 100 tgl 18 0 \$0-ts \$0-tr \$1 21 9 0 10 -262144 -1 -1 0
 1;
 #X obj 246 61 loadbang;

@@ -1,5 +1,5 @@
 #N canvas 741 294 450 300 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #N canvas 305 241 920 511 load 1;
 #X obj 96 4 loadbang;
 #X text 284 156 coords xfrom yfrom xto yto xsize ysize type xmargin

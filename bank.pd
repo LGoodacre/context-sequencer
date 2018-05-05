@@ -1,5 +1,5 @@
 #N canvas 377 184 450 491 10;
-#X declare -lib zexy -path zexy;
+#X declare -lib zexy -path zexy -path ./;
 #X obj 150 21 loadbang;
 #X obj 189 65 iemguts/canvasdollarzero 2;
 #X obj 169 111 iemguts/canvasargs;
