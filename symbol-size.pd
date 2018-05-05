@@ -1,0 +1,37 @@
+#N canvas 484 234 545 300 10;
+#X obj 384 113 cnv 15 56 17 empty \$0-resize-me-1 empty 20 12 0 14
+-258113 -66577 0;
+#X symbolatom 384 113 9 0 0 0 1: - -, f 9;
+#X obj 105 132 nbx 3 20 -1e+37 1e+37 0 1 x1-sym-val empty x1 -19 9
+0 12 -262144 -1 -1 56 256;
+#X obj 105 107 nbx 3 20 -1e+37 1e+37 0 1 y-sym-val empty y -13 9 0
+12 -262144 -1 -1 17 256;
+#N canvas 67 89 450 300 guts 0;
+#X obj 149 67 t b f;
+#X obj 149 44 receive y-sym-val;
+#X obj 29 67 receive x1-sym-val;
+#X obj 119 91 pack 62 17 \$0;
+#X msg 119 114 \; \$3-resize-me-1 vis_size \$1 \$2;
+#X obj 149 177 t b f;
+#X obj 149 154 receive y-sym-val;
+#X obj 119 201 pack 62 17 \$0;
+#X obj 29 177 receive x2-sym-val;
+#X msg 119 225 \; \$3-resize-me-2 vis_size \$1 \$2;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 5 1 7 1;
+#X connect 6 0 5 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 0;
+#X restore 481 259 pd guts;
+#X text 157 106 <-- change these numbers so that the red canvases exactly
+coincides with the black symbol atoms --->, f 34;
+#X obj 105 157 nbx 3 20 -1e+37 1e+37 0 1 x2-sym-val empty x2 -19 9
+0 12 -262144 -1 -1 62 256;
+#X obj 384 136 cnv 15 62 17 empty \$0-resize-me-2 empty 20 12 0 14
+-258113 -66577 0;
+#X symbolatom 384 136 10 0 0 0 2: - -, f 10;
