@@ -1,4 +1,4 @@
-#N canvas 83 190 688 400 10;
+#N canvas 67 190 688 498 10;
 #X text 39 324 Objects that are not related to Context:;
 #X obj 37 48 pddp/pddplink ../../content-help.pd -text [content] :
 embed arrays into the Context overlay;
@@ -26,3 +26,4 @@ the origin of a context event;
 #X obj 37 361 pddp/pddplink ../../psave-help.pd -text [psave] : create
 state-saving abstractions (with [num] \, [slide] \, [slide2] and [tog].
 ;
+#X text 135 411 --connector;
