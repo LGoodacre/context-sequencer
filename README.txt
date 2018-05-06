@@ -20,7 +20,10 @@ SETUP:
 
 
 
-Context runs on PD Vanilla V 0.48.1 or later. Once you have downloaded Context, you must declare its location so that PD knows how to find it on your computer. To do this, go to Edit --> Preferences --> Path --> New and select the location of Context's home folder.
+Context runs on PD Vanilla 0.48.1 or later. Once you have downloaded Context, you must declare its location so that PD knows how to find it on your computer. To do this, go to Edit --> Preferences --> Path --> New and select the location of Context's home folder.
+
+
+If you want to run Context in Vanilla 0.47, you can try replacing the file ctxfiles/dv.pd with ctxfiles/dv-047.pd.
 
 
 
