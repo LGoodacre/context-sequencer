@@ -1,14 +1,11 @@
 #N canvas 67 87 1299 681 10;
-#X obj 62 54 cnv 15 164 104 empty cc empty 20 12 0 14 -195043 -66577
+#X obj 62 54 cnv 15 178 104 empty cc empty 20 12 0 14 -195043 -66577
 0;
 #X obj 864 203 s \$0-enr;
 #X obj 836 222 s \$0-cnr;
-#X symbolatom 117 136 17 0 0 0 command #0-cin #0-cout, f 17;
-#X obj 207 58 bng 15 250 50 0 \$1-done \$0-f ^ 5 9 0 10 -195043 -1
+#X symbolatom 117 136 19 0 0 0 command #0-cin #0-cout, f 19;
+#X obj 144 61 bng 15 250 50 0 \$1-done \$0-f ^ 5 9 0 10 -203904 -1
 -1;
-#X obj 189 58 bng 15 250 50 0 \$0-help \$0-f ? 5 9 0 10 -195043 -1
--1;
-#X msg 42 242 help;
 #X obj 889 170 iemguts/canvasdelete 1;
 #X obj 248 391 l2s;
 #X obj 248 413 s \$0-cin;
@@ -36,16 +33,15 @@
 #X obj 1051 141 receive \$0-loadstart;
 #X obj 1051 164 t b f;
 #X obj 1078 187 makefilename %d-save;
-#X obj 153 79 tgl 15 0 \$0-quantizes \$0-quantizer quantize 17 7 0
+#X obj 167 61 tgl 15 0 \$0-quantizes \$0-quantizer quantize 17 7 0
 10 -195043 -1 -1 0 1;
-#X obj 153 97 tgl 15 0 \$0-guis \$0-guir show GUI 17 7 0 10 -195043
+#X obj 167 79 tgl 15 0 \$0-guis \$0-guir show GUI 17 7 0 10 -195043
 -1 -1 0 1;
-#X obj 69 79 tgl 15 0 \$0-savings \$0-savingr auto save 17 7 0 10
+#X obj 67 61 tgl 15 0 \$0-savings \$0-savingr auto save 17 7 0 10
 -195043 -1 -1 0 1;
-#X obj 69 61 tgl 15 0 \$0-actives \$0-activer active window 17 7 0
+#X obj 67 79 tgl 15 0 \$0-actives \$0-activer active window 17 7 0
 10 -195043 -1 -1 0 1;
-#X symbolatom 69 115 25 0 0 2 mode 2 list #0-m2r #0-m2s, f 25;
-#X obj 42 220 receive \$0-help;
+#X symbolatom 69 115 27 0 0 2 mode 2 list #0-m2r #0-m2s, f 27;
 #X msg 140 242 :qu \$1;
 #X obj 267 220 receive \$0-guis;
 #X obj 140 220 receive \$0-quantizes;
@@ -61,61 +57,65 @@
 #X obj 730 375 list trim;
 #X obj 730 397 route %^;
 #X obj 730 420 list split 1;
-#X text 791 296 placement on list \, send name \, list or symbol;
+#X text 798 310 placement on list \, send name \, list or symbol;
 #X obj 730 328 unpack f s f;
 #X obj 764 443 demux;
 #X obj 791 465 l2s;
 #X msg 730 279 33 quantize 0 \, 34 gui 0 \, 35 saving 0 \, 36 active
-0 \, 37 m2 1;
-#X connect 6 0 8 0;
+0 \, 37 m2 1 \, 38 tx 0;
+#X obj 167 97 tgl 15 0 \$0-txs \$0-txr M2 toggle 17 7 0 10 -195043
+-1 -1 0 1;
+#X obj 604 220 receive \$0-txs;
+#X msg 604 243 :tx \$1;
+#X connect 6 0 7 0;
 #X connect 8 0 9 0;
+#X connect 9 0 10 0;
 #X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 12 0 13 0;
-#X connect 14 0 23 0;
-#X connect 15 0 16 1;
-#X connect 16 0 17 0;
-#X connect 17 0 18 0;
-#X connect 19 0 7 0;
-#X connect 20 0 21 0;
-#X connect 21 0 22 0;
-#X connect 23 0 16 0;
-#X connect 23 1 15 0;
-#X connect 23 2 59 0;
-#X connect 23 3 27 0;
-#X connect 24 0 52 0;
-#X connect 26 0 25 1;
-#X connect 27 0 2 0;
-#X connect 27 0 1 0;
-#X connect 28 0 7 0;
+#X connect 12 0 21 0;
+#X connect 13 0 14 1;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 17 0 5 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 21 0 14 0;
+#X connect 21 1 13 0;
+#X connect 21 2 56 0;
+#X connect 21 3 25 0;
+#X connect 22 0 49 0;
+#X connect 24 0 23 1;
+#X connect 25 0 2 0;
+#X connect 25 0 1 0;
+#X connect 26 0 5 0;
+#X connect 27 0 28 0;
+#X connect 28 0 11 0;
 #X connect 29 0 30 0;
-#X connect 30 0 13 0;
-#X connect 31 0 32 0;
-#X connect 32 0 59 0;
-#X connect 32 1 33 0;
-#X connect 33 0 24 3;
-#X connect 39 0 6 0;
-#X connect 40 0 8 0;
-#X connect 41 0 43 0;
-#X connect 42 0 40 0;
-#X connect 43 0 8 0;
-#X connect 44 0 45 0;
-#X connect 45 0 8 0;
-#X connect 46 0 47 0;
-#X connect 47 0 8 0;
-#X connect 48 0 49 0;
-#X connect 49 0 8 0;
+#X connect 30 0 56 0;
+#X connect 30 1 31 0;
+#X connect 31 0 22 3;
+#X connect 37 0 6 0;
+#X connect 38 0 40 0;
+#X connect 39 0 37 0;
+#X connect 40 0 6 0;
+#X connect 41 0 42 0;
+#X connect 42 0 6 0;
+#X connect 43 0 44 0;
+#X connect 44 0 6 0;
+#X connect 45 0 46 0;
+#X connect 46 0 6 0;
+#X connect 47 0 48 0;
+#X connect 48 0 23 0;
+#X connect 49 0 50 0;
 #X connect 50 0 51 0;
-#X connect 51 0 25 0;
-#X connect 52 0 53 0;
-#X connect 53 0 54 0;
-#X connect 53 1 54 0;
-#X connect 54 1 57 0;
-#X connect 56 0 24 0;
-#X connect 56 1 26 0;
-#X connect 56 2 57 1;
-#X connect 57 0 50 0;
-#X connect 57 1 58 0;
-#X connect 58 0 50 0;
-#X connect 59 0 56 0;
-#X coords 0 -1 1 1 166 106 2 61 53;
+#X connect 50 1 51 0;
+#X connect 51 1 54 0;
+#X connect 53 0 22 0;
+#X connect 53 1 24 0;
+#X connect 53 2 54 1;
+#X connect 54 0 47 0;
+#X connect 54 1 55 0;
+#X connect 55 0 47 0;
+#X connect 56 0 53 0;
+#X connect 58 0 59 0;
+#X connect 59 0 6 0;
+#X coords 0 -1 1 1 180 106 2 61 53;

@@ -2683,21 +2683,21 @@ back to mx;
 #X connect 10 2 11 0;
 #X connect 11 0 6 0;
 #X restore 430 339 pd gui;
-#N canvas 561 406 450 300 saving 0;
+#N canvas 514 406 450 300 saving 1;
 #X obj 141 69 ctxfiles/saver \$0 switch-x 3 t;
 #X obj 140 106 receive \$0-savelist;
 #X msg 140 128 click;
 #X obj 140 150 text define -k \$0-save;
 #A set \; %^ :1f0 :s \; %^ :1f1 :ss \; %^ :1f2 -send 2 \; %^ :1f3 -send
 3 \; %^ :1f4 :u \; %^ :1f5 find \; %^ :1f6 :r 1 c 0 1 \; %^ :1f7 copy
-~ ID \; :2f0 undo \; %^ :2f1 :ss \; %^ :2f2 -send 2 \; %^ :2f3 -send
+~ ID \; %^ :2f0 :s \; %^ :2f1 :ss \; %^ :2f2 -send 2 \; %^ :2f3 -send
 3 \; %^ :2f4 :u \; %^ :2f5 find \; %^ :2f6 :r 1 c 0 1 \; %^ :2f7 copy
 ~ ID \; %^ :3f0 chromatic \; %^ :3f1 major \; %^ :3f2 minor \; %^ :3f3
 pentatonic major \; %^ :3f4 pentatonic minor \; %^ :3f5 blues major
 \; %^ :3f6 blues minor \; %^ :3f7 custom1 \; %^ :4f0 120000 \; %^ :4f1
 60000 \; %^ :4f2 30000 \; %^ :4f3 10000 \; %^ :4f4 3000 \; %^ :4f5
 1000 \; %^ :4f6 500 \; %^ :4f7 1 \; %^ :qu 0 \; %^ :gui 0 \; %^ :sa
-1 \; %^ :ac 0 \; :m1 1 2 3 4 5 6 7 8 9 10 11 12 \;;
+1 \; %^ :ac 0 \; %^ :m1 bang \; %^ :tx 0 \;;
 #X obj 151 227 receive \$0-:sa;
 #X obj 151 249 s \$0-saveme;
 #X connect 1 0 2 0;

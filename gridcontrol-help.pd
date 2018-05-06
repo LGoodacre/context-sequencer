@@ -1,6 +1,6 @@
-#N canvas 67 208 949 560 10;
+#N canvas 339 137 949 560 10;
 #X obj 9 485 ctxfiles/license;
-#N canvas 137 250 824 371 grid 0;
+#N canvas 67 250 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 922 21 t b f f;
@@ -293,7 +293,7 @@ This helpfile serves as a quick-reference and start guide., f 36;
 -1;
 #X obj 721 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#N canvas 65 85 450 160 (subpatch) 0;
+#N canvas 67 89 450 160 (subpatch) 0;
 #X text 16 16 [gridcontrol] links with all the Contexts in one patch.
 It doesn't make sense to have more than one instance of [gridcontrol]
 open in a single patch \, but having several Context patches open each
@@ -318,12 +318,7 @@ on the Function Selectors.;
 by tapping on the cell. The Function Selector must be set to :r for
 this to work.;
 #X restore 515 198 mode-1;
-#X text 378 106 Note: It only makes sense to use [gridcontrol] if you
-have a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
-However \, the [gridcontrol] patch contains a fully functional mockup
-of the controller \, so this help-file will work even with no MIDI
-hardware., f 72;
-#N canvas 67 99 450 265 (subpatch) 0;
+#N canvas 67 99 450 365 (subpatch) 0;
 #X obj 378 238 outlet;
 #X text 15 13 Mode 2 lets you edit the toggles of a select group of
 Contexts. The group selected for editing is defined using the "-send
@@ -339,6 +334,13 @@ the given Context. It can also be used to send other commands \, if
 you use the Function Selector in the [gridcontrol] abstraction \, rather
 than on the Launcpad itself. This is the only instance where the behaviour
 of the patch differs from the behaviour of the hardware.;
+#X text 15 248 A secondary feature of Mode 2 lets you start Context
+at a specific point in its cycle. To do this \, you need to hold down
+the the "User 1" (Mode 2) button and press one of the cells Context
+will now start at the point corresponding to that cell. You can enter
+this mode permanently by using the :tx 1 command. Holding down the
+Mode 2 button now switches back to the original mode where pressing
+cells affects the toggles.;
 #X restore 544 223 mode-2;
 #N canvas 67 92 450 210 (subpatch) 0;
 #X obj 384 181 outlet;
@@ -353,7 +355,7 @@ an empty cell \, or turn a toggle off by clicking on a lit cell. By
 default. mode 3 lets you edit the x-axis toggles. You can flip to y-axis
 by double clicking on the mode 3 selector button ("Mixer").;
 #X restore 574 247 mode-3;
-#N canvas 67 99 425 296 (subpatch) 0;
+#N canvas 67 99 565 296 (subpatch) 0;
 #X text 9 16 Mode 4 \, Mixer mode \, doesn't relate to Context \, but
 to [slide] and [slide2]. It enables you to control the sliders in a
 custom mixer abstraction using the Launchpad. The abstraction must
@@ -370,6 +372,9 @@ slider up or down in a certain time perdiod. The time perdiod is defined
 by the Function Selector \, and is longer the higher up you go (starting
 at one millisecond \, ending at ~30 seconds). Clicking on the selected
 Function Selector again halts the motion.;
+#X obj 413 40 slide m m \$0 0 100;
+#X obj 413 165 pgrid;
+#X obj 413 212 psave;
 #X restore 599 275 mode-4;
 #N canvas 65 81 450 161 (subpatch) 0;
 #X obj 381 131 outlet;
@@ -382,7 +387,7 @@ different instances of [gridcontrol] in different patches. To do this
 \, click on both the up and down (or left and right) buttons together.
 ;
 #X restore 357 231 position-selectors;
-#N canvas 403 162 450 180 (subpatch) 0;
+#N canvas 356 162 450 180 (subpatch) 0;
 #X text 14 117 Function selectors each have a default message \, which
 is visible in the [gridcontrol] patch. You can also edit the message
 by typing into the symbol atom.;
@@ -455,11 +460,16 @@ it by right clicking and selecting "properties". There you will be
 able to select most of the same options as listed in "creation arguments"
 \, and define the mode-2 ID list.;
 #X restore 780 494 properties;
-#X obj 476 315 gridcontrol :2f0 undo;
+#X obj 476 315 gridcontrol;
+#X text 378 106 Note: It only makes sense to use [gridcontrol] if you
+have a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
+However \, the [gridcontrol] patch contains a fully functional mockup
+of the controller \, so this help-file will work still with no MIDI
+hardware., f 72;
 #X connect 15 0 14 0;
 #X connect 16 0 13 0;
-#X connect 18 0 12 0;
-#X connect 19 0 11 0;
-#X connect 21 0 9 0;
-#X connect 22 0 10 0;
-#X connect 27 0 26 0;
+#X connect 17 0 12 0;
+#X connect 18 0 11 0;
+#X connect 20 0 9 0;
+#X connect 21 0 10 0;
+#X connect 26 0 25 0;
