@@ -1,4 +1,5 @@
-#N canvas 65 53 1301 715 10;
+#N canvas 67 87 1299 681 10;
+#X declare -path ../..;
 #X obj 1221 360 context :H 16 :X 17 :Y 6 :d 8.54 :Z 9 :ID 1 :ol 1 :il
 1 18 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843
 :y2 8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
@@ -207,6 +208,7 @@ if you want to be able to direct them properly. But once you do this
 the hi-hats. Each time he finishes one \, he picks another one at random.
 But he's also good at varying the length of his hits \, making sure
 that the ones he plays closer together are shorter., f 50;
+#X obj 37 107 declare -path ../..;
 #X connect 6 3 7 0;
 #X connect 12 0 2 0;
 #X connect 13 0 2 1;

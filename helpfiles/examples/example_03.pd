@@ -1,4 +1,5 @@
-#N canvas 65 81 1301 687 10;
+#N canvas 67 87 1299 681 10;
+#X declare -path ../..;
 #X obj 950 157 dac~;
 #X obj 950 123 helpfiles/docfiles/glock~ 1;
 #X obj 950 41 receive context-;
@@ -69,6 +70,7 @@ toggles 1 2 and 3 on each Context if you don't like this feature!)
 :e 4 :h 1 :x = 4 3 2 1 :z 0 :R 100 :ID 4;
 #X text 889 377 This Context sends a message to [scaler] to change
 the key., f 34;
+#X obj 93 551 declare -path ../..;
 #X connect 1 0 0 0;
 #X connect 1 0 0 1;
 #X connect 2 0 15 0;
