@@ -4,4 +4,6 @@
 #X obj 206 188 outlet L2ORK;
 #X text 206 209 Unfortunately. Context doesn't work on L2Ork yet. Maybe
 it will one day., f 27;
+#X text 46 13 This patch is used to select Context's compatibility
+for Vanilla or L2Ork;
 #X connect 0 0 1 0;
