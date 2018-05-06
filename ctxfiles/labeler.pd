@@ -86,7 +86,7 @@
 #X obj 604 835 change;
 #X obj 604 880 f 12;
 #X obj 604 857 t b f;
-#X obj 640 1027 ../config;
+#X obj 640 1027 ../config-distro;
 #X obj 604 901 t f f f f;
 #X obj 736 1027 - 2;
 #X obj 685 1053 clip 0 10;
