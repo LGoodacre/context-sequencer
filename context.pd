@@ -1,6 +1,6 @@
 #N canvas 67 302 796 418 10;
 #X declare -lib zexy -path zexy -path ./;
-#X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 21 0 8 -128975
+#X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 23 0 8 -128975
 -262144 0;
 #N canvas 67 89 992 679 guts 0;
 #N canvas 568 87 795 681 names 0;
@@ -3756,6 +3756,8 @@ b b b b f f f f, f 82;
 #X obj 681 234 v -(xmenu);
 #X obj 182 57 t b b b b b b b b b b b b b b b b f f;
 #X obj 681 257 s \$0-xmen;
+#X obj 623 14 v -(ysize6);
+#X obj 623 38 s \$0-laby;
 #X connect 2 0 3 0;
 #X connect 4 0 45 0;
 #X connect 6 0 4 0;
@@ -3801,9 +3803,11 @@ b b b b f f f f, f 82;
 #X connect 45 12 38 0;
 #X connect 45 13 39 0;
 #X connect 45 14 40 0;
+#X connect 45 14 47 0;
 #X connect 45 15 44 0;
 #X connect 45 16 35 0;
 #X connect 45 17 4 1;
+#X connect 47 0 48 0;
 #X restore 69 111 pd loadbang;
 #N canvas 288 91 1033 677 record 0;
 #X obj 336 26 receive \$0-record;
@@ -6557,7 +6561,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 109 0 110 0;
 #X connect 110 0 103 0;
 #X restore 552 391 pd rules;
-#N canvas 120 212 647 556 title 1;
+#N canvas 67 212 647 556 title 1;
 #X text 51 81 To use Context \, you'll have to open up another patch
 and then create the object [context]. Make sure that you have the main
 Context folder declared before doing this \, or else PD won't know
