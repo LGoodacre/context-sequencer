@@ -1207,5 +1207,25 @@ term, f 30;
 #X connect 40 0 43 0;
 #X connect 43 0 42 0;
 #X restore 93 339 pd symbol-size;
+#N canvas 329 163 450 587 record 1;
+#X obj 151 13 receive 54y3g%%Thhg;
+#X obj 151 40 t b a;
+#X obj 165 87 ctxfiles/recompile \$0;
+#X obj 35 101 cyclone/zl iter 1;
+#X obj 35 123 ctxfiles/br2 route 1 \; -source tf \$0 #f \; -delay tf
+\$0 #f \; -trigger tf \$0 #f \; -output tf \$0 #f \; -prepend tf \$0
+#f \; -stop tf \$0 #f \; -first tf \$0 #f \; -playback tf \$0 #f \;
+-toggle tf \$0 #f \; bang t \; ## s \$0-othr;
+#X obj 165 110 ctxfiles/br2 demux 2 \; #f t \; #f gs r-source \; #f
+gs r-delay \; #f gs r-trigger \; #f gs r-output \; #f gs r-prepend
+\; #f gs r-stop \; #f gs r-first \; #f gs r-playback \; #f gs r-toggle
+\; #f gs r-bang;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 5 0;
+#X connect 2 1 5 1;
+#X connect 3 0 4 0;
+#X restore 93 362 pd record language;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
