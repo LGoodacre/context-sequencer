@@ -90,7 +90,7 @@ this up with ID tags., f 58;
 #X msg 23 78 :r 1 inlets 100;
 #X msg 60 135 :r 1 inlets 300;
 #X text 16 15 The third argument is a positive milisecond value (defaut
-0). This sents a delay from the recorded input to the selected toggle
+0). This sends a delay from the recorded input to the selected toggle
 \, making placement more accurate if you are recording by hand., f
 66;
 #X text 140 73 The incoming message will be assigned to the first inlet

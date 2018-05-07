@@ -30,7 +30,7 @@ the mouse over a Context \; 2: double pres and hold the "shift" key
 \; 3: click on one of the y-axis toggles.;
 #X text 45 319 This Context has the object [bank c] created inside
 the overlay. This means that its memory bank stores the color setting
-(c). Change between the different bank slots by following the instructions
+(:c). Change between the different bank slots by following the instructions
 above to see., f 51;
 #X text 26 92 [bank] is an overlay object used to define a list of
 settings for the memory bank.;
