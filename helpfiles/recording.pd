@@ -1,4 +1,4 @@
-#N canvas 212 328 810 413 10;
+#N canvas 180 89 894 619 10;
 #X declare -path ../;
 #X obj 22 89 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -12,81 +12,10 @@
 #X obj 14 9 cnv 15 150 37 empty empty recording 10 16 0 24 -71786 -1
 0;
 #X obj 508 13 ctxfiles/license;
-#X obj 121 283 context :X 9 :d 4 :i 0 0 0 0 0 0 0 0 1.5 :J 1 :ID 1
+#X obj 199 535 context :X 9 :d 4 :i 0 0 0 0 0 0 0 0 1.5 :J 1 :ID 1
 ;
-#X msg 128 154 :r;
-#X text 47 91 With the :r command \, you can record data (not audio)
-into Context in real time. The data you can record is toggle allocations
-\, database terms \, and toggle floats. Without any arguments \, :r
-will start the record funciton automatically and then trigger the toggles
-while the Context plays. Press the :r button repeatedly below to see
-this in action., f 89;
-#X text 391 167 :r can also take various arguments to change the behaviour
-of the record function. See the various sub-patches (and click on the
-various messages to try them out)., f 40;
-#X obj 38 230 receive c1-;
-#X obj 38 252 print c1;
-#N canvas 508 187 425 300 messages 0;
-#X text 9 25 Once the recording cycle has been started \, what messages
-are recorded? There are three options here:;
-#X text 55 76 -- a message starting with ":r" or "record" will open
-or close the selected toggle and nothing else. This is the most basic
-option., f 50;
-#X text 57 188 -- any other message will be recorded to the message
-database., f 50;
-#X msg 15 78 :r;
-#X msg 15 140 ij 4;
-#X msg 15 193 test;
-#X obj 15 245 outlet;
-#X text 57 138 -- a message starting with "ij" or ":ij" will record
-a number to the toggle float array and open or close the toggle.,
-f 50;
-#X connect 3 0 6 0;
-#X connect 4 0 6 0;
-#X connect 5 0 6 0;
-#X restore 413 287 recordable messages;
-#N canvas 65 97 471 300 argument 0;
-#X obj 129 260 outlet;
-#X msg 103 203 :r 0;
-#X msg 23 78 :r 1;
-#X text 64 78 This starts the recording immediately;
-#X msg 60 135 :r 2;
-#X text 41 22 The first argument is a number 0 \, 1 or 2 (default 1)
-;
-#X text 103 136 This starts the recording immediately and opens the
-first toggle, f 42;
-#X text 144 203 This preps the recording. The recording will start
-with the next input Context receives., f 36;
-#X connect 1 0 0 0;
-#X connect 2 0 0 0;
-#X connect 4 0 0 0;
-#X restore 159 195 first argument (trigger);
-#N canvas 65 117 729 358 argument 0;
-#X obj 169 290 outlet;
-#X text 25 16 The second argument specifies where the recording source
-will come from. This can be "inlet" \, "c" \, or a custom symbol The
-default is "inlet".;
-#X msg 3 78 :r 1 inlet;
-#X text 82 78 This means that Context whatever Context receives through
-its inlet will be recorded., f 78;
-#X msg 60 145 :r 1 c;
-#X text 115 122 This means that whatver is sent to the c-number channel
-will be recorded (see manual Section 7: ID and channels). So in this
-case \, whatever is sent to "c1" will be recorded \, since the Context
-ID number is 1 Note that this is sensitive to the :J setting \, and
-:J is here set to 1 (global). If it were on the default 0 (local) \,
-only messages sent to "\$0-c1" would be recorded., f 73;
-#X msg 135 233 :r 1 dogs;
-#X msg 648 149 \; c1 :r;
-#X text 214 223 A custom symbol in the second argument will record
-data sent from a custom send channels. It makes most sense to link
-this up with ID tags., f 58;
-#X msg 650 236 \; dogs :r;
-#X connect 2 0 0 0;
-#X connect 4 0 0 0;
-#X connect 6 0 0 0;
-#X restore 180 215 second argument (source);
-#N canvas 383 155 560 300 argument 0;
+#X msg 66 321 :r;
+#N canvas 289 155 560 300 argument 0;
 #X obj 129 260 outlet;
 #X msg 23 78 :r 1 inlets 100;
 #X msg 60 135 :r 1 inlets 300;
@@ -103,46 +32,251 @@ inlet up to 300ms after the first inlet is passed., f 54;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 7 0 0 0;
-#X restore 200 235 third argument (delay);
-#N canvas 596 156 560 361 argument 0;
-#X obj 177 264 outlet;
-#X text 16 14 The fourth argument is a number 0 1 2 or 3 (default 0).
-This determines what information is sent to the output channels between
-the normal toggle output and the live recording input., f 66;
-#X text 127 74 Do you want the normal playback to proceed during the
-recording cycle?;
-#X text 9 137 Do you want the incoming data to also be sent to the
-output channels?, f 13;
-#X obj 170 147 cnv 15 120 30 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X msg 177 153 :r 1 inlet 0 0;
-#X text 341 120 YES;
-#X text 212 120 NO;
-#X obj 310 147 cnv 15 120 30 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X msg 317 153 :r 1 inlet 0 1;
-#X obj 170 197 cnv 15 120 30 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X obj 310 197 cnv 15 120 30 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X msg 177 203 :r 1 inlet 0 2;
-#X msg 317 203 :r 1 inlet 0 3;
-#X text 126 154 YES;
-#X text 126 204 NO;
-#X obj 317 235 t a;
-#X text 65 308 WARNING: sending data to the outlets may cause PD to
-crash if it comes back to the recording inlets!;
-#X connect 5 0 0 0;
-#X connect 9 0 16 0;
-#X connect 12 0 0 0;
-#X connect 13 0 16 0;
-#X connect 16 0 0 0;
-#X restore 220 255 fourth argument (output);
+#X restore 454 570 third argument (delay);
 #X obj 398 13 declare -path ../;
+#X text 63 95 Context has three main stores for data \; 1: the toggle
+arrays (:x :y) \, which decide which toggles fire during the cycle
+\; 2: the message databases (:a :b) \, which store messages to be sent
+in the cycle. \; 2: the toggle-float arrays (:i :j) \, which store
+custom numbers which can be used in messages \, of for connections.
+\; \; Data can be set to these stores by sending commands or using
+the GUI. Recording is a way of setting data in real time. Instead of
+occurring instantaneously \, recorded information flows into Context
+in synch with the cycle. This is more or less the same as recording
+audio onto a tape \, except that it is information \, not sound \,
+which is being recorded., f 87;
+#X text 63 247 In Context \, recording is set by the :r command. :r
+has many different sub-commands which form a special language of their
+own \, but the basics are quite simple and intuitive. Press ":r" repeatedly
+below and you will see the pattern you define emerging across the x-axis
+toggle array. Then look at the subwindows to learn about the different
+options for :r recording., f 87;
+#N canvas 67 89 450 300 advanced 0;
+#X restore 654 583 pd advanced examples;
+#X text 379 424 Where should the recording come from?;
+#N canvas 67 212 779 351 -messages 0;
+#X obj 233 292 outlet;
+#X obj 17 105 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X obj 52 207 cnv 15 15 15 empty empty default: blank 0 7 0 14 -262144
+-66577 0;
+#X text 55 5 The -messages argument determines whether the :a and :b
+should receive information during recording. The -prepend and -append
+arguments attach custom text to the incoming message.;
+#X msg 90 103 :r -messages 0;
+#X text 189 97 This prevents the :a or :b database from receiving any
+information during recording.;
+#X msg 132 153 :r -messages 1;
+#X text 232 148 This allows incoming messages to be recorded to the
+message database.;
+#X msg 174 203 :r -messages 1 -prepend cats;
+#X msg 216 253 :r -messages 1 -append dogs;
+#X text 354 197 This attaches a custom message at the beginning of
+the recroded data.;
+#X text 393 248 This attaches a custom message at the end of the recroded
+data.;
+#X msg 21 274 :a -open;
+#X text 30 296 open the message database for viewing, f 21;
+#X obj 87 254 cnv 15 15 15 empty empty default: blank 0 7 0 14 -262144
+-66577 0;
+#X connect 4 0 0 0;
+#X connect 6 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X connect 12 0 0 0;
+#X restore 258 476 pd -messages -prepend -append;
+#N canvas 316 144 658 345 -playback 0;
+#X obj 224 282 outlet;
+#X msg 99 113 :r -playback 0;
+#X obj 26 115 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X text 198 114 This cancels the normal playback.;
+#X msg 132 153 :r -playback 1;
+#X text 231 154 This tells the playback to proceed.;
+#X obj 89 195 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X msg 165 193 :r -output 0;
+#X msg 198 233 :r -output 1;
+#X text 57 10 The -trigger argument determines whether the normal pattern
+playback that usually occurs during the Context cycle should also happen
+during the recording. The -output argument determines whether the newly
+recording messages should also be send as output while they are being
+recorded.;
+#X text 265 194 This mutes messages as they are being recorded.;
+#X text 297 234 This allows messages to play as they are being recorded.
+;
+#X obj 434 266 receive c1-;
+#X obj 434 289 print c1;
+#X connect 1 0 0 0;
+#X connect 4 0 0 0;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 12 0 13 0;
+#X restore 235 452 pd -playback -output;
+#X text 373 452 What should happen to normal playback during recording?
+;
+#X text 451 476 What should happen to the message databases during
+recording?, f 63;
+#X text 331 387 How should the recording start?;
+#N canvas 67 89 625 413 -trigger 0;
+#X obj 289 352 outlet;
+#X text 231 80 This starts the recording immediately;
+#X text 251 124 This preps the recording. The recording will start
+with the next input Context receives., f 36;
+#X msg 123 78 :r -trigger 0;
+#X msg 160 135 :r -trigger 1;
+#X obj 52 79 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144 -66577
+0;
+#X text 134 21 The -trigger argument determines when Context will start
+recording. -first determines what should happen to the first toggle.
+;
+#X obj 138 209 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X msg 207 208 :r -first 0;
+#X msg 244 265 :r -first 1;
+#X text 301 203 This determines that no action should be taken on the
+first toggle., f 40;
+#X text 335 258 This determines that the first toggle should automatically
+be triggered when the recording starts., f 36;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 8 0 0 0;
+#X connect 9 0 0 0;
+#X restore 192 386 pd -trigger -first;
+#X text 537 513 How should toggles behahve during recording?;
+#N canvas 109 131 813 478 -pattern 0;
+#X obj 362 444 outlet;
+#X obj 17 105 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X text 189 97 This means that toggles will be set by any incoming
+message during the recording.;
+#X text 232 151 This means that toggles will be unaffected by the recording.
+;
+#X obj 173 307 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X msg 174 203 :r -toggleprep +;
+#X msg 216 253 :r -toggleprep -;
+#X text 291 203 This determines that incoming messages can only turn
+toggles on., f 66;
+#X text 335 253 This determines that incoming messages can only turn
+toggles off., f 66;
+#X msg 255 303 :r -toggleprep anything-else;
+#X text 444 297 This determines that incoming messages can turn toggles
+on or off.;
+#X msg 300 353 :r -lock 1;
+#X text 376 349 This means that an individual toggle can only be turned
+on or off once during a single recording.;
+#X msg 343 403 :r -lock 0;
+#X text 419 399 This means that an individual toggle can be turned
+on or off repeatedly during a recording (only has affect when there
+is no -toggleprep argument).;
+#X msg 90 103 :r -pattern 1;
+#X msg 132 153 :r -pattern 0;
+#X text 201 10 The -pattern argument determines whether or not the
+toggle array should be affected by the recording. -toggleprep determines
+whether toggles can be turned on or turned off during recording. -lock
+determines whether an individual toggle can be toggled more than once.
+;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 11 0 0 0;
+#X connect 13 0 0 0;
+#X connect 15 0 0 0;
+#X connect 16 0 0 0;
+#X restore 350 511 pd -pattern -toggleprep -lock;
+#N canvas 318 135 843 429 -floats 0;
+#X obj 294 364 outlet;
+#X obj 17 105 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X obj 132 256 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+-66577 0;
+#X msg 255 303 :r -toggleprep anything-else;
+#X text 444 297 This determines that incoming messages can turn toggles
+on or off.;
+#X text 201 10 The -floats argument deterines whether/how toggle floats
+should be interpreted from the incoming message. -floatprep determines
+whether incoming toggle floats should be used a connections or as floats
+(see Manual Section 5: Accessing Float Connect).;
+#X text 182 98 This means that toggles floats will be unaffected by
+the recording.;
+#X msg 132 153 :r -floats 1;
+#X msg 90 103 :r -floats 0;
+#X text 224 141 This means that toggle floats will be set during the
+recording. If the incoming message is a list \, the first float in
+the list will be set as a toggle float.;
+#X text 283 203 This means that incoming numbers will be used as regular
+toggle floats for use with the = variable., f 66;
+#X msg 174 203 :r -floatprep 0;
+#X msg 216 253 :r -floatprep 1;
+#X text 335 252 This means that incoming numbers will be used as float
+connects., f 66;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X restore 408 540 pd -floats -floatprep;
+#N canvas 162 170 855 603 -source 0;
+#X obj 504 531 outlet;
+#X msg 112 145 \; c1 :r;
+#X text 373 232 A custom symbol in the second argument will record
+data sent from a custom send channels. It makes most sense to link
+this up with ID tags., f 72;
+#X msg 179 233 \; dogs :r;
+#X text 152 9 The -source argument determines where Context is going
+to record information from.;
+#X text 243 72 This means that Context whatever Context receives through
+its inlet will be recorded \, as in the example in the main window.
+, f 78;
+#X obj 60 78 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144 -66577
+0;
+#X msg 132 78 :r -source inlet;
+#X msg 189 145 :r -source self;
+#X text 301 125 This means that whatver is sent to the c-number channel
+will be recorded (see manual Section 7: ID and channels). So in this
+case \, whatever is sent to "c1" will be recorded \, since the Context
+ID number is 1 (press the c1 message box to see). Note that this is
+sensitive to the :J setting \, which sets global or local namespace.
+Here \, :J is set to 1 (global). If it were on the default 0 (local)
+\, only messages sent to "\$0-c1" would be recorded., f 82;
+#X msg 264 233 :r -source dogs;
+#X msg 341 323 :r -source c 2;
+#X obj 245 316 context :ID 2;
+#X text 445 299 A c-number indicates that Context should record data
+from another Context. This means that any command flowing through that
+Context will be recording into this one. Press the :r button and then
+turn toggles on and off in Context c2 to see the pattern record in
+the parent patch. This feature enables you to program control commands
+into Context in real time (see "advanced examples"), f 65;
+#X msg 433 430 :r -exclude eggs bacon;
+#X obj 308 432 cnv 15 15 15 empty empty default: blank 0 7 0 14 -262144
+-66577 0;
+#X msg 335 464 eggs;
+#X msg 336 487 bacon;
+#X msg 337 510 beans;
+#X text 588 426 This sets a list of messages which will be rejected
+as recording input. Start the recording and then check with the input
+messages on the left to see., f 35;
+#X connect 7 0 0 0;
+#X connect 8 0 0 0;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 14 0 0 0;
+#X connect 16 0 0 0;
+#X connect 17 0 0 0;
+#X connect 18 0 0 0;
+#X restore 244 424 pd -source -exclude;
+#X obj 744 73 ctxfiles/br2 demux 2 \; #f t \; #f gs r-delay \; #f gs
+r-stop \; #f gs r-bang;
+#X text 675 196 NOTE: Once the record function has started \, the ":r"
+message is interpreted as a bang. This allows you to record using the
+same message \, as in the example. You can also record any other custom
+number or message (see "-messages" and "-source"). \; \; Arguments
+can be combined in any way to achieve highly customized recording configurations.
+\; \; Use quotation marks. \; \; stop a recording, f 33;
 #X connect 8 0 7 2;
-#X connect 11 0 12 0;
-#X connect 13 0 7 7;
-#X connect 14 0 7 3;
 #X connect 15 0 7 3;
 #X connect 16 0 7 3;
-#X connect 17 0 7 3;
+#X connect 20 0 7 3;
+#X connect 22 0 7 3;
+#X connect 23 0 7 3;
+#X connect 24 0 7 3;
