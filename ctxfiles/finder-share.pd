@@ -1,0 +1,21 @@
+#N canvas 628 231 450 300 10;
+#X declare -path ../;
+#X obj 46 34 receive tyhjr(jK@;
+#X obj 46 56 t b a;
+#X obj 78 91 cyclone/zl iter 1;
+#X obj 274 39 declare -path ../;
+#X obj 204 84 ctxfiles/recompile \$0;
+#X obj 204 106 ctxfiles/br2 demux 2 \; #f t \; #f gs :x \; #f gs :y
+\; #f gs :n \; #f gs :s \; #f gs :l \; #f gs :m \; #f gs :k \; #f gs
+:start;
+#X obj 46 119 ctxfiles/br2 route 1 \; :x gtfs \$0 #f :x 300 \; :y gtfs
+\$0 #f :y 200 \; :n gtfs \$0 #f :n 10 \; :s gtfs \$0 #f :s 50 \; :l
+gtfs \$0 #f :l bang \; :m gtfs \$0 #f :m 33 \; :k gtfs \$0 #f :k 33
+\; :start tf \$0 #f \; ## s \$0-othr;
+#X obj 229 264 shared ctxfiles/finder-share;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 1 2 0;
+#X connect 2 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
