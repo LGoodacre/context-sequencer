@@ -1,4 +1,4 @@
-#N canvas 636 267 450 444 10;
+#N canvas 602 250 450 444 10;
 #X obj 261 100 text get \$1-save;
 #X obj 261 122 list trim;
 #X obj 261 144 route %^;
@@ -21,6 +21,9 @@
 #X obj 108 266 collect;
 #X obj 108 289 list tosymbol;
 #X obj 45 128 route float;
+#X obj 322 289 receive \$1-:\$4\$2;
+#X obj 322 335 s \$1-\$2-newsymbol;
+#X obj 322 312 t a a;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 11 0;
@@ -46,3 +49,6 @@
 #X connect 20 0 7 0;
 #X connect 21 0 7 0;
 #X connect 21 1 14 0;
+#X connect 22 0 24 0;
+#X connect 24 0 23 0;
+#X connect 24 1 10 0;

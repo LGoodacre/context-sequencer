@@ -1,4 +1,4 @@
-#N canvas 329 129 949 560 10;
+#N canvas 282 129 949 560 10;
 #X obj 9 485 ctxfiles/license;
 #N canvas 67 242 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -387,11 +387,8 @@ different instances of [gridcontrol] in different patches. To do this
 \, click on both the up and down (or left and right) buttons together.
 ;
 #X restore 357 231 position-selectors;
-#N canvas 356 162 450 180 (subpatch) 0;
-#X text 14 117 Function selectors each have a default message \, which
-is visible in the [gridcontrol] patch. You can also edit the message
-by typing into the symbol atom.;
-#X obj 377 157 outlet;
+#N canvas 309 162 450 227 (subpatch) 0;
+#X obj 377 198 outlet;
 #X text 13 14 The function selectors work differently depending on
 the mode. In mode 1 \, they are used to set the message that will be
 sent to a Context by clicking on it. In mode 2 \, they are used to
@@ -399,6 +396,11 @@ send a start (or other) message to Context. In mode 3 \, they have
 the same assignments as in mode 1 \, but send to the selected Context
 immediately when pressed. In mode 4 they determine the time duration
 for the slider movement.;
+#X text 14 117 Function selectors each have a default message \, which
+is visible in the [gridcontrol] patch. You can also edit the message
+by typing into the symbol atom. The symbol $ will be replaced with
+the \$0 value for the parent patch \, while % will be replaced with
+the ID number of the Context which is set to receive the message.;
 #X restore 774 336 function-selectors;
 #N canvas 67 87 450 105 (subpatch) 0;
 #X text 16 6 With quantize turned on (:qu 1) \, any :s or :ss command
@@ -406,7 +408,7 @@ send by [gridcontrol] will snap to either the previous or the next
 beat. In order to achieve this \, [gridcontrol] must be given the beat.
 This is dome from its inlet in the top-left corner.;
 #X restore 710 494 quantize;
-#N canvas 685 324 524 399 arguments 0;
+#N canvas 638 324 524 399 arguments 0;
 #X text 22 17 [gridcontrol] has a few commands which can be sent to
 it through creation arguments. It also uses these commands to save
 custom Function Selector messages (this happens automatically).;
