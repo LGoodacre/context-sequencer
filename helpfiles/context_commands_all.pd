@@ -22,7 +22,7 @@
 0;
 #X obj 11 100 cnv 15 224 258 empty empty empty 20 12 0 14 -128992 -66577
 0;
-#N canvas 240 190 895 500 hold 0;
+#N canvas 230 182 895 500 hold 0;
 #X obj 338 469 s \$0-helpno;
 #X obj 283 370 receive \$0-got;
 #X obj 283 394 change;
@@ -155,7 +155,6 @@ disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 5 connect 12 0 13 1 5 connect 12 1 15 0 5 connect 13 0 17 0 5 connect
 15 0 14 0 5 connect 16 0 13 0 5 connect 17 0 14 0 5 connect 18 0 2
 1;
-#X obj 273 101 docfiles/spacer \$0 888 161 4 4;
 #X obj 2 427 docfiles/helpget \$0 7 862 35 20 2 14 12 -123325 0;
 #X obj 2 596 docfiles/helpget2 \$0 10 862 20 15 2 9 1;
 #X obj 2 574 docfiles/helpget \$0 9 862 20 15 2 9 -123325 12 1;
@@ -209,5 +208,21 @@ is optional., f 30;
 0;
 #X obj 1041 18 ctxfiles/license;
 #X obj 1041 78 declare -path ../;
+#X obj 266 95 cnv 15 1 1 empty empty COMMAND 0 -15 0 30 -233017 -66577
+0;
+#X obj 273 101 docfiles/spacer \$0 600 161 4 4 300;
+#N canvas 436 160 627 412 scroll 0;
+#X obj 100 117 vsl 15 265 1 -0.05 0 0 \$0-yscroll \$0n empty 0 -9 0
+10 -262144 -1 -1 26400 1;
+#X obj 100 100 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 100 385 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 158 43 loadbang;
+#X obj 158 66 t f;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X coords 0 -1 1 1 15 300 2 100 100;
+#X restore 1003 101 pd scroll;
 #X connect 4 0 13 0;
 #X connect 9 0 13 1;
