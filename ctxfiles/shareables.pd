@@ -1188,7 +1188,7 @@ term, f 30;
 #X connect 40 0 43 0;
 #X connect 43 0 42 0;
 #X restore 93 316 pd symbol-size;
-#N canvas 178 155 450 587 record 1;
+#N canvas 84 155 450 587 record 1;
 #X obj 151 13 receive 54y3g%%Thhg;
 #X obj 151 40 t b a;
 #X obj 165 87 ctxfiles/recompile \$0;
@@ -1198,13 +1198,14 @@ term, f 30;
 #f \; -append tf \$0 #f \; -stop tf \$0 #f \; -first tf \$0 #f \; -playback
 tf \$0 #f \; -toggleprep tf \$0 #f \; -exclude tf \$0 #f \; -floats
 tf \$0 #f \; -lock tf \$0 #f \; -floatprep tf \$0 #f \; -pattern tf
-\$0 #f \; -messages tf \$0 #f \; bang t \; ## s \$0-othr;
+\$0 #f \; -messages tf \$0 #f \; bang t \; -interrupt tf \$0 #f \;
+## s \$0-othr;
 #X obj 165 110 ctxfiles/br2 demux 2 \; #f t \; #f gs r-source \; #f
 gs r-delay \; #f gs r-trigger \; #f gs r-output \; #f gs r-prepend
 \; #f gs r-append \; #f gs r-stop \; #f gs r-first \; #f gs r-playback
 \; #f gs r-toggleprep \; #f gs r-exclude \; #f gs r-floats \; #f gs
 r-lock \; #f gs r-floatprep \; #f gs r-pattern \; #f gs r-messages
-\; #f gs r-bang;
+\; #f gs r-bang \; #f t;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;

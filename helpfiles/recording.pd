@@ -1,4 +1,4 @@
-#N canvas 170 203 772 455 10;
+#N canvas 76 203 772 455 10;
 #X declare -path ../;
 #X obj 32 134 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -15,14 +15,12 @@
 #X obj 175 335 context :X 13 :d 6 :e 13 :i 0 0 0 0 0 0 0 0 1.5 0 0
 0 0 :J 1 :ID 1;
 #X msg 52 86 :r;
-#N canvas 259 131 560 344 (subpatch) 0;
+#N canvas 165 131 620 344 -interrupt 0;
 #X obj 176 305 outlet;
 #X text 187 118 The incoming message will be assigned to the first
 inlet up to 100ms after the first inlet is passed., f 54;
 #X text 223 175 The incoming message will be assigned to the first
 inlet up to 300ms after the first inlet is passed., f 54;
-#X text 274 248 Don't do this!;
-#X msg 151 248 :r 1 inlets 3000;
 #X text 16 15 The -delay offsets the "recording head" from the cursor.
 This means that messages will be recorded slightly before or after
 the position where the cursor appears on the canvas. The purose of
@@ -30,10 +28,15 @@ this is to compensate for buffer time and allow recording to feel more
 natural if you are doing it by hand., f 66;
 #X msg 70 123 :r -delay 1500;
 #X msg 107 180 :r -delay -1500;
+#X msg 151 248 :r -interrupt -delay 0;
+#X text 299 249 reset any setting during the recording. (Note: interrupt
+must be the first argument)., f 45;
+#X obj 18 182 cnv 15 15 15 empty empty default: 0 0 7 0 14 -262144
+-66577 0;
 #X connect 4 0 0 0;
+#X connect 5 0 0 0;
 #X connect 6 0 0 0;
-#X connect 7 0 0 0;
-#X restore 207 310 -delay;
+#X restore 207 310 -delay -interrupt;
 #X obj 623 69 declare -path ../;
 #N canvas 67 89 450 300 examples 0;
 #X restore 97 417 advanced examples;
@@ -253,8 +256,6 @@ messages on the left to see., f 35;
 #X restore 106 164 p-source -exclude;
 #X text 337 254 How should toggles behave during recording?;
 #X text 310 284 How should toggle-floats behave during recording?;
-#X text 256 310 How should the recording align with the Context cycle?
-;
 #N canvas 67 89 450 341 notes 0;
 #X text 57 22 1: Once the record function has started \, the ":r" message
 is interpreted as a bang. This allows you to record using the same
@@ -280,6 +281,7 @@ language of their own \, but the basics are quite simple and intuitive.
 you define emerging across the x-axis toggle array. Then look at the
 subwindows to learn about the different options for :r recording.,
 f 65;
+#X text 326 310 How should Context behave durint the recording?;
 #X connect 8 0 7 3;
 #X connect 9 0 7 3;
 #X connect 13 0 7 3;
