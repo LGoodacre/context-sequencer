@@ -1,4 +1,4 @@
-#N canvas 129 212 842 524 10;
+#N canvas 82 212 842 524 10;
 #X symbolatom 100 100 20 0 0 0 - #1-#2-r #1-#2-s, f 20;
 #X obj 135 357 spigot;
 #X obj 174 329 f 1;
@@ -29,11 +29,10 @@
 #X obj 135 425 else/fromany;
 #X obj 354 104 receive \$1-firstmode;
 #X obj 321 104 s2l;
-#X obj 431 223 l2s;
+#X obj 430 64 receive \$1-\$2-newsymbol;
 #X obj 511 275 symst \$1 \$2 9 2f \$0 1;
 #X obj 511 296 symst \$1 \$2 17 3f \$0 2;
 #X obj 511 317 symst \$1 \$2 25 4f \$0 3;
-#X obj 431 200 receive \$1-\$2-newsymbol;
 #X connect 1 0 21 0;
 #X connect 2 0 1 1;
 #X connect 3 0 1 1;
@@ -62,6 +61,5 @@
 #X connect 26 0 4 0;
 #X connect 27 0 10 0;
 #X connect 28 0 9 0;
-#X connect 29 0 13 0;
-#X connect 33 0 29 0;
+#X connect 29 0 10 0;
 #X coords 0 -1 1 1 122 17 2 100 100;
