@@ -197,9 +197,9 @@ to highlight commands., f 30;
 is optional., f 30;
 #X restore 7 60 about this patch;
 #X obj 718 10 declare -path ../;
-#X obj 15 129 cnv 15 423 300 empty \$0-cansize COMMAND↓ 10 -12 0
+#X obj 10 129 cnv 15 432 300 empty \$0-cansize COMMAND↓ 10 -12 0
 17 -191407 -1 0;
-#X obj 15 129 docfiles/spacer \$0 330 163 4 4 300;
+#X obj 10 129 docfiles/spacer \$0 305 164 4 4 300;
 #N canvas 394 89 625 412 scroll 0;
 #X obj 0 2 vsl 15 265 1.2 -0.05 0 0 \$0-yscroll-out \$0-yscroll-in
 empty 0 -9 0 10 -128992 -1 -1 25344 1;
@@ -254,7 +254,7 @@ empty 0 -9 0 10 -128992 -1 -1 25344 1;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
 #X coords 0 -1 1 1 15 300 2 0 -15;
-#X restore 423 129 pd scroll;
+#X restore 427 129 pd scroll;
 #X obj 665 0 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 665 0 ctxfiles/license;
