@@ -199,10 +199,10 @@ is optional., f 30;
 #X obj 718 10 declare -path ../;
 #X obj 15 129 cnv 15 423 300 empty \$0-cansize COMMAND↓ 10 -12 0
 17 -191407 -1 0;
-#X obj 15 129 docfiles/spacer \$0 330 161 4 4 300;
-#N canvas 441 89 625 412 scroll 0;
-#X obj 0 2 vsl 15 265 1 -0.05 0 0 \$0-yscroll \$0-yscroll-in empty
-0 -9 0 10 -128992 -1 -1 25143 1;
+#X obj 15 129 docfiles/spacer \$0 330 163 4 4 300;
+#N canvas 394 89 625 412 scroll 0;
+#X obj 0 2 vsl 15 265 1.2 -0.05 0 0 \$0-yscroll-out \$0-yscroll-in
+empty 0 -9 0 10 -128992 -1 -1 26400 1;
 #X obj 1 -14 bng 13 250 50 0 \$0-up empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 38 -81 loadbang;
@@ -237,6 +237,9 @@ is optional., f 30;
 #X obj 237 39 min 1;
 #X obj 395 -11 receive \$0-bar-pos;
 #X obj 395 12 iemguts/canvasposition;
+#X obj 159 164 receive \$0-yscroll-out;
+#X obj 159 187 clip -0.05 1;
+#X obj 159 210 s \$0-yscroll;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
 #X connect 8 0 9 0;
@@ -248,6 +251,8 @@ is optional., f 30;
 #X connect 16 0 17 0;
 #X connect 17 0 14 0;
 #X connect 18 0 19 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
 #X coords 0 -1 1 1 15 300 2 0 -15;
 #X restore 423 129 pd scroll;
 #X obj 665 0 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
