@@ -1,5 +1,6 @@
-#N canvas 67 89 899 676 10;
+#N canvas 245 89 899 676 10;
 #X declare -path docfiles;
+#X declare -path ../;
 #X declare -path ../;
 #X obj 0 0 cnv 15 885 800 empty empty empty 20 12 0 14 -137887 -66577
 0;
@@ -17,22 +18,21 @@
 #X msg 615 87;
 #X obj 112 57 cnv 15 330 69 empty empty CATEGORY→ -94 35 0 17 -191407
 -1 0;
-#N canvas 67 260 1152 500 hold 0;
+#N canvas 129 252 1152 500 hold 0;
 #X obj 338 469 s \$0-helpno;
 #X obj 283 370 receive \$0-got;
 #X obj 283 394 change;
-#X obj 67 394 text define \$0-help;
-#X obj 104 296 loadbang;
-#X obj 35 344 t b b;
-#X obj 12 369 s \$0-lb;
-#X msg 67 369 read -c context_commands.csv;
+#X obj 213 -19 text define \$0-help;
+#X obj 155 -176 loadbang;
+#X obj 203 440 s \$0-lb;
+#X msg 213 -44 read -c context_commands.csv;
 #X text 299 345 ARGS: \$0 no. x y font_size font_x font_y \, label
 ;
 #X obj 63 447 receive \$0-set;
 #X obj 63 471 t s s;
 #X obj 63 498 sel sym;
-#X obj 6 272 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 145 -141 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X obj 109 525 s \$0-on;
 #X obj 283 658 list prepend 0;
 #X obj 303 586 list prepend 1;
@@ -45,9 +45,9 @@
 #X obj 283 634 text get \$0-help;
 #X obj 303 562 text get \$0-help;
 #X obj 498 561 text get \$0-help;
-#X obj 35 267 receive \$0-ilb;
-#X obj 35 291 spigot 1;
-#X obj 35 315 t b f;
+#X obj 174 -146 receive \$0-ilb;
+#X obj 174 -122 spigot 1;
+#X obj 174 -98 t b f;
 #X symbolatom 213 80 13 0 0 0 search #0-onin #0-on2, f 13;
 #X obj 525 217 loadbang;
 #X obj 525 265 s \$0-onin;
@@ -85,62 +85,66 @@
 #X obj 531 157 declare -path docfiles;
 #X obj 498 635 s \$0-c1;
 #X obj 410 56 helpset \$0 recording;
+#X obj 174 -69 t b b b;
+#X obj 193 5 s \$0-newlb;
 #X connect 1 0 2 0;
-#X connect 2 0 49 0;
-#X connect 4 0 26 0;
-#X connect 5 1 7 0;
-#X connect 7 0 3 0;
-#X connect 9 0 10 0;
-#X connect 10 0 11 1;
-#X connect 10 1 11 0;
-#X connect 11 1 13 0;
-#X connect 12 0 5 0;
-#X connect 14 0 16 0;
-#X connect 15 0 16 0;
-#X connect 17 0 18 0;
-#X connect 18 0 63 0;
+#X connect 2 0 48 0;
+#X connect 4 0 25 0;
+#X connect 6 0 3 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 1;
+#X connect 9 1 10 0;
+#X connect 10 1 12 0;
+#X connect 11 0 64 0;
+#X connect 13 0 15 0;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 17 0 62 0;
+#X connect 18 0 21 0;
 #X connect 19 0 22 0;
 #X connect 20 0 23 0;
-#X connect 21 0 24 0;
+#X connect 21 0 13 0;
 #X connect 22 0 14 0;
-#X connect 23 0 15 0;
-#X connect 24 0 17 0;
+#X connect 23 0 16 0;
+#X connect 24 0 25 0;
 #X connect 25 0 26 0;
-#X connect 26 0 27 0;
-#X connect 27 0 5 0;
-#X connect 27 1 26 1;
-#X connect 29 0 31 0;
-#X connect 31 0 30 0;
-#X connect 32 0 37 0;
-#X connect 33 0 40 0;
-#X connect 34 0 35 0;
-#X connect 35 0 36 1;
-#X connect 36 0 39 0;
-#X connect 37 0 36 0;
-#X connect 37 1 33 0;
-#X connect 37 2 38 0;
-#X connect 39 0 38 0;
+#X connect 26 0 64 0;
+#X connect 26 1 25 1;
+#X connect 28 0 30 0;
+#X connect 30 0 29 0;
+#X connect 31 0 36 0;
+#X connect 32 0 39 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 1;
+#X connect 35 0 38 0;
+#X connect 36 0 35 0;
+#X connect 36 1 32 0;
+#X connect 36 2 37 0;
+#X connect 38 0 37 0;
+#X connect 39 0 40 0;
+#X connect 39 1 33 0;
 #X connect 40 0 41 0;
-#X connect 40 1 34 0;
-#X connect 41 0 42 0;
-#X connect 42 0 36 1;
-#X connect 43 0 19 0;
-#X connect 43 1 20 0;
-#X connect 43 2 21 0;
-#X connect 43 3 0 0;
-#X connect 43 4 45 0;
-#X connect 44 0 46 1;
-#X connect 45 0 44 0;
-#X connect 46 0 47 0;
-#X connect 48 0 46 0;
-#X connect 49 0 43 0;
+#X connect 41 0 35 1;
+#X connect 42 0 18 0;
+#X connect 42 1 19 0;
+#X connect 42 2 20 0;
+#X connect 42 3 0 0;
+#X connect 42 4 44 0;
+#X connect 43 0 45 1;
+#X connect 44 0 43 0;
+#X connect 45 0 46 0;
+#X connect 47 0 45 0;
+#X connect 48 0 42 0;
+#X connect 64 0 55 0;
+#X connect 64 1 65 0;
+#X connect 64 2 6 0;
 #X coords 0 -1 1 1 330 69 2 171 31;
 #X restore 113 57 pd hold;
-#X obj 602 122 context :H 6 :ID 1 :ol 1 5 obj 222 -37 receive reset
-6 obj 222 -15 t a f 6 obj 168 54 list split 1 5 msg 249 8 inlet \$1
-5 obj 249 32 iemguts/canvasconnections 1 7 obj 249 54 unpack s f f
-6 obj 318 77 t f b 5 obj 345 102 iemguts/canvasindex 1 4 obj 318 123
-pack 6 obj 318 145 t l l 4 obj 168 116 list 5 obj 345 191 iemguts/sendcanvas
+#X obj 602 122 context :H 8 :Y -1 :ID 1 :ol 1 5 obj 222 -37 receive
+reset 6 obj 222 -15 t a f 6 obj 168 54 list split 1 5 msg 249 8 inlet
+\$1 5 obj 249 32 iemguts/canvasconnections 1 7 obj 249 54 unpack s
+f f 6 obj 318 77 t f b 5 obj 345 102 iemguts/canvasindex 1 4 obj 318
+123 pack 6 obj 318 145 t l l 4 obj 168 116 list 5 obj 345 191 iemguts/sendcanvas
 2 8 msg 345 169 connect \$2 0 \$1 0 5 obj 168 78 t b 8 msg 168 138
 disconnect \$2 0 \$1 0 7 obj 202 78 list prepend 1 set 5 connect 3
 0 4 0 5 connect 4 0 5 0 5 connect 4 1 6 0 5 connect 5 0 16 0 5 connect
@@ -197,9 +201,8 @@ to highlight commands., f 30;
 is optional., f 30;
 #X restore 7 60 about this patch;
 #X obj 718 10 declare -path ../;
-#X obj 10 129 cnv 15 432 300 empty \$0-cansize COMMAND↓ 10 -12 0
-17 -191407 -1 0;
-#X obj 10 129 docfiles/spacer \$0 305 164 4 4 300;
+#X obj 10 129 cnv 15 1 1 empty \$0-cansize COMMAND↓ 10 -12 0 17 -191407
+-1 0;
 #N canvas 394 89 625 412 scroll 0;
 #X obj 0 2 vsl 15 265 1.2 -0.05 0 0 \$0-yscroll-out \$0-yscroll-in
 empty 0 -9 0 10 -128992 -1 -1 25344 1;
@@ -258,5 +261,7 @@ empty 0 -9 0 10 -128992 -1 -1 25344 1;
 #X obj 665 0 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 665 0 ctxfiles/license;
+#X obj 2 129 docfiles/spacer \$0 425 300 5;
+#X obj 753 75 declare -path ../;
 #X connect 3 0 10 0;
 #X connect 7 0 10 1;
