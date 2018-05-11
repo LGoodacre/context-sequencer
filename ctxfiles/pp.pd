@@ -1,5 +1,5 @@
-#N canvas 248 87 743 681 10;
-#X obj 100 100 bng 15 250 50 0 empty empty empty -2 8 0 8 -262144 -1
+#N canvas 201 89 743 679 10;
+#X obj 100 100 bng 17 250 50 0 empty empty empty -2 8 0 8 -262144 -1
 -1;
 #X obj 114 188 s \$3-press;
 #X obj 132 109 f 1;
@@ -160,4 +160,4 @@
 #X connect 68 0 67 0;
 #X connect 68 1 19 0;
 #X connect 69 0 24 0;
-#X coords 0 -1 1 1 15 15 2 100 100;
+#X coords 0 -1 1 1 17 17 2 100 100;

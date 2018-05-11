@@ -1,13 +1,13 @@
 #N canvas 67 344 963 392 10;
 #X declare -lib zexy -path zexy -path ./;
 #N canvas 67 232 974 495 move 0;
-#X obj 115 100 bng 15 250 50 0 \$0v empty ▼ 5 7 0 10 -262144 -1 -1
+#X obj 117 100 bng 17 250 50 0 \$0v empty ▼ 6 8 0 10 -262144 -1 -1
 ;
-#X obj 100 100 bng 15 250 50 0 \$0^ empty ▲ 5 6 0 10 -262144 -1 -1
+#X obj 100 100 bng 17 250 50 0 \$0^ empty ▲ 6 7 0 10 -262144 -1 -1
 ;
-#X obj 145 100 bng 15 250 50 0 \$0> empty ▶ 6 7 0 11 -262144 -1 -1
+#X obj 151 100 bng 17 250 50 0 \$0> empty ▶ 6 8 0 11 -262144 -1 -1
 ;
-#X obj 130 100 bng 15 250 50 0 \$0< empty ◀ 4 7 0 11 -262144 -1 -1
+#X obj 134 100 bng 17 250 50 0 \$0< empty ◀ 4 8 0 11 -262144 -1 -1
 ;
 #X text 155 466 14: call 8 rows of the matrix;
 #X obj 147 509 +;
@@ -19,7 +19,7 @@ control, f 34;
 #X obj 622 516 - 8;
 #X obj 661 516 - 8;
 #X obj 343 790 route 0;
-#X obj 160 100 hradio 15 1 0 4 \$0-mode \$0-moder empty 0 -8 0 10 -262144
+#X obj 168 100 hradio 17 1 0 4 \$0-mode \$0-moder empty 0 -8 0 10 -262144
 -1 -1 1;
 #X obj 170 623 pack f \$0 0.5 1;
 #X obj 193 652 pack f \$0 0 0;
@@ -295,7 +295,7 @@ with the movement thresholds \, return the bang.;
 #X restore 493 -35 pd double-clicks;
 #X obj 416 -59 t f f;
 #X obj 551 -82 t f f;
-#N canvas 150 173 569 524 :N 1;
+#N canvas 103 173 569 524 :N 0;
 #X obj 43 22 inlet;
 #X obj 166 16 inlet;
 #X obj 62 69 f 1;
@@ -670,7 +670,7 @@ with the movement thresholds \, return the bang.;
 #X connect 212 0 213 0;
 #X connect 213 0 214 0;
 #X connect 214 0 194 0;
-#X coords 0 -1 1 1 120 15 2 100 100;
+#X coords 0 -1 1 1 136 17 2 100 100;
 #X restore 100 100 pd move;
 #X obj 572 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -788,14 +788,7 @@ with the movement thresholds \, return the bang.;
 #X connect 19 2 18 0;
 #X connect 20 0 19 0;
 #X restore 483 290 pd print;
-#X obj 100 118 ctxfiles/p3 1 \$0 8;
-#X obj 100 133 ctxfiles/p3 2 \$0 7;
-#X obj 100 148 ctxfiles/p3 3 \$0 6;
-#X obj 100 163 ctxfiles/p3 4 \$0 5;
-#X obj 100 178 ctxfiles/p3 5 \$0 4;
-#X obj 100 193 ctxfiles/p3 6 \$0 3;
-#X obj 100 208 ctxfiles/p3 7 \$0 2;
-#X obj 100 223 ctxfiles/p3 8 \$0 1;
+#X obj 100 120 ctxfiles/p3 1 \$0 8;
 #N canvas 331 185 860 567 right-column 0;
 #X obj 187 -147 receive \$0-8-9-inn;
 #X obj 216 -125 receive \$0-7-9-inn;
@@ -2472,12 +2465,12 @@ y accuracy \, ID \, colour \, \$0, f 77;
 #X connect 126 1 127 0;
 #X connect 127 0 124 1;
 #X restore 430 170 pd mode-0;
-#X obj 223 118 vradio 15 1 0 8 \$0-vsels \$0-vselr empty 0 -8 0 10
+#X obj 239 120 vradio 17 1 0 8 \$0-vsels \$0-vselr empty 0 -8 0 10
 -262144 -1 -1 0;
-#X obj 238 116 ctxfiles/s1 \$0 0;
+#X obj 256 120 ctxfiles/s1 \$0 0;
 #X text -121 101 lots more in this subpatch -->;
-#X obj 344 102 tgl 14 0 \$0-preons \$0-preonr on -17 7 0 10 -261154
--1 -1 0 1;
+#X obj 361 100 tgl 17 0 \$0-preons \$0-preonr on 2 7 0 10 -261154 -1
+-1 0 1;
 #N canvas 488 255 575 495 on-off 0;
 #X obj 30 395 s \$0-alloff;
 #X obj 183 3 receive \$0-myID;
@@ -2725,7 +2718,7 @@ back to mx;
 #X restore 630 89 pd input;
 #X obj 630 67 iemguts/canvasargs;
 #X obj 630 45 receive \$0-carg;
-#N canvas 67 220 523 300 gui 0;
+#N canvas 754 124 523 300 gui 1;
 #X obj 145 270 iemguts/sendcanvas 1;
 #X obj 163 54 receive \$0-:gui;
 #X obj 145 106 f;
@@ -2734,28 +2727,28 @@ back to mx;
 #X obj 201 78 receive \$0-savestart;
 #X obj 145 222 relay coords;
 #X obj 214 245 spigot;
-#X msg 145 151 menu-open \, coords 0 -1 1 1 260 138 2 100 100 \, vis
-0;
-#X msg 168 174 menu-open \, coords 0 -1 1 1 139 138 2 221 100 \, vis
-0;
 #X obj 145 129 sel 0 1 -1;
 #X msg 184 198 menu-open \, coords 0 -1 1 1 260 138 0 100 100 \, vis
 0;
+#X msg 145 151 menu-open \, coords 0 -1 1 1 278 156 2 100 100 \, vis
+0;
+#X msg 168 174 menu-open \, coords 0 -1 1 1 139 156 2 239 100 \, vis
+0;
 #X connect 1 0 4 0;
-#X connect 2 0 10 0;
+#X connect 2 0 8 0;
 #X connect 3 0 2 0;
 #X connect 4 0 2 1;
-#X connect 4 1 10 0;
+#X connect 4 1 8 0;
 #X connect 5 0 4 1;
 #X connect 5 0 7 1;
 #X connect 6 0 0 0;
 #X connect 6 1 7 0;
 #X connect 7 0 0 0;
-#X connect 8 0 6 0;
+#X connect 8 0 10 0;
+#X connect 8 1 11 0;
+#X connect 8 2 9 0;
 #X connect 9 0 6 0;
-#X connect 10 0 8 0;
-#X connect 10 1 9 0;
-#X connect 10 2 11 0;
+#X connect 10 0 6 0;
 #X connect 11 0 6 0;
 #X restore 430 339 pd gui;
 #N canvas 467 406 450 300 saving 0;
@@ -2779,12 +2772,12 @@ pentatonic major \; %^ :3f4 pentatonic minor \; %^ :3f5 blues major
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
 #X restore 630 111 pd saving;
-#X obj 238 131 ctxfiles/s1 \$0 1;
-#X obj 238 146 ctxfiles/s1 \$0 2;
-#X obj 238 161 ctxfiles/s1 \$0 3;
-#X obj 238 191 ctxfiles/s1 \$0 5;
+#X obj 256 137 ctxfiles/s1 \$0 1;
+#X obj 256 154 ctxfiles/s1 \$0 2;
+#X obj 256 171 ctxfiles/s1 \$0 3;
+#X obj 256 205 ctxfiles/s1 \$0 5;
 #X obj 688 18 receive \$0-iemargr;
-#X obj 238 206 ctxfiles/s1 \$0 6;
+#X obj 256 222 ctxfiles/s1 \$0 6;
 #X obj 560 45 inlet;
 #N canvas 656 353 450 415 quantize 0;
 #X obj 255 43 inlet;
@@ -3011,8 +3004,8 @@ y-axis clicks in mode1.;
 #X connect 67 1 68 0;
 #X connect 68 0 60 1;
 #X restore 430 319 pd shift-function;
-#X obj 238 176 ctxfiles/s1 \$0 4;
-#X obj 238 221 ctxfiles/s1 \$0 7;
+#X obj 256 188 ctxfiles/s1 \$0 4;
+#X obj 256 239 ctxfiles/s1 \$0 7;
 #N canvas 67 91 450 661 mode-n1 0;
 #X obj 223 20 receive \$0-mode-1;
 #X obj 250 66 s \$0-clear;
@@ -3326,13 +3319,20 @@ colors;
 #X connect 44 4 16 0;
 #X restore 430 259 pd color;
 #X obj 334 65 declare -lib zexy -path zexy -path ./;
+#X obj 100 137 ctxfiles/p3 2 \$0 7;
+#X obj 100 154 ctxfiles/p3 3 \$0 6;
+#X obj 100 171 ctxfiles/p3 4 \$0 5;
+#X obj 100 188 ctxfiles/p3 5 \$0 4;
+#X obj 100 205 ctxfiles/p3 6 \$0 3;
+#X obj 100 222 ctxfiles/p3 7 \$0 2;
+#X obj 100 239 ctxfiles/p3 8 \$0 1;
 #X connect 1 0 2 0;
-#X connect 27 0 26 0;
-#X connect 28 0 27 0;
-#X connect 35 0 27 0;
-#X connect 37 0 44 0;
-#X connect 44 0 38 0;
-#X connect 44 1 26 0;
-#X connect 45 0 6 0;
-#X connect 46 0 47 0;
-#X coords 0 -1 1 1 260 138 2 100 100;
+#X connect 20 0 19 0;
+#X connect 21 0 20 0;
+#X connect 28 0 20 0;
+#X connect 30 0 37 0;
+#X connect 37 0 31 0;
+#X connect 37 1 19 0;
+#X connect 38 0 6 0;
+#X connect 39 0 40 0;
+#X coords 0 -1 1 1 278 156 2 100 100;
