@@ -1,8 +1,8 @@
-#N canvas 393 89 804 679 12;
+#N canvas 252 89 804 679 12;
 #X obj 382 55 f \$2;
 #X obj 440 685 s \$0-canv;
 #X obj 437 196 text get \$1-help;
-#X msg 440 588 label \$1;
+#X msg 565 99 label \$1;
 #X obj 341 376 text get \$1-help;
 #X obj 341 400 route bang;
 #X obj 408 196 + 1;
@@ -23,8 +23,8 @@
 #X obj 440 406 l2s;
 #X obj 440 430 t s s;
 #X obj 101 164 f \$2;
-#X obj 101 101 vsl 36 14 0 127 0 0 \$0nop \$0-canv empty 3 7 0 14 -166441
--166441 -128992 0 1;
+#X obj 101 101 vsl 36 14 0 127 0 0 \$0nop \$0-canv empty 3 7 0 14 -262144
+-262144 -1 0 1;
 #X obj 101 134 t b;
 #X obj 101 188 s \$1-got;
 #X msg 262 682 color 1 1 11;
@@ -46,6 +46,7 @@
 #X obj 565 34 receive \$1-\$2-hgstart;
 #X obj 565 59 unpack s f f;
 #X text 660 59 label \, text position \, size;
+#X msg 694 253 size \$1 14;
 #X connect 0 0 41 0;
 #X connect 2 0 19 0;
 #X connect 3 0 1 0;
@@ -73,7 +74,6 @@
 #X connect 19 1 20 1;
 #X connect 20 0 32 0;
 #X connect 21 0 22 0;
-#X connect 22 0 3 0;
 #X connect 23 0 26 0;
 #X connect 24 0 25 0;
 #X connect 25 0 23 0;
@@ -99,5 +99,8 @@
 #X connect 41 0 29 0;
 #X connect 42 0 9 0;
 #X connect 43 0 44 0;
+#X connect 44 0 3 0;
 #X connect 44 2 15 0;
+#X connect 44 2 46 0;
+#X connect 46 0 1 0;
 #X coords 0 -1 1 1 38 21 2 100 98;
