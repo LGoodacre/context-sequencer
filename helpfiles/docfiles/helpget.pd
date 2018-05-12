@@ -1,4 +1,4 @@
-#N canvas 412 176 1029 687 12;
+#N canvas 337 89 1029 679 12;
 #X obj 660 181 receive \$1-helpno;
 #X obj 660 230 text get \$1-help;
 #X obj 660 205 + \$2;
@@ -6,7 +6,7 @@
 #X msg 308 251 coords 0 -1 1 1 \$1 \$2 \$3 100 98;
 #X obj 101 99 bng 10 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 101 99 cnv 15 1 1 empty \$0-canv empty 0 0 0 4 -183345 -66577
+#X obj 101 99 cnv 15 1 1 empty \$0-canv empty 0 0 0 4 -182888 -66577
 0;
 #X msg 389 35 1;
 #X obj 390 90 spigot;
