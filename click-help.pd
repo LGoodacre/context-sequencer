@@ -1,5 +1,5 @@
-#N canvas 695 125 464 604 10;
-#X obj 197 27 ctxfiles/license;
+#N canvas 685 117 464 604 10;
+#X obj 227 32 ctxfiles/license;
 #X obj 51 32 cnv 15 92 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 46 27 cnv 15 92 42 empty empty empty 20 12 0 14 -1 -66577 0
@@ -32,3 +32,4 @@ cycle time. It's best to aim for the empty area in the middle. \; \;
 for a rude surprise!;
 #X obj 32 582 pddp/pddplink preset-help.pd -text see also: [preset]
 ;
+#X obj 319 7 helpfiles/docfiles/help-display \$0;

@@ -1,4 +1,4 @@
-#N canvas 439 89 892 676 10;
+#N canvas 429 89 892 676 10;
 #X declare -path ../ -path docfiles -path ../zexy -lib zexy;
 #X obj 0 0 cnv 15 885 800 empty empty empty 20 12 0 14 -218136 -66577
 0;
@@ -332,5 +332,6 @@ button for more information., f 30;
 0;
 #X obj 3 85 cnv 15 79 44 empty empty COMMAND 4 12 0 17 -186401 -1 0
 ;
+#X obj 445 413 help-display \$0;
 #X connect 27 0 7 1;
 #X connect 28 0 7 0;

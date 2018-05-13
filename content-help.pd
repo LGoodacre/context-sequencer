@@ -1,4 +1,4 @@
-#N canvas 371 138 497 630 10;
+#N canvas 361 130 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -15,8 +15,8 @@
 0;
 #X obj 71 165 cnv 15 345 379 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 306 370 dac~;
-#X obj 124 278 context :H 16 :X 17 :Y 6 :io o :d 1 :Z 4 :ID 1 :ol 1
+#X obj 306 390 dac~;
+#X obj 124 298 context :H 16 :X 17 :Y 6 :io o :d 1 :Z 4 :ID 1 :ol 1
 5 obj 1 92 ../ctx outlet~ 20 obj 26 14 ../content :lo helpfiles/wavs/ting.wav
 :x1 0.135417 :x2 0.46 :y1 0.233333 :y2 0.76 :s1 0.3 :s2 -0.3 :li 1
 13 floatatom 468 -85 5 0 0 0 - - - ¿ f 5 5 obj 468 -66 / 100 13 floatatom
@@ -32,9 +32,7 @@ and select 'properties' to see what options it has to offer. 5 msg
 12 0 4 0 5 connect 13 0 4 0;
 #X text 65 114 Content is used to store arrays and play them back during
 the Context cycle. It is embedded in the Overlay., f 56;
-#X text 74 564 See Context Manual Section 16 for details on how to
-use Content., f 46;
-#X text 84 365 This help patch continues inside the Overlay. Right
+#X text 84 385 This help patch continues inside the Overlay. Right
 click on Context and select 'open' to view., f 26;
 #X obj 244 45 ctxfiles/license;
 #N canvas 520 217 450 361 content 0;
@@ -170,5 +168,10 @@ choose between point \, polygon and bezier array display \; Y-BOTTOM:
 choose the lower limit of the array \; Y-TOP: choose the upper limit
 of the array \; COLOUR: set the background colour., f 166;
 #X restore 84 519 content menu;
+#X obj 351 12 helpfiles/docfiles/help-display \$0;
+#X obj 82 567 else/link helpfiles/links/content.html -h see Manual
+entry on [content];
+#X obj 82 587 pddp/pddplink helpfiles/links/content.html -text see
+Manual entry on [content];
 #X connect 9 17 8 0;
 #X connect 9 17 8 1;
