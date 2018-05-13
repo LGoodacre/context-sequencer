@@ -1,4 +1,4 @@
-#N canvas 429 89 892 676 10;
+#N canvas 409 89 892 676 10;
 #X declare -path ../ -path docfiles -path ../zexy -lib zexy;
 #X obj 0 0 cnv 15 885 800 empty empty empty 20 12 0 14 -218136 -66577
 0;
@@ -319,7 +319,6 @@ button for more information., f 30;
 #X obj 2 129 docfiles/spacer \$0 425 300 8;
 #X msg 615 87;
 #X msg 579 61;
-#X obj 2 84 cnv 15 81 44 empty empty empty 4 12 0 17 -1 -1 0;
 #X obj 770 32 cnv 15 106 25 empty can empty 5 13 0 17 -1 -33289 0;
 #X obj 771 33 cnv 15 104 24 empty can EXAMPLE 15 13 0 17 -239136 -33289
 0;
@@ -330,8 +329,16 @@ button for more information., f 30;
 #X obj 2 57 cnv 15 83 24 empty empty empty 4 12 0 17 -1 -1 0;
 #X obj 3 58 cnv 15 83 22 empty empty CATEGORY 1 11 0 17 -186401 -1
 0;
-#X obj 3 85 cnv 15 79 44 empty empty COMMAND 4 12 0 17 -186401 -1 0
-;
 #X obj 445 413 help-display \$0;
+#N canvas 67 89 450 300 tab 0;
+#X obj 101 101 cnv 15 79 44 empty empty COMMAND 4 12 0 17 -186401 -1
+0;
+#X obj 300 101 receive \$0-ontop;
+#X obj 300 147 iemguts/sendcanvas;
+#X msg 300 124 vis 1 \, vis 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X coords 0 -1 1 1 81 45 2 100 100;
+#X restore 2 84 pd tab;
 #X connect 27 0 7 1;
 #X connect 28 0 7 0;
