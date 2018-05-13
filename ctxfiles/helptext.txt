@@ -202,7 +202,7 @@
 -t AUTO PRINT pr 3 off output state;
 -c PRINT STATE print;
 -c SAVE LIST savelist;
--t INPUT LABEL il 2 off on;
+-t INPUT LABEL il 3 off temp permanent;
 -p list AUTO SAVE decides whether the Context state saves into the patch on Ctrl+s. You might want to turn this off if you don't want Context to change. \; AUTO PRINT selects what (if any) data prints to the console. 1 means that all sequenced messages will print as they fire. 2 prints messages as well as all changes to the Context state. 0 (default) prints nothing. \; PRINT STATE prints the entire context state to the consol now. \; SAVE LIST lets you view and edit the context saving list. \; INPUT LABEL turns on a label which displays all valid incoming commands.;
 -c SETTINGS TO THIS :se 0;
 -c SETTINGS TO ALL :se 1;
