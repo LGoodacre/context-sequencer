@@ -138,7 +138,7 @@ array :H 14 :X 9 :Y 6 :d 1 :c -835476 :Z 10 :ol 1 12 obj 0 25 content :x2 1 :y1 
 
 freemessage :I 1 :ex ' 0 :x ] q== 1 || c* (> a (> x 1) (0)) ' :sx 1;
 
-#create a Context which sends the contents of its :a database when you click on the corresponding toggle. This is mostly useful for sending custom messages in conjunction with [gridcontrol]. BUG: you get a 0 on the end of the message.;
+#create a Context which sends the contents of its :a database when you click on the corresponding toggle. This is mostly useful for sending custom messages in conjunction with [control]. BUG: you get a 0 on the end of the message.;
 
 
 

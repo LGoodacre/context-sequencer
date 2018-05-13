@@ -1,4 +1,4 @@
-#N canvas 364 231 489 373 10;
+#N canvas 317 231 489 373 10;
 #X declare -path ../;
 #X obj 20 19 cnv 15 202 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -132,7 +132,7 @@ your own presets.;
 #X text 93 308 ADVANTAGES: customizable \; DISADVANTAGES: difficult
 to edit;
 #X restore 286 249 preset command ::;
-#N canvas 560 87 583 674 command 0;
+#N canvas 513 89 583 674 command 0;
 #X text 46 10 'copy' is a special command that lets you copy settings
 from one Context to others. You can copy some or all commands \, makign
 this a very powerful feature., f 80;
@@ -164,17 +164,17 @@ f 18;
 #X text 61 393 copy :c from 8 to 9, f 11;
 #X text 376 394 special case (described below), f 17;
 #X obj 449 642 click copy;
+#X text 79 664 ADVANTAGES: dynamic \, fast \; DISADVANTAGES: complex
+syntax;
 #X text 49 533 If no ID numbers are specified \, then the 'copy' command
 enters a special mode where it waits for you to select which Contexts
 to copy to/from. You can do this by sending further 'copy' messages
 to other Contexts within 1.5 seconds of the original 'copy' messages.
 Only the arguments from original message will be applied \; all arguments
 to subsequent messages are ignored. This function is specially designed
-for [gridcontrol] and [click]. In this example patch \, you can use
-click to copy all commands by holding down Shift and Control and clicking
+for [control] and [click]. In this example patch \, you can use click
+to copy all commands by holding down Shift and Control and clicking
 on Contexts., f 77;
-#X text 79 664 ADVANTAGES: dynamic \, fast \; DISADVANTAGES: complex
-syntax;
 #X connect 5 0 1 0;
 #X connect 6 0 3 0;
 #X connect 7 0 4 1;

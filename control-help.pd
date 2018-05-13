@@ -1,4 +1,4 @@
-#N canvas 282 129 949 560 10;
+#N canvas 235 129 949 560 10;
 #X obj 9 485 ctxfiles/license;
 #N canvas 67 242 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -218,9 +218,9 @@ empty 20 12 0 14 -262130 -66577 0;
 #X restore 447 161 pd random;
 #X obj 447 60 metro 170;
 #X obj 495 28 receive \$0-on;
-#X obj 104 104 cnv 15 15 15 \$0-0-0-s \$0-0-0-r grid 30 50 0 34 -260818
+#X obj 104 104 cnv 15 15 15 \$0-0-0-s \$0-0-0-r empty 30 50 0 34 -260818
 -13330 0;
-#X obj 104 230 cnv 15 15 15 \$0-0-7-s \$0-0-7-r control -2 -40 0 35
+#X obj 104 230 cnv 15 15 15 \$0-0-7-s \$0-0-7-r control -2 -57 0 35
 -260818 -66577 0;
 #X msg 517 302 \; \$4-\$3-\$2-r color 14;
 #X obj 313 158 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -268,18 +268,18 @@ empty 20 12 0 14 -262130 -66577 0;
 #X obj 592 27 context :d 1 :x = 3 2 1 :ID 1;
 #X obj 667 27 context :c 12 :d 1 :x = 4 3 :ID 2;
 #X obj 740 27 context :Y -1 :c 5 :d 1 :x = 5 2 :y = 2 1 :ID 3;
-#X text 7 163 [gridcontrol] is an interface between Context and the
-Novation Launchpad Mk2. It lets you control a Context network using
-the Launchpad MIDI hardware \, greatly increasing the speed and efficiency
-of simple operations (not to mention the fun). [gridcontrol] is designed
-for live performance and improvisation \, but can also be useful for
-network composition. With [gridcontrol] \, you can:, f 36;
-#X text 403 31 Here are some Contexts which will be linked to [gridcontrol]
+#X text 7 163 [control] is an interface between Context and the Novation
+Launchpad Mk2. It lets you control a Context network using the Launchpad
+MIDI hardware \, greatly increasing the speed and efficiency of simple
+operations (not to mention the fun). [control] is designed for live
+performance and improvisation \, but can also be useful for network
+composition. With [control] \, you can:, f 36;
+#X text 403 31 Here are some Contexts which will be linked to [control]
 , f 22;
 #X text 18 329 --start and stop Contexts \; --record into Context \;
 --edit toggle arrays \; --edit toggle float arrays \; --send custom
 commands.;
-#X text 5 406 [gridcontrol] is fully documented in the Context manual.
+#X text 5 406 [control] is fully documented in the Context manual.
 This helpfile serves as a quick-reference and start guide., f 36;
 #X obj 495 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -294,14 +294,13 @@ This helpfile serves as a quick-reference and start guide., f 36;
 #X obj 721 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #N canvas 67 89 450 160 (subpatch) 0;
-#X text 16 16 [gridcontrol] links with all the Contexts in one patch.
-It doesn't make sense to have more than one instance of [gridcontrol]
-open in a single patch \, but having several Context patches open each
-with their own [gridcontrol] can be very useful. Only one instance
-of [gridcontrol] can be actively communicating with the Launchpad at
-on time. To select which one is active \, use the "on" button \, or
-press the up and down (or left and right) buttons on the Launchpad
-together.;
+#X text 16 16 [control] links with all the Contexts in one patch. It
+doesn't make sense to have more than one instance of [control] open
+in a single patch \, but having several Context patches open each with
+their own [control] can be very useful. Only one instance of [control]
+can be actively communicating with the Launchpad at on time. To select
+which one is active \, use the "on" button \, or press the up and down
+(or left and right) buttons on the Launchpad together.;
 #X obj 384 135 outlet;
 #X restore 739 224 on-off;
 #N canvas 366 150 450 241 (subpatch) 0;
@@ -331,7 +330,7 @@ To switch to the y-axis \, double click the mode 2 selector button
 ("User 2").;
 #X text 14 158 In Mode 2 \, the Function Selector is used to start
 the given Context. It can also be used to send other commands \, if
-you use the Function Selector in the [gridcontrol] abstraction \, rather
+you use the Function Selector in the [control] abstraction \, rather
 than on the Launcpad itself. This is the only instance where the behaviour
 of the patch differs from the behaviour of the hardware.;
 #X text 15 248 A secondary feature of Mode 2 lets you start Context
@@ -361,10 +360,10 @@ to [slide] and [slide2]. It enables you to control the sliders in a
 custom mixer abstraction using the Launchpad. The abstraction must
 have the [pgrid] object placed in it \, along with [slide] and/or [slide2].
 An example patch is included in this file to help you. You can use
-[gridcontrol] to control multiple such patches by double clicking on
-the "Mixer" button.;
+[control] to control multiple such patches by double clicking on the
+"Mixer" button.;
 #X text 12 135 To enter Mover mode \, simply click on the [pgrid] "bang"
-open in the [slide]/[slide2] abstraction (an instance of [gridcontrol]
+open in the [slide]/[slide2] abstraction (an instance of [control]
 must be present in the same patch in order for this to work). In Mixer
 mode \, you will see as many vertical virtual faders as there are [slide]/[slide2]
 objects in the abstraction. Clicking on a new cell moves the given
@@ -383,8 +382,8 @@ is not large enough to represent the array. Their usage is generally
 very intuitive. If a Position Selector is not lit \, it means that
 it will have no effect.;
 #X text 9 78 You can also use the Position Selectors to jump between
-different instances of [gridcontrol] in different patches. To do this
-\, click on both the up and down (or left and right) buttons together.
+different instances of [control] in different patches. To do this \,
+click on both the up and down (or left and right) buttons together.
 ;
 #X restore 357 231 position-selectors;
 #N canvas 309 162 450 227 (subpatch) 0;
@@ -397,21 +396,21 @@ the same assignments as in mode 1 \, but send to the selected Context
 immediately when pressed. In mode 4 they determine the time duration
 for the slider movement.;
 #X text 14 117 Function selectors each have a default message \, which
-is visible in the [gridcontrol] patch. You can also edit the message
-by typing into the symbol atom. The symbol $ will be replaced with
-the \$0 value for the parent patch \, while % will be replaced with
-the ID number of the Context which is set to receive the message.;
+is visible in the [control] patch. You can also edit the message by
+typing into the symbol atom. The symbol $ will be replaced with the
+\$0 value for the parent patch \, while % will be replaced with the
+ID number of the Context which is set to receive the message.;
 #X restore 774 336 function-selectors;
 #N canvas 67 87 450 105 (subpatch) 0;
 #X text 16 6 With quantize turned on (:qu 1) \, any :s or :ss command
-send by [gridcontrol] will snap to either the previous or the next
-beat. In order to achieve this \, [gridcontrol] must be given the beat.
-This is dome from its inlet in the top-left corner.;
+send by [control] will snap to either the previous or the next beat.
+In order to achieve this \, [control] must be given the beat. This
+is dome from its inlet in the top-left corner.;
 #X restore 710 494 quantize;
 #N canvas 638 324 524 399 arguments 0;
-#X text 22 17 [gridcontrol] has a few commands which can be sent to
-it through creation arguments. It also uses these commands to save
-custom Function Selector messages (this happens automatically).;
+#X text 22 17 [control] has a few commands which can be sent to it
+through creation arguments. It also uses these commands to save custom
+Function Selector messages (this happens automatically).;
 #X text 43 86 :qu -- quantize on or off \; :gui 1 -- turn the grid
 section of the GUI off \; :gui -1 turn the GUI completely off (-1)
 \; :sa 0 -- turn the automatic saving off \; :ac 1 --turn active window
@@ -452,27 +451,27 @@ toggle-float connections ("c-numbers") instead of regular toggle floats.
 -1;
 #N canvas 67 87 450 209 (subpatch) 0;
 #X obj 382 171 outlet;
-#X text 36 17 Mode 0 lets you jump to a difference instance of [gridcontrol]
+#X text 36 17 Mode 0 lets you jump to a difference instance of [control]
 and a different patch. This is only useful if you have more than one
-instance of [gridcontrol] open at once. In mode 0 \, each cell corresponds
-to one instance of [gridcontrol]. The colour is that of the Context
-in the top-left hand corner of that [gridcontrol]'s patch. Clicking
-on that cell will jump to the given patch. Mode 0 is the same in every
-instance of [gridcontrol] that is open \, so it doesn't make any difference
-where you summon it from.;
+instance of [control] open at once. In mode 0 \, each cell corresponds
+to one instance of [control]. The colour is that of the Context in
+the top-left hand corner of that [control]'s patch. Clicking on that
+cell will jump to the given patch. Mode 0 is the same in every instance
+of [control] that is open \, so it doesn't make any difference where
+you summon it from.;
 #X restore 475 173 mode-0;
 #N canvas 67 87 450 135 (subpatch) 0;
-#X text 41 29 [gridcontrol] has a small properties menu. You can access
+#X text 41 29 [control] has a small properties menu. You can access
 it by right clicking and selecting "properties". There you will be
 able to select most of the same options as listed in "creation arguments"
 \, and define the mode-2 ID list.;
 #X restore 780 494 properties;
-#X obj 476 315 gridcontrol;
-#X text 378 106 Note: It only makes sense to use [gridcontrol] if you
-have a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
-However \, the [gridcontrol] patch contains a fully functional mockup
-of the controller \, so this help-file will work still with no MIDI
-hardware., f 72;
+#X obj 476 315 control;
+#X text 378 106 Note: It only makes sense to use [control] if you have
+a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
+However \, the [control] patch contains a fully functional mockup of
+the controller \, so this help-file will work still with no MIDI hardware.
+, f 72;
 #X connect 15 0 14 0;
 #X connect 16 0 13 0;
 #X connect 17 0 12 0;
