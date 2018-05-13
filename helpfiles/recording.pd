@@ -1,4 +1,4 @@
-#N canvas 76 203 772 455 10;
+#N canvas 67 203 772 455 10;
 #X declare -path ../;
 #X obj 32 134 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -170,11 +170,11 @@ determines whether an individual toggle can be toggled more than once.
 #X connect 15 0 0 0;
 #X connect 16 0 0 0;
 #X restore 168 254 -pattern -toggleprep -lock;
-#N canvas 251 119 843 429 -floatprep 0;
-#X obj 294 364 outlet;
+#N canvas 378 145 843 429 -floatprep 0;
+#X obj 337 414 outlet;
 #X obj 17 105 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
 -66577 0;
-#X obj 138 259 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
+#X obj 181 309 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
 -66577 0;
 #X text 201 10 The -floats sub-command deterines whether/how toggle
 floats should be interpreted from the incoming message. -floatprep
@@ -187,22 +187,27 @@ the recording.;
 #X text 224 138 This means that toggle floats will be set during the
 recording. If the incoming message is a list \, the first float in
 the list will be set as a toggle float.;
-#X text 330 259 This means that incoming numbers will be used as regular
+#X text 373 309 This means that incoming numbers will be used as regular
 toggle floats for use with the = variable., f 66;
-#X msg 221 259 :r -floatprep 0;
-#X msg 263 309 :r -floatprep 1;
-#X text 382 308 This means that incoming numbers will be used as float
+#X msg 264 309 :r -floatprep 0;
+#X msg 306 359 :r -floatprep 1;
+#X text 425 358 This means that incoming numbers will be used as float
 connects., f 66;
-#X msg 177 207 :r -floats any-symbol 4;
-#X text 331 193 This means that toggle floats will be set during the
+#X msg 220 257 :r -floats any-symbol 4;
+#X text 374 243 This means that toggle floats will be set during the
 recording. Incoming messages will be searched for the given cue (in
 this case \, "any-symbol"). The following character will be taken for
 the toggle float.;
+#X msg 173 202 :r -floats -c 6;
+#X text 290 192 This means that toggle floats will be set to a constant
+number during the recording \, specified by the argument. Any incoming
+numbers from the source have no effect.;
 #X connect 5 0 0 0;
 #X connect 6 0 0 0;
 #X connect 9 0 0 0;
 #X connect 10 0 0 0;
 #X connect 12 0 0 0;
+#X connect 14 0 0 0;
 #X restore 189 284 -floats -floatprep;
 #N canvas 67 162 855 603 -exclude 0;
 #X obj 504 531 outlet;
