@@ -1,8 +1,8 @@
 :g 0;
 :X 5;
 :Y 4;
-:a bang;
-:b bang;
+:a -clear;
+:b -clear;
 :c 0;
 :d 0;
 :e 1;
