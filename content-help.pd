@@ -1,4 +1,4 @@
-#N canvas 361 130 497 630 10;
+#N canvas 173 130 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -52,11 +52,11 @@ relatively. A loaded file or array reference will save automatically
 save and be reloaded next time the patch is opened \, but a drawn array
 will not save unless it is told to (see "saving content").;
 #X restore 84 475 loading content;
-#N canvas 162 260 450 155 content 0;
+#N canvas 68 260 450 155 content 0;
 #X text 17 38 Content can be moved and resized from the parent patch.
 To do this \, you need to have the [mover] object inside the overlay.
 ;
-#X obj 16 90 pddp/pddplink mover-help.pd -text See the mover help patch
+#X obj 16 90 else/openfile mover-help.pd -h See the [mover] help patch
 for how to use [mover].;
 #X restore 84 497 moving content;
 #N canvas 117 164 1211 495 commands 0;
@@ -100,7 +100,7 @@ of the array (in samples). This setting does not save automatically
 set as a creation argument., f 186;
 #X connect 2 0 5 0;
 #X connect 4 0 6 0;
-#X restore 287 497 content commands;
+#X restore 288 497 content commands;
 #N canvas 65 97 450 413 content 0;
 #X text 12 46 There are two ways of saving the contents of Content.
 \; \; The first is to save a file or array reference via the :lo command.
@@ -118,20 +118,20 @@ Then save the parent patch as usual. \; \; Saving the contents of a
 drawn array into the patch is only recommended for smaller arrays (ie.
 of a few hundred points). Saving larger arrays may crash your computer.
 ;
-#X restore 301 475 saving content;
-#N canvas 254 109 466 300 content 0;
+#X restore 300 475 saving content;
+#N canvas 207 109 466 300 content 0;
 #X text 18 28 There are two ways of reading Content. The first is using
 the outlet~ hidden over the bottom left corner. You can send the audio
 signal to the parent patch using [send~] or [throw~] \, or create an
 outlet~ on Context using;
-#X obj 350 68 pddp/pddplink ctx-help.pd -text [ctx outlet~];
 #X text 20 100 The second way to access Content's data is by using
 the ~ message variable. If Context sends a message while its cursor
 is over a Content array \, the ~ character will be replaced by a snapshot
 of the array at that time. This is useful for setting parameters and
 modulations. For an example see;
-#X obj 103 165 pddp/pddplink helpfiles/10_message_variable_examples_2.pd
-;
+#X obj 358 81 else/openfile ctx-help.pd -h [ctx outlet~];
+#X obj 300 196 else/openfile helpfiles/10_message_variable_examples_2.pd
+-h message variable examples;
 #X restore 294 453 reading content;
 #X text 85 174 [content] is the blue box embedded inside the green
 [context]. [content] only works if it is embedded like this. For embedding
@@ -168,10 +168,8 @@ choose between point \, polygon and bezier array display \; Y-BOTTOM:
 choose the lower limit of the array \; Y-TOP: choose the upper limit
 of the array \; COLOUR: set the background colour., f 166;
 #X restore 84 519 content menu;
-#X obj 351 12 helpfiles/docfiles/help-display \$0;
-#X obj 82 567 else/link helpfiles/links/content.html -h see Manual
-entry on [content];
-#X obj 82 587 pddp/pddplink helpfiles/links/content.html -text see
+#X obj 10 6 helpfiles/docfiles/help-display \$0;
+#X obj 83 576 else/openfile helpfiles/links/content.html -h --see Context
 Manual entry on [content];
 #X connect 9 17 8 0;
 #X connect 9 17 8 1;
