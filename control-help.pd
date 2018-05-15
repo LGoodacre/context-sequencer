@@ -1,6 +1,6 @@
-#N canvas 235 129 949 560 10;
+#N canvas 225 121 949 560 10;
 #X obj 9 485 ctxfiles/license;
-#N canvas 67 242 824 371 grid 0;
+#N canvas 67 234 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 922 21 t b f f;
@@ -407,7 +407,7 @@ send by [control] will snap to either the previous or the next beat.
 In order to achieve this \, [control] must be given the beat. This
 is dome from its inlet in the top-left corner.;
 #X restore 710 494 quantize;
-#N canvas 638 324 524 399 arguments 0;
+#N canvas 628 316 514 399 arguments 0;
 #X text 22 17 [control] has a few commands which can be sent to it
 through creation arguments. It also uses these commands to save custom
 Function Selector messages (this happens automatically).;
@@ -423,11 +423,10 @@ function selector in mode 3 \; ... \; :3f7 -- assign a message to the
 eighth function selector in mode 3 \; :4f0 -- assign a message to the
 first function selector in mode 4 \; ... \; :4f7 -- assign a message
 to the eighth function selector in mode 4 \; :tx -- switch toggle mode
-and start mode in Mode 2 \; :ty -- select a suffic for the :s message
-in start mode. By default \, this is "p" \, meaning that clicking toggles
-will start Context at a given point along its x-axis. If you replace
-this with "m" \, it will start at a given marker (see "marker-help.pd").
-, f 68;
+and start mode in Mode 2 \; :ty -- by default \, start mode in Mode
+2 has uses the command ":s p" to start Context. With :ty you can replace
+this with any other command. \; :tz -- append a custom message to the
+start message, f 68;
 #X restore 498 494 creation arguments;
 #N canvas 408 148 450 323 keys 0;
 #X text 40 22 Each cell has an alternate function which can be activated
