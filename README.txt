@@ -15,7 +15,7 @@ Context runs on PD Vanilla 0.48.1 or later. Once you have downloaded Context, yo
 
 EXTERNALS:
 
-Externals are PD objects that are not available in PD Vanilla and must be installed seperately (Help --> Find Externals). Context relies heavily on externals (see LIST OF EXTERNAL LIBRARIES below). To make setup at easy as possible, Context distributes with all its external dependencies, according to the terms of their various licenses. This means that Context should work "out of the box" without the user having to manually download and declare external libraries.
+Externals are PD objects that are not available in PD Vanilla and must be installed seperately (Help --> Find Externals). Context relies heavily on externals (see LIST OF EXTERNAL LIBRARIES below). To make setup at easy as possible, Context distributes with all its external dependencies, according to the terms of their various licenses. This means that Context should work "out of the box" without the user having to manually download and declare external libraries. (Note: this only works for 64-bit systems; 32-bit users will have to provide their own externals).
 
 There are some reasons why you might not want to use the externals which are distributed with Context. For instance, you might find that your patches are reverting to an unwanted version of an external object, if you have a different version of a library that the one Context is using. If you want to avoid the externals that are distributed with Context, or if you find that they are not working, simply delete or rename the following folders from the main Context folder: "cyclone", "else", "flatgui", "hcs", "iemguts", "iemmatrix" "list-abs", and "zexy". (Do not delete "ctxfiles" or "helpfiles"!) Context will now look for its external objects in your usual search directories, so make sure that your libraries are in order inside your "PD Documents Directory" or in another search path.
 
@@ -54,7 +54,7 @@ LIST OF EXTERNAL LIBRARIES REQUIRED BY CONTEXT:
 
 zexy
 cyclone
-else (1.0-beta8 or later)
+else (1.0-beta9 or later)
 flatgui
 list-abs
 hcs
@@ -115,7 +115,7 @@ list-abs/list-filter
 list-abs/list-map
 list-abs/list-pad
 list-abs/list-replace
-exy/demux
+zexy/demux
 zexy/l2s
 zexy/msgfile
 zexy/mux
