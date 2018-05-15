@@ -1,4 +1,4 @@
-#N canvas 691 143 592 533 10;
+#N canvas 671 127 592 533 10;
 #X obj 38 14 cnv 15 152 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 33 9 cnv 15 152 52 empty empty empty 20 12 0 14 -1 -66577 0
@@ -12,24 +12,13 @@ and complexity makes tracking them down tricky. [finder] allows for
 editing Context notes \, either in the message database or toggle float
 array., f 72;
 #X obj 40 211 context :a ' a - = ' :d 3 :i 1 1 2 4 2.5 :n ' me ' :x
-= 2 3 5;
+= 5 3 2 :ID 1;
 #X obj 115 211 context :a ' b - 1 | b - 2 | b - 3 | b - 4 ' :d 3 :e
-5 :i 0 0 0 0 1.5 :n ' me ' :x = 2 3 5;
+5 :i 0 0 0 0 1.5 :n ' me ' :x = 5 3 2 :ID 2;
 #X msg 29 155 start;
 #X msg 52 178 stop context;
 #X text 45 285 INSTRUCTIONS:;
-#X text 45 312 1: start Context network \; 2: observe pattern in [finder]
-timeline \; 3: click on one of the timeline events. Whichever toggle
-this note originated from will be located (ie. will shake). \; 4: to
-turn that toggle off \, press the space key. 5: To change the note
-\, scroll the number box up or down. \; --If the original toggle had
-a = character \, scrolling the number will change the toggle float.
-\; --If the original toggle had no special character \, scrolling the
-toggle will edit the first number in th eappropriate term of the message
-database.--If the original toggle has any other special character \,
-a warning message will display. You can edit the message database \,
-by holding Shift.;
-#N canvas 67 257 535 300 commands 0;
+#N canvas 67 257 535 300 (subpatch) 0;
 #X text 110 18 FINDER COMMANDS;
 #X text 17 52 [finder] commands are entered (and edited) through creation
 arguments. Valid commands are:;
@@ -41,5 +30,16 @@ arguments. Valid commands are:;
 -- determine whether [sketch] is on by default, f 70;
 #X restore 384 276 commands;
 #X obj 218 164 finder :l me- :k 15 :y 100 :start;
+#X text 45 312 1: start Context network \; 2: observe pattern in [finder]
+timeline \; 3: click on one of the timeline events. Whichever toggle
+this note originated from will be located (ie. will shake). \; 4: to
+turn that toggle off \, press the space key. \; 5: To change the note
+\, scroll the number box up or down. \; --If the original toggle had
+a = character \, scrolling the number will change the toggle float.
+\; --If the original toggle had no special character \, scrolling the
+toggle will edit the first number in the appropriate term of the message
+database. \; --If the original toggle has any other special character
+\, a warning message will display. You can override the warning by
+holding Shift and scrolling.;
 #X connect 7 0 5 1;
 #X connect 8 0 5 1;
