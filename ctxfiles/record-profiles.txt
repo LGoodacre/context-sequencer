@@ -1,2 +1,5 @@
 play -output 1 -floats 1;
 messmod -messprep -rot -1 -messages 1;
+ctrl -messages 1 -prepend <i -floatprep 1 :trigger 1 -first 1;
+
+## add your own recording profiles here. The first item is the search term. The rest are recording operators.
