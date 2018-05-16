@@ -1,6 +1,6 @@
-#N canvas 225 121 949 560 10;
+#N canvas 215 113 949 560 10;
 #X obj 9 485 ctxfiles/license;
-#N canvas 67 234 824 371 grid 0;
+#N canvas 67 226 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 922 21 t b f f;
@@ -281,17 +281,17 @@ composition. With [control] \, you can:, f 36;
 commands.;
 #X text 5 406 [control] is fully documented in the Context manual.
 This helpfile serves as a quick-reference and start guide., f 36;
-#X obj 495 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 515 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 602 372 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 624 372 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 580 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 598 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 565 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 582 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 551 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 564 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 721 319 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 742 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #N canvas 67 89 450 160 (subpatch) 0;
 #X text 16 16 [control] links with all the Contexts in one patch. It
@@ -386,8 +386,8 @@ different instances of [control] in different patches. To do this \,
 click on both the up and down (or left and right) buttons together.
 ;
 #X restore 357 231 position-selectors;
-#N canvas 309 162 450 227 (subpatch) 0;
-#X obj 377 198 outlet;
+#N canvas 299 154 450 390 (subpatch) 0;
+#X obj 377 328 outlet;
 #X text 13 14 The function selectors work differently depending on
 the mode. In mode 1 \, they are used to set the message that will be
 sent to a Context by clicking on it. In mode 2 \, they are used to
@@ -400,6 +400,12 @@ is visible in the [control] patch. You can also edit the message by
 typing into the symbol atom. The symbol $ will be replaced with the
 \$0 value for the parent patch \, while % will be replaced with the
 ID number of the Context which is set to receive the message.;
+#X text 13 207 In Mode 2 \, the Function selector holds a second Function
+message \, which is used in :tx mode. By default \, this is the message
+":s p" which is used to start Context at a specific location \, but
+it could be replaced with anything. This message can take one variable
+\, specified by "%d". The variable is substitued for a number according
+to which cell triggers the :tx message.;
 #X restore 774 336 function-selectors;
 #N canvas 67 87 450 105 (subpatch) 0;
 #X text 16 6 With quantize turned on (:qu 1) \, any :s or :ss command
@@ -407,7 +413,7 @@ send by [control] will snap to either the previous or the next beat.
 In order to achieve this \, [control] must be given the beat. This
 is dome from its inlet in the top-left corner.;
 #X restore 710 494 quantize;
-#N canvas 628 316 514 399 arguments 0;
+#N canvas 618 308 514 399 arguments 0;
 #X text 22 17 [control] has a few commands which can be sent to it
 through creation arguments. It also uses these commands to save custom
 Function Selector messages (this happens automatically).;
@@ -423,10 +429,7 @@ function selector in mode 3 \; ... \; :3f7 -- assign a message to the
 eighth function selector in mode 3 \; :4f0 -- assign a message to the
 first function selector in mode 4 \; ... \; :4f7 -- assign a message
 to the eighth function selector in mode 4 \; :tx -- switch toggle mode
-and start mode in Mode 2 \; :ty -- by default \, start mode in Mode
-2 has uses the command ":s p" to start Context. With :ty you can replace
-this with any other command. \; :tz -- append a custom message to the
-start message, f 68;
+and start mode in Mode 2 \;, f 68;
 #X restore 498 494 creation arguments;
 #N canvas 408 148 450 323 keys 0;
 #X text 40 22 Each cell has an alternate function which can be activated
@@ -446,9 +449,9 @@ at once. In mode 2 \, it will help you alter multiple toggles at once
 toggle-float connections ("c-numbers") instead of regular toggle floats.
 ;
 #X restore 628 494 shift keys;
-#X obj 537 318 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 547 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#N canvas 67 87 450 209 (subpatch) 0;
+#N canvas 67 89 450 209 (subpatch) 0;
 #X obj 382 171 outlet;
 #X text 36 17 Mode 0 lets you jump to a difference instance of [control]
 and a different patch. This is only useful if you have more than one
@@ -471,6 +474,8 @@ a Novation Launchpad Mk2 (https://global.novationmusic.com/launch/launchpad).
 However \, the [control] patch contains a fully functional mockup of
 the controller \, so this help-file will work still with no MIDI hardware.
 , f 72;
+#X obj 550 526 else/openfile helpfiles/links/control.html -h see the
+Context Manual entry on [control];
 #X connect 15 0 14 0;
 #X connect 16 0 13 0;
 #X connect 17 0 12 0;

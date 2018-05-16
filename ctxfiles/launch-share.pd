@@ -1,11 +1,11 @@
-#N canvas 371 405 450 298 10;
+#N canvas 361 397 450 298 10;
 #X declare -path ../;
 #X obj 151 25 shared ctxfiles/launch-share;
 #X msg 102 223 vis 1;
 #X obj 102 245 iemguts/sendcanvas;
 #X obj 102 201 receive lshare;
 #X obj 88 66 array define dummy@%G 1;
-#N canvas 93 178 740 538 messages 0;
+#N canvas 83 170 740 538 messages 0;
 #X obj 134 73 receive YYh&&8(v;
 #X obj 201 117 t b a;
 #X obj 311 164 ctxfiles/recompile \$0;
@@ -29,9 +29,8 @@ copy ~ ID \; :2f0 gtfs \$0 #f 2f0 :s \; :2f1 gtfs \$0 #f 2f1 :ss
 4f4 3000 \; :4f5 gtfs \$0 #f 4f5 1000 \; :4f6 gtfs \$0 #f 4f6 500 \;
 :4f7 gtfs \$0 #f 4f7 1 \; :qu gtfs \$0 #f qu 0 \, :quantize #l \; :gui
 gtfs \$0 #f gui 0 \, :GUI #l \; :sa gtfs \$0 #f sa 1 \; :ac gtfs \$0
-#f ac 0 \; :m1 gtfs \$0 #f m1 bang \; :tx gtfs \$0 #f tx 0 \; :ty gtfs
-\$0 #f ty :s p \; :tz gtfs \$0 #f tz bang \; loadproperties tf \$0
-#f \; ## s \$0-othr;
+#f ac 0 \; :m1 gtfs \$0 #f m1 bang \; :tx gtfs \$0 #f tx 0 \; loadproperties
+tf \$0 #f \; ## s \$0-othr;
 #X obj 311 187 ctxfiles/br2 demux 2 \; #f t \; #f gs :1f0 \; #f gs
 :1f1 \; #f gs :1f2 \; #f gs :1f3 \; #f gs :1f4 \; #f gs :1f5 \; #f
 gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
@@ -40,8 +39,7 @@ gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
 \; #f gs :3f5 \; #f gs :3f6 \; #f gs :3f7 \; #f gs :4f0 \; #f gs :4f1
 \; #f gs :4f2 \; #f gs :4f3 \; #f gs :4f4 \; #f gs :4f5 \; #f gs :4f6
 \; #f gs :4f7 \; #f gs :qu \; #f gs :gui \; #f gs :sa \; #f gs :ac
-\; #f gs :m1 \; #f gs :tx \; #f gs :ty \; #f gs :tz \; #f gs propload
-;
+\; #f gs :m1 \; #f gs :tx \; #f gs propload;
 #X connect 0 0 5 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
