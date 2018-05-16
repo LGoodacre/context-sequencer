@@ -1,3 +1,8 @@
-#N canvas 399 261 450 300 10;
-#X obj 161 124 pddp/pddplink sketch-grip-help.pd -text see [sketch-grip]
-;
+#N canvas 481 250 502 493 10;
+#X obj 168 108 else/openfile sketch-grip-help.pd;
+#X obj 141 53 loadbang;
+#X obj 141 76 t b b;
+#X obj 141 139 iemguts/canvasdelete 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 0 0;

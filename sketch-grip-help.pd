@@ -1,10 +1,14 @@
-#N struct 6135-big2 float x float y array 6135-array2 ^&*-dsmall2;
+#N struct 12200-big2 float x float y array 12200-array2 ^&*-dsmall2
+;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 6135-big1 float x float y array 6135-array1 ^&*-dsmall1;
+#N struct 12200-big1 float x float y array 12200-array1 ^&*-dsmall1
+;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 6244-big2 float x float y array 6244-array2 ^&*-dsmall2;
-#N struct 6244-big1 float x float y array 6244-array1 ^&*-dsmall1;
-#N canvas 270 93 765 616 10;
+#N struct 12257-big2 float x float y array 12257-array2 ^&*-dsmall2
+;
+#N struct 12257-big1 float x float y array 12257-array1 ^&*-dsmall1
+;
+#N canvas 222 93 765 616 10;
 #X obj 23 16 cnv 15 192 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 18 11 cnv 15 192 42 empty empty empty 20 12 0 14 -1 -66577 0
@@ -133,12 +137,11 @@ from the two subpatches on the right.;
 0;
 #X obj 12 158 cnv 15 671 209 empty empty empty 20 12 0 14 -261689 -66577
 0;
-#X obj 221 211 sketch point1 0.163934 0.671233 0.6875 0.436709 point2
+#X obj 221 211 sketch point1 0.122951 0.767123 0.6875 0.436709 point2
 0.286885 0.386076 :name env;
 #X obj 202 211 sketch-grip env y gr;
 #X obj 221 294 sketch-grip env x gr;
 #X text 354 235 <-- this is;
-#X obj 426 235 pddp/pddplink sketch-help.pd -text sketch;
 #X text 355 291 <-- this is also [sketch-grip];
 #X text 45 234 this is [sketch-grip] -->;
 #X obj 203 293 sketch-index env gr 0 1;
@@ -198,7 +201,7 @@ in an abstraction and you want it to operate like [slide]. (see "input").
 #X restore 563 504 creation arguments;
 #X text 525 447 [sketch-grip] works automatically \, but it needs to
 be initialized with the correct creation arguments., f 36;
-#N canvas 627 337 450 300 object 0;
+#N canvas 580 337 450 300 object 0;
 #X text 48 21 [sketch-index] is the little number box visible in the
 bottom-left of the example in the main window of the help patch. It
 is used for two things:;
@@ -209,10 +212,9 @@ its selection.;
 #X text 77 162 1: array name \, the same as with [sketch-grip] \; 2:
 label \, corresponding to those of [sketch-grip] \; 3: \$1 (if using
 as a part of a;
-#X obj 262 188 pddp/pddplink psave-help.pd -text psave abstraction.
-;
+#X obj 262 188 else/openfile psave-help.pd -h psave abstraction.;
 #X restore 563 527 sketch-index object;
-#N canvas 417 197 680 524 and 0;
+#N canvas 370 197 680 524 and 0;
 #X obj 649 439 sketch-index env gp 0 1;
 #X text 84 30 There are four ways of getting data into [sketch-grip]:
 ;
@@ -228,7 +230,6 @@ example to the right.;
 #X msg 489 127 \; help-patch- gp-x \$1;
 #X text 174 217 <-- this object is [sketch-grip env x gp help-patch].
 ;
-#X obj 417 183 pddp/pddplink pgrid-help.pd -text See [pgrid].;
 #X text 108 170 4: using [gridcontrol]. [sketch-grip] will integrate
 with [pgrid] to operate like a regular slider in mode-4.;
 #X text 80 280 There are two types of data you can send to [sketch-grip]:
@@ -247,15 +248,18 @@ The time grain can be set with [sketch-grip]'s 6th creation argument
 0 and 1 You can use this to track the placement of a sketch point.
 ;
 #X floatatom 56 496 5 0 0 0 - - -, f 5;
+#X obj 417 183 else/openfile pgrid-help.pd -h See [pgrid].;
 #X connect 4 0 6 0;
 #X connect 5 0 8 0;
-#X connect 6 0 20 0;
-#X connect 15 0 16 0;
-#X connect 16 0 18 0;
-#X connect 17 0 16 1;
+#X connect 6 0 19 0;
+#X connect 14 0 15 0;
+#X connect 15 0 17 0;
+#X connect 16 0 15 1;
 #X restore 563 549 input and output;
 #X text 36 294 this is [sketch-index] -->;
 #X text 30 561 Note that you can also select a point using [sketch-index].
 ;
 #X text 396 89 1: For more precision \; 2: for integrating with [control]
 \; 3: for automation (see [automation example);
+#X obj 420 221 else/openfile sketch-help.pd -text sketch -h;
+#X obj 234 15 helpfiles/docfiles/help-display \$0;

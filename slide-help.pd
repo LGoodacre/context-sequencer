@@ -1,4 +1,4 @@
-#N canvas 300 135 969 469 10;
+#N canvas 252 136 969 469 10;
 #X obj 142 18 ctxfiles/license;
 #X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -57,6 +57,8 @@ with [psave]., f 51;
 #X text 241 388 <-- create a slider called 'filter' (f) that goes from
 10 to 10000 exponentially (since 6th creation argument is set to 1)
 , f 34;
+#X obj 744 428 else/openfile helpfiles/state_saving_abstractions.pd
+-h see state-saving_abstractions.pd;
 #X connect 6 0 7 0;
 #X connect 8 0 5 0;
 #X connect 9 0 10 0;

@@ -1,4 +1,4 @@
-#N canvas 685 117 464 604 10;
+#N canvas 591 117 464 604 10;
 #X obj 227 32 ctxfiles/license;
 #X obj 51 32 cnv 15 92 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -20,7 +20,6 @@ to a Context simply by clicking on it. To use [click] \,;
 #X obj 222 359 context :ID 3;
 #X text 299 360 Hold down Shift and Control and click on one of these
 Contexts to try., f 19;
-#X obj 165 320 click :c 4 :d %;
 #X text 57 168 1: Create a [click] object with any Context command
 as a creation argument (ie. [click :d 2 :J drums] \; \; 2: Hold down
 the Shift and Control keys. [click] will now follow the cursor \; \;
@@ -30,6 +29,6 @@ it in other ways \, such as opening/closing toggles and altering the
 cycle time. It's best to aim for the empty area in the middle. \; \;
 2: Make sure there are no [autocreate] objects open \, or you're in
 for a rude surprise!;
-#X obj 32 582 pddp/pddplink preset-help.pd -text see also: [preset]
-;
-#X obj 319 7 helpfiles/docfiles/help-display \$0;
+#X obj 10 7 helpfiles/docfiles/help-display \$0;
+#X obj 32 582 else/openfile preset-help.pd -h see also: [preset];
+#X obj 165 320 click :c 4 :d %;

@@ -1,4 +1,4 @@
-#N canvas 160 181 461 436 10;
+#N canvas 556 121 461 464 10;
 #X obj 19 19 cnv 15 202 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 14 14 cnv 15 202 52 empty empty empty 20 12 0 14 -1 -66577 0
@@ -11,13 +11,7 @@
 arguments \, so you better use it only in abstractions where you don't
 mind relinquishing control of these. [psave] takes the mandatory argument
 '\$1'. Ie. it will only work if created as [psave \$1].;
-#X obj 93 292 pddp/pddplink helpfiles/state_saving_abstractions.pd
-;
 #X text 16 292 See also:;
-#X obj 93 305 pddp/pddplink slide-help.pd;
-#X obj 92 319 pddp/pddplink slide2-help.pd;
-#X obj 92 333 pddp/pddplink tog-help.pd;
-#X obj 92 346 pddp/pddplink num-help.pd;
 #X obj 26 89 psave \$1;
 #X text 20 378 Note that [psave] and its related objects are not really
 a part of Context. They're just some useful objects that are available
@@ -32,4 +26,10 @@ used to create hassle free state saving abstractions. It is used in
 conjunction with [slide] \, [slide2] \, [num] \, [tog] and [sketch-grip].
 Using [psave] \, you can save any number of parameters inside an abstraction
 \, simply by pressing control + s.;
-#X obj 92 359 pddp/pddplink sketch-grip-help.pd;
+#X obj 93 292 else/openfile helpfiles/state_saving_abstractions.pd
+-h;
+#X obj 93 305 else/openfile slide-help.pd -h;
+#X obj 92 319 else/openfile slide2-help.pd -h;
+#X obj 92 333 else/openfile tog-help.pd -h;
+#X obj 92 346 else/openfile num-help.pd -h;
+#X obj 92 359 else/openfile sketch-grip-help.pd -h;

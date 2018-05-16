@@ -1,4 +1,4 @@
-#N canvas 416 195 511 567 10;
+#N canvas 385 141 511 567 10;
 #X obj 287 27 ctxfiles/license;
 #X obj 28 31 cnv 15 252 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -13,8 +13,10 @@ You have to hold down the shift and the control keys for this to work
 object (and arguments) you want to be created. [autocreate] is desgned
 for creating Context objects \, but could just as well be used to create
 anything.;
-#X obj 151 239 autocreate context :c 6 :x 2;
 #X text 46 287 Hold down the shift and control keys and click anywhere
 on this canvas to see [autocreate] in action.;
 #X text 40 209 The symbol '%' will be replaced by a number sequence
 \, starting with 0;
+#X obj 151 239 autocreate context :c 6 :x 2 :il 2;
+#X obj 301 534 else/openfile preset-help.pd -h see also: [preset];
+#X obj 9 6 helpfiles/docfiles/help-display \$0;

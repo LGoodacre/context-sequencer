@@ -1,29 +1,44 @@
-#N struct 1534-big2 float x float y array 1534-array2 ^&*-dsmall2;
+#N struct 11809-big2 float x float y array 11809-array2 ^&*-dsmall2
+;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 1534-big1 float x float y array 1534-array1 ^&*-dsmall1;
+#N struct 11809-big1 float x float y array 11809-array1 ^&*-dsmall1
+;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 1582-big2 float x float y array 1582-array2 ^&*-dsmall2;
-#N struct 1582-big1 float x float y array 1582-array1 ^&*-dsmall1;
-#N struct 1627-big2 float x float y array 1627-array2 ^&*-dsmall2;
-#N struct 1627-big1 float x float y array 1627-array1 ^&*-dsmall1;
-#N struct 1675-big2 float x float y array 1675-array2 ^&*-dsmall2;
-#N struct 1675-big1 float x float y array 1675-array1 ^&*-dsmall1;
-#N struct 1726-big1 float x float y array 1726-array1 ^&*-dsmall1;
-#N struct 1777-big2 float x float y array 1777-array2 ^&*-dsmall2;
-#N struct 1777-big1 float x float y array 1777-array1 ^&*-dsmall1;
-#N struct 1825-big2 float x float y array 1825-array2 ^&*-dsmall2;
-#N struct 1825-big1 float x float y array 1825-array1 ^&*-dsmall1;
-#N struct 1874-big2 float x float y array 1874-array2 ^&*-dsmall2;
-#N struct 1874-big1 float x float y array 1874-array1 ^&*-dsmall1;
-#N canvas 181 145 860 592 10;
+#N struct 11857-big2 float x float y array 11857-array2 ^&*-dsmall2
+;
+#N struct 11857-big1 float x float y array 11857-array1 ^&*-dsmall1
+;
+#N struct 11902-big2 float x float y array 11902-array2 ^&*-dsmall2
+;
+#N struct 11902-big1 float x float y array 11902-array1 ^&*-dsmall1
+;
+#N struct 11950-big2 float x float y array 11950-array2 ^&*-dsmall2
+;
+#N struct 11950-big1 float x float y array 11950-array1 ^&*-dsmall1
+;
+#N struct 12001-big1 float x float y array 12001-array1 ^&*-dsmall1
+;
+#N struct 12052-big2 float x float y array 12052-array2 ^&*-dsmall2
+;
+#N struct 12052-big1 float x float y array 12052-array1 ^&*-dsmall1
+;
+#N struct 12100-big2 float x float y array 12100-array2 ^&*-dsmall2
+;
+#N struct 12100-big1 float x float y array 12100-array1 ^&*-dsmall1
+;
+#N struct 12149-big2 float x float y array 12149-array2 ^&*-dsmall2
+;
+#N struct 12149-big1 float x float y array 12149-array1 ^&*-dsmall1
+;
+#N canvas 87 145 860 592 10;
 #X obj 241 343 sketch :x 227 :y 109 point1 0.310259 0.588334 0.669604
-0.551637 point2 0.138767 0.766055 0.466961 0.32674 0.842669 0.767106
+0.551637 point2 0.0682824 0.766055 0.466961 0.32674 0.842669 0.767106
 :name mycurve;
 #X obj 175 23 cnv 15 202 72 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 170 18 cnv 15 202 72 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 171 19 cnv 15 200 70 empty empty sketch 23 26 1 55 -203565 -66577
+#X obj 171 19 cnv 15 200 70 empty empty sketch 23 26 1 49 -203565 -66577
 0;
 #X msg 241 257 end 1;
 #X msg 311 257 end -1;
@@ -61,9 +76,9 @@ the curve changes -->, f 25;
 0;
 #X text 536 365 Sketch autosaves \, so whatever you draw will reappear
 the next time you open the patch. Just press Ctrl + S !, f 23;
-#X obj 154 88 cnv 15 15 15 empty \$0-banner ~.~~.~~.~~.~~.~~.~~.~~.~
+#X obj 154 88 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
 20 12 0 14 -262144 -66577 0;
-#X obj 159 -2 cnv 15 15 15 empty \$0-banner ~.~~.~~.~~.~~.~~.~~.~~.~
+#X obj 159 -2 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
 20 12 0 14 -262144 -66577 0;
 #N canvas 0 50 450 300 annimate 0;
 #X obj 100 100 tgl 10 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
@@ -111,10 +126,6 @@ because the values are stored in an array \, playback is relatively
 cheap., f 89;
 #X text 172 21 (  ) (  ), f 2;
 #X text 351 21  ) (  ) (, f 2;
-#X obj 52 449 cnv 15 57 23 empty empty empty 20 12 0 14 -1 -66577 0
-;
-#X obj 53 450 cnv 15 55 21 empty empty empty 20 12 0 14 -262144 -66577
-0;
 #N canvas 344 104 633 587 (subpatch) 0;
 #X obj 40 146 sketch point1 0.679688 0.927681 point2 0.0937505 0.928374
 ;
@@ -142,14 +153,6 @@ the y-axis \; ec : turn error correction on* \; lock : prevent end
 points from moving past one another \; name2 : add \$0 to the array
 name, f 74;
 #X restore 54 452 options;
-#X obj 51 478 cnv 15 64 23 empty empty empty 20 12 0 14 -1 -66577 0
-;
-#X obj 52 479 cnv 15 62 21 empty empty empty 20 12 0 14 -262144 -66577
-0;
-#X obj 51 534 cnv 15 113 23 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 52 535 cnv 15 111 21 empty empty empty 20 12 0 14 -262144 -66577
-0;
 #N canvas 260 183 762 514 (subpatch) 0;
 #X obj 221 161 sketch :y1 0.1 point1 0.0390625 0.923652 0.226564 0.771372
 point2 0.71875 0.80535 :color -232491 :time 1500;
@@ -288,10 +291,6 @@ are all on to help draw the waveform, f 30;
 #X obj 546 13 ctxfiles/license;
 #X text 310 504 Thanks to https://pomax.github.io/bezierinfo/ for teaching
 me how to create Bezier curves!;
-#X obj 51 506 cnv 15 64 23 empty empty empty 20 12 0 14 -1 -66577 0
-;
-#X obj 52 507 cnv 15 62 21 empty empty empty 20 12 0 14 -262144 -66577
-0;
 #N canvas 397 284 450 453 (subpatch) 0;
 #X obj 149 93 sketch point1 0.273438 0.701634 point2 0.820312 0.702523
 :name shift;
@@ -316,11 +315,11 @@ points using the properties menu.;
 #X restore 53 509 shifting;
 #X text 308 66 v1.2;
 #X text 10 281 add or remove a curve point ->;
-#X obj 528 560 pddp/pddplink sketch-grip-help.pd -text See also: [sketch-grip].
+#X obj 528 560 else/openfile sketch-grip-help.pd -h See also: [sketch-grip]
 ;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
-#X connect 45 0 0 0;
-#X connect 46 0 0 0;
+#X connect 39 0 0 0;
+#X connect 40 0 0 0;
