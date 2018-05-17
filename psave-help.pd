@@ -21,7 +21,7 @@ in the same library.;
 object inside an abstraction as well. To do this \, you need to put
 \$0 as a second argument \, ie. [psave \$1 \$0];
 #X restore 319 342 saving [sketch];
-#X text 16 120 [psave] contains the 'guts' of the auto-saving mechnaism
+#X text 16 120 [psave] contains the 'guts' of the auto-saving mechanism
 used to create hassle free state saving abstractions. It is used in
 conjunction with [slide] \, [slide2] \, [num] \, [tog] and [sketch-grip].
 Using [psave] \, you can save any number of parameters inside an abstraction

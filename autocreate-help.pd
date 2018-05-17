@@ -10,7 +10,7 @@
 create an object by clicking on the screen for rapid-fire patching.
 You have to hold down the shift and the control keys for this to work
 \, to protect against accidental triggering. Its arguments are the
-object (and arguments) you want to be created. [autocreate] is desgned
+object (and arguments) you want to be created. [autocreate] is designed
 for creating Context objects \, but could just as well be used to create
 anything.;
 #X text 46 287 Hold down the shift and control keys and click anywhere

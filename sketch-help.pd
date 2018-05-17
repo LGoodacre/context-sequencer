@@ -136,7 +136,7 @@ To get rid of the window \, press the ^ button in the upper left \,
 or simply delete the object.;
 #X text 133 241 Sketch's options are:;
 #X text 34 523 *Under some conditions \, curves which are defined by
-a high number of Bezier points may distory. Error correction fixes
+a high number of Bezier points may distort. Error correction fixes
 this \, at the cost of using slightly more CPU.;
 #X text 39 266 point1 : ADD OR REMOVE END POINTS FROM THE CANVAS \;
 point2 : ADD OR REMOVE CURVE (BEZIER) POINTS FROM THE CANVAS \; x :
@@ -208,7 +208,7 @@ once. Here the array is being read by [tabread4~ waveform]., f 49
 for defining custom formulas along the array. There are as many inlet
 / outlet pairs as there are "sections" of the curve. Sections are defined
 by the grey end points \, so a sketch with 3 end points will have 4
-sections and consequently 4 extra in/outlets \, regarless of how many
+sections and consequently 4 extra in/outlets \, regardless of how many
 brown curve points there are.;
 #X msg 157 281 0;
 #X obj 67 182 sketch point1 0.179688 0.892067 0.351562 0.718824 0.679688
@@ -247,7 +247,7 @@ are some examples using [expr].;
 #X obj 167 690 t b f;
 #X obj 167 713 random 100;
 #X obj 167 737 expr ($f1 * 0.001 + $f2);
-#X text 314 649 <--- draw a sine wave with four peaks betweeen two
+#X text 314 649 <--- draw a sine wave with four peaks between two
 points, f 24;
 #X text 24 734 draw some static-->;
 #X obj 167 761 s cc2;

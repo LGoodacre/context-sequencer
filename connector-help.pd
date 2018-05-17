@@ -179,7 +179,7 @@ or connecting the same objects twice. (If you ever start getting double
 output from an object \, that's probably why!) If the settings in shift
 mode are wrong \, you can easily lose or mangle your connections \,
 and this damage can't be undone through the PD menu.;
-#X text 40 143 Please use this tool with dicretion and save your work
+#X text 40 143 Please use this tool with discretion and save your work
 regularly. The author assumes no liability if this tool does damage
 to your patch!;
 #X restore 420 378 warnings;
@@ -211,7 +211,7 @@ adds or subtracts to the n'th number of every connection list \, where
 n is specified by the float object. Understanding how these lists work
 will help you use connector most effectively.;
 #X text 46 158 Additionally \, every object inlet and outlet has a
-unque number \, starting from 0 .;
+unique number \, starting from 0 .;
 #X restore 348 403 about PD connections;
 #X obj 259 156 ctxfiles/license;
 #X obj 39 38 cnv 15 429 82 empty empty empty 20 12 0 14 -99865 -66577
@@ -441,7 +441,7 @@ That's it!;
 0;
 #X obj 31 779 cnv 15 363 100 empty empty empty 20 12 0 14 -225280 -66577
 0;
-#X text 36 790 CONNECTING TWO OBJECTS TOGETHER OVER MULTIPLE OUTETS
+#X text 36 790 CONNECTING TWO OBJECTS TOGETHER OVER MULTIPLE OUTLETS
 \; \; Select the desired objects in the "to" and "from" boxes and then
 select the number of outlets in the "no." box. This is the only time
 you'll need to use this.;
@@ -453,7 +453,7 @@ will spread the connections across its inlets / outlets. \; If you
 want to make multiple connections from the same in/outlet \, you simply
 need to type the object number more than once. For an example \, try
 from "29 29" to "13 14 15 16 17 18 19 20".;
-#X text 382 315 [conector];
+#X text 382 315 [connector];
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X restore 32 308 use connect mode;

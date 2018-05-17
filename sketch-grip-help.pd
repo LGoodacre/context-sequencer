@@ -113,7 +113,7 @@ reasons you might want to do this:;
 #X text 47 11 This example uses two pairs of [sketch-grip] to control
 the points on a [sketch] array. The [sketch] has its "duplicate" \,
 "mirror-x" and "mirror-y" settings turned on \, so the waveform is
-completed symetrically. Positions are sent to the [sketch-grip] objects
+completed symmetrically. Positions are sent to the [sketch-grip] objects
 from the two subpatches on the right.;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
@@ -230,14 +230,14 @@ example to the right.;
 #X msg 489 127 \; help-patch- gp-x \$1;
 #X text 174 217 <-- this object is [sketch-grip env x gp help-patch].
 ;
-#X text 108 170 4: using [gridcontrol]. [sketch-grip] will integrate
+#X text 108 170 4: using [control]. [sketch-grip] will integrate
 with [pgrid] to operate like a regular slider in mode-4.;
 #X text 80 280 There are two types of data you can send to [sketch-grip]:
 ;
 #X text 107 321 1: Single floats (0-100). As above \, the slider will
 jump to the new position.;
 #X text 108 362 2: Double float lists (position \, time). This will
-move the slider to the new position over the given time (in milieconds).
+move the slider to the new position over the given time (in millieconds).
 The time grain can be set with [sketch-grip]'s 6th creation argument
 (see "creation arguments").;
 #X floatatom 478 322 5 0 0 0 - - -, f 5;

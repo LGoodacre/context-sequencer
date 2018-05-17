@@ -1,4 +1,4 @@
-#N canvas 67 203 772 455 10;
+#N canvas 67 284 772 455 10;
 #X declare -path ../;
 #X obj 32 134 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -6,11 +6,11 @@
 0;
 #X obj 23 125 cnv 15 704 269 empty empty empty 20 12 0 14 -186983 -66577
 0;
-#X obj 17 12 cnv 15 152 39 empty empty empty 22 16 2 24 -99865 -1 0
+#X obj 17 32 cnv 15 152 39 empty empty empty 22 16 2 24 -99865 -1 0
 ;
-#X obj 13 8 cnv 15 152 39 empty empty empty 22 16 2 24 -1 -1 0;
-#X obj 14 9 cnv 15 150 37 empty empty recording 10 16 0 24 -71786 -1
-0;
+#X obj 13 28 cnv 15 152 39 empty empty empty 22 16 2 24 -1 -1 0;
+#X obj 14 29 cnv 15 150 37 empty empty recording 10 16 0 24 -71786
+-1 0;
 #X obj 520 7 ctxfiles/license;
 #X obj 175 335 context :X 13 :d 6 :e 13 :i 0 0 0 0 0 0 0 0 1.5 0 0
 0 0 :J 1 :ID 1;
@@ -38,7 +38,36 @@ must be the first argument)., f 45;
 #X connect 6 0 0 0;
 #X restore 207 310 -delay -interrupt;
 #X obj 623 69 declare -path ../;
-#N canvas 67 89 450 300 examples 0;
+#N canvas 279 108 995 519 examples 0;
+#X obj 427 102 context :X 17 :c 3 :d 6 :e 17 :Z 14 :ID 3;
+#X obj 427 190 context :X 9 :c 7 :ID 4;
+#X msg 601 71 :x clear;
+#X msg 439 24 :r -source c 4 -messages 1 -prepend <i -floats -c 4 -floatprep
+1;
+#X text 50 31 1: start the recording here ------------------------------->
+;
+#X text 44 197 2: record into c3 by pressing toggles in c4 during the
+recording ------------------------------------------------->;
+#X text 40 284 3: start c3 playback by double clicking on it and what
+the toggles in c4.;
+#X obj 422 384 else/openfile links/commands.html -h see Context Manual
+entry on COMMANDS;
+#X obj 520 410 else/openfile links/directors.html -h see Context Manual
+entry on DIRECTORS;
+#X obj 422 397 else/openfile links/message_databases.html -h see Context
+Manual entry on MESSAGE DATABASE;
+#X text 20 358 To understand what is happening \, you need to understand
+each of the operators in the :r message \; \; '-source c 4' tells c3
+to record whatever is happening inside c4 \; '-messages 1' tells c3
+to record input into its message database \; '-prepend <i' tells c3
+to prepend the text ' <i ' in front of the incoming message \; '-floats
+c 4' tells c3 to record floats to the toggle-float array \, specifically
+the number 4 \; 'floatprep 1' tells c3 to interpret the floats as float-connects
+rather than regular toggle-floats, f 103;
+#X obj 614 436 else/openfile links/float_connections.html -h see Context
+Manual entry on FLOAT CONNECTS;
+#X connect 2 0 0 14;
+#X connect 3 0 0 1;
 #X restore 97 417 advanced examples;
 #X text 221 164 Where should the recording come from?;
 #N canvas 67 204 779 351 -prepend 0;
@@ -66,11 +95,13 @@ data.;
 #X text 30 296 open the message database for viewing, f 21;
 #X obj 87 254 cnv 15 15 15 empty empty default: blank 0 7 0 14 -262144
 -66577 0;
+#X msg 478 274 some message to record;
 #X connect 4 0 0 0;
 #X connect 6 0 0 0;
 #X connect 8 0 0 0;
 #X connect 9 0 0 0;
 #X connect 12 0 0 0;
+#X connect 15 0 0 0;
 #X restore 148 224 -messages -prepend -append;
 #N canvas 212 136 658 345 -output 0;
 #X obj 224 282 outlet;
@@ -170,7 +201,7 @@ determines whether an individual toggle can be toggled more than once.
 #X connect 15 0 0 0;
 #X connect 16 0 0 0;
 #X restore 168 254 -pattern -toggleprep -lock;
-#N canvas 378 145 843 429 -floatprep 0;
+#N canvas 331 145 843 429 -floatprep 0;
 #X obj 337 414 outlet;
 #X obj 17 105 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
 -66577 0;
@@ -258,7 +289,7 @@ messages on the left to see., f 35;
 #X connect 16 0 0 0;
 #X connect 17 0 0 0;
 #X connect 18 0 0 0;
-#X restore 106 164 p-source -exclude;
+#X restore 106 164 -source -exclude;
 #X text 337 254 How should toggles behave during recording?;
 #X text 310 284 How should toggle-floats behave during recording?;
 #N canvas 67 89 450 341 notes 0;
@@ -287,6 +318,9 @@ you define emerging across the x-axis toggle array. Then look at the
 subwindows to learn about the different options for :r recording.,
 f 65;
 #X text 326 310 How should Context behave durint the recording?;
+#X obj 7 5 docfiles/help-display \$0;
+#X obj 370 423 else/openfile links/recording.html -h see Context Manual
+entry on RECORDING;
 #X connect 8 0 7 3;
 #X connect 9 0 7 3;
 #X connect 13 0 7 3;

@@ -22,7 +22,7 @@ undo 4 obj 0 48 undo 4 obj 0 60 undo;
 overlay., f 19;
 #X text 211 240 <--;
 #X text 26 92 Undo tracks the changes that are made to Context and
-lets you undo them. Each Undo stores one chage \, but the more you
+lets you undo them. Each Undo stores one change \, but the more you
 create \, the more you can store. Undo must be created in the Overlay
 to function., f 51;
 #X text 47 337 Click on the toggles or change any other Context setting.
@@ -32,7 +32,7 @@ you have just left. Click on the undo button to re-select that state.
 #X obj 188 27 ctxfiles/license;
 #N canvas 67 89 450 125 (subpatch) 0;
 #X text 38 23 [undo] can take one argument \, which is the buffer time
-in miliseconds. This determines how long [undo] will wait to receive
+in milliseconds. This determines how long [undo] will wait to receive
 new settings before it sets itself. It is only necessary to give the
 top [undo] an argument. The default of 200 ms will be selected if no
 argument is set.;
@@ -44,11 +44,11 @@ argument is set.;
 #X msg 112 182 undo 2;
 #X text 167 164 jump to a particular;
 #X text 47 30 Once [undo] is embedded \, you can control it using regular
-Context commands. There are three relavant commands \; -- undo \; --
+Context commands. There are three relevant commands \; -- undo \; --
 undo [x] \; -- undo -on [x];
 #X msg 145 223 undo -on 0;
 #X msg 145 243 undo -on 1;
-#X text 221 227 prevent/allow [undo] from receiveing new states, f
+#X text 221 227 prevent/allow [undo] from receiving new states, f
 31;
 #X obj 48 261 outlet;
 #X connect 0 0 9 0;
