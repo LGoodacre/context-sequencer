@@ -12,10 +12,10 @@
 #X obj 14 29 cnv 15 150 37 empty empty recording 10 16 0 24 -71786
 -1 0;
 #X obj 520 7 ctxfiles/license;
-#X obj 175 335 context :X 13 :d 6 :e 13 :i 0 0 0 0 0 0 0 0 1.5 0 0
+#X obj 177 335 context :X 13 :d 6 :e 13 :i 0 0 0 0 0 0 0 0 1.5 0 0
 0 0 :J 1 :ID 1;
 #X msg 52 86 :r;
-#N canvas 165 131 620 344 -interrupt 0;
+#N canvas 118 131 620 344 -interrupt 0;
 #X obj 176 305 outlet;
 #X text 187 118 The incoming message will be assigned to the first
 inlet up to 100ms after the first inlet is passed., f 54;
@@ -28,17 +28,20 @@ this is to compensate for buffer time and allow recording to feel more
 natural if you are doing it by hand., f 66;
 #X msg 70 123 :r -delay 1500;
 #X msg 107 180 :r -delay -1500;
-#X msg 151 248 :r -interrupt -delay 0;
-#X text 299 249 reset any setting during the recording. (Note: interrupt
+#X msg 138 228 :r -interrupt -delay 0;
+#X text 286 224 reset any setting during the recording. (Note: interrupt
 must be the first argument)., f 45;
 #X obj 18 182 cnv 15 15 15 empty empty default: 0 0 7 0 14 -262144
 -66577 0;
+#X msg 164 268 :r -stop;
+#X text 231 268 stop a recording mid cycle, f 45;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X connect 6 0 0 0;
-#X restore 207 310 -delay -interrupt;
+#X connect 9 0 0 0;
+#X restore 204 302 -delay -interrupt;
 #X obj 623 69 declare -path ../;
-#N canvas 279 108 995 519 examples 0;
+#N canvas 232 108 995 519 examples 0;
 #X obj 427 102 context :X 17 :c 3 :d 6 :e 17 :Z 14 :ID 3;
 #X obj 427 190 context :X 9 :c 7 :ID 4;
 #X msg 601 71 :x clear;
@@ -69,7 +72,7 @@ Manual entry on FLOAT CONNECTS;
 #X connect 2 0 0 14;
 #X connect 3 0 0 1;
 #X restore 97 417 advanced examples;
-#X text 221 164 Where should the recording come from?;
+#X text 220 162 Where should the recording come from?;
 #N canvas 67 204 779 351 -prepend 0;
 #X obj 233 292 outlet;
 #X obj 17 105 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
@@ -102,7 +105,7 @@ data.;
 #X connect 9 0 0 0;
 #X connect 12 0 0 0;
 #X connect 15 0 0 0;
-#X restore 148 224 -messages -prepend -append;
+#X restore 144 218 -messages -prepend -append;
 #N canvas 212 136 658 345 -output 0;
 #X obj 224 282 outlet;
 #X msg 99 113 :r -playback 0;
@@ -130,10 +133,10 @@ while they are being recorded.;
 #X connect 7 0 0 0;
 #X connect 8 0 0 0;
 #X connect 12 0 13 0;
-#X restore 127 194 -playback -output;
-#X text 245 194 What should happen to normal playback during recording?
+#X restore 125 190 -playback -output;
+#X text 243 190 What should happen to normal playback during recording?
 ;
-#X text 317 224 What should happen to the message databases during
+#X text 313 218 What should happen to the message databases during
 recording?, f 63;
 #X text 188 134 How should the recording start?;
 #N canvas 67 89 625 413 -first 0;
@@ -200,8 +203,8 @@ determines whether an individual toggle can be toggled more than once.
 #X connect 13 0 0 0;
 #X connect 15 0 0 0;
 #X connect 16 0 0 0;
-#X restore 168 254 -pattern -toggleprep -lock;
-#N canvas 331 145 843 429 -floatprep 0;
+#X restore 164 246 -pattern -toggleprep -lock;
+#N canvas 284 145 843 429 -floatprep 0;
 #X obj 337 414 outlet;
 #X obj 17 105 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
 -66577 0;
@@ -239,7 +242,7 @@ numbers from the source have no effect.;
 #X connect 10 0 0 0;
 #X connect 12 0 0 0;
 #X connect 14 0 0 0;
-#X restore 189 284 -floats -floatprep;
+#X restore 184 274 -floats -floatprep;
 #N canvas 67 162 855 603 -exclude 0;
 #X obj 504 531 outlet;
 #X msg 112 145 \; c1 :r;
@@ -289,9 +292,9 @@ messages on the left to see., f 35;
 #X connect 16 0 0 0;
 #X connect 17 0 0 0;
 #X connect 18 0 0 0;
-#X restore 106 164 -source -exclude;
-#X text 337 254 How should toggles behave during recording?;
-#X text 310 284 How should toggle-floats behave during recording?;
+#X restore 105 162 -source -exclude;
+#X text 333 246 How should toggles behave during recording?;
+#X text 305 274 How should toggle-floats behave during recording?;
 #N canvas 67 89 450 341 notes 0;
 #X text 57 22 1: Once the record function has started \, the ":r" message
 is interpreted as a bang. This allows you to record using the same
@@ -317,7 +320,7 @@ language of their own \, but the basics are quite simple and intuitive.
 you define emerging across the x-axis toggle array. Then look at the
 subwindows to learn about the different options for :r recording.,
 f 65;
-#X text 326 310 How should Context behave durint the recording?;
+#X text 323 302 How should Context behave durint the recording?;
 #X obj 7 5 docfiles/help-display \$0;
 #X obj 370 423 else/openfile links/recording.html -h see Context Manual
 entry on RECORDING;
