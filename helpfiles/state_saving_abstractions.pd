@@ -1,16 +1,14 @@
-#N canvas 335 261 875 455 10;
+#N canvas 288 261 875 500 10;
 #X declare -path ../;
 #X obj 19 21 cnv 15 402 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 14 16 cnv 15 402 52 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 15 17 cnv 15 400 50 empty empty a guide to creating state-saving abstractions
-10 22 1 19 -121638 -1 0;
+10 22 1 18 -121638 -1 0;
 #X obj 650 4 ctxfiles/license;
 #X text 38 207 STEPS TO CREATING STATE-SAVING ABSTRACTIONS:;
 #X text 461 62 SEE ALSO:;
-#X obj 442 80 pddp/pddplink ../psave-help.pd;
-#X obj 442 94 pddp/pddplink ../slide-help.pd;
 #X text 16 235 1: Use [slide] \, [tog] and [num] inside your abstraction
 instead of regular sliders \, numbers and toggle boxes. You'll need
 to enter their creation arguments correctly \, as listed in their individual
@@ -20,9 +18,6 @@ helpfiles (remembering crucially to use "\$1" as the "group name").
 ;
 #X text 14 343 3: When you instantiate the abstraction \, give it a
 unique name. You abstraction should now state-save automatically!;
-#X obj 442 108 pddp/pddplink ../slide2-help.pd;
-#X obj 442 122 pddp/pddplink ../tog-help.pd;
-#X obj 442 135 pddp/pddplink ../num-help.pd;
 #X text 585 80 needed for automatic state-saving;
 #X text 586 94 used as a slider with bounded limits;
 #X text 586 108 used as a slider to control 2 variables;
@@ -49,12 +44,17 @@ how it works., f 39;
 #X obj 597 285 helpfiles/docfiles/example-abstraction two 1 49 16;
 #X obj 713 285 helpfiles/docfiles/example-abstraction three 0 61 -31
 ;
-#X obj 442 148 pddp/pddplink ../sketch-grip-help.pd;
-#X text 586 148 used as a slider for [sketch];
+#X obj 650 64 declare -path ../;
 #X text 17 89 This is a guide to creating state-saving abstractions
 using the objects [psave] \, [slide] \, [slide2] \, [num] \, [tog]
-and [sketch-grip]. A state-saving abstraction is an abstraction which
-saves user-defined parameters in the abstraction itself \, to be re-loaded
+and [coord]. A state-saving abstraction is an abstraction which saves
+user-defined parameters in the abstraction itself \, to be re-loaded
 when the patch is opened. This is traditionally a hard problem in PD
 \, but is rendered very easy with the help of these objects.;
-#X obj 650 64 declare -path ../;
+#X obj 482 81 else/openfile ../psave-help.pd -h psave-help.pd;
+#X obj 482 95 else/openfile ../slide-help.pd -h slide-help.pd;
+#X obj 482 109 else/openfile ../slide2-help.pd -h slide2-help.pd;
+#X obj 482 123 else/openfile ../tog-help.pd -h tog-help.pd;
+#X obj 482 136 else/openfile ../num-help.pd -h num-help.pd;
+#X obj 482 149 else/openfile ../coord-help.pd -h coord-help.pd;
+#X text 586 148 used as a slider for [contour];

@@ -1,45 +1,45 @@
-#N struct 11809-big2 float x float y array 11809-array2 ^&*-dsmall2
+#N struct 36284-big2 float x float y array 36284-array2 ^&*-dsmall2
 ;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 11809-big1 float x float y array 11809-array1 ^&*-dsmall1
+#N struct 36284-big1 float x float y array 36284-array1 ^&*-dsmall1
 ;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 11857-big2 float x float y array 11857-array2 ^&*-dsmall2
+#N struct 36384-big2 float x float y array 36384-array2 ^&*-dsmall2
 ;
-#N struct 11857-big1 float x float y array 11857-array1 ^&*-dsmall1
+#N struct 36384-big1 float x float y array 36384-array1 ^&*-dsmall1
 ;
-#N struct 11902-big2 float x float y array 11902-array2 ^&*-dsmall2
+#N struct 36429-big2 float x float y array 36429-array2 ^&*-dsmall2
 ;
-#N struct 11902-big1 float x float y array 11902-array1 ^&*-dsmall1
+#N struct 36429-big1 float x float y array 36429-array1 ^&*-dsmall1
 ;
-#N struct 11950-big2 float x float y array 11950-array2 ^&*-dsmall2
+#N struct 36477-big2 float x float y array 36477-array2 ^&*-dsmall2
 ;
-#N struct 11950-big1 float x float y array 11950-array1 ^&*-dsmall1
+#N struct 36477-big1 float x float y array 36477-array1 ^&*-dsmall1
 ;
-#N struct 12001-big1 float x float y array 12001-array1 ^&*-dsmall1
+#N struct 36528-big1 float x float y array 36528-array1 ^&*-dsmall1
 ;
-#N struct 12052-big2 float x float y array 12052-array2 ^&*-dsmall2
+#N struct 36579-big2 float x float y array 36579-array2 ^&*-dsmall2
 ;
-#N struct 12052-big1 float x float y array 12052-array1 ^&*-dsmall1
+#N struct 36579-big1 float x float y array 36579-array1 ^&*-dsmall1
 ;
-#N struct 12100-big2 float x float y array 12100-array2 ^&*-dsmall2
+#N struct 36627-big2 float x float y array 36627-array2 ^&*-dsmall2
 ;
-#N struct 12100-big1 float x float y array 12100-array1 ^&*-dsmall1
+#N struct 36627-big1 float x float y array 36627-array1 ^&*-dsmall1
 ;
-#N struct 12149-big2 float x float y array 12149-array2 ^&*-dsmall2
+#N struct 36676-big2 float x float y array 36676-array2 ^&*-dsmall2
 ;
-#N struct 12149-big1 float x float y array 12149-array1 ^&*-dsmall1
+#N struct 36676-big1 float x float y array 36676-array1 ^&*-dsmall1
 ;
-#N canvas 87 145 860 592 10;
-#X obj 241 343 sketch :x 227 :y 109 point1 0.310259 0.588334 0.669604
+#N canvas 67 145 860 592 10;
+#X obj 241 343 contour :x 227 :y 109 point1 0.310259 0.588334 0.669604
 0.551637 point2 0.0682824 0.766055 0.466961 0.32674 0.842669 0.767106
 :name mycurve;
 #X obj 175 23 cnv 15 202 72 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 170 18 cnv 15 202 72 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 171 19 cnv 15 200 70 empty empty sketch 23 26 1 49 -203565 -66577
-0;
+#X obj 171 19 cnv 15 200 70 empty empty contour 23 26 1 41 -203565
+-66577 0;
 #X msg 241 257 end 1;
 #X msg 311 257 end -1;
 #X floatatom 477 293 5 0 0 0 - - -, f 5;
@@ -74,13 +74,13 @@ the curve changes -->, f 25;
 0;
 #X obj 518 358 cnv 15 200 100 empty empty empty 20 12 0 14 -76543 -66577
 0;
-#X text 536 365 Sketch autosaves \, so whatever you draw will reappear
+#X text 536 365 Contour autosaves \, so whatever you draw will reappear
 the next time you open the patch. Just press Ctrl + S !, f 23;
-#X obj 154 88 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
+#X obj 154 88 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
 20 12 0 14 -262144 -66577 0;
-#X obj 159 -2 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
+#X obj 159 -2 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
 20 12 0 14 -262144 -66577 0;
-#N canvas 0 50 450 300 annimate 0;
+#N canvas 67 89 450 300 annimate 0;
 #X obj 100 100 tgl 10 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 100 120 metro 100;
@@ -118,23 +118,23 @@ the next time you open the patch. Just press Ctrl + S !, f 23;
 0;
 #X obj 158 103 cnv 15 15 15 empty empty an advanced interface for drawing arrays
 20 12 0 14 -262144 -66577 0;
-#X text 34 158 [sketch] is a tool which helps you draw precise functions
-into the PD array object. Sketch can draw straight lines \, Bezier
+#X text 34 158 [contour] is a tool which helps you draw precise functions
+into the PD array object. Contour can draw straight lines \, Bezier
 curves and cusom formulas \, useful for creating envelopes and waveforms.
-Sketch can draw functions to a very high degree of complexity \, but
+Contour can draw functions to a very high degree of complexity \, but
 because the values are stored in an array \, playback is relatively
 cheap., f 89;
 #X text 172 21 (  ) (  ), f 2;
 #X text 351 21  ) (  ) (, f 2;
-#N canvas 344 104 633 587 (subpatch) 0;
-#X obj 40 146 sketch point1 0.679688 0.927681 point2 0.0937505 0.928374
+#N canvas 297 104 633 587 (subpatch) 0;
+#X obj 40 146 contour point1 0.679688 0.927681 point2 0.0937505 0.928374
 ;
-#X text 189 147 Sketch has a variety of options controlling its behaviour.
-To access the options \, right click on any sketch object and select
+#X text 189 147 Contour has a variety of options controlling its behaviour.
+To access the options \, right click on any contour object and select
 "properties". A menu window will appear with all the relevant options.
 To get rid of the window \, press the ^ button in the upper left \,
 or simply delete the object.;
-#X text 133 241 Sketch's options are:;
+#X text 133 241 Contour's options are:;
 #X text 34 523 *Under some conditions \, curves which are defined by
 a high number of Bezier points may distort. Error correction fixes
 this \, at the cost of using slightly more CPU.;
@@ -153,8 +153,8 @@ the y-axis \; ec : turn error correction on* \; lock : prevent end
 points from moving past one another \; name2 : add \$0 to the array
 name, f 74;
 #X restore 54 452 options;
-#N canvas 260 183 762 514 (subpatch) 0;
-#X obj 221 161 sketch :y1 0.1 point1 0.0390625 0.923652 0.226564 0.771372
+#N canvas 213 183 762 514 (subpatch) 0;
+#X obj 221 161 contour :y1 0.1 point1 0.0390625 0.923652 0.226564 0.771372
 point2 0.71875 0.80535 :color -232491 :time 1500;
 #X obj 68 356 *~;
 #X obj 68 410 dac~;
@@ -163,7 +163,7 @@ point2 0.71875 0.80535 :color -232491 :time 1500;
 #X floatatom 28 235 5 0 0 0 - - -, f 5;
 #X obj 28 304 tabread4~ waveform;
 #X obj 28 256 phasor~ 440;
-#X obj 227 321 sketch point1 0.374999 0.903158 0.570312 0.850479 0.820312
+#X obj 227 321 contour point1 0.374999 0.903158 0.570312 0.850479 0.820312
 0.907907 point2 0.0625005 0.922591 0.328126 0.809553 0.664062 0.918938
 :name waveform :color -232617 :duplicate 1 :mirror-x 1;
 #X obj 28 280 *~ 256;
@@ -185,7 +185,7 @@ using the "time" setting.;
 #X obj 593 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 593 112 \; pd dsp \$1;
-#X text 298 246 This sketch has the "duplicate" and "mirror-x" settings
+#X text 298 246 This contour has the "duplicate" and "mirror-x" settings
 on (see "settings") \, so you can draw both sides of the waveform at
 once. Here the array is being read by [tabread4~ waveform]., f 49
 ;
@@ -204,14 +204,14 @@ once. Here the array is being read by [tabread4~ waveform]., f 49
 #X connect 17 0 18 0;
 #X restore 53 481 playback;
 #N canvas 271 95 584 571 formulas 0;
-#X text 16 17 Sketch has some hidden inlet and outlets which are used
+#X text 16 17 Contour has some hidden inlet and outlets which are used
 for defining custom formulas along the array. There are as many inlet
 / outlet pairs as there are "sections" of the curve. Sections are defined
-by the grey end points \, so a sketch with 3 end points will have 4
-sections and consequently 4 extra in/outlets \, regardless of how many
-brown curve points there are.;
+by the grey end points \, so a contour with 3 end points will have
+4 sections and consequently 4 extra in/outlets \, regardless of how
+many brown curve points there are.;
 #X msg 157 281 0;
-#X obj 67 182 sketch point1 0.179688 0.892067 0.351562 0.718824 0.679688
+#X obj 67 182 contour point1 0.179688 0.892067 0.351562 0.718824 0.679688
 0.723819;
 #X obj 37 305 s c1;
 #X obj 97 305 s c2;
@@ -233,22 +233,22 @@ coordinates.;
 are not visible on the canvas. You can connect the cables directly
 without using [send] and [receive] \, but you're on your own when it
 comes to hiding them behind the canvas., f 26;
-#X obj 31 522 sketch :x 211 :y 118 point1 0.389007 0.805192 0.933649
+#X obj 31 522 contour :x 211 :y 118 point1 0.389007 0.805192 0.933649
 0.644068 point2 0.560499 0.203647 :name first :color -232379;
 #X text 21 446 You can have a lot of fun with custom formulas! Here
 are some examples using [expr].;
 #X obj 99 652 expr 0.2 * sin($f1*28) + $f1;
 #X obj 99 676 s cc1;
 #X obj 99 493 r cc1;
-#X obj 61 864 sketch :x 169 :y 103 point1 0.229523 0.250483 0.601162
+#X obj 61 864 contour :x 169 :y 103 point1 0.229523 0.250483 0.601162
 0.763536 point2 0.0458838 0.599451 0.857988 0.631047 :name second :color
 -65491 :duplicate 1 :mirror-x 1 :mirror-y 1;
 #X obj 169 1179 expr first [$f1*120];
 #X obj 167 690 t b f;
 #X obj 167 713 random 100;
 #X obj 167 737 expr ($f1 * 0.001 + $f2);
-#X text 314 649 <--- draw a sine wave with four peaks between two
-points, f 24;
+#X text 314 649 <--- draw a sine wave with four peaks between two points
+, f 24;
 #X text 24 734 draw some static-->;
 #X obj 167 761 s cc2;
 #X obj 167 493 r cc2;
@@ -292,7 +292,7 @@ are all on to help draw the waveform, f 30;
 #X text 310 504 Thanks to https://pomax.github.io/bezierinfo/ for teaching
 me how to create Bezier curves!;
 #N canvas 397 284 450 453 (subpatch) 0;
-#X obj 149 93 sketch point1 0.273438 0.701634 point2 0.820312 0.702523
+#X obj 149 93 contour point1 0.273438 0.701634 point2 0.820312 0.702523
 :name shift;
 #X text 16 10 You can shift only the x-dimension of a point. To do
 this \, simply hold down the left/right arrow keys and move a point.
@@ -315,8 +315,7 @@ points using the properties menu.;
 #X restore 53 509 shifting;
 #X text 308 66 v1.2;
 #X text 10 281 add or remove a curve point ->;
-#X obj 528 560 else/openfile sketch-grip-help.pd -h See also: [sketch-grip]
-;
+#X obj 528 560 else/openfile coord-help.pd -h See also: [coord];
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;
 #X connect 6 0 7 0;

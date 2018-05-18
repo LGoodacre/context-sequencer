@@ -1,25 +1,25 @@
-#N struct 12200-big2 float x float y array 12200-array2 ^&*-dsmall2
+#N struct 37458-big2 float x float y array 37458-array2 ^&*-dsmall2
 ;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 12200-big1 float x float y array 12200-array1 ^&*-dsmall1
+#N struct 37458-big1 float x float y array 37458-array1 ^&*-dsmall1
 ;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 12257-big2 float x float y array 12257-array2 ^&*-dsmall2
+#N struct 37519-big2 float x float y array 37519-array2 ^&*-dsmall2
 ;
-#N struct 12257-big1 float x float y array 12257-array1 ^&*-dsmall1
+#N struct 37519-big1 float x float y array 37519-array1 ^&*-dsmall1
 ;
-#N canvas 222 93 765 616 10;
-#X obj 23 16 cnv 15 192 42 empty empty empty 20 12 0 14 -99865 -66577
+#N canvas 128 93 765 616 10;
+#X obj 33 26 cnv 15 152 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 18 11 cnv 15 192 42 empty empty empty 20 12 0 14 -1 -66577 0
+#X obj 28 21 cnv 15 152 42 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 19 12 cnv 15 190 40 empty empty sketch-grip 20 14 2 32 -2244
--262144 0;
+#X obj 29 22 cnv 15 150 40 empty empty coord 10 20 2 50 -2244 -262144
+0;
 #X obj 473 8 ctxfiles/license;
-#X text 19 90 [sketch-grip] is a special slider that "grips" and lets
-you move individual points on a [sketch] array. There are three main
-reasons you might want to do this:;
-#N canvas 67 88 659 490 example 0;
+#X text 19 90 [coord] is a special slider that "grips" and lets you
+move individual points on a [contour] array. There are three main reasons
+you might want to do this:;
+#N canvas 67 89 659 490 example 0;
 #X obj 437 231 phasor~;
 #X obj 437 254 *~ 255;
 #X obj 389 354 *~;
@@ -99,22 +99,22 @@ reasons you might want to do this:;
 #X obj 388 254 * 1.5;
 #X obj 437 278 tabread4~ wave;
 #X obj 389 325 tabread4~ wave;
-#X obj 60 148 sketch-index wave p1 0 2;
-#X obj 40 128 sketch-index wave p2 0 0;
-#X obj 82 182 sketch point1 0.451174 0.521572 point2 0.204918 0.14924
+#X obj 82 182 contour point1 0.451174 0.521572 point2 0.204918 0.14924
 0.859375 0.753165 :name wave :color -1.47304e+07 :duplicate 1 :mirror-x
 1 :mirror-y 1;
-#X obj 82 128 sketch-grip wave x p2 help;
-#X obj 82 148 sketch-grip wave x p1 help;
-#X obj 58 184 sketch-grip wave y p1 help;
-#X obj 36 184 sketch-grip wave y p2 help;
+#X obj 82 128 coord wave x p2 help;
+#X obj 82 148 coord wave x p1 help;
+#X obj 58 184 coord wave y p1 help;
+#X obj 36 184 coord wave y p2 help;
 #X text 349 129 turn on automation here -->;
 #X text 555 353 <--volume here;
-#X text 47 11 This example uses two pairs of [sketch-grip] to control
-the points on a [sketch] array. The [sketch] has its "duplicate" \,
-"mirror-x" and "mirror-y" settings turned on \, so the waveform is
-completed symmetrically. Positions are sent to the [sketch-grip] objects
-from the two subpatches on the right.;
+#X text 47 11 This example uses two pairs of [coord] to control the
+points on a [contour] array. The [contour] has its "duplicate" \, "mirror-x"
+and "mirror-y" settings turned on \, so the waveform is completed symmetrically.
+Positions are sent to the [coord] objects from the two subpatches on
+the right.;
+#X obj 40 128 coord-index wave p2 0 0;
+#X obj 60 148 coord-index wave p1 0 2;
 #X connect 0 0 1 0;
 #X connect 1 0 12 0;
 #X connect 2 0 3 0;
@@ -137,14 +137,13 @@ from the two subpatches on the right.;
 0;
 #X obj 12 158 cnv 15 671 209 empty empty empty 20 12 0 14 -261689 -66577
 0;
-#X obj 221 211 sketch point1 0.122951 0.767123 0.6875 0.436709 point2
+#X obj 221 211 contour point1 0.122951 0.767123 0.6875 0.436709 point2
 0.286885 0.386076 :name env;
-#X obj 202 211 sketch-grip env y gr;
-#X obj 221 294 sketch-grip env x gr;
+#X obj 202 211 coord env y gr;
+#X obj 221 294 coord env x gr;
 #X text 354 235 <-- this is;
-#X text 355 291 <-- this is also [sketch-grip];
-#X text 45 234 this is [sketch-grip] -->;
-#X obj 203 293 sketch-index env gr 0 1;
+#X text 355 291 <-- this is also [coord];
+#X text 45 234 this is [coord] -->;
 #X text 45 311 It tells you which point is selected., f 21;
 #X text 468 235 which is used to draw a function.;
 #X obj 16 447 cnv 15 390 155 empty empty empty 20 12 0 14 -99865 -66577
@@ -153,8 +152,8 @@ from the two subpatches on the right.;
 0;
 #X obj 12 443 cnv 15 388 153 empty empty empty 20 12 0 14 -261689 -66577
 0;
-#X text 30 458 [sketch-grip] is quite easy to use. By moving the slider
-\, you will move the x- or y-axis of whichever point is selected.;
+#X text 30 458 [coord] is quite easy to use. By moving the slider \,
+you will move the x- or y-axis of whichever point is selected.;
 #X text 29 509 To select another point \, hold down the Control or
 Command key and then move the slider. Instead of moving the point \,
 the slider will "grip" to the nearest point.;
@@ -171,81 +170,79 @@ the slider will "grip" to the nearest point.;
 #X obj 564 398 cnv 15 120 30 empty empty setup 24 10 2 32 -208320 -66577
 0;
 #N canvas 67 87 455 558 arguments 0;
-#X text 46 37 [sketch-grip] has 5 arguments \, but the last 2 are optional.
+#X text 46 37 [coord] has 5 arguments \, but the last 2 are optional.
 ;
 #X text 104 66 1: ARRAY NAME. This must correspond with the name of
-the [sketch] array \, which is visible just above the object. Note
+the [contour] array \, which is visible just above the object. Note
 that the default name isn't a very good option \, which it resets every
-time the patch is loaded (\$0). So it is best to name the [sketch]
-array using the "name" command or the properties menu (see sketch-help.pd).
+time the patch is loaded (\$0). So it is best to name the [contour]
+array using the "name" command or the properties menu (see contour-help.pd).
 , f 49;
 #X text 104 167 2: x or y. This indicates whether you want a vertical
-or a horizontal [sketch-grip] object. You must enter the character
-"x" or the character "y" as the second argument., f 49;
+or a horizontal [coord] object. You must enter the character "x" or
+the character "y" as the second argument., f 49;
 #X text 104 227 3: label. This is a custom symbol which is used to
 identify the slider. It is best to keep the label short in case the
-text falls outside the display area. If you are using a pair of [sketch-grip]
+text falls outside the display area. If you are using a pair of [coord]
 objects to control the x- and y-axis \, then give them the same label
 so that they can communicate with each other., f 49;
 #X text 104 372 5: time grain for line input (see "input"). Defaults
 to 100 if left blank., f 49;
-#X text 47 416 So for example \, the [sketch-grip] objects created
-in the main window of this help patch are:;
-#X text 103 454 [sketch-grip env x gr];
-#X text 103 475 [sketch-grip env y gr];
-#X text 66 511 Note: If you right click on [sketch-grip] and select
-"properties" \, you can edit the creation argument.;
-#X text 104 326 4: group-name (only required if you are using [sketch-grip]
+#X text 47 416 So for example \, the [coord] objects created in the
+main window of this help patch are:;
+#X text 103 454 [coord env x gr];
+#X text 103 475 [coord env y gr];
+#X text 66 511 Note: If you right click on [coord] and select "properties"
+\, you can edit the creation argument.;
+#X text 104 326 4: group-name (only required if you are using [coord]
 in an abstraction and you want it to operate like [slide]. (see "input").
 , f 49;
 #X restore 563 504 creation arguments;
-#X text 525 447 [sketch-grip] works automatically \, but it needs to
-be initialized with the correct creation arguments., f 36;
+#X text 525 447 [coord] works automatically \, but it needs to be initialized
+with the correct creation arguments., f 36;
 #N canvas 580 337 450 300 object 0;
-#X text 48 21 [sketch-index] is the little number box visible in the
+#X text 48 21 [contour-index] is the little number box visible in the
 bottom-left of the example in the main window of the help patch. It
 is used for two things:;
-#X text 77 78 1: setting which point [sketch-grip] grips \; 2: state-saving
+#X text 77 78 1: setting which point [coord] grips \; 2: state-saving
 its selection.;
-#X text 49 130 [sketch-index] takes the following three arguments:
+#X text 49 130 [contour-index] takes the following three arguments:
 ;
-#X text 77 162 1: array name \, the same as with [sketch-grip] \; 2:
-label \, corresponding to those of [sketch-grip] \; 3: \$1 (if using
-as a part of a;
+#X text 77 162 1: array name \, the same as with [coord] \; 2: label
+\, corresponding to those of [coord] \; 3: \$1 (if using as a part
+of a;
 #X obj 262 188 else/openfile psave-help.pd -h psave abstraction.;
-#X restore 563 527 sketch-index object;
+#X restore 563 527 contour-index object;
 #N canvas 370 197 680 524 and 0;
-#X obj 649 439 sketch-index env gp 0 1;
-#X text 84 30 There are four ways of getting data into [sketch-grip]:
-;
+#X obj 649 439 contour-index env gp 0 1;
+#X text 84 30 There are four ways of getting data into [coord]:;
 #X text 108 55 1: Manually using the mouse.;
 #X text 108 80 2: Using the inlet.;
 #X floatatom 71 79 5 0 0 0 - - -, f 5;
 #X floatatom 489 105 5 0 0 0 - - -, f 5;
-#X obj 38 219 sketch-grip env x gp help-patch;
+#X obj 38 219 coord env x gp help-patch;
 #X text 109 104 3: By sending a message. This requires the fourth creation
 argument as an identifier (see "creation arguments"). You need to send
 message message "label-x my message" to channel [s group-name-]. See
 example to the right.;
 #X msg 489 127 \; help-patch- gp-x \$1;
-#X text 174 217 <-- this object is [sketch-grip env x gp help-patch].
-;
-#X text 108 170 4: using [control]. [sketch-grip] will integrate
-with [pgrid] to operate like a regular slider in mode-4.;
-#X text 80 280 There are two types of data you can send to [sketch-grip]:
+#X text 174 217 <-- this object is [coord env x gp help-patch].;
+#X text 108 170 4: using [control]. [coord] will integrate with [pgrid]
+to operate like a regular slider in mode-4.;
+#X text 80 280 There are two types of data you can send to [coord]:
 ;
 #X text 107 321 1: Single floats (0-100). As above \, the slider will
 jump to the new position.;
 #X text 108 362 2: Double float lists (position \, time). This will
 move the slider to the new position over the given time (in millieconds).
-The time grain can be set with [sketch-grip]'s 6th creation argument
-(see "creation arguments").;
+The time grain can be set with [coord]'s 6th creation argument (see
+"creation arguments").;
 #X floatatom 478 322 5 0 0 0 - - -, f 5;
 #X obj 478 344 pack f 1000;
 #X floatatom 541 322 5 0 0 0 - - -, f 5;
 #X msg 478 371 \; help-patch- gp-x \$1 \$2;
-#X text 76 452 [sketch-gri] has one outlet which outputs a value between
-0 and 1 You can use this to track the placement of a sketch point.
+#X text 76 452 [contour-gri] has one outlet which outputs a value between
+0 and 1 You can use this to track the placement of a contour point.
 ;
 #X floatatom 56 496 5 0 0 0 - - -, f 5;
 #X obj 417 183 else/openfile pgrid-help.pd -h See [pgrid].;
@@ -256,10 +253,10 @@ The time grain can be set with [sketch-grip]'s 6th creation argument
 #X connect 15 0 17 0;
 #X connect 16 0 15 1;
 #X restore 563 549 input and output;
-#X text 36 294 this is [sketch-index] -->;
-#X text 30 561 Note that you can also select a point using [sketch-index].
+#X text 36 294 this is [contour-index] -->;
+#X text 30 561 Note that you can also select a point using [contour-index].
 ;
+#X obj 420 221 else/openfile contour-help.pd -text contour -h;
+#X obj 203 293 coord-index env gr 0 1;
 #X text 396 89 1: For more precision \; 2: for integrating with [control]
-\; 3: for automation (see [automation example);
-#X obj 420 221 else/openfile sketch-help.pd -text sketch -h;
-#X obj 234 15 helpfiles/docfiles/help-display \$0;
+\; 3: for automation (see [automation example]);

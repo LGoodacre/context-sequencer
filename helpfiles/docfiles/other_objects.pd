@@ -1,4 +1,4 @@
-#N canvas 102 106 1232 524 10;
+#N canvas 67 106 1232 524 10;
 #X obj 53 41 cnv 15 557 222 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 48 36 cnv 15 557 222 empty empty empty 20 12 0 14 -1 -66577
@@ -25,8 +25,6 @@
 20 12 0 14 -257493 -66577 0;
 #X obj 637 50 else/openfile ../../scaler-help.pd -h [scaler] : calculate
 notes on a scale;
-#X obj 638 212 else/openfile ../../sketch-help.pd -h [sketch] : draw
-custom shapes on an array;
 #X obj 637 70 else/openfile ../../autocreate-help.pd -h [autocreate]
 : create objects in rapidfire;
 #X obj 66 69 else/openfile ../../content-help.pd -h [content] : embed
@@ -52,8 +50,6 @@ for the memory bank;
 : crossreference Context toggles with each other;
 #X obj 637 90 else/openfile ../../pgrid-help.pd -h [pgrid] : connect
 [psave] abstractions with [control];
-#X obj 638 232 else/openfile ../../sketch-grip-help.pd -h [sketch-grip]
-: move [sketch] points laterally or vertically;
 #X obj 641 332 else/openfile ../../burst-presets.txt -h burst-presets.txt
 : define new burst presets;
 #X obj 640 352 else/openfile ../../config-distro.pd -h config-distro.pd
@@ -64,8 +60,6 @@ for the memory bank;
 : define new presets for the :: prefix;
 #X obj 641 412 else/openfile ../../menu-shortcuts.txt -h menu-shortcuts.txt
 : define shortcuts for the Context menu system;
-#X obj 638 252 else/openfile ../../sketch-index-help.pd -h [sketch-index]
-: link two [sketch-grip] objects together;
 #X obj 55 278 cnv 15 557 152 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 50 273 cnv 15 557 152 empty empty empty 20 12 0 14 -1 -66577
@@ -87,3 +81,9 @@ ctxfiles/record-profiles.txt : define presets for the :r record command
 ;
 #X obj 640 453 else/openfile ../../ctxfiles/scales.txt -h ctxfiles/scales.txt
 : define new modes for [scaler];
+#X obj 638 212 else/openfile ../../contour-help.pd -h [contour] : draw
+custom shapes on an array;
+#X obj 638 232 else/openfile ../../coord-help.pd -h [coord] : move
+[contour] points laterally or vertically;
+#X obj 638 252 else/openfile ../../coord-index-help.pd -h [coord-index]
+: link two [coord] objects together;

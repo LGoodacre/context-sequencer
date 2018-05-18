@@ -1,4 +1,4 @@
-#N canvas 624 127 592 533 10;
+#N canvas 577 127 592 533 10;
 #X obj 38 30 cnv 15 152 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 33 25 cnv 15 152 52 empty empty empty 20 12 0 14 -1 -66577 0
@@ -27,7 +27,7 @@ arguments. Valid commands are:;
 \; :x -- x dimension (default 300) \; :y -- y dimension (default 200)
 \; :s -- scroll speed (defualt 50) \; :m -- midpoint of canvas (default
 33) \; :k --define scale of vertical distribution (default 5) \; :start
--- determine whether [sketch] is on by default, f 70;
+-- determine whether [finder] is on by default, f 70;
 #X restore 384 276 commands;
 #X text 45 312 1: start Context network \; 2: observe pattern in [finder]
 timeline \; 3: click on one of the timeline events. Whichever toggle

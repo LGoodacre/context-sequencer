@@ -1,14 +1,11 @@
-#N struct 50369-big2 float x float y array 50369-array2 ^&*-dsmall2
-;
+#N struct 7524-big2 float x float y array 7524-array2 ^&*-dsmall2;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N canvas 327 177 911 583 10;
+#N canvas 233 177 911 583 10;
 #X declare -path ../;
-#X obj 594 414 sketch point2 0 1 0.500001 0.348577 1 0.96412 :name
-hanning;
 #X obj 758 411 catch~ granular;
 #N canvas 67 87 450 250 (subpatch) 0;
-#X array sample 498674 float 2;
-#X coords 0 1 498674 -1 200 140 1;
+#X array sample 124669 float 2;
+#X coords 0 1 124669 -1 200 140 1;
 #X restore 595 235 graph;
 #X obj 595 198 soundfiler;
 #X floatatom 14 396 5 0 0 1 pitch - -, f 5;
@@ -69,13 +66,6 @@ connect 11 0 9 0 5 connect 12 0 11 1 5 connect 13 0 10 1;
 #X text 364 156 This Context is functioning as a selector. It sends
 a bang to each of the subsequent Contexts in quick sequence. You could
 make it select randomly by changing the burst preset., f 30;
-#X text 364 296 Each of these Contexts represents one grain. The [content]
-waveform represents a hanning curve. (The hanning curve is not visible
-inside [content] because it is synched with the [sketch] object to
-the right \, in order to economize on memory). Inside each overlay
-\, the sample is read and multiplied by the hanning curve \, over the
-cycle time. Here each grain's behaviour is identical \, but they could
-easily be distinct from each other., f 30;
 #X text 140 141 This determines how quickly the grains are hit., f
 17;
 #X text 140 226 This determines the cycle length of each grain, f
@@ -109,20 +99,29 @@ to create complex granular systems., f 51;
 #X msg 595 174 read -resize \$1 sample;
 #X msg 657 152 symbol wavs/loop.wav;
 #X obj 680 75 declare -path ../;
-#X connect 1 0 10 0;
-#X connect 4 0 5 0;
+#X obj 594 414 contour point2 0 1 0.500001 0.348577 1 0.96412 :name
+hanning;
+#X text 364 296 Each of these Contexts represents one grain. The [content]
+waveform represents a hanning curve. (The hanning curve is not visible
+inside [content] because it is synched with the [contour] object to
+the right \, in order to economize on memory). Inside each overlay
+\, the sample is read and multiplied by the hanning curve \, over the
+cycle time. Here each grain's behaviour is identical \, but they could
+easily be distinct from each other., f 30;
+#X connect 0 0 9 0;
+#X connect 3 0 4 0;
+#X connect 5 0 6 0;
 #X connect 6 0 7 0;
-#X connect 7 0 8 0;
-#X connect 9 0 44 0;
-#X connect 10 0 11 0;
-#X connect 10 0 11 1;
-#X connect 12 0 10 1;
-#X connect 19 0 18 0;
-#X connect 20 0 21 0;
-#X connect 22 0 17 0;
-#X connect 23 0 17 1;
-#X connect 24 0 40 0;
-#X connect 41 0 42 0;
-#X connect 42 0 43 0;
-#X connect 43 0 3 0;
-#X connect 44 0 43 0;
+#X connect 8 0 42 0;
+#X connect 9 0 10 0;
+#X connect 9 0 10 1;
+#X connect 11 0 9 1;
+#X connect 18 0 17 0;
+#X connect 19 0 20 0;
+#X connect 21 0 16 0;
+#X connect 22 0 16 1;
+#X connect 23 0 38 0;
+#X connect 39 0 40 0;
+#X connect 40 0 41 0;
+#X connect 41 0 2 0;
+#X connect 42 0 41 0;

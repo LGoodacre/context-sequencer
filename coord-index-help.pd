@@ -1,5 +1,5 @@
 #N canvas 481 250 502 493 10;
-#X obj 168 108 else/openfile sketch-grip-help.pd;
+#X obj 168 108 else/openfile coord-help.pd;
 #X obj 141 53 loadbang;
 #X obj 141 76 t b b;
 #X obj 141 139 iemguts/canvasdelete 1;
