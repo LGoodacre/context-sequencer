@@ -1,11 +1,11 @@
-#N canvas 522 195 445 567 10;
-#X obj 32 22 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
+#N canvas 552 101 445 638 10;
+#X obj 31 32 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
-#X obj 27 16 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
+#X obj 26 26 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
 0;
-#X obj 28 17 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
+#X obj 27 27 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
 0;
-#X obj 29 18 cnv 15 140 53 empty empty ctx 45 25 2 38 -206035 -204800
+#X obj 28 28 cnv 15 140 53 empty empty ctx 45 25 2 38 -206035 -204800
 0;
 #X obj 26 173 cnv 15 358 392 empty empty empty 20 12 0 14 -33289 -66577
 0;
@@ -15,13 +15,13 @@
 0;
 #X obj 32 179 cnv 15 345 379 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 188 19 ctxfiles/license;
+#X obj 187 29 ctxfiles/license;
 #X text 26 92 [ctx] is an embeddable object which creates audio inlet~s
 or outlet~s in Context. [ctx] must be created and saved inside the
 Context overlay in order to work. It takes one mandatory argumet: "inlet~"
 or "outlet"., f 53;
-#X obj 136 331 context :H 10 :io io :ID 1 :ol 1 :sw 1 5 obj
-252 55 ctx inlet~ 5 obj 251 117 ctx outlet~ 5 connect 3 0 4 0;
+#X obj 136 331 context :H 10 :io io :ID 1 :ol 1 :sw 1 5 obj 252 55
+ctx inlet~ 5 obj 251 117 ctx outlet~ 5 connect 3 0 4 0;
 #X floatatom 160 196 5 0 0 0 - - -, f 5;
 #X obj 192 241 sig~;
 #X obj 238 420 snapshot~;
@@ -32,6 +32,9 @@ while the context is idle. In this example \, Context has the setting
 " :sw 1 " \, which turns [switch~] on. This is necessary if you want
 to pass audio through., f 45;
 #X obj 144 241 del 10;
+#X obj 12 8 helpfiles/docfiles/help-display \$0;
+#X obj 29 583 else/openfile helpfiles/links/ctx.html -h see also Context
+Manual entry on [ctx];
 #X connect 10 5 13 0;
 #X connect 11 0 14 0;
 #X connect 12 0 10 5;

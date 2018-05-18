@@ -1,6 +1,6 @@
-#N canvas 203 153 538 459 10;
+#N canvas 419 176 538 459 10;
 #X declare -path ./;
-#N canvas 749 263 450 282 shortcuts 0;
+#N canvas 702 263 450 282 shortcuts 0;
 #X text 86 96 connect = c;
 #X text 116 84 to = t;
 #X text 104 72 from = f;
@@ -183,7 +183,7 @@ and this damage can't be undone through the PD menu.;
 regularly. The author assumes no liability if this tool does damage
 to your patch!;
 #X restore 420 378 warnings;
-#N canvas 554 211 450 475 PD 0;
+#N canvas 507 211 450 475 PD 0;
 #X text 46 24 In order to use connector to its full potential \, you'll
 need to understand about object creation order and connection lists.
 ;
@@ -264,7 +264,7 @@ unique number \, starting from 0 .;
 #X obj 475 118 helpfiles/docfiles/lines;
 #X obj 475 138 helpfiles/docfiles/lines;
 #X obj 475 18 helpfiles/docfiles/lines;
-#N canvas 533 187 663 434 guts 0;
+#N canvas 697 322 663 434 guts 0;
 #X obj 396 52 array define &&lines 1;
 #X obj 270 80 array size &&lines;
 #X obj 220 20 tgl 10 1 $nn \$0nn empty 17 7 0 10 -262144 -1 -1 1 1

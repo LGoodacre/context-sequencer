@@ -1,4 +1,4 @@
-#N canvas 215 113 949 560 10;
+#N canvas 121 113 949 560 10;
 #X obj 9 485 ctxfiles/license;
 #N canvas 67 226 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -303,7 +303,7 @@ which one is active \, use the "on" button \, or press the up and down
 (or left and right) buttons on the Launchpad together.;
 #X obj 384 135 outlet;
 #X restore 739 224 on-off;
-#N canvas 366 150 450 241 (subpatch) 0;
+#N canvas 319 150 450 241 (subpatch) 0;
 #X obj 384 212 outlet;
 #X text 14 21 Mode 1 gives you a bird's-eye-view of all of the Contexts
 open in the patch. In mode 1 \, each Launchpad cell corresponds to
@@ -316,8 +316,10 @@ on the Function Selectors.;
 #X text 13 165 You can also use mode 1 to record data into a Context
 by tapping on the cell. The Function Selector must be set to :r for
 this to work.;
+#X obj 74 217 else/openfile helpfiles/links/control_mode_1.html -h
+see Context Manual entry on mode 1;
 #X restore 515 198 mode-1;
-#N canvas 67 99 450 365 (subpatch) 0;
+#N canvas 67 99 450 418 (subpatch) 0;
 #X obj 378 238 outlet;
 #X text 15 13 Mode 2 lets you edit the toggles of a select group of
 Contexts. The group selected for editing is defined using the "-send
@@ -340,6 +342,8 @@ will now start at the point corresponding to that cell. You can enter
 this mode permanently by using the :tx 1 command. Holding down the
 Mode 2 button now switches back to the original mode where pressing
 cells affects the toggles.;
+#X obj 75 372 else/openfile helpfiles/links/control_mode_2.html -h
+see Context Manual entry on mode 2;
 #X restore 544 223 mode-2;
 #N canvas 67 92 450 210 (subpatch) 0;
 #X obj 384 181 outlet;
@@ -353,8 +357,10 @@ float value. You can change the value of any toggle by clicking on
 an empty cell \, or turn a toggle off by clicking on a lit cell. By
 default. mode 3 lets you edit the x-axis toggles. You can flip to y-axis
 by double clicking on the mode 3 selector button ("Mixer").;
+#X obj 74 187 else/openfile helpfiles/links/control_mode_3.html -h
+see Context Manual entry on mode 3;
 #X restore 574 247 mode-3;
-#N canvas 67 99 565 296 (subpatch) 0;
+#N canvas 67 99 565 344 (subpatch) 0;
 #X text 9 16 Mode 4 \, Mixer mode \, doesn't relate to Context \, but
 to [slide] and [slide2]. It enables you to control the sliders in a
 custom mixer abstraction using the Launchpad. The abstraction must
@@ -374,8 +380,10 @@ Function Selector again halts the motion.;
 #X obj 413 40 slide m m \$0 0 100;
 #X obj 413 165 pgrid;
 #X obj 413 212 psave;
+#X obj 83 294 else/openfile helpfiles/links/control_mode_4.html -h
+see Context Manual entry on mode 4;
 #X restore 599 275 mode-4;
-#N canvas 65 81 450 161 (subpatch) 0;
+#N canvas 67 89 450 161 (subpatch) 0;
 #X obj 381 131 outlet;
 #X text 9 15 The position selectors are used to scroll if the grid
 is not large enough to represent the array. Their usage is generally
@@ -413,7 +421,7 @@ send by [control] will snap to either the previous or the next beat.
 In order to achieve this \, [control] must be given the beat. This
 is dome from its inlet in the top-left corner.;
 #X restore 710 494 quantize;
-#N canvas 618 308 514 399 arguments 0;
+#N canvas 571 308 514 399 arguments 0;
 #X text 22 17 [control] has a few commands which can be sent to it
 through creation arguments. It also uses these commands to save custom
 Function Selector messages (this happens automatically).;
@@ -431,7 +439,7 @@ first function selector in mode 4 \; ... \; :4f7 -- assign a message
 to the eighth function selector in mode 4 \; :tx -- switch toggle mode
 and start mode in Mode 2 \;, f 68;
 #X restore 498 494 creation arguments;
-#N canvas 408 148 450 323 keys 0;
+#N canvas 361 148 450 323 keys 0;
 #X text 40 22 Each cell has an alternate function which can be activated
 with the keyboard's Shift key.;
 #X text 64 62 --The control row along the top and the right (ie. the
@@ -461,8 +469,10 @@ the top-left hand corner of that [control]'s patch. Clicking on that
 cell will jump to the given patch. Mode 0 is the same in every instance
 of [control] that is open \, so it doesn't make any difference where
 you summon it from.;
+#X obj 69 171 else/openfile helpfiles/links/control_mode_0.html -h
+see Context Manual entry on mode 0;
 #X restore 475 173 mode-0;
-#N canvas 67 87 450 135 (subpatch) 0;
+#N canvas 67 89 450 135 (subpatch) 0;
 #X text 41 29 [control] has a small properties menu. You can access
 it by right clicking and selecting "properties". There you will be
 able to select most of the same options as listed in "creation arguments"
@@ -476,6 +486,7 @@ the controller \, so this help-file will work still with no MIDI hardware.
 , f 72;
 #X obj 550 526 else/openfile helpfiles/links/control.html -h see the
 Context Manual entry on [control];
+#X obj 408 11 helpfiles/docfiles/help-display \$0;
 #X connect 15 0 14 0;
 #X connect 16 0 13 0;
 #X connect 17 0 12 0;

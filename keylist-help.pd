@@ -1,11 +1,11 @@
-#N canvas 144 177 415 567 10;
-#X obj 33 22 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
+#N canvas 401 135 415 598 10;
+#X obj 33 32 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
-#X obj 27 16 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
+#X obj 27 26 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
 0;
-#X obj 28 17 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
+#X obj 28 27 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
 0;
-#X obj 29 18 cnv 15 140 53 empty empty keylist 16 25 2 38 -206035 -204800
+#X obj 29 28 cnv 15 140 53 empty empty keylist 16 25 2 38 -206035 -204800
 0;
 #X obj 26 153 cnv 15 358 392 empty empty empty 20 12 0 14 -33289 -66577
 0;
@@ -34,7 +34,7 @@ of [keylist]. Notice \, however \, that the command doesn't sent until
 a number key is pressed \, so you will still need to press a number
 key if you plan on using the '$' variable.;
 #X restore 40 514 creation arguments;
-#X obj 196 20 ctxfiles/license;
+#X obj 196 30 ctxfiles/license;
 #X text 50 369 TO USE KEYLIST IN TO ALTER CONTEXT IN THIS EXAMPLE:
 ;
 #X text 63 401 1: Press and hold the x key \; 3: Press a number key
@@ -70,3 +70,6 @@ This means that you can set the x-axis toggles (:x) \, the y-axis toggles
 (:y) and the cycle time (:d) using the keyboard., f 45;
 #X text 30 97 [keylist] binds Context commands to keyboard input. This
 lets you control Context in custom ways by typing.;
+#X obj 19 5 helpfiles/docfiles/help-display \$0;
+#X obj 24 551 else/openfile helpfiles/links/keylist.html -h see Context
+Manual entry on [keylist];

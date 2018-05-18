@@ -1,10 +1,10 @@
-#N canvas 463 216 567 354 10;
-#X obj 319 24 ctxfiles/license;
-#X obj 26 28 cnv 15 282 52 empty empty empty 20 12 0 14 -99865 -66577
+#N canvas 416 216 666 354 10;
+#X obj 319 33 ctxfiles/license;
+#X obj 26 37 cnv 15 282 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 21 23 cnv 15 282 52 empty empty empty 20 12 0 14 -1 -66577 0
+#X obj 21 32 cnv 15 282 52 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 22 24 cnv 15 280 50 empty empty crossreference 24 20 1 35 -90093
+#X obj 22 33 cnv 15 280 50 empty empty crossreference 24 20 1 35 -90093
 -66577 0;
 #X obj 26 255 context :ID 1;
 #X obj 95 255 context :ID 2;
@@ -12,23 +12,21 @@
 #X obj 235 255 context :ID 4;
 #X obj 24 185 context :H 6 :ID 5 :ol 1 10 obj 316 55 crossreference
 1 \; 1 2 3 4;
-#N canvas 67 94 450 300 arguments 0;
+#N canvas 67 94 450 300 (subpatch) 0;
 #X text 42 127 Additional arguments are \; \; y -- crossreference the
 y-axis instead of the x-axis \; \; -n -- prevent the referenced Context
 from sending messages \; \; any other symbol -- references a Context
 in another patch \, rather than this one (must match the argument of
 a [patch] object in another patch).;
-#X obj 48 258 pddp/pddplink patch-help.pd -text See: patch-help.pd
-;
 #X text 33 18 The first argument for [crossreference] is the toggle
 position you wish it to respect in the connected Contexts. Thereafter
 \, arguments are ID numbers (optionally separated by a comma or semi-colon
 for clarity) . For instance \, if you wanted to connect this Context's
 toggles to the 3rd toggles of Contexts 7 8 and 9 \, you would create
 an object [crossreference 3 \, 7 8 9] in the overlay.;
+#X obj 48 258 else/openfile patch-help.pd -h See: patch-help.pd;
 #X restore 404 280 arguments;
-#X text 36 323 See also: Manual Section 7 (ID) \, 14 (Overlay).;
-#N canvas 193 165 450 300 example 0;
+#N canvas 193 165 450 300 (subpatch) 0;
 #X obj 38 32 context :H 6 :ID 6 :ol 1 9 obj 213 79 crossreference 1
 10 11 12 13;
 #X obj 38 89 context :H 6 :ID 7 :ol 1 9 obj 213 80 crossreference 2
@@ -58,3 +56,9 @@ to the first toggle from the next \, etc. The toggle position and the
 Context ID numbers specified in the creation argument., f 80;
 #X text 90 224 <-- change toggles and toggle floats to see the effect
 of [crossrefernce], f 73;
+#X obj 11 7 helpfiles/docfiles/help-display \$0;
+#X obj 85 328 else/openfile helpfiles/links/overlay.html -h Context
+Manual entry on [overlay];
+#X obj 85 315 else/openfile helpfiles/links/ID.html -h Context Manual
+entry on [ID];
+#X text 25 316 see also:;

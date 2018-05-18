@@ -1,11 +1,11 @@
-#N canvas 569 156 420 595 10;
-#X obj 33 22 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
+#N canvas 467 89 420 574 10;
+#X obj 33 32 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
-#X obj 27 16 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
+#X obj 27 26 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
 0;
-#X obj 28 17 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
+#X obj 28 27 cnv 15 142 55 empty empty empty 21 18 2 32 -204786 -204800
 0;
-#X obj 29 18 cnv 15 140 53 empty empty BANK 16 25 2 38 -206059 -204800
+#X obj 29 28 cnv 15 140 53 empty empty BANK 16 25 2 38 -206059 -204800
 0;
 #X obj 26 303 cnv 15 358 192 empty empty empty 20 12 0 14 -33289 -66577
 0;
@@ -15,15 +15,15 @@
 0;
 #X obj 32 309 cnv 15 345 179 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 188 19 ctxfiles/license;
+#X obj 188 29 ctxfiles/license;
 #X text 27 207 Each toggle represents a different slot in the bank
 and any changes you make will be stored to that slot. By default \,
 only the :x and :i settings will be saved \, but it can be changed
 to store any settings with the [bank] object. Simply create an object
 [bank a b c] inside the overlay \, where "a b c" are the commands you
 want to save.;
-#X obj 154 408 context :H 17 :ID 1 :ba ' :c 11 || :c 2 || :c 7 ' :ol
-1 5 obj 178 17 bank c;
+#X obj 114 408 context :H 19 :c 11 :ID 1 :ba ' :c 11 || :c 2 || :c
+7 ' :ol 1 5 obj 178 17 bank c;
 #X text 27 128 The memory bank is a bank of different Context states
 that you can easily flip between. To access the memory bank \; 1: Hold
 the mouse over a Context \; 2: double pres and hold the "shift" key
@@ -34,7 +34,8 @@ the overlay. This means that its memory bank stores the color setting
 above to see., f 51;
 #X text 26 92 [bank] is an overlay object used to define a list of
 settings for the memory bank.;
-#X text 32 513 For more information about the memory bank \, see manual
-Section 13: Memory bank.;
-#X text 32 553 For more information about the overlay \, see manual
-Section 14: Using the Overlay.;
+#X obj 18 3 helpfiles/docfiles/help-display \$0;
+#X obj 81 504 else/openfile helpfiles/links/bank.html -h see Context
+Manual entry on Memory bank;
+#X obj 81 523 else/openfile helpfiles/links/overlay.html -h see Context
+Manual entry on Overlay;

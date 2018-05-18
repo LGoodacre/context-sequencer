@@ -1,11 +1,11 @@
-#N canvas 671 127 592 533 10;
-#X obj 38 14 cnv 15 152 52 empty empty empty 20 12 0 14 -99865 -66577
+#N canvas 624 127 592 533 10;
+#X obj 38 30 cnv 15 152 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 33 9 cnv 15 152 52 empty empty empty 20 12 0 14 -1 -66577 0
+#X obj 33 25 cnv 15 152 52 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 34 10 cnv 15 150 50 empty empty finder 21 23 1 40 -6517 -262144
+#X obj 34 26 cnv 15 150 50 empty empty finder 21 23 1 40 -6517 -262144
 0;
-#X obj 317 16 ctxfiles/license;
+#X obj 207 26 ctxfiles/license;
 #X text 22 91 [finder] translates Context events into a linear timeline.
 It is there to help locate notes in larger networks \, where the size
 and complexity makes tracking them down tricky. [finder] allows for
@@ -29,7 +29,6 @@ arguments. Valid commands are:;
 33) \; :k --define scale of vertical distribution (default 5) \; :start
 -- determine whether [sketch] is on by default, f 70;
 #X restore 384 276 commands;
-#X obj 218 164 finder :l me- :k 15 :y 100 :start;
 #X text 45 312 1: start Context network \; 2: observe pattern in [finder]
 timeline \; 3: click on one of the timeline events. Whichever toggle
 this note originated from will be located (ie. will shake). \; 4: to
@@ -41,5 +40,7 @@ toggle will edit the first number in the appropriate term of the message
 database. \; --If the original toggle has any other special character
 \, a warning message will display. You can override the warning by
 holding Shift and scrolling.;
+#X obj 29 7 helpfiles/docfiles/help-display \$0;
+#X obj 218 164 finder :l me- :k 15 :y 100 :start;
 #X connect 7 0 5 1;
 #X connect 8 0 5 1;
