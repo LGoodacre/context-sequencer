@@ -68,7 +68,7 @@ Context is a TOOL DESIGNED TO MAKE COMPOSITION IN PD MORE ACCESSIBLE.
 
 
 
-Miller Puckette has said that in designing PD, his intention was to create a mid-point between the user and code based programming--in other words, a stepping stone to make digital signal processing more accessible*. In a similar vein, Context is designed to make composition more accessible to PD users. The intention is to create a universal control system for other PD instruments and patching, so that the user can focus their time and effort on sound design without having to worry about sequencing.
+Miller Puckette has said that in designing PD, his intention was to create a mid-point between the user and the code--in other words, a stepping stone to make digital signal processing more accessible*. Context is another mid-point, designed to bring PD users one step closer to freedom of expression. The intention is to create a universal control system for other PD instruments and patching, so that the user can focus their time and effort on sound design without having to worry about sequencing.
 
 
 
@@ -80,7 +80,7 @@ Context is A LIBRARY,
 
 but not in the conventional way.
 
-PD libraries are collections of objects (externals or abstractions) for people to use. Context is a library, but one with a very heavy emphasis on a single object, [context]. There are a dozen or so other objects which come in the library, most of which are only useful in conjunction with Context. The library also contains a few objects which might be useful even if you are not using [context] and some that have no relationship to it. See helpfiles/docfiles/other_objects.pd for more information here.
+PD libraries are collections of objects (externals or abstractions) for people to use. Context is a library, but one with a very heavy emphasis on a single object, [context]. There about twenty other objects which come in the library, most of which are only useful in conjunction with Context. The library also contains a few objects which are useful even if you are not using [context]. See helpfiles/docfiles/other_objects.pd for more information.
 
 
 
@@ -92,7 +92,7 @@ Context is AN OBSESSION,
 
 
 
-and not always a healthy one. What was supposed to take weeks to develop instead took years, and the resulting patchwork of systems and hierarchies can be understood as much by its author's weaknesses as by his strengths. Many of my aims have been ill-advised, from the attempt of making a single tool which performs every possible task to the necessity of pushing PD beyond its natural limitations. Nevertheless, Context does things that no patch has done before, and if the resulting software is even slightly useful or inspiring to others, then the 10,000 hours that I have spent making it will seem justified.
+and not always a healthy one. What was supposed to take weeks to develop instead took years, and the resulting patchwork can be understood as much by its author's weaknesses as by his strengths. Many of my aims have been ill-advised--from the attempt of making a single tool which performs every possible task, to the necessity of pushing PD beyond its natural limitations. Nevertheless, Context does things that no patch has done before, and if the resulting software is even slightly useful or inspiring to others, then the 10,000 hours that I have spent making it will seem worthwhile.
 
  
 
@@ -107,7 +107,7 @@ Finally, Context is NOT FINISHED.
 It probably never will be. Email me if you find any mistakes.
 
 
-Liam Goodacre, 2017-2018
+Liam Goodacre, 2015-2018
 liam.goodacre@gmail.com
 
 
