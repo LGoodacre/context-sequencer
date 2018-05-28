@@ -168,21 +168,15 @@ of terms (in this case \, 3).;
 0;
 #X obj 37 67 cnv 15 697 53 empty empty message variables: melody examples
 12 22 2 43 -83573 -204800 0;
-#X text 764 56 The Context output language consists of a series of
-variables which are used to manipulate outgoing messages. They can
-be used to create random or variable notes \, modify Context settings
-\, and much more. This patch shows some basic techniques for getting
-the most out of the output language. For a complete account \, read
-mnual section 11, f 79;
 #X text 764 125 Note that all examples create whole numbers \, which
 are then fed through the [scaler] object to turn them into notes on
-a scale. There is also a viariable which accesses [scaler] remotely
+a scale. There is also a variable which accesses [scaler] remotely
 \, but it is not used here., f 79;
 #X text 140 151 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
 TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
 #X text 2896 478 The second argument of ? is used to define the number
 of random values it will generate. Here \, the second argument is set
-by @ \, as in example 5 So chaniging the position of Context will increase
+by @ \, as in example 5 So changing the position of Context will increase
 the number of notes in each hit.;
 #X obj 1413 146 dac~;
 #X obj 1470 124 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
@@ -198,7 +192,7 @@ the number of notes in each hit.;
 #X obj 1548 54 receive decay;
 #X obj 1417 34 route x a d;
 #X obj 38 1 ctxfiles/license;
-#X text 78 500 Ususally \, double clicking and scrolling up will give
+#X text 78 500 Usually \, double clicking and scrolling up will give
 you float connections \, and scrolling down will give you toggle floats.
 However \, it is possible to scroll to a negative toggle float \, so
 long as you go down (to a positive one) first., f 63;
@@ -211,20 +205,25 @@ Manual entry on message variables;
 #X text 83 439 Note the important difference here between toggle floats
 and float connections. The last toggle here (c10) is a connection \,
 not read by the = sign.;
+#X text 764 56 The Context output language consists of a series of
+variables which are used to manipulate outgoing messages. They can
+be used to create random or variable notes \, modify Context settings
+\, and much more. This patch shows some basic techniques for getting
+the most out of the output language., f 79;
 #X connect 3 3 4 3;
 #X connect 4 3 5 3;
 #X connect 5 3 6 3;
-#X connect 76 0 82 1;
-#X connect 77 0 78 0;
-#X connect 78 0 82 0;
-#X connect 80 0 83 0;
-#X connect 80 0 86 0;
-#X connect 81 0 77 0;
-#X connect 82 0 75 0;
-#X connect 82 0 75 1;
-#X connect 84 0 78 1;
-#X connect 85 0 84 0;
-#X connect 86 0 77 0;
-#X connect 86 1 81 0;
-#X connect 86 2 78 1;
-#X connect 86 3 77 0;
+#X connect 75 0 81 1;
+#X connect 76 0 77 0;
+#X connect 77 0 81 0;
+#X connect 79 0 82 0;
+#X connect 79 0 85 0;
+#X connect 80 0 76 0;
+#X connect 81 0 74 0;
+#X connect 81 0 74 1;
+#X connect 83 0 77 1;
+#X connect 84 0 83 0;
+#X connect 85 0 76 0;
+#X connect 85 1 80 0;
+#X connect 85 2 77 1;
+#X connect 85 3 76 0;

@@ -67,7 +67,7 @@ obj 26 23 content :lo helpfiles/wavs/cup2.wav :x1 0.361111 :x2 1.15278
 :y2 2.28571 :c 13 :li 1 5 connect 3 0 7 0 5 connect 4 0 7 0 5 connect
 5 0 7 0 5 connect 6 0 7 0 5 connect 9 0 7 0 5 connect 10 0 7 0;
 #X obj 1126 357 dac~;
-#X text 1156 207 1: Hold down the Shift key and move the mosue cursor
+#X text 1156 207 1: Hold down the Shift key and move the mouse cursor
 over the Context \; 2: Go to the left edge of one of the Content samples
 \; 3: Once the line turns black \, click and drag the object \; 4:
 Do the same over the right edge to resize \; 5: To move objects vertically
@@ -90,14 +90,14 @@ mouse. Note how this Context is looped., f 35;
 #X text 522 255 Context won't start if you double click over a [content]
 \, so there isn't much room for double clicking here (you have to go
 for the small green part at the top., f 35;
-#X text 100 177 Here \, the embedded [content] object hosts a sammple.
+#X text 100 177 Here \, the embedded [content] object hosts a sample.
 The [ctx outlet~] object is used inside the overlay for the signal
 connection. Double click on the green canvas area to play. Changing
 the cycle time will change the speed \, and choosing a negative time
 will put the sample in reverse., f 33;
 #X msg 2314 486;
 #X text 2387 136 Here you can see what happens when you embed one Context
-inside another: the inner one will cycle contiuously while the cursor
+inside another: the inner one will cycle continuously while the cursor
 is over it. Notice that the first and second Context behave slightly
 differently--c1 stops abruptly when the cursor passes its border \,
 whereas c2 comes to the end of its cycle. This is determined by the

@@ -91,7 +91,7 @@ message database.;
 #X msg 174 203 :r -messages 1 -prepend cats;
 #X msg 216 253 :r -messages 1 -append dogs;
 #X text 354 197 This attaches a custom message at the beginning of
-the recroded data.;
+the recorded data.;
 #X text 393 248 This attaches a custom message at the end of the recroded
 data.;
 #X msg 21 274 :a -open;
@@ -210,7 +210,7 @@ determines whether an individual toggle can be toggled more than once.
 -66577 0;
 #X obj 181 309 cnv 15 15 15 empty empty default→ 0 7 0 14 -262144
 -66577 0;
-#X text 201 10 The -floats sub-command deterines whether/how toggle
+#X text 201 10 The -floats sub-command determines whether/how toggle
 floats should be interpreted from the incoming message. -floatprep
 determines whether incoming toggle floats should be used a connections
 or as floats (see Manual Section 5: Accessing Float Connect).;

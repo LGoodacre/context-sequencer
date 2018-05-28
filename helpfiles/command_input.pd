@@ -63,7 +63,7 @@ click the button in the top-right.;
 highlighted and you can select a numerical argument. \; 4: symbol input.
 The symbol box will be highlighted and you can type in textual input.
 , f 53;
-#X text 63 415 In adition \, every menu page has a help button at the
+#X text 63 415 In addition \, every menu page has a help button at the
 bottom which will print information about the settings displayed on
 the current screen. Use it!;
 #N canvas 67 87 450 109 (subpatch) 0;
@@ -130,7 +130,7 @@ to edit;
 #X restore 286 259 preset command ::;
 #N canvas 513 89 583 674 command 0;
 #X text 46 10 'copy' is a special command that lets you copy settings
-from one Context to others. You can copy some or all commands \, makign
+from one Context to others. You can copy some or all commands \, making
 this a very powerful feature., f 80;
 #X obj 175 320 context :c 3 :d 1 :i 1 2 0 0 0 :x = 2 1 :ID 6;
 #X obj 277 320 context :c 6 :d 2 :i 0 0 3 4 0 :x = 4 3 :ID 7;
@@ -149,10 +149,10 @@ numbers you wish to copy from/to. If copying 'from' \, only the first
 number in the list will be regarded. Otherwise \, the commands will
 be copied to multiple Contexts. The case where no ID numbers are specified
 is explained below. \; \; 3: A list of commands that you wish to copy
-\, ie. 'x y i j'. You can include or ommit the colon. If no commands
+\, ie. 'x y i j'. You can include or omit the colon. If no commands
 are specified \, all commands will be copied. If the arguments start
 with a tilde (~) \, then all commands apart from those listed will
-be copied (this is especially useful for ommitting the ID number).
+be copied (this is especially useful for omitting the ID number).
 , f 78;
 #X text 47 268 copy :x and :i from 6 to 8 and 9, f 11;
 #X text 421 268 copy everything apart from :ID and :c from 8 to 7,

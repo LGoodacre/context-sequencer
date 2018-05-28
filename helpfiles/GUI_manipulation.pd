@@ -125,7 +125,7 @@ with the toggles.;
 ;
 #X text 128 351 change physical dimensions \, maintain cycle time,
 f 15;
-#X text 258 351 change physical dimenstions \, change cycle time,
+#X text 258 351 change physical dimensions \, change cycle time,
 f 15;
 #X text 266 242 CONTROL KEY;
 #X text 136 242 SHIFT KEY;

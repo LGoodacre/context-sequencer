@@ -49,12 +49,12 @@ stop it \, click and hold. Try this out on any of the Contexts here.
 #X obj 380 511 ctxfiles/license;
 #X obj 380 571 declare -path ../;
 #X obj 26 23 docfiles/help-display \$0;
-#X obj 192 66 else/openfile links/feedback.html -h see Context Maual
+#X obj 192 66 else/openfile links/feedback.html -h see Context Manual
 entry on feedback;
 #X text 326 234 This will loop 2/3 times. To understand how this selection
 is being made \,, f 25;
 #X obj 325 273 else/openfile links/burst_basic.html -h see Context
-Maual entry on Burst.;
+Manual entry on Burst.;
 #X connect 12 4 13 0;
 #X connect 13 0 12 4;
 #X connect 14 0 15 0;

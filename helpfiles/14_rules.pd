@@ -56,7 +56,7 @@ of the rule is ' 1 :s qn== 4 '. In plain English \, this asks \, "Is
 an incoming (1) message starting with :s not equal (qn==) 4? "., f
 56;
 #X text 163 454 The condition line is "c-". This is the indicator which
-says "exeute the consequence and ignore the incoming message". But
+says "execute the consequence and ignore the incoming message". But
 there is no further consequence to execute \, so the result is that
 the rule swallows all incoming ' :S ' messages \, unless they are '
 :s 4 '., f 56;
@@ -95,8 +95,8 @@ to self (.) which removes (-) the 3rd toggle from the :x axis., f
 "if the input starts with :d \, does it equal (q==) the value 4?".
 The consequence reads " c- ". This means \, "replace the original message
 with the following consequence (which is blank)." Notice that the float
-atom still shows the value 4 \, since the message is cancelled out
-downsteam. However \, the cycle time will never take 4;
+atom still shows the value 4 \, since the message is canceled out
+downstream. However \, the cycle time will never take 4;
 #X obj 558 71 ctxfiles/license;
 #X text 1295 355 Open the rule list for c4. The condition reads " 0
 :x ". This means \, any :x input will trigger the consequence. The

@@ -216,9 +216,9 @@ connect 11 0 12 0 5 connect 12 0 13 1 5 connect 12 1 15 0 5 connect
 is optional., f 30;
 #X obj 13 426 ctxfiles/license;
 #X text 39 50 The COMMAND boxes show all possible Context commands.
-This is an exhaustive accont of Context's functions. Click on each
+This is an exhaustive account of Context's functions. Click on each
 button for more information., f 30;
-#X text 39 146 Filter commands using CATEGORIES \, or by searcing.
+#X text 39 146 Filter commands using CATEGORIES \, or by searching.
 , f 30;
 #X text 36 190 % stands for an argument \, curly brackets mean optional.
 , f 30;

@@ -97,7 +97,7 @@ interfere with the y-axis height when you move down! (For this reason
 | m ' :c -8.75432e+06 :d -2 :x = 14 11 8 5 4 3 2 1 :Z 13 :ID 3 :ol
 1 2 #del 4 6 obj 136 81 t a f 5 obj 163 102 sel 1 5 msg 163 124 rev
 0 5 msg 205 124 rev 1 54 text 199 33 The first digit of the 'inlet-'
-channel is the inlet number. It is uaually stripped off by the 'list
+channel is the inlet number. It is usually stripped off by the 'list
 split' object ¿ but it can be used in any way. Make sure you use a
 trigger to get the number first ¿ or else the order of operations might
 be harmed. 5 connect 1 0 3 0 5 connect 3 0 0 0 5 connect 3 1 4 0 5

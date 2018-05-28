@@ -48,7 +48,7 @@ timings jump). In this example \, only numbers less than 0.5 make sense.
 #X obj 441 107 cnv 15 148 426 empty empty empty 20 12 0 14 -170900
 -66577 0;
 #X msg 606 192 \; context stop;
-#X text 448 375 Moving a context horizonally \, or lowering c4 \, adds
+#X text 448 375 Moving a context horizontally \, or lowering c4 \, adds
 time to the whole loop., f 19;
 #X text 449 446 Note that you have to be in edit mode (ctrl+e) to move
 a Context)., f 19;

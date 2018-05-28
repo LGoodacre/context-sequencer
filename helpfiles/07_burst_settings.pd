@@ -96,7 +96,7 @@
 #X text 179 131 :h determines exactly how many toggles will fire in
 the next cycle. It forces this number for the next cycle \, but it
 may wander from there if :p or :l are positive., f 76;
-#X text 179 178 0 \, th default setting \, means "all toggles".;
+#X text 179 178 0 \, the default setting \, means "all toggles".;
 #X text 802 155 :o defines a precise series of toggles for the next
 cycle. Type in a list of numbers 1 to 15 here to see. :o overrides
 the :h setting., f 76;
@@ -233,7 +233,7 @@ of increase., f 76;
 position. If :p is set to 1 \, then the burst selection toggle(s) will
 land one place higher next cycle. Negative :P values mean that the
 progression will decrease., f 75;
-#X text 815 292 Note that a noninteger values for :P are a special
+#X text 815 292 Note that a non-integer values for :P are a special
 case (see :R below)., f 74;
 #X text 178 283 Note that a non-integer values for :p are a special
 case (see :l below)., f 76;

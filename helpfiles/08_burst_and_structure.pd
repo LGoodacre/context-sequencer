@@ -82,7 +82,7 @@ and closing toggles will change the length of the sequence., f 31
 three channels runs totally distinct from the others \, but it may
 be desirable for them to "bleed" into each other. Connecting random
 selectors to each other will add a degree of chaos into the system
-(ie. the first togglee on c12 to c3) \, whereas connecting determined
+(ie. the first toggle on c12 to c3) \, whereas connecting determined
 events will add more complex patterns (ie. the third toggle of c6 to
 c7).;
 #X text 870 178 This patch mostly uses cable connections so that the
@@ -97,7 +97,7 @@ used in a Context network., f 43;
 #X text 31 112 All green Contexts have their axes flipped (:M 1) \,
 so their bursts are along the x-axis.;
 #X text 30 148 All but c10 are using burst presets (ALL \, SEQUENCE
-and RANDOM) to control their behahiour.;
+and RANDOM) to control their behaviour.;
 #X text 19 112 *;
 #X text 19 148 *;
 #X obj 95 602 ctxfiles/license;

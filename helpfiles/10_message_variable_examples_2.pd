@@ -100,7 +100,7 @@ cycle., f 46;
 #X text 1316 407 Hold the mouse over c3 and press the down key to see
 its message. ' ^ drums ' returns an ID number from one of the Contexts
 tagged 'drums' \, and < indicates that the message should be sent to
-this locaion. (?4 * 2 + 1) picks a random number 1 \, 3 \, 5 or 7 \,
+this location. (?4 * 2 + 1) picks a random number 1 \, 3 \, 5 or 7 \,
 whih is sent to the :x toggles of the chosen Context.;
 #X text 1317 499 Note that ' ^ drums ' will cycle through the tagged
 Contexts \, but it could choose them randomly if the :nr setting is
@@ -113,7 +113,7 @@ set to 1;
 :d 3 :f 2 :h 1 :x = 17 13 11 7 4 1 :y = 2 1 :R 100 :Z 30 :ID 7;
 #X text 1982 254 ? picks a random number \, given a maximum;
 #X text 1982 268 . sends command message to self;
-#X text 1981 284 > fetches currrent state of given command;
+#X text 1981 284 > fetches current state of given command;
 #X text 633 409 Here \, the first burst toggle contains the message
 ' . :x (?8+1) '. The period at the beginning directs the message into
 the Context's own input--this means that the :x command will alter
@@ -144,7 +144,7 @@ x ] - 1) + 1 ) [ > c8 x ] ' :c -65432 :d 3 :f 2 :h 1 :x = 4 :y = 1
 :R 100 :Z 30 :ID 9;
 #X text 2542 254 ? picks a random number \, given a maximum;
 #X text 2542 268 . sends command message to self;
-#X text 2541 283 > fetches currrent state of given command;
+#X text 2541 283 > fetches current state of given command;
 #X text 2549 338 To view the burst message \, hold the mouse over Context
 and press the down key., f 29;
 #X text 2541 297 0 [ ... ] counts the items in a list;
