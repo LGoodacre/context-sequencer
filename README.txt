@@ -1,13 +1,13 @@
 ####################
 #                  #
-#  CONTEXT (v4)	   #
+#  CONTEXT (v4.0)  #
 #                  #
 ####################      Copyright Liam Goodacre, 2015-2018
 
 
 RELEASE:
 
-This is a general release of Context v4. It runs on PD Vanilla 0.48.1 or higher. It is compatible with Linux, OS and Windows. There are probably still some bugs left.
+This is a general release of Context v4.0. It runs on PD Vanilla 0.48.1 or higher. It is compatible with Linux, OS and Windows. There are probably still some bugs left.
 
 
 SETUP:
