@@ -1,156 +1,164 @@
-#N canvas 319 89 773 679 8;
+#N canvas 131 89 851 679 8;
 #X declare -path ../;
-#X obj 54 4 cnv 15 626 139 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 41 14 cnv 15 566 139 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 42 159 cnv 15 692 540 empty empty empty 20 12 0 14 -66577 -66577
+#X obj 42 169 cnv 15 692 540 empty empty empty 20 12 0 14 -66577 -66577
 0;
-#X obj 32 149 cnv 15 692 540 empty empty empty 20 12 0 14 -33289 -66577
+#X obj 32 159 cnv 15 692 540 empty empty empty 20 12 0 14 -33289 -66577
 0;
-#X obj 34 151 cnv 15 688 536 empty empty empty 20 12 0 14 -92205 -66577
+#X obj 34 161 cnv 15 688 536 empty empty empty 20 12 0 14 -92205 -66577
 0;
-#X obj 368 324 cnv 15 172 91 empty empty empty 12 12 0 14 -99865 -1
+#X obj 368 334 cnv 15 172 91 empty empty empty 12 12 0 14 -99865 -1
 0;
-#X obj 365 321 cnv 15 172 91 empty empty empty 12 12 0 14 -86277 -1
+#X obj 365 331 cnv 15 172 91 empty empty empty 12 12 0 14 -86277 -1
 0;
-#X obj 64 359 cnv 15 213 159 empty empty empty 13 13 0 14 -99865 -1
+#X obj 64 369 cnv 15 213 159 empty empty empty 13 13 0 14 -99865 -1
 0;
-#X obj 61 356 cnv 15 213 159 empty empty empty 13 13 0 14 -86277 -1
+#X obj 61 366 cnv 15 213 159 empty empty empty 13 13 0 14 -86277 -1
 0;
-#X obj 117 530 cnv 15 160 104 empty empty empty 12 12 0 14 -99865 -1
+#X obj 117 540 cnv 15 160 104 empty empty empty 12 12 0 14 -99865 -1
 0;
-#X obj 114 527 cnv 15 160 104 empty empty empty 12 12 0 14 -86277 -1
+#X obj 114 537 cnv 15 160 104 empty empty empty 12 12 0 14 -86277 -1
 0;
-#X obj 289 430 cnv 15 180 250 empty empty empty 15 13 0 14 -99865 -1
+#X obj 289 440 cnv 15 180 250 empty empty empty 15 13 0 14 -99865 -1
 0;
-#X obj 286 427 cnv 15 180 250 empty empty empty 15 13 0 14 -86277 -1
+#X obj 286 437 cnv 15 180 250 empty empty empty 15 13 0 14 -86277 -1
 0;
-#X obj 481 427 cnv 15 172 135 empty empty empty 12 13 0 14 -99865 -1
+#X obj 481 437 cnv 15 172 205 empty empty empty 12 13 0 14 -99865 -1
 0;
-#X obj 478 424 cnv 15 172 135 empty empty empty 12 13 0 14 -86277 -1
+#X obj 478 434 cnv 15 172 205 empty empty empty 12 13 0 14 -86277 -1
 0;
-#X obj 552 324 cnv 15 160 92 empty empty empty 12 12 0 14 -99865 -1
+#X obj 552 334 cnv 15 160 92 empty empty empty 12 12 0 14 -99865 -1
 0;
-#X obj 549 321 cnv 15 160 92 empty empty empty 12 12 0 14 -86277 -1
+#X obj 549 331 cnv 15 160 92 empty empty empty 12 12 0 14 -86277 -1
 0;
-#X obj 368 177 cnv 15 230 135 empty empty empty 12 13 0 14 -99865 -1
+#X obj 368 187 cnv 15 230 135 empty empty empty 12 13 0 14 -99865 -1
 0;
-#X obj 365 174 cnv 15 230 135 empty empty empty 12 13 0 14 -86277 -1
+#X obj 365 184 cnv 15 230 135 empty empty empty 12 13 0 14 -86277 -1
 0;
-#X obj 188 162 cnv 15 168 185 empty empty empty 12 13 0 14 -99865 -1
+#X obj 188 172 cnv 15 168 185 empty empty empty 12 13 0 14 -99865 -1
 0;
-#X obj 185 159 cnv 15 168 185 empty empty empty 12 13 0 14 -86277 -1
+#X obj 185 169 cnv 15 168 185 empty empty empty 12 13 0 14 -86277 -1
 0;
-#X obj 46 162 cnv 15 130 185 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 46 172 cnv 15 130 185 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 43 159 cnv 15 130 185 empty empty empty 20 12 0 14 -86277 -66577
+#X obj 43 169 cnv 15 130 185 empty empty empty 20 12 0 14 -86277 -66577
 0;
-#X obj 44 -6 cnv 15 626 139 empty empty empty 20 12 0 14 -33289 -66577
+#X obj 31 4 cnv 15 566 139 empty empty empty 20 12 0 14 -33289 -66577
 0;
-#X obj 45 161 cnv 15 126 181 empty empty TOGGLES 20 12 0 14 -97454
+#X obj 45 171 cnv 15 126 181 empty empty TOGGLES 20 12 0 14 -97454
 -1 0;
-#X obj 441 -4 cnv 15 227 135 empty empty COMMAND SYNTAX 9 16 0 25
--39033 -1 0;
-#X obj 454 28 cnv 15 204 39 empty empty ↑ ↑   ↑     24
+#X obj 368 6 cnv 15 227 135 empty empty COMMAND SYNTAX 9 16 0 25 -39033
+-1 0;
+#X obj 381 38 cnv 15 204 39 empty empty ↑ ↑   ↑     24
 53 0 30 -33289 -66577 0;
-#X obj 46 -4 cnv 15 392 135 empty empty CONTEXT COMMANDS: a brief summary
-20 12 0 18 -232990 -66577 0;
-#X obj 289 358 context :d 1 :n ' ex ' :Z -1 :ID 1;
-#X text 51 266 Try + - = operators for 'on only' \, 'off only' and
+#X obj 33 6 cnv 15 332 135 empty empty CONTEXT COMMANDS: a brief summary
+20 12 0 15 -232990 -66577 0;
+#X obj 289 368 context :d 1 :n ' ex ' :Z -1 :ID 1;
+#X text 51 276 Try + - = operators for 'on only' \, 'off only' and
 'define' options., f 18;
-#X text 62 25 This patch outlines some of the most important Context
-commands that you should be familiar with. A complete list can be found
-in 'context_commands_all.pd'. For usage \, see manual Section 7: Context
-Commands.;
-#X obj 457 30 cnv 15 50 35 empty empty :x 1 15 0 35 -233017 -66577
+#X obj 384 40 cnv 15 50 35 empty empty :x 1 15 0 35 -233017 -66577
 0;
-#X obj 510 30 cnv 15 27 35 empty empty + 2 16 0 35 -233017 -66577 0
+#X obj 437 40 cnv 15 27 35 empty empty + 2 16 0 35 -233017 -66577 0
 ;
-#X obj 540 30 cnv 15 116 35 empty empty 1 2 3 6 17 0 35 -233017 -66577
+#X obj 467 40 cnv 15 116 35 empty empty 1 2 3 6 17 0 35 -233017 -66577
 0;
-#X text 451 93 COMMAND;
-#X text 503 93 OPERATOR (optional), f 10;
-#X text 577 93 ARGUMENTS (optional), f 10;
-#X obj 187 161 cnv 15 164 181 empty empty TOGGLE FLOATS 12 13 0 14
+#X text 378 103 COMMAND;
+#X text 430 103 OPERATOR (optional), f 10;
+#X text 504 103 ARGUMENTS (optional), f 10;
+#X obj 187 171 cnv 15 164 181 empty empty TOGGLE FLOATS 12 13 0 14
 -97445 -1 0;
-#X text 189 222 define stepwise, f 9;
-#X text 267 218 define whole array, f 10;
-#X text 186 300 modify value;
-#X text 270 301 shift array;
-#X obj 367 176 cnv 15 226 131 empty empty TIMING 12 13 0 14 -97454
+#X text 189 232 define stepwise, f 9;
+#X text 267 228 define whole array, f 10;
+#X text 186 310 modify value;
+#X text 270 311 shift array;
+#X obj 367 186 cnv 15 226 131 empty empty TIMING 12 13 0 14 -97454
 -1 0;
-#X floatatom 378 201 5 0 0 0 - - -, f 5;
-#X text 377 262 define cycle time, f 10;
-#X floatatom 520 183 5 0 2 0 - - -, f 5;
-#X text 516 243 define cycle time mode (normal \, random \, position)
+#X floatatom 378 211 5 0 0 0 - - -, f 5;
+#X text 377 272 define cycle time, f 10;
+#X floatatom 520 193 5 0 2 0 - - -, f 5;
+#X text 516 253 define cycle time mode (normal \, random \, position)
 , f 12;
-#X obj 367 323 cnv 15 168 87 empty empty BURST 12 12 0 14 -97445 -1
+#X obj 367 333 cnv 15 168 87 empty empty BURST 12 12 0 14 -97445 -1
 0;
-#X floatatom 472 336 5 0 2 0 - - -, f 5;
-#X text 373 349 set burst preset (All \, Linear \, Random), f 15;
-#X obj 63 358 cnv 15 209 155 empty empty DATABASE 13 13 0 14 -97445
+#X floatatom 472 346 5 0 2 0 - - -, f 5;
+#X text 373 359 set burst preset (All \, Linear \, Random), f 15;
+#X obj 63 368 cnv 15 209 155 empty empty DATABASE 13 13 0 14 -97445
 -1 0;
-#X text 191 386 set database stepwise, f 12;
-#X text 72 455 set whole database;
-#X text 144 483 open text entry box;
-#X obj 288 429 cnv 15 176 246 empty empty START AND STOP 15 13 0
+#X text 191 396 set database stepwise, f 12;
+#X text 72 465 set whole database;
+#X text 144 493 open text entry box;
+#X obj 288 439 cnv 15 176 246 empty empty START AND STOP 15 13 0
 14 -97445 -1 0;
-#X text 344 460 start Context;
-#X text 368 498 start at point, f 11;
-#X text 367 539 stop numbered Context, f 13;
-#X text 369 579 stop at end of cycle, f 11;
-#X text 378 618 stop all Contexts except those listed., f 12;
-#X obj 480 426 cnv 15 168 131 empty empty MISC 12 13 0 14 -97454 -1
+#X text 344 470 start Context;
+#X text 368 508 start at point, f 11;
+#X text 367 549 stop numbered Context, f 13;
+#X text 369 589 stop at end of cycle, f 11;
+#X text 378 628 stop all Contexts except those listed., f 12;
+#X obj 480 436 cnv 15 168 201 empty empty MISC 12 13 0 14 -97454 -1
 0;
-#X msg 61 190 \; ex :x 1 2 3 4 5;
-#X msg 61 225 \; ex :y 1 2 3;
-#X msg 190 185 \; ex :i 2 3;
-#X msg 190 265 \; ex :i + 1 2;
-#X msg 270 265 \; ex :j >>;
-#X msg 378 222 \; ex :d \$1;
-#X msg 520 205 \; ex :E \$1;
-#X msg 472 357 \; ex :L \$1;
-#X msg 74 386 \; ex :a 0 my message;
-#X msg 73 422 \; ex :b line 1 | line 2 | line 3;
-#X msg 302 460 \; ex :s;
-#X msg 302 498 \; ex :s p 2;
-#X msg 302 538 \; ex stop 1;
-#X msg 302 578 \; ex stop *;
-#X msg 301 620 \; ex stop - 1;
-#X text 449 195 use the * + - / operators to modify the cycle time
+#X msg 61 200 \; ex :x 1 2 3 4 5;
+#X msg 61 235 \; ex :y 1 2 3;
+#X msg 190 195 \; ex :i 2 3;
+#X msg 190 275 \; ex :i + 1 2;
+#X msg 270 275 \; ex :j >>;
+#X msg 378 232 \; ex :d \$1;
+#X msg 520 215 \; ex :E \$1;
+#X msg 472 367 \; ex :L \$1;
+#X msg 74 396 \; ex :a 0 my message;
+#X msg 73 432 \; ex :b line 1 | line 2 | line 3;
+#X msg 302 470 \; ex :s;
+#X msg 302 508 \; ex :s p 2;
+#X msg 302 548 \; ex stop 1;
+#X msg 302 588 \; ex stop *;
+#X msg 301 630 \; ex stop - 1;
+#X text 449 205 use the * + - / operators to modify the cycle time
 , f 9;
-#X obj 551 323 cnv 15 156 88 empty empty ID 12 12 0 14 -97454 -1 0
+#X obj 551 333 cnv 15 156 88 empty empty ID 12 12 0 14 -97454 -1 0
 ;
-#X msg 596 440 \; ex :pr;
-#X msg 576 484 \; ex find ex;
-#X text 538 437 print the Context state, f 9;
-#X text 512 480 find a toggle or ID float, f 9;
-#X obj 116 529 cnv 15 156 100 empty empty DIMENSION 12 12 0 14 -97454
+#X msg 596 450 \; ex :pr;
+#X msg 576 494 \; ex find ex;
+#X text 538 447 print the Context state, f 9;
+#X text 512 490 find a toggle or ID float, f 9;
+#X obj 116 539 cnv 15 156 100 empty empty DIMENSION 12 12 0 14 -97454
 -1 0;
-#X floatatom 132 553 5 1 5 0 - - -, f 5;
-#X msg 132 572 \; ex :X \$1;
-#X floatatom 195 553 5 1 4 0 - - -, f 5;
-#X msg 195 572 \; ex :Y \$1;
-#X text 123 607 set x-axis;
-#X text 193 607 set y-axis;
-#X msg 71 478 \; ex :b -open;
-#X msg 256 185 \; ex :j c4 c5 c6;
-#X obj 689 86 ctxfiles/license;
-#X floatatom 585 333 5 0 0 0 - - -, f 5;
-#X floatatom 646 332 5 0 2 0 - - -, f 5;
-#X text 567 381 define colour, f 7;
-#X text 643 384 define ID number, f 9;
-#X msg 585 355 \; ex :c \$1;
-#X msg 646 354 \; ex :ID \$1;
-#X text 63 82 Note that in these examples \, all commands are sent
-to the Context using the ID send channel 'ex' (see Section 6: ID AND
-CHANNELS).;
-#X msg 560 524 \; ex --help start;
-#X text 484 520 print help message for any command, f 14;
-#X obj 689 67 declare -path ../;
-#X connect 42 0 65 0;
-#X connect 44 0 66 0;
-#X connect 47 0 67 0;
-#X connect 82 0 83 0;
-#X connect 84 0 85 0;
+#X floatatom 132 563 5 1 5 0 - - -, f 5;
+#X msg 132 582 \; ex :X \$1;
+#X floatatom 195 563 5 1 4 0 - - -, f 5;
+#X msg 195 582 \; ex :Y \$1;
+#X text 123 617 set x-axis;
+#X text 193 617 set y-axis;
+#X msg 71 488 \; ex :b -open;
+#X msg 256 195 \; ex :j c4 c5 c6;
+#X obj 615 98 ctxfiles/license;
+#X floatatom 585 343 5 0 0 0 - - -, f 5;
+#X floatatom 646 342 5 0 2 0 - - -, f 5;
+#X text 567 391 define colour, f 7;
+#X text 643 394 define ID number, f 9;
+#X msg 585 365 \; ex :c \$1;
+#X msg 646 364 \; ex :ID \$1;
+#X msg 560 534 \; ex --help start;
+#X text 484 530 print help message for any command, f 14;
+#X obj 618 76 declare -path ../;
+#X floatatom 572 583 5 0 2 0 - - -, f 5;
+#X msg 572 602 \; ex :il \$1;
+#X text 493 586 label the Context state, f 12;
+#X obj 70 116 else/openfile context_commands_all.pd -h See the complete
+list of Context commands.;
+#X text 49 30 This patch outlines some of the most important Context
+commands that you should be familiar with. Note that in these examples
+\, all commands are sent to the Context using the ID send channel 'ex'.
+;
+#X obj 69 78 else/openfile links/ID.html -h See Context Manual entry
+on ID and channels;
+#X obj 70 97 else/openfile links/commands.html -h See Context Manual
+entry on commands;
+#X obj 615 12 docfiles/help-display \$0;
+#X connect 41 0 64 0;
+#X connect 43 0 65 0;
+#X connect 46 0 66 0;
+#X connect 81 0 82 0;
+#X connect 83 0 84 0;
+#X connect 90 0 94 0;
 #X connect 91 0 95 0;
-#X connect 92 0 96 0;
+#X connect 99 0 100 0;
