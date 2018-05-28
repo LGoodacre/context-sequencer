@@ -1,15 +1,15 @@
 #N canvas 67 87 1299 681 10;
 #X declare -path ../../;
-#X obj 335 52 context :X 9 :a ' # = ' :b ' < ^ note :x f ? :x ?8 |
+#X obj 356 52 context :X 9 :a ' # = ' :b ' < ^ note :x f ? :x ?8 |
 < ^ note :x f ? :i + (?5 - 3) ?8 ' :c 30 :d 2 :f 2 :i 1 -2 2 -4 -5
 3 -2 4 0 :n ' note ' :x = 9 8 6 5 4 3 2 1 :y = 2 1 :Z 28 :ID 1 :nr
 1 :ro 1 :il 1;
-#X obj 192 207 context :X 9 :a ' # = ' :c 7 :d 2 :i 2 2 2 10 7 6 5
+#X obj 213 207 context :X 9 :a ' # = ' :c 7 :d 2 :i 2 2 2 10 7 6 5
 4 0 :n ' note ' :x = 6 3 :Z 28 :ID 2 :il 1;
-#X obj 438 185 context :X 9 :a ' # = ' :c 30 :d 1 :i 11 10 10 8 10
+#X obj 459 185 context :X 9 :a ' # = ' :c 30 :d 1 :i 11 10 10 8 10
 8 5 5 0 :n ' note ' :x = 9 4 1 :Z 15 :ID 3 :il 1;
-#X obj 760 634 dac~;
-#X obj 373 20 bng 20 250 50 0 empty empty START 23 9 0 10 -262144 -1
+#X obj 782 656 dac~;
+#X obj 394 20 bng 20 250 50 0 empty empty START 23 9 0 10 -262144 -1
 -1;
 #N canvas 65 85 450 300 stop 0;
 #X obj 100 100 bng 20 250 50 0 empty empty STOP 23 9 0 10 -262144 -1
@@ -17,99 +17,102 @@
 #X msg 100 132 \; context stop;
 #X connect 0 0 1 0;
 #X coords 0 -1 1 1 20 20 2 100 100;
-#X restore 432 20 pd stop;
-#X obj 719 518 catch~ samples;
-#X obj 761 584 receive context-;
-#X obj 336 564 context :H 22 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :R 100 :Z
+#X restore 453 20 pd stop;
+#X obj 741 580 catch~ samples;
+#X obj 783 606 receive context-;
+#X obj 357 564 context :H 22 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :R 100 :Z
 12 :ID 4 :ol 1 :il 1 12 obj 0 27 content :lo helpfiles/wavs/open-conga.wav
 :x2 0.27 :y1 0.243 :y2 0.468002 5 obj 28 82 throw~ samples 5 connect
 3 0 4 0;
-#X obj -4 532 context :H 29 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 17.5
+#X obj 17 532 context :H 29 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 17.5
 12.5 0 0 0 :R 100 :Z 12 :ID 5 :ol 1 :il 1 12 obj 0 27 content :lo helpfiles/wavs/lo-conga.wav
 :x2 0.241875 :y1 0.243 :y2 0.468002 4 obj 0 -20 mover 5 obj 12 79 throw~
 samples 5 connect 3 0 5 0;
-#X obj 178 512 context :X 9 :a ' # = ' :c 7 :d 1 :i 9 12 13 12 12 13
+#X obj 199 512 context :X 9 :a ' # = ' :c 7 :d 1 :i 9 12 13 12 12 13
 11 12 0 :n ' note ' :x = 5 4 2 1 :Z 15 :ID 6 :ol 1 :il 1;
-#X obj 231 276 context :X 9 :a ' # = ' :c 7 :d 1 :i 9 6 7 6 7 8 7 6
+#X obj 252 276 context :X 9 :a ' # = ' :c 7 :d 1 :i 9 6 7 6 7 8 7 6
 0 :n ' note ' :x = 8 7 3 2 :Z 14 :ID 7 :il 1;
-#X obj 268 350 context :a ' # = ' :c 7 :d 0.5 :i 4 3 2 3 0 :n ' note
+#X obj 289 350 context :a ' # = ' :c 7 :d 0.5 :i 4 3 2 3 0 :n ' note
 ' :x = 5 4 2 :Z 17 :ID 8 :il 1;
-#X obj 178 585 context :X 9 :a ' # = ' :c 7 :d 1 :i 2 3 1 -4 0 1 -1
+#X obj 199 585 context :X 9 :a ' # = ' :c 7 :d 1 :i 2 3 1 -4 0 1 -1
 -7 0 :n ' note ' :x = 8 7 1 :Z 15 :ID 9 :il 1;
-#X obj 376 263 context :X 17 :a ' # = ' :c 7 :d 2 :i -8 -8 -8 -8 -8
+#X obj 397 263 context :X 17 :a ' # = ' :c 7 :d 2 :i -8 -8 -8 -8 -8
 -8 -8 -7 -8 -8 -8 -8 -8 -8 -8 -8 0 :n ' note ' :x = 15 14 9 8 7 2 :Z
 22 :ID 10 :il 1;
-#X obj 216 443 context :a ' # = ' :c 7 :d 0.5 :f 3 :h 2 :i 8 0 0 0
+#X obj 237 443 context :a ' # = ' :c 7 :d 0.5 :f 3 :h 2 :i 8 0 0 0
 0 :j -5 0 2 :n ' note ' :x = 2 1 :y = 3 2 1 :R 63.36 :Z 22 :ID 11 :il
 1;
-#X obj 437 338 context :a ' # = ' :c 7 :d 0.5 :f 3 :h 2 :i -9 0 0 0
+#X obj 458 338 context :a ' # = ' :c 7 :d 0.5 :f 3 :h 2 :i -9 0 0 0
 0 :j -6 -4 1 :n ' note ' :x = 5 1 :y = 3 2 1 :R 63.36 :Z 22 :ID 12
 :il 1;
-#X floatatom 920 587 5 0 0 0 - - -, f 5;
-#X obj 761 609 helpfiles/docfiles/glock~ 1;
-#X text 448 54 <--;
-#X obj 438 117 context :X 3 :Y 3 :M 1 :c 9 :h 1 :x = 2 1 :z 0 :P 1
+#X floatatom 942 609 5 0 0 0 - - -, f 5;
+#X obj 783 631 helpfiles/docfiles/glock~ 1;
+#X text 469 54 <--;
+#X obj 459 117 context :X 3 :Y 3 :M 1 :c 9 :h 1 :x = 2 1 :z 0 :P 1
 :ID 13;
-#X obj 615 192 context :X 9 :a ' # = ' :c 30 :d 1 :i 8 9 -4 6 9 -1
+#X obj 636 192 context :X 9 :a ' # = ' :c 30 :d 1 :i 8 9 -4 6 9 -1
 5 6 0 :n ' note ' :x = 9 5 3 2 1 :Z 9 :ID 14;
-#X obj 615 338 context :X 13 :a ' # = ' :c 7 :d 1.5 :i 16 17 18 16
+#X obj 533 336 context :X 13 :a ' # = ' :c 7 :d 1.5 :i 16 17 18 16
 19 18 16 17 18 16 17 18 0 :n ' note ' :x = 11 10 8 7 5 4 2 1 :Z 16
 :ID 15;
-#X obj 652 264 context :a ' # = ' :c 7 :d 0.5 :i -1 1 0 0 0 :n ' note
+#X obj 673 264 context :a ' # = ' :c 7 :d 0.5 :i -1 1 0 0 0 :n ' note
 ' :x = 4 3 2 1 :ID 16;
-#X obj 458 564 context :H 29 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 12.5
+#X obj 479 564 context :H 29 :X 9 :Y 7 :c 14 :d 0.54 :h 1 :j 11.5 12.5
 16.5 0 0 0 :R 100 :Z 12 :ID 17 :ol 1 :il 1 12 obj 0 27 content :lo
 helpfiles/wavs/tom-2.wav :x2 0.230625 :y1 0.243 :y2 0.468001 5 obj
 28 82 throw~ samples 5 connect 3 0 4 0;
-#X obj 55 37 cnv 15 199 38 empty empty empty 18 16 2 24 -99865 -1 0
+#X obj 46 17 cnv 15 199 38 empty empty empty 18 16 2 24 -99865 -1 0
 ;
-#X obj 51 33 cnv 15 199 38 empty empty empty 18 16 2 24 -1 -1 0;
-#X obj 52 34 cnv 15 197 36 empty empty example network 10 16 0 20
+#X obj 42 13 cnv 15 199 38 empty empty empty 18 16 2 24 -1 -1 0;
+#X obj 43 14 cnv 15 197 36 empty empty example network 10 16 0 20
 -4032 -1 0;
-#X text 480 123 This Context is functioning as a selector \, alternating
+#X text 501 123 This Context is functioning as a selector \, alternating
 between A and B. This is used to add structure to the composition,
 f 63;
-#X text 905 551 type in a different mode for a fun time!;
-#X text 484 12 Every toggle in this network plays a single note. The
+#X text 211 659 type in a different mode for a fun time!;
+#X text 505 12 Every toggle in this network plays a single note. The
 note is definted by the toggle floats--you can change them by double
-clicking and scrolling.;
-#X text 21 114 Let this play for 15-20 minutes and listen to it evolve.
-What is happening? Each Context houses a simple melody \, and is connected
-to other Contexts fairly randomly. The notes on the melodies and the
-toggle connections change randomly over time \, so the music evolves.
-;
-#X text 474 55 EXCEPTION: these toggles are the ones driving the evolution.
+clicking and scrolling., f 74;
+#X text 495 55 EXCEPTION: these toggles are the ones driving the evolution.
 The first one opens or closes a random toggle anywhere in the network
 \, the second one changes a random note. Both of these actions happen
 once per cycle. Close these toggles and the music will cease to evolve.
 , f 70;
-#X obj 761 551 scaler pentatonic egyptian b# 4;
-#X obj 99 413 context :M 1 :b ' < lev ( 0.01 * (?50 + 50)) ' :c 3 :d
-3 :h 1 :i 18.5 18.5 0 0 18.5 :k 0.5 :x = 3 2 1 :y = 1 :z 0 :E 1 :K
-3 :R 100 :ID 18;
-#X obj 361 447 context :M 1 :b ' < lev ( 0.01 * (?50 + 50)) ' :c 3
+#X obj 17 655 scaler pentatonic egyptian b# 4;
+#X obj 120 413 context :M 1 :b ' < lev ( 0.01 * (?50 + 50)) ' :c 3
+:d 3 :h 1 :i 18.5 18.5 0 0 18.5 :k 0.5 :x = 3 2 1 :y = 1 :z 0 :E 1
+:K 3 :R 100 :ID 18;
+#X obj 382 447 context :M 1 :b ' < lev ( 0.01 * (?50 + 50)) ' :c 3
 :d 3 :h 1 :i 18.5 18.5 0 0 18.5 :k 0.5 :x = 3 2 1 :y = 1 :z 0 :E 1
 :K 3 :R 100 :ID 19;
-#X obj 734 495 receive lev;
-#X obj 578 564 context :H 31 :X 9 :Y 7 :c 14 :d 10 :h 1 :j 11.5 12.5
+#X obj 756 557 receive lev;
+#X obj 599 564 context :H 31 :X 9 :Y 7 :c 14 :d 10 :h 1 :j 11.5 12.5
 16.5 0 0 0 :E 1 :R 100 :Z 12 :ID 20 :ol 1 :il 1 12 obj 0 32 content
 :lo helpfiles/wavs/velcro.wav :x2 4.27083 :y1 4.44444 :y2 8.61113 5
 obj 28 82 throw~ samples2 5 connect 3 0 4 0;
-#X obj 719 540 *~ 1;
-#X obj 812 497 catch~ samples2;
-#X obj 812 519 hip~ 100;
-#X obj 8 320 ctxfiles/license;
-#X obj 934 316 finder :n 50 :l note- :k 0.1 :s 20;
-#X obj 55 82 declare -path ../../;
-#X text 719 281 The red Contexts are all triggered one way or another
-from the yellow ones;
-#X text 728 201 The three green Contexts form a loop \, going c1 \,
-c3 \, c1 \, c14 \, c1 \, c3 \, c1 \, c14...;
-#X text 541 453 The blue Contexts just hold samples and don't do anything
-else.;
+#X obj 741 602 *~ 1;
+#X obj 834 559 catch~ samples2;
+#X obj 834 581 hip~ 100;
+#X obj 29 320 ctxfiles/license;
+#X obj 46 62 declare -path ../../;
+#X text 740 267 The red Contexts are all triggered one way or another
+from the yellow ones, f 28;
+#X text 749 195 The three green Contexts form a loop \, going c1 \,
+c3 \, c1 \, c14 \, c1 \, c3 \, c1 \, c14..., f 27;
+#X text 418 527 The blue Contexts just hold samples and don't do anything
+else., f 35;
+#X obj 175 62 helpfiles/docfiles/help-display \$0 1;
+#X text 22 97 Let this piece play for 15-20 minutes and listen to it
+evolve. What is happening? Each Context houses a simple melody \, and
+is connected to other Contexts fairly randomly. The notes on the melodies
+and the toggle connections change randomly over time \, so the music
+evolves., f 26;
+#X text 510 449 use [finder] to catch individual notes and change them
+-------->, f 32;
+#X obj 723 351 finder :n 50 :l note- :k 0.1 :s 10;
 #X connect 0 2 1 3;
 #X connect 0 8 20 0;
-#X connect 1 3 34 1;
+#X connect 1 3 33 1;
 #X connect 1 4 15 2;
 #X connect 1 6 11 3;
 #X connect 2 3 16 3;
@@ -117,38 +120,38 @@ else.;
 #X connect 2 7 23 0;
 #X connect 2 8 0 7;
 #X connect 4 0 0 3;
-#X connect 6 0 38 0;
+#X connect 6 0 37 0;
 #X connect 7 0 18 0;
 #X connect 10 3 13 3;
-#X connect 11 3 34 2;
+#X connect 11 3 33 2;
 #X connect 11 5 12 2;
-#X connect 14 0 35 2;
+#X connect 14 0 34 2;
 #X connect 14 6 16 1;
 #X connect 14 14 8 7;
 #X connect 15 0 10 3;
-#X connect 16 1 35 3;
+#X connect 16 1 34 3;
 #X connect 17 0 18 1;
 #X connect 18 0 3 0;
 #X connect 18 0 3 1;
-#X connect 20 0 2 0;
-#X connect 20 1 21 1;
+#X connect 20 0 21 1;
+#X connect 20 1 2 1;
 #X connect 21 2 22 2;
 #X connect 21 5 23 2;
 #X connect 21 8 0 7;
 #X connect 22 2 13 6;
-#X connect 22 5 35 4;
+#X connect 22 5 34 4;
 #X connect 22 8 14 14;
 #X connect 23 2 22 4;
-#X connect 34 0 9 8;
-#X connect 34 1 8 1;
-#X connect 34 2 37 1;
-#X connect 35 0 8 4;
-#X connect 35 1 24 1;
-#X connect 35 2 37 3;
-#X connect 36 0 38 1;
-#X connect 38 0 3 0;
-#X connect 38 0 3 1;
-#X connect 39 0 40 0;
-#X connect 40 0 3 0;
-#X connect 40 0 3 1;
+#X connect 33 0 9 8;
+#X connect 33 1 8 1;
+#X connect 33 2 36 1;
+#X connect 34 0 8 4;
+#X connect 34 1 24 1;
+#X connect 34 2 36 3;
+#X connect 35 0 37 1;
+#X connect 37 0 3 0;
+#X connect 37 0 3 1;
+#X connect 38 0 39 0;
+#X connect 39 0 3 0;
+#X connect 39 0 3 1;
 #X coords 0 681 1 680 385 100 0;
