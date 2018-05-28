@@ -1,86 +1,88 @@
-#N canvas 94 229 1147 400 10;
+#N canvas 67 229 1100 404 10;
 #X declare -path ../;
-#X obj 36 75 cnv 15 609 294 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 36 72 cnv 15 609 294 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 26 65 cnv 15 609 294 empty empty empty 20 12 0 14 -1 -66577
+#X obj 26 62 cnv 15 609 294 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 27 66 cnv 15 607 292 empty empty empty 20 12 0 14 -162280 -66577
+#X obj 27 63 cnv 15 607 292 empty empty empty 20 12 0 14 -162280 -66577
 0;
-#X obj 36 75 cnv 15 589 77 empty empty empty 20 12 0 14 -1 -66577 0
+#X obj 36 72 cnv 15 589 77 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 36 161 cnv 15 589 102 empty empty empty 20 12 0 14 -1 -66577
+#X obj 36 158 cnv 15 589 102 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 36 272 cnv 15 589 77 empty empty empty 20 12 0 14 -1 -66577
+#X obj 36 269 cnv 15 589 77 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 675 75 cnv 15 399 145 empty empty empty 16 12 0 14 -99865 -66577
+#X obj 675 72 cnv 15 399 145 empty empty empty 16 12 0 14 -99865 -66577
 0;
-#X obj 665 65 cnv 15 399 145 empty empty empty 16 12 0 14 -1 -66577
+#X obj 665 62 cnv 15 399 145 empty empty empty 16 12 0 14 -1 -66577
 0;
-#X obj 666 66 cnv 15 397 143 empty empty TO CHANGE CONTEXT'S TAGS
+#X obj 666 63 cnv 15 397 143 empty empty TO CHANGE CONTEXT'S TAGS
 16 12 0 18 -150369 -1 0;
-#X obj 37 273 cnv 15 587 75 empty empty empty 20 12 0 14 -240215 -66577
+#X obj 37 270 cnv 15 587 75 empty empty empty 20 12 0 14 -240215 -66577
 0;
-#X obj 37 162 cnv 15 587 100 empty empty empty 20 12 0 14 -240215 -66577
+#X obj 37 159 cnv 15 587 100 empty empty empty 20 12 0 14 -240215 -66577
 0;
-#X obj 37 76 cnv 15 587 75 empty empty empty 20 12 0 14 -240215 -66577
+#X obj 37 73 cnv 15 587 75 empty empty empty 20 12 0 14 -240215 -66577
 0;
-#X obj 30 8 cnv 15 252 37 empty empty empty 21 15 2 24 -99865 -1 0
+#X obj 30 15 cnv 15 252 37 empty empty empty 21 15 2 24 -99865 -1 0
 ;
-#X obj 26 4 cnv 15 252 37 empty empty empty 21 15 2 24 -1 -1 0;
-#X obj 27 5 cnv 15 250 35 empty empty ID and channels 21 15 0 24
+#X obj 26 11 cnv 15 252 37 empty empty empty 21 15 2 24 -1 -1 0;
+#X obj 27 12 cnv 15 250 35 empty empty ID and channels 21 15 0 24
 -4032 -1 0;
-#X obj 67 292 receive moose-;
-#X obj 67 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 67 289 receive moose-;
+#X obj 67 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 160 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 160 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 160 292 receive newt-;
-#X obj 248 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 160 289 receive newt-;
+#X obj 248 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 248 292 receive sparrow-;
-#X obj 354 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 248 289 receive sparrow-;
+#X obj 354 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 354 292 receive ant-;
-#X obj 67 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 354 289 receive ant-;
+#X obj 67 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 67 126 send moose;
-#X obj 160 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 67 123 send moose;
+#X obj 160 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 160 126 send newt;
-#X obj 248 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 160 123 send newt;
+#X obj 248 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 354 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 354 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 248 126 send sparrow;
-#X obj 354 126 send ant;
-#X obj 469 319 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 248 123 send sparrow;
+#X obj 354 123 send ant;
+#X obj 469 316 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 469 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 469 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 73 183 context :X 9 :d 2 :n ' moose newt ' :x = 1 :Z 12 :ID
+#X obj 73 180 context :X 9 :d 2 :n ' moose newt ' :x = 1 :Z 12 :ID
 1 :ex ' clear ';
-#X obj 211 183 context :X 9 :d 2 :n ' newt sparrow ' :x = 3 :Z 11 :ID
+#X obj 211 180 context :X 9 :d 2 :n ' newt sparrow ' :x = 3 :Z 11 :ID
 2;
-#X obj 348 183 context :X 9 :d 2 :n ' ant newt ' :x = 5 :Z 14 :ID 3
+#X obj 348 180 context :X 9 :d 2 :n ' ant newt ' :x = 5 :Z 14 :ID 3
 :ex ' clear ';
-#X obj 490 183 context :X 9 :d 2 :n ' moose sparrow ' :x = 7 :Z 12
+#X obj 490 180 context :X 9 :d 2 :n ' moose sparrow ' :x = 7 :Z 12
 :ID 4 :ex ' clear ';
-#X obj 469 126 send context;
-#X obj 469 292 receive context-;
-#X msg 766 259 \; context stop;
-#X text 675 176 If the symbol you typed matches an existing tag \,
+#X obj 469 123 send context;
+#X obj 469 289 receive context-;
+#X msg 766 256 \; context stop;
+#X text 684 170 If the symbol you typed matches an existing tag \,
 it will be removed. If not it will be added., f 54;
-#X text 679 93 1: right click and select 'properties' \; 2: go to ID
+#X text 679 90 1: right click and select 'properties' \; 2: go to ID
 --> tags \; 3: click on the symbol \, type the tag and press return
 \; 4: double click the top-right button twice to exit the menu., f
-54;
-#X text 57 77 Press these buttons to start different context groups
+59;
+#X text 57 74 Press these buttons to start different context groups
 and watch the output at the bottom., f 80;
-#X text 662 237 a message sent to 'context' will go to all open Contexts.
+#X text 662 234 a message sent to 'context' will go to all open Contexts.
 ie:, f 52;
-#X text 29 48 Refer to Manual section 7: ID AND CHANNELS;
-#X obj 860 321 ctxfiles/license;
-#X obj 860 381 declare -path ../;
+#X obj 663 301 ctxfiles/license;
+#X obj 959 345 declare -path ../;
+#X obj 295 35 else/openfile links/ID.html -h see Context Manual entry
+on ID and channels;
+#X obj 297 14 docfiles/help-display \$0;
 #X connect 15 0 16 0;
 #X connect 18 0 17 0;
 #X connect 20 0 19 0;

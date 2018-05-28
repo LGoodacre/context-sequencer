@@ -24,11 +24,11 @@
 0;
 #X obj 1737 201 cnv 15 522 369 empty empty 4: protecting values 20
 12 0 24 -260448 -1 0;
-#X obj 762 54 cnv 15 496 132 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 782 54 cnv 15 496 132 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 755 47 cnv 15 496 132 empty empty empty 20 12 0 14 -1 -66577
+#X obj 775 47 cnv 15 496 132 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 756 48 cnv 15 494 130 empty empty empty 20 12 0 14 -122865 -66577
+#X obj 776 48 cnv 15 494 130 empty empty empty 20 12 0 14 -122865 -66577
 0;
 #X obj 109 62 cnv 15 304 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
@@ -38,16 +38,13 @@
 0;
 #X obj 105 57 cnv 15 300 53 empty empty dynamic rules 12 22 2 43 -83573
 -204800 0;
-#X text 764 130 Each rule has two parts: a condition and a consequence.
-They are written by typing them into a text box. See manual section
-14 to learn about their syntax., f 68;
-#X text 764 60 Rules are used to intercept and manipulate incoming
+#X text 784 60 Rules are used to intercept and manipulate incoming
 and outgoing messages. You can use them to protect certain elements
 of a dynamic network \, or to add new types of logical relationships
 between Contexts. Rules are most useful when applied to toggles \,
 but in principle can affect any command., f 68;
-#X floatatom 629 123 5 0 0 0 - - -, f 5;
-#X msg 629 142 \; c\$1 :I -open;
+#X floatatom 661 132 5 0 0 0 - - -, f 5;
+#X msg 661 151 \; c\$1 :I -open;
 #X obj 70 298 context :X 11 :a ' start ? 8 ' :d 1 :x = 10 9 8 7 6 5
 4 3 2 1 :S < c2 :Z 15 :ID 1;
 #X obj 70 389 context :d 1 :I 1 :ID 2 :ex ' 1 :s qn== 4 || c- ';
@@ -63,7 +60,7 @@ says "exeute the consequence and ignore the incoming message". But
 there is no further consequence to execute \, so the result is that
 the rule swallows all incoming ' :S ' messages \, unless they are '
 :s 4 '., f 56;
-#X text 107 142 ** TO OPEN THE RULE LIST OF ANY CONTEXT \; go to PROPERTIES
+#X text 106 153 ** TO OPEN THE RULE LIST OF ANY CONTEXT \; go to PROPERTIES
 --> OTHER --> RULES --> EDIT LIST or use this shortcut, f 74;
 #X text 222 291 Double click c1 to begin. This context generates the
 message '' :s x ' \, where x is a random number between 0 and 7 It
@@ -100,13 +97,17 @@ The consequence reads " c- ". This means \, "replace the original message
 with the following consequence (which is blank)." Notice that the float
 atom still shows the value 4 \, since the message is cancelled out
 downsteam. However \, the cycle time will never take 4;
-#X text 102 119 Refer to Manual Section 15: RULES;
-#X obj 502 49 ctxfiles/license;
+#X obj 558 71 ctxfiles/license;
 #X text 1295 355 Open the rule list for c4. The condition reads " 0
 :x ". This means \, any :x input will trigger the consequence. The
 consequence reads \, " c* < c5 :d 0 [ > x . ] ". This means \, "continue
 with the original message (c*) \, then send the following message (<)
 to c5: the cycle time (:d) with an argument equal to the number of
 terms in ( 0 ] ) the :x ( > x . ) term.", f 55;
-#X obj 502 27 declare -path ../;
-#X connect 21 0 22 0;
+#X obj 662 47 declare -path ../;
+#X obj 420 55 docfiles/help-display \$0;
+#X obj 106 128 else/openfile links/rules.html -h see Context Manual
+entry on rules;
+#X text 784 130 Each rule has two parts: a condition and a consequence.
+They are written by typing them into a text box., f 68;
+#X connect 20 0 21 0;

@@ -1,33 +1,29 @@
-#N canvas 317 231 489 373 10;
+#N canvas 223 231 489 359 10;
 #X declare -path ../;
-#X obj 20 19 cnv 15 202 42 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 20 29 cnv 15 202 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 15 14 cnv 15 202 42 empty empty empty 20 12 0 14 -1 -66577 0
+#X obj 15 24 cnv 15 202 42 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 16 15 cnv 15 200 40 empty empty command input 13 15 1 25 -98160
+#X obj 16 25 cnv 15 200 40 empty empty command input 8 15 1 25 -98160
 -45076 0;
-#X obj 241 15 ctxfiles/license;
-#X text 19 81 The Context state \, ie. a given Context's settings \,
-is defined by a series of commands. These commands are detailed in
-'context_commands_all.pd' file and Manual section 8: Context Commands.
-, f 73;
-#X obj 69 201 cnv 15 132 102 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 241 25 ctxfiles/license;
+#X obj 69 211 cnv 15 132 102 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 63 196 cnv 15 132 102 empty empty basic 35 -12 0 18 -1 -1 0
+#X obj 63 206 cnv 15 132 102 empty empty basic 35 -12 0 18 -1 -1 0
 ;
-#X obj 67 200 cnv 15 124 94 empty empty empty 20 12 0 14 -1 -66577
+#X obj 67 210 cnv 15 124 94 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 68 201 cnv 15 122 92 empty empty empty 20 12 0 14 -262144 -66577
+#X obj 68 211 cnv 15 122 92 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 283 201 cnv 15 132 124 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 283 211 cnv 15 132 124 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 277 196 cnv 15 132 124 empty empty advanced 20 -12 0 18 -1 -1
+#X obj 277 206 cnv 15 132 124 empty empty advanced 20 -12 0 18 -1 -1
 0;
-#X obj 281 200 cnv 15 124 94 empty empty empty 20 12 0 14 -1 -66577
+#X obj 281 210 cnv 15 124 94 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 282 201 cnv 15 122 112 empty empty empty 20 12 0 14 -262144
+#X obj 282 211 cnv 15 122 112 empty empty empty 20 12 0 14 -262144
 -66577 0;
-#N canvas 294 237 370 306 messages 0;
+#N canvas 247 237 370 306 messages 0;
 #X obj 251 104 context :n ' me ' :ID 1;
 #X text 27 38 You can always send a command to a Context by sending
 a message to its inlets., f 37;
@@ -39,8 +35,8 @@ its ID number or tags., f 27;
 #X text 41 240 ADVANTAGES: quick and easy \; DISADVANTAGES: bothersome
 for repetitive tasks;
 #X connect 2 0 0 2;
-#X restore 72 205 sending messages;
-#N canvas 410 229 450 373 arguments 0;
+#X restore 72 215 sending messages;
+#N canvas 363 229 450 373 arguments 0;
 #X text 50 16 Commands can be entered as creation arguments. Create
 the object [context :X 12 :x 1 3 5 9 :F 60] below and see what happens.
 ;
@@ -49,8 +45,8 @@ arguent. Generally the user doesn't have to worry about this \, but
 it is still important to know.;
 #X text 63 314 ADVANTAGES: lets you create the Context you want \;
 DISADVANTAGES: can't be edited once created;
-#X restore 72 227 creation arguments;
-#N canvas 350 91 450 529 (subpatch) 0;
+#X restore 72 237 creation arguments;
+#N canvas 303 91 450 529 (subpatch) 0;
 #X obj 167 121 context :ID 2;
 #X text 59 473 ADVANTAGES: you don't have to know the right command
 \; DISADVANTAGES: sometimes slower;
@@ -75,7 +71,7 @@ the current screen. Use it!;
 can personalize these shortcuts by editing the file 'menu-shortcuts.txt'
 ;
 #X restore 331 238 shortcuts;
-#X restore 72 249 menu;
+#X restore 72 259 menu;
 #N canvas 67 94 450 300 atom 0;
 #X obj 119 146 context :X 15 :Z 23 :ID 3;
 #X text 48 27 You can send a command to a context by typing into the
@@ -89,7 +85,7 @@ return.;
 #X text 53 235 ADVANTAGES: often the quickest way of making a quick
 change \; DISADVANTAGES: you can't always see what you're typing,
 f 62;
-#X restore 72 271 symbol atom;
+#X restore 72 281 symbol atom;
 #N canvas 67 101 450 361 object 0;
 #X obj 132 116 context :ID 4;
 #X obj 211 116 context :ID 5;
@@ -103,7 +99,7 @@ middle area of the Context you want to send the messages to. Voila!
 ;
 #X obj 68 196 click :x 2 :x 4;
 #X text 41 309 See 'click-help.pd' for more details.;
-#X restore 286 205 click object;
+#X restore 286 215 click object;
 #N canvas 777 251 450 300 object 0;
 #X obj 162 99 preset :F 30 :c 9;
 #X text 55 273 See [preset-help.pd] for more details.;
@@ -116,7 +112,7 @@ will be ignored).;
 [preset];
 #X text 67 234 ADVANTAGES: Very helpful when creating a lot of Contexts
 \; DISADVANTAGES: only works within a given patch.;
-#X restore 286 227 preset object;
+#X restore 286 237 preset object;
 #N canvas 697 256 450 354 command 0;
 #X text 40 17 :: is a special command used to indicate custom presets.
 These presets are simply other series of commands. For instance \,
@@ -131,7 +127,7 @@ your own presets.;
 \, create the object [context :: sample] below.;
 #X text 93 308 ADVANTAGES: customizable \; DISADVANTAGES: difficult
 to edit;
-#X restore 286 249 preset command ::;
+#X restore 286 259 preset command ::;
 #N canvas 513 89 583 674 command 0;
 #X text 46 10 'copy' is a special command that lets you copy settings
 from one Context to others. You can copy some or all commands \, makign
@@ -179,8 +175,8 @@ on Contexts., f 77;
 #X connect 6 0 3 0;
 #X connect 7 0 4 1;
 #X connect 8 0 2 1;
-#X restore 286 271 copy command;
-#X text 19 128 There are various ways of sending commands to Context
+#X restore 286 281 copy command;
+#X text 19 138 There are various ways of sending commands to Context
 \, all of which are detailed in this helpfile., f 73;
 #N canvas 578 180 450 334 keylist 0;
 #X obj 388 246 keylist;
@@ -199,5 +195,12 @@ use [keylist].;
 in its overlay \, binding the :X command to the 'x' key. To see what
 it doesn \, hold down the 'x' key \, then type in a number (before
 letting go of 'x').;
-#X restore 286 293 pd keylist object;
-#X obj 241 -6 declare -path ../;
+#X restore 286 303 pd keylist object;
+#X obj 241 4 declare -path ../;
+#X text 19 91 The Context state \, ie. a given Context's settings \,
+is defined by a series of commands., f 73;
+#X obj 23 329 else/openfile context_commands_all.pd -h see helpfiles/context_commands_all.pd
+;
+#X obj 97 104 else/openfile links/commands.html -h See Context Manual
+entry on commands.;
+#X obj 15 4 docfiles/help-display \$0;

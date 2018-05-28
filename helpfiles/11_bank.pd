@@ -1,4 +1,4 @@
-#N canvas 316 336 810 413 10;
+#N canvas 269 336 777 391 10;
 #X declare -path ../;
 #X obj 22 89 cnv 15 706 271 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -32,6 +32,10 @@ the bank will only ever remember its initial setting., f 49;
 tracked by the bank \, but this can be changed using [presets]. See
 Manual Section 12, f 29;
 #X text 243 226 Practice accessing and editing the toggles here.;
-#X text 18 57 Refer to Section 13: MEMORY BANK;
 #X obj 508 13 ctxfiles/license;
-#X obj 398 13 declare -path ../;
+#X obj 398 50 declare -path ../;
+#X obj 273 8 docfiles/help-display \$0;
+#X obj 20 55 else/openfile links/bank.html -h see Context Manual entry
+on memory bank;
+#X obj 422 325 else/openfile links/bank_settings.html -h see Context
+Manual entry on memory bank settings;

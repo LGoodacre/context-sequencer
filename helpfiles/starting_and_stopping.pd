@@ -1,4 +1,4 @@
-#N canvas 255 130 971 500 10;
+#N canvas 145 187 971 500 10;
 #X declare -path ../;
 #X obj 238 474 dac~;
 #X obj 47 351 context :H 16 :X 17 :Y 6 :io o :d 9 :Z 4 :ID 1 :ol 1
@@ -41,16 +41,16 @@ control over Context's cycle., f 46;
 #X obj 612 26 cnv 15 200 40 empty empty STOPPING 22 17 2 30 -131072
 -1 0;
 #X obj 549 268 context :d 1 :i 0 0 0 0 2.5 :n ' mytag ' :x = 5 :ID
-2 start;
+2;
 #X obj 617 268 context :d 1 :i 0 0 0 0 3.5 :n ' mytag ' :x = 5 :ID
-3 start;
+3;
 #X msg 549 132 stop *;
 #X text 598 133 stop context at the end of its cycle (if it is looping)
 ;
 #X msg 549 152 stop 3;
 #X text 598 152 stop context c3;
 #X obj 687 268 context :d 1 :i 0 0 0 0 4.5 :n ' mytag ' :x = 5 :ID
-4 start;
+4;
 #X msg 549 173 stop mytag;
 #X msg 549 194 stop context;
 #X text 634 194 stop all contexts;
@@ -58,6 +58,7 @@ control over Context's cycle., f 46;
 #X msg 589 222 \; mytag stop - 2;
 #X text 681 235 stop all contexts in "mytag" apart from c2;
 #X obj 742 417 declare -path ../;
+#X obj 29 80 docfiles/help-display \$0;
 #X connect 1 17 0 0;
 #X connect 1 17 0 1;
 #X connect 3 0 1 0;

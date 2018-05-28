@@ -1,6 +1,7 @@
-#N struct 7524-big2 float x float y array 7524-array2 ^&*-dsmall2;
+#N struct 115725-big2 float x float y array 115725-array2 ^&*-dsmall2
+;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N canvas 233 177 911 583 10;
+#N canvas 186 177 911 583 10;
 #X declare -path ../;
 #X obj 758 411 catch~ granular;
 #N canvas 67 87 450 250 (subpatch) 0;
@@ -108,6 +109,7 @@ the right \, in order to economize on memory). Inside each overlay
 \, the sample is read and multiplied by the hanning curve \, over the
 cycle time. Here each grain's behaviour is identical \, but they could
 easily be distinct from each other., f 30;
+#X obj 14 77 docfiles/help-display \$0;
 #X connect 0 0 9 0;
 #X connect 3 0 4 0;
 #X connect 5 0 6 0;

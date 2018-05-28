@@ -1,4 +1,4 @@
-#N canvas 67 87 1299 681 8;
+#N canvas 67 87 1299 681 10;
 #X declare -path ../;
 #X obj 53 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
@@ -46,9 +46,7 @@
 0;
 #X obj 6 47 cnv 15 951 53 empty empty message variables: dynamic networking examples
 12 22 2 43 -83573 -204800 0;
-#X msg 994 64 \; pd dsp 1;
-#X text 114 150 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
-TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
+#X msg 970 73 \; pd dsp 1;
 #X obj 1263 98 docfiles/snare;
 #X obj 1258 165 dac~;
 #X obj 1262 141 *~ 0.3;
@@ -84,9 +82,6 @@ TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
 first part \, 1 \, simply triggers the drum. The second part \, m ~
 \, is used to control the volume. Redraw the curve for a different
 envelope.;
-#X text 94 490 If you have been following these example files sequentially
-\, then this will be your first encounter with [content]! See manual
-section 14 to learn more about it.;
 #X obj 1217 247 context :X 17 :b ' < ^ drums :x (?4 * 2 + 1) ' :c 1
 :d 1 :h 1 :i 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3.5 :x = 17 5 1 :y = 2
 1 :P 1 :Z 31 :ID 3;
@@ -164,10 +159,7 @@ both of the square bracket functions. It runs like this \; 1: steal
 (' n [ ... ] ')., f 81;
 #X text 2313 536 BUG: c9's message executes before c8's so it sometimes
 gets it wrong..., f 72;
-#X obj -102 141 ctxfiles/license;
-#X text 563 129 In these examples \, message variables are not being
-used to make notes \, but to modify the network in some way. This is
-called "dynamic networking". Refer to Manual Section 12, f 66;
+#X obj 23 122 ctxfiles/license;
 #X text 1764 402 Each Context has its own dynamic message here. The
 first burst toggle on c6 has the message ' :x ? 16 3 ' \, which opens
 or closes three toggles on the x-axis each time it is hit. c7 has the
@@ -178,21 +170,33 @@ as a command. The period directs the message towards the Context's
 own input \, while ' "x def ' (the same as ' :x = ') makes the numbers
 define the x-axis toggles. The result is that c7 steals its pattern
 toggle settings from c6., f 77;
-#X obj -103 123 declare -path ../;
-#X connect 25 0 35 0;
-#X connect 27 0 26 0;
+#X obj 1058 168 declare -path ../;
+#X obj 967 45 docfiles/help-display \$0;
+#X obj 241 129 else/openfile links/message_variables.html -h see Context
+Manual entry on message variables;
+#X text 244 147 ** DOUBLE CLICK ON THE (TOP) CONTEXT IN EACH EXAMPLE
+TO PLAY. \; ** CLICK AND HOLD TO STOP., f 46;
+#X text 94 490 If you have been following these example files sequentially
+\, then this will be your first encounter with [content]!;
+#X obj 95 525 else/openfile links/content.html -h see Context Manual
+entry on content;
+#X text 563 125 In these examples \, message variables are not being
+used to make notes \, but to modify the network in some way. This is
+called "dynamic networking"., f 66;
+#X connect 24 0 34 0;
+#X connect 26 0 25 0;
+#X connect 26 0 25 1;
 #X connect 27 0 26 1;
-#X connect 28 0 27 1;
-#X connect 29 0 35 0;
-#X connect 30 0 29 0;
-#X connect 31 0 25 0;
-#X connect 32 0 38 0;
-#X connect 35 0 27 0;
-#X connect 37 0 29 0;
-#X connect 37 1 25 0;
-#X connect 38 0 35 1;
-#X connect 38 1 37 0;
-#X connect 42 0 43 2;
-#X connect 42 4 44 0;
-#X connect 51 16 52 16;
-#X connect 62 16 63 16;
+#X connect 28 0 34 0;
+#X connect 29 0 28 0;
+#X connect 30 0 24 0;
+#X connect 31 0 37 0;
+#X connect 34 0 26 0;
+#X connect 36 0 28 0;
+#X connect 36 1 24 0;
+#X connect 37 0 34 1;
+#X connect 37 1 36 0;
+#X connect 40 0 41 2;
+#X connect 40 4 42 0;
+#X connect 49 16 50 16;
+#X connect 60 16 61 16;

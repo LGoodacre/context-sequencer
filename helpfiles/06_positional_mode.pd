@@ -1,4 +1,4 @@
-#N canvas 340 193 701 567 10;
+#N canvas 293 193 701 567 10;
 #X declare -path ../;
 #X obj 100 116 cnv 15 130 428 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -52,7 +52,6 @@ timings jump). In this example \, only numbers less than 0.5 make sense.
 time to the whole loop., f 19;
 #X text 449 446 Note that you have to be in edit mode (ctrl+e) to move
 a Context)., f 19;
-#X text 189 82 Refer to Manual section 10: POSITIONAL MODE;
 #X obj 22 14 ctxfiles/license;
 #X text 448 113 c1-c4 form a loop. Since positional mode is on. if
 you move the two white contexts up or down \, it will change the timing
@@ -60,6 +59,9 @@ of the Contexts directly above and below. in 1/8 second intervals.
 But notice that the cycle time for the complete loop remains constant
 at 2 seconds \, even while the individual timings change., f 19;
 #X obj 22 73 declare -path ../;
+#X obj 297 14 docfiles/help-display \$0;
+#X obj 236 85 else/openfile links/positional_mode.html -h see Context
+Manual entry on positional mode;
 #X connect 8 0 21 0;
 #X connect 10 0 8 0;
 #X connect 12 0 13 0;

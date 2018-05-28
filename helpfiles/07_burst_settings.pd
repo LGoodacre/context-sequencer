@@ -1,15 +1,15 @@
 #N canvas 67 87 1299 681 8;
 #X declare -lib zexy -path zexy;
 #X declare -path ../;
-#X obj -77 -69 cnv 15 2203 1678 empty empty empty 20 12 0 14 -70489
--66577 0;
-#X obj 9 6 cnv 15 1090 85 empty empty empty 20 12 0 14 -128992 -66577
+#X obj 0 -6 cnv 15 1500 800 empty empty empty 20 12 0 14 -70489 -66577
+0;
+#X obj 9 6 cnv 15 1030 85 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 11 8 cnv 15 357 60 empty empty empty 20 12 0 14 -33289 -66577
 0;
 #X obj 9 91 cnv 15 1268 471 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 645 93 cnv 15 630 467 empty empty SELECTION (given how many¸ which toggles)
+#X obj 645 93 cnv 15 630 467 empty empty SELECTION (given how many‚ which toggles)
 20 12 0 20 -214889 -1 0;
 #X obj 11 93 cnv 15 630 467 empty empty QUANTITY (how many toggles will fire)
 20 12 0 20 -72925 -1 0;
@@ -18,10 +18,10 @@
 #X msg 69 171 \; burst-test :h \$1;
 #X msg 69 281 \; burst-test :p \$1;
 #X msg 69 391 \; burst-test :l \$1;
-#X msg 700 281 \; burst-test :P \$1;
+#X msg 700 282 \; burst-test :P \$1;
 #X msg 700 391 \; burst-test :R \$1;
 #X msg 705 490 \; burst-test :W \$1;
-#N canvas 65 97 450 300 define 0;
+#N canvas 67 97 450 300 define 0;
 #X symbolatom 100 100 20 0 0 2 DEFINE SERIES - -, f 20;
 #X obj 100 150 s2l;
 #X obj 100 172 list prepend :o;
@@ -31,7 +31,7 @@
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
-#X coords 0 -1 1 1 102 11 2 100 100;
+#X coords 0 -1 1 1 102 14 2 100 100;
 #X restore 701 136 pd define;
 #X obj 701 155 s burst-test;
 #X obj 72 136 hsl 97 15 0 15 0 0 empty empty HOW_MANY -2 -8 0 14 -262144
@@ -47,7 +47,7 @@
 #X obj 69 468 tgl 15 0 empty empty WRAP 0 -8 0 14 -262144 -1 -1 0 1
 ;
 #X msg 69 490 \; burst-test :w \$1;
-#N canvas 65 81 450 300 int 0;
+#N canvas 67 89 348 300 int 0;
 #X obj 100 56 inlet;
 #X obj 100 78 int;
 #X floatatom 100 100 5 0 0 0 - - -, f 5;
@@ -55,48 +55,8 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X coords 0 -1 1 1 27 11 2 100 100;
+#X coords 0 -1 1 1 27 14 2 100 100;
 #X restore 69 154 pd int;
-#N canvas 65 89 450 300 int 0;
-#X obj 100 56 inlet;
-#X obj 100 78 int;
-#X floatatom 100 100 5 0 0 0 - - -, f 5;
-#X obj 100 119 outlet;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X coords 0 -1 1 1 27 11 2 100 100;
-#X restore 69 264 pd int;
-#N canvas 65 81 450 300 int 0;
-#X obj 100 56 inlet;
-#X obj 100 78 int;
-#X floatatom 100 100 5 0 0 0 - - -, f 5;
-#X obj 100 119 outlet;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X coords 0 -1 1 1 27 11 2 100 100;
-#X restore 69 374 pd int;
-#N canvas 65 81 450 300 int 0;
-#X obj 100 56 inlet;
-#X obj 100 78 int;
-#X floatatom 100 100 5 0 0 0 - - -, f 5;
-#X obj 100 119 outlet;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X coords 0 -1 1 1 27 11 2 100 100;
-#X restore 700 264 pd int;
-#N canvas 65 81 450 300 int 0;
-#X obj 100 56 inlet;
-#X obj 100 78 int;
-#X floatatom 100 100 5 0 0 0 - - -, f 5;
-#X obj 100 119 outlet;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 2 0 3 0;
-#X coords 0 -1 1 1 27 11 2 100 100;
-#X restore 700 374 pd int;
 #X obj 15 136 cnv 15 43 38 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 17 138 cnv 15 39 34 empty empty :h -3 16 0 30 -233017 -66577
@@ -169,21 +129,22 @@ which will always wrap., f 75;
 0;
 #X obj 556 563 cnv 15 719 106 empty empty SELECT PRESETS 53 11 0 14
 -241174 -1 0;
-#N canvas 65 89 450 300 notes 0;
-#X text 44 62 If you hold the mouse over the burst array \, it will
+#N canvas 67 89 384 176 notes 0;
+#X text 31 15 If you hold the mouse over the burst array \, it will
 display the toggle selection for the next cycle.;
-#X text 45 109 Note that the last toggle is not a part of the burst
-and will fire regardless of the burst settings (see manual section
-7 \, THE LAST TOGGLE).;
-#X text 43 162 You can add your own presets (:L) by editing the file
+#X text 30 115 You can add your own presets (:L) by editing the file
 'burst-presets.txt'.;
+#X obj 31 84 else/openfile links/last_toggle.html -h see Context Manual
+entry on the last toggle;
+#X text 32 62 Note that the last toggle is not a part of the burst
+and will fire regardless of the burst settings;
 #X restore 13 71 pd notes;
-#X obj 986 6 cnv 15 113 84 empty empty empty 20 12 0 14 -258113 -66577
+#X obj 946 6 cnv 15 113 84 empty empty empty 20 12 0 14 -258113 -66577
 0;
-#X obj 989 9 cnv 15 107 77 empty empty empty 20 12 0 14 -232576 -66577
+#X obj 949 9 cnv 15 107 77 empty empty empty 20 12 0 14 -232576 -66577
 0;
-#X msg 991 53 \; burst-test stop;
-#X msg 991 12 \; burst-test start;
+#X msg 951 53 \; burst-test stop;
+#X msg 951 12 \; burst-test start;
 #X obj 920 566 cnv 15 43 38 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 922 568 cnv 15 39 34 empty empty :m -3 16 0 30 -233017 -66577
@@ -233,7 +194,7 @@ auto-advance is off), f 25;
 #X coords 0 -1 1 1 70 17 1 100 100;
 #X restore 68 71 pd audio;
 #X msg 970 588 \; burst-test :m \$1;
-#X text 379 19 The burst is the toggle array that fires at the end
+#X text 379 13 The burst is the toggle array that fires at the end
 of the Context cycle \, and the burst settings determine which toggles
 fire. There are 9 commands controlling this behaviour \, described
 below. Their function is best grasped by playing with them \, so it
@@ -261,9 +222,9 @@ chosen \, the urn is reset., f 76;
 #X obj 9 563 context :X 16 :Y 3 :M 1 :c 13 :d 0.5 :i 0 0 0 0 0 0 0
 0 0 0 0 0 0 0 0 1.5 :m 1 :n ' burst-test ' :x = 1 2 3 4 5 6 7 8 9 10
 11 12 13 14 15 16 :z 0 :F 352 :G 44 :Z 59 :v 0 :a # _;
-#X obj 1103 31 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
+#X obj 1065 31 cnv 15 210 55 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X obj 1103 31 ctxfiles/license;
+#X obj 1065 31 ctxfiles/license;
 #X text 180 236 :p creates an arithmetic progression for the toggle
 quantity. If :p is set to 1 \, then one more toggle will fire each
 cycle. Negative :p values mean that the progression will decrease instead
@@ -284,22 +245,74 @@ will center around the same point., f 76;
 \, giving a randomized toggle position a "drunken walk". If the :P
 value is a non-integer then the mean does not reset \, so the variations
 will center around the same point., f 76;
-#X obj 1107 7 declare -path ../;
+#X obj 1069 7 declare -path ../;
+#N canvas 67 89 348 300 int 0;
+#X obj 100 56 inlet;
+#X obj 100 78 int;
+#X floatatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 100 119 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 27 14 2 100 100;
+#X restore 69 264 pd int;
+#N canvas 67 89 348 300 int 0;
+#X obj 100 56 inlet;
+#X obj 100 78 int;
+#X floatatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 100 119 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 27 14 2 100 100;
+#X restore 69 374 pd int;
+#N canvas 67 89 348 300 int 0;
+#X obj 100 56 inlet;
+#X obj 100 78 int;
+#X floatatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 100 119 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 27 14 2 100 100;
+#X restore 700 264 pd int;
+#N canvas 67 89 348 300 int 0;
+#X obj 100 56 inlet;
+#X obj 100 78 int;
+#X floatatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 100 119 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 27 14 2 100 100;
+#X restore 700 374 pd int;
+#N canvas 67 89 348 300 int 0;
+#X obj 100 56 inlet;
+#X obj 100 78 int;
+#X floatatom 100 100 5 0 0 0 - - -, f 5;
+#X obj 100 119 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 27 14 2 100 100;
+#X restore 700 264 pd int;
+#X obj 440 71 else/openfile links/burst_advanced.html -h see Context
+Manual entry on advanced burst settings;
 #X connect 6 0 12 0;
 #X connect 13 0 14 0;
 #X connect 15 0 22 0;
-#X connect 16 0 23 0;
-#X connect 17 0 24 0;
-#X connect 18 0 26 0;
-#X connect 19 0 25 0;
+#X connect 16 0 98 0;
+#X connect 17 0 99 0;
+#X connect 18 0 101 0;
+#X connect 19 0 100 0;
 #X connect 20 0 21 0;
 #X connect 22 0 7 0;
-#X connect 23 0 8 0;
-#X connect 24 0 9 0;
-#X connect 25 0 10 0;
-#X connect 26 0 11 0;
-#X connect 65 0 81 0;
-#X connect 68 0 69 0;
-#X connect 74 0 77 0;
-#X connect 75 0 77 0;
-#X connect 76 0 77 0;
+#X connect 61 0 77 0;
+#X connect 64 0 65 0;
+#X connect 70 0 73 0;
+#X connect 71 0 73 0;
+#X connect 72 0 73 0;
+#X connect 98 0 8 0;
+#X connect 99 0 9 0;
+#X connect 100 0 10 0;
+#X connect 101 0 11 0;

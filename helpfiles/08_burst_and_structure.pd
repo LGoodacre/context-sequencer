@@ -22,9 +22,9 @@
 #X obj 234 332 context :M 1 :h 1 :x = 1 2 3 :z 0 :P 1 :v 0;
 #X obj 482 332 context :M 1 :h 1 :x = 1 2 3 :z 0 :R 100 :v 0;
 #X obj 449 535 docfiles/snare;
-#X obj 444 698 dac~;
-#X obj 448 674 *~ 0.3;
-#X obj 501 676 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 444 638 dac~;
+#X obj 448 614 *~ 0.3;
+#X obj 501 614 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 211 537 docfiles/kick;
 #X obj 150 434 context :c 14 :d 1 :n ' kick ' :x = 1 3 4 :v 0;
@@ -36,7 +36,7 @@
 #X obj 538 434 context :c 10 :d 0.5 :n ' snare ' :x = 1 3 :v 0;
 #X obj 449 508 receive snare-;
 #X obj 790 476 context :X 8 :M 1 :a ' _ ' :c 17 :h 2 :l 9 :n ' glock
-' :p -1 :x = 1 2 3 4 5 6 7 :z 0 :R 100 :Z 10;
+' :p -1 :x = 7 6 5 4 3 2 1 :z 0 :R 100 :Z 10 :ID 10;
 #X obj 794 569 scaler blues c 5;
 #X obj 775 332 context :M 1 :d 0.5 :h 1 :x = 1 2 :R 100 :v 0;
 #X obj 775 401 context :X 6 :M 1 :d 0.25 :h 1 :i 12.5 12.5 12.5 0 0
@@ -71,8 +71,6 @@ It is generating the notes being received by the [glock~] object. Note
 that it has a random number of toggles \, and a random selection of
 toggles \, each time it fires. Closing toggles will remove corresponding
 notes from the list of possibilities.;
-#X text -202 444 These Contexts store drrum patterns. Change the toggles
-to edit the patterns.;
 #X text 31 75 c2 \, c3 and c10 have safety turned off (:z 0) to allow
 for 0 second time cycles.;
 #X text 40 299 This Context is set to LINEAR burst (:L 1) \, meaning
@@ -102,8 +100,13 @@ so their bursts are along the x-axis.;
 and RANDOM) to control their behahiour.;
 #X text 19 112 *;
 #X text 19 148 *;
-#X obj -25 628 ctxfiles/license;
-#X obj -25 609 declare -path ../;
+#X obj 95 602 ctxfiles/license;
+#X obj 95 583 declare -path ../;
+#X obj 851 18 docfiles/help-display \$0;
+#X obj 447 120 else/openfile links/burst_basic.html -h see Context
+Manual entry on burst;
+#X text 25 436 These Contexts store drum patterns. Change the toggles
+to edit the patterns., f 22;
 #X connect 9 0 10 4;
 #X connect 9 1 11 2;
 #X connect 9 2 27 1;

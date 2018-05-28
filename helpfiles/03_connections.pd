@@ -1,48 +1,50 @@
-#N canvas 285 148 800 440 10;
+#N canvas 121 146 665 440 10;
 #X declare -path ../;
-#X obj 375 95 cnv 15 272 231 empty empty empty 20 12 0 15 -99865 -1
+#X obj 335 95 cnv 15 272 231 empty empty empty 20 12 0 15 -99865 -1
 0;
-#X obj 365 85 cnv 15 272 231 empty empty empty 20 12 0 15 -1 -1 0;
-#X obj 366 86 cnv 15 270 229 empty empty 2: float connection 20 12
+#X obj 325 85 cnv 15 272 231 empty empty empty 20 12 0 15 -1 -1 0;
+#X obj 326 86 cnv 15 270 229 empty empty 2: float connection 20 12
 0 15 -260956 -1 0;
-#X obj 83 95 cnv 15 233 231 empty empty empty 20 12 0 15 -99865 -1
+#X obj 43 95 cnv 15 233 231 empty empty empty 20 12 0 15 -99865 -1
 0;
-#X obj 73 85 cnv 15 233 231 empty empty empty 20 12 0 15 -1 -1 0;
-#X obj 74 86 cnv 15 231 229 empty empty 1: cable connection 20 12
+#X obj 33 85 cnv 15 233 231 empty empty empty 20 12 0 15 -1 -1 0;
+#X obj 34 86 cnv 15 231 229 empty empty 1: cable connection 20 12
 0 15 -260956 -1 0;
-#X obj 78 19 cnv 15 244 37 empty empty empty 29 15 2 25 -99865 -1 0
+#X obj 38 19 cnv 15 244 37 empty empty empty 29 15 2 25 -99865 -1 0
 ;
-#X obj 74 15 cnv 15 244 37 empty empty empty 29 15 2 25 -1 -1 0;
-#X obj 75 16 cnv 15 242 35 empty empty forming a loop 15 15 0 25
+#X obj 34 15 cnv 15 244 37 empty empty empty 29 15 2 25 -1 -1 0;
+#X obj 35 16 cnv 15 242 35 empty empty forming a loop 15 15 0 25
 -4032 -1 0;
-#X msg 82 112 start;
-#X msg 389 131 start;
-#X obj 387 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
+#X msg 42 112 start;
+#X msg 349 131 start;
+#X obj 347 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
 0;
-#X obj 474 229 cnv 1 1 1 empty \$0-tester ↑ -11 8 1 53 -262144 -1
+#X obj 434 229 cnv 1 1 1 empty \$0-tester ↑ -11 8 1 53 -262144 -1
 0;
-#X text 100 254 These contexts use PD connections to form a loop.,
+#X text 60 254 These contexts use PD connections to form a loop.,
 f 28;
-#X text 373 262 These contexts use float-connect to form a loop. Notice
+#X text 333 262 These contexts use float-connect to form a loop. Notice
 how the toggle floats correspond to the ID numbers., f 38;
-#X text 357 374 Note that float-connected toggles can still be cable-connected!
+#X text 317 374 Note that float-connected toggles can still be cable-connected!
 Try connecting the toggle labeled c4 or c3 to one of the green contexts
-to see.;
-#X obj 114 168 context :d 1 :x = 5 :ID 1 :ex ' clear ';
-#X obj 206 169 context :d 1 :x = 5 :ID 2;
-#X obj 421 168 context :c 4 :d 1 :i 0 0 0 0 4.5 :x = 5 :ID 3;
-#X obj 551 169 context :c 4 :d 1 :i 0 0 0 0 3.5 :x = 5 :ID 4;
-#X msg 127 139 stop context;
-#X msg 434 131 stop context;
-#X obj 518 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
+to see., f 51;
+#X obj 74 168 context :d 1 :x = 5 :ID 1 :ex ' clear ';
+#X obj 166 169 context :d 1 :x = 5 :ID 2;
+#X obj 381 168 context :c 4 :d 1 :i 0 0 0 0 4.5 :x = 5 :ID 3;
+#X obj 511 169 context :c 4 :d 1 :i 0 0 0 0 3.5 :x = 5 :ID 4;
+#X msg 87 139 stop context;
+#X msg 394 131 stop context;
+#X obj 478 191 cnv 1 1 1 empty \$0-tester → -12 -1 1 53 -262144 -1
 0;
-#X obj 605 230 cnv 1 1 1 empty \$0-tester ↑ -11 8 1 53 -262144 -1
+#X obj 565 230 cnv 1 1 1 empty \$0-tester ↑ -11 8 1 53 -262144 -1
 0;
-#X text 78 62 Refer to Manual Section 5: CONNECTIONS;
-#X obj 70 351 ctxfiles/license;
-#X text 357 338 To access float-connect \, click on any toggle and
-scroll up while holding the mouse down.;
-#X obj 70 411 declare -path ../;
+#X obj 30 344 ctxfiles/license;
+#X text 317 338 To access float-connect \, click on any toggle and
+scroll up while holding the mouse down., f 48;
+#X obj 30 404 declare -path ../;
+#X obj 35 61 else/openfile links/connections.html -h see Context Manual
+entry on connections;
+#X obj 297 17 docfiles/help-display \$0;
 #X connect 9 0 16 0;
 #X connect 10 0 18 0;
 #X connect 16 4 17 0;

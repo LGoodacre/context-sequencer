@@ -7,9 +7,9 @@
 #X obj 234 332 context :M 1 :h 1 :x = 1 2 3 :z 0 :P 1 :v 0;
 #X obj 482 332 context :M 1 :h 1 :x = 1 2 3 :z 0 :R 100 :v 0;
 #X obj 449 535 docfiles/snare;
-#X obj 444 698 dac~;
-#X obj 448 674 *~ 0.3;
-#X obj 501 676 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 444 648 dac~;
+#X obj 448 624 *~ 0.3;
+#X obj 501 626 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X obj 211 537 docfiles/kick;
 #X obj 150 434 context :c 14 :d 1 :n ' kick ' :x = 1 3 4 :v 0;
@@ -47,13 +47,15 @@
 #X text 444 76 This patch illustrates how to achieve global tempo change.
 ;
 #X text 766 180 Change global tempo here;
+#X obj 851 313 else/openfile links/calculation.html -h See Context
+Manual entry on calculation.;
 #X text 852 216 The :te setting works as a percentage--the higher the
 number \, the slower the speed \, with 100 being the middle. It seems
 natural to want to define tempo as a BPM \, but this is not so easy
 in Context \, since the number of "beats in a bar" isn't centrally
 defined. It should be possible to find an equivalent for BPM using
-the :k setting \, but I haven't worked this out yet (see Manual Section
-10: Calculation).;
+the :k setting \, but I haven't worked this out yet.;
+#X obj 266 26 docfiles/help-display \$0;
 #X connect 2 0 3 4;
 #X connect 2 1 4 2;
 #X connect 2 2 20 1;

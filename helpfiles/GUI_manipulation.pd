@@ -1,4 +1,4 @@
-#N canvas 363 199 723 429 10;
+#N canvas 171 194 723 429 10;
 #X declare -path ../;
 #N canvas 132 138 450 271 and 0;
 #X text 14 25 To start Context \, simply double click in the green
@@ -14,24 +14,27 @@ working. To fix it \, click once on a blank (white) area of the canvas
 \, then try again. One day I'll track down the source of this problem...
 ;
 #X restore 65 143 start and stop;
-#N canvas 65 85 450 277 floats 0;
-#X text 11 14 To alter toggle floats and float connects (ie. to get
-a number inside a toggle box instead of an x) \, click and drag up
-or down on any toggle. dragging up gives float connects \, which are
-equivalent to cable connections (see manual Section 5: float connections).
-Dragging down gives toggle floats \, which can be read by the = message
-variable (see manual Section 12: variables without arguments).;
-#X text 10 115 If you want to obtain a negative toggle float \, you
+#N canvas 67 89 450 292 floats 0;
+#X text 10 133 If you want to obtain a negative toggle float \, you
 have to first scroll down to 1 or 2 \, then scroll up quickly. Pausing
 at 0 (ie at x) causes the scroll to reset so that float connects can
 again be selected.;
-#X text 10 178 You can also move a particular toggle float from one
+#X text 10 196 You can also move a particular toggle float from one
 toggle to the next by clicking and dragging left / right. This is equivalent
 to the ":i swap" command. Note that to move a toggle on the y-axis
 \, you still need to drag left and right \, despite the temptation
 to drag up and down.;
+#X obj 10 113 else/openfile links/message_variables.html -h see Context
+Manual entry on message variables witout arguments;
+#X text 11 14 To alter toggle floats and float connects (ie. to get
+a number inside a toggle box instead of an x) \, click and drag up
+or down on any toggle. dragging up gives float connects \, which are
+equivalent to cable connections. Dragging down gives toggle floats
+\, which can be read by the = message variable.;
+#X obj 10 98 else/openfile links/connections.html -h see Context Manual
+entry on connections;
 #X restore 65 187 toggle floats and float connects;
-#N canvas 65 97 450 274 messages 0;
+#N canvas 67 97 450 274 messages 0;
 #X text 11 170 A second option for altering messages is to open the
 editor. To do this \, hold down Shift and then double click on the
 symbol atom. A text box will appear and you can edit the message with
@@ -48,9 +51,7 @@ by quadruple clicking \, etc.;
 always perfectly align with the symbol atom. Try clicking in the middle
 of the atom for best results.;
 #X restore 65 209 altering messages;
-#N canvas 65 85 450 201 bank 0;
-#X text 12 148 See Manual Section 13 for more information about the
-memory bank.;
+#N canvas 67 215 450 193 bank 0;
 #X text 10 14 The memory bank can store and retrieve various different
 Context states \, ie. toggle assignments. To access the bank \, hold
 the mouse over Context and then double press and hold the Shift key.
@@ -59,13 +60,17 @@ The y-axis toggles then turn into a selector for the bank. For example
 clicking on the third loads the third \, etc. Make sure that the Shift
 key is still held while you select the bank \, and let go of it to
 return to the regular y-axis toggle assignment.;
+#X obj 9 144 else/openfile links/bank.html -h See Context Manual entry
+on memory bank.;
 #X restore 65 231 memory bank;
-#N canvas 65 85 450 124 the 0;
+#N canvas 67 89 450 156 the 0;
 #X text 16 18 To flip the x- and y-axes \, hold down the Shift key
 and double click on the number atom (top left corner). This action
 will be confirmed by the cursor moving from the left to the top of
 the Context canvas. The pattern now occupies the y-axis and the burst
-occupies the x. (See Manual Section 6: Pattern and Burst).;
+occupies the x.;
+#X obj 16 89 else/openfile links/pattern_and_burst.html -h See Context
+Manual entry on pattern and burst.;
 #X restore 65 253 flipping the axes;
 #N canvas 377 244 454 336 the 0;
 #X text 17 14 To access the properties menu \, right click on Context
@@ -91,13 +96,14 @@ console (present in every sub-menu)., f 48;
 the previous (sub) menu \, or to the main Context GUI. Double clicking
 on it returns to the main GUI from any point in the menu system.;
 #X restore 65 275 using the properties menu;
-#N canvas 65 85 450 110 the 0;
+#N canvas 67 89 450 110 the 0;
 #X text 26 26 To open the Overlay \, right click on Context and select
 "open". The patch which pops up is not the main Context window \, but
-the Overlay patch. See Manual Section 14 for more information on the
-Overlay.;
+the Overlay patch.;
+#X obj 24 71 else/openfile links/overlay.html -h See Context Manual
+entry on overlay.;
 #X restore 65 297 opening the overlay;
-#N canvas 65 93 450 534 (subpatch) 0;
+#N canvas 67 93 450 534 (subpatch) 0;
 #X text 11 15 To resize Context \, you need to hold down the Shift
 key \, then click and drag just outside of the border of Context. This
 works for re-sizing vertically or horizontally. The selectable area
@@ -138,33 +144,35 @@ canvas without changing the number of toggles ("zooming") \, useful
 for improve visibility. To do this \, double click and drag instead
 of single click.;
 #X restore 65 165 resizing;
-#N canvas 65 93 450 267 message 0;
+#N canvas 147 164 450 267 message 0;
 #X text 15 19 To move the message box between different terms from
 the message database \, hold the mouse over Context and use the arrow
 keys. Left and right will access the x-axis database \, up and down
 will access the y-axis database. The one toggle which is coloured differently
 from the rest of them indicates your position in the database (usually
 it is black).;
-#X text 13 121 Note that by default you can't scroll past the end of
-the database limit. To override this \, hold down the Shift key and
-then use the arrow keys as before. See manual Section 9 for more information
-about the message database and database limits.;
-#X text 16 194 If you want to edit many messages at once \, simply
+#X text 10 187 If you want to edit many messages at once \, simply
 go to properties-->messages-->x- or y-axis--> edit and a text box will
 appear. Remember to save it (Control + s) when you are done.;
+#X text 13 121 Note that by default you can't scroll past the end of
+the database limit. To override this \, hold down the Shift key and
+then use the arrow keys as before.;
+#X obj 12 161 else/openfile links/message_databases.html -h See Context
+Manual entry on message databases.;
 #X restore 65 320 accessing message database;
-#N canvas 66 86 450 177 toggles 0;
+#N canvas 67 89 450 164 toggles 0;
 #X text 11 24 You can turn toggles on or off using the keyboard instead
 of the usual method of clicking on them. To do this \, first hold the
 mouse over Context. Then use the arrow keys to select the desired toggle
 box and press tab to toggle it.;
-#X text 10 85 Note that by default you can't scroll past the end of
+#X text 11 84 Note that by default you can't scroll past the end of
 the database limit. To override this \, hold down the Shift key and
-then use the arrow keys as before. See manual Section 9 for more information
-about the message database and database limits.;
+then use the arrow keys as before.;
+#X obj 10 123 else/openfile links/message_databases.html -h See Context
+Manual entry on message databases.;
 #X restore 65 342 switching toggles;
-#X obj 291 268 context :X 14 :a ' message 1 2 3 ' :d 1 :Z 20 :ba '
-:x = :i clear || :x = 1 2 :i clear || :x = 1 2 3 :i clear ';
+#X obj 291 268 context :X 14 :a ' message 1 2 3 ' :d 1 :Z 20 :ID 1
+:ba ' :x = :i clear || :x = 1 2 :i clear || :x = 1 2 3 :i clear ';
 #X obj 258 26 cnv 15 352 62 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 253 21 cnv 15 352 62 empty empty empty 20 12 0 14 -1 -66577
@@ -177,3 +185,4 @@ to learn about the different ways to use the mouse and keyboard with
 Context \, and use the context unit on the right to practice.;
 #X obj 28 25 ctxfiles/license;
 #X obj 28 3 declare -path ../;
+#X obj 28 92 docfiles/help-display \$0;

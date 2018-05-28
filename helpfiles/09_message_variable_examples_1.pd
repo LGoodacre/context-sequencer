@@ -1,4 +1,4 @@
-#N canvas 67 87 1299 681 8;
+#N canvas 67 87 1299 681 10;
 #X declare -path ../;
 #X obj 617 209 cnv 15 524 371 empty empty empty 20 12 0 24 -99865 -66577
 0;
@@ -184,7 +184,6 @@ TO PLAY. ** CLICK AND HOLD TO STOP., f 62;
 of random values it will generate. Here \, the second argument is set
 by @ \, as in example 5 So chaniging the position of Context will increase
 the number of notes in each hit.;
-#X text 581 139 Refer to Manual Section 12;
 #X obj 1413 146 dac~;
 #X obj 1470 124 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
@@ -199,28 +198,33 @@ the number of notes in each hit.;
 #X obj 1548 54 receive decay;
 #X obj 1417 34 route x a d;
 #X obj 38 1 ctxfiles/license;
-#X text 83 439 Note the important difference here between toggle floats
-and float connections. The last toggle here (c10) is a connection \,
-not read by the = sign. See manual section 4;
-#X text 78 498 Ususally \, double clicking and scrolling up will give
+#X text 78 500 Ususally \, double clicking and scrolling up will give
 you float connections \, and scrolling down will give you toggle floats.
 However \, it is possible to scroll to a negative toggle float \, so
-long as you go down (to a positive one) first.;
+long as you go down (to a positive one) first., f 63;
 #X obj 251 1 declare -path ../;
+#X obj 251 19 docfiles/help-display \$0;
+#X obj 140 134 else/openfile links/message_variables.html -h see Context
+Manual entry on message variables;
+#X obj 83 478 else/openfile links/difference_between_float_connect.html
+-h see Context Manual entry on toggle-float vs float connect;
+#X text 83 439 Note the important difference here between toggle floats
+and float connections. The last toggle here (c10) is a connection \,
+not read by the = sign.;
 #X connect 3 3 4 3;
 #X connect 4 3 5 3;
 #X connect 5 3 6 3;
-#X connect 77 0 83 1;
-#X connect 78 0 79 0;
-#X connect 79 0 83 0;
-#X connect 81 0 84 0;
-#X connect 81 0 87 0;
-#X connect 82 0 78 0;
-#X connect 83 0 76 0;
-#X connect 83 0 76 1;
-#X connect 85 0 79 1;
-#X connect 86 0 85 0;
-#X connect 87 0 78 0;
-#X connect 87 1 82 0;
-#X connect 87 2 79 1;
-#X connect 87 3 78 0;
+#X connect 76 0 82 1;
+#X connect 77 0 78 0;
+#X connect 78 0 82 0;
+#X connect 80 0 83 0;
+#X connect 80 0 86 0;
+#X connect 81 0 77 0;
+#X connect 82 0 75 0;
+#X connect 82 0 75 1;
+#X connect 84 0 78 1;
+#X connect 85 0 84 0;
+#X connect 86 0 77 0;
+#X connect 86 1 81 0;
+#X connect 86 2 78 1;
+#X connect 86 3 77 0;

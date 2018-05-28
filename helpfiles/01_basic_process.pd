@@ -1,44 +1,46 @@
-#N canvas 125 253 893 420 10;
+#N canvas 78 253 773 401 10;
 #X declare -path ../;
-#X obj 87 102 cnv 15 685 248 empty empty empty 20 12 0 14 -99865 -66577
+#X obj 37 104 cnv 15 685 248 empty empty empty 20 12 0 14 -99865 -66577
 0;
-#X obj 77 92 cnv 15 685 248 empty empty empty 20 12 0 14 -1 -66577
+#X obj 27 94 cnv 15 685 248 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 78 93 cnv 15 683 246 empty empty empty 20 12 0 14 -260452 -66577
+#X obj 28 95 cnv 15 683 246 empty empty empty 20 12 0 14 -260452 -66577
 0;
-#X obj 360 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 310 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 135 212 \; pd dsp 1;
-#X text 387 176 this connection directs a 'bang' message back into
+#X msg 85 214 \; pd dsp 1;
+#X text 337 178 this connection directs a 'bang' message back into
 context, f 50;
-#X obj 79 26 cnv 15 244 37 empty empty empty 22 15 2 18 -99865 -1 0
+#X obj 29 28 cnv 15 244 37 empty empty empty 22 15 2 18 -99865 -1 0
 ;
-#X obj 75 22 cnv 15 244 37 empty empty empty 22 15 2 18 -1 -1 0;
-#X obj 76 23 cnv 15 242 35 empty empty context cycle 20 16 0 25 -4032
+#X obj 25 24 cnv 15 244 37 empty empty empty 22 15 2 18 -1 -1 0;
+#X obj 26 25 cnv 15 242 35 empty empty context cycle 20 16 0 25 -4032
 -1 0;
-#X text 375 25 This file illustrates the basic process of a Context
+#X text 325 27 This file illustrates the basic process of a Context
 cycle. When started \, the Context cursor passes across the screen
 and hits the toggles at the bottom in sequential order.;
-#X text 75 69 Refer to Manual section 3: BASIC PROCESS;
-#X obj 664 354 ctxfiles/license;
-#X obj 265 303 dac~;
-#X msg 255 107 start;
-#X msg 285 128 stop;
-#X obj 265 156 context :a ' 440 ' :d 1 :x = 5 4 2 1 :S <o :ID 1;
-#X text 321 118 Press to start and stop;
-#X text 98 135 The cycle takes 1 second and sends the message '440'
+#X obj 502 287 ctxfiles/license;
+#X obj 215 305 dac~;
+#X msg 205 99 start;
+#X msg 235 120 stop;
+#X obj 215 158 context :a ' 440 ' :d 1 :x = 5 4 2 1 :S <o :ID 1;
+#X text 271 110 Press to start and stop;
+#X text 48 137 The cycle takes 1 second and sends the message '440'
 ---->, f 23;
-#X text 292 245 these connections direct the message towards the PD
+#X text 242 247 these connections direct the message towards the PD
 object, f 63;
-#X obj 265 281 docfiles/glock~ 0.3;
-#X obj 777 332 declare -path ../;
-#X connect 3 0 15 4;
-#X connect 13 0 15 0;
-#X connect 14 0 15 1;
-#X connect 15 0 19 0;
-#X connect 15 1 19 0;
-#X connect 15 2 19 0;
-#X connect 15 3 19 0;
-#X connect 15 4 3 0;
-#X connect 19 0 12 0;
-#X connect 19 0 12 1;
+#X obj 215 283 docfiles/glock~ 0.3;
+#X obj 46 361 declare -path ../;
+#X obj 26 3 docfiles/help-display \$0;
+#X obj 34 73 else/openfile links/how_does_context_work.html -h See
+Context Manual entry on Context's basic process;
+#X connect 3 0 14 4;
+#X connect 12 0 14 0;
+#X connect 13 0 14 1;
+#X connect 14 0 18 0;
+#X connect 14 1 18 0;
+#X connect 14 2 18 0;
+#X connect 14 3 18 0;
+#X connect 14 4 3 0;
+#X connect 18 0 11 0;
+#X connect 18 0 11 1;

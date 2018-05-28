@@ -1,4 +1,4 @@
-#N canvas 299 94 480 647 10;
+#N canvas 252 94 480 647 10;
 #X declare -path ../;
 #X obj 43 272 context :M 1 :a ' push ' :d 1 :h 1 :i 2.5 3.5 0 0 1.5
 :m 0 :x = 5 2 1 :z 0 :P 1 :ID 1 :ol 1 :pu 1;
@@ -68,3 +68,4 @@ the float., f 59;
 #X text 23 612 NOTE: structured hierarchies only work with toggle float
 connections. Cable connections will not work.;
 #X obj 240 72 declare -path ../;
+#X obj 38 75 docfiles/help-display \$0;
