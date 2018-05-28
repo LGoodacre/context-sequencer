@@ -1,8 +1,12 @@
-#N canvas 400 224 599 300 10;
+#N canvas 257 225 599 300 10;
 #X obj 100 100 tgl 15 0 \$0n \$0-n display context state 18 7 0 8
 -262144 -1 -1 0 2;
-#X msg 100 120 :il \$1;
-#X obj 100 143 s \$1-context;
-#X connect 0 0 1 0;
+#X msg 100 169 :il \$1;
+#X obj 100 192 s \$1-context;
+#X obj 100 122 + \$2;
+#X obj 100 145 min 2;
+#X connect 0 0 3 0;
 #X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 4 0 1 0;
 #X coords 0 -1 1 1 15 15 2 100 100;
