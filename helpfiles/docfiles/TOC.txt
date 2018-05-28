@@ -13,6 +13,9 @@ example Context network;
 helpfiles/examples/example_01.pd;
 another example Context network;
 
+helpfiles/00_first_time_tutorial.pd;
+interactive tutorial;
+
 -space;
 -space;
 

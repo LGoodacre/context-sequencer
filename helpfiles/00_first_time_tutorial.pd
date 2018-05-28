@@ -78,7 +78,7 @@
 #X restore 192 45 pd stop;
 #X obj 558 119 cnv 15 387 42 empty empty empty 3 8 0 16 -1 -1 0;
 #X obj 559 120 cnv 15 385 40 empty empty NEXT 3 8 0 20 -4032 -1 0;
-#N canvas 451 150 873 582 progress 0;
+#N canvas 404 150 873 582 progress 0;
 #X obj 100 100 bng 20 250 50 0 empty label Whoa this is cool! Can you give me some more?
 30 10 1 14 -262144 -1 -1;
 #X msg 100 56 space sym;
@@ -109,7 +109,6 @@
 #X obj 525 243 list split 2;
 #X obj 521 213 cyclone/zl iter 3;
 #X obj 523 306 iemguts/canvasobjectposition 1;
-#X msg 536 86 \; c11 :d 1.5;
 #X msg 518 164 300 100 19 420 100 20;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
@@ -120,14 +119,13 @@
 #X connect 9 0 10 0;
 #X connect 9 1 11 0;
 #X connect 9 1 7 0;
-#X connect 9 2 16 0;
 #X connect 9 2 15 0;
 #X connect 10 0 6 0;
 #X connect 11 0 6 0;
 #X connect 12 0 14 0;
 #X connect 12 1 14 1;
 #X connect 13 0 12 0;
-#X connect 16 0 13 0;
+#X connect 15 0 13 0;
 #X coords 0 -1 1 1 20 20 2 100 100;
 #X restore 563 137 pd progress;
 #X text 616 120 (allow a few seconds after pressing this button);
