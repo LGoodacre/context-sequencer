@@ -1,31 +1,33 @@
 #N canvas 67 87 1299 681 10;
 #X declare -path ../..;
-#X obj 1221 360 context :H 16 :X 17 :Y 6 :d 8.54 :Z 9 :ID 1 :ol 1 :il
-1 18 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54 :y1 3.843
-:y2 8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8 obj 29 0 ../marker
-:x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1 4.0131 :y1 1.5372 8
-obj 140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3 0 4 0;
-#X obj 925 284 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
-2) | | | < c1 stop ' :d 0.98 :j 0 2.5 0 :x = 9 8 7 4 3 1 :y = 1 :O
--20 :Z 14 :ID 2 :ro 1 :il 1;
-#X obj 1029 79 context :Y 5 :b ' | | | . :i -l scramble ' :d 2 :f 4
-:h 1 :i 7.5 5.5 10.5 0 3.5 :x = 5 3 2 1 :y = 4 3 2 1 :P 1 :ID 3 :il
-1;
-#X obj 998 447 context :X 7 :M 1 :a ' # _ | | | # = ' :d 0.02 :h 2
-:l 11 :n ' gl ' :p 0.1 :x = 6 5 4 3 2 1 :z 0 :R 101 :Z 9 :ID 4 :ol
-1 :il 1;
-#X obj 973 359 context :d 0.5 :i 4.5 4.5 4.5 4.5 0 :j 8.5 0 0 :x =
-4 2 1 :ID 5 :il 1;
-#X obj 1238 279 context :X 9 :a ' ¬ ' :b ' . :u (? 3 + 1) ' :d 1 :n
-' hat ' :x = 7 4 3 2 1 :y = 1 :O -15 :Z 13 :ID 6 :ba ' :x = 1 2 3 4
-7 :i clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear ' :il 1
-;
-#X obj 1169 80 context :a ' 1 ' :d 2 :n ' kick ' :x = 4 3 2 1 :ID 7
+#X obj 1012 352 context :H 18 :X 17 :Y 6 :c 3 :d 8.54 :Z 9 :ID 1 :ol
+1 :il 1 18 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 8.54
+:y1 3.843 :y2 8.68232 :c 14 :li 1 :ed 0 5 obj 1 92 throw~ sample 8
+obj 29 0 ../marker :x1 1.33437 :y1 2.8182 8 obj 90 0 ../marker :x1
+4.0131 :y1 1.5372 8 obj 140 0 ../marker :x1 6.26 :y1 2.8182 5 connect
+3 0 4 0;
+#X obj 753 258 context :X 9 :a ' < c1 start m ?3 ' :b ' . :x (? 4 *
+2) | | | < c1 stop ' :c 8 :d 0.98 :j 0 2.5 0 :x = 9 8 7 4 3 1 :y =
+1 :O -20 :Z 14 :ID 2 :ro 1 :il 1;
+#X obj 859 49 context :Y 5 :b ' | | | . :i -l scramble ' :c 10 :d 2
+:f 4 :h 1 :i 7.5 5.5 10.5 0 3.5 :x = 5 3 2 1 :y = 4 3 2 1 :P 1 :ID
+3 :il 1;
+#X obj 826 433 context :X 7 :M 1 :a ' # _ | | | # = ' :c 6 :d 0.02
+:h 2 :l 11 :n ' gl ' :p 0.1 :x = 6 5 4 3 2 1 :z 0 :R 101 :Z 9 :ID 4
+:ol 1 :il 1;
+#X obj 780 352 context :c 7 :d 0.5 :i 4.5 4.5 4.5 4.5 0 :j 8.5 0 0
+:x = 4 2 1 :ID 5 :il 1;
+#X obj 1012 221 context :X 9 :a ' ¬ ' :b ' . :u (? 3 + 1) ' :c 2 :d
+1 :n ' hat ' :x = 7 4 3 2 1 :y = 1 :O -15 :Z 13 :ID 6 :ba ' :x = 1
+2 3 4 7 :i clear || :x = 2 3 4 7 :i clear || :x = 4 5 7 :i clear '
 :il 1;
-#X obj 1210 176 context :a ' 1 ' :b ' = ' :d 0.25 :f 2 :h 1 :j 1 9.5
-0 :n ' kick ' :y = 2 1 :P 1 :ID 8 :il 1;
-#X obj 961 186 context :X 7 :a ' ¬ ' :d 0.75 :h 1 :j 9.5 9.5 0 :n
-' snare ' :x = 6 4 2 1 :y = 3 2 1 :O -17 :R 100 :Z 8 :ID 9 :il 1;
+#X obj 951 15 context :a ' 1 ' :d 2 :n ' kick ' :x = 4 3 2 1 :ID 7
+:il 1;
+#X obj 992 101 context :a ' 1 ' :b ' = ' :c 1 :d 0.25 :f 2 :h 1 :j
+1 9.5 0 :n ' kick ' :y = 2 1 :P 1 :ID 8 :il 1;
+#X obj 791 156 context :X 7 :a ' ¬ ' :c 9 :d 0.75 :h 1 :j 9.5 9.5
+0 :n ' snare ' :x = 6 4 2 1 :y = 3 2 1 :O -17 :R 100 :Z 8 :ID 9 :il
+1;
 #N canvas 517 251 492 300 audio 0;
 #X obj 287 21 receive gl-;
 #X obj 321 241 helpfiles/docfiles/hihat;
@@ -86,93 +88,88 @@ obj 140 0 ../marker :x1 6.26 :y1 2.8182 5 connect 3 0 4 0;
 #X connect 16 0 12 0;
 #X connect 17 0 16 1;
 #X coords 0 -1 1 1 140 16 1 100 100;
-#X restore 322 101 pd audio;
-#X obj 1210 476 context :Y 5 :h 1 :j 6.5 2.5 11.5 9.5 :y = 4 3 2 1
-:z 0 :R 100 :ID 10 :il 1;
-#X obj 1076 531 context :X 9 :a ' | g # ( ? 3 + 12) | g # ( ? 3 + 12)
-| g % g ' :b ' < c9 :x ? 6 2 | < c5 :x ? 4 | < c7 :x ? 3 ' :d 1 :e
-4 :f 3 :h 1 :n ' gl ' :x = 7 5 3 2 :y = 3 2 1 :O -7 :R 100 :Z 11 :ID
-11 :ro 1 :il 1;
-#X msg 997 31 start;
-#X msg 1042 31 stop;
-#X obj 931 37 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144 -1
+#X restore 15 96 pd audio;
+#X obj 992 487 context :Y 5 :c 4 :h 1 :j 6.5 2.5 11.5 9.5 :y = 4 3
+2 1 :z 0 :R 100 :ID 10 :il 1;
+#X obj 866 510 context :X 9 :a ' | g # ( ? 3 + 12) | g # ( ? 3 + 12)
+| g % g ' :b ' < c9 :x ? 6 2 | < c5 :x ? 4 | < c7 :x ? 3 ' :c 5 :d
+1 :e 4 :f 3 :h 1 :n ' gl ' :x = 7 5 3 2 :y = 3 2 1 :O -7 :R 100 :Z
+11 :ID 11 :ro 1 :il 1;
+#X msg 827 11 start;
+#X msg 872 11 stop;
+#X obj 761 7 cnv 1 1 1 empty \$0-tester → -20 -4 1 100 -262144 -1
 0;
-#X obj 322 78 scaler pentatonic egyptian b# 4;
-#X obj 322 17 ctxfiles/license;
-#X obj 38 22 cnv 15 271 81 empty empty empty 6 28 0 60 -99865 -1 0
-;
-#X obj 33 16 cnv 15 271 81 empty empty empty 6 28 0 60 -33289 -1 0
-;
-#X obj 34 17 cnv 15 269 79 empty empty empty 6 28 0 60 -203904 -1 0
-;
-#X obj 35 18 cnv 15 267 77 empty empty empty 6 28 0 60 -13381 -1 0
-;
-#X obj 36 19 cnv 15 265 75 empty empty empty 6 28 0 60 -33289 -1 0
-;
-#X obj 37 20 cnv 15 263 73 empty empty CONTEXT 6 28 0 60 -227039 -1
+#X obj 228 631 scaler pentatonic egyptian b# 4;
+#X obj 439 598 ctxfiles/license;
+#X obj 9 12 cnv 15 271 81 empty empty empty 6 28 0 60 -99865 -1 0;
+#X obj 4 6 cnv 15 271 81 empty empty empty 6 28 0 60 -33289 -1 0;
+#X obj 5 7 cnv 15 269 79 empty empty empty 6 28 0 60 -203904 -1 0;
+#X obj 6 8 cnv 15 267 77 empty empty empty 6 28 0 60 -13381 -1 0;
+#X obj 7 9 cnv 15 265 75 empty empty empty 6 28 0 60 -33289 -1 0;
+#X obj 8 10 cnv 15 263 73 empty empty CONTEXT 6 28 0 60 -227039 -1
 0;
-#X text 598 79 Rajiv is in charge of the whole thing. He's not playing
+#X text 480 27 Rajiv is in charge of the whole thing. He's not playing
 any music today--instead \, he's telling other people when to play
 \, like a conductor in an orchestra. Every two seconds \, Rajiv counts
 to four \, telling Gunter to start on one \, Megan on two \, Lilly
 on three \, and then taking a rest. However \, every fourth time he
 finishes this sequence \, Rajiv scrambles the order \, just to change
-things up.;
-#X text 1241 75 Gunter is a pretty simple guy and likes to play drums.
+things up., f 54;
+#X text 1023 10 Gunter is a pretty simple guy and likes to play drums.
 He waits for a signal from Rajiv \, and them just keeps the beat \,
 but also passes a message on to Felicia every time he finishes a cycle.
-, f 43;
-#X text 1285 167 When Felicia receives a signal from Gunter \, she
+, f 33;
+#X text 1067 102 When Felicia receives a signal from Gunter \, she
 either plays an extra kick drum \, or tells Fei to play her snare.
 , f 23;
-#X text 1438 360 Michelle has a casette recorder with a little recording
+#X text 1060 441 Michelle has a cassette recorder with a little recording
 of a tabla. She is pretty nifty with this machine \, and can start
 the playback from any point in the recording \, so long as there are
 markers in the right place. This is what she does whenever she gets
-the word from Chris., f 47;
-#X text 1281 474 Lilly isn't playing anything today--she's just passing
+the word from Chris., f 37;
+#X text 992 563 Lilly isn't playing anything today--she's just passing
 on messages. She takes orders directly from Rajiv and then passes them
 on instantly to either Ebo \, Chris \, Jean Paul or Fei. Which one
 of these she decides who to pass the message on to is completely random.
-;
-#X text 656 531 Jean Paul plays the melody. He is stuck with the same
+, f 44;
+#X text 485 504 Jean Paul plays the melody. He is stuck with the same
 four note pattern and only knows three notes on the scale \, but it's
 up to him which of these he he plays. However \, he always follows
 a rule: Whichever note he chose for the second note must also be played
 for the third and fourth.;
-#X text 678 604 Jean Paul also plays a role in telling the percussion
+#X text 687 580 Jean Paul also plays a role in telling the percussion
 section what to do. Every time he finishes his melody \, he does one
 of three things: he either tells Fei \, Megan or Gunter to change their
-pattern a little bit., f 77;
-#X text 581 448 Luke is a pretty freeform musician. Every time Megan
+pattern a little bit., f 46;
+#X text 454 433 Luke is a pretty freeform musician. Every time Megan
 says go \, he takes a stab at the piano. Which keys he hits (and how
 many) is pretty much random. For now though \, he's only hitting the
 bass notes.;
-#X text 632 359 Megan is just here to pass messages on from Rajiv to
+#X text 450 352 Megan is just here to pass messages on from Rajiv to
 Luke. She gives Luke a predefined pattern every time she is told to
 \, but she also changes that pattern whenever Jean Paul asks., f 47
 ;
-#X text 527 185 Fei plays the snare. She has a little pattern which
+#X text 433 146 Fei plays the snare. She has a little pattern which
 \, which she changes every time Jean Paul asks. It lasts only 3/4 of
 the length of the standard bar length that the rest of the group has
 agreed upon \, and she often likes to repeat as soon as she has played
-a cycle every.;
-#X text 514 277 Chris generates a sequence of random numbers which
+a cycle every., f 48;
+#X text 446 249 Chris generates a sequence of random numbers which
 he sends to Michelle \, so that she can play it on her tape recorder.
 Chris has a template for this sequence \, but each time he sends it
 to Michelle \, he alters it slightly. He is also careful to tell Michelle
-to stop at the end., f 57;
-#X obj 4 129 cnv 15 456 506 empty empty empty 20 12 0 14 -1 -66577
+to stop at the end., f 42;
+#X obj 4 119 cnv 15 416 506 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 5 130 cnv 15 454 504 empty empty empty 20 12 0 14 -4034 -66577
+#X obj 5 120 cnv 15 414 504 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#X obj 6 131 cnv 15 452 502 empty empty empty 20 12 0 14 -159808 -66577
+#X obj 6 121 cnv 15 412 502 empty empty empty 20 12 0 14 -159808 -66577
 0;
-#X obj 7 132 cnv 15 450 500 empty empty empty 20 12 0 14 -1 -66577
+#X obj 7 122 cnv 15 410 500 empty empty empty 20 12 0 14 -1 -66577
 0;
-#X obj 8 133 cnv 15 448 498 empty empty empty 20 12 0 14 -262144 -66577
+#X obj 8 123 cnv 15 408 498 empty empty empty 20 12 0 14 -262144 -66577
 0;
-#X text 19 146 Imagine that it's Sunday and you've invited some friends
+#X text 19 126 Imagine that it's Sunday and you've invited some friends
 over to play some music. They're all competent musicians and can play
 anything you want them to \, or even improvise on their on. Since they're
 all friends \, they're also really good at communicating with each
@@ -180,13 +177,13 @@ other and following instructions. For instance \, you might say to
 them \, "OK Steve \, whenever Betty hits her drum \, you play that
 melody that I just taught you" \, or "Betty \, I'd like you to speed
 up a little bit whenever Steve finishes his guitar riff".;
-#X text 18 269 Since it's your party \, they're all going to play whatever
+#X text 18 249 Since it's your party \, they're all going to play whatever
 you want them to \, but you can also teach them to take the lead and
 make their own decisions. So you might say \, "Arun \, you're in charge
 of this section: I want you to keep time for all the others" \, or
 "Hamid: when I say go \, I want you to play one of those two tape recordings
 I just gave you.";
-#X text 17 354 Because your friends are smart \, they can follow all
+#X text 17 334 Because your friends are smart \, they can follow all
 sorts of complicated instructions. For instance you might say \, "Betty:
 Every third time you hear a C sharp \, I want you to tell Arun to remove
 a random one of the notes from the piano section I first taught him.
@@ -194,21 +191,22 @@ Arun: You don't have to listen to Betty every time she tells you to
 remove a note \, but when you eventually get down to only two notes
 \, then go back to the original melody." And Betty and Arun would do
 this for you!;
-#X text 17 573 On the right is an example of a Context network in action.
+#X text 17 553 On the right is an example of a Context network in action.
 Remember though \, if your house is big enough \, you could invite
 a lot more friends than this!;
-#X text 17 477 This is essentially what Context is: a group of friends
+#X text 17 457 This is essentially what Context is: a group of friends
 communicating and playing music together \, with you \, the host \,
 telling them what to do. Unfortunately they don't speak English \,
 so you're going to have to learn their language and idiosyncrasies
 if you want to be able to direct them properly. But once you do this
 \, the possibilities are practically limitless.;
-#X text 42 78 an advanved sequencer for PD v3.0.2;
-#X text 1360 274 Ebo knows how to play three different patterns on
+#X text 13 68 an advanced sequencer for PD v3.0.2;
+#X text 1134 180 Ebo knows how to play three different patterns on
 the hi-hats. Each time he finishes one \, he picks another one at random.
 But he's also good at varying the length of his hits \, making sure
-that the ones he plays closer together are shorter., f 50;
-#X obj 37 107 declare -path ../..;
+that the ones he plays closer together are shorter., f 21;
+#X obj 12 633 declare -path ../..;
+#X obj 164 96 helpfiles/docfiles/help-display \$0 1;
 #X connect 6 3 7 0;
 #X connect 12 0 2 0;
 #X connect 13 0 2 1;
