@@ -1,0 +1,70 @@
+#N canvas 356 285 747 459 10;
+#X declare -path ../;
+#X obj 12 250 helpfiles/docfiles/glock~ 2;
+#X obj 12 275 dac~;
+#X obj 12 227 receive c1-;
+#X obj 30 19 cnv 15 142 52 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 25 14 cnv 15 142 52 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 26 15 cnv 15 140 50 empty empty chords 13 25 1 34 -61844 -262144
+0;
+#X obj 503 16 ctxfiles/license;
+#X obj 26 82 docfiles/help-display \$0;
+#X obj 607 76 declare -path ../;
+#X obj 63 380 else/openfile links/overlay.html -h see Context Manual
+entry on overlay hacking;
+#X text 180 10 An overlay hack can be used to optimize Context for
+storing chords. In this configuration \, the burst does not fire at
+the end of the cycle \, but on every open pattern toggle (achieved
+with the :bs 1 command). Furthermore \, every pattern toggle corresponds
+to a different term in the memory bank which calls a unique setting
+for the burst toggles. The result is that each pattern toggle can store
+a series of values \, defined by the burst., f 51;
+#X obj 63 400 else/openfile links/bank.html -h see Context Manual entry
+on memory bank;
+#X text 22 105 You can invoke the chords overlay hack by creating an
+object [context :: chord], f 24;
+#X obj 63 420 else/openfile links/presets.html -h see Context Manual
+entry on :: presets;
+#X obj 187 148 cnv 15 258 192 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 188 149 cnv 15 256 190 empty empty empty 20 12 0 14 -162280
+-66577 0;
+#X obj 192 153 cnv 15 247 181 empty empty empty 20 12 0 14 -33289 -66577
+0;
+#X obj 193 154 cnv 15 245 179 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#X msg 315 194 :A -open;
+#X obj 265 238 context :H 110 :X 9 :b ' # = ' :d 5 :e 9 :j 4 7 0 :x
+= 8 7 6 5 4 3 2 1 :y = 2 1 :ID 1 :ba ' :y = 1 :j 1 0 0 || :y = 2 1
+:j 1 2 0 || :y = 3 2 1 :j 1 2 3 || :y = 2 1 :j 4 2 0 || :y = 2 1 :j
+4 5 0 || :y = 2 1 :j 4 7 0 || :y = 2 1 :j 3 5 0 || :y = 1 :j 3 5 0
+' :ol 1 :bs 1 2 #del 10 6 obj 395 18 bank y j 6 obj 372 -65 t a a 6
+obj 372 -96 else/routeall count cursor-x 6 obj 399 -32 unpack s f 6
+obj 454 -66 t a a 6 obj 481 -32 unpack s f 5 obj 456 -4 + 1 5 obj 456
+47 mod 4 5 obj 456 77 + 1 5 obj 456 103 cyclone/prepend :u 5 obj 483
+22 - 1 5 obj 483 22 - 1 6 obj 483 -4 route :X stop 4 msg 520 22 0 5
+connect 1 4 15 0 5 connect 1 6 5 0 5 connect 4 0 2 6 5 connect 4 1
+6 0 5 connect 5 0 4 0 5 connect 5 1 7 0 5 connect 5 2 2 6 5 connect
+6 1 9 0 5 connect 7 0 2 6 5 connect 7 1 8 0 5 connect 8 1 12 0 5 connect
+9 0 10 0 5 connect 10 0 11 0 5 connect 11 0 12 0 5 connect 12 0 2 4
+5 connect 13 0 10 1 5 connect 15 0 13 0 5 connect 15 1 16 0 5 connect
+16 0 12 0;
+#X msg 260 194 :A save;
+#X text 459 144 ACCESSING CHORDS \; \; 1: Hold the mouse over Context
+and use the arrow keys to scroll left and right. You will notice the
+burst toggles changing \, as you scroll through different terms of
+the memory bank. (This is achieved through an overlay hack). \; \;
+2: You can edit the edit the toggles and toggle-floats as you normally
+would \, but you need to scroll left or right to load the new setting.
+Remember also to click ":A save" if you want to save the memory bank.
+\; \; 3: If you play Context \, it will scroll through the chords in
+the burst. Notice that the chord depicted is the next chord to be played.
+, f 46;
+#X obj 12 200 scaler blues c 5;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 2 0 0 0;
+#X connect 18 0 19 2;
+#X connect 20 0 19 1;

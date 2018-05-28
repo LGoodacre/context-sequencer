@@ -122,7 +122,7 @@ bounce :d 1 :rd 1 :rt 1 :b ' | | | . :d * -1 :s ' :x 5;
 
 
 
-structure :H 20 :M 1 :c -97673 :h 1 :m 0 :z 0 :P 1 :ol 1 :o 1 :pu 1 2 #del 8 5 obj 240 -32 route :d 6 obj 240 11 list prepend :o 6 obj 373 -13 list prepend :d 5 obj 373 -37 t f 5 connect 1 4 3 0 5 connect 1 6 6 0 5 connect 3 0 4 0 5 connect 3 1 2 4 5 connect 4 0 2 4 5 connect 5 0 2 0 5 connect 6 0 5 0;
+structure :H 20 :M 1 :c -97673 :h 1 :m 0 :z 0 :P 1 :ol 1 :o 1 :pu 1 2 #del 8 5 obj 240 -32 route :d 6 obj 240 11 list prepend :o 6 obj 373 -13 list prepend :d 5 obj 373 -37 route next 5 connect 1 4 3 0 5 connect 1 6 6 0 5 connect 3 0 4 0 5 connect 3 1 2 4 5 connect 4 0 2 4 5 connect 5 0 2 0 5 connect 6 0 5 0;
 
 # create a Context to build structured gates;
 
@@ -151,3 +151,8 @@ grain :H 18 :X -1 :d 0.1 :i 0 0 0 0 0.5 :c 19 :n grain :ol 1 16 obj 0 14 content
 sample-filter :H 12 :X 9 :Y 12 :c 9 :d 3 :ol 1 16 obj 0 14 content :lo $$ :x2 3 :y1 0.55 :y2 1.63636 :ed 0 :as 0 5 obj 443 -89 throw~ samples 20 obj 0 59 content :H 14 :x2 3 :y1 1.63636 :y2 3 :c 20 :s1 6000 :s2 0 size 100 4 obj 397 -116 cyclone/svf~ 13 floatatom 70 0 4 0 0 0 - - - ¿ f 4 18 obj 57 1 bng 13 250 50 0 empty empty empty 17 7 0 10 -262144 -1 -1 5 msg 413 -51 :ol -save 5 connect 3 0 6 0 5 connect 5 0 6 1 5 connect 6 2 4 0 5 connect 7 0 6 2 5 connect 8 0 9 0 5 connect 9 0 2 0;
 
 # create a Context which stores a sample and has another array to plot the line of a BP filter through that sample (throws to [catch~ samples]);
+
+chord :H 6 :bs 1 :ol 1 2 #del 10 6 obj 395 18 bank y j 6 obj 372 -65 t a a 6 obj 372 -96
+else/routeall count cursor-x 6 obj 399 -32 unpack s f 6 obj 454 -66 t a a 6 obj 481 -32 unpack s f 5 obj 456 -4 + 1 5 obj 456 47 mod 4 5 obj 456 77 + 1 5 obj 456 103 cyclone/prepend :u 5 obj 483 22 - 1 5 obj 483 22 - 1 5 obj 483 -4 route :X 5 connect 1 4 15 0 5 connect 1 6 5 0 5 connect 4 0 2 6 5 connect 4 1 6 0 5 connect 5 0 4 0 5 connect 5 1 7 0 5 connect 5 2 2 6 5 connect 6 1 9 0 5 connect 7 0 2 6 5 connect 7 1 8 0 5 connect 8 1 12 0 5 connect 9 0 10 0 5 connect 10 0 11 0 5 connect 11 0 12 0 5 connect 12 0 2 4 5 connect 13 0 10 1 5 connect 15 0 13 0;
+
+#create a Context which stores a different set of burst toggles for every pattern toggle. This is ideal for building chords.;

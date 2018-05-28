@@ -1,8 +1,8 @@
 #N canvas 220 414 608 338 10;
 #X obj -35 -93 list split 1;
-#X obj -1 -121 inlet- out-x out-y mouse settings message next \$1 custom
+#X obj -1 -121 inlet- out-x out-y \$1 mouse settings message internal custom
 ;
-#X obj -1 -65 inlet_ out-x out-y mouse settings message next \$1 custom
+#X obj -1 -65 inlet_ out-x out-y \$1 mouse settings message internal custom
 ;
 #X connect 0 1 2 0;
 #X connect 1 0 0 0;
