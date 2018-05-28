@@ -1,16 +1,18 @@
 ####################
 #                  #
-#  CONTEXT V3.0.2  #
+#  CONTEXT (v4)	   #
 #                  #
 ####################      Copyright Liam Goodacre, 2015-2018
 
 
-This is a beta version of Context v3.0.2. There are still some bugs left and your help in tracking down both of these will be much appreciated.
+RELEASE:
+
+This is a general release of Context v4. It runs on PD Vanilla 0.48.1 or higher. It is compatible with Linux, OS and Windows. There are probably still some bugs left.
 
 
 SETUP:
 
-Context runs on PD Vanilla 0.48.1 or later. Once you have downloaded Context, you must declare its location so that PD knows how to find it on your computer. To do this, go to Edit --> Preferences --> Path --> New and select the location of Context's home folder.
+Once you have downloaded Context, you must declare its location so that PD knows how to find it on your computer. To do this, go to Edit --> Preferences --> Path --> New and select the location of Context's home folder.
 
 
 EXTERNALS:
@@ -24,11 +26,20 @@ CONFIGURATION:
 
 Context does not currently work on L2Ork or Purr Data. There is a patch called "config-distro.pd" that one day will hopefully be used to switch between the two distributions. For now, leave it set to Vanilla.
 
-Different installations sometimes have different font sizes, which throws off the alignment of the float- and symbol-atoms on the Context GUI. You can (hopefully) fix this annoyance in the config-textsize.pd file in the main folder. Use the number boxes to move the red canvases until they coincide exactly with the symbol atoms, then save the patch.
+Different installations sometimes have different font sizes, which throws off the alignment of the float- and symbol-atoms on the Context GUI. You can fix this annoyance in the config-textsize.pd file in the main folder. Use the number boxes to move the red canvases until they coincide exactly with the symbol atoms, then save the patch.
 
-If you want to run Context in Vanilla 0.47, you can try replacing the file ctxfiles/dv.pd with ctxfiles/dv-047.pd.
+Context has limited compatibility with Vanilla 0.47. If you want to run Context in 0.47, you can try replacing the file ctxfiles/dv.pd with ctxfiles/dv-047.pd, although this does not guarantee full functionality.
 
 Context patches sometimes take a long time to load (some of them several minutes). You can speed this up by turning off DSP before loading, then turning it back on. Faster machines are recommended.
+
+
+SYSTEM REQUIREMENTS:
+
+The beauty of a modular system is that its weight depends on the way it is used in the patch, so Context should run on slower systems. That being said, Context is a heavy abstraction, and you should use it with some consideration for your system's resources.
+
+Each instance of Context consumes about 6.65MB of RAM, and you can add 0.1MB per extra unit as Context is resized. On a very slow machine (1GHZ, 2GB) you can run about 15-20 instances of Context before it starts to seize up. On a faster machine (2.5GHZ, 4GB) you can safely run several hundred instances of Context without suffering audio glitches, although this will consume a lot of memory.
+
+Unfortunately, creating, resizing and labeling Context will always cause audio dropouts.
 
 
 DOCUMENTATION:
@@ -82,8 +93,8 @@ cyclone/zl
 else/break
 else/dir
 else/fromany
+else/openfile
 else/order
-else/link
 else/routeall
 else/toany
 else/window

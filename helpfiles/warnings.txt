@@ -1,4 +1,4 @@
-                       **WARNINGS / DISCLAIMERS**
+                  **WARNINGS / DISCLAIMERS**
 
 
 
@@ -35,14 +35,6 @@ On some instalations of PD, the symbol atom can appear missaligned with the numb
 
 
 
-Sometimes, the start/stop action (or some other canvas gesture) seems to stop working. To fix this, click once on a blank (white) area of the canvas, then try again.
-
-
-
-                    ~~~ ~~~ ~~~ ~~~ ~~~
-
-
-
 Loading Context patches can sometimes take a very long time (long as in up to 5 minutes). This is mostly the case with Overlay embedding, and especially [content] arrays. Making sure that DSP is off before opening these patches seems to cut the loading time in half. Other than that, the best advice is to use embedded Contexts sparingly.
 
 
@@ -53,6 +45,20 @@ Loading Context patches can sometimes take a very long time (long as in up to 5 
 
 When one Context is embedded inside another, changing the cycle time can take a very long time to calculate (long as in up to two minutes). Type the value into the number box instead of scrolling. Hopefully this will be fixed one day.
 
+
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+
+
+Context distributes with an older version of the Zexy (v2.2.5.1), which may cause certain bugs if you want to use these externals yourself. For instance, [msgfile] crashes if you ask it to read a file from the disk. If this causes problems, then download the latest version of Zexy (or any other library used by Context) and delete the relevant folder from the main Context directory. Context should now find the new version of the external, assuming that your search directories are set up correctly.
+
+
+
+                    ~~~ ~~~ ~~~ ~~~ ~~~
+
+
+A bug with [else/dir] in ELSE beta 9 crashes PD when it is instantiated too many times. On the author's machine, it takes around 150 instances of Context before this becomes a problem. Hopefully the bug will be fixed at source in the future. In the meantime, if you reach the limit, you could replace [else/dir] with [ggee/getdir] in "share.pd", "share2.pd" and "share3.pd" (all in the ctxfiles folder).
 
 
                     ~~~ ~~~ ~~~ ~~~ ~~~
