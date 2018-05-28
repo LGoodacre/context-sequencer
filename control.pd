@@ -1,4 +1,4 @@
-#N canvas 269 201 963 415 10;
+#N canvas 222 201 963 415 10;
 #X declare -lib zexy -path zexy -path ./;
 #N canvas 67 225 974 495 move 0;
 #X obj 117 100 bng 17 250 50 0 \$0v empty ▼ 6 8 0 10 -262144 -1 -1
@@ -623,8 +623,8 @@ with the movement thresholds \, return the bang.;
 #X connect 191 0 196 0;
 #X connect 192 0 193 1;
 #X connect 193 0 203 0;
-#X connect 194 0 185 4;
-#X connect 194 1 186 4;
+#X connect 194 0 186 4;
+#X connect 194 1 185 4;
 #X connect 194 4 142 0;
 #X connect 194 5 143 0;
 #X connect 194 6 150 0;
