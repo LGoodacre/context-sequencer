@@ -27,7 +27,7 @@ HERE ARE THE MOST IMPORTANT THINGS YOU NEED TO KNOW IF YOU WANT TO START USING C
 9: The toggles along the right are called the BURST. They fire all together at the end of the cycle.
 
 
-10: The outlets along the bottom are synched to the PATTERN.
+10: The outlets along the bottom are synced to the PATTERN.
 
 
 11: The inlets along the top are all the same. They can be used to start Context and receive other commands.
