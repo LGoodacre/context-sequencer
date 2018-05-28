@@ -27,7 +27,7 @@ at different speeds).;
 #X text 397 536 Each Context is using the :rt and :rd settings to allow
 the melody to bounce between the two "walls" (see :rd and :rt entries
 in "context_commands_all.pd";
-#X text 396 587 Each Context is also usinng " :E 1 " to give it a new
+#X text 396 587 Each Context is also using " :E 1 " to give it a new
 random timing each cycle \, and " :k 2 :K 3 " to ensure that those
 random numbers are useful musical intervals.;
 #X text 394 467 --The full stop means: "send the rest of this message
