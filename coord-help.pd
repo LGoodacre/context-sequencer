@@ -1,14 +1,14 @@
-#N struct 37458-big2 float x float y array 37458-array2 ^&*-dsmall2
+#N struct 61285-big2 float x float y array 61285-array2 ^&*-dsmall2
 ;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 37458-big1 float x float y array 37458-array1 ^&*-dsmall1
+#N struct 61285-big1 float x float y array 61285-array1 ^&*-dsmall1
 ;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 37519-big2 float x float y array 37519-array2 ^&*-dsmall2
+#N struct 61346-big2 float x float y array 61346-array2 ^&*-dsmall2
 ;
-#N struct 37519-big1 float x float y array 37519-array1 ^&*-dsmall1
+#N struct 61346-big1 float x float y array 61346-array1 ^&*-dsmall1
 ;
-#N canvas 128 93 765 616 10;
+#N canvas 81 93 765 616 10;
 #X obj 33 26 cnv 15 152 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 28 21 cnv 15 152 42 empty empty empty 20 12 0 14 -1 -66577 0
@@ -213,8 +213,7 @@ its selection.;
 of a;
 #X obj 262 188 else/openfile psave-help.pd -h psave abstraction.;
 #X restore 563 527 contour-index object;
-#N canvas 370 197 680 524 and 0;
-#X obj 649 439 contour-index env gp 0 1;
+#N canvas 323 197 680 524 and 0;
 #X text 84 30 There are four ways of getting data into [coord]:;
 #X text 108 55 1: Manually using the mouse.;
 #X text 108 80 2: Using the inlet.;
@@ -246,12 +245,13 @@ The time grain can be set with [coord]'s 6th creation argument (see
 ;
 #X floatatom 56 496 5 0 0 0 - - -, f 5;
 #X obj 417 183 else/openfile pgrid-help.pd -h See [pgrid].;
-#X connect 4 0 6 0;
-#X connect 5 0 8 0;
-#X connect 6 0 19 0;
-#X connect 14 0 15 0;
-#X connect 15 0 17 0;
-#X connect 16 0 15 1;
+#X obj 649 439 coord-index env gp 0 1;
+#X connect 3 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 18 0;
+#X connect 13 0 14 0;
+#X connect 14 0 16 0;
+#X connect 15 0 14 1;
 #X restore 563 549 input and output;
 #X text 36 294 this is [contour-index] -->;
 #X text 30 561 Note that you can also select a point using [contour-index].
