@@ -1,0 +1,592 @@
+#N canvas 372 177 538 459 10;
+#X declare -path ./;
+#N canvas 702 263 450 282 shortcuts 0;
+#X text 86 96 connect = c;
+#X text 116 84 to = t;
+#X text 104 72 from = f;
+#X text 68 108 disconnect = d;
+#X text 104 160 help = ?;
+#X text 68 135 shift left = <;
+#X text 62 147 shift right = >;
+#X text 169 81 These ones will still work in;
+#X text 173 94 shift mode.;
+#X text 43 198 Note that if you have multiple instances of connect
+loaded at the same time \, only the most recently created one will
+accept keyboard input. If this weren't the case \, chaos would ensue!
+;
+#X text 45 8 All of the "bang" objects in either mode can be triggered
+by key shortcuts for extra-speedy patching. Just hold down the shift
+key and then use the character indicated on the button itself:;
+#X restore 28 378 keyboard shortcuts;
+#N canvas 167 89 1005 611 inputs 0;
+#X obj 364 277 cnv 15 302 202 empty empty test area 1 5 -12 0 14
+-1 -1 0;
+#X obj 365 278 cnv 15 300 200 empty empty empty 20 12 0 14 -250685
+-66577 0;
+#X obj 366 279 cnv 15 298 198 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 367 280 cnv 15 296 196 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#X obj 403 327 f;
+#X obj 433 327 f;
+#X obj 463 327 f;
+#X obj 493 327 f;
+#X obj 523 327 f;
+#X obj 553 327 f;
+#X obj 583 327 f;
+#X obj 613 327 f;
+#X obj 403 407 f;
+#X obj 433 407 f;
+#X obj 463 407 f;
+#X obj 493 407 f;
+#X obj 523 407 f;
+#X obj 553 407 f;
+#X obj 583 407 f;
+#X obj 613 407 f;
+#X obj 461 436 pack f f f f f f f f;
+#N canvas 396 307 450 300 subpatch 0;
+#X obj 95 27 inlet;
+#X obj 135 27 inlet;
+#X obj 175 27 inlet;
+#X obj 215 27 inlet;
+#X obj 255 27 inlet;
+#X obj 295 27 inlet;
+#X obj 335 27 inlet;
+#X obj 375 27 inlet;
+#X obj 85 129 outlet;
+#X obj 135 129 outlet;
+#X obj 185 129 outlet;
+#X obj 235 129 outlet;
+#X obj 285 129 outlet;
+#X obj 335 129 outlet;
+#X obj 385 129 outlet;
+#X obj 435 129 outlet;
+#X restore 483 367 pd subpatch;
+#X obj 460 289 t f f f f f f f f;
+#X text 155 10 All functions can be controlled externally using messages.
+In "shift" mode \, this includes some extra features., f 111;
+#X obj 49 489 connect;
+#X obj 32 54 cnv 15 372 152 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 22 44 cnv 15 372 152 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 23 45 cnv 15 370 150 empty empty empty 20 12 0 14 -261681 -66577
+0;
+#X text 214 53 f = "from" list;
+#X text 214 66 t = "to" list;
+#X text 208 79 c1 = "from" connection offset;
+#X text 208 92 c2 = "to" connection offset;
+#X text 178 116 connect = connect bang;
+#X text 160 128 disconnect = disconnect bang;
+#X text 214 104 n = number of connections;
+#X text 29 158 Use commas to separate these commands and make a connection
+in one shot;
+#X obj 501 49 cnv 15 457 202 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 496 44 cnv 15 457 202 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 497 45 cnv 15 455 200 empty empty empty 20 12 0 14 -261681 -66577
+0;
+#X text 726 111 shift right;
+#X text 732 135 shift left;
+#X text 600 159 shift a certain number of places;
+#X text 504 183 skip the first x in/outlets \, then start shifting
+;
+#X text 600 207 shift only this many connections;
+#X text 714 64 select inlets;
+#X text 708 88 select outlets;
+#X obj 694 277 cnv 15 302 202 empty empty test area 2 5 -12 0 14
+-1 -1 0;
+#X obj 695 278 cnv 15 300 200 empty empty empty 20 12 0 14 -250685
+-66577 0;
+#X obj 696 279 cnv 15 298 198 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 697 280 cnv 15 296 196 empty empty empty 20 12 0 14 -262144
+-66577 0;
+#X obj 808 320 t f f f f f f f f f f f f;
+#X obj 798 404 pack f f f f f f f f f f f f;
+#X text 705 327 connect to first inlet -->, f 15;
+#X obj 796 359 connect 12 12;
+#X msg 796 111 >;
+#X msg 796 135 <;
+#X msg 796 159 > 2;
+#X msg 796 183 > 1 5;
+#X msg 796 207 < 1 4 1;
+#X msg 796 64 ^;
+#X msg 796 88 v;
+#X text 851 159 first argument;
+#X text 845 183 second argument;
+#X text 851 207 third argument;
+#X obj 24 46 cnv 15 162 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 25 47 cnv 15 160 40 empty empty connect mode 9 18 0 20 -210235
+-1 0;
+#X obj 498 46 cnv 15 162 42 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 499 47 cnv 15 160 40 empty empty shift mode 15 18 0 20 -210235
+-1 0;
+#X msg 49 214 f 4 5 6 7 8 9 10 11 \, t 12 13 14 15 16 17 18 19 \, c1
+0 \, c2 1 \, connect, f 47;
+#X msg 49 248 f 4 5 6 7 8 9 10 11 \, t 12 13 14 15 16 17 18 19 \, c1
+0 \, c2 1 \, disconnect, f 47;
+#X msg 49 440 f 22 \, t 21 \, c1 0 \, c2 0 \, n 8 \, connect;
+#X msg 49 461 f 22 \, t 21 \, c1 0 \, c2 0 \, n 8 \, disconnect;
+#X msg 49 289 f 7 7 \, t 12 13 14 15 16 17 18 19 \, c1 0 \, c2 0 \,
+connect, f 47;
+#X msg 49 323 f 7 7 \, t 12 13 14 15 16 17 18 19 \, c1 0 \, c2 0 \,
+disconnect, f 47;
+#X msg 49 398 f 4 5 6 7 8 9 10 11 \, t 21 21 \, c1 0 \, c2 4 \, disconnect
+, f 47;
+#X msg 49 364 f 4 5 6 7 8 9 10 11 \, t 21 21 \, c1 0 \, c2 4 \, connect
+, f 47;
+#X connect 50 2 53 2;
+#X connect 50 3 53 3;
+#X connect 50 4 53 4;
+#X connect 50 5 53 5;
+#X connect 50 6 53 6;
+#X connect 50 7 53 7;
+#X connect 50 8 53 8;
+#X connect 50 9 53 9;
+#X connect 53 2 51 2;
+#X connect 53 3 51 3;
+#X connect 53 4 51 4;
+#X connect 53 5 51 5;
+#X connect 53 6 51 6;
+#X connect 53 7 51 7;
+#X connect 53 8 51 8;
+#X connect 53 9 51 9;
+#X connect 54 0 53 0;
+#X connect 55 0 53 0;
+#X connect 56 0 53 0;
+#X connect 57 0 53 0;
+#X connect 58 0 53 0;
+#X connect 59 0 53 0;
+#X connect 60 0 53 0;
+#X connect 68 0 24 0;
+#X connect 69 0 24 0;
+#X connect 70 0 24 0;
+#X connect 71 0 24 0;
+#X connect 72 0 24 0;
+#X connect 73 0 24 0;
+#X connect 74 0 24 0;
+#X connect 75 0 24 0;
+#X restore 27 403 message inputs;
+#N canvas 506 232 450 300 (subpatch) 0;
+#X text 40 27 connect uses dynamic patching techniques which are a
+bit of a hack and aren't officially supported by PD. As such \, it
+can do some diabolical things \, like connecting an object to itself
+or connecting the same objects twice. (If you ever start getting double
+output from an object \, that's probably why!) If the settings in shift
+mode are wrong \, you can easily lose or mangle your connections \,
+and this damage can't be undone through the PD menu.;
+#X text 40 143 Please use this tool with discretion and save your work
+regularly. The author assumes no liability if this tool does damage
+to your patch!;
+#X restore 420 378 warnings;
+#N canvas 507 211 450 475 PD 0;
+#X text 46 24 In order to use connect to its full potential \, you'll
+need to understand about object creation order and connection lists.
+;
+#X text 45 78 Every object in a patch or sub-patch is given a unique
+number according to when it was created \, so the first object in the
+patch is 0 \, the second is 1 \, etc. This is known as creation order
+\, and it stays with that object unless you cut and paste it.;
+#X text 67 242 w: the object number of the object being connected from
+;
+#X text 67 254 x: the outlet number of the object being connected from
+;
+#X text 67 266 y: the object number of the object being connected to
+;
+#X text 39 312 If you open a .pd file in a text editor \, you will
+see all the patch's connections listed in this order \, ie "#X connect
+52 0 51 1" \, meaning "connect the 0th outlet of the 52nd object to
+the 1st outlet of the 51st object".;
+#X text 45 203 So to establish a connection \, four numbers are required
+\, w x y z;
+#X text 67 278 z: the inlet number of the object being connected to
+;
+#X text 37 379 connect retrieves and manipulates these connection lists
+in various different ways. In shift mode \, for instance \, it adds
+or subtracts to the n'th number of every connection list \, where n
+is specified by the float object. Understanding how these lists work
+will help you use connect most effectively.;
+#X text 46 158 Additionally \, every object inlet and outlet has a
+unique number \, starting from 0 .;
+#X restore 348 403 about PD connections;
+#X obj 259 156 ctxfiles/license;
+#X obj 39 38 cnv 15 429 82 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 34 33 cnv 15 429 82 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 35 34 cnv 15 427 80 empty empty connect 70 35 1 72 -141934 -1
+0;
+#X obj 15 18 helpfiles/docfiles/lines;
+#X obj 35 18 helpfiles/docfiles/lines;
+#X obj 55 18 helpfiles/docfiles/lines;
+#X obj 75 18 helpfiles/docfiles/lines;
+#X obj 95 18 helpfiles/docfiles/lines;
+#X obj 115 18 helpfiles/docfiles/lines;
+#X obj 135 18 helpfiles/docfiles/lines;
+#X obj 155 18 helpfiles/docfiles/lines;
+#X obj 175 18 helpfiles/docfiles/lines;
+#X obj 195 18 helpfiles/docfiles/lines;
+#X obj 215 18 helpfiles/docfiles/lines;
+#X obj 235 18 helpfiles/docfiles/lines;
+#X obj 255 18 helpfiles/docfiles/lines;
+#X obj 275 18 helpfiles/docfiles/lines;
+#X obj 295 18 helpfiles/docfiles/lines;
+#X obj 315 18 helpfiles/docfiles/lines;
+#X obj 15 138 helpfiles/docfiles/lines;
+#X obj 35 138 helpfiles/docfiles/lines;
+#X obj 55 138 helpfiles/docfiles/lines;
+#X obj 75 138 helpfiles/docfiles/lines;
+#X obj 95 138 helpfiles/docfiles/lines;
+#X obj 115 138 helpfiles/docfiles/lines;
+#X obj 135 138 helpfiles/docfiles/lines;
+#X obj 155 138 helpfiles/docfiles/lines;
+#X obj 175 138 helpfiles/docfiles/lines;
+#X obj 195 138 helpfiles/docfiles/lines;
+#X obj 215 138 helpfiles/docfiles/lines;
+#X obj 235 138 helpfiles/docfiles/lines;
+#X obj 255 138 helpfiles/docfiles/lines;
+#X obj 275 138 helpfiles/docfiles/lines;
+#X obj 295 138 helpfiles/docfiles/lines;
+#X obj 315 138 helpfiles/docfiles/lines;
+#X obj 15 38 helpfiles/docfiles/lines;
+#X obj 15 58 helpfiles/docfiles/lines;
+#X obj 15 78 helpfiles/docfiles/lines;
+#X obj 15 98 helpfiles/docfiles/lines;
+#X obj 15 118 helpfiles/docfiles/lines;
+#X obj 475 38 helpfiles/docfiles/lines;
+#X obj 475 58 helpfiles/docfiles/lines;
+#X obj 475 78 helpfiles/docfiles/lines;
+#X obj 475 98 helpfiles/docfiles/lines;
+#X obj 475 118 helpfiles/docfiles/lines;
+#X obj 475 138 helpfiles/docfiles/lines;
+#X obj 475 18 helpfiles/docfiles/lines;
+#N canvas 650 322 663 434 guts 0;
+#X obj 396 52 array define &&lines 1;
+#X obj 270 80 array size &&lines;
+#X obj 220 20 tgl 10 1 $nn \$0nn empty 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 250 128 random 2;
+#X obj 250 151 sel 0 1;
+#X text 176 155 DISCONNECT;
+#X text 301 153 CONNECT;
+#X obj 340 195 t b b;
+#X obj 367 222 random;
+#X obj 323 222 random;
+#X obj 323 287 pack;
+#X msg 350 335 connect \$1 0 \$2 0;
+#X obj 350 358 iemguts/sendcanvas 1;
+#X obj 323 310 t l l;
+#X obj 440 314 text define \$0-lines;
+#X obj 323 383 text insert \$0-lines;
+#X msg 164 9 0;
+#X obj 96 258 t f f;
+#X obj 123 283 text get \$0-lines;
+#X obj 96 351 text delete \$0-lines;
+#X msg 180 330 disconnect \$1 0 \$2 0;
+#X obj 123 306 route bang;
+#X obj 113 94 sel 0;
+#X obj 231 56 t f f b;
+#X obj 113 140 until;
+#X obj 113 117 text size \$0-lines;
+#X obj 143 188 text size \$0-lines;
+#X obj 143 211 >;
+#X obj 143 234 sel 1 0;
+#X obj 323 265 tabread &&lines;
+#X obj 367 244 tabread &&lines;
+#X obj 250 105 metro 50;
+#X obj 43 24 iemguts/savebangs;
+#X obj 428 99 declare -path ./;
+#X connect 1 0 8 1;
+#X connect 1 0 9 1;
+#X connect 2 0 23 0;
+#X connect 3 0 4 0;
+#X connect 4 0 26 0;
+#X connect 4 1 7 0;
+#X connect 7 0 9 0;
+#X connect 7 1 8 0;
+#X connect 8 0 30 0;
+#X connect 9 0 29 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 13 0 15 0;
+#X connect 13 1 11 0;
+#X connect 16 0 23 0;
+#X connect 17 0 19 0;
+#X connect 17 1 18 0;
+#X connect 18 0 21 0;
+#X connect 20 0 12 0;
+#X connect 21 1 20 0;
+#X connect 22 0 25 0;
+#X connect 23 0 22 0;
+#X connect 23 1 31 0;
+#X connect 23 2 1 0;
+#X connect 24 0 17 0;
+#X connect 25 0 24 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 17 0;
+#X connect 28 1 7 0;
+#X connect 29 0 10 0;
+#X connect 30 0 10 1;
+#X connect 31 0 3 0;
+#X connect 32 1 25 0;
+#X coords 0 -1 1 1 10 10 2 220 20;
+#X restore 453 33 pd guts;
+#X text 434 96 v.3;
+#X obj 335 138 helpfiles/docfiles/lines;
+#X obj 355 138 helpfiles/docfiles/lines;
+#X obj 375 138 helpfiles/docfiles/lines;
+#X obj 395 138 helpfiles/docfiles/lines;
+#X obj 415 138 helpfiles/docfiles/lines;
+#X obj 435 138 helpfiles/docfiles/lines;
+#X obj 455 138 helpfiles/docfiles/lines;
+#X obj 335 18 helpfiles/docfiles/lines;
+#X obj 355 18 helpfiles/docfiles/lines;
+#X obj 375 18 helpfiles/docfiles/lines;
+#X obj 395 18 helpfiles/docfiles/lines;
+#X obj 415 18 helpfiles/docfiles/lines;
+#X obj 435 18 helpfiles/docfiles/lines;
+#X obj 455 18 helpfiles/docfiles/lines;
+#X obj 14 250 cnv 15 462 102 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 15 251 cnv 15 460 100 empty empty empty 20 12 0 14 -54484 -66577
+0;
+#X obj 16 252 cnv 15 458 98 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 17 253 cnv 15 456 96 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X msg 32 265 I want to make/break a large number of connections at
+once, f 32;
+#X msg 247 265 I want to move the connections on an object I've already
+made, f 32;
+#N canvas 67 89 468 679 connect 0;
+#X obj 64 259 connect;
+#X obj 216 811 inlet;
+#X msg 216 829 vis 1;
+#X obj 216 847 iemguts/sendcanvas;
+#X text 246 18 CONNECT mode is the default setting \, so to use it
+you simply create the object [connect], f 33;
+#X obj 71 20 cnv 15 162 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 66 15 cnv 15 162 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 67 16 cnv 15 160 40 empty empty connect mode 9 18 0 20 -210235
+-1 0;
+#X text 67 80 BASIC INSTRUCTIONS: \; \; 1: Select any group of objects
+or single object and press "from". (You'll have to stay in edit mode
+\, so use the Control key to hit the bang button). \; \; 2: Repeat
+with "to" (you can also type in the list manually) \; \; 3: Select
+connection number if desired \; \; 4: Press connect \, or disconnect.
+That's it!;
+#X obj 61 403 cnv 15 302 202 empty empty test area 5 -12 0 14 -1 -1
+0;
+#X obj 62 404 cnv 15 300 200 empty empty empty 20 12 0 14 -250685 -66577
+0;
+#X obj 63 405 cnv 15 298 198 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 64 406 cnv 15 296 196 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 97 459 f;
+#X obj 127 459 f;
+#X obj 157 459 f;
+#X obj 187 459 f;
+#X obj 217 459 f;
+#X obj 247 459 f;
+#X obj 277 459 f;
+#X obj 307 459 f;
+#X obj 97 539 f;
+#X obj 127 539 f;
+#X obj 157 539 f;
+#X obj 187 539 f;
+#X obj 217 539 f;
+#X obj 247 539 f;
+#X obj 277 539 f;
+#X obj 307 539 f;
+#X obj 159 429 t f f f f f f f f;
+#X obj 155 568 pack f f f f f f f f;
+#N canvas 396 307 450 300 subpatch 0;
+#X obj 95 27 inlet;
+#X obj 135 27 inlet;
+#X obj 175 27 inlet;
+#X obj 215 27 inlet;
+#X obj 255 27 inlet;
+#X obj 295 27 inlet;
+#X obj 335 27 inlet;
+#X obj 375 27 inlet;
+#X obj 85 129 outlet;
+#X obj 135 129 outlet;
+#X obj 185 129 outlet;
+#X obj 235 129 outlet;
+#X obj 285 129 outlet;
+#X obj 335 129 outlet;
+#X obj 385 129 outlet;
+#X obj 435 129 outlet;
+#X restore 177 499 pd subpatch;
+#X obj 35 632 cnv 15 365 132 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 30 627 cnv 15 365 132 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 31 628 cnv 15 363 130 empty empty empty 20 12 0 14 -225280 -66577
+0;
+#X obj 35 783 cnv 15 365 102 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 30 778 cnv 15 365 102 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 31 779 cnv 15 363 100 empty empty empty 20 12 0 14 -225280 -66577
+0;
+#X text 36 790 CONNECTING TWO OBJECTS TOGETHER OVER MULTIPLE OUTLETS
+\; \; Select the desired objects in the "to" and "from" boxes and then
+select the number of outlets in the "no." box. This is the only time
+you'll need to use this.;
+#X obj 371 287 cnv 15 10 10 empty empty ← -20 12 0 100 -262144 -1
+0;
+#X text 382 315 [connect];
+#X text 36 633 CONNECTING ONE OBJECT TO MANY (OR MANY TO ONE) \; \;
+Note that if one only one object is selected in the list \, [connect]
+will spread the connections across its inlets / outlets. \; If you
+want to make multiple connections from the same in/outlet \, you simply
+need to type the object number more than once. For an example \, try
+from "29 29" to "13 14 15 16 17 18 19 20".;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X restore 32 308 use connect mode;
+#N canvas 347 124 493 563 shift 0;
+#X text 222 10 To enter "shift" mode \, create the object [connect
+x y] where x is the desired number of inlets and y the number of outlets.
+, f 33;
+#X obj 188 724 inlet;
+#X msg 188 741 vis 1;
+#X obj 188 758 iemguts/sendcanvas;
+#X obj 44 18 cnv 15 162 42 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 39 13 cnv 15 162 42 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 40 14 cnv 15 160 40 empty empty shift mode 15 18 0 20 -210235
+-1 0;
+#X obj 51 329 cnv 15 302 202 empty empty test area 5 -12 0 14 -1 -1
+0;
+#X obj 52 330 cnv 15 300 200 empty empty empty 20 12 0 14 -250685 -66577
+0;
+#X obj 53 331 cnv 15 298 198 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 54 332 cnv 15 296 196 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 62 361 f;
+#X obj 91 361 f;
+#X obj 320 361 b;
+#X obj 256 361 t a a a a;
+#X obj 119 361 unpack f f f f f;
+#X obj 224 361 list;
+#X obj 94 489 pack f f f f f f f;
+#X obj 212 489 f;
+#X obj 242 489 f;
+#X obj 272 489 f;
+#X obj 112 417 connect 15 15;
+#X obj 320 409 cnv 15 10 10 empty empty ← -20 12 0 100 -262144 -1
+0;
+#X obj 30 644 cnv 15 402 452 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 25 639 cnv 15 402 452 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 26 640 cnv 15 400 450 empty empty empty 20 12 0 14 -225280 -66577
+0;
+#X text 51 647 SHIFTING OTHER CONNECTIONS \; \; connect can shift four
+different things \, determined by the float atom box in the middle.
+These four things are: the outgoing connection number \, the incoming
+connection number \, the outgoing object number \, and the incoming
+object number. (It can do this for its own inlets and outlets \, so
+that's eight different possible shifts in total). Changing the inlet
+and outlet numbers of the connect of the "connect" object itself is
+the most reliable and common case \, and for this reason these options
+are selected by default. The other options won't work in every case
+(change the float in the above example and you will probably see things
+go horribly wrong) \, but can be used in special situations. For instance
+\, in the following example \, try shifting with the outlet/inlet set
+to ^ and the float to 0 Then try it with v and 3;
+#X text 41 1017 To get a hang of this properly \, you'll need to understand
+how connections are stored in PD. Read the "about PD connections" section
+if necessary.;
+#X obj 67 875 f;
+#X obj 94 875 f;
+#X obj 123 875 f;
+#X obj 150 875 f;
+#X obj 177 875 f;
+#X obj 204 875 f;
+#X obj 233 875 f;
+#X obj 260 875 f;
+#X obj 287 875 f;
+#X obj 314 875 f;
+#X obj 343 875 f;
+#X obj 370 875 f;
+#X obj 136 979 pack f f f f f f f f f f f f;
+#X obj 133 928 connect 10 10;
+#X text 25 543 Note that if you march them off the edge \, they're
+not coming back!, f 66;
+#X text 362 420 [connect 15 15];
+#X text 48 83 BASIC INSTRUCTIONS \; \; 1: Select an object that you
+want to re-wire. Rename that object "connect x y" (ie. "connect 1 12")
+\, according to the desired number of inlets and outlets. Note that
+you can leave the old object name and creation arguments where they
+are--they won't affect anything. Also \, if there are a lot of in/outlets
+and you don't want to count them \, there is no harm in creating too
+many. \; \; 2: Use the ^ button to specify whether you want to shift
+the inlets or the outlets. \; \; 3: Use the < button to shift one place
+to the left and the > button to shift one place to the right.;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 11 0 21 1;
+#X connect 12 0 21 2;
+#X connect 12 0 21 3;
+#X connect 13 0 21 7;
+#X connect 14 0 21 10;
+#X connect 14 1 21 10;
+#X connect 14 2 21 12;
+#X connect 15 0 21 3;
+#X connect 15 1 21 4;
+#X connect 15 2 21 5;
+#X connect 15 3 21 6;
+#X connect 15 4 21 7;
+#X connect 16 0 21 9;
+#X connect 21 1 17 0;
+#X connect 21 2 17 1;
+#X connect 21 3 17 2;
+#X connect 21 4 17 3;
+#X connect 21 5 17 4;
+#X connect 21 6 17 5;
+#X connect 21 7 17 6;
+#X connect 21 8 18 0;
+#X connect 21 9 18 1;
+#X connect 21 10 19 0;
+#X connect 21 11 19 1;
+#X connect 21 12 20 0;
+#X connect 21 13 20 1;
+#X connect 29 0 41 0;
+#X connect 30 0 41 1;
+#X connect 31 0 41 2;
+#X connect 32 0 41 3;
+#X connect 33 0 41 4;
+#X connect 34 0 41 5;
+#X connect 35 0 41 6;
+#X connect 36 0 41 7;
+#X connect 37 0 41 8;
+#X connect 38 0 41 9;
+#X connect 41 0 40 1;
+#X connect 41 1 40 2;
+#X connect 41 2 40 3;
+#X connect 41 3 40 4;
+#X connect 41 4 40 5;
+#X connect 41 5 40 6;
+#X connect 41 6 40 7;
+#X connect 41 7 40 8;
+#X connect 41 8 40 9;
+#X connect 41 9 40 10;
+#X restore 247 308 use shift mode;
+#X text 29 155 [connect] is a time-saving tool that will help you take
+care of large connection jobs in PD. It has two modes" CONNECT mode
+and SHIFT mode., f 36;
+#X connect 72 0 74 0;
+#X connect 73 0 75 0;
