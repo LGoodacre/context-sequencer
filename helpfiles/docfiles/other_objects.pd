@@ -547,3 +547,8 @@ sequencer;
 #X text 820 181 objects that function with and without Context, f
 18;
 #X obj 1058 557 ctxfiles/license;
+#X text 971 436 Context is unusual for a PD library because it puts
+so much emphasis on a single object \, [context]. Nevertheless \, there
+are other objects in the library \, some of which are useful even without
+[context]. This patch explains and links to all objects in the Context
+library., f 49;
