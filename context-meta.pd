@@ -1,0 +1,10 @@
+#N canvas 307 238 314 211 10;
+#X text 59 17 LIBRARY: context;
+#X text 35 34 DESCRIPTION: modular sequencer;
+#X text 53 51 KEYWORDS: sequencer abstraction;
+#X text 59 68 VERSION: 0.4.0;
+#X text 29 86 RELEASE DATE: June 1st 2018;
+#X text 65 104 AUTHOR: Liam Goodacre;
+#X text 59 121 WEBSITE: contextsequencer.wordpress.com;
+#X text 60 139 LICENSE: GPL v3;
+#X text 48 156 COPYRIGHT: Liam Goodacre;
