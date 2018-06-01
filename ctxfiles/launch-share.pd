@@ -1,51 +1,201 @@
-#N canvas 351 389 450 298 10;
+#N canvas 257 389 450 298 10;
 #X declare -path ../;
 #X obj 151 25 shared ctxfiles/launch-share;
 #X msg 102 223 vis 1;
 #X obj 102 245 iemguts/sendcanvas;
 #X obj 102 201 receive lshare;
 #X obj 88 66 array define dummy@%G 1;
-#N canvas 67 87 1299 681 messages 0;
+#N canvas 345 140 974 493 messages 0;
 #X obj 134 73 receive YYh&&8(v;
 #X obj 201 117 t b a;
-#X obj 893 164 ctxfiles/recompile \$0;
-#X obj 85 178 cyclone/zl iter 1;
+#X obj 236 145 ctxfiles/recompile \$0;
+#X obj 96 161 cyclone/zl iter 1;
 #X msg 320 30 symbol  ;
 #X obj 134 95 route bang;
-#X obj 893 187 ctxfiles/br2 demux 2 \; #f t \; #f gs :1f0 \; #f gs
-:1f1 \; #f gs :1f2 \; #f gs :1f3 \; #f gs :1f4 \; #f gs :1f5 \; #f
-gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
-#f gs :2f3 \; #f gs :2f4 \; #f gs :2f5 \; #f gs :2f6 \; #f gs :2f7
-\; #f gs :3f0 \; #f gs :3f1 \; #f gs :3f2 \; #f gs :3f3 \; #f gs :3f4
-\; #f gs :3f5 \; #f gs :3f6 \; #f gs :3f7 \; #f gs :4f0 \; #f gs :4f1
-\; #f gs :4f2 \; #f gs :4f3 \; #f gs :4f4 \; #f gs :4f5 \; #f gs :4f6
-\; #f gs :4f7 \; #f gs :qu \; #f gs :gui \; #f gs :sa \; #f gs :ac
-\; #f gs :m1 \; #f gs :tx \; #f gs propload;
-#X obj 85 199 ctxfiles/br2 route 1 \; :1f0 gtfs \$0 #f 1f0 :s \; :1f1
-gtfs \$0 #f 1f1 :ss \; :1f2 gtfs \$0 #f 1f2 -send 2 \; :1f3 gtfs \$0
-#f 1f3 -send 3 \; :1f4 gtfs \$0 #f 1f4 :u \; :1f5 gtfs \$0 #f 1f5
-find \; :1f6 gtfs \$0 #f 1f6 :r \; :1f7 gtfs \$0 #f 1f7 copy ~ ID
-\; :2f0 gtfs \$0 #f 2f0 :s \; :2f1 gtfs \$0 #f 2f1 :ss \; :2f2 gtfs
-\$0 #f 2f2 :i << \; :2f3 gtfs \$0 #f 2f3 :i >> \; :2f4 gtfs \$0 #f
-2f4 :u \; :2f5 gtfs \$0 #f 2f5 find \; :2f6 gtfs \$0 #f 2f6 :r \; :2f7
-gtfs \$0 #f 2f7 -n :x clear :i clear :r -source c % -messages 1 -prepend <i -floats -c % -floatprep 1 -trigger 1 -first 1
-\; :3f0 gtfs \$0 #f 3f0 chromatic \; :3f1 gtfs \$0 #f 3f1 major \;
-:3f2 gtfs \$0 #f 3f2 minor \; :3f3 gtfs \$0 #f 3f3 pentatonic major
-\; :3f4 gtfs \$0 #f 3f4 pentatonic minor \; :3f5 gtfs \$0 #f 3f5 blues major
-\; :3f6 gtfs \$0 #f 3f6 blues minor \; :3f7 gtfs \$0 #f 3f7 custom1
-\; :4f0 gtfs \$0 #f 4f0 120000 \; :4f1 gtfs \$0 #f 4f1 60000 \; :4f2
-gtfs \$0 #f 4f2 30000 \; :4f3 gtfs \$0 #f 4f3 10000 \; :4f4 gtfs \$0
-#f 4f4 3000 \; :4f5 gtfs \$0 #f 4f5 1000 \; :4f6 gtfs \$0 #f 4f6 500
-\; :4f7 gtfs \$0 #f 4f7 1 \; :qu gtfs \$0 #f qu 0 \, :quantize #l \;
-:gui gtfs \$0 #f gui 0 \, :GUI #l \; :sa gtfs \$0 #f sa 1 \; :ac gtfs
-\$0 #f ac 0 \; :m1 gtfs \$0 #f m1 bang \; :tx gtfs \$0 #f tx 0 \; loadproperties
-tf \$0 #f \; ## s \$0-othr, f 134;
+#N canvas 67 89 450 300 identify 0;
+#X obj 8 21 inlet;
+#X obj 8 46 route :1f0 :1f1 :1f2 :1f3 :1f4 :1f5 :1f6 :1f7 :2f0 :2f1
+:2f2 :2f3 :2f4 :2f5 :2f6 :2f7 :3f0 :3f1 :3f2 :3f3 :3f4 :3f5 :3f6 :3f7
+:4f0 :4f1 :4f2 :4f3 :4f4 :4f5 :4f6 :4f7 :qu :quantize :gui :GUI :sa
+:ac :m1 :tx loadproperties;
+#X obj 8 126 gtfs \$0 1 1f0 :s;
+#X obj 38 146 gtfs \$0 2 1f1 :ss;
+#X obj 68 166 gtfs \$0 3 1f2 -send 2;
+#X obj 98 186 gtfs \$0 4 1f3 -send 3;
+#X obj 128 206 gtfs \$0 5 1f4 :u;
+#X obj 158 226 gtfs \$0 6 1f5 find;
+#X obj 188 246 gtfs \$0 7 1f6 :r;
+#X obj 218 266 gtfs \$0 8 1f7 copy ~ ID;
+#X obj 248 286 gtfs \$0 9 2f0 :s;
+#X obj 278 306 gtfs \$0 10 2f1 :ss;
+#X obj 308 326 gtfs \$0 11 2f2 :i <<;
+#X obj 338 346 gtfs \$0 12 2f3 :i >>;
+#X obj 368 366 gtfs \$0 13 2f4 :u;
+#X obj 398 386 gtfs \$0 14 2f5 find;
+#X obj 428 406 gtfs \$0 15 2f6 :r;
+#X obj 458 426 gtfs \$0 16 2f7 -n :x clear :i clear :r -source c % -messages 1 -prepend <i -floats -c % -floatprep 1 -trigger 1 -first 1
+;
+#X obj 488 446 gtfs \$0 17 3f0 chromatic;
+#X obj 518 466 gtfs \$0 18 3f1 major;
+#X obj 548 486 gtfs \$0 19 3f2 minor;
+#X obj 578 506 gtfs \$0 20 3f3 pentatonic major;
+#X obj 608 526 gtfs \$0 21 3f4 pentatonic minor;
+#X obj 638 546 gtfs \$0 22 3f5 blues major;
+#X obj 668 566 gtfs \$0 23 3f6 blues minor;
+#X obj 698 586 gtfs \$0 24 3f7 custom1;
+#X obj 728 606 gtfs \$0 25 4f0 120000;
+#X obj 758 626 gtfs \$0 26 4f1 60000;
+#X obj 788 646 gtfs \$0 27 4f2 30000;
+#X obj 818 666 gtfs \$0 28 4f3 10000;
+#X obj 848 686 gtfs \$0 29 4f4 3000;
+#X obj 878 706 gtfs \$0 30 4f5 1000;
+#X obj 908 726 gtfs \$0 31 4f6 500;
+#X obj 938 746 gtfs \$0 32 4f7 1;
+#X obj 968 766 gtfs \$0 33 qu 0;
+#X obj 998 786 gtfs \$0 34 gui 0;
+#X obj 1028 806 gtfs \$0 35 sa 1;
+#X obj 1058 826 gtfs \$0 36 ac 0;
+#X obj 1088 846 gtfs \$0 37 m1 bang;
+#X obj 1118 866 gtfs \$0 38 tx 0;
+#X obj 1148 886 tf \$0 39;
+#X obj 1178 906 s \$0-othr;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 1 3 5 0;
+#X connect 1 4 6 0;
+#X connect 1 5 7 0;
+#X connect 1 6 8 0;
+#X connect 1 7 9 0;
+#X connect 1 8 10 0;
+#X connect 1 9 11 0;
+#X connect 1 10 12 0;
+#X connect 1 11 13 0;
+#X connect 1 12 14 0;
+#X connect 1 13 15 0;
+#X connect 1 14 16 0;
+#X connect 1 15 17 0;
+#X connect 1 16 18 0;
+#X connect 1 17 19 0;
+#X connect 1 18 20 0;
+#X connect 1 19 21 0;
+#X connect 1 20 22 0;
+#X connect 1 21 23 0;
+#X connect 1 22 24 0;
+#X connect 1 23 25 0;
+#X connect 1 24 26 0;
+#X connect 1 25 27 0;
+#X connect 1 26 28 0;
+#X connect 1 27 29 0;
+#X connect 1 28 30 0;
+#X connect 1 29 31 0;
+#X connect 1 30 32 0;
+#X connect 1 31 33 0;
+#X connect 1 32 34 0;
+#X connect 1 33 34 0;
+#X connect 1 34 35 0;
+#X connect 1 35 35 0;
+#X connect 1 36 36 0;
+#X connect 1 37 37 0;
+#X connect 1 38 38 0;
+#X connect 1 39 39 0;
+#X connect 1 40 40 0;
+#X connect 1 41 41 0;
+#X restore 96 184 pd identify;
+#N canvas 67 89 450 300 distribute 0;
+#X obj 1 10 inlet;
+#X obj 1 32 demux #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f
+#f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f
+;
+#X obj 352 9 inlet;
+#X obj 31 132 gs :1f0;
+#X obj 61 152 gs :1f1;
+#X obj 91 172 gs :1f2;
+#X obj 121 192 gs :1f3;
+#X obj 151 212 gs :1f4;
+#X obj 181 232 gs :1f5;
+#X obj 211 252 gs :1f6;
+#X obj 241 272 gs :1f7;
+#X obj 271 292 gs :2f0;
+#X obj 301 312 gs :2f1;
+#X obj 331 332 gs :2f2;
+#X obj 361 352 gs :2f3;
+#X obj 391 372 gs :2f4;
+#X obj 421 392 gs :2f5;
+#X obj 451 412 gs :2f6;
+#X obj 481 432 gs :2f7;
+#X obj 511 452 gs :3f0;
+#X obj 541 472 gs :3f1;
+#X obj 571 492 gs :3f2;
+#X obj 601 512 gs :3f3;
+#X obj 631 532 gs :3f4;
+#X obj 661 552 gs :3f5;
+#X obj 691 572 gs :3f6;
+#X obj 721 592 gs :3f7;
+#X obj 751 612 gs :4f0;
+#X obj 781 632 gs :4f1;
+#X obj 811 652 gs :4f2;
+#X obj 841 672 gs :4f3;
+#X obj 871 692 gs :4f4;
+#X obj 901 712 gs :4f5;
+#X obj 931 732 gs :4f6;
+#X obj 961 752 gs :4f7;
+#X obj 991 772 gs :qu;
+#X obj 1021 792 gs :gui;
+#X obj 1051 812 gs :sa;
+#X obj 1081 832 gs :ac;
+#X obj 1111 852 gs :m1;
+#X obj 1141 872 gs :tx;
+#X obj 1171 892 gs propload;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 1 3 5 0;
+#X connect 1 4 6 0;
+#X connect 1 5 7 0;
+#X connect 1 6 8 0;
+#X connect 1 7 9 0;
+#X connect 1 8 10 0;
+#X connect 1 9 11 0;
+#X connect 1 10 12 0;
+#X connect 1 11 13 0;
+#X connect 1 12 14 0;
+#X connect 1 13 15 0;
+#X connect 1 14 16 0;
+#X connect 1 15 17 0;
+#X connect 1 16 18 0;
+#X connect 1 17 19 0;
+#X connect 1 18 20 0;
+#X connect 1 19 21 0;
+#X connect 1 20 22 0;
+#X connect 1 21 23 0;
+#X connect 1 22 24 0;
+#X connect 1 23 25 0;
+#X connect 1 24 26 0;
+#X connect 1 25 27 0;
+#X connect 1 26 28 0;
+#X connect 1 27 29 0;
+#X connect 1 28 30 0;
+#X connect 1 29 31 0;
+#X connect 1 30 32 0;
+#X connect 1 31 33 0;
+#X connect 1 32 34 0;
+#X connect 1 33 35 0;
+#X connect 1 34 36 0;
+#X connect 1 35 37 0;
+#X connect 1 36 38 0;
+#X connect 1 37 39 0;
+#X connect 1 38 40 0;
+#X connect 1 39 41 0;
+#X connect 2 0 1 1;
+#X restore 236 170 pd distribute;
 #X connect 0 0 5 0;
 #X connect 1 0 2 0;
 #X connect 1 1 3 0;
-#X connect 2 0 6 0;
-#X connect 2 1 6 1;
-#X connect 3 0 7 0;
+#X connect 2 0 7 0;
+#X connect 2 1 7 1;
+#X connect 3 0 6 0;
 #X connect 5 1 1 0;
 #X restore 301 215 pd messages;
 #N canvas 67 87 450 300 scales 0;
