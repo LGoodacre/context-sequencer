@@ -1,4 +1,4 @@
-#N canvas 400 99 491 630 10;
+#N canvas 353 99 491 630 10;
 #X obj 72 28 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 22 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -16,10 +16,10 @@
 #X obj 71 195 cnv 15 345 379 empty empty empty 20 12 0 14 -262144 -66577
 0;
 #X obj 290 377 dac~;
-#X obj 99 284 context :H 14 :X 17 :Y 6 :io o :d 9 :Z 4 :ol 1 18 obj
-0 27 ../content :lo helpfiles/wavs/loop.wav :x2 9 :y1 4.05 :y2 9.15
-:c 14 :li 1 :ed 0 4 obj 0 -20 ../mover 5 obj 1 92 ../ctx outlet~ 8
-obj 29 0 ../marker :x1 1.3604 :y1 2.97 8 obj 94 0 ../marker :x1 4.40625
+#X obj 99 284 context :H 16 :X 17 :Y 6 :io o :d 9 :Z 4 :ID 1 :ol 1
+18 obj 0 27 ../content :lo helpfiles/wavs/loop.wav :x2 9 :y1 4.05 :y2
+9.15 :c 14 :li 1 :ed 0 4 obj 0 -20 ../mover 5 obj 1 92 ../ctx outlet~
+8 obj 29 0 ../marker :x1 1.3604 :y1 2.97 8 obj 94 0 ../marker :x1 4.40625
 :y1 1.62 8 obj 141 0 ../marker :x1 6.60938 :y1 2.97 5 connect 3 0 5
 0;
 #X text 74 594 See Context Manual Section 16 for details on how to
@@ -37,8 +37,9 @@ samples., f 49;
 #X text 81 440 Markers can also store messages which will be sent when
 the cursor crosses their position. Click this button to set the message
 on Marker 2 and see what happens to the playback. Every time Marker
-2 is reached \, it will trigger either 1 or 3, f 46;
-#N canvas 783 253 450 300 moving 0;
+2 is reached \, it will trigger either 1 or 3 (note that DSP must be
+on in order for this to work)., f 46;
+#N canvas 783 253 450 300 markers 0;
 #X text 52 36 Markers can be moved using [mover]. In this patch \,
 mover is loaded in the overlay already. To move the Markers:;
 #X text 52 77 1: Move the mouse over Context and hold down the Shift
@@ -49,7 +50,7 @@ the Marker labels \; 3: Click and drag the Marker.;
 Right click and 'open' to view the Overlay., f 13;
 #X obj 246 27 ctxfiles/license;
 #X text 307 301 <-;
-#X text 73 531 Reset Marker 2's message here:;
+#X text 76 535 Reset Marker 2's message here:;
 #X connect 9 17 8 0;
 #X connect 9 17 8 1;
 #X connect 11 0 9 6;
