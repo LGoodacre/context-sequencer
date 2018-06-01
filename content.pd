@@ -1,4 +1,4 @@
-#N canvas 246 209 677 503 10;
+#N canvas 105 210 677 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -13,92 +13,139 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 171 -313 inlet;
-#N canvas 303 328 793 440 message 0;
-#X obj 343 17 inlet;
-#X obj 414 63 ctxfiles/recompile \$0;
-#X obj 137 78 cyclone/zl iter 1;
-#X obj 343 39 t b a;
-#X obj 43 128 cnv 13 500 1 empty \$0-datagrid load 18 -5 0 10 -13330
--66577 0;
-#X obj 43 141 cnv 13 500 1 empty \$0-datagrid x_start_pos 18 -5 0 10
--13330 -66577 0;
-#X obj 43 154 cnv 13 500 1 empty \$0-datagrid x_end_pos 18 -5 0 10
--13330 -66577 0;
-#X obj 43 193 cnv 13 500 1 empty \$0-datagrid colour 18 -5 0 10 -13330
--66577 0;
-#X obj 43 206 cnv 13 500 1 empty \$0-datagrid y-top 18 -5 0 10 -13330
--66577 0;
-#X obj 43 167 cnv 13 500 1 empty \$0-datagrid y_start_pos 18 -5 0 10
--13330 -66577 0;
-#X obj 43 180 cnv 13 500 1 empty \$0-datagrid y_end_pos 18 -5 0 10
--13330 -66577 0;
-#X obj 43 232 cnv 13 500 1 empty \$0-datagrid normalize 18 -5 0 10
--13330 -66577 0;
-#X obj 43 245 cnv 13 500 1 empty \$0-datagrid curve 18 -5 0 10 -13330
--66577 0;
-#X obj 43 258 cnv 13 500 1 empty \$0-datagrid bitrate 18 -5 0 10 -13330
--66577 0;
-#X obj 578 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-500;
-#X msg 578 38 vis_size \$1 1;
-#X obj 578 60 s \$0-datagrid;
-#X obj 43 219 cnv 13 500 1 empty \$0-datagrid y-bottom 18 -5 0 10 -13330
--66577 0;
-#X obj 43 271 cnv 13 500 1 empty \$0-datagrid left_snap 18 -5 0 10
--13330 -66577 0;
-#X obj 43 284 cnv 13 500 1 empty \$0-datagrid right_snap 18 -5 0 10
--13330 -66577 0;
-#X obj 43 297 cnv 13 500 1 empty \$0-datagrid top_snap 18 -5 0 10 -13330
--66577 0;
-#X obj 43 310 cnv 13 500 1 empty \$0-datagrid bottom_snap 18 -5 0 10
--13330 -66577 0;
-#X obj 43 349 cnv 13 500 1 empty \$0-datagrid print 18 -5 0 10 -13330
--66577 0;
-#X obj 43 362 cnv 13 500 1 empty \$0-datagrid save-list 18 -5 0 10
--13330 -66577 0;
-#X obj 393 17 receive \$0-anyin;
-#X obj 43 323 cnv 13 500 1 empty \$0-datagrid editable 18 -5 0 10 -13330
--66577 0;
-#X obj 176 17 iemguts/oreceive nop;
-#X obj 176 -6 receive \$0-myname;
-#X obj 43 375 cnv 13 500 1 empty \$0-datagrid set 18 -5 0 10 -13330
--66577 0;
-#X obj 43 388 cnv 13 500 1 empty \$0-datagrid save 18 -5 0 10 -13330
--66577 0;
-#X obj 43 336 cnv 13 500 1 empty \$0-datagrid saveable 18 -5 0 10 -13330
--66577 0;
-#X obj 43 401 cnv 13 500 1 empty \$0-datagrid clear 18 -5 0 10 -13330
--66577 0;
-#X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
-#l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
-#f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
-colour #l \; :s1 tfs \$0 #f s1 1 \; :s2 tfs \$0 #f s2 -1 \; :nm tfs
-\$0 #f nm 1 \, normalize #l \; :li tfs \$0 #f li 0 \, line #l \; :br
-tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
-\$0 #f p2 0 \; :p3 tfs \$0 #f p3 0 \; :p4 tfs \$0 #f p4 0 \; :ed tfst
-\$0 #f ed 1 \, edit #l \; :as tfst \$0 #f as 1 \; print tf \$0 #f \;
-savelist tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0
-#f \; size tf \$0 #f \; ## s \$0-othr;
-#X obj 43 414 cnv 13 500 1 empty \$0-datagrid resize 18 -5 0 10 -13330
--66577 0;
-#X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
-\; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
-#f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
-#f s \$0-:bs \; #f s \$0-:p1 \; #f s \$0-:p2 \; #f s \$0-:p3 \; #f
-s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-printall \;
-#f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem \; #f s \$0-clearme
-\; #f s \$0-sizer;
+#N canvas 241 252 720 202 message 0;
+#X obj 343 53 inlet;
+#X obj 414 99 ctxfiles/recompile \$0;
+#X obj 137 114 cyclone/zl iter 1;
+#X obj 343 75 t b a;
+#X obj 393 53 receive \$0-anyin;
+#X obj 176 53 iemguts/oreceive nop;
+#X obj 176 30 receive \$0-myname;
+#N canvas 67 89 450 300 identify 0;
+#X obj 6 16 inlet;
+#X obj 6 40 route :lo load :x1 :x2 :y1 :y2 :c color colour :s1 :s2
+:nm normalize :li line :br bitrate :p1 :p2 :p3 :p4 :ed edit :as print
+savelist set save clear size;
+#X obj 6 120 ctxfiles/tfs \$0 1 lo clear;
+#X obj 36 140 ctxfiles/tfsn \$0 2 x1 0;
+#X obj 66 160 ctxfiles/tfsn \$0 3 x2 0;
+#X obj 96 180 ctxfiles/tfsn \$0 4 y1 0;
+#X obj 126 200 ctxfiles/tfsn \$0 5 y2 0;
+#X obj 156 220 ctxfiles/tfs \$0 6 c 17;
+#X obj 186 240 ctxfiles/tfs \$0 7 s1 1;
+#X obj 216 260 ctxfiles/tfs \$0 8 s2 -1;
+#X obj 246 280 ctxfiles/tfs \$0 9 nm 1;
+#X obj 276 300 ctxfiles/tfs \$0 10 li 0;
+#X obj 306 320 ctxfiles/tfs \$0 11 br 44100;
+#X obj 336 340 ctxfiles/tfs \$0 12 p1 0;
+#X obj 366 360 ctxfiles/tfs \$0 13 p2 0;
+#X obj 396 380 ctxfiles/tfs \$0 14 p3 0;
+#X obj 426 400 ctxfiles/tfs \$0 15 p4 0;
+#X obj 456 420 ctxfiles/tfst \$0 16 ed 1;
+#X obj 486 440 ctxfiles/tfst \$0 17 as 1;
+#X obj 516 460 ctxfiles/tf \$0 18;
+#X obj 546 480 ctxfiles/tf \$0 19;
+#X obj 576 500 ctxfiles/tf \$0 20;
+#X obj 606 520 ctxfiles/tf \$0 21;
+#X obj 636 540 ctxfiles/tf \$0 22;
+#X obj 666 560 ctxfiles/tf \$0 23;
+#X obj 696 580 s \$0-othr;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 0;
+#X connect 1 2 3 0;
+#X connect 1 3 4 0;
+#X connect 1 4 5 0;
+#X connect 1 5 6 0;
+#X connect 1 6 7 0;
+#X connect 1 7 7 0;
+#X connect 1 8 7 0;
+#X connect 1 9 8 0;
+#X connect 1 10 9 0;
+#X connect 1 11 10 0;
+#X connect 1 12 10 0;
+#X connect 1 13 11 0;
+#X connect 1 14 11 0;
+#X connect 1 15 12 0;
+#X connect 1 16 12 0;
+#X connect 1 17 13 0;
+#X connect 1 18 14 0;
+#X connect 1 19 15 0;
+#X connect 1 20 16 0;
+#X connect 1 21 17 0;
+#X connect 1 22 17 0;
+#X connect 1 23 18 0;
+#X connect 1 24 19 0;
+#X connect 1 25 20 0;
+#X connect 1 26 21 0;
+#X connect 1 27 22 0;
+#X connect 1 28 23 0;
+#X connect 1 29 24 0;
+#X connect 1 30 25 0;
+#X restore 137 138 pd identify;
+#N canvas 67 89 450 300 distribute 0;
+#X obj 0 25 inlet;
+#X obj 0 50 demux #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f #f
+#f #f #f #f #f #f #f;
+#X obj 351 28 inlet;
+#X obj 30 150 ctxfiles/ll \$0;
+#X obj 60 170 s \$0-:x1;
+#X obj 90 190 s \$0-:x2;
+#X obj 120 210 s \$0-:y1;
+#X obj 150 230 s \$0-:y2;
+#X obj 180 250 s \$0-:cs;
+#X obj 210 270 s \$0-:s1s;
+#X obj 240 290 s \$0-:s2s;
+#X obj 270 310 s \$0-:ns;
+#X obj 300 330 s \$0-:lis;
+#X obj 330 350 s \$0-:bs;
+#X obj 360 370 s \$0-:p1;
+#X obj 390 390 s \$0-:p2;
+#X obj 420 410 s \$0-:p3;
+#X obj 450 430 s \$0-:p4;
+#X obj 480 450 s \$0-:eds;
+#X obj 510 470 s \$0-:ass;
+#X obj 540 490 s \$0-printall;
+#X obj 570 510 s \$0-savelist;
+#X obj 600 530 s \$0-setme;
+#X obj 630 550 s \$0-savem;
+#X obj 660 570 s \$0-clearme;
+#X obj 690 590 s \$0-sizer;
+#X connect 0 0 1 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;
+#X connect 1 3 5 0;
+#X connect 1 4 6 0;
+#X connect 1 5 7 0;
+#X connect 1 6 8 0;
+#X connect 1 7 9 0;
+#X connect 1 8 10 0;
+#X connect 1 9 11 0;
+#X connect 1 10 12 0;
+#X connect 1 11 13 0;
+#X connect 1 12 14 0;
+#X connect 1 13 15 0;
+#X connect 1 14 16 0;
+#X connect 1 15 17 0;
+#X connect 1 16 18 0;
+#X connect 1 17 19 0;
+#X connect 1 18 20 0;
+#X connect 1 19 21 0;
+#X connect 1 20 22 0;
+#X connect 1 21 23 0;
+#X connect 1 22 24 0;
+#X connect 1 23 25 0;
+#X connect 2 0 1 1;
+#X restore 414 123 pd distribute;
 #X connect 0 0 3 0;
-#X connect 1 0 34 0;
-#X connect 1 1 34 1;
-#X connect 2 0 32 0;
+#X connect 1 0 8 0;
+#X connect 1 1 8 1;
+#X connect 2 0 7 0;
 #X connect 3 0 1 0;
 #X connect 3 1 2 0;
-#X connect 14 0 15 0;
-#X connect 15 0 16 0;
-#X connect 24 0 3 0;
-#X connect 26 0 3 0;
-#X connect 27 0 26 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 5 0;
 #X restore 214 -291 pd message;
 #X obj 0 -143 r~ \$0-too;
 #X obj 1 -232 iemguts/canvasargs;
@@ -174,7 +221,7 @@ context) if not.;
 #X connect 32 1 31 0;
 #X restore 214 -335 pd loadbang;
 #X obj 1 -210 s \$0-canvass;
-#N canvas 67 164 801 582 tabload 1;
+#N canvas 67 164 801 582 tabload 0;
 #X obj 401 433 soundfiler;
 #X obj 7 396 ctxfiles/sp 13;
 #X obj 401 456 s \$0-sizer;
@@ -1177,7 +1224,7 @@ context) if not.;
 #X text 330 -92 save commands to creation arguments;
 #X text 329 -70 control canvas;
 #X text 330 -48 set colour;
-#X obj 15 -333 declare -lib zexy -path zexy -path ./;
+#X obj -15 -335 declare -lib zexy -path zexy -path ./;
 #X connect 4 0 5 0;
 #X connect 6 0 3 0;
 #X connect 7 0 9 0;
