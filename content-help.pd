@@ -1,4 +1,4 @@
-#N canvas 173 130 497 630 10;
+#N canvas 126 130 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -169,7 +169,7 @@ choose the lower limit of the array \; Y-TOP: choose the upper limit
 of the array \; COLOUR: set the background colour., f 166;
 #X restore 84 519 content menu;
 #X obj 10 6 helpfiles/docfiles/help-display \$0;
-#X obj 83 576 else/openfile helpfiles/links/content.html -h --see Context
+#X obj 83 576 else/openfile helpfiles/links/content.html -h see Context
 Manual entry on [content];
 #X connect 9 17 8 0;
 #X connect 9 17 8 1;
