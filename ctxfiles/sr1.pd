@@ -1,4 +1,4 @@
-#N canvas 766 249 450 519 10;
+#N canvas 719 249 450 519 10;
 #X obj 58 64 receive \$3-und-n;
 #X obj 58 86 s \$1-und-n;
 #X obj 58 114 receive \$3-und-l;
@@ -22,9 +22,9 @@
 #X obj 55 338 v \$3nnumber;
 #X obj 55 315 loadbang;
 #X obj 94 452 pack f f \$3 s;
-#X obj 277 125 share2 ctxfiles/cr \$1;
 #X obj 226 96 receive \$2-\$1;
 #X obj 147 88 s \$2-\$1-;
+#X obj 277 125 share2 cr \$1;
 #X connect 0 0 1 0;
 #X connect 2 0 4 0;
 #X connect 4 0 3 0;
@@ -32,7 +32,7 @@
 #X connect 7 0 11 0;
 #X connect 8 0 9 0;
 #X connect 10 0 6 0;
-#X connect 10 0 25 0;
+#X connect 10 0 24 0;
 #X connect 12 0 22 0;
 #X connect 12 1 15 0;
 #X connect 13 0 22 0;
@@ -45,4 +45,4 @@
 #X connect 20 0 22 1;
 #X connect 21 0 20 0;
 #X connect 22 0 14 0;
-#X connect 24 0 11 0;
+#X connect 23 0 11 0;

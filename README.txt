@@ -67,6 +67,7 @@ zexy
 cyclone
 else (1.0-beta9 or later)
 flatgui
+ggee (Deken release only)
 list-abs
 hcs
 iemguts (v 0.2.1 or later)
@@ -91,7 +92,6 @@ cyclone/togedge
 cyclone/uzi
 cyclone/zl
 else/break
-else/dir
 else/fromany
 else/openfile
 else/order
@@ -99,6 +99,7 @@ else/routeall
 else/toany
 else/window
 flatgui/entry
+ggee/getdir (replaced with else/dir on Developer release)
 hcs/canvas_name
 hcs/sys_gui
 iemguts/canvasargs
