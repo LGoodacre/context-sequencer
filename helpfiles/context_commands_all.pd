@@ -1,4 +1,4 @@
-#N canvas 409 89 892 676 10;
+#N canvas 161 89 892 676 10;
 #X declare -path ../ -path docfiles -path ../zexy -lib zexy;
 #X obj 0 0 cnv 15 885 800 empty empty empty 20 12 0 14 -218136 -66577
 0;
@@ -195,7 +195,7 @@ connect 11 0 12 0 5 connect 12 0 13 1 5 connect 12 1 15 0 5 connect
 0;
 #X obj 772 6 cnv 15 102 20 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#N canvas 362 152 287 525 this 0;
+#N canvas 268 209 287 559 this 0;
 #X obj 21 25 cnv 15 252 392 empty empty empty 19 18 0 20 -99865 -45076
 0;
 #X obj 13 17 cnv 15 252 392 empty empty empty 19 18 0 20 -1 -45076
@@ -214,7 +214,7 @@ connect 11 0 12 0 5 connect 12 0 13 1 5 connect 12 1 15 0 5 connect
 #X text 26 359 *;
 #X text 38 358 In "arguments" \, curly brackets mean that the argument
 is optional., f 30;
-#X obj 13 426 ctxfiles/license;
+#X obj 13 456 ctxfiles/license;
 #X text 39 50 The COMMAND boxes show all possible Context commands.
 This is an exhaustive account of Context's functions. Click on each
 button for more information., f 30;
@@ -223,41 +223,54 @@ button for more information., f 30;
 #X text 36 190 % stands for an argument \, curly brackets mean optional.
 , f 30;
 #X text 38 319 See manual section 9 for command use., f 30;
-#X obj 13 488 declare -path ../ -path docfiles -path ../zexy -lib zexy
+#X obj 13 518 declare -path ../ -path docfiles -path ../zexy -lib zexy
 , f 34;
+#X text 59 428 buffer scroll bar (if it lags);
+#X obj 23 429 nbx 2 14 0.15 15 0 1 \$0-buffer \$0-nm empty 0 -8 0 10
+-262144 -1 -1 3.15 256;
 #X restore 773 7 about this patch;
-#N canvas 313 218 625 412 scroll 0;
+#N canvas 219 218 625 412 scroll 0;
 #X obj 0 2 vsl 15 265 1 0 0 0 \$0-yscroll-out \$0-yscroll-in empty
 0 -9 0 10 -128992 -1 -1 26400 1;
 #X obj 1 -14 bng 13 250 50 0 \$0-up empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 38 -81 loadbang;
 #X obj 38 -58 t f;
-#N canvas 537 170 702 332 bar 0;
-#X obj 1 1 cnv 11 12 95 empty \$0-bar empty 20 12 0 14 -228856 -66577
+#N canvas 443 170 702 418 bar 0;
+#X obj 1 1 cnv 11 12 82 empty \$0-bar empty 20 12 0 14 -228856 -66577
 0;
-#X obj 137 129 receive \$0-yscroll;
-#X obj 262 158 iemguts/canvasposition;
-#X msg 262 133 0 \$1;
-#X obj 354 83 receive \$0-scrollrat;
-#X obj 354 106 swap 270;
-#X obj 354 129 /;
-#X msg 335 190 vis_size 12 \$1;
-#X obj 335 213 s \$0-bar;
-#X obj 354 152 - 3;
-#X msg 406 231 coords 0 -1 1 1 15 \$1 2 0 0;
-#X obj 406 254 iemguts/sendcanvas;
-#X floatatom 315 68 5 0 0 0 - - -, f 5;
-#X obj 105 17 receive \$0-yscroll-out;
-#X obj 105 63 s \$0-yscroll;
-#X obj 105 40 clip 0 1;
-#X obj 265 211 swap 270;
-#X obj 137 154 *;
-#X obj 137 181 s \$0-yscroll2;
-#X obj 265 233 -;
-#X obj 265 256 swap 270;
-#X obj 265 279 /;
-#X obj 262 107 *;
+#X obj 176 195 receive \$0-yscroll;
+#X obj 301 224 iemguts/canvasposition;
+#X msg 301 199 0 \$1;
+#X obj 393 149 receive \$0-scrollrat;
+#X obj 393 172 swap 270;
+#X obj 393 195 /;
+#X msg 374 256 vis_size 12 \$1;
+#X obj 374 279 s \$0-bar;
+#X obj 393 218 - 3;
+#X msg 445 297 coords 0 -1 1 1 15 \$1 2 0 0;
+#X obj 445 320 iemguts/sendcanvas;
+#X floatatom 354 134 5 0 0 0 - - -, f 5;
+#X obj 55 17 receive \$0-yscroll-out;
+#X obj 55 232 s \$0-yscroll;
+#X obj 55 40 clip 0 1;
+#X obj 304 277 swap 270;
+#X obj 176 220 *;
+#X obj 176 247 s \$0-yscroll2;
+#X obj 304 299 -;
+#X obj 304 322 swap 270;
+#X obj 304 345 /;
+#X obj 301 173 *;
+#X obj 198 17 receive \$0-buffer;
+#X obj 55 63 demux;
+#X obj 198 40 t f f;
+#X obj 198 63 !=;
+#X obj 82 86 t f b;
+#X obj 82 206 spigot;
+#X obj 115 125 f;
+#X obj 142 125 + 1;
+#X obj 115 148 mod;
+#X obj 115 171 ==;
 #X connect 1 0 17 0;
 #X connect 1 0 22 0;
 #X connect 3 0 2 0;
@@ -272,7 +285,7 @@ button for more information., f 30;
 #X connect 10 0 11 0;
 #X connect 12 0 5 0;
 #X connect 13 0 15 0;
-#X connect 15 0 14 0;
+#X connect 15 0 24 0;
 #X connect 16 0 19 0;
 #X connect 16 1 19 1;
 #X connect 17 0 18 0;
@@ -282,7 +295,21 @@ button for more information., f 30;
 #X connect 20 1 21 1;
 #X connect 21 0 17 1;
 #X connect 22 0 3 0;
-#X coords 0 -1 1 1 15 98 2 0 0;
+#X connect 23 0 25 0;
+#X connect 24 0 14 0;
+#X connect 24 1 27 0;
+#X connect 25 0 26 0;
+#X connect 25 1 31 1;
+#X connect 26 0 24 1;
+#X connect 27 0 28 0;
+#X connect 27 1 29 0;
+#X connect 28 0 14 0;
+#X connect 29 0 30 0;
+#X connect 29 0 31 0;
+#X connect 30 0 29 1;
+#X connect 31 0 32 0;
+#X connect 32 0 28 1;
+#X coords 0 -1 1 1 15 85 2 0 0;
 #X restore 0 0 pd bar;
 #X obj 2 -13 cnv 11 11 11 empty empty ▲ 3 4 0 10 -162280 -1 0;
 #X obj 1 271 bng 13 250 50 0 \$0-down empty empty 17 7 0 10 -262144
