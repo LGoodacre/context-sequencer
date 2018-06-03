@@ -1,5 +1,5 @@
 #N canvas 67 89 430 679 10;
-#N canvas 137 128 721 600 load 0;
+#N canvas 67 128 721 600 load 0;
 #N canvas 67 216 990 532 start 0;
 #X obj 361 121 sel 0;
 #X obj 375 145 f;
@@ -60,7 +60,7 @@
 #X obj 443 260 sel 10;
 #X obj 443 282 t f;
 #X obj 361 99 iemguts/classtest;
-#X obj 417 343 - 1;
+#X obj 440 342 - 1;
 #X msg 423 395 obj 10 \$1 cnv 15 21 21 empty empty empty 0 10 0 13
 -1 0 0 \, obj 11 \$2 cnv 15 19 19 empty empty \$3: \$4 10 0 12 -1764
 0 0 \,;
@@ -83,9 +83,13 @@
 #X obj 341 347 t a b;
 #X obj 368 377 f 1;
 #X obj 384 279 t f f;
-#X obj 413 319 spigot 1;
 #X obj 143 315 spigot;
 #X obj 210 407 - 15;
+#X obj 413 309 demux;
+#X obj 461 134 t b;
+#X obj 461 157 f;
+#X obj 461 180 - 1;
+#X obj 469 340 +;
 #X connect 0 1 1 1;
 #X connect 1 0 28 0;
 #X connect 1 0 29 1;
@@ -105,7 +109,7 @@
 #X connect 10 0 16 0;
 #X connect 11 0 12 0;
 #X connect 12 0 65 0;
-#X connect 13 0 77 0;
+#X connect 13 0 76 0;
 #X connect 14 0 8 1;
 #X connect 14 0 1 1;
 #X connect 15 0 17 0;
@@ -152,12 +156,12 @@
 #X connect 46 0 23 1;
 #X connect 47 0 15 1;
 #X connect 48 0 33 0;
-#X connect 48 1 76 0;
+#X connect 48 1 78 0;
 #X connect 48 2 51 1;
 #X connect 50 0 10 0;
 #X connect 50 1 9 0;
 #X connect 51 0 57 0;
-#X connect 52 0 51 2;
+#X connect 52 0 82 0;
 #X connect 52 1 53 0;
 #X connect 52 2 8 1;
 #X connect 53 0 54 0;
@@ -173,7 +177,7 @@
 #X connect 64 0 72 0;
 #X connect 64 1 73 0;
 #X connect 65 0 64 0;
-#X connect 66 0 78 0;
+#X connect 66 0 77 0;
 #X connect 67 0 22 1;
 #X connect 67 0 36 1;
 #X connect 68 0 21 1;
@@ -184,14 +188,20 @@
 #X connect 73 0 31 0;
 #X connect 73 1 74 0;
 #X connect 74 0 75 0;
-#X connect 75 0 77 1;
-#X connect 75 1 76 1;
-#X connect 76 0 56 0;
-#X connect 77 0 29 0;
-#X connect 78 0 67 0;
-#X connect 78 0 68 0;
-#X connect 78 0 69 1;
-#X connect 78 0 66 1;
+#X connect 75 0 76 1;
+#X connect 75 1 78 1;
+#X connect 76 0 29 0;
+#X connect 77 0 67 0;
+#X connect 77 0 68 0;
+#X connect 77 0 69 1;
+#X connect 77 0 66 1;
+#X connect 78 0 79 0;
+#X connect 78 1 56 0;
+#X connect 79 0 80 0;
+#X connect 80 0 81 0;
+#X connect 81 0 80 1;
+#X connect 81 0 82 1;
+#X connect 82 0 51 2;
 #X restore 516 16 pd start;
 #X obj 581 16 namecanvas \$0-can;
 #X obj 1 1 cnv 15 388 23 empty \$0-cr1 empty 6 28 0 60 -241291 -1 1
