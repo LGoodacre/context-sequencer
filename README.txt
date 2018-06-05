@@ -141,7 +141,7 @@ zexy/urn
 
 CREDITS:
 
-Context is created and maintained by Liam Goodacre. Many people have contributed techical and moral support for Context. I would especially like to thank Miller Puckette, Alexander Torres Porres, Dan Wilcox, IOhannes Zmoelnig, Lucas Cordiviola, Roman Haefeli, Matt Barber and Derek Kwan for responding to many requests and bug fixes in PD and its external libraries, without which Context would not work. Omar Misa has provided consistent feedback and has the title of being Context's first User, and Zack Lee has helped me work out the best scheme for externals. And I would also like to thank Joe Deken and Ann Josey for their continued belief in me and in this project. Context certainly wouldn't be what it is without them.
+Context is created and maintained by Liam Goodacre, but many people have contributed techical and moral support over the years. I would especially like to thank Miller Puckette, Alexander Torres Porres, Dan Wilcox, IOhannes Zmoelnig, Lucas Cordiviola, Roman Haefeli, Matt Barber and Derek Kwan for responding to many requests and bug fixes in PD and its external libraries. Without their help, Context would not work. Omar Misa has provided consistent feedback and has the title of being Context's First User, giving me the motivation needed to finish the project. Zack Lee has helped me improve Context's compatibility with externals, and Joshua Walker and Vassilis Poulantzas have provided a great deal of help with the documentation. Finally, I would also like to thank Joe Deken and Ann Josey for their continued belief in me and in this project. Context certainly wouldn't be what it is without them.
 
 Comments, feedback, suggestions, corrections and monologues are all welcome. Email liam.goodacre@gmail.com
 
