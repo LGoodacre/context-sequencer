@@ -6596,17 +6596,18 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 110 0 103 0;
 #X restore 552 391 pd rules;
 #N canvas 67 177 413 275 title 1;
-#X text 28 30 Context is an abstraction \, so if you're looking to
-use it \, you'll need to open another patch and create a [context]
-object. You can use this patch to edit Context and change its behaviour
-\, but be warned that it is not designed in a user-friendly way. \;
-If you do make any changes to context.pd \, make sure that you have
-done so while the patch was opened from the menu. If you open and edit
-an active [context] object \, saving the patch will probably break
-Context \, and you'll have to re-download it. \; Note that context.pd
-does not contain all of Context's workings--there are many more in
-ctxfiles/deletables.pd and ctxfiles/shareables.pd. \; \; See context_manual.pdf
-for instructions on how to use Context.;
+#X text 28 29 Context is an abstraction \, so if you want to use it
+\, you're looking in the wrong place. Instead \, you'll need to open
+another patch and create a [context] object. \; You can use this patch
+to edit Context and change its behaviour \, but be warned that it is
+not designed in a user-friendly way. If you do make any changes to
+context.pd \, make sure that you have done so while the patch was opened
+from the menu. If you open and edit an active [context] object \, saving
+the patch will probably break Context \, and you'll have to re-download
+it. \; Note that context.pd does not contain all of Context's workings--there
+are many more in ctxfiles/deletables.pd and ctxfiles/shareables.pd.
+\; \; See context_manual.pdf for instructions on how to use Context.
+;
 #X restore 552 419 pd title;
 #N canvas 517 327 450 300 link 0;
 #X obj 170 10 receive \$0-link;
