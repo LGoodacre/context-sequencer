@@ -1,4 +1,4 @@
-#N canvas 124 98 494 533 10;
+#N canvas 77 98 494 533 10;
 #X obj 251 16 ctxfiles/license;
 #X obj 101 211 scaler minor c 7;
 #X text 70 104 This object converts numbers into notes (frequencies)
@@ -60,8 +60,8 @@ it will the [scaler] which is most recently created.;
 #X obj 79 367 else/openfile ctxfiles/scales.txt -h view modes and scales
 ;
 #X obj 19 80 helpfiles/docfiles/help-display \$0;
-#X obj 81 493 else/openfile helpfiles/links/scaler.html see Context
-Manual entry on [scaler] -h;
+#X obj 81 493 else/openfile helpfiles/links/scaler.html -h see Context
+Manual entry on [scaler];
 #X connect 1 0 4 0;
 #X connect 3 0 1 0;
 #X connect 11 0 1 1;
