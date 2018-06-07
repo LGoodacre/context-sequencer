@@ -1,14 +1,14 @@
-#N struct 61285-big2 float x float y array 61285-array2 ^&*-dsmall2
+#N struct 26054-big2 float x float y array 26054-array2 ^&*-dsmall2
 ;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 61285-big1 float x float y array 61285-array1 ^&*-dsmall1
+#N struct 26054-big1 float x float y array 26054-array1 ^&*-dsmall1
 ;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 61346-big2 float x float y array 61346-array2 ^&*-dsmall2
+#N struct 26161-big2 float x float y array 26161-array2 ^&*-dsmall2
 ;
-#N struct 61346-big1 float x float y array 61346-array1 ^&*-dsmall1
+#N struct 26161-big1 float x float y array 26161-array1 ^&*-dsmall1
 ;
-#N canvas 81 93 765 616 10;
+#N canvas 67 93 765 616 10;
 #X obj 33 26 cnv 15 152 42 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 28 21 cnv 15 152 42 empty empty empty 20 12 0 14 -1 -66577 0
@@ -145,7 +145,6 @@ the right.;
 #X text 355 291 <-- this is also [coord];
 #X text 45 234 this is [coord] -->;
 #X text 45 311 It tells you which point is selected., f 21;
-#X text 468 235 which is used to draw a function.;
 #X obj 16 447 cnv 15 390 155 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 11 442 cnv 15 390 155 empty empty empty 20 12 0 14 -1 -66577
@@ -256,7 +255,8 @@ The time grain can be set with [coord]'s 6th creation argument (see
 #X text 36 294 this is [contour-index] -->;
 #X text 30 561 Note that you can also select a point using [contour-index].
 ;
-#X obj 420 221 else/openfile contour-help.pd -text contour -h;
 #X obj 203 293 coord-index env gr 0 1;
 #X text 396 89 1: For more precision \; 2: for integrating with [control]
 \; 3: for automation (see [automation example]);
+#X obj 427 235 else/openfile contour-help.pd -h contour;
+#X text 475 235 which is used to draw functions.;
