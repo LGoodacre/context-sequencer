@@ -18,11 +18,11 @@ to a Context simply by clicking on it. To use [click] \,;
 #X obj 77 359 context :ID 1;
 #X obj 149 359 context :ID 2;
 #X obj 222 359 context :ID 3;
-#X text 299 360 Hold down Shift and Control and click on one of these
+#X text 299 360 Hold down Shift and Control/command and click on one of these
 Contexts to try., f 19;
 #X text 57 168 1: Create a [click] object with any Context command
 as a creation argument (ie. [click :d 2 :J drums] \; \; 2: Hold down
-the Shift and Control keys. [click] will now follow the cursor \; \;
+the Shift and Control/command keys. [click] will now follow the cursor \; \;
 3: Click on any Context to update it.;
 #X text 50 461 WARNING \; \; 1: Clicking on the Context can still alter
 it in other ways \, such as opening/closing toggles and altering the
