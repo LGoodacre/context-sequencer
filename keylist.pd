@@ -1,4 +1,4 @@
-#N canvas 250 87 684 681 10;
+#N canvas 109 89 684 679 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 395 482 inlet;
 #X obj 299 592 list;
@@ -13,11 +13,11 @@
 #X obj 111 2 sel ff;
 #X msg 163 51 set -1;
 #X obj 144 26 t s b s;
-#X obj 111 366 l2s;
-#X msg 153 363 symbol;
-#X obj 111 395 t s s;
-#X obj 111 423 s2l;
-#X obj 111 338 list prepend;
+#X obj 111 433 l2s;
+#X msg 153 430 symbol;
+#X obj 111 462 t s s;
+#X obj 111 490 s2l;
+#X obj 111 405 list prepend;
 #X obj 111 288 cyclone/zl rev;
 #X obj 111 310 route 1;
 #X obj 281 19 loadbang;
@@ -51,6 +51,9 @@
 #X obj 76 214 t b b;
 #X obj 347 592 ctxfiles/dvs \$0 jlab;
 #X obj 93 168 route \$1 Escape;
+#X obj 111 380 route float;
+#X obj 111 357 s2l;
+#X obj 111 333 list;
 #X connect 0 0 2 1;
 #X connect 1 0 43 0;
 #X connect 2 0 34 0;
@@ -76,7 +79,7 @@
 #X connect 16 0 2 0;
 #X connect 17 0 13 0;
 #X connect 18 0 19 0;
-#X connect 19 0 17 0;
+#X connect 19 0 53 0;
 #X connect 20 0 21 0;
 #X connect 20 0 14 0;
 #X connect 21 0 32 0;
@@ -115,3 +118,6 @@
 #X connect 48 1 8 1;
 #X connect 50 0 7 0;
 #X connect 50 1 46 0;
+#X connect 51 0 17 0;
+#X connect 52 0 51 0;
+#X connect 53 0 52 0;

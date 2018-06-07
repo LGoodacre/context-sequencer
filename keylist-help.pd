@@ -1,4 +1,4 @@
-#N canvas 401 135 415 598 10;
+#N canvas 354 135 415 598 10;
 #X obj 33 32 cnv 15 144 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 27 26 cnv 15 144 57 empty empty empty 21 18 2 32 -1 -204800
@@ -73,3 +73,7 @@ lets you control Context in custom ways by typing.;
 #X obj 19 5 helpfiles/docfiles/help-display \$0;
 #X obj 24 551 else/openfile helpfiles/links/keylist.html -h see Context
 Manual entry on [keylist];
+#X text 41 474 WARNING: [keylist] might not work properly on a Mac.
+;
+#X obj 41 488 else/openfile https://github.com/pure-data/pure-data/issues/213
+-h See PD bug report.;
