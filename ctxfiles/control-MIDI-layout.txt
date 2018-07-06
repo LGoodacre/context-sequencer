@@ -1,4 +1,4 @@
-CELL LAYOUT;
+top-row 104 105 106 107 108 109 110 111;
 
 1st-row 81 82 83 84 85 86 87 88;
 2nd-row 71 72 73 74 75 76 77 78;
@@ -8,6 +8,17 @@ CELL LAYOUT;
 6th-row 31 32 33 34 35 36 37 38;
 7th-row 21 22 23 24 25 26 27 28;
 8th-row 11 12 13 14 15 16 17 18;
+
+right-column;
+	89
+	79
+	69
+	59
+	49
+	39
+	29
+	19;
+				
 
 
 This is the default MIDI layout for the Novation Launchpad MK 2 (Session view).
