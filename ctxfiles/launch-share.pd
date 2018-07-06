@@ -1,4 +1,4 @@
-#N canvas 351 389 450 298 10;
+#N canvas 132 275 450 298 10;
 #X declare -path ../;
 #X obj 151 25 shared ctxfiles/launch-share;
 #X msg 102 223 vis 1;
@@ -157,5 +157,10 @@ tf \$0 #f \; ## s \$0-othr, f 134;
 #X connect 39 0 24 1;
 #X restore 308 237 pd id;
 #X obj 308 56 declare -path ../;
+#X obj 255 89 loadbang;
+#X msg 255 112 read control-MIDI-layout.txt;
+#X obj 255 135 text define control-layout^^&;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
