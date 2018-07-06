@@ -21,4 +21,6 @@ right-column;
 				
 
 
-This is the default MIDI layout for the Novation Launchpad MK 2 (Session view).
+--------------------------------------------
+
+This is the default MIDI layout for the Novation Launchpad MK 2 (Session view). You can edit the numbers if they do not match the layout on your Launchpad. Everything in this file above the dotted is a system setting, so be careful to keep the formatting intact (especially the semi-colons).
