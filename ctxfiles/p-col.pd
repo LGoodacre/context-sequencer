@@ -1,0 +1,12 @@
+#N canvas 857 171 450 300 10;
+#X obj 166 38 inlet;
+#X obj 166 61 makefilename \$2-%d-inn;
+#X obj 166 84 iemguts/oreceive \$0n;
+#X obj 166 107 sel 127;
+#X obj 166 131 outlet;
+#X obj 88 167 s \$2-\$1-asynchinn;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
