@@ -1,4 +1,4 @@
-#N canvas 246 209 677 503 10;
+#N canvas 199 209 677 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -13,9 +13,8 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 171 -313 inlet;
-#N canvas 303 328 793 440 message 0;
+#N canvas 256 328 793 440 message 0;
 #X obj 343 17 inlet;
-#X obj 414 63 ctxfiles/recompile \$0;
 #X obj 137 78 cyclone/zl iter 1;
 #X obj 343 39 t b a;
 #X obj 43 128 cnv 13 500 1 empty \$0-datagrid load 18 -5 0 10 -13330
@@ -69,16 +68,6 @@
 -66577 0;
 #X obj 43 401 cnv 13 500 1 empty \$0-datagrid clear 18 -5 0 10 -13330
 -66577 0;
-#X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
-#l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
-#f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
-colour #l \; :s1 tfs \$0 #f s1 1 \; :s2 tfs \$0 #f s2 -1 \; :nm tfs
-\$0 #f nm 1 \, normalize #l \; :li tfs \$0 #f li 0 \, line #l \; :br
-tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
-\$0 #f p2 0 \; :p3 tfs \$0 #f p3 0 \; :p4 tfs \$0 #f p4 0 \; :ed tfst
-\$0 #f ed 1 \, edit #l \; :as tfst \$0 #f as 1 \; print tf \$0 #f \;
-savelist tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0
-#f \; size tf \$0 #f \; ## s \$0-othr;
 #X obj 43 414 cnv 13 500 1 empty \$0-datagrid resize 18 -5 0 10 -13330
 -66577 0;
 #X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
@@ -88,17 +77,28 @@ savelist tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0
 s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-printall \;
 #f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem \; #f s \$0-clearme
 \; #f s \$0-sizer;
-#X connect 0 0 3 0;
-#X connect 1 0 34 0;
-#X connect 1 1 34 1;
-#X connect 2 0 32 0;
-#X connect 3 0 1 0;
-#X connect 3 1 2 0;
+#X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
+#l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
+#f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
+colour #l \; :s1 tfs \$0 #f s1 1 \; :s2 tfs \$0 #f s2 -1 \; :nm tfs
+\$0 #f nm 1 \, normalize #l \; :li tfs \$0 #f li 0 \, line #l \; :br
+tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
+\$0 #f p2 0 \; :p3 tfs \$0 #f p3 0 \; :p4 tfs \$0 #f p4 0 \; :ed tfst
+\$0 #f ed 1 \, edit #l \; :as tfst \$0 #f as 1 \; print tf \$0 #f \;
+savelist tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0
+#f \; size tf \$0 #f \; ## s \$0-xothr;
+#X obj 414 63 ctxfiles/recompile \$0 xothr;
+#X connect 0 0 2 0;
+#X connect 1 0 33 0;
+#X connect 2 0 34 0;
+#X connect 2 1 1 0;
+#X connect 13 0 14 0;
 #X connect 14 0 15 0;
-#X connect 15 0 16 0;
-#X connect 24 0 3 0;
-#X connect 26 0 3 0;
-#X connect 27 0 26 0;
+#X connect 23 0 2 0;
+#X connect 25 0 2 0;
+#X connect 26 0 25 0;
+#X connect 34 0 32 0;
+#X connect 34 1 32 1;
 #X restore 214 -291 pd message;
 #X obj 0 -143 r~ \$0-too;
 #X obj 1 -232 iemguts/canvasargs;
@@ -174,7 +174,7 @@ context) if not.;
 #X connect 32 1 31 0;
 #X restore 214 -335 pd loadbang;
 #X obj 1 -210 s \$0-canvass;
-#N canvas 67 164 801 582 tabload 1;
+#N canvas 67 164 801 582 tabload 0;
 #X obj 401 433 soundfiler;
 #X obj 7 396 ctxfiles/sp 13;
 #X obj 401 456 s \$0-sizer;

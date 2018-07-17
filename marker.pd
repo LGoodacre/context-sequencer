@@ -1,4 +1,4 @@
-#N canvas 68 426 621 300 10;
+#N canvas 67 426 621 300 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 170 177 iemguts/canvasselect;
 #X obj 170 203 print fo;
@@ -314,39 +314,39 @@
 #X connect 37 0 38 0;
 #X connect 38 0 28 0;
 #X restore 360 147 pd message;
-#N canvas 538 500 793 377 messagein 0;
+#N canvas 491 391 793 377 messagein 0;
 #X obj 343 87 inlet;
-#X obj 407 133 ctxfiles/recompile \$0;
 #X obj 241 150 cyclone/zl iter 1;
 #X obj 343 109 t b a;
-#X obj 548 86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 578 86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 500;
-#X msg 548 108 vis_size \$1 1;
-#X obj 548 130 s \$0-datagrid;
+#X msg 578 108 vis_size \$1 1;
+#X obj 578 130 s \$0-datagrid;
 #X obj 383 87 receive \$0-anyin;
 #X obj 217 18 receive \$0-dvstart;
 #X obj 196 41 pack;
 #X obj 196 -7 receive \$0-mynum;
 #X msg 196 63 symbol \$2-\$1markr;
 #X obj 196 87 iemguts/oreceive \$0nop;
-#X obj 241 172 ctxfiles/br2 route 1 \; :x1 tfsn \$0 #f x1 0 \; :y1
-tfsn \$0 #f y1 0 \; :a tfspa \$0 #f a bang \; ## s \$0-othr;
 #X obj 407 159 ctxfiles/br2 demux 2 \; #f t \; #f s \$0-:x1 \; #f s
 \$0-:y1 \; #f s \$0-aa \;;
-#X connect 0 0 3 0;
+#X obj 407 133 ctxfiles/recompile \$0 mothr;
+#X obj 241 172 ctxfiles/br2 route 1 \; :x1 tfsn \$0 #f x1 0 \; :y1
+tfsn \$0 #f y1 0 \; :a tfspa \$0 #f a bang \; ## s \$0-mothr;
+#X connect 0 0 2 0;
 #X connect 1 0 14 0;
-#X connect 1 1 14 1;
 #X connect 2 0 13 0;
-#X connect 3 0 1 0;
-#X connect 3 1 2 0;
+#X connect 2 1 1 0;
+#X connect 3 0 4 0;
 #X connect 4 0 5 0;
-#X connect 5 0 6 0;
-#X connect 7 0 3 0;
-#X connect 8 0 9 1;
-#X connect 9 0 11 0;
-#X connect 10 0 9 0;
-#X connect 11 0 12 0;
-#X connect 12 0 3 0;
+#X connect 6 0 2 0;
+#X connect 7 0 8 1;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 0;
+#X connect 11 0 2 0;
+#X connect 13 0 12 0;
+#X connect 13 1 12 1;
 #X restore 261 52 pd messagein;
 #X obj 345 220 ctxfiles/license;
 #X obj 344 193 declare -lib zexy -path zexy -path ./;
