@@ -1,4 +1,4 @@
-#N canvas 114 258 796 418 10;
+#N canvas 67 258 796 418 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 23 0 8 -128975
 -262144 0;
@@ -338,14 +338,14 @@
 #X connect 50 0 48 1;
 #X connect 51 0 13 0;
 #X restore 68 295 pd delaytime;
-#N canvas 347 146 974 495 process 0;
+#N canvas 300 146 974 495 process 0;
 #X obj 273 108 demux;
 #X obj 431 729 demux;
 #X obj 538 717 demux;
 #X obj 93 118 demux;
 #N canvas 67 152 974 495 Sequence 0;
 #X obj 367 610 outlet;
-#N canvas 177 146 927 622 count-to 0;
+#N canvas 130 146 927 622 count-to 0;
 #X obj 169 1 inlet;
 #X obj 169 27 unpack f f;
 #X obj 141 263 f;
@@ -464,8 +464,6 @@
 #X obj 376 456 t b b b b;
 #X obj 208 510 demux 0 1 2;
 #X obj 282 532 t f f;
-#X obj 743 626 sel 0;
-#X obj 770 648 s \$0-imoff2;
 #X connect 0 0 1 0;
 #X connect 1 0 5 0;
 #X connect 1 1 11 0;
@@ -530,7 +528,6 @@
 #X connect 53 0 54 0;
 #X connect 53 1 54 1;
 #X connect 54 0 55 0;
-#X connect 54 0 73 0;
 #X connect 56 0 63 0;
 #X connect 56 1 57 1;
 #X connect 57 0 58 0;
@@ -567,7 +564,6 @@
 #X connect 71 2 72 0;
 #X connect 72 0 4 0;
 #X connect 72 1 21 0;
-#X connect 73 1 74 0;
 #X restore 289 416 pd count-to;
 #X obj 391 250 demux;
 #X obj 391 226 pack 5 1;
@@ -1558,7 +1554,8 @@ can be made compatable with looping float connects. If it causes trouble
 #X obj 701 469 s \$0-bspread;
 #X obj 326 567 else/break &;
 #X obj 326 590 route &;
-#X obj 286 4 receive \$0-imoff2;
+#X obj 291 -18 receive \$0-imoff;
+#X obj 291 5 sel 0;
 #X connect 0 0 78 0;
 #X connect 0 1 80 0;
 #X connect 1 0 6 0;
@@ -1665,7 +1662,8 @@ can be made compatable with looping float connects. If it causes trouble
 #X connect 89 0 90 0;
 #X connect 90 0 68 0;
 #X connect 90 1 68 0;
-#X connect 91 0 29 0;
+#X connect 91 0 92 0;
+#X connect 92 1 29 0;
 #X restore 68 376 pd process;
 #N canvas 113 196 872 467 toggles 0;
 #N canvas 623 371 450 300 ytogs 0;
