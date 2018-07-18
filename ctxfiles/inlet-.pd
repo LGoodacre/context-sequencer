@@ -1,8 +1,8 @@
 #N canvas 67 271 1181 407 10;
-#X obj 20 76 iemguts/savebangs 1;
+#X obj 127 -30 iemguts/savebangs 1;
 #X obj 13 362 iemguts/canvasname 1;
 #X obj 20 267 f;
-#X obj 20 98 del 100;
+#X obj 127 -8 del 100;
 #X msg 81 209 1;
 #X obj 20 208 spigot;
 #X obj 150 278 f \$3;
@@ -29,7 +29,7 @@
 #X obj 685 216 route %^;
 #X obj 283 123 receive \$3-overlay;
 #X obj 283 145 iemguts/sendcanvas 1;
-#X obj 20 124 s \$3-overlay-save;
+#X obj 154 38 s \$3-overlay-save;
 #X msg 150 336 symbol tmp/\$1-overlay.pd;
 #X msg 20 311 symbol overlay-\$1.pd;
 #X obj 893 258 outlet;
@@ -56,9 +56,12 @@
 #X obj 703 110 s2l;
 #X obj 850 165 cyclone/prepend next;
 #X obj 893 189 receive \$3-messonpre;
+#X obj 127 15 t b b;
+#X msg 127 61 dirty 1;
+#X obj 127 84 iemguts/sendcanvas 3;
 #X connect 0 0 3 0;
 #X connect 2 0 32 0;
-#X connect 3 0 30 0;
+#X connect 3 0 57 0;
 #X connect 4 0 5 1;
 #X connect 5 0 2 0;
 #X connect 6 0 31 0;
@@ -106,3 +109,6 @@
 #X connect 54 0 52 0;
 #X connect 55 0 33 0;
 #X connect 56 0 33 0;
+#X connect 57 0 58 0;
+#X connect 57 1 30 0;
+#X connect 58 0 59 0;
