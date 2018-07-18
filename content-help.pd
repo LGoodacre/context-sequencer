@@ -1,4 +1,4 @@
-#N canvas 126 130 497 630 10;
+#N canvas 67 130 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -59,7 +59,7 @@ To do this \, you need to have the [mover] object inside the overlay.
 #X obj 16 90 else/openfile mover-help.pd -h See the [mover] help patch
 for how to use [mover].;
 #X restore 84 497 moving content;
-#N canvas 117 164 1211 495 commands 0;
+#N canvas 67 164 1211 495 commands 0;
 #X text 41 42 Content can receive commands \, just like Context. Here
 are the possible Content commands:;
 #X text 68 351 To send commands to Content \, there are four options:
@@ -94,10 +94,9 @@ within the overlay (in seconds) \; :y1 (float) -- set the top position
 of Content within the overlay (in seconds) \; :y2 (float) -- set the
 bottom position of Content within the overlay (in seconds) \; set (y1
 x1 \, y2 x2...)-- set a specific point on the array. \; print (bang)
--- print the current Content state \; size (float) -- set the size
-of the array (in samples). This setting does not save automatically
-\, as it it calculated when an array loads \, However \, it can be
-set as a creation argument., f 186;
+-- print the current Content state \; :sz (float) -- set the size of
+the array (in samples). This setting is overwritten if you load a .wav
+file (:lo)., f 186;
 #X connect 2 0 5 0;
 #X connect 4 0 6 0;
 #X restore 288 497 content commands;
