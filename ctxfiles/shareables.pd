@@ -1265,41 +1265,23 @@ tf \$0 #f \; -trigger tf \$0 #f \; -output tf \$0 #f \; -prepend tf
 #X connect 27 0 15 0;
 #X connect 27 1 15 1;
 #X restore 93 339 pd record language;
-#N canvas 178 125 724 493 content 1;
-#X obj 206 13 receive wqwf^%8h(;
+#N canvas 84 125 724 493 content 1;
+#X obj 400 56 receive wqwf^%8h(;
 #X obj 342 150 cyclone/zl iter 1;
 #X obj 472 136 ctxfiles/recompile \$0 bothr;
-#X obj 233 263 array define ##rec^^& 1;
-#X msg 233 239 resize \$1;
+#X obj 400 83 t b a;
 #X obj 342 174 ctxfiles/br2 route 1 \; -delay tf \$0 #f \; -trigger
-tf \$0 #f \; -output tf \$0 #f \; -interrupt tf \$0 #f \; ## s \$0-bothr
-;
+tf \$0 #f \; -output tf \$0 #f \; -clear tf \$0 #f \; -start tf \$0
+#f \; -interrupt tf \$0 #f \; ## s \$0-bothr;
 #X obj 472 161 ctxfiles/br2 demux 2 \; #f t \; #f gs cr-delay \; #f
-gs cr-trigger \; #f gs cr-output \; #f t \;;
-#X obj 233 80 route -buffer;
-#X obj 308 126 list split 1;
-#X obj 206 40 t b a;
-#X obj 292 156 max;
-#X obj 292 179 change;
-#X obj 292 202 t f f;
-#X obj 233 103 t f f;
-#X connect 0 0 9 0;
-#X connect 1 0 5 0;
-#X connect 2 0 6 0;
-#X connect 2 1 6 1;
-#X connect 4 0 3 0;
-#X connect 7 0 13 0;
-#X connect 7 1 8 0;
-#X connect 8 0 10 0;
-#X connect 8 1 1 0;
-#X connect 9 0 2 0;
-#X connect 9 1 7 0;
-#X connect 10 0 11 0;
-#X connect 11 0 12 0;
-#X connect 12 0 4 0;
-#X connect 12 1 10 1;
-#X connect 13 0 4 0;
-#X connect 13 1 10 1;
+gs cr-trigger \; #f gs cr-output \; #f gs cr-clear \; #f gs cr-start
+\; #f t \;;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 2 1 5 1;
+#X connect 3 0 2 0;
+#X connect 3 1 1 0;
 #X restore 93 362 pd content record;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
