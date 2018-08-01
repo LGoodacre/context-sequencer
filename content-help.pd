@@ -96,7 +96,8 @@ bottom position of Content within the overlay (in seconds) \; set (y1
 x1 \, y2 x2...)-- set a specific point on the array. \; print (bang)
 -- print the current Content state \; :sz (float) -- set the size of
 the array (in samples). This setting is overwritten if you load a .wav
-file (:lo)., f 186;
+file (:lo). \; :ti -- set the host Context cycle time (:d) so that
+the sample plays back at normal speed., f 186;
 #X connect 2 0 5 0;
 #X connect 4 0 6 0;
 #X restore 288 497 content commands;
