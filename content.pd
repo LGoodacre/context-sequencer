@@ -1,4 +1,4 @@
-#N canvas 67 185 677 503 10;
+#N canvas 211 249 677 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -13,7 +13,7 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 141 -313 inlet;
-#N canvas 346 225 793 520 message 0;
+#N canvas 336 217 793 520 message 0;
 #X obj 343 17 inlet;
 #X obj 137 78 cyclone/zl iter 1;
 #X obj 343 39 t b a;
@@ -75,6 +75,8 @@
 -66577 0;
 #X obj 43 440 cnv 13 500 1 empty \$0-datagrid fit 18 -5 0 10 -13330
 -66577 0;
+#X obj 43 453 cnv 13 500 1 empty \$0-datagrid time-reset 18 -5 0 10
+-13330 -66577 0;
 #X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
 #l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
 #f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
@@ -85,7 +87,8 @@ tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
 \$0 #f ed 1 \, edit #l \; :as tfst \$0 #f as 1 \; :sz tfst \$0 #f sz
 100 \, size #l \; print tf \$0 #f \; savelist tf \$0 #f \; set tf \$0
 #f \; save tf \$0 #f \; clear tf \$0 #f \; :r tf \$0 #f \, record #l
-\, crecord #l \; fit tf \$0 #f \; :ti tf \$0 #f \; ## s \$0-xothr;
+\, crecord #l \; fit tf \$0 #f \; :ti tf \$0 #f \; :sa tf \$0 #f \,
+savefile #l \; ## s \$0-xothr;
 #X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
 \; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
 #f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
@@ -93,11 +96,11 @@ tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
 s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-sizer \; #f
 s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem
 \; #f s \$0-clearme \; #f s \$0-record \; #f s \$0-fitme \; #f s \$0-retime
-;
-#X obj 43 453 cnv 13 500 1 empty \$0-datagrid time-reset 18 -5 0 10
--13330 -66577 0;
+\; #f s \$0-savefile \;;
+#X obj 43 466 cnv 13 500 1 empty \$0-datagrid savefile 18 -5 0 10 -13330
+-66577 0;
 #X connect 0 0 2 0;
-#X connect 1 0 35 0;
+#X connect 1 0 36 0;
 #X connect 2 0 32 0;
 #X connect 2 1 1 0;
 #X connect 13 0 14 0;
@@ -105,8 +108,8 @@ s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem
 #X connect 23 0 2 0;
 #X connect 25 0 2 0;
 #X connect 26 0 25 0;
-#X connect 32 0 36 0;
-#X connect 32 1 36 1;
+#X connect 32 0 37 0;
+#X connect 32 1 37 1;
 #X restore 214 -291 pd message;
 #X obj 0 -143 r~ \$0-too;
 #X obj 1 -232 iemguts/canvasargs;
@@ -182,12 +185,12 @@ context) if not.;
 #X connect 32 1 31 0;
 #X restore 214 -335 pd loadbang;
 #X obj 1 -210 s \$0-canvass;
-#N canvas 67 164 801 601 tabload 0;
+#N canvas 257 115 988 601 tabload 1;
 #X obj 401 433 soundfiler;
 #X obj 7 396 ctxfiles/sp 13;
 #X obj 420 546 s \$0-sizer;
 #X obj 102 373 receive \$0-pixsize;
-#X obj 503 364 receive \$0-name;
+#X obj 510 365 receive \$0-name;
 #X obj 280 224 receive \$0-tname;
 #X obj 342 325 s \$0-myname;
 #X obj 401 185 s2l /;
@@ -259,11 +262,22 @@ context) if not.;
 #X obj 401 456 t f f b;
 #X obj 440 482 f 100;
 #X obj 458 509 s \$0-:bs;
+#X obj 855 73 receive \$0-savefile;
+#X obj 855 213 savepanel;
+#X obj 855 238 list append c\$0;
+#X obj 855 190 route bang panel;
+#X obj 855 144 list split 1;
+#X obj 855 98 t a b;
+#X obj 855 261 list prepend;
+#X obj 882 121 symbol -wave;
+#X obj 855 284 cyclone/prepend write;
+#X obj 855 167 list trim;
 #X connect 0 0 73 0;
 #X connect 0 1 68 0;
 #X connect 1 0 41 0;
 #X connect 3 0 1 1;
 #X connect 4 0 17 1;
+#X connect 4 0 78 1;
 #X connect 5 0 61 0;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
@@ -341,6 +355,21 @@ context) if not.;
 #X connect 73 1 72 0;
 #X connect 73 2 74 0;
 #X connect 74 0 71 0;
+#X connect 76 0 81 0;
+#X connect 77 0 78 0;
+#X connect 78 0 82 0;
+#X connect 79 0 77 0;
+#X connect 79 1 77 0;
+#X connect 79 2 78 0;
+#X connect 80 0 85 0;
+#X connect 80 1 82 1;
+#X connect 80 2 79 0;
+#X connect 81 0 80 0;
+#X connect 81 1 83 0;
+#X connect 82 0 84 0;
+#X connect 83 0 82 1;
+#X connect 84 0 0 0;
+#X connect 85 0 79 0;
 #X restore 215 -136 pd tabload;
 #N canvas 564 267 466 381 tablelable 0;
 #X msg 239 308 rename \$1;
