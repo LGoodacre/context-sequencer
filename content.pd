@@ -1,4 +1,4 @@
-#N canvas 67 217 677 503 10;
+#N canvas 67 185 677 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -13,7 +13,7 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 141 -313 inlet;
-#N canvas 67 202 793 440 message 0;
+#N canvas 346 225 793 520 message 0;
 #X obj 343 17 inlet;
 #X obj 137 78 cyclone/zl iter 1;
 #X obj 343 39 t b a;
@@ -73,6 +73,8 @@
 #X obj 414 63 ctxfiles/recompile \$0 xothr;
 #X obj 43 427 cnv 13 500 1 empty \$0-datagrid record 18 -5 0 10 -13330
 -66577 0;
+#X obj 43 440 cnv 13 500 1 empty \$0-datagrid fit 18 -5 0 10 -13330
+-66577 0;
 #X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
 #l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
 #f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
@@ -83,18 +85,19 @@ tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
 \$0 #f ed 1 \, edit #l \; :as tfst \$0 #f as 1 \; :sz tfst \$0 #f sz
 100 \, size #l \; print tf \$0 #f \; savelist tf \$0 #f \; set tf \$0
 #f \; save tf \$0 #f \; clear tf \$0 #f \; :r tf \$0 #f \, record #l
-\, crecord #l \; :ti tf \$0 #f \; ## s \$0-xothr;
+\, crecord #l \; fit tf \$0 #f \; :ti tf \$0 #f \; ## s \$0-xothr;
 #X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
 \; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
 #f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
 #f s \$0-:bs \; #f s \$0-:p1 \; #f s \$0-:p2 \; #f s \$0-:p3 \; #f
 s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-sizer \; #f
 s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem
-\; #f s \$0-clearme \; #f s \$0-record \; #f s \$0-retime;
-#X obj 43 440 cnv 13 500 1 empty \$0-datagrid time-reset 18 -5 0 10
+\; #f s \$0-clearme \; #f s \$0-record \; #f s \$0-fitme \; #f s \$0-retime
+;
+#X obj 43 453 cnv 13 500 1 empty \$0-datagrid time-reset 18 -5 0 10
 -13330 -66577 0;
 #X connect 0 0 2 0;
-#X connect 1 0 34 0;
+#X connect 1 0 35 0;
 #X connect 2 0 32 0;
 #X connect 2 1 1 0;
 #X connect 13 0 14 0;
@@ -102,8 +105,8 @@ s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem
 #X connect 23 0 2 0;
 #X connect 25 0 2 0;
 #X connect 26 0 25 0;
-#X connect 32 0 35 0;
-#X connect 32 1 35 1;
+#X connect 32 0 36 0;
+#X connect 32 1 36 1;
 #X restore 214 -291 pd message;
 #X obj 0 -143 r~ \$0-too;
 #X obj 1 -232 iemguts/canvasargs;
@@ -444,7 +447,7 @@ context) if not.;
 #X connect 16 0 2 1;
 #X connect 17 0 2 0;
 #X restore 214 -313 pd creation;
-#N canvas 67 311 797 457 face 0;
+#N canvas 67 303 797 457 face 0;
 #X obj 101 125 cnv 15 219 70 empty \$0-cbox ARRAY 100 10 0 11 -204800
 -258113 0;
 #X obj 353 347 t b;
@@ -543,7 +546,7 @@ context) if not.;
 #X obj 1 -188 iemguts/propertybang;
 #X obj 1 -166 s \$0-prop;
 #X obj 1 -254 receive \$0-iemargr;
-#N canvas 481 192 450 300 set 0;
+#N canvas 441 160 699 300 set 0;
 #X obj 140 56 receive \$0-setme;
 #X obj 140 78 route *;
 #X obj 186 100 cyclone/zl iter 2;
@@ -552,6 +555,12 @@ context) if not.;
 #X obj 186 122 unpack;
 #X obj 172 144 t f;
 #X obj 228 164 receive \$0-name;
+#X obj 426 46 receive \$0-fitme;
+#X obj 426 69 t b b b;
+#X obj 465 92 s \$0-roff;
+#X obj 426 162 s \$0-roff2;
+#X obj 445 137 s \$0-anyin;
+#X msg 445 114 :x1 % 0 :x2 % 100 :y1 % 37 :y2 % 100;
 #X connect 0 0 1 0;
 #X connect 1 0 4 0;
 #X connect 1 1 2 0;
@@ -562,6 +571,11 @@ context) if not.;
 #X connect 5 1 3 1;
 #X connect 6 0 3 1;
 #X connect 7 0 3 2;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 9 1 13 0;
+#X connect 9 2 10 0;
+#X connect 13 0 12 0;
 #X restore 214 -180 pd set;
 #X obj -2 -86 ctxfiles/license;
 #N canvas 67 167 832 485 audio 0;
@@ -1217,7 +1231,7 @@ context) if not.;
 #X obj -15 -335 declare -lib zexy -path zexy -path ./;
 #X obj 216 -48 inlet~;
 #X text 330 -26 record audio;
-#N canvas 351 143 818 622 record 1;
+#N canvas 304 143 818 622 record 0;
 #X obj 317 -8 receive \$0-record;
 #X obj 351 173 v (dollarzero);
 #X obj 351 150 f \$0;
@@ -1304,8 +1318,13 @@ context) if not.;
 #X obj 553 187 s \$0-cr-clear;
 #X obj 586 165 s \$0-cr-mute;
 #X obj 637 70 s \$0-cr-output;
-#X text 466 330, f 106;
 #X obj 223 122 receive \$0-cr-output;
+#X text 239 291 1: IF record command received (other than -buffer)
+THEN listen for Context to be started (only once) \; 2: IF Context
+is started THEN stop listening (:1) and turn on [switch~] and \; 3:
+start listening for when sample starts and stops \; 4: send sample
+start and stop to share patch \; 5: When Context stops then stop listening
+for start and stop messages., f 106;
 #X connect 0 0 15 0;
 #X connect 2 0 1 0;
 #X connect 4 0 7 1;
@@ -1370,7 +1389,7 @@ context) if not.;
 #X connect 55 1 30 0;
 #X connect 55 2 52 0;
 #X connect 55 3 50 0;
-#X connect 60 0 53 0;
+#X connect 59 0 53 0;
 #X restore 216 -26 pd record;
 #X connect 4 0 5 0;
 #X connect 6 0 3 0;
