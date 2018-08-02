@@ -1,4 +1,4 @@
-#N canvas 67 129 677 503 10;
+#N canvas 67 130 677 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -13,7 +13,7 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 141 -313 inlet;
-#N canvas 326 209 793 520 message 0;
+#N canvas 185 209 793 520 message 0;
 #X obj 343 17 inlet;
 #X obj 137 78 cyclone/zl iter 1;
 #X obj 343 39 t b a;
@@ -498,56 +498,40 @@ context) if not.;
 #X connect 16 0 2 1;
 #X connect 17 0 2 0;
 #X restore 214 -313 pd creation;
-#N canvas 67 303 797 457 face 0;
-#X obj 101 125 cnv 15 219 70 empty \$0-cbox ARRAY 100 10 0 11 -204800
+#N canvas 67 303 797 457 face 1;
+#X obj 101 145 cnv 15 219 70 empty \$0-cbox ARRAY 100 10 0 11 -204800
 -258113 0;
 #X obj 353 347 t b;
-#X obj 301 151 bng 14 250 50 0 \$0-savem \$0-colorme save now -51
-8 0 10 -262144 -1 -1;
-#X obj 301 105 bng 14 250 50 0 \$0-done empty ^ 3 10 0 15 -262144 -1
--1;
+#X obj 301 171 bng 14 250 50 0 \$0-savem \$0-colorme save to patch
+-83 8 0 10 -262144 -1 -1;
 #X obj 401 210 iemguts/sendcanvas;
 #X obj 353 302 iemguts/receivecanvas 2;
 #X text 388 250 ctxfiles/menu \$0 :ts :t 40 15 points polygon curve
 ;
 #X obj 471 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 301 171 bng 14 250 50 0 \$0-clearme \$0-colorme clear -34 8
+#X obj 301 191 bng 14 250 50 0 \$0-clearme \$0-colorme clear -34 8
 0 10 -262144 -1 -1;
 #X obj 401 149 receive \$0-face;
 #X obj 435 347 route 1;
 #X obj 353 369 s \$0-mup;
 #X obj 353 325 route mouseup done-popup;
 #X obj 435 369 s \$0-openup;
-#X obj 104 105 bng 14 250 50 0 \$0-obang \$0-obangr empty 17 7 0 10
--262144 -1 -1;
 #X obj 109 7 receive \$0-:lo;
-#X floatatom 108 150 6 0 0 1 normalize #0-:ns #0-:nm, f 6;
-#X floatatom 108 131 8 0 0 1 size #0-sizer #0-sizepre, f 8;
-#X floatatom 108 170 7 0 0 1 bit-rate #0-:bs #0-:br, f 7;
-#X symbolatom 152 105 21 0 0 0 file #0-:loo #0-:l, f 21;
-#X obj 301 131 tgl 14 1 \$0-:as \$0-:ass auto save -56 7 0 10 -262144
+#X floatatom 108 170 6 0 0 1 normalize #0-:ns #0-:nm, f 6;
+#X floatatom 108 151 8 0 0 1 size #0-sizer #0-sizepre, f 8;
+#X floatatom 108 190 7 0 0 1 bit-rate #0-:bs #0-:br, f 7;
+#X obj 301 151 tgl 14 1 \$0-:as \$0-:ass auto save -58 7 0 10 -262144
 -1 -1 1 1;
-#X obj 122 342 tgl 14 0 \$0-snapl \$0-:p1 left -24 7 0 10 -262144 -1
--1 0 1;
-#X obj 150 342 tgl 14 0 \$0-snapr \$0-:p2 right 15 7 0 10 -262144 -1
--1 0 1;
-#X obj 136 328 tgl 14 0 \$0-snapt \$0-:p3 top -2 -7 0 10 -262144 -1
--1 0 1;
-#X obj 136 356 tgl 14 0 \$0-snapb \$0-:p4 bottom -10 21 0 10 -262144
--1 -1 0 1;
-#X text 99 313 SNAP:;
 #X obj 518 369 s \$0-cpr;
 #X obj 518 347 ctxfiles/deb 700;
-#X obj 101 199 cnv 15 219 50 empty \$0-cbox CANVAS 95 6 0 11 -204800
+#X obj 101 219 cnv 15 219 68 empty \$0-cbox CANVAS 95 6 0 11 -204800
 -258113 0;
-#X obj 132 209 tgl 15 1 \$0-:ed \$0-:eds edit -27 8 0 10 -262144 -1
+#X obj 132 229 tgl 15 1 \$0-:ed \$0-:eds edit -27 8 0 10 -262144 -1
 -1 1 1;
-#X floatatom 280 209 5 0 0 0 y-bottom #0-:s2s #0-:s2, f 5;
-#X floatatom 280 228 5 0 0 0 y-top #0-:s1s #0-:s1, f 5;
-#X floatatom 151 228 8 0 0 0 colour #0-:cs #0-:c, f 8;
-#X msg 401 174 coords 0 -1 1 1 221 150 \$1 100 100;
-#X text 521 194 185;
+#X floatatom 280 229 5 0 0 0 y-bottom #0-:s2s #0-:s2, f 5;
+#X floatatom 280 248 5 0 0 0 y-top #0-:s1s #0-:s1, f 5;
+#X floatatom 148 247 8 0 0 0 colour #0-:cs #0-:c, f 8;
 #X obj 356 -18 receive \$0-lb1;
 #X msg 356 4 100 sizer 1 :ns 44100 :bs 17 :cs -1 :s2s 1 :s1s;
 #X obj 356 26 cyclone/zl iter 2;
@@ -557,41 +541,64 @@ context) if not.;
 #X obj 356 92 send;
 #X obj 323 -13 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 149 209 ctxfiles/menu \$0 :li :lis   points polygon curve;
+#X obj 149 229 ctxfiles/menu \$0 :li :lis   points polygon curve;
 #X obj 109 29 route clear;
 #X msg 109 51 set symbol;
 #X obj 219 11 t b a b;
-#X obj 238 84 s \$0-:loo;
+#X obj 238 77 s \$0-:loo;
 #X obj 258 33 t f;
 #X obj 219 33 f 1;
 #X obj 219 55 s \$0-symboff;
-#X connect 1 0 11 0;
-#X connect 5 0 12 0;
-#X connect 7 0 33 0;
-#X connect 9 0 33 0;
-#X connect 10 0 13 0;
-#X connect 12 0 1 0;
-#X connect 12 1 10 0;
-#X connect 12 2 27 0;
-#X connect 15 0 44 0;
-#X connect 27 0 26 0;
-#X connect 33 0 4 0;
+#X obj 105 270 bng 14 250 50 0 \$0-bfit \$0ni fit to overlay 17 7
+0 10 -262144 -1 -1;
+#X obj 298 270 bng 14 250 50 0 \$0-bti \$0-ni normal speed -76 7 0
+10 -262144 -1 -1;
+#X obj 667 150 receive \$0-bti;
+#X obj 630 127 receive \$0-bfit;
+#X msg 667 173 :ti;
+#X obj 101 102 cnv 15 219 39 empty \$0-cbox FILE 100 10 0 11 -204800
+-258113 0;
+#X obj 301 105 bng 14 250 50 0 \$0-done empty ^ 3 10 0 15 -162535 -1
+-1;
+#X obj 105 105 bng 14 250 50 0 \$0-obang \$0-obangr load 17 7 0 10
+-262144 -1 -1;
+#X symbolatom 151 122 27 0 0 0 - #0-:loo #0-:l, f 27;
+#X obj 105 126 bng 14 250 50 0 \$0-bsav \$0-ni save 17 7 0 10 -262144
+-1 -1;
+#X msg 401 174 coords 0 -1 1 1 221 188 \$1 100 100;
+#X msg 630 172 fit;
+#X obj 667 196 s \$0-anyin;
+#X connect 1 0 10 0;
+#X connect 4 0 11 0;
+#X connect 6 0 51 0;
+#X connect 8 0 51 0;
+#X connect 9 0 12 0;
+#X connect 11 0 1 0;
+#X connect 11 1 9 0;
+#X connect 11 2 19 0;
+#X connect 13 0 34 0;
+#X connect 19 0 18 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
+#X connect 28 0 30 0;
+#X connect 28 1 29 0;
+#X connect 29 0 31 1;
+#X connect 30 0 31 0;
+#X connect 32 0 26 0;
+#X connect 34 0 35 0;
+#X connect 34 1 36 0;
 #X connect 35 0 36 0;
-#X connect 36 0 37 0;
-#X connect 37 0 38 0;
+#X connect 36 0 39 0;
+#X connect 36 1 37 0;
+#X connect 36 2 38 0;
 #X connect 38 0 40 0;
-#X connect 38 1 39 0;
-#X connect 39 0 41 1;
-#X connect 40 0 41 0;
-#X connect 42 0 36 0;
-#X connect 44 0 45 0;
-#X connect 44 1 46 0;
-#X connect 45 0 46 0;
-#X connect 46 0 49 0;
-#X connect 46 1 47 0;
-#X connect 46 2 48 0;
-#X connect 48 0 50 0;
-#X connect 49 0 50 0;
+#X connect 39 0 40 0;
+#X connect 43 0 45 0;
+#X connect 44 0 52 0;
+#X connect 45 0 53 0;
+#X connect 51 0 3 0;
+#X connect 52 0 53 0;
 #X coords 0 -1 1 1 221 185 0;
 #X restore 0 79 pd face;
 #X obj 1 -188 iemguts/propertybang;
@@ -791,7 +798,7 @@ context) if not.;
 #X connect 7 0 1 1;
 #X connect 8 0 5 0;
 #X restore 214 -224 pd curve;
-#N canvas 313 225 596 471 morph 0;
+#N canvas 67 225 596 471 morph 1;
 #X obj 212 66 demux;
 #X obj 212 111 t f f f;
 #X obj 176 89 t f;
@@ -821,14 +828,14 @@ context) if not.;
 #X obj 121 304 list 48 22;
 #X obj 302 398 ctxfiles/sf 48;
 #X obj 427 398 ctxfiles/sf 22;
-#X msg 121 327 221 226;
 #X obj 136 270 f 1;
 #X obj 104 245 t b b;
 #X obj 230 346 f 1;
 #X obj 229 283 f 2;
 #X obj 212 89 f 1;
 #X obj 230 368 t f f;
-#X connect 0 0 34 0;
+#X msg 121 327 221 264;
+#X connect 0 0 33 0;
 #X connect 0 1 2 0;
 #X connect 1 0 3 0;
 #X connect 1 1 4 0;
@@ -846,18 +853,18 @@ context) if not.;
 #X connect 11 0 27 2;
 #X connect 11 1 28 2;
 #X connect 12 0 22 0;
-#X connect 13 0 31 0;
+#X connect 13 0 30 0;
 #X connect 14 0 15 0;
 #X connect 16 0 12 0;
 #X connect 16 1 7 0;
-#X connect 16 2 29 0;
+#X connect 16 2 35 0;
 #X connect 16 3 17 0;
 #X connect 19 0 2 0;
 #X connect 20 0 0 0;
 #X connect 21 0 11 0;
 #X connect 21 0 26 1;
-#X connect 22 0 33 0;
-#X connect 22 1 32 0;
+#X connect 22 0 32 0;
+#X connect 22 1 31 0;
 #X connect 22 2 25 0;
 #X connect 24 0 13 0;
 #X connect 24 1 7 0;
@@ -868,15 +875,15 @@ context) if not.;
 #X connect 26 0 10 0;
 #X connect 27 0 14 0;
 #X connect 28 0 14 1;
-#X connect 29 0 10 0;
-#X connect 30 0 17 0;
-#X connect 31 0 18 0;
-#X connect 31 1 30 0;
-#X connect 32 0 35 0;
-#X connect 33 0 5 0;
-#X connect 34 0 1 0;
-#X connect 35 0 17 0;
-#X connect 35 1 23 0;
+#X connect 29 0 17 0;
+#X connect 30 0 18 0;
+#X connect 30 1 29 0;
+#X connect 31 0 34 0;
+#X connect 32 0 5 0;
+#X connect 33 0 1 0;
+#X connect 34 0 17 0;
+#X connect 34 1 23 0;
+#X connect 35 0 10 0;
 #X restore 214 -202 pd morph;
 #N canvas 300 349 538 362 clicks 0;
 #X obj 117 108 del 100;
