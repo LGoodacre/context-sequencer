@@ -1,0 +1,9 @@
+#N canvas 10 72 200 200 10;
+#N canvas 268 162 371 165 META 0;
+#X text 12 11 NAME ggee;
+#X text 11 92 AUTHOR Guenter Geiger;
+#X text 10 114 LICENSE TCL/TK;
+#X text 11 70 VERSION 0.27;
+#X text 11 34 DESCRIPTION collection of Pd object classes written by
+Guenter Geiger;
+#X restore 10 10 pd META;
