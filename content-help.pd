@@ -1,4 +1,4 @@
-#N canvas 67 122 497 630 10;
+#N canvas 343 135 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -74,7 +74,7 @@ in the top-left (ie. "~1" or "ting" \; 4: send messages to it via Context
 #X msg 593 444 \; c1 content ting ' :c \$1 ';
 #X text 794 444 <-- note that the quotation marks are necessary here
 \, else the :c command would send to Context.;
-#X text 38 72 :lo (symbol) -- select a .wav file or PD array (bang
+#X text 37 64 :lo (symbol) -- select a .wav file or PD array (bang
 for open-panel \, "clear" to clear Content. \; :nm (float) -- perform
 the standard PD normalization function \; :br (float) -- reset the
 bitrate for non-standard files \; :as (1/0) -- saves the contents of
@@ -100,27 +100,31 @@ Content so that it fits exactly within the Overlay \; print (bang)
 -- print the current Content state \; :sz (float) -- set the size of
 the array (in samples). This setting is overwritten if you load a .wav
 file (:lo). \; :ti -- set the host Context cycle time (:d) so that
-the sample plays back at normal speed., f 186;
+the sample plays back at normal speed. \; :r -- record audio to Content
+array (see the "recording audio" subpatch in this help file)., f 186
+;
 #X connect 2 0 5 0;
 #X connect 4 0 6 0;
-#X restore 288 497 content commands;
-#N canvas 65 97 450 413 content 0;
+#X restore 288 517 content commands;
+#N canvas 67 97 450 413 content 0;
 #X text 12 46 There are two ways of saving the contents of Content.
-\; \; The first is to save a file or array reference via the :lo command.
-This happens automatically if you load a file on startup or through
-the properties dialogue. \; \; The second is to save the array values
-into the patch itself. This can be done using the "save" command or
-through the properties menu. Alternatively \, you can turn auto-save
-on. This means that the contents of the array will be saved every time
-the overlay patch is saved. \; \; All changes to Content must be saved
-in the Overlay patch \, then in the parent patch. If the Overlay patch
-is not saved before the parent patch \, all changes to Content will
-be lost. To save the Overlay patch \, open the Overlay by right-clicking
-on Context and selecting "open" and then do a regular menu-save (Ctrl+S).
-Then save the parent patch as usual. \; \; Saving the contents of a
-drawn array into the patch is only recommended for smaller arrays (ie.
-of a few hundred points). Saving larger arrays may crash your computer.
-;
+\; \; The first is to save the array to disk using the :sa command
+(ie. ":sa path/to/file.wav"). This is suitable for audio samples and
+larger arrays \, and works well in conjunction with the :lo command
+\, which tells Content to read a file. (The :lo command is loaded automatically
+if you load a file from the open-file dialogue box.) \; \; The second
+is to save the array values into the patch itself. This can be done
+using the "save" command or through the properties menu. Alternatively
+\, you can turn auto-save on. This means that the contents of the array
+will be saved every time the overlay patch is saved. \; \; All changes
+to Content must be saved in the Overlay patch \, then in the parent
+patch. If the Overlay patch is not saved before the parent patch \,
+all changes to Content will be lost. To save the Overlay patch \, open
+the Overlay by right-clicking on Context and selecting "open" and then
+do a regular menu-save (Ctrl+S). Then save the parent patch as usual.
+\; \; Saving the contents of a drawn array into the patch is only recommended
+for smaller arrays (ie. of a few hundred points). Saving larger arrays
+may crash your computer.;
 #X restore 300 475 saving content;
 #N canvas 207 109 466 300 content 0;
 #X text 18 28 There are two ways of reading Content. The first is using
@@ -174,5 +178,52 @@ of the array \; COLOUR: set the background colour., f 166;
 #X obj 10 6 helpfiles/docfiles/help-display \$0;
 #X obj 83 576 else/openfile helpfiles/links/content.html -h see Context
 Manual entry on [content];
+#N canvas 165 161 955 537 audio 0;
+#X obj 457 325 adc~;
+#X obj 461 475 dac~;
+#X obj 318 355 context :H 14 :X 13 :Y 8 :io io :d 3 :ID 2 :ol 1 5 obj
+253 -28 ctx inlet~ 5 obj 246 103 ctx outlet~ 16 obj 0 28 content :x2
+3 :y1 1 :y2 3 :li 1 :as 0 :sz 44100 4 obj 0 -20 mover 5 connect 3 0
+5 1 5 connect 5 0 4 0;
+#X msg 179 89 content ~2 crecord;
+#X text 66 21 Use the ':r' or 'crecord' command to record audio to
+Content.;
+#X text 21 82 press here to record from the system microphone, f 25
+;
+#X msg 197 121 content ~2 crecord -trigger 0;
+#X text 481 391 <--[ctx] is used to get the in/outlet~s here, f 24
+;
+#X msg 237 193 content ~2 crecord -start p 3 6;
+#X msg 264 242 content ~2 crecord -clear 0;
+#X msg 284 277 content ~2 crecord -mute 1;
+#X text 386 115 -trigger 0 means that the recording won't start immediately
+\, but when Context is next started, f 51;
+#X msg 217 157 content ~2 crecord -output 1;
+#X text 432 186 -start lets you add messages to the Context 'start'
+command \, so that you can record over specific sections of the array.
+;
+#X text 398 151 -output 1 means that normal Context messages and conections
+will be send during the recording (see the :me -o command).;
+#X obj 431 212 else/openfile helpfiles/starting_and_stopping.pd -h
+see starting_and_stopping.pd;
+#X text 439 236 -clear 1 clears the array before the recording. This
+doesn't always seem desireable \, but there might be undefined behaviour
+if it is off (0) due to a bug., f 81;
+#X text 452 271 -mute 0 means that the array will playback simultaneously
+as it is recorded. Do not use -mute 0 here \, as it will cause a feedback
+loop., f 74;
+#X text 505 15 You can send messages to an embedded Content by using
+a 'content ~2' message. (This [content] is named ~2)., f 28;
+#X connect 0 0 2 13;
+#X connect 0 1 2 13;
+#X connect 2 13 1 0;
+#X connect 2 13 1 1;
+#X connect 3 0 2 0;
+#X connect 6 0 2 0;
+#X connect 8 0 2 0;
+#X connect 9 0 2 0;
+#X connect 10 0 2 0;
+#X connect 12 0 2 0;
+#X restore 294 496 recording audio;
 #X connect 9 17 8 0;
 #X connect 9 17 8 1;
