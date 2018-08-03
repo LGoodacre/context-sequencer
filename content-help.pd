@@ -1,4 +1,4 @@
-#N canvas 343 135 497 630 10;
+#N canvas 296 135 497 630 10;
 #X obj 72 48 cnv 15 164 57 empty empty empty 21 18 2 32 -99865 -204800
 0;
 #X obj 66 42 cnv 15 164 57 empty empty empty 21 18 2 32 -1 -204800
@@ -178,7 +178,7 @@ of the array \; COLOUR: set the background colour., f 166;
 #X obj 10 6 helpfiles/docfiles/help-display \$0;
 #X obj 83 576 else/openfile helpfiles/links/content.html -h see Context
 Manual entry on [content];
-#N canvas 165 161 955 537 audio 0;
+#N canvas 118 161 955 537 audio 0;
 #X obj 457 325 adc~;
 #X obj 461 475 dac~;
 #X obj 318 355 context :H 14 :X 13 :Y 8 :io io :d 3 :ID 2 :ol 1 5 obj
@@ -191,7 +191,7 @@ Content.;
 #X text 21 82 press here to record from the system microphone, f 25
 ;
 #X msg 197 121 content ~2 crecord -trigger 0;
-#X text 481 391 <--[ctx] is used to get the in/outlet~s here, f 24
+#X text 494 326 <--[ctx] is used to get the in/outlet~s here, f 24
 ;
 #X msg 237 193 content ~2 crecord -start p 3 6;
 #X msg 264 242 content ~2 crecord -clear 0;
@@ -214,6 +214,8 @@ as it is recorded. Do not use -mute 0 here \, as it will cause a feedback
 loop., f 74;
 #X text 505 15 You can send messages to an embedded Content by using
 a 'content ~2' message. (This [content] is named ~2)., f 28;
+#X text 495 395 <-- right click and select 'open' to see how [content]
+is set up for recording, f 42;
 #X connect 0 0 2 13;
 #X connect 0 1 2 13;
 #X connect 2 13 1 0;
