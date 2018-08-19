@@ -1,0 +1,63 @@
+#N canvas 402 89 776 613 10;
+#X obj 191 520 dac~;
+#X obj 199 476 helpfiles/docfiles/glock~ 1;
+#X obj 199 443 receive c1-;
+#X obj 48 18 cnv 15 352 62 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 43 13 cnv 15 352 62 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 44 14 cnv 15 350 60 empty empty context lesson 3 7 30 0 34
+-225792 -1 0;
+#X obj 426 22 helpfiles/docfiles/help-display \$0;
+#N canvas 67 89 450 300 follow-ups 0;
+#X text 51 15 In this example \, the message ". :i scramble" scrambles
+all of the toggle floats on the :i array. But what if you wanted to
+scramble only some of them?;
+#X text 50 78 CHALLENGE: write a sennd-message formula that scrambles
+only the toggle floats for the toggles which are currently open. Toggles
+which are not open remain unaffected. (Hint: you'll need to use the
+message variable ">").;
+#X text 52 150 2nd CHALLENGE: Make it so that the melody scrambles
+every second time it is played.;
+#X restore 488 499 pd follow-ups / challenges;
+#X obj 538 41 ctxfiles/license;
+#X obj 267 363 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 274 347 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 293 330 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 347 332 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 261 326 context :X 8 :a ' # = ' :b ' . :i scramble | | | # =
+' :d 1.5 :i 1 2 3 4 5 6 7 8 :x = 8 7 6 5 4 3 2 1 :y = 1 :Z 10 :ID 1
+;
+#X text 44 96 SCRAMBLING A MELODY;
+#X msg 70 273 double click here to play;
+#X msg 230 174 The send message "# =" (stored in the :a database) is
+using two variables from the output language. "=" reads the value of
+the toggle float \, and "#" turns it into a note on a scale (with the
+help of the [scaler] object).;
+#X obj 259 517 scaler c 6 major;
+#X msg 21 331 these toggles store the notes (:i);
+#X msg 360 260 This toggle sends the message ". :i scramble". The period
+(.) indicates that the message should be send to the same Context.
+":i scramble" scrambles the toggle-floats.;
+#N canvas 67 89 450 300 how 0;
+#X text 52 36 1: create a Context \; 2: enter some toggle floats by
+clicking & dragging or clicking & typing on the x-axis toggles \; 3:
+enter the message ". :i scrable" into the first term of the :b database
+\; 4: enter the message "# =" into the first term of the :a database.
+\; 5: enter the term "# =" into the last term of the :b database;
+#X text 50 172 Why step 5? Because in this example \, the last toggle
+is being used to play a note \, and the last toggle is stored at the
+bottom of the :b database. It's not a very good idea to use the last
+toggle to play a note \, but it keeps this example simple.;
+#X restore 488 530 pd how can I create this for myself?;
+#X connect 1 0 0 0;
+#X connect 1 0 0 1;
+#X connect 2 0 1 0;
+#X connect 15 0 10 0;
+#X connect 16 0 11 0;
+#X connect 18 0 9 0;
+#X connect 19 0 12 0;
