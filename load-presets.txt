@@ -65,6 +65,13 @@ sample :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
 # create a Context with an embedded Content array and a throw object [throw samples~];
 
 
+sample-throw :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
+12 obj 0 24 content :lo $$ :x2 1 :y1
+0.4 :y2 1 5 obj 0 -30 throw~ $$ 5 connect 3 0 4 0;
+
+# create a Context with an embedded Content array and a throw object [throw *filename*];
+
+
 
 sample-move :H 14 :X 9 :Y 6 :c 13 :d 1 :Z 14 :ol 1
 12 obj 0 24 content :lo $$ :x2 1 :y1

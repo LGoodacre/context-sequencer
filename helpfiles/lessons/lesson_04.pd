@@ -1,0 +1,105 @@
+#N canvas 356 114 776 635 10;
+#X obj 187 615 dac~;
+#X obj 48 18 cnv 15 352 62 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 43 13 cnv 15 352 62 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 44 14 cnv 15 350 60 empty empty context lesson 4 7 30 0 34
+-225792 -1 0;
+#X obj 426 22 helpfiles/docfiles/help-display \$0;
+#N canvas 67 89 450 362 follow-ups 0;
+#X text 24 25 1: Change the x-axis toggles to alter the probability
+of the chain. For instance \, determine that a kick will never follow
+a snare \, or that a hi-hat will repeat itself 50% of the time.;
+#X text 24 85 2: Determine how likely it is that the pattern will end
+(if at all).;
+#X text 23 124 3: Change the timing on the units so that they don't
+all last the same time.;
+#X text 23 164 4: Make it so that instead of a single beat \, each
+Context plays a pattern on the drums.;
+#X text 24 263 6: Make a Markov chain that stays within a time signature.
+Ie. \, ensure that whatever happens \, the first kick drum starts every
+2 seconds. This one is challenging!;
+#X text 23 204 5: Using advanced burst settings to control the probability
+\, and make it so that sometimes two events happen at once.;
+#X obj 23 230 else/openfile ../links/burst_advanced.html -h See Context
+Manual entry on advanced Burst settings;
+#X restore 597 566 pd follow-ups / challenges;
+#X obj 538 41 ctxfiles/license;
+#X obj 117 330 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 279 256 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 214 353 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 345 277 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 67 89 450 300 how 0;
+#X text 52 36 1: create a Context \; 2: Shift double click on the float-atom
+to flip the axes \, if desired (or use the :M 1 command) \; 3:Resize
+it to the dimensions you want (you might want to allow for multiple
+float-connections to the same Context to allow you to control the probability)
+\; 4: Select Burst Random more (':L random' or properties-->burst-->presets-->
+random). \; 5: Open the last toggle of each Context. If you need to
+send a message to the instrument \, enter it into the last entry on
+the :b database. \; 6: Set a time value for each Context \; 7: Use
+toggle floats to control the probability.;
+#X restore 537 597 pd how can I create this for myself?;
+#X text 44 96 CREATING AND USING MARKOV CHAINS;
+#X text 47 119 A Markkov chain is a sequence of events that occur according
+to probability. Each event defines the probability of the next., f
+63;
+#X obj 35 531 helpfiles/docfiles/snare;
+#X obj 187 531 helpfiles/docfiles/hihat;
+#X obj 342 531 helpfiles/docfiles/kick;
+#X obj 187 587 *~ 0.5;
+#X obj 223 565 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 35 510 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 187 511 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 342 511 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 35 486 receive snare-;
+#X obj 187 487 receive hihat-;
+#X obj 342 487 receive kick-;
+#X msg 263 194 \; context stop;
+#X obj 381 362 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 197 235 context :X 13 :M 1 :d 0.25 :h 1 :i 1.5 1.5 1.5 2.5 2.5
+2.5 3.5 3.5 3.5 0 0 0 0 :n ' snare ' :x = 13 9 8 7 6 5 4 3 2 1 :R 100
+:Z 12 :ID 1;
+#X obj 100 309 context :X 13 :M 1 :b ' | | | 1 ' :d 0.25 :h 1 :i 1.5
+1.5 1.5 2.5 2.5 2.5 3.5 3.5 3.5 0 0 0 0 :n ' hihat ' :x = 13 10 9 8
+7 6 5 4 3 2 1 :R 100 :Z 12 :ID 2;
+#X obj 293 320 context :X 13 :M 1 :d 0.25 :h 1 :i 1.5 1.5 1.5 2.5 2.5
+2.5 3.5 3.5 3.5 0 0 0 0 :n ' kick ' :x = 13 9 8 7 6 5 4 3 2 1 :R 100
+:Z 12 :ID 3;
+#X msg 394 188 The last toggle in each Context is sending the note
+to the drums., f 33;
+#X msg 5 261 Messages are sent to the drums via tags., f 21;
+#X msg 219 156 double click here to play (and click below to stop)
+, f 26;
+#X msg 472 240 After playing a beat \, each Context starts another
+one using toggle-connections. You can alter the probability of the
+next event by opening and closing toggles., f 41;
+#X msg 56 395 Because one blank toggle is open \, the chain will eventually
+end., f 33;
+#X connect 9 0 34 0;
+#X connect 14 0 17 0;
+#X connect 15 0 17 0;
+#X connect 16 0 17 0;
+#X connect 17 0 0 0;
+#X connect 17 0 0 1;
+#X connect 18 0 17 1;
+#X connect 19 0 14 0;
+#X connect 21 0 16 0;
+#X connect 22 0 19 0;
+#X connect 23 0 20 0;
+#X connect 23 0 15 0;
+#X connect 24 0 21 0;
+#X connect 30 0 10 0;
+#X connect 31 0 7 0;
+#X connect 32 0 8 0;
+#X connect 33 0 26 0;
