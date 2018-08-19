@@ -29,7 +29,7 @@
 #X obj 1078 187 makefilename %d-save;
 #X obj 167 61 tgl 15 0 \$0-quantizes \$0-quantizer quantize 17 7 0
 10 -195043 -1 -1 0 1;
-#X obj 167 79 tgl 15 0 \$0-guis \$0-guir show GUI 17 7 0 10 -195043
+#X obj 167 79 tgl 15 0 \$0-guis \$0-guir hide GUI 17 7 0 10 -195043
 -1 -1 0 1;
 #X obj 67 61 tgl 15 0 \$0-savings \$0-savingr auto save 17 7 0 10
 -195043 -1 -1 0 1;
