@@ -33,7 +33,7 @@
 -m BANK ▪ AUTO UPDATE ▪ SAVE NOW ▪ EDIT LIST ▪ CLEAR ** ☺ HELP;
 -m STATE ▪ AUTO SAVE ▪ AUTO PRINT ▪ PRINT STATE ▪ EDIT LIST ▪ INPUT LABEL ☺ HELP;
 -m SETTINGS TO ▪ THIS CONTEXT ▪ ALL CONTEXTS ▪ OUTLETS ▪ CUSTOM ** ☺ HELP;
--m MORE2 ► OVERLAY ► CYCLE REVERSAL ► MISCELLANEOUS ► TOGGLES ** ☺ HELP;
+-m MORE2 ► OVERLAY ► CYCLE REVERSAL ► MISCELLANEOUS ► TOGGLES ▪ REPEAT POINT ☺ HELP;
 -p list RULES : This lets you set up custom rules for how Context operates. \; BANK : These settings control the context-state bank saving. \; STATE : These settings let you view and control how the context state is saved. \; SETTINGS TO : This determines which context(s) the settings in this menu will send to.;
 -l SHORTCUT-1 1;
 -l SHORTCUT-2 2;
@@ -214,8 +214,8 @@
 -m REVERSE ▪ OFFSET PATTERN ▪ REVERSE LAST ** ** ** ☺ HELP;
 -m MISC ▪ INTERRUPTION ▪ GUI OFF ▪ FLOAT SEND ▪ FLOAT SEND CUSTOM ▪ SWITCH ☺ HELP;
 -m TOGGLES ▪ FORCE X ▪ FORCE Y ▪ LEGACY ** ** ☺ HELP;
-;
--p list OVERLAY determine some settings for the context overlay (embedding environment). \; CYCLE REVERSAL displays settings concerned with the behaviour of pattern toggles when the cycle time is reversed. \; TOGGLES lets you set that only one toggle on the x- or y- axis will ever be open.; 
+-f REPEAT rp #r;
+-p list OVERLAY determine some settings for the context overlay (embedding environment). \; CYCLE REVERSAL displays settings concerned with the behaviour of pattern toggles when the cycle time is reversed. \; TOGGLES lets you set that only one toggle on the x- or y- axis will ever be open. \; REPEAT POINT lets you set a custom point on the Pattern where the cycle will end. Positive numbers count from the beginning of the pattern toggle array while negative numbers count from the end.; 
 ;
 ;
 ;
