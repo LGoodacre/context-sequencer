@@ -1,4 +1,4 @@
-#N canvas 161 236 450 298 10;
+#N canvas 126 214 450 298 10;
 #X declare -path ../;
 #X obj 151 25 shared ctxfiles/launch-share;
 #X msg 68 193 vis 1;
@@ -11,15 +11,6 @@
 #X obj 85 178 cyclone/zl iter 1;
 #X msg 320 30 symbol  ;
 #X obj 134 95 route bang;
-#X obj 893 187 ctxfiles/br2 demux 2 \; #f t \; #f gs :1f0 \; #f gs
-:1f1 \; #f gs :1f2 \; #f gs :1f3 \; #f gs :1f4 \; #f gs :1f5 \; #f
-gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
-#f gs :2f3 \; #f gs :2f4 \; #f gs :2f5 \; #f gs :2f6 \; #f gs :2f7
-\; #f gs :3f0 \; #f gs :3f1 \; #f gs :3f2 \; #f gs :3f3 \; #f gs :3f4
-\; #f gs :3f5 \; #f gs :3f6 \; #f gs :3f7 \; #f gs :4f0 \; #f gs :4f1
-\; #f gs :4f2 \; #f gs :4f3 \; #f gs :4f4 \; #f gs :4f5 \; #f gs :4f6
-\; #f gs :4f7 \; #f gs :qu \; #f gs :gui \; #f gs :sa \; #f gs :ac
-\; #f gs :m1 \; #f gs :tx \; #f gs propload;
 #X obj 893 164 ctxfiles/recompile \$0 lothr;
 #X obj 85 199 ctxfiles/br2 route 1 \; :1f0 gtfs \$0 #f 1f0 :s \; :1f1
 gtfs \$0 #f 1f1 :ss \; :1f2 gtfs \$0 #f 1f2 -send 2 \; :1f3 gtfs \$0
@@ -38,15 +29,25 @@ gtfs \$0 #f 4f2 30000 \; :4f3 gtfs \$0 #f 4f3 10000 \; :4f4 gtfs \$0
 #f 4f4 3000 \; :4f5 gtfs \$0 #f 4f5 1000 \; :4f6 gtfs \$0 #f 4f6 500
 \; :4f7 gtfs \$0 #f 4f7 1 \; :qu gtfs \$0 #f qu 0 \, :quantize #l \;
 :gui gtfs \$0 #f gui 0 \, :GUI #l \; :sa gtfs \$0 #f sa 1 \; :ac gtfs
-\$0 #f ac 0 \; :m1 gtfs \$0 #f m1 bang \; :tx gtfs \$0 #f tx 0 \; loadproperties
-tf \$0 #f \; ## s \$0-lothr, f 134;
+\$0 #f ac 0 \; :m1 gtfs \$0 #f m1 bang \; :tx gtfs \$0 #f tx 0 \; buffer
+gtfs \$0 #f buffer 20 \; loadproperties tf \$0 #f \; ## s \$0-lothr
+, f 134;
+#X obj 893 187 ctxfiles/br2 demux 2 \; #f t \; #f gs :1f0 \; #f gs
+:1f1 \; #f gs :1f2 \; #f gs :1f3 \; #f gs :1f4 \; #f gs :1f5 \; #f
+gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
+#f gs :2f3 \; #f gs :2f4 \; #f gs :2f5 \; #f gs :2f6 \; #f gs :2f7
+\; #f gs :3f0 \; #f gs :3f1 \; #f gs :3f2 \; #f gs :3f3 \; #f gs :3f4
+\; #f gs :3f5 \; #f gs :3f6 \; #f gs :3f7 \; #f gs :4f0 \; #f gs :4f1
+\; #f gs :4f2 \; #f gs :4f3 \; #f gs :4f4 \; #f gs :4f5 \; #f gs :4f6
+\; #f gs :4f7 \; #f gs :qu \; #f gs :gui \; #f gs :sa \; #f gs :ac
+\; #f gs :m1 \; #f gs :tx \; #f s buffertime%^% \; #f gs propload;
 #X connect 0 0 4 0;
-#X connect 1 0 6 0;
+#X connect 1 0 5 0;
 #X connect 1 1 2 0;
-#X connect 2 0 7 0;
+#X connect 2 0 6 0;
 #X connect 4 1 1 0;
-#X connect 6 0 5 0;
-#X connect 6 1 5 1;
+#X connect 5 0 7 0;
+#X connect 5 1 7 1;
 #X restore 301 215 pd messages;
 #N canvas 67 87 450 300 scales 0;
 #X obj 231 44 receive RRfBB%6;
@@ -179,12 +180,11 @@ tf \$0 #f \; ## s \$0-lothr, f 134;
 #X connect 7 0 8 0;
 #X connect 8 0 5 1;
 #X restore 301 171 pd MIDI text;
-#N canvas 494 118 591 544 cell 1;
+#N canvas 296 110 591 544 cell 0;
 #X obj 125 76 receive cellbuff*u(i;
 #X obj 144 192 spigot 1;
 #X obj 125 99 t b b l;
 #X obj 125 122 t f;
-#X obj 144 237 metro 50;
 #X obj 189 214 receive buffertime%^%;
 #X obj 267 76 text define cellbuff((();
 #X obj 164 122 text set cellbuff((() 1e+13;
@@ -201,31 +201,32 @@ tf \$0 #f \; ## s \$0-lothr, f 134;
 #X obj 125 45 clone ctlbuff 80;
 #X text 92 403 x \, y \, col (v) \, channel;
 #X obj 228 462 noteout 1;
-#X obj 352 341 print outt;
+#X obj 144 237 metro 20;
 #X connect 0 0 2 0;
-#X connect 1 0 4 0;
+#X connect 1 0 20 0;
 #X connect 2 0 3 0;
 #X connect 2 1 1 0;
-#X connect 2 2 7 0;
+#X connect 2 2 6 0;
 #X connect 3 0 1 1;
-#X connect 4 0 8 0;
-#X connect 5 0 4 1;
+#X connect 4 0 20 1;
+#X connect 7 0 8 0;
 #X connect 8 0 9 0;
-#X connect 9 0 10 0;
-#X connect 9 0 21 0;
-#X connect 10 0 12 0;
-#X connect 10 1 13 0;
-#X connect 11 0 1 1;
-#X connect 12 0 11 0;
-#X connect 12 1 4 0;
+#X connect 9 0 11 0;
+#X connect 9 1 12 0;
+#X connect 10 0 1 1;
+#X connect 11 0 10 0;
+#X connect 11 1 20 0;
+#X connect 12 0 13 0;
+#X connect 12 1 15 0;
 #X connect 13 0 14 0;
-#X connect 13 1 16 0;
-#X connect 14 0 15 0;
-#X connect 16 0 17 0;
-#X connect 16 1 17 1;
-#X connect 16 2 20 1;
-#X connect 16 3 20 2;
-#X connect 17 0 20 0;
+#X connect 15 0 16 0;
+#X connect 15 1 16 1;
+#X connect 15 2 19 1;
+#X connect 15 3 19 2;
+#X connect 16 0 19 0;
+#X connect 20 0 7 0;
 #X restore 300 149 pd cell buffer;
+#X obj 68 125 array define -k padd(())) 8;
+#A 0 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
