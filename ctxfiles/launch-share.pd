@@ -1,4 +1,4 @@
-#N canvas 252 187 450 298 10;
+#N canvas 205 187 450 298 10;
 #X declare -path ../;
 #X obj 151 25 shared ctxfiles/launch-share;
 #X msg 68 193 vis 1;
@@ -231,7 +231,7 @@ gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
 #X connect 20 0 7 0;
 #X restore 300 149 pd cell buffer;
 #X obj 68 125 array define -k padd(())) 8;
-#A 0 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5 -0.5;
+#A 0 -0.5 0 0 0 0 0 0 0;
 #X obj 68 103 array define padd2(())) 8;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
