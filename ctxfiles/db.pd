@@ -1,4 +1,4 @@
-#N canvas 67 358 756 380 10;
+#N canvas 627 118 756 380 10;
 #X obj 126 20 inlet;
 #X obj 177 20 inlet;
 #X obj 196 100 f;
@@ -24,7 +24,8 @@ buffer time);
 #X obj 452 196 inlet;
 #X obj 419 247 s \$1;
 #X obj 196 278 t f f b;
-#X obj 241 301 s bfclear(()));
+#X obj 205 354 outlet;
+#X text 253 355 clear buffer;
 #X connect 0 0 19 0;
 #X connect 1 0 20 0;
 #X connect 2 0 17 0;
