@@ -1,4 +1,4 @@
-#N canvas 115 374 450 298 10;
+#N canvas 67 374 450 298 10;
 #X declare -path ../;
 #X obj 151 25 shared ctxfiles/launch-share;
 #X msg 68 193 vis 1;
@@ -184,7 +184,7 @@ gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
 #X connect 9 1 10 0;
 #X connect 11 0 2 0;
 #X restore 301 171 pd MIDI text;
-#N canvas 236 198 591 544 cell 1;
+#N canvas 95 198 591 544 cell 0;
 #X obj 127 36 receive cellbuff*u(i;
 #X obj 144 242 spigot 1;
 #X obj 127 192 t f;
