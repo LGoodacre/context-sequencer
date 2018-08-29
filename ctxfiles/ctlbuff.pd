@@ -1,4 +1,4 @@
-#N canvas 746 147 620 528 10;
+#N canvas 699 147 620 528 10;
 #X obj 264 6 loadbang;
 #X obj 264 29 f \$1;
 #X obj 264 52 t f f;
@@ -24,6 +24,7 @@
 #X obj 270 465 pack f f f;
 #X text 130 500 cell \, colour \, channel;
 #X obj 351 246 * 10;
+#X obj 393 313 inlet;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 18 0;
@@ -51,3 +52,4 @@
 #X connect 21 0 22 0;
 #X connect 22 0 20 0;
 #X connect 24 0 10 1;
+#X connect 25 0 17 1;
