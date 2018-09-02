@@ -1,0 +1,76 @@
+#N canvas 331 97 776 565 10;
+#X obj 187 525 dac~;
+#X obj 48 18 cnv 15 352 62 empty empty empty 20 12 0 14 -99865 -66577
+0;
+#X obj 43 13 cnv 15 352 62 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 44 14 cnv 15 350 60 empty empty context lesson 5 7 30 0 34
+-225792 -1 0;
+#X obj 426 22 helpfiles/docfiles/help-display \$0;
+#N canvas 285 117 450 362 follow-ups 0;
+#X text 24 25 1: Instead of a factor of 2 \, try a factor of 3 (:k
+3);
+#X text 24 68 2: Turn the delay mode to Random and play with the Random
+timing options.;
+#X text 28 142 3: Give random interval timings to Contexts in a Markov
+chain.;
+#X obj 107 44 else/openfile ../links/calculation.html -h see Context
+Manual entry on Calculation;
+#X obj 107 104 else/openfile ../links/random_mode.html -h see Context
+Manual entry on Random Timing;
+#X obj 286 179 else/openfile lesson_04.pd -h see Lesson 4;
+#X restore 597 466 pd follow-ups / challenges;
+#X obj 538 41 ctxfiles/license;
+#X obj 261 321 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 279 343 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 313 317 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#N canvas 481 252 450 300 how 0;
+#X text 81 30 Create an object [context :K 3 :k 2];
+#X text 82 56 OR;
+#X text 80 81 1: Create [context] \; 2: Go to Properties-->Timing-->Calculation
+\; 3: Set Calculation Mode to 3 (^). \; 4: Set Factor to 2 (it should
+be there by default though).;
+#X restore 537 497 pd how can I create this for myself?;
+#X obj 187 446 helpfiles/docfiles/snare;
+#X obj 187 497 *~ 0.5;
+#X obj 223 475 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 187 425 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 187 401 receive snare-;
+#X msg 600 198 \; context stop;
+#X obj 311 356 bng 8 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 44 96 CREATING MUSICAL TIME INTERVALS;
+#X obj 260 310 context :j 1.5 0 0 :k 2 :n ' snare ' :x = 5 :y = 1 :K
+3 :ID 1;
+#X msg 260 235 :te \$1;
+#X obj 260 214 nbx 5 14 -1e+37 1e+37 0 1 empty empty empty 0 -8 0 10
+-262144 -1 -1 100 256;
+#X msg 14 210 Change the number box to alter the cycle time. Instead
+of denoting the number of seconds \, 0 = 1 second \, 1 = 2 seconds
+\, 3 = 4 seconds \, 4 = 8 seconds \, etc., f 29;
+#X msg 340 278 This toggle is looping Context.;
+#X msg 414 306 This toggle is sending a message to the dtum;
+#X msg 18 320 Double click here to start;
+#X text 47 119 The float-atom box (top-left of Context) measures time
+in seconds \, but it is often more useful to measure music in quarter
+notes \, half notes \, etc. This patch shows how to represent musical
+time intervals with Context., f 63;
+#X text 314 211 Use the :te setting to keep the intervals but change
+the tempo., f 22;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
+#X connect 12 0 0 1;
+#X connect 13 0 12 1;
+#X connect 14 0 11 0;
+#X connect 15 0 14 0;
+#X connect 20 0 19 2;
+#X connect 21 0 20 0;
+#X connect 22 0 7 0;
+#X connect 23 0 9 0;
+#X connect 24 0 17 0;
+#X connect 25 0 8 0;

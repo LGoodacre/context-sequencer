@@ -1,4 +1,4 @@
-#N canvas 496 89 776 613 10;
+#N canvas 486 89 776 613 10;
 #X obj 191 520 dac~;
 #X obj 197 474 helpfiles/docfiles/glock~ 1;
 #X obj 197 413 receive c1-;
@@ -15,10 +15,10 @@
 context/lessons) and save this patch there.;
 #X text 37 31 1: Change the "beat-slice" pattern.;
 #X text 37 52 2: Make the "beat-slice" pattern random;
-#X obj 37 72 else/openfile ../helpfiles/starting_and_stopping.pd -h
-3: Make the basic melody (c1) play backwards.;
 #X text 37 94 4: Add another layer \, so that you have c3 beat-slicing
 c2 beat-slicing c1.;
+#X obj 37 72 else/openfile ../starting_and_stopping.pd -h 3: Make the
+basic melody (c1) play backwards.;
 #X restore 545 542 pd follow-ups / challenges;
 #X obj 538 41 ctxfiles/license;
 #X text 44 96 USING ONE CONTEXT TO CONTROL ANOTHER (BEAT-SLICING);
