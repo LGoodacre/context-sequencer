@@ -1,4 +1,4 @@
-#N canvas 121 113 949 560 10;
+#N canvas 74 113 949 560 10;
 #X obj 9 485 ctxfiles/license;
 #N canvas 67 226 824 371 grid 0;
 #X obj 834 -27 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -394,26 +394,21 @@ different instances of [control] in different patches. To do this \,
 click on both the up and down (or left and right) buttons together.
 ;
 #X restore 357 231 position-selectors;
-#N canvas 299 154 450 390 (subpatch) 0;
-#X obj 377 328 outlet;
-#X text 13 14 The function selectors work differently depending on
+#N canvas 252 154 450 255 (subpatch) 0;
+#X obj 372 211 outlet;
+#X obj 14 168 else/openfile helpfiles/links/function_selectors.html
+-h See the Context Manual entry on Function-selectors for more details.
+;
+#X text 13 14 The Function-selectors work differently depending on
 the mode. In mode 1 \, they are used to set the message that will be
 sent to a Context by clicking on it. In mode 2 \, they are used to
 send a start (or other) message to Context. In mode 3 \, they have
 the same assignments as in mode 1 \, but send to the selected Context
 immediately when pressed. In mode 4 they determine the time duration
 for the slider movement.;
-#X text 14 117 Function selectors each have a default message \, which
-is visible in the [control] patch. You can also edit the message by
-typing into the symbol atom. The symbol $ will be replaced with the
-\$0 value for the parent patch \, while % will be replaced with the
-ID number of the Context which is set to receive the message.;
-#X text 13 207 In Mode 2 \, the Function selector holds a second Function
-message \, which is used in :tx mode. By default \, this is the message
-":s p" which is used to start Context at a specific location \, but
-it could be replaced with anything. This message can take one variable
-\, specified by "%d". The variable is substitued for a number according
-to which cell triggers the :tx message.;
+#X text 14 117 Function-selectors each have a default message for every
+mode \, which is visible in the [control] patch. You can also edit
+the message by typing into the symbol atom.;
 #X restore 774 336 function-selectors;
 #N canvas 67 87 450 105 (subpatch) 0;
 #X text 16 6 With quantize turned on (:qu 1) \, any :s or :ss command
