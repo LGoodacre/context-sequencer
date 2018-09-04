@@ -1,6 +1,6 @@
 #N canvas 67 339 963 416 10;
 #X declare -lib zexy -path zexy -path ./;
-#N canvas 67 209 974 493 move 0;
+#N canvas 67 87 1299 681 move 1;
 #X obj 117 100 bng 17 250 50 0 \$0v empty ▼ 6 8 0 10 -262144 -1 -1
 ;
 #X obj 100 100 bng 17 250 50 0 \$0^ empty ▲ 6 7 0 10 -262144 -1 -1
@@ -402,6 +402,8 @@ with the movement thresholds \, return the bang.;
 #X msg 414 -187 set 1;
 #X obj 328 58 sel 0;
 #X obj 328 13 f;
+#X obj 885 -143 receive 9-9-buff^&*;
+#X text 937 -121 prevent error message;
 #X connect 0 0 193 0;
 #X connect 1 0 193 1;
 #X connect 2 0 166 0;
