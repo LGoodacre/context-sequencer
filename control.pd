@@ -1,6 +1,6 @@
 #N canvas 67 331 963 416 10;
 #X declare -lib zexy -path zexy -path ./;
-#N canvas 67 87 1299 681 move 0;
+#N canvas 67 87 1299 681 move 1;
 #X obj 117 100 bng 17 250 50 0 \$0v empty ▼ 6 8 0 10 -262144 -1 -1
 ;
 #X obj 100 100 bng 17 250 50 0 \$0^ empty ▲ 6 7 0 10 -262144 -1 -1
@@ -609,8 +609,8 @@ with the movement thresholds \, return the bang.;
 #X connect 169 2 170 0;
 #X connect 171 0 168 0;
 #X connect 171 1 214 0;
-#X connect 172 0 183 0;
-#X connect 172 1 168 0;
+#X connect 172 0 168 0;
+#X connect 172 1 183 0;
 #X connect 174 0 175 0;
 #X connect 175 0 176 0;
 #X connect 175 1 177 0;
@@ -967,7 +967,7 @@ with the movement thresholds \, return the bang.;
 #X connect 86 2 87 0;
 #X connect 87 0 21 0;
 #X restore 433 157 pd right-column;
-#N canvas 416 155 888 567 interpret-button 1;
+#N canvas 369 155 888 567 interpret-button 0;
 #X obj 226 -113 receive \$0-press;
 #X obj 251 307 route 1;
 #X text 406 -86 receive button press;
