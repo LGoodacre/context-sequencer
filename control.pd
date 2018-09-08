@@ -1,6 +1,6 @@
-#N canvas 67 339 963 416 10;
+#N canvas 67 331 963 416 10;
 #X declare -lib zexy -path zexy -path ./;
-#N canvas 67 87 1299 681 move 0;
+#N canvas 67 87 1299 681 move 1;
 #X obj 117 100 bng 17 250 50 0 \$0v empty ▼ 6 8 0 10 -262144 -1 -1
 ;
 #X obj 100 100 bng 17 250 50 0 \$0^ empty ▲ 6 7 0 10 -262144 -1 -1
@@ -617,7 +617,7 @@ with the movement thresholds \, return the bang.;
 #X connect 173 2 174 0;
 #X connect 175 0 172 0;
 #X connect 175 1 220 0;
-#X connect 176 0 220 0;
+#X connect 176 0 187 0;
 #X connect 176 1 172 0;
 #X connect 178 0 179 0;
 #X connect 179 0 180 0;
@@ -2414,7 +2414,7 @@ y accuracy \, ID \, colour \, \$0, f 77;
 #X connect 40 1 42 0;
 #X connect 40 2 41 0;
 #X restore 560 237 pd on-off;
-#N canvas 244 149 847 606 mode-3 1;
+#N canvas 234 141 847 606 mode-3 0;
 #X obj 314 41 receive \$0-mixon;
 #X obj 314 63 * 4;
 #X obj 108 57 receive \$0-lshift-3;
