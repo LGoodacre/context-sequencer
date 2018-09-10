@@ -1,0 +1,104 @@
+top-row 104 105 106 107 108 109 110 111    right column;
+
+8th-row 81  82  83  84  85  86  87  88     89;
+7th-row 71  72  73  74  75  76  77  78     79;
+6th-row 61  62  63  64  65  66  67  68     69;
+5th-row 51  52  53  54  55  56  57  58     59;
+4th-row 41  42  43  44  45  46  47  48     49;
+3rd-row 31  32  33  34  35  36  37  38     39;
+2nd-row 21  22  23  24  25  26  27  28     29;
+1st-row 11  12  13  14  15  16  17  18     19;
+
+faders 21 22 23 24 25 26 27 28;
+
+***SysEx Settings***;
+		
+buffer-time: 20;
+
+SysEx-header: 240 0 32 41 2 24;
+
+Force-SysEx-when-possible: 0
+
+set-LED-SysEx-prefix:          10
+set-all-LED-SysEx-prefix:      14
+flash-LED-SysEx-prefix:        35
+pulse-LED-SysEx-prefix:        40
+scroll-text-SysEx-prefix:      20
+layout-selection-SysEx-prefix: 34
+fader-setup-SysEx-prefix:      43;
+
+
+
+--------------------------------------------
+
+** Everything in this file above the dotted is a system setting, so be careful to keep the formatting intact (especially the semi-colons). **
+
+At the top is the default MIDI layout for the Novation Launchpad MK 2 (Session view). You can edit the numbers if they do not match the layout on your Launchpad.
+
+Beneath this are the System Exclusive codes for the Launchpad MK 2. You can find the values for your device in the Launchpad Ptorgammers Reference Manual. You can change the "force-SysEx-when-possible" setting to determine whether cells are lit via SysEx messages (1) or normal MIDI channels (1). This may affect the how well [control] buffers.
+
+--------------------------------------------
+
+Below is the default layout for the Launchpad Mini. You can copy this to the top of the file in order to make [control] work with the Mini. (CAUTION: may not work!)
+
+top-row 104 105 106 107 108 109 110 111     right column;
+
+8th-row 0   1   2   3   4   5   6   7       8;
+7th-row 16  17  18  19  20  21  22  23      24;
+6th-row 32  33  34  35  36  37  38  39      40;
+5th-row 48  49  50  51  52  53  54  55      56;
+4th-row 64  65  66  67  68  69  70  71      72;
+3rd-row 80  81  82  83  84  85  86  87      88;
+2nd-row 96  97  98  99  100 101 102 103     104;
+1st-row 112 113 114 115 116 117 118 119     120;
+
+faders 21 22 23 24 25 26 27 28;
+
+***SysEx Settings***;
+				
+buffer-time: 20;
+
+SysEx-header: ????;
+
+Force-SysEx-when-possible: 0
+
+set-LED-SysEx-prefix:          10
+set-all-LED-SysEx-prefix:      14
+flash-LED-SysEx-prefix:        35
+pulse-LED-SysEx-prefix:        40
+scroll-text-SysEx-prefix:      20
+layout-selection-SysEx-prefix: 34
+fader-setup-SysEx-prefix:      43;
+
+--------------------------------------------
+
+Below is the default layout for the Launchpad Pro. You can copy this to the top of the file in order to make [control] work with the Pro. 
+
+top-row 91  92  93  94  95  96  97  98     right column;
+
+8th-row 81  82  83  84  85  86  87  88     89;
+7th-row 71  72  73  74  75  76  77  78     79;
+6th-row 61  62  63  64  65  66  67  68     69;
+5th-row 51  52  53  54  55  56  57  58     59;
+4th-row 41  42  43  44  45  46  47  48     49;
+3rd-row 31  32  33  34  35  36  37  38     39;
+2nd-row 21  22  23  24  25  26  27  28     29;
+1st-row 11  12  13  14  15  16  17  18     19;
+
+faders 21 22 23 24 25 26 27 28;
+
+***SysEx Settings***;
+				
+buffer-time: 20;
+
+SysEx-header: 240 0 32 41 2 16;
+
+Force-SysEx-when-possible: 0
+
+set-LED-SysEx-prefix:          10
+set-all-LED-SysEx-prefix:      14
+flash-LED-SysEx-prefix:        35
+pulse-LED-SysEx-prefix:        40
+scroll-text-SysEx-prefix:      20
+layout-selection-SysEx-prefix: 34
+fader-setup-SysEx-prefix:      43;

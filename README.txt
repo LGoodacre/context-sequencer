@@ -129,6 +129,7 @@ list-abs/list-map
 list-abs/list-pad
 list-abs/list-replace
 zexy/demux
+zexy/drip
 zexy/l2s
 zexy/msgfile
 zexy/mux
