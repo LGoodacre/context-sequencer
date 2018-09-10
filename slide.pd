@@ -1,4 +1,4 @@
-#N canvas 67 87 1299 681 10;
+#N canvas 102 343 974 493 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 100 -100 vsl 18 101 0 100 0 0 \$0-ls \$0-lr 0 1 100 1 7 -262144
 -1 -1 0 1;
@@ -94,8 +94,8 @@
 #X obj 115 465 ctxfiles/share ctxfiles/slideshare;
 #X obj 947 -150 receive slidemodeRR&&B;
 #X obj 515 -12 demux 0 1 2;
-#X obj 956 68 f;
-#X obj 1023 74 f;
+#X obj 956 -32 f;
+#X obj 1023 -26 f;
 #X obj 947 -127 t b f f;
 #X obj 966 -73 route 0 1 2;
 #X obj 966 -96 zexy/pack 0 send \$0-sett;
@@ -104,6 +104,17 @@
 #X obj 515 14 t b f f f b f;
 #X obj 515 -34 t f f;
 #X obj 853 27 max 1;
+#X obj 1142 -180 loadbang;
+#X obj 1142 -134 t f f;
+#X obj 1182 -134 + 1;
+#X obj 1182 -86 s slideID())));
+#X obj 1142 -157 v slideID());
+#X obj 951 2 t f f f;
+#X obj 1023 0 t b f f;
+#X obj 1023 84 +;
+#X obj 1023 149 array set slideID())))(;
+#X obj 1049 84 iemguts/closebang;
+#X obj 1049 107 t f;
 #X connect 2 0 29 0;
 #X connect 2 0 33 0;
 #X connect 2 0 43 0;
@@ -211,6 +222,8 @@
 #X connect 88 0 96 0;
 #X connect 88 1 89 0;
 #X connect 88 2 90 0;
+#X connect 89 0 104 0;
+#X connect 90 0 105 0;
 #X connect 91 1 93 0;
 #X connect 91 2 88 1;
 #X connect 92 0 45 0;
@@ -227,4 +240,16 @@
 #X connect 97 0 88 0;
 #X connect 97 1 75 0;
 #X connect 98 0 73 0;
+#X connect 99 0 103 0;
+#X connect 100 0 107 1;
+#X connect 100 1 101 0;
+#X connect 101 0 103 0;
+#X connect 101 0 102 0;
+#X connect 103 0 100 0;
+#X connect 104 0 106 0;
+#X connect 105 0 106 0;
+#X connect 105 1 106 1;
+#X connect 106 0 107 0;
+#X connect 108 0 109 0;
+#X connect 109 0 107 0;
 #X coords 0 -1 1 1 18 106 2 100 -102;
