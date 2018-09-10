@@ -1,4 +1,4 @@
-#N canvas 67 212 635 537 10;
+#N canvas 590 231 635 537 10;
 #X obj 342 99 symbol \$0-nope;
 #X obj 360 145 receive \$0-nope;
 #X obj 315 77 t b b;
@@ -19,6 +19,14 @@
 #X msg 295 311 loadbang;
 #X obj 412 260 ggee/getdir 1;
 #X obj 373 9 inlet;
+#X obj 145 118 iemguts/closebang;
+#X obj 145 221 f 1;
+#X obj 100 248 spigot 1;
+#X obj 162 188 s \$1-dd;
+#X obj 76 188 receive \$1-dd;
+#X obj 145 141 t b b f b;
+#X obj 196 164 s \$1-d;
+#X obj 100 271 s \$1-c;
 #X connect 0 0 12 0;
 #X connect 1 0 5 1;
 #X connect 2 0 5 0;
@@ -41,3 +49,11 @@
 #X connect 17 0 8 0;
 #X connect 18 0 14 0;
 #X connect 19 0 7 0;
+#X connect 20 0 25 0;
+#X connect 21 0 22 1;
+#X connect 22 0 27 0;
+#X connect 24 0 22 0;
+#X connect 25 0 21 0;
+#X connect 25 1 23 0;
+#X connect 25 2 22 1;
+#X connect 25 3 26 0;
