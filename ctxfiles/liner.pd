@@ -1,4 +1,4 @@
-#N canvas 165 265 1037 488 10;
+#N canvas 67 265 1037 488 10;
 #X obj 145 51 unpack f f;
 #X obj 145 348 pack f f f;
 #X obj 202 245 *;
@@ -63,6 +63,8 @@
 #X obj 663 396 list split 1;
 #X obj 683 374 s \$1-roff;
 #X obj 644 352 t a a b;
+#X obj 173 326 * 44.1;
+#X obj 145 326 * 44.1;
 #X connect 0 0 11 0;
 #X connect 0 1 12 0;
 #X connect 1 0 3 0;
@@ -75,8 +77,8 @@
 #X connect 7 0 2 0;
 #X connect 8 0 0 0;
 #X connect 8 1 4 0;
-#X connect 9 0 1 1;
-#X connect 10 0 1 0;
+#X connect 9 0 63 0;
+#X connect 10 0 64 0;
 #X connect 11 0 10 0;
 #X connect 12 0 9 0;
 #X connect 13 0 14 0;
@@ -138,3 +140,5 @@
 #X connect 62 0 57 0;
 #X connect 62 1 60 0;
 #X connect 62 2 61 0;
+#X connect 63 0 1 1;
+#X connect 64 0 1 0;
