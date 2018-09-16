@@ -1,4 +1,4 @@
-#N canvas 252 179 677 503 10;
+#N canvas 111 179 676 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -13,7 +13,7 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 141 -313 inlet;
-#N canvas 91 209 793 520 message 0;
+#N canvas 67 209 793 520 message 0;
 #X obj 343 17 inlet;
 #X obj 137 78 cyclone/zl iter 1;
 #X obj 343 39 t b a;
@@ -51,32 +51,34 @@
 -66577 0;
 #X obj 43 310 cnv 13 500 1 empty \$0-datagrid bottom_snap 18 -5 0 10
 -13330 -66577 0;
-#X obj 43 362 cnv 13 500 1 empty \$0-datagrid print 18 -5 0 10 -13330
+#X obj 43 375 cnv 13 500 1 empty \$0-datagrid print 18 -5 0 10 -13330
 -66577 0;
-#X obj 43 375 cnv 13 500 1 empty \$0-datagrid save-list 18 -5 0 10
+#X obj 43 388 cnv 13 500 1 empty \$0-datagrid save-list 18 -5 0 10
 -13330 -66577 0;
 #X obj 393 17 receive \$0-anyin;
 #X obj 43 323 cnv 13 500 1 empty \$0-datagrid editable 18 -5 0 10 -13330
 -66577 0;
 #X obj 176 17 iemguts/oreceive nop;
 #X obj 176 -6 receive \$0-myname;
-#X obj 43 388 cnv 13 500 1 empty \$0-datagrid set 18 -5 0 10 -13330
+#X obj 43 401 cnv 13 500 1 empty \$0-datagrid set 18 -5 0 10 -13330
 -66577 0;
-#X obj 43 401 cnv 13 500 1 empty \$0-datagrid save 18 -5 0 10 -13330
+#X obj 43 414 cnv 13 500 1 empty \$0-datagrid save 18 -5 0 10 -13330
 -66577 0;
 #X obj 43 336 cnv 13 500 1 empty \$0-datagrid saveable 18 -5 0 10 -13330
 -66577 0;
-#X obj 43 414 cnv 13 500 1 empty \$0-datagrid clear 18 -5 0 10 -13330
+#X obj 43 427 cnv 13 500 1 empty \$0-datagrid clear 18 -5 0 10 -13330
 -66577 0;
 #X obj 43 349 cnv 13 500 1 empty \$0-datagrid resize 18 -5 0 10 -13330
 -66577 0;
 #X obj 414 63 ctxfiles/recompile \$0 xothr;
-#X obj 43 427 cnv 13 500 1 empty \$0-datagrid record 18 -5 0 10 -13330
+#X obj 43 440 cnv 13 500 1 empty \$0-datagrid record 18 -5 0 10 -13330
 -66577 0;
-#X obj 43 440 cnv 13 500 1 empty \$0-datagrid fit 18 -5 0 10 -13330
+#X obj 43 453 cnv 13 500 1 empty \$0-datagrid fit 18 -5 0 10 -13330
 -66577 0;
-#X obj 43 453 cnv 13 500 1 empty \$0-datagrid time-reset 18 -5 0 10
+#X obj 43 466 cnv 13 500 1 empty \$0-datagrid time-reset 18 -5 0 10
 -13330 -66577 0;
+#X obj 43 479 cnv 13 500 1 empty \$0-datagrid savefile 18 -5 0 10 -13330
+-66577 0;
 #X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
 #l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
 #f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
@@ -85,22 +87,22 @@ colour #l \; :s1 tfs \$0 #f s1 1 \; :s2 tfs \$0 #f s2 -1 \; :nm tfs
 tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
 \$0 #f p2 0 \; :p3 tfs \$0 #f p3 0 \; :p4 tfs \$0 #f p4 0 \; :ed tfst
 \$0 #f ed 1 \, edit #l \; :as tfst \$0 #f as 1 \; :sz tfst \$0 #f sz
-100 \, size #l \; print tf \$0 #f \; savelist tf \$0 #f \; set tf \$0
-#f \; save tf \$0 #f \; clear tf \$0 #f \; :r tf \$0 #f \, record #l
-\, crecord #l \; fit tf \$0 #f \; :ti tf \$0 #f \; :sa tf \$0 #f \,
-savefile #l \; ## s \$0-xothr;
+100 \, size #l \; :la tfs \$0 #f la bang \; print tf \$0 #f \; savelist
+tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0 #f \;
+:r tf \$0 #f \, record #l \, crecord #l \; fit tf \$0 #f \; :ti tf
+\$0 #f \; :sa tf \$0 #f \, savefile #l \; ## s \$0-xothr;
 #X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
 \; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
 #f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
 #f s \$0-:bs \; #f s \$0-:p1 \; #f s \$0-:p2 \; #f s \$0-:p3 \; #f
 s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-sizer \; #f
-s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem
-\; #f s \$0-clearme \; #f s \$0-record \; #f s \$0-fitme \; #f s \$0-retime
-\; #f s \$0-savefile \;;
-#X obj 43 466 cnv 13 500 1 empty \$0-datagrid savefile 18 -5 0 10 -13330
+s \$0-:la \; #f s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme
+\; #f s \$0-savem \; #f s \$0-clearme \; #f s \$0-record \; #f s \$0-fitme
+\; #f s \$0-retime \; #f s \$0-savefile \;;
+#X obj 43 362 cnv 13 500 1 empty \$0-datagrid label 18 -5 0 10 -13330
 -66577 0;
 #X connect 0 0 2 0;
-#X connect 1 0 36 0;
+#X connect 1 0 37 0;
 #X connect 2 0 32 0;
 #X connect 2 1 1 0;
 #X connect 13 0 14 0;
@@ -108,12 +110,12 @@ s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme \; #f s \$0-savem
 #X connect 23 0 2 0;
 #X connect 25 0 2 0;
 #X connect 26 0 25 0;
-#X connect 32 0 37 0;
-#X connect 32 1 37 1;
+#X connect 32 0 38 0;
+#X connect 32 1 38 1;
 #X restore 214 -291 pd message;
 #X obj 0 -143 r~ \$0-too;
 #X obj 1 -232 iemguts/canvasargs;
-#N canvas 653 207 450 444 loadbang 0;
+#N canvas 606 207 450 444 loadbang 0;
 #X obj 184 165 s \$0-lb;
 #X obj 152 66 ctxfiles/myinit 3;
 #X obj 152 41 ctxfiles/dvi \$0 4;
@@ -185,7 +187,7 @@ context) if not.;
 #X connect 32 1 31 0;
 #X restore 214 -335 pd loadbang;
 #X obj 1 -210 s \$0-canvass;
-#N canvas 67 135 1079 601 tabload 0;
+#N canvas 245 225 1079 601 tabload 0;
 #X obj 401 433 soundfiler;
 #X obj 7 396 ctxfiles/sp 13;
 #X obj 420 546 s \$0-sizer;
@@ -279,6 +281,8 @@ context) if not.;
 #X obj 855 421 s \$0-dirt;
 #X obj 314 25 receive \$0-:lo;
 #X obj 314 50 t b s s;
+#X obj 234 102 receive \$0-:la;
+#X obj 234 125 route bang;
 #X connect 0 0 88 0;
 #X connect 0 1 63 0;
 #X connect 1 0 40 0;
@@ -386,8 +390,11 @@ context) if not.;
 #X connect 92 0 44 0;
 #X connect 92 1 32 0;
 #X connect 92 2 29 0;
+#X connect 93 0 94 0;
+#X connect 94 0 60 0;
+#X connect 94 1 15 0;
 #X restore 215 -136 pd tabload;
-#N canvas 564 267 466 381 tablelable 0;
+#N canvas 423 267 466 381 tablelable 0;
 #X msg 239 308 rename \$1;
 #X obj 207 284 s \$0-name;
 #X obj 160 76 + 1;
@@ -623,7 +630,7 @@ context) if not.;
 #X obj 1 -188 iemguts/propertybang;
 #X obj 1 -166 s \$0-prop;
 #X obj 1 -254 receive \$0-iemargr;
-#N canvas 300 160 699 300 set 1;
+#N canvas 253 160 699 300 set 0;
 #X obj 140 56 receive \$0-setme;
 #X obj 140 78 route *;
 #X obj 186 100 cyclone/zl iter 2;
@@ -967,7 +974,7 @@ context) if not.;
 #X connect 3 0 1 0;
 #X connect 5 0 4 0;
 #X restore 214 -269 pd print;
-#N canvas 375 211 510 392 canvas 0;
+#N canvas 328 211 510 392 canvas 0;
 #N canvas 225 170 1011 548 c-movement 0;
 #X obj 331 -7 inlet height;
 #X obj 256 -9 inlet;
@@ -1290,14 +1297,14 @@ context) if not.;
 #X connect 8 1 0 1;
 #X connect 8 2 8 1;
 #X restore 216 -92 pd canvas;
-#N canvas 712 123 450 300 saving 0;
+#N canvas 665 123 450 300 saving 0;
 #X obj 129 92 receive \$0-savelist;
 #X msg 129 114 click;
 #X obj 129 136 text define -k \$0-save;
 #A set \; %^ :lo bang \; %^ :x1 0 \; %^ :x2 0 \; %^ :y1 0 \; %^ :y2
 0 \; %^ :c 17 \; %^ :s1 1 \; %^ :s2 -1 \; %^ :nm 1 \; %^ :li 0 \; %^
 :br 44100 \; %^ :p1 0 \; %^ :p2 0 \; %^ :p3 0 \; %^ :p4 0 \; %^ :ed
-1 \; %^ :as 1 \; %^ :sz 100 \;;
+1 \; %^ :as 1 \; %^ :sz 100 \; %^ :la bang \;;
 #X obj 128 70 ctxfiles/saver \$0 lapp 3;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
