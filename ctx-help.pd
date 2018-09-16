@@ -19,7 +19,7 @@
 #X text 26 92 [ctx] is an embeddable object which creates audio inlet~s
 or outlet~s in Context. [ctx] must be created and saved inside the
 Context overlay in order to work. It takes one mandatory argumet: "inlet~"
-or "outlet"., f 53;
+or "outlet~"., f 53;
 #X obj 136 331 context :H 10 :io io :ID 1 :ol 1 :sw 1 5 obj 252 55
 ctx inlet~ 5 obj 251 117 ctx outlet~ 5 connect 3 0 4 0;
 #X floatatom 160 196 5 0 0 0 - - -, f 5;
