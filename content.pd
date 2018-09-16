@@ -1,4 +1,4 @@
-#N canvas 111 179 676 503 10;
+#N canvas 67 179 676 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -13,7 +13,7 @@
 #X restore 0 3 graph;
 #X obj 0 -117 outlet~;
 #X obj 141 -313 inlet;
-#N canvas 67 209 793 520 message 0;
+#N canvas 384 224 793 520 message 0;
 #X obj 343 17 inlet;
 #X obj 137 78 cyclone/zl iter 1;
 #X obj 343 39 t b a;
@@ -79,6 +79,8 @@
 -13330 -66577 0;
 #X obj 43 479 cnv 13 500 1 empty \$0-datagrid savefile 18 -5 0 10 -13330
 -66577 0;
+#X obj 43 362 cnv 13 500 1 empty \$0-datagrid label 18 -5 0 10 -13330
+-66577 0;
 #X obj 137 102 ctxfiles/br2 route 1 \; :lo tfs \$0 #f lo clear \, load
 #l \; :x1 tfsn \$0 #f x1 0 \; :x2 tfsn \$0 #f x2 0 \; :y1 tfsn \$0
 #f y1 0 \; :y2 tfsn \$0 #f y2 0 \; :c tfs \$0 #f c 17 \, color #l \,
@@ -90,7 +92,10 @@ tfs \$0 #f br 44100 \, bitrate #l \; :p1 tfs \$0 #f p1 0 \; :p2 tfs
 100 \, size #l \; :la tfs \$0 #f la bang \; print tf \$0 #f \; savelist
 tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0 #f \;
 :r tf \$0 #f \, record #l \, crecord #l \; fit tf \$0 #f \; :ti tf
-\$0 #f \; :sa tf \$0 #f \, savefile #l \; ## s \$0-xothr;
+\$0 #f \; :sa tf \$0 #f \, savefile #l \; fetch tf \$0 #f \; ## s \$0-xothr
+;
+#X obj 43 492 cnv 13 500 1 empty \$0-datagrid fetch 18 -5 0 10 -13330
+-66577 0;
 #X obj 414 89 ctxfiles/br2 demux 2 \; #f t \; #f ll \$0 \; #f s \$0-:x1
 \; #f s \$0-:x2 \; #f s \$0-:y1 \; #f s \$0-:y2 \; #f s \$0-:cs \;
 #f s \$0-:s1s \; #f s \$0-:s2s \; #f s \$0-:ns \; #f s \$0-:lis \;
@@ -98,11 +103,19 @@ tf \$0 #f \; set tf \$0 #f \; save tf \$0 #f \; clear tf \$0 #f \;
 s \$0-:p4 \; #f s \$0-:eds \; #f s \$0-:ass \; #f s \$0-sizer \; #f
 s \$0-:la \; #f s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme
 \; #f s \$0-savem \; #f s \$0-clearme \; #f s \$0-record \; #f s \$0-fitme
-\; #f s \$0-retime \; #f s \$0-savefile \;;
-#X obj 43 362 cnv 13 500 1 empty \$0-datagrid label 18 -5 0 10 -13330
--66577 0;
+\; #f s \$0-retime \; #f s \$0-savefile \; #f s \$0-mfetch;
+#X obj 616 155 unpack s s;
+#X obj 673 179 makefilename \$0-%s-fetch;
+#X obj 616 133 receive \$0-mfetch;
+#X obj 616 198 send;
+#X obj 620 232 receive \$0-fetchno2;
+#X obj 620 254 unpack f s;
+#X obj 620 276 text get \$0-save;
+#X obj 620 343 send;
+#X obj 620 298 list trim;
+#X obj 620 320 route %^;
 #X connect 0 0 2 0;
-#X connect 1 0 37 0;
+#X connect 1 0 38 0;
 #X connect 2 0 32 0;
 #X connect 2 1 1 0;
 #X connect 13 0 14 0;
@@ -110,8 +123,19 @@ s \$0-:la \; #f s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme
 #X connect 23 0 2 0;
 #X connect 25 0 2 0;
 #X connect 26 0 25 0;
-#X connect 32 0 38 0;
-#X connect 32 1 38 1;
+#X connect 32 0 40 0;
+#X connect 32 1 40 1;
+#X connect 41 0 44 0;
+#X connect 41 1 42 0;
+#X connect 42 0 44 1;
+#X connect 43 0 41 0;
+#X connect 45 0 46 0;
+#X connect 46 0 47 0;
+#X connect 46 1 48 1;
+#X connect 47 0 49 0;
+#X connect 49 0 50 0;
+#X connect 50 0 48 0;
+#X connect 50 1 48 0;
 #X restore 214 -291 pd message;
 #X obj 0 -143 r~ \$0-too;
 #X obj 1 -232 iemguts/canvasargs;
@@ -507,7 +531,7 @@ context) if not.;
 -83 8 0 10 -262144 -1 -1;
 #X obj 401 210 iemguts/sendcanvas;
 #X obj 353 302 iemguts/receivecanvas 2;
-#X text 388 250 ctxfiles/menu \$0 :ts :t 40 15 points polygon curve
+#X text 388 250 ctxfiles/menu \$0 :ts :t 40 15 polygon points curve
 ;
 #X obj 471 124 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -541,7 +565,7 @@ context) if not.;
 #X obj 356 92 send;
 #X obj 323 -13 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 149 229 ctxfiles/menu \$0 :li :lis   points polygon curve;
+#X obj 149 229 ctxfiles/menu \$0 :li :lis   polygon points curve;
 #X obj 105 270 bng 14 250 50 0 \$0-bfit \$0ni fit to overlay 17 7
 0 10 -262144 -1 -1;
 #X obj 298 270 bng 14 250 50 0 \$0-bti \$0-ni normal speed -76 7 0
