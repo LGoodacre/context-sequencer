@@ -1,4 +1,4 @@
-#N canvas 365 232 605 425 10;
+#N canvas 224 232 605 425 10;
 #X declare -lib zexy -stdlib zexy -path ./;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -532,7 +532,12 @@
 #X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties
 130;
 #X obj -384 110 ctxfiles/gget \$0 2 7;
-#N canvas 654 295 450 300 context 1;
+#N canvas 513 295 450 300 context 1;
+#X obj 127 52 ctxfiles/embeded \$0 3;
+#X msg 103 19 obj 100 100 ctxfiles/contour-embed \$1 \; \$1-cemb-lb
+bang;
+#X connect 0 0 1 0;
+#X connect 1 0 0 0;
 #X restore -322 132 pd context integration;
 #X connect 3 0 21 0;
 #X connect 5 0 16 0;
