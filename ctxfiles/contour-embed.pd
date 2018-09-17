@@ -1,4 +1,4 @@
-#N canvas 356 338 666 364 10;
+#N canvas 215 338 666 364 10;
 #X obj 296 76 iemguts/canvasdelete 1;
 #X obj 296 53 receive \$1-delemb;
 #X obj 201 26 receive \$1-lbang;
@@ -12,6 +12,9 @@
 #X obj 221 254 s \$1-:y;
 #X obj 188 191 ctxfiles/c-move \$1 127 128 92 93 3 4 79;
 #X obj 201 49 del 100;
+#X obj 350 256 receive pd-\$1-paint;
+#X msg 350 279 \$3 \$4;
+#X obj 350 302 s \$1-pixsize;
 #X connect 1 0 0 0;
 #X connect 2 0 12 0;
 #X connect 3 0 7 0;
@@ -24,3 +27,5 @@
 #X connect 8 1 10 0;
 #X connect 11 0 8 0;
 #X connect 12 0 3 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;

@@ -115,7 +115,7 @@
 #X obj -384 -111 route bang;
 #X obj -314 -111 iemguts/canvasargs;
 #X obj -301 -188 receive \$0-iemargr;
-#N canvas 67 276 1090 472 canvas 0;
+#N canvas 325 257 1090 472 canvas 0;
 #X text 53 47 coords xfrom yfrom xto yto xsize ysize type xmargin ymargin
 ;
 #X obj 110 436 iemguts/sendcanvas 1;
@@ -208,7 +208,7 @@
 #X obj 304 171 f 128;
 #X msg 137 330 \; \$4-canvas vis_size \$7 \$8 \; \$4-arraysize coords
 0 \$9 \$6 \$5 1 1 2 0 0 \; pd-\$4-paint coords 0 0 \$1 \$2 \$1 \$2
-2 0 0 \; \$4-pixsize \$1 \$2;
+2 0 0;
 #X connect 2 0 8 0;
 #X connect 3 0 4 0;
 #X connect 3 1 4 1;
@@ -532,7 +532,7 @@
 #X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties
 130;
 #X obj -384 110 ctxfiles/gget \$0 2 7;
-#N canvas 137 295 450 300 context 1;
+#N canvas 90 295 450 300 context 1;
 #X obj 127 52 ctxfiles/embeded \$0 3 4 5;
 #X msg 103 9 obj 100 100 ctxfiles/contour-embed \$1;
 #X connect 0 0 1 0;
