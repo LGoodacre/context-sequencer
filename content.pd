@@ -1,4 +1,4 @@
-#N canvas 143 220 676 503 10;
+#N canvas 96 220 676 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -142,7 +142,7 @@ s \$0-:la \; #f s \$0-printall \; #f s \$0-savelist \; #f s \$0-setme
 #X restore 214 -291 pd message;
 #X obj 0 -143 r~ \$0-too;
 #X obj 1 -232 iemguts/canvasargs;
-#N canvas 559 207 450 444 loadbang 1;
+#N canvas 512 207 450 444 loadbang 0;
 #X obj 184 165 s \$0-lb;
 #X obj 152 66 ctxfiles/myinit 3;
 #X obj 60 155 del 1000;
@@ -1002,7 +1002,7 @@ context) if not.;
 #X connect 3 0 1 0;
 #X connect 5 0 4 0;
 #X restore 214 -269 pd print;
-#N canvas 93 211 510 392 canvas 0;
+#N canvas 67 211 510 392 canvas 1;
 #N canvas 178 170 782 433 c-movement 0;
 #X obj 201 225 s \$0-arrsize;
 #X msg 575 354 vis_size \$1 \$2;
@@ -1055,7 +1055,7 @@ context) if not.;
 #X obj 93 140 receive \$0-cpr;
 #X obj 68 119 receive \$0-created;
 #X obj 93 190 ctxfiles/m-interface \$0 2 56 30 3 48 22;
-#X obj 93 215 ctxfiles/c-move \$0 47 48 35 36 2 3;
+#X obj 93 215 ctxfiles/c-move \$0 47 48 35 36 2 3 22;
 #X connect 5 0 8 0;
 #X connect 6 0 5 0;
 #X connect 7 0 5 0;
