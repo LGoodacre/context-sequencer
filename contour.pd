@@ -1,4 +1,4 @@
-#N canvas 224 232 605 425 10;
+#N canvas 83 232 605 425 10;
 #X declare -lib zexy -stdlib zexy -path ./;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -333,7 +333,7 @@
 #X restore -384 132 pd canvas;
 #X obj -233 -20 namecanvas \$0-maincanvas;
 #X obj -233 -43 declare -lib zexy -stdlib zexy -path ./;
-#N canvas 466 163 708 471 inlets 0;
+#N canvas 419 163 708 471 inlets 0;
 #X obj 165 110 -;
 #X obj 165 132 until;
 #X obj 165 154 f;
@@ -354,30 +354,30 @@
 #X obj 63 146 s \$0-lob;
 #X obj 91 46 moses;
 #X obj 61 77 t f f f;
-#X obj 207 301 + 29;
-#X obj 227 278 + 30;
-#X obj 249 301 + 31;
 #X msg 165 349 obj \$2 -200 inlet \, obj \$2 -183 ctxfiles/io \$6 \$1
 \$7 \$8 \, obj \$2 -166 outlet \, connect \$3 0 \$4 0 \, connect \$4
 0 \$5 0;
 #X obj 165 327 pack f f f f f \$0 f 128, f 25;
 #X obj 312 302 receive \$0-:size;
 #X obj 318 120 receive \$0-:size;
+#X obj 207 301 + 30;
+#X obj 227 278 + 31;
+#X obj 249 301 + 32;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 0 8 0;
 #X connect 3 0 2 1;
-#X connect 5 0 24 1;
+#X connect 5 0 21 1;
 #X connect 6 0 7 0;
-#X connect 7 0 20 0;
-#X connect 7 1 21 0;
-#X connect 7 2 22 0;
-#X connect 8 0 24 0;
+#X connect 7 0 24 0;
+#X connect 7 1 25 0;
+#X connect 7 2 26 0;
+#X connect 8 0 21 0;
 #X connect 8 1 5 0;
 #X connect 8 2 6 0;
 #X connect 8 3 9 0;
-#X connect 9 0 24 6;
+#X connect 9 0 21 6;
 #X connect 10 0 12 0;
 #X connect 11 0 10 0;
 #X connect 11 1 10 1;
@@ -394,13 +394,13 @@
 #X connect 19 0 18 1;
 #X connect 19 1 2 1;
 #X connect 19 2 0 1;
-#X connect 20 0 24 2;
-#X connect 21 0 24 3;
-#X connect 22 0 24 4;
-#X connect 23 0 4 0;
-#X connect 24 0 23 0;
-#X connect 25 0 24 7;
-#X connect 26 0 11 0;
+#X connect 20 0 4 0;
+#X connect 21 0 20 0;
+#X connect 22 0 21 7;
+#X connect 23 0 11 0;
+#X connect 24 0 21 2;
+#X connect 25 0 21 3;
+#X connect 26 0 21 4;
 #X restore -385 -44 pd inlets;
 #X obj -384 -66 outlet~;
 #N canvas 67 381 585 365 init 0;
@@ -532,9 +532,9 @@
 #X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties
 130;
 #X obj -384 110 ctxfiles/gget \$0 2 7;
-#N canvas 513 295 450 300 context 1;
-#X obj 127 52 ctxfiles/embeded \$0 3;
-#X msg 103 19 obj 100 100 ctxfiles/contour-embed \$1 \; \$1-cemb-lb
+#N canvas 372 295 450 300 context 1;
+#X obj 127 52 ctxfiles/embeded \$0 3 4 5;
+#X msg 103 9 obj 100 100 ctxfiles/contour-embed \$1 \; \$1-c-lbang
 bang;
 #X connect 0 0 1 0;
 #X connect 1 0 0 0;
