@@ -1,4 +1,4 @@
-#N canvas 312 288 511 321 10;
+#N canvas 265 288 511 321 10;
 #X declare -lib zexy -path zexy -path ./;
 #N canvas 247 87 671 681 move 0;
 #X obj 88 67 spigot;
@@ -337,7 +337,6 @@
 #X connect 41 0 42 0;
 #X connect 42 0 6 0;
 #X restore 294 141 pd size;
-#X obj 294 29 ctxfiles/dvi \$0 3;
 #N canvas 657 364 450 351 save 0;
 #X obj 112 56 receive \$0-anyp;
 #X obj 112 171 del 1000;
@@ -379,8 +378,9 @@
 #X obj 340 73 ctxfiles/dvs \$0 backsplash;
 #X obj 100 198 ctxfiles/license;
 #X obj 110 171 declare -lib zexy -path zexy -path ./;
-#X connect 2 0 4 0;
-#X connect 4 0 1 0;
-#X connect 4 1 0 0;
-#X connect 4 2 5 0;
+#X obj 294 29 ctxfiles/dvi \$0 3 loadbang;
+#X connect 3 0 1 0;
+#X connect 3 1 0 0;
+#X connect 3 2 4 0;
+#X connect 7 0 3 0;
 #X coords 0 321 1 320 311 2 0;
