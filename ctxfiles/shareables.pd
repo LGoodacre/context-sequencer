@@ -1272,10 +1272,10 @@ tf \$0 #f \; -trigger tf \$0 #f \; -output tf \$0 #f \; -prepend tf
 #X obj 400 83 t b a;
 #X obj 342 174 ctxfiles/br2 route 1 \; -trigger tf \$0 #f \; -output
 tf \$0 #f \; -clear tf \$0 #f \; -start tf \$0 #f \; -mute tf \$0 #f
-\; ## s \$0-bothr;
+\; -smooth tf \$0 #f \; ## s \$0-bothr;
 #X obj 472 161 ctxfiles/br2 demux 2 \; #f t \; #f gs cr-trigger \;
 #f gs cr-output \; #f gs cr-clear \; #f gs cr-start \; #f gs cr-mute
-\;;
+\; #f gs cr-smooth;
 #X connect 0 0 3 0;
 #X connect 1 0 4 0;
 #X connect 2 0 5 0;
