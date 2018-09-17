@@ -1,7 +1,7 @@
-#N canvas 67 393 666 364 10;
+#N canvas 356 338 666 364 10;
 #X obj 296 76 iemguts/canvasdelete 1;
 #X obj 296 53 receive \$1-delemb;
-#X obj 188 119 receive \$1-lbang;
+#X obj 201 26 receive \$1-lbang;
 #X obj 188 144 iemguts/canvasposition 2;
 #X obj 35 73 route mouseup done-popup;
 #X obj 176 95 ctxfiles/deb 700;
@@ -11,8 +11,9 @@
 #X obj 158 254 s \$1-:x;
 #X obj 221 254 s \$1-:y;
 #X obj 188 191 ctxfiles/c-move \$1 127 128 92 93 3 4 79;
+#X obj 201 49 del 100;
 #X connect 1 0 0 0;
-#X connect 2 0 3 0;
+#X connect 2 0 12 0;
 #X connect 3 0 7 0;
 #X connect 4 2 5 0;
 #X connect 5 0 3 0;
@@ -22,3 +23,4 @@
 #X connect 8 0 9 0;
 #X connect 8 1 10 0;
 #X connect 11 0 8 0;
+#X connect 12 0 3 0;
