@@ -1,34 +1,34 @@
-#N struct 36284-big2 float x float y array 36284-array2 ^&*-dsmall2
+#N struct 29908-big2 float x float y array 29908-array2 ^&*-dsmall2
 ;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 36284-big1 float x float y array 36284-array1 ^&*-dsmall1
+#N struct 29908-big1 float x float y array 29908-array1 ^&*-dsmall1
 ;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 36384-big2 float x float y array 36384-array2 ^&*-dsmall2
+#N struct 29958-big2 float x float y array 29958-array2 ^&*-dsmall2
 ;
-#N struct 36384-big1 float x float y array 36384-array1 ^&*-dsmall1
+#N struct 29958-big1 float x float y array 29958-array1 ^&*-dsmall1
 ;
-#N struct 36429-big2 float x float y array 36429-array2 ^&*-dsmall2
+#N struct 30005-big2 float x float y array 30005-array2 ^&*-dsmall2
 ;
-#N struct 36429-big1 float x float y array 36429-array1 ^&*-dsmall1
+#N struct 30005-big1 float x float y array 30005-array1 ^&*-dsmall1
 ;
-#N struct 36477-big2 float x float y array 36477-array2 ^&*-dsmall2
+#N struct 30055-big2 float x float y array 30055-array2 ^&*-dsmall2
 ;
-#N struct 36477-big1 float x float y array 36477-array1 ^&*-dsmall1
+#N struct 30055-big1 float x float y array 30055-array1 ^&*-dsmall1
 ;
-#N struct 36528-big1 float x float y array 36528-array1 ^&*-dsmall1
+#N struct 30108-big1 float x float y array 30108-array1 ^&*-dsmall1
 ;
-#N struct 36579-big2 float x float y array 36579-array2 ^&*-dsmall2
+#N struct 30161-big2 float x float y array 30161-array2 ^&*-dsmall2
 ;
-#N struct 36579-big1 float x float y array 36579-array1 ^&*-dsmall1
+#N struct 30161-big1 float x float y array 30161-array1 ^&*-dsmall1
 ;
-#N struct 36627-big2 float x float y array 36627-array2 ^&*-dsmall2
+#N struct 30211-big2 float x float y array 30211-array2 ^&*-dsmall2
 ;
-#N struct 36627-big1 float x float y array 36627-array1 ^&*-dsmall1
+#N struct 30211-big1 float x float y array 30211-array1 ^&*-dsmall1
 ;
-#N struct 36676-big2 float x float y array 36676-array2 ^&*-dsmall2
+#N struct 30262-big2 float x float y array 30262-array2 ^&*-dsmall2
 ;
-#N struct 36676-big1 float x float y array 36676-array1 ^&*-dsmall1
+#N struct 30262-big1 float x float y array 30262-array1 ^&*-dsmall1
 ;
 #N canvas 67 145 860 592 10;
 #X obj 241 343 contour :x 227 :y 109 point1 0.310259 0.588334 0.669604
@@ -76,9 +76,9 @@ the curve changes -->, f 25;
 0;
 #X text 536 365 Contour autosaves \, so whatever you draw will reappear
 the next time you open the patch. Just press Ctrl + S !, f 23;
-#X obj 154 88 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
+#X obj 154 88 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
 20 12 0 14 -262144 -66577 0;
-#X obj 159 -2 cnv 15 15 15 empty \$0-banner ~~.~~.~~.~~.~~.~~.~~.~~.
+#X obj 159 -2 cnv 15 15 15 empty \$0-banner .~~.~~.~~.~~.~~.~~.~~.~~
 20 12 0 14 -262144 -66577 0;
 #N canvas 67 89 450 300 annimate 0;
 #X obj 100 100 tgl 10 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
@@ -126,14 +126,9 @@ because the values are stored in an array \, playback is relatively
 cheap., f 89;
 #X text 172 21 (  ) (  ), f 2;
 #X text 351 21  ) (  ) (, f 2;
-#N canvas 297 104 633 587 (subpatch) 0;
+#N canvas 250 104 633 587 (subpatch) 0;
 #X obj 40 146 contour point1 0.679688 0.927681 point2 0.0937505 0.928374
 ;
-#X text 189 147 Contour has a variety of options controlling its behaviour.
-To access the options \, right click on any contour object and select
-"properties". A menu window will appear with all the relevant options.
-To get rid of the window \, press the ^ button in the upper left \,
-or simply delete the object.;
 #X text 133 241 Contour's options are:;
 #X text 34 523 *Under some conditions \, curves which are defined by
 a high number of Bezier points may distort. Error correction fixes
@@ -152,6 +147,13 @@ how fast the array refreshes when the points are moved \; duplicate
 the y-axis \; ec : turn error correction on* \; lock : prevent end
 points from moving past one another \; name2 : add \$0 to the array
 name, f 74;
+#X text 176 139 Contour has a variety of options controlling its behaviour.
+To access the options \, right click on any contour object and select
+"properties". A menu window will appear with all the relevant options.
+To get rid of the window \, press the ^ button in the upper left \,
+or simply delete the object. You can also choose a condensed menu by
+clicking on the '()' button \, which will give you a smaller dialogue
+to create and destroy points., f 62;
 #X restore 54 452 options;
 #N canvas 213 183 762 514 (subpatch) 0;
 #X obj 221 161 contour :y1 0.1 point1 0.0390625 0.923652 0.226564 0.771372

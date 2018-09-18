@@ -1,4 +1,5 @@
-#N canvas 67 85 1299 683 10;
+#N canvas 67 87 1299 681 10;
+#X declare -lib zexy -path zexy;
 #X obj 62 54 cnv 15 328 111 empty empty empty 20 12 0 14 -151156 -66577
 0;
 #X obj 140 96 bng 14 250 50 0 \$0-e+ \$0f + 5 7 0 10 -151146 -1 -1
@@ -12,11 +13,11 @@
 #X obj 215 229 v \$0-en;
 #X obj 215 206 receive \$0-e+;
 #X obj 303 229 v \$0-en;
-#X obj 304 206 receive \$0-e-;
+#X obj 303 206 receive \$0-e-;
 #X obj 303 251 * -1;
 #X msg 248 299 point1 \$1;
 #X obj 483 251 * -1;
-#X obj 396 206 receive \$0-c+;
+#X obj 395 206 receive \$0-c+;
 #X obj 483 206 receive \$0-c-;
 #X obj 395 229 v \$0-cn;
 #X obj 483 229 v \$0-cn;
@@ -30,7 +31,7 @@
 #X floatatom 199 96 5 0 99999 1 points #0-sizer #0-sizes, f 5;
 #X floatatom 199 112 3 0 0 1 y-top #0-ytr #0-yts, f 3;
 #X floatatom 199 128 3 0 0 1 y-bottom #0-ybr #0-ybs, f 3;
-#X symbolatom 150 56 16 0 0 0 command #0-cin #0-cout, f 16;
+#X symbolatom 170 56 16 0 0 0 command #0-cin #0-cout, f 16;
 #X obj 64 56 bng 15 250 50 0 \$1-done \$0-f ^ 5 9 0 10 -151156 -1 -1
 ;
 #X obj 81 56 bng 15 250 50 0 \$0-help \$0-f ? 5 9 0 10 -151156 -1 -1
@@ -59,9 +60,9 @@
 #X msg 696 231 connect \$2 0 \$1 0;
 #X obj 696 253 iemguts/sendcanvas 1;
 #X obj 889 148 receive \$1-done;
-#X obj 427 22 iemguts/closebang;
-#X obj 427 44 t f;
-#X obj 427 66 s \$1-gone;
+#X obj 417 22 iemguts/closebang;
+#X obj 417 44 t f;
+#X obj 417 66 s \$1-gone;
 #X floatatom 131 149 8 0 0 0 colour #0-colr #0-cols, f 8;
 #X floatatom 199 144 5 0 0 1 speed #0-speedr #0-speeds, f 5;
 #X floatatom 352 56 5 0 0 0 PLAYBACK(ms) #0-timer #0-times, f 5;
@@ -127,13 +128,53 @@
 #X msg 730 279 1 x \, 2 y \, 3 size \, 4 yt \, 5 by \, 8 name \, 9
 col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 \, 15 scale \, 16 error \, 18 lock;
-#X obj 386 616 loadbang;
 #X obj 386 639 list append loadproperties \$0;
 #X obj 1051 141 receive \$0-loadstart;
 #X obj 1051 164 t b f;
 #X obj 1078 187 makefilename %d-save;
 #X text 82 94 end point;
 #X text 70 110 curve point;
+#X obj 62 172 cnv 15 52 20 empty empty empty 20 12 0 14 -151156 -66577
+0;
+#X obj 65 175 bng 14 250 50 0 \$0-a+ \$0f + 5 7 0 10 -151146 -1 -1
+;
+#X obj 81 175 bng 14 250 50 0 \$0-a- \$0f - 5 7 0 10 -151146 -1 -1
+;
+#X obj 97 175 bng 14 250 50 0 \$0-switch \$0f ^ 5 7 0 10 -191407 -1
+-1;
+#X obj 533 23 receive \$0-switch;
+#X obj 533 122 f;
+#X obj 533 145 ==;
+#X obj 403 123 demux;
+#X obj 443 148 demux;
+#X obj 403 98 receive \$0-a+;
+#X obj 443 123 receive \$0-a-;
+#X obj 533 168 sel 1;
+#X msg 572 168 label ~;
+#X msg 572 196 label ^;
+#X obj 1000 7 declare -lib zexy -path zexy;
+#X obj 98 56 bng 15 250 50 0 \$0-compress \$0-f () 3 8 0 8 -151156
+-1 -1;
+#X obj 584 115 spigot;
+#X obj 617 90 f 1;
+#X obj 550 72 del 200;
+#X obj 550 95 t f;
+#X obj 686 114 iemguts/sendcanvas;
+#X obj 717 -35 receive \$0-compress;
+#X obj 1000 31 ctxfiles/license;
+#X msg 706 88 menu-open \, coords 0 -1 1 1 330 113 2 61 53 \, vis 0
+;
+#X obj 757 4 list prepend \$1;
+#X obj 757 27 iemguts/canvasargs;
+#X obj 679 -12 f \$2;
+#X obj 679 31 sel 1;
+#X obj 717 -12 f 1;
+#X obj 533 46 t b b b f;
+#X obj 386 616 ctxfiles/myinit 2;
+#X obj 386 593 loadbang;
+#X msg 679 63 menu-open \, coords 0 -1 1 1 54 22 2 61 171 \, vis 0
+;
+#X obj 679 10 t f f;
 #X connect 5 0 10 0;
 #X connect 6 0 5 0;
 #X connect 7 0 9 0;
@@ -205,10 +246,47 @@ col \, 10 speed \, 11 time \, 12 duplicate \, 13 mirorx \, 14 mirrory
 #X connect 105 0 106 0;
 #X connect 106 0 41 0;
 #X connect 107 0 72 0;
-#X connect 108 0 109 0;
-#X connect 109 0 46 0;
-#X connect 110 0 111 0;
-#X connect 111 0 107 0;
-#X connect 111 1 112 0;
-#X connect 112 0 73 3;
-#X coords 0 -1 1 1 330 113 1 61 53;
+#X connect 108 0 46 0;
+#X connect 109 0 110 0;
+#X connect 110 0 107 0;
+#X connect 110 1 111 0;
+#X connect 111 0 73 3;
+#X connect 118 0 143 0;
+#X connect 119 0 120 0;
+#X connect 120 0 119 1;
+#X connect 120 0 122 1;
+#X connect 120 0 121 1;
+#X connect 120 0 125 0;
+#X connect 121 0 5 0;
+#X connect 121 1 14 0;
+#X connect 122 0 7 0;
+#X connect 122 1 15 0;
+#X connect 123 0 121 0;
+#X connect 124 0 122 0;
+#X connect 125 0 126 0;
+#X connect 125 1 127 0;
+#X connect 126 0 117 0;
+#X connect 127 0 117 0;
+#X connect 130 0 141 0;
+#X connect 131 0 130 1;
+#X connect 132 0 133 0;
+#X connect 133 0 130 1;
+#X connect 135 0 142 0;
+#X connect 137 0 134 0;
+#X connect 138 0 139 0;
+#X connect 140 0 147 0;
+#X connect 141 0 146 0;
+#X connect 141 1 137 0;
+#X connect 142 0 147 0;
+#X connect 143 0 119 0;
+#X connect 143 1 132 0;
+#X connect 143 2 131 0;
+#X connect 143 3 130 0;
+#X connect 144 0 108 0;
+#X connect 144 0 140 0;
+#X connect 144 0 101 0;
+#X connect 145 0 144 0;
+#X connect 146 0 134 0;
+#X connect 147 0 141 0;
+#X connect 147 1 138 0;
+#X coords 0 -1 1 1 330 113 2 61 53;
