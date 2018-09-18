@@ -1,4 +1,4 @@
-#N canvas 96 220 676 503 10;
+#N canvas 67 220 676 503 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 0 3 cnv 2 2 2 empty \$0-block empty 7 -10 1 14 -233017 -66577
 0;
@@ -1002,7 +1002,7 @@ context) if not.;
 #X connect 3 0 1 0;
 #X connect 5 0 4 0;
 #X restore 214 -269 pd print;
-#N canvas 67 211 510 392 canvas 1;
+#N canvas 67 211 510 392 canvas 0;
 #N canvas 178 170 782 433 c-movement 0;
 #X obj 201 225 s \$0-arrsize;
 #X msg 575 354 vis_size \$1 \$2;
