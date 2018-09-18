@@ -1,35 +1,20 @@
-#N struct 29908-big2 float x float y array 29908-array2 ^&*-dsmall2
-;
+#N struct 7900-big2 float x float y array 7900-array2 ^&*-dsmall2;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 29908-big1 float x float y array 29908-array1 ^&*-dsmall1
-;
+#N struct 7900-big1 float x float y array 7900-array1 ^&*-dsmall1;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 29958-big2 float x float y array 29958-array2 ^&*-dsmall2
-;
-#N struct 29958-big1 float x float y array 29958-array1 ^&*-dsmall1
-;
-#N struct 30005-big2 float x float y array 30005-array2 ^&*-dsmall2
-;
-#N struct 30005-big1 float x float y array 30005-array1 ^&*-dsmall1
-;
-#N struct 30055-big2 float x float y array 30055-array2 ^&*-dsmall2
-;
-#N struct 30055-big1 float x float y array 30055-array1 ^&*-dsmall1
-;
-#N struct 30108-big1 float x float y array 30108-array1 ^&*-dsmall1
-;
-#N struct 30161-big2 float x float y array 30161-array2 ^&*-dsmall2
-;
-#N struct 30161-big1 float x float y array 30161-array1 ^&*-dsmall1
-;
-#N struct 30211-big2 float x float y array 30211-array2 ^&*-dsmall2
-;
-#N struct 30211-big1 float x float y array 30211-array1 ^&*-dsmall1
-;
-#N struct 30262-big2 float x float y array 30262-array2 ^&*-dsmall2
-;
-#N struct 30262-big1 float x float y array 30262-array1 ^&*-dsmall1
-;
+#N struct 7950-big2 float x float y array 7950-array2 ^&*-dsmall2;
+#N struct 7950-big1 float x float y array 7950-array1 ^&*-dsmall1;
+#N struct 7997-big2 float x float y array 7997-array2 ^&*-dsmall2;
+#N struct 7997-big1 float x float y array 7997-array1 ^&*-dsmall1;
+#N struct 8047-big2 float x float y array 8047-array2 ^&*-dsmall2;
+#N struct 8047-big1 float x float y array 8047-array1 ^&*-dsmall1;
+#N struct 8100-big1 float x float y array 8100-array1 ^&*-dsmall1;
+#N struct 8153-big2 float x float y array 8153-array2 ^&*-dsmall2;
+#N struct 8153-big1 float x float y array 8153-array1 ^&*-dsmall1;
+#N struct 8203-big2 float x float y array 8203-array2 ^&*-dsmall2;
+#N struct 8203-big1 float x float y array 8203-array1 ^&*-dsmall1;
+#N struct 8254-big2 float x float y array 8254-array2 ^&*-dsmall2;
+#N struct 8254-big1 float x float y array 8254-array1 ^&*-dsmall1;
 #N canvas 67 145 860 592 10;
 #X obj 241 343 contour :x 227 :y 109 point1 0.310259 0.588334 0.669604
 0.551637 point2 0.0682824 0.766055 0.466961 0.32674 0.842669 0.767106
@@ -126,27 +111,13 @@ because the values are stored in an array \, playback is relatively
 cheap., f 89;
 #X text 172 21 (  ) (  ), f 2;
 #X text 351 21  ) (  ) (, f 2;
-#N canvas 250 104 633 587 (subpatch) 0;
+#N canvas 203 104 633 587 (subpatch) 0;
 #X obj 40 146 contour point1 0.679688 0.927681 point2 0.0937505 0.928374
 ;
 #X text 133 241 Contour's options are:;
 #X text 34 523 *Under some conditions \, curves which are defined by
 a high number of Bezier points may distort. Error correction fixes
 this \, at the cost of using slightly more CPU.;
-#X text 39 266 point1 : ADD OR REMOVE END POINTS FROM THE CANVAS \;
-point2 : ADD OR REMOVE CURVE (BEZIER) POINTS FROM THE CANVAS \; x :
-set the x-axis (in pixels) \; y : set the y-axis (in pixels) \; time
-: define the time in ms for playback with "bang" messages) \; colour
-: define the colour of the canvas \; scale : scale the y sensitivity
-of Bezier points \; name : define the name of the array \; size : define
-the size of the array (in points) \; y1 : define the upper limit of
-the array \; y2 : define the lower limit of the array \; speed : define
-how fast the array refreshes when the points are moved \; duplicate
-: create a duplicate of the defined shape in the array \; mirror-x
-: flip the copy along the x-axis \; mirror-y : flip the copy along
-the y-axis \; ec : turn error correction on* \; lock : prevent end
-points from moving past one another \; name2 : add \$0 to the array
-name, f 74;
 #X text 176 139 Contour has a variety of options controlling its behaviour.
 To access the options \, right click on any contour object and select
 "properties". A menu window will appear with all the relevant options.
@@ -154,9 +125,23 @@ To get rid of the window \, press the ^ button in the upper left \,
 or simply delete the object. You can also choose a condensed menu by
 clicking on the '()' button \, which will give you a smaller dialogue
 to create and destroy points., f 62;
+#X text 39 266 point1 : ADD OR REMOVE END POINTS FROM THE CANVAS \;
+point2 : ADD OR REMOVE CURVE (BEZIER) POINTS FROM THE CANVAS \; x :
+set the x-axis (in pixels) \; y : set the y-axis (in pixels) \; time
+: define the time in ms for playback with "bang" messages) \; colour
+: define the colour of the canvas \; scale : scale the y sensitivity
+of Bezier points \; name : define the name of the array \; size : define
+the size of the array (in points) \; yu : define the upper limit of
+the array \; yl : define the lower limit of the array \; speed : define
+how fast the array refreshes when the points are moved \; duplicate
+: create a duplicate of the defined shape in the array \; mirror-x
+: flip the copy along the x-axis \; mirror-y : flip the copy along
+the y-axis \; ec : turn error correction on* \; lock : prevent end
+points from moving past one another \; name2 : add \$0 to the array
+name, f 74;
 #X restore 54 452 options;
 #N canvas 213 183 762 514 (subpatch) 0;
-#X obj 221 161 contour :y1 0.1 point1 0.0390625 0.923652 0.226564 0.771372
+#X obj 221 161 contour point1 0.0390625 0.923652 0.226564 0.771372
 point2 0.71875 0.80535 :color -232491 :time 1500;
 #X obj 68 356 *~;
 #X obj 68 410 dac~;

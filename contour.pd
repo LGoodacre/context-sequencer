@@ -15,7 +15,7 @@
 #X obj -60 -200 inlet;
 #X obj -60 -166 outlet;
 #X obj -314 -165 iemguts/initbang;
-#N canvas 198 241 883 527 commands 0;
+#N canvas 151 241 883 527 commands 0;
 #X obj 141 72 inlet;
 #X obj -133 175 cyclone/zl iter 1;
 #X obj 68 48 iemguts/oreceive \$0-array-;
@@ -115,7 +115,7 @@
 #X obj -384 -111 route bang;
 #X obj -314 -111 iemguts/canvasargs;
 #X obj -301 -188 receive \$0-iemargr;
-#N canvas 325 257 1090 472 canvas 0;
+#N canvas 276 257 1090 472 canvas 0;
 #X text 53 47 coords xfrom yfrom xto yto xsize ysize type xmargin ymargin
 ;
 #X obj 110 436 iemguts/sendcanvas 1;
@@ -190,8 +190,6 @@
 #X obj 590 -44 receive \$0-:name;
 #X obj 186 102 receive \$0-:y;
 #X obj 100 102 receive \$0-:x;
-#X obj 463 24 receive \$0-:y2;
-#X obj 371 2 receive \$0-:y1;
 #X obj 886 40 receive \$0-:size;
 #X obj 900 65 receive \$0-:x;
 #X obj 590 93 l2s;
@@ -209,6 +207,8 @@
 #X msg 137 330 \; \$4-canvas vis_size \$7 \$8 \; \$4-arraysize coords
 0 \$9 \$6 \$5 1 1 2 0 0 \; pd-\$4-paint coords 0 0 \$1 \$2 \$1 \$2
 2 0 0;
+#X obj 371 2 receive \$0-:yu;
+#X obj 463 24 receive \$0-:yl;
 #X connect 2 0 8 0;
 #X connect 3 0 4 0;
 #X connect 3 1 4 1;
@@ -260,7 +260,7 @@
 #X connect 35 0 36 0;
 #X connect 35 1 51 0;
 #X connect 37 0 11 0;
-#X connect 37 0 88 0;
+#X connect 37 0 86 0;
 #X connect 38 0 40 0;
 #X connect 38 2 39 0;
 #X connect 39 0 37 0;
@@ -284,7 +284,7 @@
 #X connect 52 0 53 0;
 #X connect 54 0 1 0;
 #X connect 55 0 54 0;
-#X connect 55 1 89 0;
+#X connect 55 1 87 0;
 #X connect 56 0 57 0;
 #X connect 56 0 60 0;
 #X connect 56 1 58 0;
@@ -301,7 +301,7 @@
 #X connect 64 2 62 1;
 #X connect 65 0 40 0;
 #X connect 65 1 40 2;
-#X connect 65 2 88 0;
+#X connect 65 2 86 0;
 #X connect 65 3 3 1;
 #X connect 65 4 44 0;
 #X connect 65 5 66 0;
@@ -309,27 +309,27 @@
 #X connect 68 0 56 0;
 #X connect 68 0 63 1;
 #X connect 69 0 52 0;
-#X connect 70 0 84 0;
+#X connect 70 0 82 0;
 #X connect 71 0 10 0;
 #X connect 72 0 38 0;
-#X connect 73 0 28 0;
-#X connect 74 0 23 0;
-#X connect 75 0 32 0;
-#X connect 76 0 34 0;
-#X connect 77 0 46 0;
-#X connect 78 0 79 0;
-#X connect 79 0 77 1;
-#X connect 80 0 77 0;
-#X connect 81 0 80 1;
-#X connect 81 1 83 0;
-#X connect 82 0 80 1;
-#X connect 83 0 82 0;
-#X connect 84 0 80 0;
-#X connect 85 0 86 0;
-#X connect 86 0 84 0;
-#X connect 86 1 81 0;
-#X connect 87 0 41 0;
-#X connect 88 0 3 0;
+#X connect 73 0 32 0;
+#X connect 74 0 34 0;
+#X connect 75 0 46 0;
+#X connect 76 0 77 0;
+#X connect 77 0 75 1;
+#X connect 78 0 75 0;
+#X connect 79 0 78 1;
+#X connect 79 1 81 0;
+#X connect 80 0 78 1;
+#X connect 81 0 80 0;
+#X connect 82 0 78 0;
+#X connect 83 0 84 0;
+#X connect 84 0 82 0;
+#X connect 84 1 79 0;
+#X connect 85 0 41 0;
+#X connect 86 0 3 0;
+#X connect 88 0 23 0;
+#X connect 89 0 28 0;
 #X restore -384 132 pd canvas;
 #X obj -233 -20 namecanvas \$0-maincanvas;
 #X obj -233 -43 declare -lib zexy -stdlib zexy -path ./;
@@ -512,7 +512,7 @@
 #X connect 3 0 0 0;
 #X connect 4 0 1 0;
 #X restore -384 66 pd \$0-big2;
-#N canvas 250 110 503 273 \$0-big1 0;
+#N canvas 203 110 503 273 \$0-big1 0;
 #X obj 24 37 t b;
 #X obj 24 105 plot \$0-array1 500 0 -5 5;
 #X obj 24 59 s \$0-sstart1;
@@ -532,7 +532,7 @@
 #X obj -384 176 ctxfiles/get-properties \$0 ctxfiles/sketch-properties
 130;
 #X obj -384 110 ctxfiles/gget \$0 2 7;
-#N canvas 90 295 450 300 context 1;
+#N canvas 67 295 450 300 context 0;
 #X obj 127 52 ctxfiles/embeded \$0 3 4 5;
 #X msg 103 9 obj 100 100 ctxfiles/contour-embed \$1;
 #X connect 0 0 1 0;

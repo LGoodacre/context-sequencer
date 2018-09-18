@@ -1,4 +1,4 @@
-#N canvas 146 143 514 388 10;
+#N canvas 67 143 514 388 10;
 #X declare -path ../;
 #X obj 179 105 array define %&nou;
 #N canvas 707 242 430 174 ^&*-dsmall1 0;
@@ -25,38 +25,38 @@
 #X msg 220 301  ;
 #X obj 287 300 list trim;
 #X obj 222 50 shared ctxfiles/cushare 0;
-#N canvas 295 189 1024 557 commands 0;
+#N canvas 201 189 1024 557 commands 0;
 #X obj 416 105 t b a;
 #X obj 112 184 cyclone/zl iter 1;
 #X obj 416 81 receive *ujK9)erD;
+#X obj 671 165 ctxfiles/recompile \$0 cothr;
 #X obj 671 194 ctxfiles/br2 demux 2 \; #f t \; #f gs :x \; #f gs :y
-\; #f gs :size \; #f gs :y1 \; #f gs :y2 \; #f gs :point1 \; #f gs
+\; #f gs :size \; #f gs :yu \; #f gs :yl \; #f gs :point1 \; #f gs
 :point2 \; #f gs :name \; #f gs :color \; #f gs :speed \; #f gs :time
 \; #f gs :duplicate \; #f gs :mirror-x \; #f gs :mirror-y \; #f gs
 :scale \; #f gs :ec \; #f gs :name2 \; #f gs :lock \; #f gs savelist
 \; #f s £""-help \; #f gs propload;
-#X obj 671 165 ctxfiles/recompile \$0 cothr;
 #X obj 112 207 ctxfiles/br2 route 1 \; x gtfs \$0 #f x 128 \, :x #l
 \; y gtfs \$0 #f y 79 \, :y #l \; size gtfs \$0 #f size 128 \, :size
-#l \; y1 gtfs \$0 #f y1 \, :y1 #l \; y2 gtfs \$0 #f y2 \, :y2 #l \;
-point1 gtfs \$0 #f point1 bang \, points #l \, point #l \, end #l \,
-:point1 #l \; point2 gtfs \$0 #f point2 bang \, bpoints #l \, bpoint
-#l \, curve #l \, :point2 #l \; name gtfs \$0 #f name bang \, :name
-#l \; color gtfs \$0 #f color -232534 \, colour #l \, :color #l \;
-speed gtfs \$0 #f speed 10 \, :speed #l \; time gtfs \$0 #f time 1000
-\, :time #l \; duplicate gtfs \$0 #f duplicate 0 \, :duplicate #l \;
-mirror-x gtfs \$0 #f mirror-x 0 \, :mirror-x #l \; mirror-y gtfs \$0
-#f mirror-y 0 \, :mirror-y #l \; scale gtfs \$0 #f scale 1 \, :scale
+#l \; yu gtfs \$0 #f yu \, :yu #l \, y1 #l \; yl gtfs \$0 #f yl \,
+:yl #l \, y2 #l \; point1 gtfs \$0 #f point1 bang \, points #l \, point
+#l \, end #l \, :point1 #l \; point2 gtfs \$0 #f point2 bang \, bpoints
+#l \, bpoint #l \, curve #l \, :point2 #l \; name gtfs \$0 #f name
+bang \, :name #l \; color gtfs \$0 #f color -232534 \, colour #l \,
+:color #l \; speed gtfs \$0 #f speed 10 \, :speed #l \; time gtfs \$0
+#f time 1000 \, :time #l \; duplicate gtfs \$0 #f duplicate 0 \, :duplicate
+#l \; mirror-x gtfs \$0 #f mirror-x 0 \, :mirror-x #l \; mirror-y gtfs
+\$0 #f mirror-y 0 \, :mirror-y #l \; scale gtfs \$0 #f scale 1 \, :scale
 #l \; ec gtfs \$0 #f ec 0 \, :ec #l \; name2 gtfs \$0 #f name2 0 \,
 :name2 #l \; lock gtfs \$0 #f lock 0 \, :lock #l \; savelist tf \$0
 #f \; help tf \$0 #f \; loadproperties tf \$0 #f \; ## s \$0-cothr
 , f 76;
-#X connect 0 0 4 0;
+#X connect 0 0 3 0;
 #X connect 0 1 1 0;
 #X connect 1 0 5 0;
 #X connect 2 0 0 0;
-#X connect 4 0 3 0;
-#X connect 4 1 3 1;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
 #X restore 388 148 pd commands;
 #X msg 401 271 vis 1;
 #X obj 401 293 iemguts/sendcanvas;
