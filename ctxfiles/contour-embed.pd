@@ -1,4 +1,4 @@
-#N canvas 67 227 1013 465 10;
+#N canvas 67 203 1013 465 10;
 #X obj 296 76 iemguts/canvasdelete 1;
 #X obj 296 53 receive \$1-delemb;
 #X obj 201 26 receive \$1-lbang;
@@ -118,12 +118,12 @@
 #X obj 689 192 max~;
 #X obj 689 245 *~;
 #X obj 704 221 cyclone/lessthan~;
-#X obj 803 195 receive \$1-xend;
+#X obj 803 164 receive \$1-xend;
 #X obj 704 116 receive \$1-xstart;
 #X obj 689 356 outlet~;
 #X obj 188 145 t l l;
 #X obj 704 139 t f b f;
-#X obj 723 254 -;
+#X obj 803 189 -;
 #X obj 723 300 /;
 #X obj 689 326 *~;
 #X obj 723 277 swap 128;
@@ -152,7 +152,6 @@
 #X connect 23 0 25 0;
 #X connect 24 0 33 0;
 #X connect 25 0 24 1;
-#X connect 26 0 25 1;
 #X connect 26 0 31 0;
 #X connect 27 0 30 0;
 #X connect 29 0 17 0;
@@ -161,6 +160,7 @@
 #X connect 30 1 31 0;
 #X connect 30 2 31 1;
 #X connect 31 0 34 0;
+#X connect 31 0 25 1;
 #X connect 32 0 33 1;
 #X connect 33 0 28 0;
 #X connect 34 0 32 0;
