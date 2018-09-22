@@ -1,4 +1,4 @@
-#N canvas 141 166 1013 465 10;
+#N canvas 94 166 1013 465 10;
 #X obj 188 244 unpack;
 #X obj 215 193 ctxfiles/c-move \$1 127 128 92 93 3 4 79 30;
 #X obj 296 76 iemguts/canvasdelete 1;
@@ -42,6 +42,8 @@
 #X obj 442 49 t b b;
 #X obj 508 99 - 30;
 #X obj 331 297 em-init \$1;
+#X msg 331 322 connect 1 0 0 0;
+#X obj 331 345 iemguts/sendcanvas;
 #X connect 0 0 14 0;
 #X connect 0 1 15 0;
 #X connect 3 0 2 0;
@@ -92,3 +94,5 @@
 #X connect 40 0 37 0;
 #X connect 40 1 38 0;
 #X connect 41 0 15 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
