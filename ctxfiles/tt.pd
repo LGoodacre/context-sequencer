@@ -1,4 +1,4 @@
-#N canvas 765 151 450 508 10;
+#N canvas 718 151 450 508 10;
 #X obj 161 288 inlet;
 #X obj 195 373 f \$1;
 #X obj 229 373 f \$2;
@@ -24,8 +24,8 @@
 #X obj 161 142 route %;
 #X obj 161 166 expr $f1 / 100 * yourtime\$3;
 #X obj 132 373 s \$5-dirt;
-#X obj 205 26 iemguts/oreceive \$5-st2 \$6;
 #X obj 262 373 s \$5-dort;
+#X obj 205 26 iemguts/oreceive \$5-st1 \$6;
 #X connect 0 0 12 0;
 #X connect 1 0 3 0;
 #X connect 2 0 4 0;
@@ -38,7 +38,7 @@
 #X connect 12 1 5 0;
 #X connect 12 2 1 0;
 #X connect 12 3 2 0;
-#X connect 12 4 26 0;
+#X connect 12 4 25 0;
 #X connect 13 0 14 0;
 #X connect 13 1 21 0;
 #X connect 14 0 15 1;
@@ -53,4 +53,4 @@
 #X connect 22 0 23 0;
 #X connect 22 1 13 0;
 #X connect 23 0 13 0;
-#X connect 25 0 18 0;
+#X connect 26 0 18 0;
