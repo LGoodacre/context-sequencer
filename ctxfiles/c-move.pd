@@ -1,7 +1,7 @@
-#N canvas 67 169 1021 599 10;
+#N canvas 551 197 1021 599 10;
 #X obj 331 -7 inlet height;
 #X obj 256 -9 inlet;
-#X obj 183 411 pack f f;
+#X obj 183 431 pack f f;
 #X obj 240 283 loadbang;
 #X obj 301 228 -;
 #X obj 297 285 moses 1;
@@ -194,8 +194,10 @@
 #X obj 608 139 - \$5;
 #X obj 563 116 moses \$5;
 #X obj 235 352 iemguts/canvasindex \$6;
-#X obj 183 436 iemguts/canvasobjectposition \$7;
+#X obj 183 456 iemguts/canvasobjectposition \$7;
 #X obj 307 199 t f f;
+#X obj 183 406 spigot;
+#X obj 216 380 receive \$1-savestart;
 #X connect 0 0 6 1;
 #X connect 1 0 6 0;
 #X connect 2 0 47 0;
@@ -213,7 +215,7 @@
 #X connect 9 0 7 1;
 #X connect 10 0 29 0;
 #X connect 10 1 7 1;
-#X connect 11 0 2 0;
+#X connect 11 0 49 0;
 #X connect 11 1 2 1;
 #X connect 12 0 7 4;
 #X connect 13 0 27 0;
@@ -241,7 +243,7 @@
 #X connect 26 0 23 0;
 #X connect 27 0 29 0;
 #X connect 28 0 11 0;
-#X connect 29 0 2 0;
+#X connect 29 0 49 0;
 #X connect 29 1 46 0;
 #X connect 30 0 36 0;
 #X connect 30 1 37 0;
@@ -270,3 +272,5 @@
 #X connect 46 0 47 1;
 #X connect 48 0 4 0;
 #X connect 48 1 42 0;
+#X connect 49 0 2 0;
+#X connect 50 0 49 1;
