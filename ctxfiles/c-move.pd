@@ -1,4 +1,4 @@
-#N canvas 67 169 1021 599 10;
+#N canvas 97 121 1021 599 10;
 #X obj 331 -7 inlet height;
 #X obj 256 -9 inlet;
 #X obj 240 283 loadbang;
@@ -200,6 +200,10 @@
 #X obj 183 451 pack f f f;
 #X obj 164 322 t b f b;
 #X obj 183 474 list split 1;
+#X obj 16 192 receive \$1-fitme;
+#X obj 16 239 t b b b;
+#X obj 16 215 del;
+#X obj 35 262 pack f \$9;
 #X connect 0 0 5 1;
 #X connect 1 0 5 0;
 #X connect 2 0 31 0;
@@ -280,3 +284,9 @@
 #X connect 51 1 50 1;
 #X connect 51 2 44 0;
 #X connect 52 1 45 0;
+#X connect 53 0 55 0;
+#X connect 54 0 50 0;
+#X connect 54 1 56 0;
+#X connect 54 2 44 0;
+#X connect 55 0 54 0;
+#X connect 56 0 22 0;
