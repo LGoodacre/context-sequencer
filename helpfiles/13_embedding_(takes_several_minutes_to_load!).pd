@@ -1,4 +1,10 @@
-#N canvas 67 243 1299 458 10;
+#N struct 45405-big2 float x float y array 45405-array2 ^&*-dsmall2
+;
+#N struct ^&*-dsmall2 float x float y symbol onoff;
+#N struct 45405-big1 float x float y array 45405-array1 ^&*-dsmall1
+;
+#N struct ^&*-dsmall1 float x float y symbol onoff;
+#N canvas 67 164 1299 458 10;
 #X declare -path ../;
 #X obj 27 12 cnv 15 394 49 empty empty empty 13 21 0 30 -99865 -261234
 0;
@@ -143,6 +149,28 @@ so the samples can be moved easily around the canvas. To use [mover]:
 #X obj 446 80 else/openfile links/embedding.html -h see Context Manual
 section on embedding;
 #X obj 449 9 docfiles/help-display \$0;
+#X obj 2745 133 cnv 15 402 255 empty empty empty 20 12 0 14 -99865
+-66577 0;
+#X obj 2735 123 cnv 15 402 255 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 2736 124 cnv 15 400 253 empty empty 6: embedded [contour] array
+12 12 0 18 -223936 -1 0;
+#X obj 2762 172 context :H 21 :X 13 :Y 9 :io o :d 9 :ID 6 :ba ' :x
+= :i clear ' :ol 1 20 obj 0 17 content :lo helpfiles/wavs/loop.wav
+:x2 9 :y1 1.59375 :y2 -6.40625 :li 1 :br 11025 :ed 0 :as 0 5 obj -31
+166 ctx outlet~ 4 obj 0 -20 mover 22 obj 1 52 contour :x 143 :y 43
+:yu 10000 :yl 100 point1 0.314685 0.639535 0.79021 0.174419 point2
+0.244755 0.174419 0.643357 0.965116 4 obj -32 133 bob~ 5 connect 3
+0 7 0 5 connect 6 0 7 1 5 connect 7 0 4 0;
+#X obj 2891 313 dac~;
+#X obj 2948 333 else/openfile ../contour-help.pd -h See contour-help.pd
+;
+#X text 2927 172 You can embed a [countour] array much the same way
+as a [content] array. This has the advantage that it is much easier
+to draw customs envelopes. Here \, the envelope is being used to filter
+the audio sample. You can move the dots to change the envelope \, and
+add or destroy new points using the [contour] properties menu., f
+33;
 #X connect 15 9 18 0;
 #X connect 15 10 18 1;
 #X connect 17 5 16 0;
@@ -159,3 +187,5 @@ section on embedding;
 #X connect 44 0 42 7;
 #X connect 47 0 25 1;
 #X connect 47 0 25 0;
+#X connect 55 13 56 0;
+#X connect 55 13 56 1;
