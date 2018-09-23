@@ -1,4 +1,4 @@
-#N canvas 126 89 794 679 10;
+#N canvas 67 89 794 679 10;
 #X obj 222 194 -;
 #X obj 279 194 -;
 #X obj 222 216 moses -8;
@@ -33,7 +33,7 @@
 #X obj 307 61 s \$1-mypos;
 #X obj 298 839 outlet data;
 #X obj 237 18 iemguts/canvasposition \$2;
-#N canvas 207 98 617 670 time 0;
+#N canvas 67 98 617 670 time 0;
 #X obj 149 232 route float s;
 #X obj 149 417 outlet pos;
 #X obj 225 352 t f f;
@@ -95,7 +95,6 @@
 #X obj 127 111 t f f f f;
 #X obj 193 135 v yourtime\$0;
 #X text 297 192 <-- there used to be a spigot here from st1;
-#X obj 70 237 print end;
 #X connect 0 0 16 0;
 #X connect 0 1 39 0;
 #X connect 2 0 3 0;
@@ -167,7 +166,6 @@
 #X connect 56 1 12 0;
 #X connect 56 2 5 0;
 #X connect 56 3 57 0;
-#X connect 56 3 59 0;
 #X restore 298 816 pd time;
 #X obj 336 786 outlet which;
 #X msg 608 246 1;
