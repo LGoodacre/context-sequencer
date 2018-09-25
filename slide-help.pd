@@ -1,4 +1,4 @@
-#N canvas 252 136 969 469 10;
+#N canvas 111 136 969 470 10;
 #X obj 142 18 ctxfiles/license;
 #X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -6,16 +6,12 @@
 ;
 #X obj 13 17 cnv 15 100 50 empty empty slide 10 24 2 40 -46930 -262144
 0;
-#X text 71 90 A slider for using in state-saving abstractions.;
 #X floatatom 26 243 5 0 0 0 - - -, f 5;
 #X obj 820 188 receive \$0-slide;
 #X floatatom 820 210 5 0 0 0 - - -, f 5;
-#X obj 26 89 slide slide s us;
 #X floatatom 695 248 5 0 0 0 - - -, f 5;
 #X msg 695 268 s \$1;
 #X obj 695 291 s us-;
-#X text 751 257 The above [slide] as group-name 'us' and letter assignment
-'s'., f 24;
 #X obj 483 24 cnv 15 72 32 empty empty empty 20 12 0 14 -99865 -66577
 0;
 #X obj 478 19 cnv 15 72 32 empty empty empty 20 12 0 14 -1 -66577 0
@@ -39,11 +35,6 @@ value relative to the current position. This is useful for modulation.
 #X text 484 330 F: Sending two values "x y" to [slide] sets it to "x"
 in "y" milliseconds \, in the given line-grain (creation argument 8).
 , f 43;
-#X text 115 178 1: label (maximum of 7 characters) \; 2: unique letter
-assignment (see B) \; 3: group name (\$1 if using with [psave]) (see
-B) \; 4: minimum value \; 5: maximum value \; 6: linear (0) or exponential
-(1) scale \; 7: override boundaries (1) \; 8: line-grain (default 100)
-;
 #X text 566 17 A: The group name is shared by all psave objects in
 the abstraction. It is used to receive messages \, using the same naming
 convention as Context \, ie. [send groupname-] with a dash on the end.
@@ -59,9 +50,47 @@ with [psave]., f 51;
 , f 34;
 #X obj 744 428 else/openfile helpfiles/state_saving_abstractions.pd
 -h see state-saving_abstractions.pd;
-#X connect 6 0 7 0;
-#X connect 8 0 5 0;
-#X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 17 0 16 0;
-#X connect 18 0 16 0;
+#X text 115 178 1: label (maximum of 7 characters) \; 2: unique letter
+assignment (see B) \; 3: group name (\$1 if using with [psave]) (see
+B) \; 4: minimum value \; 5: maximum value \; 6: linear (0) or exponential
+(1) scale \; 7: override boundaries (1) \; 8: line-grain (default 100)
+\; 9:save LFO state (1);
+#X text 751 257 The example [slide] has group-name 'us' and letter
+assignment 's'., f 24;
+#X obj 26 89 slide slide s us;
+#X text 71 90 A slider for using in state-saving abstractions \, with
+built in LFO.;
+#N canvas 592 156 450 299 why 0;
+#X text 54 19 [slide] is useful for a number of reasons:;
+#X text 69 67 1: if you use it with [psave] inside an abstraction \,
+its position will save and reload when you open the patch \; 2: it
+is easy to set limits and exponential scales \; 3: it has a built-in
+send and recieve system which can easily communicate with other objects
+(ie. Context) \; 4: it integrates with the Novation Launchpad via [gridcontrol]
+\; 5: It has a built-in LFO system;
+#X text 44 207 Of course you can achieve these things on your own in
+PD \, but here they are all in one place!;
+#X restore 492 408 why would I use [slide]?;
+#N canvas 329 237 663 309 using 0;
+#X obj 30 91 helpfiles/docfiles/example-abstraction egs 0 57 47 31
+42;
+#X text 158 106 1: Hold down the ALT key and then press 1 \; 2: With
+the Alt key still held down \, move the slider. This alters the depth.
+\; 3: Do the same thing with Alt + 2 This alters the frequency \; 4:
+When you release the Alt key \, the LFO will start., f 81;
+#X text 32 23 [slide] has a built-in LFO system. This means that you
+can modulate the slider on a sine-wave without having to add to the
+patch.;
+#X text 160 82 To access the LFO system:;
+#X text 157 176 If you want the LFO setting to save \, you need to
+activate the 9th creation argument.;
+#X text 28 233 Note that the LFO refreshes at control-level at a rate
+of 20 hertz. If this creates audio distortion \, you can use [line]
+or [line~] to smooth it out., f 79;
+#X restore 491 431 using LFO;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 14 0 13 0;
+#X connect 15 0 13 0;
+#X connect 31 0 4 0;

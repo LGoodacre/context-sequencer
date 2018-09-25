@@ -1,6 +1,5 @@
-#N canvas 285 269 683 300 10;
+#N canvas 238 269 683 300 10;
 #X obj 124 104 tog on/off \$1;
-#X obj 103 104 slide volume v \$1 0 1;
 #X obj 125 133 num value \$1;
 #X obj 101 50 psave \$1;
 #X text 223 33 This abstraction contains just four objects: [slide]
@@ -16,4 +15,5 @@ within the abstraction to do anything of your choice.;
 1];
 #X text 306 257 [tog on/off \$1];
 #X text 306 274 [num value \$1];
+#X obj 103 104 slide volume v \$1 0 1 0 0 100 1;
 #X coords 0 -1 1 1 100 114 2 100 100;
