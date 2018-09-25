@@ -1,9 +1,9 @@
-#N canvas 67 468 610 300 10;
+#N canvas 272 358 610 300 10;
 #X obj 115 34 ctxfiles/shared ctxfiles/slideshare;
 #X obj 402 26 receive sshare;
 #X msg 402 49 vis 1;
 #X obj 402 72 iemguts/sendcanvas;
-#N canvas 298 174 467 381 key 0;
+#N canvas 67 174 467 381 key 0;
 #X obj 151 20 keyname;
 #X obj 151 67 list prepend;
 #X obj 151 90 list trim;
@@ -70,7 +70,7 @@
 #X connect 14 0 10 0;
 #X restore 305 165 pd ID;
 #X obj 278 142 t b b;
-#N canvas 564 254 450 300 line 1;
+#N canvas 681 118 450 300 line 1;
 #X obj 180 12 inlet;
 #X obj 180 35 array sum slideID())))(;
 #X obj 180 58 !=;
@@ -86,8 +86,12 @@
 #X connect 5 0 4 0;
 #X connect 6 0 5 1;
 #X restore 278 189 pd line;
+#X obj 227 96 loadbang;
+#X obj 227 119 del 500;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 4 0 6 0;
 #X connect 6 0 7 0;
 #X connect 6 1 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 6 0;
