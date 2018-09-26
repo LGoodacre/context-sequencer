@@ -66,7 +66,7 @@ built in LFO.;
 its position will save and reload when you open the patch \; 2: it
 is easy to set limits and exponential scales \; 3: it has a built-in
 send and recieve system which can easily communicate with other objects
-(ie. Context) \; 4: it integrates with the Novation Launchpad via [gridcontrol]
+(ie. Context) \; 4: it integrates with the Novation Launchpad via [control]
 \; 5: It has a built-in LFO system;
 #X text 44 207 Of course you can achieve these things on your own in
 PD \, but here they are all in one place!;
