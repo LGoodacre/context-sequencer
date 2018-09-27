@@ -1,4 +1,4 @@
-#N canvas 67 192 605 423 10;
+#N canvas 67 184 605 423 10;
 #X declare -lib zexy -stdlib zexy -path ./;
 #X obj 1 1 cnv 15 126 77 empty \$0-canvas empty 20 12 0 14 -232534
 -66577 0;
@@ -115,13 +115,13 @@
 #X obj -384 -111 route bang;
 #X obj -314 -111 iemguts/canvasargs;
 #X obj -301 -188 receive \$0-iemargr;
-#N canvas 115 241 1090 472 canvas 0;
+#N canvas 152 233 1090 472 canvas 1;
 #X text 53 47 coords xfrom yfrom xto yto xsize ysize type xmargin ymargin
 ;
 #X obj 110 436 iemguts/sendcanvas 1;
 #X obj 256 220 /;
-#X obj 304 227 swap 128;
-#X obj 304 251 /;
+#X obj 304 197 swap 128;
+#X obj 304 221 /;
 #X obj 256 198 swap 1;
 #X obj 256 242 swap 1;
 #X obj 256 262 -;
@@ -208,9 +208,12 @@
 #X obj 463 24 receive \$0-:yl;
 #X obj 17 64 t b b f b f f;
 #X obj 6 154 s \$0-dup2;
-#X obj 346 178 receive \$0-extendh;
-#X obj 346 201 t b f;
-#X obj 304 194 -;
+#X obj 398 -89 receive \$0-hexpand;
+#X obj 417 -43 unpack;
+#X obj 191 181 spigot 1;
+#X obj 398 -66 t b l b;
+#X obj 398 -19 f 1;
+#X obj 437 -20 t f;
 #X connect 2 0 6 0;
 #X connect 3 0 4 0;
 #X connect 3 1 4 1;
@@ -260,7 +263,7 @@
 #X connect 33 0 34 0;
 #X connect 33 1 48 0;
 #X connect 35 0 9 0;
-#X connect 35 0 83 0;
+#X connect 35 0 91 0;
 #X connect 36 0 38 0;
 #X connect 36 2 37 0;
 #X connect 37 0 35 0;
@@ -322,7 +325,7 @@
 #X connect 81 0 79 0;
 #X connect 81 1 76 0;
 #X connect 82 0 39 0;
-#X connect 83 0 91 0;
+#X connect 83 0 3 0;
 #X connect 85 0 21 0;
 #X connect 86 0 26 0;
 #X connect 87 0 38 0;
@@ -331,10 +334,15 @@
 #X connect 87 3 39 0;
 #X connect 87 4 40 1;
 #X connect 87 5 88 0;
-#X connect 89 0 90 0;
-#X connect 90 0 83 0;
-#X connect 90 1 91 1;
-#X connect 91 0 3 0;
+#X connect 89 0 92 0;
+#X connect 90 0 36 0;
+#X connect 90 1 8 0;
+#X connect 91 0 83 0;
+#X connect 92 0 93 0;
+#X connect 92 1 90 0;
+#X connect 92 2 94 0;
+#X connect 93 0 91 1;
+#X connect 94 0 91 1;
 #X restore -384 132 pd canvas;
 #X obj -233 -20 namecanvas \$0-maincanvas;
 #X obj -233 -43 declare -lib zexy -stdlib zexy -path ./;
