@@ -1,4 +1,4 @@
-#N canvas 67 358 450 298 10;
+#N canvas 67 350 450 298 10;
 #X declare -path ../;
 #X obj 151 25 shared ctxfiles/launch-share;
 #X msg 68 193 vis 1;
@@ -452,5 +452,6 @@ gs :1f6 \; #f gs :1f7 \; #f gs :2f0 \; #f gs :2f1 \; #f gs :2f2 \;
 #X connect 79 1 59 0;
 #X connect 79 2 77 0;
 #X restore 301 149 pd MIDI out;
+#X obj 68 80 array define padd3(())) 16;
 #X connect 1 0 2 0;
 #X connect 3 0 1 0;
