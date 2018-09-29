@@ -1,4 +1,4 @@
-#N canvas 178 358 610 300 10;
+#N canvas 131 358 610 300 10;
 #X obj 115 34 ctxfiles/shared ctxfiles/slideshare;
 #X obj 402 26 receive sshare;
 #X msg 402 49 vis 1;
@@ -35,7 +35,7 @@
 #X connect 11 0 12 0;
 #X connect 11 1 4 0;
 #X restore 278 119 pd key;
-#N canvas 677 131 450 463 ID 0;
+#N canvas 630 131 450 463 ID 0;
 #X obj 130 180 until;
 #X obj 130 250 array get slideID())))( 0 1;
 #X obj 130 273 route bang;
@@ -86,6 +86,7 @@
 #X msg 110 205 resize \$1;
 #X obj 110 228 array define slideID())))( 1;
 #X obj 83 181 t b f;
+#X obj 61 122 receive thu^^y&h;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 4 0 6 0;
@@ -96,3 +97,4 @@
 #X connect 10 0 11 0;
 #X connect 12 0 8 0;
 #X connect 12 1 10 0;
+#X connect 13 0 8 0;
