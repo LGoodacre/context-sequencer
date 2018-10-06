@@ -67,6 +67,9 @@ video tutorial series (new uploads regularly);
 -space;
 -space;
 
+helpfiles/lessons;
+lessons on how to use Context;
+
 https://contextsequencer.wordpress.com/publications/;
 papers papers about Context;
 
