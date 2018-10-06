@@ -270,7 +270,7 @@
 #X obj 164 255 f 1;
 #X obj 396 156 f 1;
 #X obj 310 56 ctxfiles/dvr \$0 ymode;
-#X obj 396 89 ctxfiles/dvr \$0 receive;
+#X obj 396 89 ctxfiles/dvr \$0 mocol;
 #X obj 205 13 ctxfiles/dvr \$0 cursorsz;
 #X obj -15 123 ctxfiles/dvr \$0 move-disable;
 #X obj 83 175 ctxfiles/dvr \$0 shift;
