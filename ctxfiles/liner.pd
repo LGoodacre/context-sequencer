@@ -1,4 +1,4 @@
-#N canvas 67 265 1037 488 10;
+#N canvas 143 261 1037 488 10;
 #X obj 145 51 unpack f f;
 #X obj 145 348 pack f f f;
 #X obj 202 245 *;
@@ -47,8 +47,8 @@
 #X obj 711 86 t f f;
 #X obj 202 151 swap;
 #X obj 261 161 t f f f;
-#X text 477 464 maybe stone should tell whether there is a double message??
-;
+#X text 435 405 maybe stone should tell whether there is a double message??
+, f 31;
 #X obj 336 143 v \$1-xy21;
 #X obj 335 165 receive \$1-xy21;
 #X obj 831 342 receive \$1-smarker;
@@ -57,14 +57,17 @@
 #X obj 858 388 makefilename \$1-%dmarkr;
 #X obj 831 411 list split 1;
 #X obj 865 439 send;
-#X obj 644 418 list split 1;
-#X obj 678 444 send;
-#X obj 644 330 receive \$1-ctntalk;
-#X obj 663 396 list split 1;
-#X obj 683 374 s \$1-roff;
-#X obj 644 352 t a a b;
+#X obj 622 463 list split 1;
+#X obj 656 519 send;
+#X obj 622 325 receive \$1-ctntalk;
+#X obj 639 391 list split 1;
+#X obj 656 369 s \$1-roff;
 #X obj 173 326 * 44.1;
 #X obj 145 326 * 44.1;
+#X obj 639 414 sel -;
+#X obj 639 437 symbol \$1-mine;
+#X obj 622 347 t a a b b;
+#X obj 677 487 makefilename \$1-%s;
 #X connect 0 0 11 0;
 #X connect 0 1 12 0;
 #X connect 1 0 3 0;
@@ -77,8 +80,8 @@
 #X connect 7 0 2 0;
 #X connect 8 0 0 0;
 #X connect 8 1 4 0;
-#X connect 9 0 63 0;
-#X connect 10 0 64 0;
+#X connect 9 0 62 0;
+#X connect 10 0 63 0;
 #X connect 11 0 10 0;
 #X connect 12 0 9 0;
 #X connect 13 0 14 0;
@@ -135,10 +138,14 @@
 #X connect 54 0 56 1;
 #X connect 55 1 56 0;
 #X connect 57 1 58 0;
-#X connect 59 0 62 0;
-#X connect 60 0 58 1;
-#X connect 62 0 57 0;
-#X connect 62 1 60 0;
-#X connect 62 2 61 0;
-#X connect 63 0 1 1;
-#X connect 64 0 1 0;
+#X connect 59 0 66 0;
+#X connect 60 0 64 0;
+#X connect 62 0 1 1;
+#X connect 63 0 1 0;
+#X connect 64 0 65 0;
+#X connect 64 1 67 0;
+#X connect 65 0 58 1;
+#X connect 66 0 57 0;
+#X connect 66 1 60 0;
+#X connect 66 2 61 0;
+#X connect 67 0 58 1;
