@@ -1,8 +1,8 @@
-#N canvas 120 123 796 418 10;
+#N canvas 71 126 796 418 10;
 #X declare -lib zexy -path zexy -path ./;
 #X obj 101 101 cnv 12 60 48 \$0-cpos \$0-cposr empty 5 23 0 8 -128975
 -262144 0;
-#N canvas 192 89 992 679 guts 0;
+#N canvas 98 89 992 679 guts 0;
 #N canvas 568 87 795 681 names 0;
 #X msg 266 486 symbol  ;
 #X obj 359 509 t b a;
@@ -272,11 +272,13 @@
 #X obj 177 477 s \$0-fakedelay;
 #X obj 222 433 receive \$0randombang;
 #X obj 290 305 !=;
+#X obj 36 47 v \$0-chk0;
 #X connect 1 0 41 0;
 #X connect 1 1 2 1;
 #X connect 2 0 17 0;
 #X connect 4 0 20 0;
 #X connect 5 0 25 0;
+#X connect 5 0 52 0;
 #X connect 6 0 40 0;
 #X connect 7 0 25 0;
 #X connect 7 1 27 1;
@@ -858,7 +860,7 @@ If it is the same \, block output of number.;
 #X connect 127 1 24 0;
 #X connect 128 0 127 1;
 #X restore 446 292 pd Sequence;
-#N canvas 631 155 560 613 random-d 0;
+#N canvas 584 155 560 613 random-d 0;
 #X obj 171 364 random;
 #X obj 171 420 / 1;
 #X obj 204 318 + 1;
@@ -5366,7 +5368,7 @@ bang \; %^ :W 0 \; %^ :Z 7 \; %^ :ID 0 \; %^ :ex -clear \; %^ :se 0
 1 \; %^ :rp 0 \;;
 #X msg 169 123 click;
 #X obj 169 99 receive \$0-savelist;
-#X obj 168 194 ctxfiles/saver \$0 eapp 4;
+#X obj 168 194 ctxfiles/saver \$0 eapp 4 t;
 #X obj 424 87 receive \$0-beforeC;
 #X obj 314 107 receive \$0-afterC;
 #X obj 451 131 f 55;
@@ -6011,7 +6013,7 @@ q= cuu \$0 #f f 1 t f \, contains #l \, ## #l;
 #X connect 109 0 110 0;
 #X connect 110 0 103 0;
 #X restore 552 391 pd rules;
-#N canvas 289 493 413 275 title 1;
+#N canvas 242 493 413 275 title 1;
 #X text 28 29 Context is an abstraction \, so if you want to use it
 \, you're looking in the wrong place. Instead \, you'll need to open
 another patch and create a [context] object. \; You can use this patch
@@ -8248,8 +8250,8 @@ list;
 #X connect 82 0 44 0;
 #X coords 0 -1 1 1 145 138 0;
 #X restore 100 98 pd face;
-#X floatatom 101 101 3 0 0 0 - #0-dr #0-:d2, f 3;
-#X symbolatom 124 101 3 0 0 0 - #0-symr #0-syms, f 3;
+#X floatatom 101 101 3 0 0 0 - #0-dr #0-:d2;
+#X symbolatom 124 101 3 0 0 0 - #0-symr #0-syms;
 #N canvas 340 179 450 293 box 0;
 #X obj 188 35 iemguts/sendcanvas;
 #X obj 188 13 receive \$0-xboxes;

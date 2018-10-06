@@ -308,7 +308,7 @@ main-toggle \, highlihted toggle;
 #X connect 32 0 21 0;
 #X restore 93 155 pd burstline;
 #X obj 86 71 shared ctxfiles/shareables;
-#N canvas 500 305 377 300 license 0;
+#N canvas 453 305 377 404 license 0;
 #X obj 133 13 receive license;
 #X obj 165 80 text define license;
 #X obj 133 35 t b b;
@@ -321,6 +321,10 @@ main-toggle \, highlihted toggle;
 #X obj 200 188 list trim;
 #X obj 200 210 print -n;
 #X msg 165 58 read -c License.txt;
+#X obj 94 271 receive hyYJ(I99;
+#X msg 94 294 [content] and [contour] can't be saved correctly on the
+timeline if Context's time is set to 0;
+#X obj 94 330 print Warning;
 #X connect 0 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 1 10 0;
@@ -332,6 +336,8 @@ main-toggle \, highlihted toggle;
 #X connect 7 0 9 0;
 #X connect 8 0 9 0;
 #X connect 10 0 1 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
 #X restore 93 178 pd license;
 #N canvas 390 97 721 687 repack 0;
 #X obj 343 37 receive repack%g&hk(;
@@ -943,7 +949,7 @@ bang;
 #X obj 243 668 list trim;
 #X text 350 -77 1: see if the received command is a repeat or a new
 command;
-#X symbolatom 198 -126 10 0 0 0 - - -, f 10;
+#X symbolatom 198 -126 10 0 0 0 - - -;
 #X text 474 31 2: read help text file the first time to pre;
 #X text 505 287 3: compile relevant terms from text file to pro;
 #X text 573 627 4: create clone search object based on the maximum
