@@ -1,4 +1,4 @@
-#N canvas 238 269 683 300 10;
+#N canvas 67 269 683 300 10;
 #X obj 124 104 tog on/off \$1;
 #X obj 125 133 num value \$1;
 #X obj 101 50 psave \$1;
@@ -16,4 +16,7 @@ within the abstraction to do anything of your choice.;
 #X text 306 257 [tog on/off \$1];
 #X text 306 274 [num value \$1];
 #X obj 103 104 slide volume v \$1 0 1 0 0 100 1;
+#X obj 47 48 inlet;
+#X text 142 176 example objects, f 8;
+#X connect 9 0 8 1;
 #X coords 0 -1 1 1 100 114 2 100 100;

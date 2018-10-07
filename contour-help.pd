@@ -1,39 +1,22 @@
-#N struct 49126-big2 float x float y array 49126-array2 ^&*-dsmall2
-;
+#N struct 3012-big2 float x float y array 3012-array2 ^&*-dsmall2;
 #N struct ^&*-dsmall2 float x float y symbol onoff;
-#N struct 49126-big1 float x float y array 49126-array1 ^&*-dsmall1
-;
+#N struct 3012-big1 float x float y array 3012-array1 ^&*-dsmall1;
 #N struct ^&*-dsmall1 float x float y symbol onoff;
-#N struct 49231-big2 float x float y array 49231-array2 ^&*-dsmall2
-;
-#N struct 49231-big1 float x float y array 49231-array1 ^&*-dsmall1
-;
-#N struct 49279-big2 float x float y array 49279-array2 ^&*-dsmall2
-;
-#N struct 49279-big1 float x float y array 49279-array1 ^&*-dsmall1
-;
-#N struct 49330-big2 float x float y array 49330-array2 ^&*-dsmall2
-;
-#N struct 49330-big1 float x float y array 49330-array1 ^&*-dsmall1
-;
-#N struct 49384-big1 float x float y array 49384-array1 ^&*-dsmall1
-;
-#N struct 49438-big2 float x float y array 49438-array2 ^&*-dsmall2
-;
-#N struct 49438-big1 float x float y array 49438-array1 ^&*-dsmall1
-;
-#N struct 49489-big2 float x float y array 49489-array2 ^&*-dsmall2
-;
-#N struct 49489-big1 float x float y array 49489-array1 ^&*-dsmall1
-;
-#N struct 49541-big2 float x float y array 49541-array2 ^&*-dsmall2
-;
-#N struct 49541-big1 float x float y array 49541-array1 ^&*-dsmall1
-;
-#N struct 50256-big2 float x float y array 50256-array2 ^&*-dsmall2
-;
-#N struct 50256-big1 float x float y array 50256-array1 ^&*-dsmall1
-;
+#N struct 3117-big2 float x float y array 3117-array2 ^&*-dsmall2;
+#N struct 3117-big1 float x float y array 3117-array1 ^&*-dsmall1;
+#N struct 3165-big2 float x float y array 3165-array2 ^&*-dsmall2;
+#N struct 3165-big1 float x float y array 3165-array1 ^&*-dsmall1;
+#N struct 3216-big2 float x float y array 3216-array2 ^&*-dsmall2;
+#N struct 3216-big1 float x float y array 3216-array1 ^&*-dsmall1;
+#N struct 3270-big1 float x float y array 3270-array1 ^&*-dsmall1;
+#N struct 3324-big2 float x float y array 3324-array2 ^&*-dsmall2;
+#N struct 3324-big1 float x float y array 3324-array1 ^&*-dsmall1;
+#N struct 3375-big2 float x float y array 3375-array2 ^&*-dsmall2;
+#N struct 3375-big1 float x float y array 3375-array1 ^&*-dsmall1;
+#N struct 3427-big2 float x float y array 3427-array2 ^&*-dsmall2;
+#N struct 3427-big1 float x float y array 3427-array1 ^&*-dsmall1;
+#N struct 4142-big2 float x float y array 4142-array2 ^&*-dsmall2;
+#N struct 4142-big1 float x float y array 4142-array1 ^&*-dsmall1;
 #N canvas 67 145 860 592 10;
 #X obj 241 343 contour :x 227 :y 109 point1 0.310259 0.588334 0.669604
 0.551637 point2 0.0682824 0.766055 0.466961 0.32674 0.842669 0.767106
@@ -46,7 +29,7 @@
 -66577 0;
 #X msg 241 257 end 1;
 #X msg 311 257 end -1;
-#X floatatom 477 293 5 0 0 0 - - -, f 5;
+#X floatatom 477 293 5 0 0 0 - - -;
 #X obj 477 314 tabread mycurve;
 #X obj 477 345 vsl 15 104 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
@@ -166,7 +149,7 @@ point2 0.71875 0.80535 :color -232491 :time 1500;
 #X obj 68 410 dac~;
 #X obj 173 30 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X floatatom 28 235 5 0 0 0 - - -, f 5;
+#X floatatom 28 235 5 0 0 0 - - -;
 #X obj 28 304 tabread4~ waveform;
 #X obj 28 256 phasor~ 440;
 #X obj 227 321 contour point1 0.374999 0.903158 0.570312 0.850479 0.820312
@@ -321,8 +304,8 @@ points using the properties menu.;
 #X restore 53 509 shifting;
 #X text 10 281 add or remove a curve point ->;
 #X obj 528 560 else/openfile coord-help.pd -h See also: [coord];
-#X text 308 66 v1.3;
-#N canvas 784 353 450 300 contour 0;
+#X text 308 66 v1.4;
+#N canvas 737 353 450 344 contour 0;
 #X obj 116 163 context :H 18 :X 13 :Y 9 :d 5 :n ' me ' :Z 10 :ID 1
 :ol 1 18 obj 12 44 contour :x 116 :y 40 :size 117 point1 0.181034 0.7
 0.784483 0.65 point2 0.301724 0.025 4 obj 0 -20 mover 6 obj 87 4 ctxfiles/sketch-properties
@@ -338,6 +321,9 @@ and resize the [content] array using [mover].;
 ;
 #X obj 80 118 else/openfile helpfiles/links/embedding.html -h See the
 Context Manual entry on embedding;
+#X text 46 294 Note: DSP must be turned on for this example to work.
+;
+#X msg 340 223 \; pd dsp 1;
 #X restore 52 566 embedding contour in context;
 #X connect 4 0 0 0;
 #X connect 5 0 0 0;

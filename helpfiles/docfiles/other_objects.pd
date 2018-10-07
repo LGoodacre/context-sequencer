@@ -370,8 +370,8 @@ sequencer;
 #X connect 9 0 5 0;
 #X connect 11 0 9 0;
 #X connect 12 0 9 1;
-#X coords 99 100 100 98.53 1 1 1 0 0;
-#X restore 1032 116 graph;
+#X coords 99.27 100 100 98.21 1 1 1 0 0;
+#X restore 979 111 graph;
 #N canvas 67 87 1299 681 (subpatch) 0;
 #X array dependent on contour 200 float 5;
 #A 0 0 24.3105 28 31.225 34.1174 36.756 39.1918 41.4608 43.589 45.5961
@@ -443,7 +443,7 @@ sequencer;
 #X connect 11 0 9 0;
 #X connect 12 0 9 1;
 #X coords 98.15 100 100 96.48 1 1 1 0 0;
-#X restore 1007 186 graph;
+#X restore 987 161 graph;
 #N canvas 67 87 1299 681 (subpatch) 0;
 #X array abstractions 200 float 5;
 #A 0 0 24.3105 28 31.225 34.1174 36.756 39.1918 41.4608 43.589 45.5961
@@ -530,13 +530,13 @@ sequencer;
 #X obj 706 295 else/openfile ../../preset-help.pd -h [preset];
 #X obj 669 315 else/openfile ../../click-help.pd -h [click];
 #X obj 705 275 else/openfile ../../control-help.pd -h [control];
-#X obj 840 256 else/openfile ../../scaler-help.pd -h [scaler];
-#X obj 826 233 else/openfile ../../autocreate-help.pd -h [autocreate]
+#X obj 880 220 else/openfile ../../scaler-help.pd -h [scaler];
+#X obj 805 221 else/openfile ../../autocreate-help.pd -h [autocreate]
 ;
 #X obj 1118 258 else/openfile ../../connect-help.pd -h [connect];
-#X obj 975 131 else/openfile ../../contour-help.pd -h [contour];
-#X obj 978 193 else/openfile ../../coord-help.pd -h [coord];
-#X obj 969 213 else/openfile ../../coord-index-help.pd -h [coord-index]
+#X obj 852 154 else/openfile ../../contour-help.pd -h [contour];
+#X obj 958 168 else/openfile ../../coord-help.pd -h [coord];
+#X obj 949 188 else/openfile ../../coord-index-help.pd -h [coord-index]
 ;
 #X obj 982 333 else/openfile ../../tog-help.pd -h [tog];
 #X obj 932 293 else/openfile ../../slide-help.pd -h [slide];
@@ -544,8 +544,8 @@ sequencer;
 #X obj 928 333 else/openfile ../../slide2-help.pd -h [slide2];
 #X obj 975 312 else/openfile ../../psave-help.pd -h [psave];
 #X obj 980 293 else/openfile ../../num-help.pd -h [num];
-#X text 820 181 objects that function with and without Context, f
-18;
+#X text 843 239 objects that function with and without Context, f
+12;
 #X obj 1058 557 ctxfiles/license;
 #X text 971 436 Context is unusual for a PD library because it puts
 so much emphasis on a single object \, [context]. Nevertheless \, there
