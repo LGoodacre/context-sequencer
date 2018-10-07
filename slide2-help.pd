@@ -6,9 +6,9 @@
 ;
 #X obj 13 17 cnv 15 100 50 empty empty slide2 10 24 2 34 -46930 -262144
 0;
-#X floatatom 26 243 5 0 0 0 - - -, f 5;
-#X floatatom 852 204 5 0 0 0 - - -, f 5;
-#X floatatom 695 248 5 0 0 0 - - -, f 5;
+#X floatatom 26 243 5 0 0 0 - - -;
+#X floatatom 852 204 5 0 0 0 - - -;
+#X floatatom 695 248 5 0 0 0 - - -;
 #X obj 695 291 s us-;
 #X obj 483 24 cnv 15 72 32 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -33,10 +33,10 @@ the abstraction. It is used to receive messages \, using the same naming
 convention as Context \, ie. [send groupname-] with a dash on the end.
 The group name should be \$1 if you are using [slide2] in conjunction
 with [psave]., f 51;
-#X floatatom 67 243 5 0 0 0 - - -, f 5;
+#X floatatom 67 243 5 0 0 0 - - -;
 #X text 484 184 D: [slide2] has two outlets \, but also sends its output
 to [send \$0-label-1] and [send \$0-label-2]:, f 50;
-#X floatatom 892 224 5 0 0 0 - - -, f 5;
+#X floatatom 892 224 5 0 0 0 - - -;
 #X obj 852 182 receive \$0-slide2-1;
 #X obj 892 202 receive \$0-slide2-2;
 #X msg 695 268 l \$1;
@@ -63,30 +63,45 @@ LFO state (1);
 #X obj 26 109 slide2 slide2 l us;
 #X text 751 257 The above [slide] has group-name 'us' and letter assignment
 'l'., f 24;
-#N canvas 566 305 663 309 using 0;
-#X text 158 106 1: Hold down the ALT key and then press 1 \; 2: With
-the Alt key still held down \, move the slider. This alters the depth.
-\; 3: Do the same thing with Alt + 2 This alters the frequency \; 4:
-When you release the Alt key \, the LFO will start., f 81;
-#X text 32 23 [slide] has a built-in LFO system. This means that you
-can modulate the slider on a sine-wave without having to add to the
-patch.;
-#X text 160 82 To access the LFO system:;
-#X text 157 176 If you want the LFO setting to save \, you need to
-activate the 9th creation argument.;
-#X text 28 233 Note that the LFO refreshes at control-level at a rate
-of 20 hertz. If this creates audio distortion \, you can use [line]
-or [line~] to smooth it out., f 79;
-#X obj 30 91 helpfiles/docfiles/example-abstraction egss 0 57 47 37
-46;
-#X restore 491 401 using LFO;
-#N canvas 545 156 450 159 why 0;
+#N canvas 545 156 450 159 would 0;
 #X text 41 28 Besides all the useful features of [slide] \, [slide2]
 is designed to control two separate but related parameters at once.
 For instance \, you could control two notes at once \, with the number-box
 being the interval between them \, or you could control an upper and
 lower limit at once \, with the number being the gap \, etc.;
 #X restore 491 379 why would I use [slide2]?;
+#N canvas 188 237 663 437 LFO 0;
+#X obj 30 161 helpfiles/docfiles/example-abstraction egss 0 57 47 33
+42;
+#X text 32 23 [slide] has a built-in LFO system. This means that you
+can modulate the slider on a sine-wave without having to add to the
+patch.;
+#X text 160 82 To access the LFO system:;
+#X text 34 307 Note that the LFO refreshes at control-level at a rate
+of 20 hertz. If this creates audio distortion \, you can use [line]
+or [line~] to smooth it out., f 79;
+#X msg 30 137 LFO \$1;
+#X obj 30 85 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X text 49 82 normal value;
+#X text 49 99 LFO depth;
+#X text 49 115 LFO frequency;
+#X text 158 106 1: Hold down the ALT key* and then press 1 \; 2: With
+the Alt key still held down \, move the slider. This alters the depth.
+\; 3: Do the same thing with Alt + 2 This alters the frequency \; 4:
+When you release the Alt key \, the LFO will start., f 81;
+#X text 158 174 * On some systems \, the Alt key doesn't work \, so
+you can also use the Caps Lock key. This isn't ideal \, because obviously
+it leaves you with Caps Lock on. If you don't like it then use can
+use an "LFO 1" message send to the right inlet of [slide2]. "LFO 1"
+accesses the depth \, "LFO 2" the frequency and "LFO 0" the normal
+value. (See the examample on the left)., f 62;
+#X text 32 348 If you want the LFO setting to save with [psave] \,
+you need to activate the 9th creation argument of [slide2]., f 79
+;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X restore 491 404 using LFO;
 #X connect 6 0 22 0;
 #X connect 20 0 5 0;
 #X connect 21 0 19 0;

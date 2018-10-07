@@ -1,4 +1,4 @@
-#N canvas 111 136 969 470 10;
+#N canvas 67 136 969 470 10;
 #X obj 142 18 ctxfiles/license;
 #X obj 17 21 cnv 15 102 52 empty empty empty 20 12 0 14 -99865 -66577
 0;
@@ -6,10 +6,10 @@
 ;
 #X obj 13 17 cnv 15 100 50 empty empty slide 10 24 2 40 -46930 -262144
 0;
-#X floatatom 26 243 5 0 0 0 - - -, f 5;
+#X floatatom 26 243 5 0 0 0 - - -;
 #X obj 820 188 receive \$0-slide;
-#X floatatom 820 210 5 0 0 0 - - -, f 5;
-#X floatatom 695 248 5 0 0 0 - - -, f 5;
+#X floatatom 820 210 5 0 0 0 - - -;
+#X floatatom 695 248 5 0 0 0 - - -;
 #X msg 695 268 s \$1;
 #X obj 695 291 s us-;
 #X obj 483 24 cnv 15 72 32 empty empty empty 20 12 0 14 -99865 -66577
@@ -60,7 +60,7 @@ assignment 's'., f 24;
 #X obj 26 89 slide slide s us;
 #X text 71 90 A slider for using in state-saving abstractions \, with
 built in LFO.;
-#N canvas 592 156 450 299 why 0;
+#N canvas 592 156 450 299 would 0;
 #X text 54 19 [slide] is useful for a number of reasons:;
 #X text 69 67 1: if you use it with [psave] inside an abstraction \,
 its position will save and reload when you open the patch \; 2: it
@@ -71,22 +71,36 @@ send and recieve system which can easily communicate with other objects
 #X text 44 207 Of course you can achieve these things on your own in
 PD \, but here they are all in one place!;
 #X restore 492 408 why would I use [slide]?;
-#N canvas 329 237 663 309 using 0;
-#X obj 30 91 helpfiles/docfiles/example-abstraction egs 0 57 47 31
+#N canvas 235 237 663 437 LFO 0;
+#X obj 30 161 helpfiles/docfiles/example-abstraction egs 0 57 47 33
 42;
-#X text 158 106 1: Hold down the ALT key and then press 1 \; 2: With
-the Alt key still held down \, move the slider. This alters the depth.
-\; 3: Do the same thing with Alt + 2 This alters the frequency \; 4:
-When you release the Alt key \, the LFO will start., f 81;
 #X text 32 23 [slide] has a built-in LFO system. This means that you
 can modulate the slider on a sine-wave without having to add to the
 patch.;
 #X text 160 82 To access the LFO system:;
-#X text 157 176 If you want the LFO setting to save \, you need to
-activate the 9th creation argument.;
-#X text 28 233 Note that the LFO refreshes at control-level at a rate
+#X text 34 307 Note that the LFO refreshes at control-level at a rate
 of 20 hertz. If this creates audio distortion \, you can use [line]
 or [line~] to smooth it out., f 79;
+#X msg 30 137 LFO \$1;
+#X obj 30 85 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144 -1
+-1 0;
+#X text 49 82 normal value;
+#X text 49 99 LFO depth;
+#X text 49 115 LFO frequency;
+#X text 158 106 1: Hold down the ALT key* and then press 1 \; 2: With
+the Alt key still held down \, move the slider. This alters the depth.
+\; 3: Do the same thing with Alt + 2 This alters the frequency \; 4:
+When you release the Alt key \, the LFO will start., f 81;
+#X text 158 174 * On some systems \, the Alt key doesn't work \, so
+you can also use the Caps Lock key. This isn't ideal \, because obviously
+it leaves you with Caps Lock on. If you don't like it then use can
+use an "LFO 1" message send to the right inlet of [slide]. "LFO 1"
+accesses the depth \, "LFO 2" the frequency and "LFO 0" the normal
+value. (See the examample on the left)., f 62;
+#X text 32 348 If you want the LFO setting to save with [psave] \,
+you need to activate the 9th creation argument of [slide]., f 79;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
 #X restore 491 431 using LFO;
 #X connect 5 0 6 0;
 #X connect 7 0 8 0;
