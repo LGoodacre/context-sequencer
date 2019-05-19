@@ -1,13 +1,13 @@
 ####################
 #                  #
-#  CONTEXT (v4.0)  #
+#  CONTEXT (v5.0)  #
 #                  #
-####################      Copyright Liam Goodacre, 2015-2018
+####################      Copyright Liam Goodacre, 2015-2019
 
 
 RELEASE:
 
-This is a general release of Context v4.0. It runs on PD Vanilla 0.48.1 or higher. It is compatible with Linux, OS and Windows. There are probably still some bugs left.
+This is a general and most likely final release of Context v5.0. It runs on PD Vanilla 0.48.1 or higher. It is compatible with Linux, OS and Windows. There are probably still some bugs left.
 
 
 SETUP:
@@ -28,7 +28,7 @@ Context does not currently work on L2Ork or Purr Data. There is a patch called "
 
 Different installations sometimes have different font sizes, which throws off the alignment of the float- and symbol-atoms on the Context GUI. You can fix this annoyance in the config-textsize.pd file in the main folder. Use the number boxes to move the red canvases until they coincide exactly with the symbol atoms, then save the patch.
 
-Context has limited compatibility with Vanilla 0.47. If you want to run Context in 0.47, you can try replacing the file ctxfiles/dv.pd with ctxfiles/dv-047.pd, although this does not guarantee full functionality.
+Context has limited compatibility with Vanilla 0.47. If you want to run Context in 0.47, you can try replacing the file ctxfiles/dv.pd with ctxfiles/dv-047.pd, although this does not guarantee full functionality. Context should be fully compatible with 0.49, although if you are running it on a Windows 64bit machine, the entry box might not work.
 
 Context patches sometimes take a long time to load (some of them several minutes). You can speed this up by turning off DSP before loading, then turning it back on. Faster machines are recommended.
 
@@ -71,7 +71,6 @@ ggee
 list-abs
 hcs
 iemguts (v 0.2.1 or later)
-pddp (useful but not essential)
 iemmatrix
 
 
